@@ -1,0 +1,7 @@
+{
+  "name": "genealogy-guide-ru",
+  "owner": { "name": "genealogy-guide-ru" },
+  "plugins": [
+    { "name": "genealogy-guide-ru", "source": "." }
+  ]
+}
