@@ -1,0 +1,23 @@
+{
+  "skill_name": "researching-jewish-cemeteries",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Прадед Мордко Коган умер в 1913 году в местечке Чуднов Волынской губернии. Можно ли найти его могилу и что на ней может быть написано такого, чего нет в метриках?",
+      "expected_output": "Сначала проверяет, есть ли и сохранилось ли кладбище: JewishGen Cemetery Discovery Project (Украина → Чуднов) и страница ESJF (огорожено, около 300 камней, самый старый 1885 г., самый новый 1939 г., GPS) — поимённого указателя у ESJF нет. Ищет захоронение в JOWBR (вход делает человек), «Мицват Эмет» (начало фамилии, выбрать подсказку, не более ~5 поисков подряд, капчу не обходить), Толдот; перебирает написания Коган/Kogan/Cohen и Мордко/Мордехай/Марк. Объясняет, что даёт камень: имя отца (בן), הכהן — принадлежность к коэнам, символ рук, дата по еврейскому календарю, отец жив/умер (נ״י / ז״ל). Если в базах нет — фото на месте может сделать человек или волонтёр, договаривается только человек. Отрицательный результат формулирует с перечнем баз, написаний и статуса кладбища, без вывода «не похоронен там».",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Прочитай, пожалуйста, надпись с надгробия (переписала с фото): פ״נ / האשה החשובה / מרת חיה רחל / בת ר׳ אליעזר ז״ל / נפ׳ י״ב כסלו / תרס״ה לפ״ק / ת.נ.צ.ב.ה. Сверху вырезаны два подсвечника. Что это даёт?",
+      "expected_output": "Читает по строкам: здесь погребена; почтенная женщина, госпожа — замужняя; имя Хая-Рахель (двойное имя — одно); дочь реб Элиэзера — ר׳ это вежливое «реб», а не раввин; ז״ל — отец к этому времени умер; умерла 12 кислева; תרס״ה = 5665 по малому счёту; ת.נ.צ.ב.ה. — стандартная формула. Переводит дату: кислев — осенний месяц, поэтому 1904, а не 1905 год; по Hebcal 20 ноября 1904 г. (григорианский), для русских документов — 7 ноября 1904 г. по юлианскому. Подсвечники — женский символ. Выводы для поиска: имя отца (Элиэзер = Лейзер/Лазарь) — шаг на поколение вверх, его смерть раньше ноября 1904 г.; она замужем — искать мужа по соседним камням и метрику смерти. Предлагает заполнить gravestone-record.md и проверить чтение по фото.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My great-grandfather is buried in a cemetery in Queens, in a section with a gate that has a society name on it, something like 'First Zhitomirer Benevolent Society'. Nobody remembers which town the family came from. Does the cemetery help?",
+      "expected_output": "Explains that landsmanshaft plots were bought by societies of immigrants from one town, so the society section points to the likely town of origin (here Zhitomir or its district) as a hypothesis. Searches JGSNY's burial society database by society name or town (3+ characters; over 10,600 entries from about 100 New York-area cemeteries) and checks the plot maps; recommends reading the gate and the gravestone in full — the Hebrew side gives the father's name, Kohen/Levi status and the Hebrew date. Suggests Find a Grave and BillionGraves for photos and JOWBR, and confirming the town through naturalization papers, manifests and the society's records (tracing-emigrants-to-origin). States that burial in a society plot is evidence, not proof — members sometimes joined societies of other towns — and that only the user arranges photo requests or contacts with the cemetery.",
+      "files": []
+    }
+  ]
+}
