@@ -1,0 +1,78 @@
+# Tracing Your Ancestors: A Practical Guide
+
+> An English translation of a Russian-language guide to genealogical research on the territory of the former Russian Empire and the USSR — Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania — with an emphasis on Jewish families and emigration. Built around the route "question → place → source → index → scan → verification → record"; the AI assistant is the main tool, while decisions and everything that requires logging in, payment or letters belong to the human. State of the sites — October 2026.
+
+Rules for the AI agent: every find comes with an address (archive, file, frame or link) and a verbatim quotation; an index is not a document; "not found" only with coverage (source, limits, spellings, method, control record); captchas, logins, passwords, payment and letters are done by the human; one site — one worker; agents do not launch agents; first ask the human about the goal and what is already known. Full instructions — AGENTS.md. Many of the underlying sources are in Russian or Ukrainian; you may need to read them and translate for the person.
+
+## Start
+
+- [About the compiler](about.md): who compiled the guide and how to get in touch
+- [Русская версия](../llms.txt): the same map in Russian (original)
+
+- [Instructions for the AI agent](AGENTS.md): rules, the first conversation, order of work, find format, skills by task
+- [README](README.md): overview of the guide for humans, installing skills
+- [Quick start](guide/0-start/01-quick-start.md): the first hour and how to give the guide to your AI
+- [Where to start](guide/0-start/02-where-to-start.md): the home archive, family memory as a hypothesis, place matters more than surname, one question
+- [Talking to relatives](guide/0-start/03-talking-to-relatives.md): how to interview and check what you are told
+- [Plan, timeline, place guide](guide/0-start/04-plan-timeline-place.md): a six-step plan, impossibility check, a file for each place
+
+## Part 1. Searching with AI
+
+- [Search route](guide/1-ai-search/01-search-route.md): the route steps, the output of each, what to give AI, what to check
+- [Prompt library](guide/1-ai-search/02-prompt-library.md): ready-made prompts by route step
+- [Working with agents](guide/1-ai-search/03-working-with-agents.md): roles, the cycle, task template, accepting results, failures, memory, costs
+- [Checking results](guide/1-ai-search/04-checking-results.md): how to check an AI answer, two reading passes, confidence levels
+- [AI tools](guide/1-ai-search/05-ai-tools.md): what Claude, Gemini and others can do; risks; which tool for what
+- [Skills for Claude](guide/1-ai-search/06-skills.md): list of skills by route step and installation
+- [Scenarios: what to do if…](guide/1-ai-search/07-scenarios.md): forks and dead ends, step by step
+
+## Part 2. Reference
+
+- [Records of the Russian Empire and the USSR](guide/2-reference/01-records-empire-ussr.md): metrical books, revisions, the 1875 and 1897 censuses, registration (*pripiska*), substitutes for metrical books, Soviet ZAGS
+- [Jewish genealogy](guide/2-reference/02-jewish-genealogy.md): the Pale of Settlement, rabbinates, changing borders, the Jewish press
+- [Names, surnames, spellings](guide/2-reference/03-names-spellings.md): spelling variants, OCR, double names, Russification, namesakes
+- [Special groups and name changes](guide/2-reference/04-special-groups-name-changes.md): converts, cantonists, Karaites, Soviet name changes
+- [Handwriting, transliteration, dates](guide/2-reference/05-handwriting-transliteration-dates.md): cursive, transliteration, calendars
+- [Places and maps](guide/2-reference/06-places-maps.md): how to find a shtetl for the right year
+- [Archives by country](guide/2-reference/07-archives-by-country.md): where things are held and what is digitised
+- [Community surname indexes](guide/2-reference/08-surname-indexes.md): the index before page-turning, a register of unread material
+- [Reconstructing the whole family](guide/2-reference/09-whole-family.md): a document package for a family, signs of kinship
+- [Cemeteries](guide/2-reference/10-cemeteries.md): burial databases, reading a matzevah, converting a date
+- [Pogroms 1918–1922](guide/2-reference/11-pogroms-1918-1922.md): victim databases, aid recipients, orphans, DAKO R-3050
+- [War, repression, the siege](guide/2-reference/12-war-repression-siege.md): military databases, evacuation, repression, the Holocaust
+- [Emigration](guide/2-reference/13-emigration.md): from US and other countries' documents to the shtetl
+- [Citizenship by descent](guide/2-reference/14-citizenship-by-descent.md): which documents are needed, by country
+- [DNA](guide/2-reference/15-dna.md): tests, endogamy, Ashkenazi norms, ethics
+- [Tree platforms](guide/2-reference/16-tree-platforms.md): services and programs
+- [Old photographs](guide/2-reference/17-photographs.md): dating and what a picture says about the family's way of life
+- [Other people's trees, communities, researchers](guide/2-reference/18-communities-researchers.md): how to ask and whom to hire
+- [Access, captchas, pace](guide/2-reference/19-access-captchas-pace.md): registration, site protection, geo-restrictions
+- [Requests and letters](guide/2-reference/20-requests-letters.md): how to write to archives and to people (the decision is the human's)
+
+## Part 3. Results
+
+- [Keeping files](guide/3-results/01-keeping-files.md): finds log, hypotheses, research log, registers
+- [Standard of proof](guide/3-results/02-standard-of-proof.md): hierarchy of sources, GPS, "not found", FAN, checklists
+- [Writing the family history](guide/3-results/03-family-history.md): the two-layer record, context
+- [Ethics and preservation](guide/3-results/04-ethics-preservation.md): living people, DNA surprises, storage
+- [Beginner mistakes](guide/3-results/05-beginner-mistakes.md): a consolidated list
+
+## Skills
+
+- [List of skills](../skills/README.md): 26 skills for Claude with trigger conditions and installation (the skill files are in Russian)
+- [genealogy-intake](../skills/genealogy-intake/SKILL.md): the first conversation, project files, the first question and plan
+- [search-logic-navigator](../skills/search-logic-navigator/SKILL.md): forks in the search route
+- [verifying-genealogy-findings](../skills/verifying-genealogy-findings/SKILL.md): verifying finds and negative conclusions
+- [orchestrating-genealogy-agents](../skills/orchestrating-genealogy-agents/SKILL.md): tasks for agents and accepting reports
+
+## Optional
+
+- [Catalog of sites](catalog/README.md): site cards with techniques and a "question → where to go" cheat sheet
+- [Genealogists and authors](reading/genealogists-and-authors.md): whom to read
+- [Groups and communities](reading/groups-and-communities.md): forums and groups in Russian, English, Hebrew
+- [AI in genealogy](reading/ai-in-genealogy.md): other people's experience, people, courses
+- [Institutes and projects](reading/institutes-and-projects.md)
+- [Dictionaries and encyclopedias](reading/dictionaries-and-encyclopedias.md)
+- [Examples of finds](examples/example-finds.md)
+- [Case study: from a newspaper to a family](examples/case-study-newspaper-to-family.md)
+- [Templates](templates/finding.md): finding, hypothesis, research log, source register, timeline, place guide, letter to an archive
