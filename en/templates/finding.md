@@ -1,18 +1,20 @@
-# Template: finding record
+# Template: finding record (finds log)
 
-**Date of record:** YYYY-MM-DD
-**Question it answers:** (for example: "who is the father of Moisei, b. 1868?")
+One "Finds log" file per project; one entry — one find, written at the very moment of the find.
+
+**Date of entry:** YYYY-MM-DD
+**Question it answers:** (for example: "who is the father of Moses, b. 1868?")
 
 **Source:** archive · fond-inventory-file · folio/page · record number
-**Where the scan is:** site · film/file · frame · direct link
-**Crop:** `folder/year_archive-reference_frame_who-what.png`
+**Where the scan is:** site · film/file · image · direct link
+**Crop:** `folder/year_archive-reference_image_who-what.png`
 
-**Verbatim (as written, with the spelling of the original):**
+**Verbatim (as written, in the spelling of the original):**
 > "…"
 
 **Translation / notes:**
 
-**Confidence of reading:** confident / uncertain (what gets in the way: …)
+**Confidence of the reading:** confident / not confident (what gets in the way: …)
 
 **What this changes:** (whom it concerns, which hypothesis it confirms/weakens)
 

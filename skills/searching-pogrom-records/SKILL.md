@@ -3,7 +3,7 @@ name: searching-pogrom-records
 description: Finds victims and survivors of the 1917–1922 pogroms in Ukraine and neighbouring regions — the Lipes database jewishpogroms.info (Latin-only search, wildcard, POST recipe without a browser), pogrom.amhazikaron.org (WordPress REST, Rosenthal's «Свиток резни» and archival lists), the Kyiv relief committee fond ДАКО Р-3050 with its inventories and 900 scans on Wikimedia Commons, ЦДАВО ф. 2497, YIVO Tcherikower archive. Covers the living too — 1922 relief recipients with addresses, orphanage children, refugees — and how to go from a database row to the archival file and page. Use whenever a relative lived in a shtetl in 1917–1922, disappeared or died around 1919–1921, the family speaks of погром, банда, петлюровцы, деникинцы, убит в 1919, сироты, детдом, беженцы, помощь из Америки, землячество — or the user asks «проверь базы погромов», «был ли он в списках жертв», «pogrom victims database», even if no database is named.
 ---
 
-# Погромы 1917–1922: жертвы, пострадавшие, сироты, беженцы
+# Погромы 1918–1922 (с конца 1917): жертвы, пострадавшие, сироты, беженцы
 
 ## Когда применять
 
@@ -51,7 +51,7 @@ description: Finds victims and survivors of the 1917–1922 pogroms in Ukraine a
 ## Что считать находкой
 
 - **Находка** — запись в базе **плюс** лист дела, прочитанный по скану, где совпадают фамилия, имя и хотя бы ещё один признак: отчество, возраст, местечко, имена родных, адрес.
-- Строка базы без открытого листа — **подсказка 🟡**, а не факт. Поля в базе бывают сдвинуты (в выпадающих списках сайта видны «съехавшие» колонки), номер дела бывает неточен.
+- Строка базы без открытого листа — **подсказка ⚪**, а не факт. Поля в базе бывают сдвинуты (в выпадающих списках сайта видны «съехавшие» колонки), номер дела бывает неточен.
 - Получатель помощи 1922 года по списку землячества — сильная зацепка к **американской ветке**: деньги посылали конкретным людям через землячество конкретного местечка (см. `tracing-emigrants-to-origin`).
 - Ребёнок в детдомовском списке с местом рождения и именами родителей — часто единственный документ о «пропавшем» ребёнке; дальше ищи советские документы детдома и ЗАГС.
 

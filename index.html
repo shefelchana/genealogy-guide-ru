@@ -16,7 +16,12 @@ window.$docsify = {
   repo: 'https://github.com/shefelchana/genealogy-guide-ru',
   homepage: 'README.md',
   relativePath: true,
-  loadSidebar: false,
+  loadSidebar: true,
+  alias: {
+    '/en/_sidebar.md': '/en/_sidebar.md',
+    '/en/.*/_sidebar.md': '/en/_sidebar.md',
+    '/.*/_sidebar.md': '/_sidebar.md'
+  },
   subMaxLevel: 2,
   auto2top: true,
   search: { placeholder: 'Поиск', noData: 'Ничего не найдено', depth: 3 }

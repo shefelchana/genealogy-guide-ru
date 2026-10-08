@@ -15,7 +15,7 @@ DNA is a **supporting** tool. It does not replace documents: Nadia Lipes and all
 
 ## 2. Types of tests
 
-According to Wikipedia ("Genealogical DNA test") and the VGD forum (the section "DNA genealogy. Beginners' questions", Russian-language forum):
+According to Wikipedia ("Genealogical DNA test") and the VGD forum (the section "DNA genealogy. Beginners' questions"):
 
 | Test | What it examines | Questions it answers |
 |---|---|---|
@@ -40,7 +40,7 @@ A Y-haplogroup confirms **membership in a line**, not a specific ancestor (the p
 **They do not accept files from others:** AncestryDNA, 23andMe and, since May 2025, **MyHeritage**. MyHeritage help (July 2026): "DNA uploads are no longer supported". According to The DNA Geek's analysis ("The End of an Era: Uploads at MyHeritage"), the restrictions began at the end of May 2025. What happened to older uploads — sources differ. ⚠️ Many articles from before 2025, and even the GEDmatch blog, still list MyHeritage as a site for free upload — this is out of date.
 
 **They accept:**
-- **FamilyTreeDNA** — Ancestry, 23andMe and MyHeritage files; matches are free; the $19 unlock was discontinued on 18.08.2026, and advanced features now go through a paid upgrade (per dna-explained.com — $29) [page: dna-explained.com, 2026-10-07]; uploaded data cannot later be downloaded back.
+- **FamilyTreeDNA** — Ancestry, 23andMe and MyHeritage files; matches are free; the $19 unlock was discontinued on 18.08.2026, and advanced features now go through a paid upgrade (per dna-explained.com — $29) [checked: dna-explained.com, 2026-10-07]; uploaded data cannot later be downloaded back.
 - **GEDmatch** — free "one-to-many" (the first 50 matches) and "one-to-one" comparisons; Tier 1 is $15 a month for new subscribers (from 01.09.2026; existing subscribers pay $10).
 - **Living DNA** — free upload, basic matches.
 
@@ -49,7 +49,7 @@ A Y-haplogroup confirms **membership in a line**, not a specific ancestor (the p
 - MyHeritage DNA tests are not available at all in some countries (an official restriction). Check before ordering.
 - AncestryDNA is not sold in every country (per the help page of September 2026 — in 119).
 
-**23andMe:** the company filed for bankruptcy on 23.03.2025; on 14.07.2025 its assets were bought by the non-profit TTAM Research Institute ($305 million), which promised to keep the previous policy; the service is operating [page: Wikipedia "23andMe", 2026-10-07; the company website did not open].
+**23andMe:** the company filed for bankruptcy on 23.03.2025; on 14.07.2025 its assets were bought by the non-profit TTAM Research Institute ($305 million), which promised to keep the previous policy; the service is operating [checked: Wikipedia "23andMe", 2026-10-07; the company website did not open].
 
 **Police access** (per the GEDmatch blog; some of the information is out of date — re-check): GEDmatch — only with the user's explicit consent (opt-in); FamilyTreeDNA — permitted, but you can opt out; 23andMe and Ancestry — only by court order.
 
@@ -120,10 +120,13 @@ From one real study (September 2026):
 
 > **How to ask AI**
 >
-> - "Here is a list of my DNA matches [table: total cM, longest segment, number of segments]. Select the ones worth working with under Ashkenazi endogamy and explain the thresholds you use." *Check yourself:* do not upload raw DNA data to a chat; give only the match numbers.
-> - "I share [N] cM with a match, longest segment [M] cM. Which degrees of relationship are possible for Ashkenazi Jews? Compare with Lara Diamond's Ashkenazic Shared DNA Survey, not only the Shared cM Project." *Check yourself:* the spread is huge: a cM figure does not name the degree of relationship.
-> - "Help me write a short, polite first message to a DNA match: who I am, which surnames and places I am researching, and what we appear to have in common." *Check yourself:* you send the message yourself.
+> *For a plain chat, add: "If you can't open a source, say so; mark fonds, villages and dates you name from memory as [from memory, verify]. Answer in English, and give names, places and archive titles in the original script in parentheses." ([why](../1-ai-search/02-prompt-library.md)). The note "(browsing agent)" is for an AI that opens websites itself; the other prompts suit any chat.*
+>
+> - "Here is a list of my DNA matches [table: total cM, longest segment, number of segments]. Select the ones worth working with under endogamy and explain the thresholds." *Check yourself:* do not upload raw DNA data to a chat; give only the match numbers.
+> - "I share [N] cM with a match, longest segment [M] cM. Which degrees of relationship are possible for Ashkenazi Jews? Compare with Lara Diamond's table, not only the Shared cM Project." *Check yourself:* the spread is huge: a cM figure does not name the degree of relationship.
+>
+> *Bad → good:* "How am I related to a person with [N] cM?" (no longest segment; it will not account for endogamy) → "We share [N] cM, longest segment [M] cM, and we are both Ashkenazi: which degrees of relationship are possible according to Lara Diamond's table?"
 
 ---
 
-**See also:** [DNA services](../../catalog/dna-services.md) · [Requests and letters](20-requests-letters.md) · [Standard of proof](../3-results/02-standard-of-proof.md) · [Tree platforms](16-tree-platforms.md)
+**See also:** [DNA services](../../catalog/dna-services.md) · [Requests and letters](20-requests-letters.md) · [Standard of proof](../3-results/01-standard-of-proof.md) · [Tree platforms](16-tree-platforms.md)

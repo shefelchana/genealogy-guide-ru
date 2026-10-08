@@ -2,9 +2,9 @@
 
 What this section covers: how to handle unexpected DNA finds, difficult discoveries and information about living people; what may be published; how to preserve an archive for decades and to whom to pass documents.
 
-Markers: **[checked]** — the page was read; **[from search snippet]** — information from a search results snippet, the page was not opened. ⚠️ Everything about law in this section is a retelling of American authors, not legal advice.
+The markers in square brackets ([checked], [from search snippet], [unverified] and others) are explained in the [Glossary](../0-start/06-glossary.md). ⚠️ Everything about law in this section is a retelling of American authors, not legal advice.
 
-The basic rules of DNA ethics are in [DNA](../2-reference/15-dna.md), section 7. The 3-2-1 backup rule is in [Keeping files](01-keeping-files.md), section 5. Here are additions.
+The basic rules of DNA ethics are in [DNA](../2-reference/15-dna.md), section 7. The 3-2-1 backup rule is in [Keeping files](../0-start/02-keeping-files.md), section 5. Here are additions.
 
 ---
 
@@ -26,9 +26,9 @@ Practical advice, not from the sources above:
 
 ## 2. Living people and publication
 
-- **Do not publish information about living people without their consent.** Hide the names of living DNA matches in publications — per the NGS "Guidelines for Sharing Information with Others" and Judy Russell's article "The Rights of the Living" [from search snippet: the site did not open].
+- **Do not publish information about living people without their consent.** Hide the names of living DNA matches in publications — per the NGS "Guidelines for Sharing Information with Others" and Judy Russell's article "The Rights of the Living" [from search snippet].
 - **Remember that exposures hurt relatives** — for example, information about a criminal record (same place) [from search snippet]. The same applies to illegitimate children, illnesses, denunciations.
-- What of this is already in the guide: into an online tree — only what is confirmed and without the living ([Keeping files](01-keeping-files.md), section 6); sensitive matters in the text of a family history — carefully ([Writing the family history](03-family-history.md), section 2).
+- What of this is already in the guide: into an online tree — only what is confirmed and without the living ([Keeping files](../0-start/02-keeping-files.md), section 6); sensitive matters in the text of a family history — carefully ([Writing the family history](02-family-history.md), section 2).
 
 In practice:
 - in open trees leave the living hidden (FamilySearch Family Tree does this automatically, see [Tree platforms](../2-reference/16-tree-platforms.md));
@@ -47,11 +47,11 @@ Advice from Trista ("Trista the Genealogist", "Pain in Your Family History") [ch
 
 No separate method for descendants of Holocaust victims from genealogists could be found; there are only psychological studies about the third generation [from search snippet].
 
-How to talk about the war with elderly relatives — [Talking to relatives](../0-start/03-talking-to-relatives.md), section 3.
+How to talk about the war with elderly relatives — [Talking to relatives](../0-start/04-talking-to-relatives.md), section 3.
 
 ## 4. Copyright
 
-All the points below are American law as retold by Judy Russell, The Legal Genealogist. Her site did not open, so everything is **[from search snippet]**.
+All the points below are American law as retold by Judy Russell, The Legal Genealogist. Her site did not open on the date of checking, so everything here is **[from search snippet]**.
 
 - **Facts** (names, dates, kinship) are not protected by copyright. **Notes and reasoning** in someone else's tree are protected: permission and attribution of the author are needed ("Using the Work of Others") [from search snippet].
 - **The right to a photograph belongs to the photographer**, not to the owner of the print. For unpublished pictures the term is the author's life plus 70 years. Amateur pictures are also protected; the trouble is that it is often unknown who took them ("Copyright and the Old Family Photo") [from search snippet].
@@ -66,7 +66,7 @@ The Library of Congress, "Personal Archiving: Photos" [checked]:
 
 1. **Find** all files — on all disks, phones, in clouds.
 2. **Select** what is worth keeping.
-3. **Name clearly** and add a **description** (who is in the photo, where the document comes from). How to name scans — [Keeping files](01-keeping-files.md), section 4.
+3. **Name clearly** and add a **description** (who is in the photo, where the document comes from). How to name scans — [Keeping files](../0-start/02-keeping-files.md), section 4.
 4. **At least two copies** — in places **physically distant** from each other.
 5. **Check once a year** that the copies open.
 6. **Move to a new medium** roughly **every 5 years**.
@@ -84,7 +84,7 @@ FamilySearch Newsroom ("How to Manage Your Family's Digital Assets", the rule as
 
 What else is worth doing:
 - write a short note "how my archive is organized" and put it at the root of the folder;
-- tell relatives where the archive is (this is already in [Keeping files](01-keeping-files.md));
+- tell relatives where the archive is (this is already in [Keeping files](../0-start/02-keeping-files.md));
 - **FamilySearch Memories**: photographs, documents, stories, audio linked to people in the tree. Only you see your own gallery; memories linked to **the deceased** are seen by all users [from search snippet]. This is both a backup and a way to share.
 
 ## 7. The family book
@@ -104,14 +104,14 @@ How to write a family history in 10 steps — Maegan Kasteler (FamilySearch blog
 
 Lisa A. Alzo (*Writing Your Family History Book*) advises starting with the ancestors about whom there is the most material [from search snippet].
 
-How to write the text itself — [Writing the family history](03-family-history.md).
+How to write the text itself — [Writing the family history](02-family-history.md).
 
 ## 8. Where to pass originals
 
-- **Yad Vashem, the "Gathering the Fragments" programme** (since 2011): they accept photographs, letters, documents, objects — as a gift or on temporary loan. Items are conserved, catalogued and digitised (Yad Vashem USA, "Share Your Documents and Artifacts") [checked]. Yad Vashem's own pages about the programme did not open (403) [from search snippet].
-- **The Central State Archive of Moscow** includes the former Central Moscow Archive-Museum of Personal Collections and accepts family archives [from search snippet: cgamos.ru, Russian-language]. The procedure for transfer was not checked.
+- **Yad Vashem, the "Gathering the Fragments" programme** (since 2011): they accept photographs, letters, documents, objects — as a gift or on temporary loan. Items are conserved, catalogued and digitised (Yad Vashem USA, "Share Your Documents and Artifacts") [checked].
+- **The Central State Archive of Moscow** includes the former Central Moscow Archive-Museum of Personal Collections and accepts family archives [from search snippet: cgamos.ru]. The procedure for transfer was not checked.
 - Before handing over, **scan everything** and keep a copy in the family. Record what, where and when was handed over, and the storage number if one is given.
 
 ---
 
-**See also:** [DNA](../2-reference/15-dna.md) · [Keeping files](01-keeping-files.md) · [Writing the family history](03-family-history.md) · [Talking to relatives](../0-start/03-talking-to-relatives.md) · [Old photographs](../2-reference/17-photographs.md) · [Other people's trees, communities, researchers](../2-reference/18-communities-researchers.md)
+**See also:** [DNA](../2-reference/15-dna.md) · [Keeping files](../0-start/02-keeping-files.md) · [Writing the family history](02-family-history.md) · [Talking to relatives](../0-start/04-talking-to-relatives.md) · [Old photographs](../2-reference/17-photographs.md) · [Other people's trees, communities, researchers](../2-reference/18-communities-researchers.md)

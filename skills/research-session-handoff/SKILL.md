@@ -1,6 +1,6 @@
 ---
 name: research-session-handoff
-description: Saves the full state of a genealogy research session before it ends or before the conversation is compacted, and restores it at the start of the next one. On save — records every unrecorded finding, updates hypotheses, the search log and lessons, and rewrites the "continue from here" file (current question, running background agents with their logs and resume points, what waits for the human such as captchas, VPN, logins or decisions, next concrete steps). On resume — reads that file and the project files, checks which background tasks are still alive, rebuilds the picture in a few lines and confirms with the user before searching. Use whenever a session is about to end, the context is about to be compacted, or work resumes after a break — even if the user only says "сохрани всё", "я сожму контекст", "закругляемся", "продолжи с того места", "где мы остановились", "что у нас висит".
+description: Saves the full state of a genealogy research session before it ends or is compacted, and restores it at the start of the next one. On save — records unrecorded findings, updates hypotheses, the search log and lessons, and rewrites the "continue from here" file (current question, running agents with logs and resume points, what waits for the human — captchas, VPN, logins, decisions — next steps). On resume — reads that file and the project files, checks which background tasks are alive, rebuilds the picture in a few lines and confirms with the user before searching. Use whenever a session is about to end, the context is about to be compacted, or work resumes after a break — even if the user only says "сохрани всё", "я сожму контекст", "закругляемся", "продолжи с того места", "что у нас висит". NOT for the first conversation when no project files exist — use genealogy-intake; NOT for the working cycle mid-session (next question, recording a find) — use organizing-genealogy-research.
 ---
 
 # Сохранение и возобновление исследовательской сессии
@@ -11,9 +11,9 @@ description: Saves the full state of a genealogy research session before it ends
 
 Делай по порядку. Каждый шаг закрывает конкретную потерю.
 
-1. **Незаписанные находки.** Пройди по разговору с конца к началу. Каждая находка, которой ещё нет в досье, записывается сейчас: источник с шифром, где скан (сайт, кадр, ссылка), дословная цитата, уверенность, «проверено по скану: да/нет». Непроверенное помечай как непроверенное, а не «нашли».
+1. **Незаписанные находки.** Пройди по разговору с конца к началу. Каждая находка, которой ещё нет в журнале находок, записывается сейчас: источник с шифром, где скан (сайт, кадр, ссылка), дословная цитата, уверенность, «проверено по скану: да/нет». Непроверенное помечай как непроверенное, а не «нашли».
 2. **Персоны.** Всё, что изменилось о конкретных людях, — в их карточки.
-3. **Гипотезы.** Обнови статус первой строкой: 🟢 подтверждена (чем) / 🟡 открыта / 🔴 снята (почему). Если гипотеза ослаблена, запиши чем.
+3. **Гипотезы.** Обнови статус первой строкой: 🟢 подтверждена (чем) / 🟡 открыта, сильная версия / ⚪ не проверена / 🔴 снята (почему). Если гипотеза ослаблена, запиши чем.
 4. **Журнал поисков.** Каждый поиск сессии, **включая пустые**: где, что, какие написания, как, охват, результат. Пустой поиск без охвата через месяц повторят.
 5. **Фоновые агенты.** По каждому, кто запускался в этой сессии:
    - имя или идентификатор задачи;
@@ -40,7 +40,7 @@ description: Saves the full state of a genealogy research session before it ends
 
 ## Возобновление («продолжи», «где мы остановились», начало сессии)
 
-1. **Прочитай «Продолжать отсюда»** целиком. Затем то, на что он ссылается: файл текущего направления, последние записи досье и журнала поисков, гипотезу, которую проверяем.
+1. **Прочитай «Продолжать отсюда»** целиком. Затем то, на что он ссылается: файл текущего направления, последние записи журнала находок и журнала поисков, гипотезу, которую проверяем.
 2. **Проверь фоновые задачи.** Для каждого агента из списка:
    - если среда показывает список фоновых задач — посмотри статус;
    - посмотри время последнего изменения журнала агента и последнюю строку в нём;
@@ -49,7 +49,7 @@ description: Saves the full state of a genealogy research session before it ends
 3. **Спроси человека о том, что ждало его**: пройдена ли капча, выключен ли VPN, принято ли решение, что рассказали родные. Не предполагай, что сделано.
 4. **Восстанови картину в 5–7 строк**: текущий вопрос; что уже известно по нему; что сделано в прошлый раз; что изменилось; предлагаемый первый шаг. Дай человеку подтвердить или поправить. **Ответ человеку — не длиннее 10 строк:** картина → вопрос о том, что ждало его (капча, VPN, решение) → один предлагаемый шаг → жди ответа. Подробности — в файлах, не в чате. Агент, стоящий на капче, не «оборвался»: его продолжают с того же кадра после капчи; нового запускают только при обрыве связи.
 5. **Перед любым новым поиском** — поиск по своим файлам по фамилии, месту и имени. Иначе легко переоткрыть найденное.
-6. Если «Продолжать отсюда» нет или он устарел — собери картину из досье, журнала поисков и гипотез (последние записи по датам) и сначала создай файл по шаблону.
+6. Если «Продолжать отсюда» нет или он устарел — собери картину из журнала находок, журнала поисков и гипотез (последние записи по датам) и сначала создай файл по шаблону.
 
 ## Когда сохранять, не дожидаясь просьбы
 
@@ -58,4 +58,4 @@ description: Saves the full state of a genealogy research session before it ends
 - когда разговор стал длинным и близко сжатие;
 - перед сменой направления: старое закрой записью «закрыто, потому что…», а не тихим исчезновением.
 
-См. также навыки: `organizing-genealogy-research` (структура файлов проекта), `orchestrating-genealogy-agents` (приём отчётов агентов).
+См. также навыки: `organizing-genealogy-research` (структура файлов проекта и ход работы внутри сессии), `orchestrating-genealogy-agents` (приём отчётов агентов), `genealogy-intake` (первый разговор, когда файлов ещё нет).

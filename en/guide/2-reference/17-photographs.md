@@ -2,15 +2,15 @@
 
 What this section covers: how to work out when and where a photograph was taken and who is in it, when there is no caption. Maureen Taylor's four-layer method, Russian directories of photo studios, and what a Jewish family photograph says about the family's way of life and about the occasion for which they were photographed.
 
-Labels: **[checked]** — the page was read; **[from search snippet]** — information from search results, the page was not opened.
+The markers in square brackets ([checked], [from search snippet], [unverified] and others) are explained in the [Glossary](../0-start/06-glossary.md).
 
-For how to handle originals (do not restore them yourself, label in pencil), see [Where to start](../0-start/02-where-to-start.md), section 1. For how to store scans, see [Ethics and preservation](../3-results/04-ethics-preservation.md).
+For how to handle originals (do not restore them yourself, label in pencil), see [Where to start](../0-start/03-where-to-start.md), section 1. For how to store scans, see [Ethics and preservation](../3-results/03-ethics-preservation.md).
 
 ---
 
 ## 1. The four-layer method (Maureen Taylor)
 
-Maureen Taylor (Maureen A. Taylor, "Photo Detective", author of *Family Photo Detective*) dates a photograph by four layers of evidence [page: maureentaylor.com, "How to Date an Old Photograph"]:
+Maureen Taylor (Maureen A. Taylor, "Photo Detective", author of *Family Photo Detective*) dates a photograph by four layers of evidence [checked: maureentaylor.com, "How to Date an Old Photograph"]:
 
 1. **Photographic technique.** The type of image itself limits the years:
    - daguerreotype — from 1839;
@@ -25,7 +25,7 @@ The main rule: **the clues must confirm one another**. A single clue gives a wid
 
 ## 2. The mount and the format
 
-The cardboard on which the photograph is mounted also dates it. Look at [from search snippet: summary on photorepair.ru, nasledie.digital — the second page did not open] (Russian-language sites):
+The cardboard on which the photograph is mounted also dates it. Look at [from search snippet: photorepair.ru, nasledie.digital] (Russian-language sites):
 - **the front and the back**: embossing, the studio's name, exhibition medals;
 - **the typography** of the printer of the card, and **the grade of the card**;
 - **the corners**: rounded or square.
@@ -38,7 +38,7 @@ Formats [from search snippet, same source]:
 
 ## 3. Russian directories of photographers and studios
 
-If the photograph has the photographer's surname and a city, the years the studio operated can often be found:
+If the photograph has the photographer's surname and a city, the years the studio operated can often be found (don't read Russian? See [For English speakers](../0-start/08-for-english-speakers.md)):
 
 - **FotoTikon** — a directory of photographers of the Russian Empire 1839–1917, about 9,500–10,000 names, alphabetical, with cities and years (fototikon.blogspot.com) [checked] (Russian-language site).
 - **"Bolshoi Russkii Albom"** ("The Great Russian Album") — a catalogue of photo studios **by city**, with addresses, sometimes with years of operation ("in 1870", "ca. 1880") (rusalbom.ru/foto-atelie.html) [checked] (Russian-language site). Convenient when the city is known but the photographer's name is hard to read.
@@ -53,9 +53,9 @@ No separate method for **Jewish** photo studios of the Russian Empire (databases
 
 ## 4. Who is in the photograph
 
-- **Ask relatives**, showing the photos one at a time: "who is this? where? on what occasion?" ([Talking to relatives](../0-start/03-talking-to-relatives.md)).
+- **Ask relatives**, showing the photos one at a time: "who is this? where? on what occasion?" ([Talking to relatives](../0-start/04-talking-to-relatives.md)).
 - **Compare with captioned photographs** of the same family: the same faces at different ages, the same photographer, the same backdrop.
-- **Check against the timeline.** If by its dating the photograph is from around 1885 and shows an elderly couple, they cannot be people born in the 1870s ([Plan, timeline, place guide](../0-start/04-plan-timeline-place.md)).
+- **Check against the timeline.** If by its dating the photograph is from around 1885 and shows an elderly couple, they cannot be people born in the 1870s ([Plan, timeline, place guide](../0-start/05-plan-timeline-place.md)).
 - **A caption on the back** is evidence, but not proof: it may have been written later and from memory.
 - Record an attribution as a hypothesis: "probably …, because …".
 
@@ -67,7 +67,7 @@ No separate method for **Jewish** photo studios of the Russian Empire (databases
 - who is pictured and **who says so**;
 - a scan of both sides.
 
-For rights to old photographs on publication, see [Ethics and preservation](../3-results/04-ethics-preservation.md), section 4.
+For rights to old photographs on publication, see [Ethics and preservation](../3-results/03-ethics-preservation.md), section 4.
 
 ## 6. Jewish family photography: way of life and occasion
 
@@ -86,7 +86,7 @@ For each person: headwear, beard and sidelocks, outer clothing; for women — ha
 - **Kapota** (a long dark frock coat), **shtraymel** (a fur hat; among Hasidim worn on Sabbaths and holidays), the peaked cap (*kartuz*), the **yarmulke** — a traditional milieu. A shtraymel points to Hasidim more likely than a kapota alone.
 - **A wig or kerchief** on a woman — a sign of marriage and of observance of custom. Uncovered hair does not prove she was unmarried: in the city many did not cover their heads.
 - **City dress, a gymnasium or student uniform** — education, the city. A father in a kapota and a son in a frock coat in one photograph — a generational difference, not different families.
-- **Dress laws** in the Russian Empire: a tax on the sewing (1839) and wearing (1844) of Jewish dress, a ban on wearing it from 1 January 1851 (decree of 1 May 1850), a ban on Jewish women shaving their heads (1851), clarifications on sidelocks (1851–1852); after 1865 the ban weakened [page: Electronic Jewish Encyclopedia (Russian-language), article "Odezhda" ("Clothing")]. In the Kingdom of Poland — its own decree of 1846. They were applied inconsistently. This is **context only, not a basis for dating**: a kapota in a photograph of the 1880s is an ordinary scene in a shtetl.
+- **Dress laws** in the Russian Empire: a tax on the sewing (1839) and wearing (1844) of Jewish dress, a ban on wearing it from 1 January 1851 (decree of 1 May 1850), a ban on Jewish women shaving their heads (1851), clarifications on sidelocks (1851–1852); after 1865 the ban weakened [checked: Electronic Jewish Encyclopedia (Russian-language), article "Odezhda" ("Clothing")]. In the Kingdom of Poland — its own decree of 1846. They were applied inconsistently. This is **context only, not a basis for dating**: a kapota in a photograph of the 1880s is an ordinary scene in a shtetl.
 
 ### Objects
 
@@ -123,11 +123,13 @@ Compare clues with **dated and captioned** photographs of the same milieu: the p
 
 > **How to ask AI**
 >
-> - "Here is a photograph [both sides]. First describe what is visible, person by person and object by object, without interpreting; inscriptions verbatim. Then date it by technique, mount, studio and clothing, stating which clues you used." *Check yourself:* the studio's years of operation — in FotoTikon and the "Great Russian Album" (the AI may need to read these Russian-language sources).
+> *For a plain chat, add: "If you can't open a source, say so; mark fonds, villages and dates you name from memory as [from memory, verify]. Answer in English, and give names, places and archive titles in the original script in parentheses." ([why](../1-ai-search/02-prompt-library.md)). The note "(browsing agent)" is for an AI that opens websites itself; the other prompts suit any chat.*
+>
+> - "Here is a photograph [both sides]. First describe what is visible, person by person and object by object, without interpreting; inscriptions verbatim. Then date it by technique, mount, studio and clothing, stating which clues you used." *Check yourself:* the studio's years of operation — in FotoTikon and the "Great Russian Album".
 > - "What does this photograph say about the family's way of life and the occasion? Give a table: clue → hypothesis → how reliable → which document to look for. Do not draw conclusions from faces." *Check yourself:* whether it is a studio prop — by other photographs from the same studio.
-> - "Read the inscription on the back [photo]: in Yiddish, Hebrew or Russian, verbatim, with a translation; convert the Jewish-calendar date to the Gregorian one." *Check yourself:* the date — in a converter.
-> - "The photograph shows a man in military uniform. What period is it, which branch of service and, if visible, which regiment? Which service records should I look for?"
+>
+> *Bad → good:* "Who are the people in this photo?" (it will guess from faces; the inscriptions and the studio are not given) → "Here is the photo, both sides: describe the people and objects, give the inscriptions verbatim, then date it and name the clues."
 
 ---
 
-**See also:** [Cemeteries](10-cemeteries.md) · the skills `dating-old-photos` and `interpreting-jewish-family-photos` in [../../../skills/](../../../skills/) · [Where to start](../0-start/02-where-to-start.md) · [Talking to relatives](../0-start/03-talking-to-relatives.md) · [Ethics and preservation](../3-results/04-ethics-preservation.md) · [Writing the family history](../3-results/03-family-history.md)
+**See also:** [Cemeteries](10-cemeteries.md) · the skills [`dating-old-photos`](../../../skills/dating-old-photos/SKILL.md) and [`interpreting-jewish-family-photos`](../../../skills/interpreting-jewish-family-photos/SKILL.md) · [Where to start](../0-start/03-where-to-start.md) · [Talking to relatives](../0-start/04-talking-to-relatives.md) · [Ethics and preservation](../3-results/03-ethics-preservation.md) · [Writing the family history](../3-results/02-family-history.md)

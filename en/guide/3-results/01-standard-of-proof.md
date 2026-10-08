@@ -6,21 +6,21 @@ What this section covers: how to evaluate sources, when a match becomes proof, w
 
 ## 1. The hierarchy of sources
 
-A rough ladder, from strong to weak:
+A rough ladder, from strong to weak (with a caveat below):
 
-1. **A scan of a primary document** (metrical book, revision list, ZAGS record) — look with your own eyes.
-2. **A printed directory of the era** ("All Russia" — *Vsya Rossiya*, memorial booklets — *pamyatnye knizhki*, medical lists).
-3. **A document kept by relatives** (certificate, passport, statement).
+1. **A primary document** — a scan of an archival file (metrical book, revision list, ZAGS record) or an original of the time that survives with relatives (certificate, passport, statement), including a photo of it. An original in the hands of relatives is not lower than a scan. Look with your own eyes.
+2. **A printed directory of the era** ("All Russia" — *Vsya Rossiya*, memorial booklets — *pamyatnye knizhki*, medical lists) — a derivative text, but contemporary with the event.
+3. **Later family records and stories** — a hand-copied transcript, entries in an album or notebook, memoirs.
 4. **An index, an indexed database** — a hint about where the document lies.
 5. **Someone else's tree** — not a source but **someone else's hypothesis**.
 
 The archive and the document are always above a record in a tree and above family memory.
 
-**Encyclopedias and Wikipedia are not a source on origin.** The place of registration (*pripiska*) is passed off there as the place of birth, the number of children is sometimes wrong (those who died in infancy were not known), and an article in an old encyclopedia could have been paid for by the subject himself. Nadya Lipes, in an interview, estimated that the birthplaces of prominent Jews in encyclopedias are given wrongly in nearly 90% of cases (isrageo.com, 2023) — a practitioner's opinion, not a statistic. Check against metrical books, censuses, petitions.
+**Encyclopedias and Wikipedia are not a source on origin.** The place of registration (*pripiska*) is passed off there as the place of birth, the number of children is sometimes wrong (those who died in infancy were not known), and an article in an old encyclopedia could have been paid for by the subject himself. Nadia Lipes, in an interview, estimated that the birthplaces of prominent Jews in encyclopedias are given wrongly in nearly 90% of cases (isrageo.com, 2023) — a practitioner's opinion, not a statistic. Check against metrical books, censuses, petitions.
 
 This ladder matches Mills's division into **original**, **derivative** and **authored** sources. Mills explicitly classes quality images of originals as originals, and indexes and database records as derivatives.
 
-⚠️ A caveat. The ladder ranks **carriers**, not every field within a document. For example, a ZAGS birth certificate in the hands of relatives is an original, often with primary information, while a directory is a derivative text. Therefore it is more exact to evaluate each document on three axes (next item), and to keep the ladder as a landmark.
+⚠️ A caveat. The ladder ranks **carriers**, while it is the specific document and the specific field that decide. A ZAGS birth certificate in the hands of relatives is an original, often with primary information, so it stands next to a scan, not below a directory. And fields within one document are not equal: an age stated by the person himself is weaker than a date from a metrical record, although both stand in a primary document. So it is more exact to evaluate each document and each field on three axes (next item), and to keep the ladder as a landmark.
 
 ## 2. Three axes of evaluation (Mills)
 
@@ -43,7 +43,7 @@ Source: Evidence Explained, QuickLesson 17 "Evidence Analysis Process Map" (evid
 The proof standard of the Board for Certification of Genealogists (BCG). A conclusion is considered proven if all five conditions are met:
 
 1. **Reasonably exhaustive research** — on the question, all sources that could have answered it have been viewed, including indirect ones and the person's circle.
-2. **Complete and accurate source citations** — with archival reference, page, frame.
+2. **Complete and accurate source citations** — with archival reference, page, image.
 3. **Thorough analysis and correlation** — of each source on the three axes.
 4. **Resolution of conflicting evidence** — every discrepancy is explained, not discarded.
 5. **A soundly reasoned, written conclusion** based on the strongest evidence.
@@ -61,6 +61,24 @@ A practical rule that almost fully coincides with the GPS. "Found" only if:
 
 A surname alone is not a match. A surname plus place may also be a coincidence of namesakes. Features are needed that together occur in only one person.
 
+## 4a. The status scale
+
+One scale for hypotheses, links between people and families, and agents' finds — throughout the guide, in the templates and in the skills:
+
+| Status | What it means | What is needed |
+|---|---|---|
+| 🟢 **confirmed** | proven | a document read from the scan (the record directly names the fact or the relationship, or there is a bridge of ages between revisions), **plus a second independent feature**; contradictions resolved |
+| 🟡 **open / strong version** | there are signs, there is no proof | two or more independent indirect features, no contradictions; the reasoning is written down. Work is under way on it |
+| ⚪ **unverified / weak** | a hint | one feature: a match of surname and place, a line of an index or database without a scan, a family legend, someone else's tree |
+| 🔴 **rejected** | refuted or dropped | always with the reason and date: "rejected 12.10.2026 — by the scan the father is not Abram but Khaim" |
+
+Rules:
+- **A line of an index, database or finding aid is ⚪** until the document itself is opened. An index and the scan of the same record are one piece of evidence, not two.
+- **A family legend is ⚪** with a note of who told it. Do not argue with it and do not discard it: check it.
+- **What to put in a tree:** in a publicly accessible online tree — only 🟢; in a personal working tree you may put 🟡 marked "version"; ⚪ and 🔴 — only in the hypotheses file.
+- **The status is changed by a person**, not by AI: AI proposes, the person decides.
+- Before moving 🟡 to 🟢 on indirect data, write a proof argument (section 8).
+
 ## 5. Independence of confirmations
 
 For Mills, a confirmation counts only if the sources were **created independently** and do not go back to one original source.
@@ -76,9 +94,9 @@ Look at every record from a database on the scan. Real cases from one investigat
 - the index gave "Ester, daughter of Duvid" — in fact a field-parsing error: Duvid turned out to be the groom's father;
 - the index read "Khuna, son of Abram" — by the scan Abram was the bride's father;
 - «Рашковскій мещ.» (Rashkovsky mesh.) meant "meshchanin of the shtetl Rashkov", not a surname;
-- a person is in the list at the frame but absent from the alphabetical index of the same section;
-- in an American index "Chaim Shefel" turned out by the frame to be Stiefel;
-- a naturalization card in the index gave 1938, while by the frame it was 1932.
+- a person is in the list on the image but absent from the alphabetical index of the same section;
+- in an American index "Chaim Shefel" turned out by the image to be Stiefel;
+- a naturalization card in the index gave 1938, while by the image it was 1932.
 
 Advice from the NGS (National Genealogical Society, USA): online materials are a hint, not ready-made proof; do not accept programs and online trees uncritically; an author's text is useful only if it has references to sources.
 
@@ -91,7 +109,7 @@ Mills distinguishes two things:
 An example: a male meshchanin of the right age must be in the revision of his society. If he is not — that is evidence (ran away, died, registered elsewhere), not just an empty search. But the absence of a wife in the revision of 1811 means nothing: that revision recorded only men.
 
 **"Not found" has force only if the following are stated:**
-1. **the source and its limits** — which file, which pages or frames were viewed;
+1. **the source and its limits** — which file, which pages or images were viewed;
 2. **the list of spellings** searched;
 3. **the method of search** — index, full-text search, page-by-page reading; exact or phonetic;
 4. whether the **index or the document itself** was looked at.
@@ -108,6 +126,8 @@ Before believing a zero, test the search on a **control record** — a word or n
 
 A real case: a mass pass through newspaper issues returned "0 finds" because all the site's responses were access errors (403). Any mass pass must be checked on a known positive example.
 
+A zero can also be false without any site errors: a wrongly built query address, a different route to the same database, a search with synonyms that does not know your spelling, a catalogue that looks for all the words in one file title. A control record is needed for each route separately, and every zero needs the number looked at and a denominator ("118 of 245 households"). Details — [False zero](../1-ai-search/09-false-zero.md).
+
 ### Gaps in the sources themselves
 
 A gap is not always a failure of the search. Some books did not survive, some were not filmed, leaves are sometimes torn out of files (check — by a break in the numbering of folios). This must be recorded as a result: "the book for 1869 is not filmed in the catalogue", not "not found".
@@ -120,7 +140,7 @@ A gap is not always a failure of the search. Some books did not survive, some we
 | **Proof summary** | Several pieces of evidence, minor contradictions | A point-by-point discussion |
 | **Proof argument** | Evidence conflicts, or there is no direct evidence | A coherent text, tables, diagrams, sometimes several pages |
 
-BCG stresses: the boundaries between the forms are blurred; what matters is not the name but the persuasiveness. Practical conclusion: **a hypothesis built on indirect data should, before the status "confirmed", be set out as a proof argument.** It is written as text: which evidence, why it is independent, what is against, why the alternatives were dropped.
+BCG stresses: the boundaries between the forms are blurred; what matters is not the name but the persuasiveness. Practical conclusion: **a hypothesis built on indirect data should, before the status 🟢 "confirmed", be set out as a proof argument.** It is written as text: which evidence, why it is independent, what is against, why the alternatives were dropped.
 
 Source: bcgcertification.org, "Ten-Minute Methodology: Proof Summaries and Arguments".
 
@@ -150,7 +170,7 @@ Sources: evidenceexplained.com, QuickLesson 11 "Identity Problems & the FAN Prin
 
 **Before saying "found":**
 - [ ] The scan is open and read with your own eyes (not only the index).
-- [ ] The quotation is verbatim, the archival reference and frame are recorded.
+- [ ] The quotation is verbatim, the archival reference and image are recorded.
 - [ ] There is a second independent feature (not only the surname).
 - [ ] The sources really are independent (not an index + the same scan).
 - [ ] Contradictions are named and explained.
@@ -160,12 +180,13 @@ Sources: evidenceexplained.com, QuickLesson 11 "Identity Problems & the FAN Prin
 - [ ] The source and the limits of what was viewed are named.
 - [ ] All spellings are named.
 - [ ] The method of search (index / full text / page by page) is named.
-- [ ] The search was tested on a control record.
+- [ ] The search was tested on a control record — by the same route.
+- [ ] It is recorded how much was looked at and out of how many; the instrument was checked as working ([False zero](../1-ai-search/09-false-zero.md)).
 - [ ] It is clear whether the person had to be in this source.
 - [ ] It was checked whether part of the source is lost or not filmed.
-- [ ] The books of neighbouring rabbinates and the district town were checked.
+- [ ] The books of neighbouring parishes or rabbinates and the district town were checked.
 - [ ] The date of the search is recorded (databases grow).
 
 ---
 
-**See also:** [Names, surnames, spellings](../2-reference/03-names-spellings.md) · [Keeping files](01-keeping-files.md) · [Case study of a search](../../examples/case-study-newspaper-to-family.md) · [Genealogists and authors](../../reading/genealogists-and-authors.md) · the `verifying-genealogy-findings` skill in [../../../skills/](../../../skills/)
+**See also:** [Names, surnames, spellings](../2-reference/03-names-spellings.md) · [Keeping files](../0-start/02-keeping-files.md) · [Case study of a search](../../examples/case-study-newspaper-to-family.md) · [Genealogists and authors](../../reading/genealogists-and-authors.md) · the skill [`verifying-genealogy-findings`](../../../skills/verifying-genealogy-findings/SKILL.md)

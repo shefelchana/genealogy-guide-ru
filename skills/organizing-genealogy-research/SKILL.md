@@ -1,14 +1,14 @@
 ---
 name: organizing-genealogy-research
-description: Organizes a long-running family-history project with an AI assistant — one active question at a time, checking the project's own files before any new search, briefing background agents so their reports are verifiable (control record, coverage log, quotes), pacing work so sites do not block, saving every finding immediately, and closing a line of inquiry in two layers (cited fact + readable paragraph for relatives). Use at the start of every research session, before delegating archive reading to agents, when an agent reports back, before saying "proven", and before ending or compacting a session — even if the user only says "давай искать дальше", "запусти агентов", "сохрани всё".
+description: Runs the working cycle inside an ongoing family-history project with an AI assistant — one active question at a time with a stop condition, checking the project's own files before any new search, pacing work so sites do not block, writing every finding into the project files at once, the short checklist before saying "proven", and closing a line of inquiry in two layers (cited fact + readable paragraph for relatives). Use during a research session in a project that already has its files — choosing the next question, before a new search, right after a find, when closing a direction — even if the user only says "давай искать дальше", "что ищем теперь", "запиши находку", "это уже доказано?", "закрываем эту ветку". NOT for the first conversation with a newcomer — use genealogy-intake; NOT for briefing background agents or accepting their reports — use orchestrating-genealogy-agents; NOT for saving state before the session ends or is compacted, or resuming after a break — use research-session-handoff.
 ---
 
 # Как вести генеалогическое исследование с ИИ
 
 ## Файлы проекта (создать в начале)
-- `ДОСЬЕ.md` — журнал находок: дата, источник с шифром, дословная цитата, кроп, оценка.
+- `ЖУРНАЛ-НАХОДОК.md` — журнал находок: дата, источник с шифром, дословная цитата, кроп, оценка.
 - `ПЕРСОНЫ.md` — справочник по людям (включая строку «окружение»: свидетели, компаньоны, соседи, попутчики).
-- `ГИПОТЕЗЫ.md` — основания / слабые места / как проверить / статус 🟢🟡🔴.
+- `ГИПОТЕЗЫ.md` — основания / слабые места / как проверить / статус по единой шкале: 🟢 подтверждена · 🟡 открыта / сильная версия · ⚪ не проверена · 🔴 снята.
 - `ЖУРНАЛ-ПОИСКОВ.md` — каждый поиск, включая пустые, с охватом.
 - `ИСТОЧНИКИ.md` — реестр: архив, фонд-опись-дело, где скан, что прочитано.
 - `ИСТОРИЯ.md` — связный текст для родных.
@@ -32,7 +32,7 @@ description: Organizes a long-running family-history project with an AI assistan
 ## Получение отчёта
 1. **Сверить каждую находку по кадру самому** (агенты видят ожидаемое).
 2. Проверить, что массовый проход не «пустой из-за ошибок» (были ли ответы 403/капча).
-3. Сразу записать: ДОСЬЕ + ПЕРСОНЫ + статус в ГИПОТЕЗЫ + строка в ЖУРНАЛ.
+3. Сразу записать: ЖУРНАЛ-НАХОДОК + ПЕРСОНЫ + статус в ГИПОТЕЗЫ + строка в ЖУРНАЛ.
 
 ## Перед словом «доказано»
 - Поиск разумно полный (названы охват и написания).
@@ -47,4 +47,4 @@ description: Organizes a long-running family-history project with an AI assistan
 - Обновить `ПРОДОЛЖАТЬ-ОТСЮДА.md` (что работает, что ждёт человека — капчи, VPN, решения).
 - Записать уроки (что сработало, что тормозило) — в отдельный файл методики.
 
-См. также: `verifying-genealogy-findings`, `reading-archive-scans`.
+См. также: `genealogy-intake` (первый разговор, файлов ещё нет), `orchestrating-genealogy-agents` (задания агентам и приём отчётов), `research-session-handoff` (сохранить сессию и возобновить после перерыва), `verifying-genealogy-findings`, `reading-archive-scans`.

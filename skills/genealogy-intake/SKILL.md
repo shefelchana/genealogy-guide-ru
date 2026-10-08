@@ -1,6 +1,6 @@
 ---
 name: genealogy-intake
-description: Runs the first conversation with a person who is starting a family-history search or has just handed the assistant this guide — asks, in small batches, about names, dates, places, documents and photos at home, family legends, relatives abroad, the goal (family story, citizenship by descent, DNA, finding living relatives, fate of a war victim), languages, access to sites and existing accounts; sets up the project files from templates; turns what is known into a person–dates–place–source table; formulates the first research question with a stop condition; and proposes a concrete plan for the first one to two weeks. Use whenever someone begins genealogy research or the session has no project files yet — even if the user only says "хочу найти предков", "с чего начать", "вот всё, что я знаю о бабушке", "прочитай руководство и помоги", "помоги составить родословную", "ищу деда, погибшего на войне".
+description: Runs the first conversation with a person who is starting a family-history search or has just handed the assistant this guide — asks, in small batches, about names, dates, places, documents and photos at home, legends, relatives abroad, the goal (family story, citizenship, DNA, living relatives, fate of a war victim), languages, site access and accounts; sets up the project files from templates; turns what is known into a person–dates–place–source table; formulates the first research question with a stop condition; and proposes a concrete plan for the first one to two weeks. Use when someone begins genealogy research and the project has no files yet — even if the user only says "хочу найти предков", "с чего начать", "вот всё, что я знаю о бабушке", "прочитай руководство и помоги", "ищу деда, погибшего на войне". NOT for a project that already has its files — to resume after a break use research-session-handoff, to run the next research round use organizing-genealogy-research.
 ---
 
 # Первый разговор: от «хочу найти предков» к первому вопросу и плану
@@ -9,14 +9,14 @@ description: Runs the first conversation with a person who is starting a family-
 
 ## Если человек дал ссылку на руководство
 
-Прочитай сначала то, что задаёт порядок работы: README, разделы «С чего начать», «Как вести файлы», «Доказательность» и «Сценарии: что делать, если…». Остальное открывай, когда понадобится. Скажи человеку одной фразой, что прочитал и как будешь работать. Если руководство недоступно, работай по этому навыку: в нём есть всё нужное для первой беседы.
+Прочитай сначала инструкцию для агента AGENTS.md и карту llms.txt — они задают правила и порядок работы; затем по необходимости разделы «С чего начать», «Как вести файлы», «Доказательность» и «Сценарии: что делать, если…». Остальное открывай, когда понадобится. Скажи человеку одной фразой, что прочитал и как будешь работать. Если руководство недоступно, работай по этому навыку: в нём есть всё нужное для первой беседы.
 
 ## Как вести разговор
 
 - **Спрашивай блоками по 3–5 вопросов**, а не анкетой из сорока пунктов. После каждого блока коротко повтори, что понял. Человек поправит, и ошибка не уйдёт в файлы.
 - **Начни с цели и с того, что человек уже знает.** Технические вопросы о доступах и аккаунтах задай позже.
 - **Записывай дословно и с пометкой источника**: «так говорит мама, разговор 12.03.2026». Названия мест — как их произносит рассказчик: домашнее название местечка может отличаться от официального, и это зацепка.
-- **Легенды — гипотезы, а не факты.** Не спорь и не отбрасывай. Запиши как гипотезу со статусом 🟡. В легендах часто путаются поколения и даты, но верная деталь бывает: место, профессия, родня за границей.
+- **Легенды — гипотезы, а не факты.** Не спорь и не отбрасывай. Запиши как гипотезу со статусом ⚪ (не проверена). В легендах часто путаются поколения и даты, но верная деталь бывает: место, профессия, родня за границей.
 - **Не обещай результата.** Скажи честно, что многое зависит от сохранности документов по месту.
 - **Тяжёлые темы** (война, Холокост, репрессии) затрагивай бережно и не настаивай.
 - **Если живы люди старшего поколения, их расспросы — первый пункт плана**: откладывать нельзя («Ам а-Зикарон»). Полезно разделить разговор на генеалогический (даты, браки, переезды, документы, фото) и биографический (характер, события). Спроси и про **очень дальних** родственников: у них часто хранится то, чего нет у близких. Расхождения между рассказами — зацепки, их записывают, а не сглаживают.
@@ -43,9 +43,9 @@ description: Runs the first conversation with a person who is starting a family-
 
 ## Заведение файлов проекта
 
-Создай папку проекта (с согласия человека и там, где он скажет) и файлы из `assets/project-files.md`: досье, персоны, гипотезы, журнал поисков, реестр источников, хронология, «Продолжать отсюда». Почему это важно с первого дня: новая сессия ИИ не помнит прошлую, а человек через месяц не вспомнит, где уже искал. Всё, что прозвучало в беседе, раздели так:
+Создай папку проекта (с согласия человека и там, где он скажет) и файлы из `assets/project-files.md`: журнал находок, персоны, гипотезы, журнал поисков, реестр источников, хронология, «Продолжать отсюда». Почему это важно с первого дня: новая сессия ИИ не помнит прошлую, а человек через месяц не вспомнит, где уже искал. Если у тебя нет доступа к папке (обычный чат), не делай вид, что файлы заведены: в конце каждого ответа давай блок «Записать в файлы» для человека (AGENTS.md, раздел 3а). Всё, что прозвучало в беседе, раздели так:
 - имена, даты и места **с документом** → в персоны и хронологию, с пометкой, какой документ;
-- рассказы и легенды → в гипотезы (🟡) и в персоны с пометкой «со слов …»;
+- рассказы и легенды → в гипотезы (⚪) и в персоны с пометкой «со слов …»;
 - что прислано (сканы, фото) → в реестр источников; файлы назови понятно: `год_тип_кто.jpg`.
 
 ## Первая сводная таблица
@@ -71,4 +71,4 @@ description: Runs the first conversation with a person who is starting a family-
 
 Коротко перескажи: что записано, какой первый вопрос, что человеку сделать до следующей встречи, что сделаешь ты. Обнови «Продолжать отсюда», чтобы следующая сессия начала с этого места.
 
-См. также навыки: `organizing-genealogy-research` (как вести исследование дальше), `search-logic-navigator` (куда идти от вопроса), `tracing-emigrants-to-origin` (если есть эмигрантская ветка).
+См. также навыки: `organizing-genealogy-research` (как вести исследование дальше), `research-session-handoff` (возобновить проект после перерыва), `search-logic-navigator` (куда идти от вопроса), `tracing-emigrants-to-origin` (если есть эмигрантская ветка).

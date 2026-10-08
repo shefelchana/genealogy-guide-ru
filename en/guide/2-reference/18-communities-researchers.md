@@ -2,7 +2,7 @@
 
 What this section covers: how to use other people's online trees without multiplying their errors; how to ask a question in a group or on a forum so that it gets answered; how to hire a paid researcher and not fall into the hands of a fraudster.
 
-Labels: **[checked]** — the page was read; **[from search snippet]** — information from search results, the page was not opened.
+The markers in square brackets ([checked], [from search snippet], [unverified] and others) are explained in the [Glossary](../0-start/06-glossary.md).
 
 The list of forums and groups is in [Groups and communities](../../reading/groups-and-communities.md) and [Forums and communities](../../catalog/forums-and-communities.md). For how to write letters to people, see [Requests and letters](20-requests-letters.md), section 4.
 
@@ -10,7 +10,7 @@ The list of forums and groups is in [Groups and communities](../../reading/group
 
 ## 1. Other people's online trees
 
-**A tree is not a source but someone else's hypothesis** (see [Standard of proof](../3-results/02-standard-of-proof.md), section 1).
+**A tree is not a source but someone else's hypothesis** (see [Standard of proof](../3-results/01-standard-of-proof.md), section 1).
 
 - **Do not attach anything merely because it appears in someone else's tree**: errors multiply. Keep trees separate from documents. Do not hurry to attach records — Amy Johnson Crow ("Genealogy Mistakes That Everyone Makes") [checked].
 - **The most vulnerable point is the link between generations.** Check every source of the tree's author. If there are no sources, look for them yourself. Every "child → parents" link needs a document. Beware of namesakes of the same place and age, even with a rare surname — Melanie Mayo (Family History Daily, "Are You Sure They're Your Ancestors?") [checked].
@@ -35,7 +35,7 @@ The Geni project "SmartCopy Best Practices" (transferring profiles from MyHerita
 
 ### May you take other people's work?
 
-Facts (names, dates, relationships) are not protected by copyright. Notes, reasoning and texts in someone else's tree are protected: you need permission and attribution of the author — Judy G. Russell (The Legal Genealogist, "Using the Work of Others") [from search snippet: the site did not open]. This is American law; for more, see [Ethics and preservation](../3-results/04-ethics-preservation.md), section 4.
+Facts (names, dates, relationships) are not protected by copyright. Notes, reasoning and texts in someone else's tree are protected: you need permission and attribution of the author — Judy G. Russell (The Legal Genealogist, "Using the Work of Others") [from search snippet]. This is American law; for more, see [Ethics and preservation](../3-results/03-ethics-preservation.md), section 4.
 
 ## 2. How to ask questions in groups and on forums
 
@@ -74,7 +74,7 @@ A summary of advice from VGD (All-Russian Genealogical Tree) materials [from sea
 - One question — one message.
 - Show **what you have already searched** and where (an extract from your research log).
 - Attach **a scan, not a retelling**.
-- Check the answer as you would any find ([Standard of proof](../3-results/02-standard-of-proof.md)).
+- Check the answer as you would any find ([Standard of proof](../3-results/01-standard-of-proof.md)).
 
 We could not find advice from IAJGS moderators on how to ask questions.
 
@@ -147,10 +147,13 @@ Miriam Weiner (Routes to Roots) maintains an inventory of surviving Jewish and c
 
 > **How to ask AI**
 >
+> *For a plain chat, add: "If you can't open a source, say so; mark fonds, villages and dates you name from memory as [from memory, verify]. Answer in English, and give names, places and archive titles in the original script in parentheses." ([why](../1-ai-search/02-prompt-library.md)). The note "(browsing agent)" is for an AI that opens websites itself; the other prompts suit any chat.*
+>
 > - "Help me draft a question for the [name] forum following its rules: a subject line with the SURNAME in capitals and the place, what is known, where I have already searched, the archival reference and a link to the image." *Check yourself:* you post and reply yourself.
 > - "Here is someone else's tree with my ancestor [extract]. Which of its statements are backed by documents and which are not? What should I check first?" *Check yourself:* someone else's tree is someone else's hypothesis.
-> - "Here is a reply from a researcher or agency [text]. Are there signs of fraud: promised results, documents without a power of attorney, no list of fonds?" *Check yourself:* the decision to hire and to pay is yours.
+>
+> *Bad → good:* "Find me relatives on a forum" (you post yourself; no surname, place or years) → "Help me draft a question for the [name] forum: SURNAME, [shtetl], [years], what I have already searched, the archival reference."
 
 ---
 
-**See also:** [Standard of proof](../3-results/02-standard-of-proof.md) · [Requests and letters](20-requests-letters.md) · [Tree platforms](16-tree-platforms.md) · [Groups and communities](../../reading/groups-and-communities.md) · [Forums and communities](../../catalog/forums-and-communities.md) · [Ethics and preservation](../3-results/04-ethics-preservation.md)
+**See also:** [Standard of proof](../3-results/01-standard-of-proof.md) · [Requests and letters](20-requests-letters.md) · [Tree platforms](16-tree-platforms.md) · [Groups and communities](../../reading/groups-and-communities.md) · [Forums and communities](../../catalog/forums-and-communities.md) · [Ethics and preservation](../3-results/03-ethics-preservation.md)

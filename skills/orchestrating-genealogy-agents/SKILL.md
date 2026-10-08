@@ -1,6 +1,6 @@
 ---
 name: orchestrating-genealogy-agents
-description: Coordinates several AI agents in a family-history search — assigns roles (coordinator, reader, mechanic, web researcher), runs one research iteration at a time, splits work by source and by site (one site, one executor), writes a verifiable task brief from a template, accepts results only after checking each find against the scan, the control record, the coverage log and the site's error codes, picks a cheaper or stronger model per task, and handles typical failures (captcha, 403/429, silent agent, agents spawning agents). Use whenever more than one agent works on genealogy or a background agent gets a task or returns a report — even if the user only says "запусти агентов", "распараллель чтение", "поставь задачу агенту", "пусть агент прочитает том", "агент вернул отчёт", "проверь, что принёс агент".
+description: Coordinates several AI agents in a family-history search — assigns roles (coordinator, reader, mechanic, web researcher), runs one research iteration at a time, splits work by source and by site (one site, one executor), writes a verifiable task brief from a template, accepts results only after checking each find against the scan, the control record, the coverage log and the site's error codes, picks a model per task, and handles typical failures (captcha, 403/429, silent agent, agents spawning agents). Use whenever work is delegated to agents — a background agent gets a task or returns a report, or several agents work at once — even if the user only says "запусти агентов", "распараллель чтение", "поставь задачу агенту", "агент вернул отчёт", "проверь, что принёс агент". NOT for a session where the assistant searches on its own — use organizing-genealogy-research; NOT for recording which agents are still running before the session ends, or checking on them after a break — use research-session-handoff.
 ---
 
 # Работа нескольких ИИ-агентов в генеалогическом поиске
@@ -22,13 +22,13 @@ description: Coordinates several AI agents in a family-history search — assign
 Делай шаги по порядку. Пропуск любого шага потом обходится дороже, чем сам шаг.
 
 1. **Вопрос.** Один, с критерием ответа и лимитом времени. Например: «найти в книге рождений города N за 1868 год детей отца X; ответ — номер записи и цитата; лимит — два прохода».
-2. **Что уже известно.** Найди в файлах проекта всё по фамилии, месту и имени (`grep` по досье, персонам, гипотезам, реестру источников, журналу поисков). Агент без этого переоткрывает найденное и тратит сотни тысяч токенов впустую.
+2. **Что уже известно.** Найди в файлах проекта всё по фамилии, месту и имени (`grep` по журналу находок, персонам, гипотезам, реестру источников, журналу поисков). Агент без этого переоткрывает найденное и тратит сотни тысяч токенов впустую.
 3. **Источник.** Где ответ может быть: место → архив или база → том, плёнка, кадры.
 4. **Индекс.** Есть ли указатель или полнотекстовый поиск? Сначала дешёвая проверка, потом сплошное чтение.
 5. **Задание.** По шаблону из `assets/task-template.md`.
 6. **Чтение.** Агент читает, ведёт журнал после каждой пачки, присылает находки.
 7. **Проверка.** Координатор открывает каждый кадр сам (см. «Приём результата»).
-8. **Запись.** Сразу: досье, персоны, статус гипотезы, строка в журнале поисков.
+8. **Запись.** Сразу: журнал находок, персоны, статус гипотезы, строка в журнале поисков.
 9. **Решение.** Человеку: подтверждено, ослаблено или снято, и что дальше.
 
 ## Как делить работу
@@ -74,7 +74,7 @@ description: Coordinates several AI agents in a family-history search — assign
 3. **Охват**: что прочитано, что пропущено, где дубли съёмки и разрывы нумерации.
 4. **Ноль при отказах сайта — не ноль.** Спроси или проверь в журнале: были ли капча, ответы 403/429, обрывы. Массовый проход, где все ответы были ошибками доступа, вернёт «0 находок», и это ничего не значит.
 5. **Сноски не принимай на веру.** Если агент ссылается на документ, найди этот документ.
-6. **Запиши сразу**: находку (шифр, адрес, цитата, уверенность, «проверено по скану: да») в досье и персоны; статус гипотезы; строку в журнал поисков, включая пустой результат с охватом.
+6. **Запиши сразу**: находку (шифр, адрес, цитата, уверенность, «проверено по скану: да») в журнал находок и персоны; статус гипотезы; строку в журнал поисков, включая пустой результат с охватом.
 7. **Доложи человеку коротко**: что подтвердилось, что нет, что ждёт его решения.
 
 **Массовая выписка (сотни записей) принимается по образцу проекта mandatenamechanges.org** (19 043 смены имён в «Palestine Gazette», распознаны Gemini; автор — Филип Трауринг, по разбору [не проверено]): распознавание → автоматические проверки (свои для каждого источника, задаются заранее; у нас это, например, имя есть в словаре имён, возраст в допустимых пределах, число записей на странице сходится) → в таблицу идут **только записи, прошедшие проверки, и у каждой ссылка на точную страницу скана**; остальное — вручную или с пометкой «не проверено». Правило классификации (например, «гебраизировано или нет») — прозрачное, записанное словами и сверенное с прежним результатом. В дерево — только запись со ссылкой на кадр.
@@ -92,4 +92,4 @@ description: Coordinates several AI agents in a family-history search — assign
 - На направление ставь лимит времени и заранее записанное условие остановки.
 - Если агент всё же размножился без спроса, не обрывай работу на середине: потери от обрыва часто больше. Зафиксируй случай, поправь шаблон задания и держи эту ветку под контролем.
 
-См. также навыки: `verifying-genealogy-findings` (когда находка доказана), `research-session-handoff` (как сохранить состояние агентов между сессиями), `search-logic-navigator` (что делать на развилке).
+См. также навыки: `organizing-genealogy-research` (ход работы, когда агентов нет), `verifying-genealogy-findings` (когда находка доказана), `research-session-handoff` (как сохранить состояние агентов между сессиями), `search-logic-navigator` (что делать на развилке).

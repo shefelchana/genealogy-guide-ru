@@ -2,13 +2,15 @@
 
 What this section covers: how to write a request to an archive so that it is understood and fulfilled, what is known about procedure in different countries, and how to write to strangers — DNA matches, people with the same surname, authors of trees, volunteers. The request template is the [archive request template](../../templates/letter-to-archive.md).
 
-Labels: "from search results" — the official page was not opened, check on the archive's website before sending; "not checked against the page" means exactly that. Prices and deadlines as of October 2026.
+The markers in square brackets ([checked], [from search snippet], [unverified] and others) are explained in the [Glossary](../0-start/06-glossary.md). Here "[from search snippet]" means that the official page could not be opened: check the procedure on the archive's website before sending. Prices and deadlines as of October 2026.
+
+> **Rule of this guide.** A letter to an archive comes after the online routes have been tried and recorded in the research log; it is targeted, with an exact archival reference (fond–inventory–file); the decision and the sending are the person's. An AI helper can help draft the text if you ask it to, but does not itself suggest a letter instead of searching.
 
 ---
 
 ## 1. First — check whether it is online
 
-Almost all outside guides (FamilySearch Letter Writing Guide, VGD "Advice for beginners" (Russian-language), guides to Polish archives) name a written request as one of the main steps. But a great deal has already been digitised: Ukrainian metrical books and revision lists on Wikimedia Commons, Moldovan ones on FamilySearch, Polish ones in JRI-Poland, Geneteka and szukajwarchiwach. Before you write and pay, check [Archives by country](07-archives-by-country.md) and [../../catalog/](../../catalog/).
+Almost all outside guides (FamilySearch Letter Writing Guide, VGD "Advice for beginners" (Russian-language), guides to Polish archives) name a written request as one of the main steps. But a great deal has already been digitised: Ukrainian metrical books and revision lists on Wikimedia Commons, Moldovan ones on FamilySearch, Polish ones in JRI-Poland, Geneteka and szukajwarchiwach. Before you write and pay, check [Archives by country](07-archives-by-country.md) and [../../catalog/](../../catalog).
 
 A request makes sense when:
 - the file certainly exists but is not digitised;
@@ -52,8 +54,8 @@ Nadia Lipes advises working with pre-revolutionary documents through local genea
 ### Ukraine
 - The State Archival Service maintains a portal with links to the oblast archives; each archive has its own procedure (FamilySearch).
 - Example: at the State Archive of Ternopil Oblast a genealogical certificate is a paid service: a written application → a contract → payment on completion; the tariffs are approved by order of the director and are not published on the page [checked].
-- From search results (the pages of the Chernivtsi and Zhytomyr archives did not open): requests are accepted by post, by e-mail or in person; the cost depends on complexity; state the region, village or town, surname (for women — the maiden name), dates, religion, estate.
-- The language is Ukrainian (not checked against the page).
+- [from search snippet] The Chernivtsi and Zhytomyr archives: requests are accepted by post, by e-mail or in person; the cost depends on complexity; state the region, village or town, surname (for women — the maiden name), dates, religion, estate.
+- The language is Ukrainian (not verified against the page).
 
 ### Russia
 - According to FamilySearch, Rosarkhiv (the Federal Archival Agency) and many Russian archives are not set up for "family history" requests; they recommend specialised paid services (for example BLITZ, St. Petersburg, preliminary search — $80 per FamilySearch).
@@ -61,11 +63,11 @@ Nadia Lipes advises working with pre-revolutionary documents through local genea
 - Some oblast archives offer **paid remote viewing** of digitised files (EAIS — unified archive information system) — sometimes this is cheaper and faster than a request. First check the open PDF inventories and name indexes.
 
 ### Belarus
-- NIAB — the National Historical Archives of Belarus (from search results, the site did not open): genealogical search with a deposit of 360 BYN and a full cost of up to 1,800 BYN; biographical requests for dates of birth, marriage, death; you can also work independently in the reading room, ordering files by archival reference. The Grodno branch accepts requests through its own site.
+- NIAB — the National Historical Archives of Belarus [from search snippet]: genealogical search with a deposit of 360 BYN and a full cost of up to 1,800 BYN; biographical requests for dates of birth, marriage, death; you can also work independently in the reading room, ordering files by archival reference. The Grodno branch accepts requests through its own site.
 
 ### Moldova
-- From search results: copies of documents on birth, marriage, death for 1820–1992 can be ordered online through the government services and arhiva.gov.md. Certificates from metrical books of 1820–1924 start from 58 lei, requests by e-mail are no longer accepted, only through servicii.gov.md [page: arhiva.gov.md/servicii, 2026-10-07] (see [Citizenship by descent](14-citizenship-by-descent.md)).
-- In the reading room of the National Archive, work with digitised metrical books is free, while copies and certificates are paid [from search results].
+- [from search snippet] Copies of documents on birth, marriage, death for 1820–1992 can be ordered online through the government services and arhiva.gov.md. Certificates from metrical books of 1820–1924 start from 58 lei, requests by e-mail are no longer accepted, only through servicii.gov.md [checked: arhiva.gov.md/servicii, 2026-10-07] (see [Citizenship by descent](14-citizenship-by-descent.md)).
+- In the reading room of the National Archive, work with digitised metrical books is free, while copies and certificates are paid [from search snippet].
 
 ### Poland
 - First check online: Szukajwarchiwach, Geneteka, PRADZIAD.
@@ -82,7 +84,7 @@ Nadia Lipes advises working with pre-revolutionary documents through local genea
 ### USA
 - **USCIS Genealogy Program** — files of deceased immigrants: A-Files, AR-2 (1940–1944), C-Files (1906–1956), Registry Files, Visa Files (1924–1944).
 - Two steps: a search of the index, then an order of copies by file number. Submitted through the portal genealogy.uscis.dhs.gov.
-- Fee: $30 online and $80 on paper for each step [page: USCIS fee table G-1055, rev. 10/01/26, checked 2026-10-07].
+- Fee: $30 online and $80 on paper for each step [checked: USCIS fee table G-1055, rev. 10/01/26, checked 2026-10-07].
 - A-files transferred to NARA (100 years after birth) are ordered from NARA — search the NARA Catalog first.
 - Source: uscis.gov/records/genealogy.
 
@@ -93,7 +95,7 @@ Nadia Lipes advises working with pre-revolutionary documents through local genea
 
 Whom you write to: DNA matches, people with the same surname, authors of other people's trees, researchers of the same shtetls, cemetery volunteers.
 
-**Briefly.** Who you are, what you are looking for, how to contact you (Watershed DNA). In the first letter — one or two surnames, a place, a generation; details later. Do not overload it with centimorgans and segments: many people do not understand these terms (from search results, several blogs). The subject line, for example: "DNA match on MyHeritage". If the person has several kits, name the kit.
+**Briefly.** Who you are, what you are looking for, how to contact you (Watershed DNA). In the first letter — one or two surnames, a place, a generation; details later. Do not overload it with centimorgans and segments: many people do not understand these terms [from search snippet: several blogs]. The subject line, for example: "DNA match on MyHeritage". If the person has several kits, name the kit.
 
 **Offer something of your own.** The earliest known ancestor with a place, a pedigree chart, your finds, joint work (the FamilyTreeDNA blog). It is better to write when you have something to offer in return. In one study, of four letters to researchers of the same surnames and places, one grew into a correspondence with new information — what helped was having something to give in return (a census read name by name that was not in the open indexes).
 
@@ -115,16 +117,19 @@ More samples: watersheddna.com/blog/draft-language-for-reaching-out-to-a-dna-mat
 
 ### Volunteers
 
-- **Find a Grave**: a memorial has a button to request a photograph of the gravestone. Permission to reuse a photo is obtained from the volunteer who took it, not from the site (from search results).
-- **ViewMate** (JewishGen): you post a scan or photo — volunteers help translate or read it for free (Yiddish, Hebrew, Russian). The image stays up for 7 days, then goes to the archive together with the replies. Professionals offering paid services are forbidden to use it (from search results).
+- **Find a Grave**: a memorial has a button to request a photograph of the gravestone. Permission to reuse a photo is obtained from the volunteer who took it, not from the site [from search snippet].
+- **ViewMate** (JewishGen): you post a scan or photo — volunteers help translate or read it for free (Yiddish, Hebrew, Russian). The image stays up for 7 days, then goes to the archive together with the replies. Professionals offering paid services are forbidden to use it [from search snippet].
 - **Town Leaders** of the JewishGen Ukraine Research Division — curators of the shtetl pages.
 - Forums and groups — [Groups and communities](../../reading/groups-and-communities.md).
 
 > **How to ask AI**
 >
-> - "Help me draft a request to [archive] in [language]: what I am looking for, the exact archival reference (fond, inventory, file), all forms of the names, years with a margin, and what I have already checked online." *Check yourself:* you send the letter; the address and procedure — per the archive's website. (The AI may need to read the archive's Russian-, Ukrainian- or Polish-language pages.)
+> *For a plain chat, add: "If you can't open a source, say so; mark fonds, villages and dates you name from memory as [from memory, verify]. Answer in English, and give names, places and archive titles in the original script in parentheses." ([why](../1-ai-search/02-prompt-library.md)). The note "(browsing agent)" is for an AI that opens websites itself; the other prompts suit any chat.*
+>
+> - "Help me draft a request to [archive] in [language]: what I am looking for, the exact archival reference (fond, inventory, file), all forms of the names, years with a margin, and what I have already checked online." *Check yourself:* you send the letter; the address and procedure — per the archive's website.
 > - "Here is the archive's reply [text]. What does it mean: that the document does not exist, or that they searched wrongly (a different date, a different name)? What should I clarify?" *Check yourself:* a "refusal" often means a different date, place or Jewish name instead of the Russian one.
-> - "Help me write a polite first letter to a [DNA match / person with the same surname / volunteer]: brief, what I am looking for and what I can offer." *Check yourself:* data on living people — only with their consent.
+>
+> *Bad → good:* "Write to the archive, find everything about the family" (a thematic request without an archival reference is slower and dearer than a targeted one) → "Help me draft a request to [archive]: a copy of record [number] in the file [fond, inventory, file, folio], [name in all its forms]."
 
 ---
 
