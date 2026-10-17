@@ -54,6 +54,38 @@ A Y-haplogroup confirms **membership in a line**, not a specific ancestor (the p
 
 **Police access** (per the GEDmatch blog; some of the information is out of date — re-check): GEDmatch — only with the user's explicit consent (opt-in); FamilyTreeDNA — permitted, but you can opt out; 23andMe and Ancestry — only by court order.
 
+## 3a. How to order a test if you live in… (checked 17.10.2026)
+
+From the companies' official shipping lists. "—" means the country is not on the official list, i.e. no shipping.
+
+| Country | 23andMe | AncestryDNA | MyHeritage | FamilyTreeDNA |
+|---|---|---|---|---|
+| Russia | — | — | no (residents of Russia excluded) | no |
+| Belarus, Ukraine | — | — | not stated, check when ordering | no |
+| Kazakhstan, Uzbekistan | — | — | not stated | yes |
+| Armenia | yes | — | not stated | yes |
+| Georgia | — | yes | not stated | yes |
+| Moldova | yes | yes | not stated | yes |
+| Israel | yes | — | no (residents of Israel excluded) | yes |
+| Germany, EU | yes, except France | yes, except France | yes, except France | yes, except France |
+
+Sources: [23andMe](https://support.23andme.org/hc/en-us/articles/42966083069975-What-Countries-Do-You-Ship-To) (updated 16.10.2026); [AncestryDNA](https://ancestry.my.site.com/FrCa/articles/en_GB/Support_Site/Countries-Where-AncestryDNA-is-Available) (119 countries); [MyHeritage](https://www.myheritage.com/help/en/articles/13130458-who-is-eligible-to-take-a-myheritage-dna-test); [FamilyTreeDNA](https://help.familytreedna.com/hc/en-us/articles/11805929449487-International-Outbound-Shipping) (updated 22.09.2026; no shipping to 20 countries, including Russia, Belarus, Ukraine, Turkmenistan, Turkey, France). Living DNA says "We ship to any location", with no list of restrictions.
+
+**Prices of the basic test** (17.10.2026): FamilyTreeDNA Family Finder $79 (on sale until 11.11 — $39; international shipping $9.95) · MyHeritage €89 (frequent sales) · 23andMe about $99 · Living DNA from €85 · AncestryDNA about $99 (secondary sources).
+
+**From Russia:** the large companies do not ship. Local labs — Genotek and Atlas — search for relatives in their own database and let you download raw data (from the companies' sites; check the site yourself). A file in 23andMe format, users report, uploads to FamilyTreeDNA and GEDmatch; Genotek is not on FamilyTreeDNA's official list.
+
+**Rules worth knowing:**
+- 23andMe and Ancestry require the kit to be used in the country it was shipped to.
+- MyHeritage's restrictions for Russia and Israel apply to residents, not to the delivery address.
+- Workarounds (changing the account country, a VPN) break the companies' rules — they are not in this guide.
+
+**How to take it:** order a kit → **activate it with the code on the site** (otherwise the sample is not processed) → saliva (23andMe, Ancestry, Genotek) or a cheek swab (FamilyTreeDNA, MyHeritage, Living DNA; no food or drink for an hour before) → send it back. Return from abroad is often at your own cost; for taking a biological sample out of Russia, check the customs rules. Time after the lab receives it: MyHeritage 3–4 weeks, Ancestry about 6, FamilyTreeDNA 6–9, Living DNA 6–8, Genotek up to 12.
+
+**Raw data** is the file with your genotypes. Download it at once: it can be uploaded to FamilyTreeDNA (free, matches) and GEDmatch, and it survives even if the company closes. FamilyTreeDNA accepts 23andMe files (V3–V5), MyHeritage (March 2019 – October 2025) and AncestryDNA up to September 2025 ([help](https://help.familytreedna.com/hc/en-us/articles/4415446123663-Autosomal-DNA-Transfers)).
+
+**Y-DNA and mtDNA:** FamilyTreeDNA (Y-37 $119, Y-111 $249, Big Y-700 $449, full mtDNA $159; same country restrictions) and YSEQ in Berlin (Y-STR from €65, mtDNA from €25, "worldwide" shipping; for Russia and Belarus ask YSEQ): [yseq.net](https://www.yseq.net/shipping.php).
+
 ## 4. Endogamy: why everything is harder for Ashkenazim
 
 **Endogamy** is marriage within one community over many centuries. Because of it, any two Ashkenazim share noticeably more DNA than random people at the same degree of relationship: matches are connected to you by several paths at once. The relationship looks closer than it is. Ashkenazim have thousands of apparent "fourth cousins".

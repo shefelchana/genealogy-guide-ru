@@ -123,6 +123,37 @@ If the ancestor was never a German citizen (for example, a Jew from Podolia), no
 - **Czechia: declaration under § 31** of law 186/2013. Citizenship is acquired by children and **grandchildren** of former citizens of Czechia or Czechoslovakia, if they are not currently citizens of Slovakia. Documents: birth and marriage certificates of the applicant, parents, grandparents; a document on when and how the ancestor acquired Czechoslovak citizenship and how he lost it. Fee 500 CZK, decision within 60 days. Filing at a consulate or in the districts of Prague. Relevant for **Subcarpathian Rus** (Transcarpathia in 1919–1938). Whether the right extends to Transcarpathians who became Soviet citizens under the 1945 treaty — **not verified against the page**. Source: Ministry of the Interior of the Czech Republic, archiv.mv.gov.cz (page of 18.05.2026).
 - **Slovakia.** The amendment in force since 01.04.2022 gives simplified naturalization to children, grandchildren and great-grandchildren of **Czechoslovak citizens born in the territory of Slovakia** ("rodičov, prarodičov alebo praprarodičov"). From **15.07.2026**, under the amendment of law 40/1993, the condition of permitted residence in Slovakia is abolished for them, and the application can be filed at an embassy also by post or electronically (announcement of the Slovak Interior Ministry, republished by reporter24.sk on 14.07.2026) [checked, 2026-10-07]. The official page mzv.sk did not open on the date of checking; the list of documents — **not verified against the page**.
 
+## 9a. Other countries: ancestry-based routes (checked 17.10.2026)
+
+Briefly, from official sites and the texts of laws. Re-read the agency page before applying — rules change.
+
+| Country | Who | What to prove and how | Source |
+|---|---|---|---|
+| **Armenia** | persons of Armenian origin — simplified, without 3 years of residence or language (citizenship law, Art. 13(2)(3)) | a document recording "Armenian" for the applicant, a parent or grandparent (metrical record, certificate, passport); apply in person, 90 working days, fee AMD 50,000, translation into Armenian | [arlis.am](https://www.arlis.am/en/acts/219000); [Migration Service](https://migration.mia.gov.am/en/acquiring-ra-citizenship-if-the-applicant-has-armenian-origin) |
+| **Greece** | foreigners of "indisputable Greek origin" (Art. 10 of law 3284/2004) | the consul checks origin and holds an interview (language, history); about 18 months. For Pontic Greeks from the former USSR — a special identity card (law 2790/2000) | [mitos.gov.gr](https://en.mitos.gov.gr/index.php/%CE%94%CE%94:Naturalisation_of_expatriates_residing_abroad) |
+| **Bulgaria** | persons of Bulgarian origin (Art. 15 of the law) | official documents of kinship with a Bulgarian ancestor **no further than a great-grandparent**; without them the case is closed; 9 months; documents in Bulgarian | [mjs.bg](https://mjs.bg/home/normdoc/2134446592); [State Agency for Bulgarians Abroad](https://www.aba.government.bg/pages/usloviya-i-red-za-ustanovyavane-na-blgarski-proizkhod/111) |
+| **Ukraine** | "territorial origin" (Art. 8): you, a parent, grandparent or great-grandparent were born or permanently lived before 24.08.1991 on the present territory of Ukraine | metrical records, revisions, birth certificates along the chain; from 16.01.2026 exams on the Constitution, history and language; an undertaking to give up another citizenship (with exceptions) | [State Migration Service](https://dmsu.gov.ua/poslugi/nabuttya-gromadyanstva-ukrajni/nabuttya-gromadyanstva-ukrajni-za-teritorialnim-poxodzhennyam.html); [news 19.01.2026](https://dmsu.gov.ua/news/dms/20205.html) |
+| **Ireland** | a grandparent born in Ireland — entry in the Foreign Births Register | the chain of birth and marriage certificates up to the Irish ancestor; about 12 months, €278 | [ireland.ie](https://www.ireland.ie/en/dfa/citizenship/born-abroad/registering-a-foreign-birth/) |
+| **Estonia** | descendants of interwar Estonian citizens — citizenship by birth (§ 5 of the law) | first a request to the National Archives (€15), then original certificates with an apostille on the original | [Global Estonian](https://globalestonian.com/en/kkk/uldkusimused/kodakondsuse-todeustamine) |
+| **Croatia** | an emigrant and their descendants (Art. 11, NN 102/2019) | proof that the ancestor left the territory of Croatia, and the chain of certificates | [narodne-novine.nn.hr](https://narodne-novine.nn.hr/clanci/sluzbeni/full/2019_10_102_2050.html) |
+| **Slovenia** | an emigrant and descendants up to the 4th degree (Art. 12) | at least one year of continuous residence in Slovenia is required | [gov.si](https://www.gov.si/en/topics/citizenship/) |
+| **Kazakhstan** | "kandas" status — only ethnic Kazakhs and family members of Kazakh nationality | documents on nationality; regional quotas | [rules on gov.kz](https://www.gov.kz/uploads/2024/3/15/f3ad01911fff8657238cfc29f9e38342_original.216621.pdf) |
+| **Russia** | simplified for those who **already permanently reside in Russia**, if a direct ancestor was born or permanently lived within Russia's present borders (Law 138-FZ, Art. 16(2)(2)); separately, the compatriots resettlement programme | birth certificates along the chain, documents on the ancestor's birth or residence | law card at [kremlin.ru](http://www.kremlin.ru/acts/bank/49216); text read in the Garant database — check against pravo.gov.ru |
+
+**Closed:** Finland — the route for Ingrian Finns closed on 01.07.2016 (narrow exceptions remain: people evacuated in 1943–44 and veterans; Aliens Act § 48, [Finlex](https://www.finlex.fi/api/media/statute-foreign-language-translation/688425/mainPdf/main.pdf?timestamp=2004-04-29T21%3A00%3A00.000Z)); Georgia — repatriation of those deported in the 1940s (2007 law), the application period has expired ([smr.gov.ge](https://smr.gov.ge/en/page/34/repatriation-issues)).
+
+**By nationality, not by a citizen ancestor:** Kazakhstan, Serbia (Art. 23 — "belonging to the Serbian people"), and largely Armenia, Bulgaria, Greece. For Jewish families these routes usually do not apply unless there were ancestors of that nationality.
+
+**Not confirmed officially:** North Macedonia, Belarus, Uzbekistan, Azerbaijan, Ghana (Right of Abode) — the official pages did not open; search snippets are not added to the guide.
+
+## 9b. Where to find the rules of any country
+
+- **GLOBALCIT** — citizenship laws of 177 countries and country profiles: https://globalcit.eu/national-citizenship-laws/ , https://globalcit.eu/country-profiles/ . Translations can be outdated — check the date of the version.
+- **Legislationline (OSCE/ODIHR)**: https://www.legislationline.org/
+- **EUI Cadmus** — GLOBALCIT country reports: https://cadmus.eui.eu/
+- **ecoi.net** (ACCORD, Austria): https://www.ecoi.net/
+- The country's own interior ministry, migration service, e-government portal and consulates always have the last word. Blogs and law firms tell you where to look; they are not a source.
+
 ## 10. How to assemble the package: general order and typical mistakes
 
 1. **First determine the "anchor ancestor"** — the person who had the required status: citizenship, residence before a certain date, persecution or nationality. From him down to you a chain "birth → marriage → birth…" is built without gaps. The Hungarian leaflet says directly: one great-grandfather's metrical record is not enough, all the intermediate links are needed.

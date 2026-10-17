@@ -160,7 +160,8 @@ More details and limitations — [skills/README.md](../skills/README.md).
 - **Citizenship by descent** re-checked on 17.10.2026: new sections on late resettlers to Germany (BVFG) and § 5 StAG, on Italy after law 74/2025; Romania (B1 language under law 14/2025) and Lithuania (the 11.03.1990 date) clarified. See [Citizenship by descent](guide/2-reference/14-citizenship-by-descent.md).
 - **Names:** one name in eight forms (Moshe → Max), "metrical record → Soviet document" pairs, surname changes in Israel and Germany — [Names and spellings](guide/2-reference/03-names-spellings.md).
 - **Places:** town renamings (Yekaterinoslav → Dnipropetrovsk → Dnipro and others), changes of rulers and alphabets, villages with the same name, where to check names by year — [Places and maps](guide/2-reference/06-places-maps.md), section 4b.
-- **DNA and family legends about origin** — [DNA](guide/2-reference/15-dna.md), section 1.
+- **DNA and family legends about origin** — [DNA](guide/2-reference/15-dna.md), section 1; **how to order a test by country** (Russia, Belarus, Ukraine, Kazakhstan, Armenia, Israel, EU), prices, raw data — section 3a.
+- **Other ancestry-based routes:** Armenia, Greece, Bulgaria, Ukraine, Ireland, Estonia, Croatia, Slovenia, Kazakhstan, Russia; what is closed; where to find any country's laws — [Citizenship by descent](guide/2-reference/14-citizenship-by-descent.md), sections 9a–9b.
 - Examples from the author's research are anonymized.
 
 ## What's new in 0.5.0
