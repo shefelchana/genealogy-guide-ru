@@ -345,6 +345,20 @@ After several rounds the compiler gathered the rules by which the whole team sea
 5. **"Where else to look"** — a line under every find: in which other sources the person must or may turn up, by period, event, country and language. This is a queue for the next step, not a task to do everything at once. For example: repressed in 1937–1938 → databases of the repressed and memorial books; lived in occupied territory in 1941 → Yad Vashem, USHMM, Arolsen; emigrant → ship manifests, naturalisation, Find a Grave; doctor → medical directories. The "question → where to go" table is in the [catalog](../../catalog/README.md).
 6. **A name variant does not prove identity.** It widens the search, and "Kunovich = Khunovich" rests only on a second sign: the same surname, place, a close year, relatives, address. Without it — ⚪. The fact-checker does not write "not found" or give 🔴 on identity until the variants of the name, patronymic and places, and at least one source in another language, have been run.
 
+## 13. Saving tokens and testing the process: in brief
+
+**How not to burn tokens:**
+- **Agents do not launch agents.** Once an agent launched seven helpers on its own, they launched their own, and within a day there were 17. Since then only the coordinator runs things in parallel, and every task contains the line: "Do not call Agent yourself; if the job is too big, return a plan and stop."
+- **Search your own files first.** An agent not given what is already known spends 200–650 thousand tokens rediscovering it.
+- **A model for each task.** Downloading, counting, text search — a cheap model. Reading handwriting and searching databases — a mid-level model. Planning, criteria, fact-checking and kinship decisions — a strong model.
+- **Limits per role** — see "Limiters" in section 10.
+- **Printed text** is read by built-in OCR (Vision on macOS), handwriting by the model. The result goes straight into a file so the PDF is not processed again.
+- **Light mode for small questions:** one narrow task, the coordinator checks against the crop, a separate fact-check if kinship changes. A full team round only for big questions. Questions wait in a queue; the researcher picks from the top three.
+
+**How we tested that the fact-checker works.** A blind test: the fact-checker got 9 old findings, 4 of them our past mistakes — without being told which. Over three runs it caught all 12 cases and did not reject a single correct finding. Keep such a set and rerun it after every change to the skills: it is a regression test.
+
+**What the fact-checker catches most often:** the AI filled in what it expected (read "Fel" and added the first letter of the surname being searched for); the index read the wrong surname; the index merged two people into one; a false zero — the site did not answer the script, and this was recorded as "not found" ([False zero](09-false-zero.md)).
+
 ---
 
 **See also:** [AI tools](05-ai-tools.md) · [The false zero](09-false-zero.md) · [Scenarios: what to do if…](07-scenarios.md) · [Standard of proof](../3-results/01-standard-of-proof.md) · [Access, CAPTCHAs, pace](../2-reference/19-access-captchas-pace.md) · [Names, surnames, spellings](../2-reference/03-names-spellings.md)

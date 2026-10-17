@@ -49,6 +49,8 @@ What this looks like from start to finish — [A worked example for beginners](.
 
 **What you need:** Claude Code or the Claude app with access to a folder on your computer; the skills from this guide ([how to install](../1-ai-search/06-skills.md)); a project folder.
 
+**Where to keep the project.** Any folder of Markdown files works. You can open it in Claude Code, in the Cursor editor with its built-in AI agent, or in Obsidian if you want linked notes, a graph and search. What matters is that the findings log, the hypotheses and the search log are in one place and the AI can read them.
+
 **How:** the AI keeps the project files itself, launches background helpers, reads archive files a hundred pages at a time, brings dozens of namesakes together into one tree, and fills in profiles on sites with your permission. You pose the questions, pass the captchas and decide what counts as proven. Details — [Working with agents](../1-ai-search/03-working-with-agents.md) and [Routine work for agents](../1-ai-search/08-routine-for-agents.md).
 
 **It suits** large work: several lines, continuous reading of volumes, hundreds of documents. You don't need to know programming. But it helps to understand what files and folders are, and not to be afraid of text files in Markdown format.
