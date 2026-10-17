@@ -5,6 +5,10 @@ What this section covers: databases and archives of European countries where doc
 The markers in square brackets ([checked], [from search snippet], [unverified] and others) are explained in the [Glossary](../guide/0-start/06-glossary.md). Interface-language notes are explained in [README.md](README.md).
 
 ---
+## All of Europe
+- **Archives Portal Europe** (archivesportaleurope.net) — the largest union catalogue of archives: search across the finding aids of hundreds of archives in Europe and beyond [page, 2026-10-17].
+- **GLOBALCIT** (globalcit.eu) — citizenship laws of 177 countries; see [Citizenship by descent](../guide/2-reference/14-citizenship-by-descent.md), section 9b [page, 2026-10-17].
+
 
 ## Poland
 - **JRI-Poland** — card in [indexed-databases.md](indexed-databases.md).
@@ -33,6 +37,7 @@ The markers in square brackets ([checked], [from search snippet], [unverified] a
 
 ## Ukraine
 - Scans, catalogs and inventories — [archive-file-scans.md](archive-file-scans.md). Soviet period and the war — [War, repression, siege](../guide/2-reference/12-war-repression-siege.md).
+- **Electronic Archive of the Ukrainian Liberation Movement** (avr.org.ua) — documents, including from security-service archives; useful for 20th-century repression [page, 2026-10-17].
 
 ## Moldova (Bessarabia)
 - **ANRM** (National Archives of the Republic of Moldova, Chișinău) — the metrical books of the rabbinates of Chișinău, Bălți and Bender have survived well [from search snippet]. Metrical books of Chișinău, Cahul (1864–1878), Bolgrad (1871), revisions of Izmail 1824–1854, the lists of 1897 and 1905 — on FamilySearch films ([archive-file-scans.md](archive-file-scans.md)).
@@ -50,10 +55,13 @@ The markers in square brackets ([checked], [from search snippet], [unverified] a
 - **Bundesarchiv Gedenkbuch** (apps.bundesarchiv.de/gedenkbuch) — victims of the persecution of Jews in Germany 1933–1945. Search by place of birth, residence and deportation, by dates, with wildcards * and ?; export to a table [checked].
 - **Hamburg and Bremen departure lists** — [usa-and-emigration.md](usa-and-emigration.md).
 - **Soviet prisoners of war** — the database of the Dokumentationsstelle Dresden ([War, repression, siege](../guide/2-reference/12-war-repression-siege.md)).
+- **Archion** (archion.de) — over 200,000 digitised church books from 25 German archives, mostly Lutheran, also Catholic and Mennonite; paid access [page, 2026-10-17].
+- **Matricula** (data.matricula-online.eu) — free scans of church registers (mostly births, marriages, deaths) of Austria, Germany, Italy, Luxembourg, Poland, Serbia and Slovenia [page, 2026-10-17].
 
 ## Austria
 - **GenTeam** (genteam.at) — more than 23 million records, 50 databases: Vienna (including the Jewish metrical books of the IKG community), Jewish gravestones, obituaries from newspapers. Free after registration [checked].
 - **University of Vienna, PHAIDRA** — students' forms with the name, occupation and place of residence of the father ([foreign-and-university-archives.md](foreign-and-university-archives.md)).
+- **Familia Austria** (familia-austria.at) — the Austrian Society for Genealogy and History: data collections, a finding guide, a community; the site is in many languages, including Ukrainian and Hebrew [page, 2026-10-17].
 
 ## Belgium
 - Police files on foreigners: FelixArchief (Antwerp) and the State Archives in Brussels — [usa-and-emigration.md](usa-and-emigration.md); search experience — [foreign-and-university-archives.md](foreign-and-university-archives.md).

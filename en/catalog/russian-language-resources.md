@@ -26,6 +26,7 @@ The markers in square brackets ([checked], [from search snippet], [unverified] a
 - **"People's Memory"** (Память народа) (pamyat-naroda.ru, Ministry of Defence) — since 2015 it has combined OBD "Memorial" and "Feat of the People" [checked: Wikipedia]. Techniques — [indexed-databases.md](indexed-databases.md).
 - **"Road of Memory"** (Дорога памяти) (1418museum.ru) — about 33–34 million participants of the war with photos; there are photos from personal files that are in no other database [from search snippet].
 - **"Last Address"** (Последний адрес), **"Immortal Regiment"** (Бессмертный полк) and others — [War, repression, siege](../guide/2-reference/12-war-repression-siege.md).
+- **Sakharov Center martyrology** (sakharov-center.ru/asfcd/martirolog) — people shot and buried in Moscow and the Moscow region in 1918–1953, from investigation files; in Russia the site is labelled as foreign-agent material [page, 2026-10-17].
 
 ## Libraries and texts
 
