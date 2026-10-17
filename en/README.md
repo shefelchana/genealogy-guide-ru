@@ -122,6 +122,7 @@ The route, checking results and scenarios are a general method for everyone; the
 | [Writing the family history](guide/3-results/02-family-history.md) | the two-layer record, historical context, text structure |
 | [Ethics and preservation](guide/3-results/03-ethics-preservation.md) | DNA surprises, living people, difficult finds, copyright; archive storage, passing on documents |
 | [Beginner mistakes](guide/3-results/04-beginner-mistakes.md) | a consolidated list of mistakes with sources and links to sections |
+| [Ideas for a family history](guide/3-results/05-ideas-for-family-history.md) | a brief on place and time, estate, schooling, newspapers and courts, surname history, map, roots trip, films and books |
 
 ### Appendices
 
@@ -162,6 +163,8 @@ More details and limitations — [skills/README.md](../skills/README.md).
 - **Places:** town renamings (Yekaterinoslav → Dnipropetrovsk → Dnipro and others), changes of rulers and alphabets, villages with the same name, where to check names by year — [Places and maps](guide/2-reference/06-places-maps.md), section 4b.
 - **DNA and family legends about origin** — [DNA](guide/2-reference/15-dna.md), section 1; **how to order a test by country** (Russia, Belarus, Ukraine, Kazakhstan, Armenia, Israel, EU), prices, raw data — section 3a.
 - **Other ancestry-based routes:** Armenia, Greece, Bulgaria, Ukraine, Ireland, Estonia, Croatia, Slovenia, Kazakhstan, Russia; what is closed; where to find any country's laws — [Citizenship by descent](guide/2-reference/14-citizenship-by-descent.md), sections 9a–9b.
+- **New page [Ideas for a family history](guide/3-results/05-ideas-for-family-history.md):** a brief on place and time, estate and occupation, schooling, newspapers, wills and courts, surname history, namesakes, a migration map and tree, notable people of the place, a roots trip, films and books.
+- Added to the catalogue: Matricula, Archion, Familia Austria, Archives Portal Europe, avr.org.ua, the Sakharov Center martyrology.
 - Examples from the author's research are anonymized.
 
 ## What's new in 0.5.0

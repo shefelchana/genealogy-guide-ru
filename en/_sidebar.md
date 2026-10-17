@@ -52,6 +52,7 @@
   - [Family history](/en/guide/3-results/02-family-history.md)
   - [Ethics and preservation](/en/guide/3-results/03-ethics-preservation.md)
   - [Beginner mistakes](/en/guide/3-results/04-beginner-mistakes.md)
+  - [Ideas for a family history](/en/guide/3-results/05-ideas-for-family-history.md)
 - **Appendices**
   - [Catalog of sites](/en/catalog/README.md)
   - [Regional overview](/en/catalog/regional-overview.md)

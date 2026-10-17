@@ -75,6 +75,7 @@ Practice:
 - [Writing the family history](guide/3-results/02-family-history.md): the two-layer record, context
 - [Ethics and preservation](guide/3-results/03-ethics-preservation.md): living people, DNA surprises, storage
 - [Beginner mistakes](guide/3-results/04-beginner-mistakes.md): a consolidated list
+- [Ideas for a family history](guide/3-results/05-ideas-for-family-history.md): a brief on the place, estate, schooling, newspapers and courts, surname history, namesakes, map and tree, roots trip, films and books
 
 ## Skills
 

@@ -6,3 +6,4 @@ Standard of proof, family history, ethics, mistakes. For how to keep your files,
 - [How to turn finds into a family history](02-family-history.md)
 - [Ethics and preservation of results](03-ethics-preservation.md)
 - [Beginner mistakes: a consolidated list](04-beginner-mistakes.md)
+- [Ideas for a family history: what else to look for and what to ask AI](05-ideas-for-family-history.md)
