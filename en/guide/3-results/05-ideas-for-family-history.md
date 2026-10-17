@@ -104,6 +104,16 @@ How to prepare:
 
 **Series:** "Who Do You Think You Are?" (BBC) and "Finding Your Roots" (PBS). In each episode a well-known person discovers their family history — a good lesson in reading documents.
 
+## 11. Seven tips to remember
+
+1. Take citizenship rules only from the official site — and note the date ([Citizenship by descent](../2-reference/14-citizenship-by-descent.md)).
+2. First draw the chain of generations, then look for documents.
+3. Check a family legend with both a document and DNA ([DNA](../2-reference/15-dna.md)).
+4. Search for a name in all its forms and languages: Moshe, Moishe, Moshko, Moszek, Musiy, Moisei, Max.
+5. Search for a surname in all spellings — and without its first letter.
+6. Search for a town under the name it had in the year of the event.
+7. The index is a hint; the scan decides.
+
 ---
 
 **See also:** [Family history](02-family-history.md) · [Places and maps](../2-reference/06-places-maps.md) · [Assembling the whole family](../2-reference/09-whole-family.md) · [Names and spellings](../2-reference/03-names-spellings.md)
