@@ -5,10 +5,10 @@ What this section covers: databases and archives of European countries where doc
 The markers in square brackets ([checked], [from search snippet], [unverified] and others) are explained in the [Glossary](../guide/0-start/06-glossary.md). Interface-language notes are explained in [README.md](README.md).
 
 ---
+
 ## All of Europe
 - **Archives Portal Europe** (archivesportaleurope.net) — the largest union catalogue of archives: search across the finding aids of hundreds of archives in Europe and beyond [page, 2026-10-17].
 - **GLOBALCIT** (globalcit.eu) — citizenship laws of 177 countries; see [Citizenship by descent](../guide/2-reference/14-citizenship-by-descent.md), section 9b [page, 2026-10-17].
-
 
 ## Poland
 - **JRI-Poland** — card in [indexed-databases.md](indexed-databases.md).
