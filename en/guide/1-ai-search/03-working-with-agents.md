@@ -351,7 +351,7 @@ After several rounds the compiler gathered the rules by which the whole team sea
 - **Agents do not launch agents.** Once an agent launched seven helpers on its own, they launched their own, and within a day there were 17. Since then only the coordinator runs things in parallel, and every task contains the line: "Do not call Agent yourself; if the job is too big, return a plan and stop."
 - **Search your own files first.** An agent not given what is already known spends 200–650 thousand tokens rediscovering it.
 - **A model for each task.** Downloading, counting, text search — a cheap model. Reading handwriting and searching databases — a mid-level model. Planning, criteria, fact-checking and kinship decisions — a strong model.
-- **Limits per role** — see "Limiters" in section 10.
+- **Limits per role** — see "Limits" in section 10.
 - **Printed text** is read by built-in OCR (Vision on macOS), handwriting by the model. The result goes straight into a file so the PDF is not processed again.
 - **Light mode for small questions:** one narrow task, the coordinator checks against the crop, a separate fact-check if kinship changes. A full team round only for big questions. Questions wait in a queue; the researcher picks from the top three.
 
