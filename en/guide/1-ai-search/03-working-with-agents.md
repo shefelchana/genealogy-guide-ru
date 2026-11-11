@@ -359,6 +359,34 @@ After several rounds the compiler gathered the rules by which the whole team sea
 
 **What the fact-checker catches most often:** the AI filled in what it expected (read "Fel" and added the first letter of the surname being searched for); the index read the wrong surname; the index merged two people into one; a false zero — the site did not answer the script, and this was recorded as "not found" ([False zero](09-false-zero.md)).
 
+## 14. From Polina Krivosheeva's practice: order and economy
+
+Tips from the live stream "Family history with Claude" (18.10.2026, Girls VibeCode). Polina researches her own family with Claude and has tuned the process on top of this guide.
+
+**Start in three steps.** Open Claude and connect this guide as the base. Drop in everything you have: scans, photos, documents, even a hand-drawn sketch. Tell it in your own words what you remember and what you want to find: "Here is everything I have about my grandmother. I remember she was from Saratov… I want to find out where her parents came from."
+
+**Scans become text once; after that, work with the text:**
+- **Recognise printed text on your own computer.** On a Mac this is Apple Vision: 41 parish scans in 35 seconds, zero tokens. Scans and relatives' data do not go to the cloud.
+- **Glue a batch of scans into preview sheets.** 16 frames on one sheet. 41 images become one text file `summary.md` (text plus notes on duplicates) and two sheets. Claude reads the text and looks at the previews, and opens an original only for the frame it needs.
+- **Keep the recognised text next to the PDF.** For example, `obituary.pdf.md` next to `obituary.pdf`. At the top of the file: who made it and a note "checked against the scan". After checking, the scan is not opened again.
+- **Apple Vision breaks handwriting** (the surname "Krivosheev" became "Yurivoshev"). Claude reads handwriting by eye from an enlarged crop of the line.
+- **Images stay out of git.** Notes live in a private repository, scans separately.
+
+**Rough work goes to cheap helpers:**
+- a "scout" on a cheap model finds files, reads large ones and brings back a digest;
+- a "site runner" on a mid-level model clicks through archive sites and keeps the screenshots to itself;
+- the main model receives only the result: it compares, checks and writes conclusions.
+
+**The project remembers for you** (Polina uses Obsidian):
+- every fact has a status: "document", "hypothesis", "tree", "hearsay". A phone call with a relative is marked "hearsay", not a document;
+- a search log: what was checked, what was not found, hints;
+- "Who is who" — so you don't mix up namesakes (for example, all the Peters with the same surname);
+- a "stopping point" — a new session starts from it, not from digging through an old chat.
+
+**Only three things by hand:** captchas, letters to archives with payment for copies, and phone calls to relatives. Claude does the rest.
+
+**Why do all this.** Polina quotes David Brooks: there are "résumé points" and "eulogy points" in life. Documents show the first kind; what we want to learn is what kind of people our ancestors were.
+
 ---
 
 **See also:** [AI tools](05-ai-tools.md) · [The false zero](09-false-zero.md) · [Scenarios: what to do if…](07-scenarios.md) · [Standard of proof](../3-results/01-standard-of-proof.md) · [Access, CAPTCHAs, pace](../2-reference/19-access-captchas-pace.md) · [Names, surnames, spellings](../2-reference/03-names-spellings.md)

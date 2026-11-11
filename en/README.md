@@ -165,6 +165,7 @@ More details and limitations — [skills/README.md](../skills/README.md).
 - **Other ancestry-based routes:** Armenia, Greece, Bulgaria, Ukraine, Ireland, Estonia, Croatia, Slovenia, Kazakhstan, Russia; what is closed; where to find any country's laws — [Citizenship by descent](guide/2-reference/14-citizenship-by-descent.md), sections 9a–9b.
 - **New page [Ideas for a family history](guide/3-results/05-ideas-for-family-history.md):** a brief on place and time, estate and occupation, schooling, newspapers, wills and courts, surname history, namesakes, a migration map and tree, notable people of the place, a roots trip, films and books.
 - Added to the catalogue: Matricula, Archion, Familia Austria, Archives Portal Europe, avr.org.ua, the Sakharov Center martyrology.
+- **From Polina Krivosheeva's practice** (stream of 18.10.2026): scan preview sheets, recognised text next to the PDF, cheap helpers, a status for every fact, a "stopping point" — [Working with agents](guide/1-ai-search/03-working-with-agents.md), section 14.
 - Examples from the author's research are anonymized.
 
 ## What's new in 0.5.0

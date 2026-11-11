@@ -59,6 +59,8 @@ No separate method for **Jewish** photo studios of the Russian Empire (databases
 - **A caption on the back** is evidence, but not proof: it may have been written later and from memory.
 - Record an attribution as a hypothesis: "probably …, because …".
 
+**How confident is the identification** (an example from Polina Krivosheeva's stream): "by the face" alone is only "possible"; face + date of the photo + studio + the album it was kept in is "probable". Record what the identification rests on.
+
 ## 5. What to record about each photograph
 
 - where the photograph came from (who holds the original);
