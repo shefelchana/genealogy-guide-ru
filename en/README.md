@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.1, October 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.2, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -155,6 +155,13 @@ The skills are written in Russian, but Claude reads them and works fine with pro
 **Claude.ai and the Claude app:** on paid plans the plugin can be added there too: Customize → Plugins → Add → Add marketplace, the repository address `shefelchana/genealogy-guide-ru`. A single skill can also be uploaded without the plugin: zip the whole skill folder (a ZIP containing a folder with `SKILL.md`) and add it under Customize → Skills; skills require code execution to be enabled. Scripts from the `scripts/` folders may not run in the web version (for example, without network access) [unverified].
 
 More details and limitations — [skills/README.md](../skills/README.md).
+
+## What's new in 0.5.2
+
+- **Yandex "Archive Search"** works only after signing in to a Yandex account from November 2026 — [Access to sites](guide/2-reference/19-access-captchas-pace.md), skill `searching-yandex-archives`.
+- **"The site did not open":** first check your own address rather than blaming a VPN at random; which Russian sites opened from abroad in November 2026 — [Access to sites](guide/2-reference/19-access-captchas-pace.md), sections 3–4.
+- **Citizenship:** Belarus and Uzbekistan checked against the official texts of the laws (pravo.by, lex.uz) — [Citizenship by descent](guide/2-reference/14-citizenship-by-descent.md), section 9a; a wrong "from a VPN address" note corrected.
+- **Skills (Russian):** a "who is who" table of namesakes before every identification, rewrite "Continue from here" in full, give agents excerpts instead of large logs, save browser crops to files (`organizing-genealogy-research`, `orchestrating-genealogy-agents`).
 
 ## What's new in 0.5.1
 

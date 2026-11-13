@@ -4,7 +4,7 @@ What this section covers: which genealogical documents are usually needed to res
 
 > **This is not legal advice.** The section describes which *genealogical* evidence the programmes for restoring or obtaining citizenship by descent usually require. Laws change, and the authorities decide each case individually. Before applying, check the official page of the authority or consulate and, if necessary, consult a lawyer.
 >
-> Checked against the pages on 07.10.2026; Germany (late resettlers, § 5), Italy, Romania (language), Lithuania (the 1990 date), Poland, Portugal and Spain re-checked on 17.10.2026. Where an official page did not open on the date of checking (some sites of Israel, Romania, Lithuania, Slovakia, Ukraine and Russia), this is stated explicitly. The marker **"not verified against the page"** means that the primary source has not been read. The date up to which each rule is current is given in the "Source" line.
+> Checked against the pages on 07.10.2026; Germany (late resettlers, § 5), Italy, Romania (language), Lithuania (the 1990 date), Poland, Portugal and Spain re-checked on 17.10.2026; Belarus and Uzbekistan checked against the official texts of the laws on 13.11.2026. Where an official page did not open on the date of checking (some sites of Israel, Romania, Lithuania, Slovakia, Ukraine and Russia), this is stated explicitly. The marker **"not verified against the page"** means that the primary source has not been read. The date up to which each rule is current is given in the "Source" line.
 
 The general logic of all the programmes is the same: you need an **unbroken chain of documents from you to an ancestor** who had the required citizenship or status (residence, persecution, nationality). At every link the same person must be recognisable by name, dates and place of birth, and a change of surname must be confirmed by a document.
 
@@ -139,12 +139,16 @@ Briefly, from official sites and the texts of laws. Re-read the agency page befo
 | **Slovenia** | an emigrant and descendants up to the 4th degree (Art. 12) | at least one year of continuous residence in Slovenia is required | [gov.si](https://www.gov.si/en/topics/citizenship/) |
 | **Kazakhstan** | "kandas" status — only ethnic Kazakhs and family members of Kazakh nationality | documents on nationality; regional quotas | [rules on gov.kz](https://www.gov.kz/uploads/2024/3/15/f3ad01911fff8657238cfc29f9e38342_original.216621.pdf) |
 | **Russia** | simplified for those who **already permanently reside in Russia**, if a direct ancestor was born or permanently lived within Russia's present borders (Law 138-FZ, Art. 16(2)(2)); separately, the compatriots resettlement programme | birth certificates along the chain, documents on the ancestor's birth or residence | law card at [kremlin.ru](http://www.kremlin.ru/acts/bank/49216); text read in the Garant database — check against pravo.gov.ru |
+| **Belarus** | acquisition "by registration" (Art. 15): a person who was born in or permanently lived on the territory of Belarus before 12.11.1991, **and their descendants** — but only if the person **lives in Belarus permanently or has arrived there for permanent residence**. Separately: for Belarusians and their descendants (children, grandchildren, great-grandchildren) the 5-year residence-permit requirement may be waived on admission to citizenship (Art. 14) | Belarusian or Russian at a conversational level; an undertaking to give up other citizenship; documents on the ancestor's birth or residence and the chain of descent | [Law No. 136-Z on pravo.by](https://pravo.by/document/?guid=3871&p0=h10200136), as amended 05.01.2023 No. 242-Z; read 13.11.2026 |
+| **Uzbekistan** | simplified admission (Art. 20) of a "compatriot" (Art. 3) — a person or their descendants born in or formerly living in Uzbekistan — **only if they have at least one relative in the direct ascending line who lives in Uzbekistan and is its citizen** | a lawful source of income; conversational Uzbek; before citizenship is granted, renouncing the previous one (a guarantee letter valid for one year, Art. 20) | [ZRU-610 on lex.uz](https://lex.uz/ru/docs/4761986), as amended 20.09.2024 No. ZRU-963; read 13.11.2026 |
 
 **Closed:** Finland — the route for Ingrian Finns closed on 01.07.2016 (narrow exceptions remain: people evacuated in 1943–44 and veterans; Aliens Act § 48, [Finlex](https://www.finlex.fi/api/media/statute-foreign-language-translation/688425/mainPdf/main.pdf?timestamp=2004-04-29T21%3A00%3A00.000Z)); Georgia — repatriation of those deported in the 1940s (2007 law), the application period has expired ([smr.gov.ge](https://smr.gov.ge/en/page/34/repatriation-issues)).
 
 **By nationality, not by a citizen ancestor:** Kazakhstan, Serbia (Art. 23 — "belonging to the Serbian people"), and largely Armenia, Bulgaria, Greece. For Jewish families these routes usually do not apply unless there were ancestors of that nationality.
 
-**Not confirmed officially:** North Macedonia, Belarus, Uzbekistan, Azerbaijan, Ghana (Right of Abode) — the official pages did not open; search snippets are not added to the guide.
+**Belarus and Uzbekistan for descendants of emigrants:** neither route usually fits. Belarus requires you to move there for permanent residence; Uzbekistan requires a living relative in the ascending line (a parent, a grandparent) who is a citizen and lives in the country.
+
+**Not confirmed officially:** North Macedonia, Azerbaijan, Ghana (Right of Abode) — the official pages did not open; search snippets are not added to the guide.
 
 ## 9b. Where to find the rules of any country
 
@@ -229,7 +233,7 @@ Briefly, from official sites and the texts of laws. Re-read the agency page befo
 - Portugal, Lei Orgânica 1/2026: https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf
 - Spain, extension to 01.10.2019: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-4305
 
-From a VPN address gov.il, the Knesset, cetatenie.just.ro, legislatie.just.ro, migracija.lrv.lt and njt.hu did not open; the Italian Foreign Ministry and Constitutional Court sites are behind a captcha. Re-check these points yourself.
+During checks (October–November 2026, an ordinary Israeli address, no VPN) gov.il, the Knesset, cetatenie.just.ro, legislatie.just.ro, migracija.lrv.lt and njt.hu did not open from a script; some of them may open in an ordinary browser; the Italian Foreign Ministry and Constitutional Court sites are behind a captcha. Re-check these points yourself.
 
 ## What is not confirmed from the primary source
 

@@ -13,9 +13,10 @@ What this section covers: where registration is needed, where websites protect t
 | **MyHeritage** | — | a tree (free up to 250 people), the list of hints |
 | **JRI-Poland** | the old form `legacy.jri-poland.org` shows everything after you accept the terms (personal research only; when citing, refer to JRI-Poland) | the new search |
 | **j-roots.info** (the Jewish Roots forum, Еврейские корни; Russian-language) | threads can be read | forum search, the databases "Archival references" (*Arkhivnye ssylki*) and "Stone archive" (*Kamennyi arkhiv*) |
+| **Yandex "Archive Search"** (*Poisk po arkhivam*) | from November 2026 — only the start page: a search without a login redirects to it | search, texts and scans (a Yandex account is needed; the person signs in themselves) |
 | **Raduraksti** (Latvia), **GenTeam** (Austria), **Rahvusarhiiv** (Estonia), **pra.in.ua**, **IGRA** | — | search of the databases |
 
-These work without registration: Yad Vashem, USHMM, "Open List" (*Otkrytyi spisok*), OBD Memorial, "Pamyat naroda" ("People's Memory"), Wikimedia Commons, archive.org, Yandex "Archive Search" (*Poisk po arkhivam*), NLI (National Library of Israel), Genealogy Indexer, Mitzvat Emet, Toldot.
+These work without registration: Yad Vashem, USHMM, "Open List" (*Otkrytyi spisok*), OBD Memorial, "Pamyat naroda" ("People's Memory"), Wikimedia Commons, archive.org, NLI (National Library of Israel), Genealogy Indexer, Mitzvat Emet, Toldot.
 
 Access can also be half-open: an archive's catalogue is fully open without a login, and only the images of the files are closed (this was so at two archives a reader of the guide worked with) [reader's experience]. Then the link "year and kind of record → fond, inventory, file, number in the system" can be made before logging in, and the human with an account is left with one step — the handoff "up to the threshold" from [Working with agents](../1-ai-search/03-working-with-agents.md), section 1.
 
@@ -52,6 +53,7 @@ Access can also be half-open: an archive's catalogue is fully open without a log
    - Mitzvat Emet: after the captcha the form simply does not submit.
    Use a control query to check that the filter worked.
 9. **If a site does not open**, it is not necessarily an error: try later, from another device, without a VPN, without frequent requests.
+10. **Before writing "the site blocks my country", check which address you are actually connecting from** — for example at ipinfo.io. It has happened that a helper blamed a VPN for refusals when the person had no VPN at all; the real cause was something else (the page was assembled by a script, the site required a login, or it was temporarily down). Record the address, the date and the site's response in the log — then a "did not open" can be re-checked.
 
 ## 4. Geographic restrictions
 
@@ -60,6 +62,7 @@ Access can also be half-open: an archive's catalogue is fully open without a log
 - **Ukrainian archives**, according to reports in 2026, do not work with researchers from Russia and Belarus, and some archives have introduced IP-address blocking that also affects users from other countries (generaggs.substack.com, April 2026) [checked].
 - **A VPN often breaks access.** If you work through a VPN, try turning it off while you work with such sites.
 - Do not bypass protection. If a site is unavailable from your country, look for the same material elsewhere (FamilySearch ↔ the archive's site ↔ Commons) or ask acquaintances.
+- In November 2026 these opened from Israel (no VPN): NEB (the National Electronic Library), the Russian State Library, the National Library of Russia, GPIB, the Presidential Library, OBD Memorial, "Open List". "Pamyat naroda" (robot check) and pravo.gov.ru did not open. The rules change: re-check old "did not open" results.
 - These also worked from abroad (October 2026): Yandex, GPIB (the State Public Historical Library), archive.org, FamilySearch, JewishGen, Yad Vashem, PHAIDRA.
 
 ## 5. What has closed or changed (September–October 2026)
@@ -75,6 +78,7 @@ Access can also be half-open: an archive's catalogue is fully open without a log
 | wiki.alexkrakovsky.com | the domain does not work; the materials moved to Wikisource and Commons |
 | Avotaynu CSI | did not open on the date of checking |
 | USHMM HSV | closure announced for autumn 2026 |
+| Yandex "Archive Search" | from November 2026 search and documents only after signing in to a Yandex account (without a login, a redirect to the start page) |
 | Routes to Roots | the online form returned no results (September 2026) — M. Weiner's book is on archive.org |
 | forum.j-roots.info | in spring 2025 the forum opened briefly once a day (VGD, 30.04.2025); in October 2026 the site had an expired certificate — the browser warns of danger; the decision whether to open it is the person's |
 | the JewishGen mailing list (groups.jewishgen.org) | closed to automated requests by a robot check; can be read in an ordinary browser |
