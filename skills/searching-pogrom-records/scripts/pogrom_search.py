@@ -79,7 +79,8 @@ def amh(query, all_pages=False, pause=3.0):
         for rec in json.loads(body):
             title = html.unescape(rec["title"]["rendered"])
             text = html.unescape(re.sub(r"<[^>]+>", " ", rec["content"]["rendered"]))
-            print(f"{rec['id']}\t{title}\t{re.sub(r'\s+', ' ', text).strip()}")
+            flat = re.sub(r'\s+', ' ', text).strip()  # вне f-строки: Python < 3.12
+            print(f"{rec['id']}\t{title}\t{flat}")
         if not all_pages:
             if total_pages > 1:
                 print(f"# показана только первая сотня; добавь --all")
