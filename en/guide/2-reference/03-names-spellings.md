@@ -76,7 +76,7 @@ In 19th-century manuscripts B and V, Sh and T, the endings "-ель" and "-ер�
 | Leizer, Leizor (Лейзер, Лейзор) | Eliezer |
 **One name, many forms.** A man is called Moishe from birth (Yiddish; in Hebrew Moshe, משה). In a 19th-century metrical record he is "Moshko" or "Movsha", in a Polish document Mojżesz or Moszek, in a Ukrainian one Musiy (Мусій), in a Soviet passport Moisei (Моисей), in the USA Moses, Morris or Max. A search under one form misses most of the records.
 
-**More pairs "metrical record → Soviet document":** Berko, Ber, Berl → Boris (do not confuse the given name Ber with the surname Berg); Khuna, Khona → Kun, patronymic Kunovich; Shlioma → Solomon, Semyon; El-Gdal → Ilya; Faivel, Feivish → Pavel (sometimes Fyodor, Filipp); Itsko → Isaak; Srul → Izrail; Leizor → Lazar. This is a custom, not a rule: identity is confirmed by a second feature.
+**More pairs "metrical record → Soviet document":** Berko, Ber, Berl → Boris (do not confuse the given name Ber with the surname Berg); Khaim → Efim; Girsh, Gersh → Grigory; Shlioma → Solomon, Semyon; Yehuda-Leib → Lev; Nokhem → Naum; Itsko → Isaak; Srul → Izrail. This is a custom, not a rule: identity is confirmed by a second feature.
 
 **A Russian form beside the Jewish one** is common in Soviet documents: Gersh Shlyumovich (Герш Шлюмович) = Grigory Solomonovich; Movsha = Mikhail; Khaya = Klara; Berko = Boris; Srul = Izrail. The Soviet "Rossiiskii meditsinskii spisok" (Russian Medical Directory) of 1924 often gives both forms side by side.
 
