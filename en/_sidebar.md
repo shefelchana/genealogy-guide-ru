@@ -53,6 +53,8 @@
   - [Ethics and preservation](/en/guide/3-results/03-ethics-preservation.md)
   - [Beginner mistakes](/en/guide/3-results/04-beginner-mistakes.md)
   - [Ideas for a family history](/en/guide/3-results/05-ideas-for-family-history.md)
+- **Articles**
+  - [How to read a revision list](/en/articles/reading-revision-lists.md)
 - **Appendices**
   - [Catalog of sites](/en/catalog/README.md)
   - [Regional overview](/en/catalog/regional-overview.md)
