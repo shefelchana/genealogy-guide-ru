@@ -24,7 +24,7 @@ import time
 import urllib.parse
 import urllib.request
 
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+UA = ("Mozilla/5.0 AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/129.0 Safari/537.36")
 LIPES_URL = "https://jewishpogroms.info/wp-admin/admin-ajax.php"
 AMH_URL = "https://pogrom.amhazikaron.org/wp-json/wp/v2/victims"

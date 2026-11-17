@@ -15,7 +15,7 @@ import argparse, html, re, sys, urllib.parse, urllib.request
 # Форма живёт на домене БЕЗ www: адрес с www отдаёт 301, и POST при этом теряется.
 ENDPOINT = "https://genealogyindexer.org/"
 # Сервер отдаёт форму ботам без узнаваемого UA.
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
+UA = "Mozilla/5.0 AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
 
 SCOPES = {
     "podolia": "19800", "kiev": "19500", "volhynia": "19300",
