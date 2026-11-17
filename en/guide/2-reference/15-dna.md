@@ -144,6 +144,29 @@ From one real study (September 2026):
 
 **An example of combining documents and DNA** (N. Lipes on her own line, isrageo.com, 2020): one man's name matches another man's patronymic, they lived in neighbouring shtetls 12 km apart and traded in the same goods — this is a "father – son" hypothesis. Confirmation came from a DNA match with descendants of a great-grandfather's brother. Lipes notes that such evidence is not enough for a consulate.
 
+## 6a. Reading your own result: calibration, percentages, haplogroups
+
+**First calibrate the test on relatives whose relationship you know.** Find a sibling, niece or nephew, first cousins among your matches and compare the shared cM with the expected values (for non-Ashkenazi lines, the Shared cM Project):
+
+| Relationship | Expected, cM |
+|---|---|
+| full sibling | ≈ 2,600 |
+| half-sibling, grandparent, aunt, niece | ≈ 1,750 |
+| first cousin; half-aunt or half-niece | ≈ 870 |
+| half first cousin (one shared grandparent) | ≈ 430 |
+
+A real case: the test seemed to "halve" the relationship both with a niece and with a first cousin. It turned out the sister was a maternal half-sister and the aunt a half-aunt through one grandmother — and the numbers were exact. **Before blaming the test, ask whether the relationship is full or half.**
+
+**"Ethnicity" is a model.** Compare two companies: agreement on the main components is reliable; details depend on reference panels. A family story is checked with arithmetic: a great-grandparent contributes 12.5 % on average (± 3), a great-great-grandparent 6 % (± 2), an ancestor five generations back about 3 % — or nothing. "Great-grandmother was German" with 1 % Germanic DNA is refuted literally, but a distant German ancestor remains possible. Shares below 2–5 % are hints, not conclusions. In old Russian usage, *nemtsy* ("Germans") often meant any foreigners — test that reading too.
+
+**The ancestry timeline (23andMe's Ancestry Timeline)** estimates when the most recent ancestor of a single origin was born. Treat it as ± one generation.
+
+**The maternal haplogroup** must be identical for all children of one mother and for the children of her daughters. If you and a maternal niece get different subclades (H1n and H1b2), it is a chip error; only the shared level (H1) is reliable.
+
+**Which side a match is on, when parents cannot test.** Use the "shared matches" filter with relatives linked to only one side: a maternal half-niece shows only your mother's side; a half first cousin through one grandmother shows only that grandmother's line.
+
+**Matches' trees** are read for places and years, not only surnames. A matching father's name and birth year in someone else's tree is a hypothesis; only a metrical record confirms it.
+
 ## 7. Ethics and consent
 
 - **Only the person themselves takes the test**, or their legal representative, with informed consent. The person tested must know who will see the data and what surprises are possible (BCG, code of ethics).

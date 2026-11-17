@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.3, November 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.4, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -157,6 +157,14 @@ The skills are written in Russian, but Claude reads them and works fine with pro
 More details and limitations — [skills/README.md](../skills/README.md).
 
 **Via Agensi.** The same 26-skill pack is on the Agensi marketplace; an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+
+## What's new in 0.5.4
+
+- **DNA:** calibrating a test on known relatives (so a half relationship is not mistaken for a test error), generation arithmetic for checking origin stories, haplogroups, finding a match's side without testing parents — [DNA](guide/2-reference/15-dna.md), section 6a.
+- **A register of family legends** and breaking a legend into parts — [Standard of proof](guide/3-results/01-standard-of-proof.md).
+- **Peasant migrants in the city:** surname from the patronymic, villages with the same name, "from the Germans", regional collections of metrical books on FamilySearch — [Orthodox and peasants](guide/2-reference/21-orthodox-and-peasants.md), section 7a.
+- **False zero:** filters and rate limits — [False zero](guide/1-ai-search/09-false-zero.md), sections 32–33.
+- Skills updated (Russian): `dna-matches-endogamy`, `searching-yandex-archives`, `searching-familysearch-films`, `verifying-genealogy-findings`.
 
 ## What's new in 0.5.3
 

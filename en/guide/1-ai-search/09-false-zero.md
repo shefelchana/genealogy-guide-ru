@@ -295,6 +295,15 @@ A list read without some of its columns gives false zeros. In the sheets of the 
 >
 > *Bad → good:* "Is [surname] in the database [N]?" (a zero without a control record and spellings proves nothing) → "In the database [N] first find the control record [who is certainly there], then [surname] in all spellings; for each zero, how many records the database has in all."
 
+
+## 32. A zero with a filter — repeat without the filter
+
+A year or place filter set in the address bar does not work on some sites and returns an empty result (this happened in Yandex "Search in Archives" in November 2026). Check a filtered zero with the same query without the filter. A zero in a partly indexed collection (FamilySearch, AI-made indexes) means "not in the indexed part", not "never existed".
+
+## 33. The site starts returning empty pages in the middle of a run
+
+If after dozens of fast requests the record pages suddenly come back empty or the browser is redirected to another address, a rate limit has kicked in. What you read before that is a result; the rest is "the instrument did not respond". Pause several seconds between requests and do not bypass the protection; finish later or by hand.
+
 ---
 
 **See also:** [Checking results](04-checking-results.md) · [Standard of proof](../3-results/01-standard-of-proof.md), section 7 · [Names, surnames, spellings](../2-reference/03-names-spellings.md) · [Access, CAPTCHAs, pace](../2-reference/19-access-captchas-pace.md) · [Working with agents](03-working-with-agents.md) · the [verifying-genealogy-findings](../../../skills/verifying-genealogy-findings/SKILL.md) skill

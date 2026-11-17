@@ -79,6 +79,12 @@ Rules:
 - **The status is changed by a person**, not by AI: AI proposes, the person decides.
 - Before moving 🟡 to 🟢 on indirect data, write a proof argument (section 8).
 
+### A register of family legends
+
+Keep a separate file of legends: one line per claim, a status on the same scale, and what it was checked against. Break each legend into parts: "born in village N, she came from the Germans, her mother was a healer" is three claims with different statuses. Name and year may be 🟢 from a memorial book, the village ⚪, "from the Germans" 🔴 literally but 🟡 in the sense "non-Russian settlers". Do not delete refuted legends: a line "🔴 — refuted by …" saves time for the next person who hears the story.
+
+Experience of one register (62 legends across four family lines): 5 fully confirmed, 18 partly, 19 refuted. Families remember the gist well (the navy, the evacuation, a doctor in the family, a link to another country) but mix up places, dates and names.
+
 ## 5. Independence of confirmations
 
 For Mills, a confirmation counts only if the sources were **created independently** and do not go back to one original source.

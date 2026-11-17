@@ -99,6 +99,13 @@ Mass resettlement to Siberia, the Far East and the Steppe region went on from th
 - **At the place of settlement:** lists of settlers by plots; metrical books — in the consistory fond of the **new** diocese (Tomsk, Tobolsk and so on). Compare with D. Kudinov's catalogue (below) for where the metrical books of the needed oblast are kept.
 - The metrical records of children of one family may lie in two or three guberniyas.
 
+## 7a. Peasant migrants in the city: surname from the patronymic, villages with the same name, "from the Germans"
+
+- **Surname from the patronymic.** A peasant who went to work in St Petersburg or Moscow was often recorded by his father's name ("Ivan Pakhomov" = son of Pakhom), while the family's village nickname stayed behind. Hence the family memory "great-grandfather had a different surname". Surnames from rare baptismal names (Parmen, Pakhom, Martyan) cluster in a few districts — find the cluster through databases that record the place of birth.
+- **Villages with the same name.** One province can hold four or five villages with the same name. List all of them first: the metrical books of Moscow and Vologda churches in Yandex "Search in Archives" give the province, district (*uezd*) and *volost* of each migrant. Mind Soviet-era borders too: Kalinin oblast in 1935–1944, for instance, included what is now the west of Pskov oblast.
+- **"From the Germans".** In older speech *nemtsy* meant foreigners in general. Behind such a story there may be Tver Karelians (17th-century settlers from beyond the Swedish border), people from the Baltic provinces, Veps or Izhorians. A quick test: the 1897 census by mother tongue by province and district (Demoscope) and the ethnographic essays of the "Lists of Populated Places" of 1859–1862 (archive.org).
+- **Regional collections of metrical books on FamilySearch** (for example, the Tver church books of 1722–1918, with consistory copies by district) are partly indexed. Search for a pair of sisters or brothers at once: the same pair of parents with matching patronymics is a candidate family, to be confirmed on the image.
+
 ## 8. Cossacks, odnodvortsy, Christian townspeople
 
 - **Cossacks.** Metrical books of stanitsa churches are in the consistory fonds; service documents (service records, stanitsa boards) are in the archives of the former Cossack hosts. Example: the portal "Donskie arkhivy" ("Don Archives", donarch.ru) with a section "Metrical books"; the site opened, the contents only after logging in to a personal account [checked: only the shell]. The Little Russian Cossacks of Poltava and Chernigov guberniyas were a separate estate with their own revisions.
