@@ -99,4 +99,4 @@ description: Guides genetic genealogy work for families with endogamy, above all
 
 ## Связанные навыки
 
-`verifying-genealogy-findings` — проверка гипотезы документами; `tracing-emigrants-to-origin` — если совпадение из эмигрантской ветки.
+`dna-matches-across-platforms` — если тест на нескольких сайтах или происхождение смешанное; `verifying-genealogy-findings` — проверка гипотезы документами; `tracing-emigrants-to-origin` — если совпадение из эмигрантской ветки.
