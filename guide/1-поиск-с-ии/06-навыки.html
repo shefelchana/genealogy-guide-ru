@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Навыки (skills) для Claude: что есть и как установить — Поиск предков</title>
+<meta name="description" content="Какие готовые навыки лежат в этом руководстве, когда каждый срабатывает и как их установить в Claude Code или в приложение Claude.">
+<link rel="canonical" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/06-%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.html">
+<link rel="alternate" hreflang="ru" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/06-%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.html">
+<link rel="alternate" hreflang="en" href="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/06-skills.html">
+<link rel="alternate" hreflang="x-default" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/06-%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.html">
+<meta property="og:title" content="Навыки (skills) для Claude: что есть и как установить — Поиск предков">
+<meta property="og:description" content="Какие готовые навыки лежат в этом руководстве, когда каждый срабатывает и как их установить в Claude Code или в приложение Claude.">
+<meta property="og:url" content="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/06-%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.html">
+<meta property="og:type" content="article">
+<style>
+:root{--ink:#1F3454;--muted:#5a6475;--gold:#9a6b25;--paper:#fbf9f4;--line:#e3dccd;--code:#f3efe6}
+@media (prefers-color-scheme:dark){:root{--ink:#e6e9ef;--muted:#a9b1bf;--gold:#d6a75a;--paper:#16191f;--line:#2c313b;--code:#1f232b}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header,main,footer{max-width:860px;margin:0 auto;padding:0 20px}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:15px}
+header a{color:var(--ink);text-decoration:none}header .site{font-weight:700;font-family:Georgia,serif;font-size:19px}
+nav a{margin-left:14px;color:var(--gold)}main{padding-top:10px;padding-bottom:40px;overflow-wrap:anywhere}html,body{max-width:100%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}h1{font-size:32px;margin:22px 0 14px}
+a{color:var(--gold)}code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:8px;overflow:auto}pre code{padding:0}
+blockquote{margin:16px 0;padding:6px 16px;border-left:4px solid var(--gold);background:var(--code);border-radius:6px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;overflow-wrap:normal;min-width:6em}th{background:var(--code)}
+img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padding-bottom:30px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><a class="site" href="../../home.html">Поиск предков</a>
+<nav><a href="../../en/guide/1-ai-search/06-skills.html" hreflang="en">English</a><a href="../../guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/06-%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.html">Навыки для ИИ-агентов</a><a href="../../index.html#/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/06-%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.md">Открыть в интерактивной версии</a></nav></header>
+<main>
+<h1 id="навыки-skills-для-claude-что-есть-и-как-установить">Навыки (skills) для Claude: что есть и как установить</h1>
+<p>О чём раздел: какие готовые навыки лежат в этом руководстве, когда каждый срабатывает и как их установить в Claude Code или в приложение Claude.</p>
+<p><strong>Навык (skill)</strong> — папка с инструкцией <code>SKILL.md</code> (и иногда справочниками, шаблонами, скриптами). Claude сам подгружает навык, когда задача подходит под его описание: вы пишете «прочитай этот скан метрической книги» — подключается навык чтения сканов со всеми приёмами и ловушками. Навыки повторяют методику этого руководства в форме, удобной для ИИ.</p>
+<hr />
+<h2 id="1-какие-навыки-есть-по-шагам-маршрута">1. Какие навыки есть — по шагам маршрута</h2>
+<p><strong>Начало и организация работы</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Навык</th>
+<th>Когда срабатывает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/genealogy-intake/SKILL.md"><code>genealogy-intake</code></a></td>
+<td>первый разговор, файлов проекта ещё нет: «хочу найти предков», что известно, цель, файлы, первый вопрос и план</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/organizing-genealogy-research/SKILL.md"><code>organizing-genealogy-research</code></a></td>
+<td>ход работы в проекте, где файлы уже есть: один вопрос, поиск по своим файлам, запись находок, «доказано?», закрытие направления</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/search-logic-navigator/SKILL.md"><code>search-logic-navigator</code></a></td>
+<td>развилки поиска: «не нашёл», много однофамильцев, индекс спорит со сканом, тупик</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/orchestrating-genealogy-agents/SKILL.md"><code>orchestrating-genealogy-agents</code></a></td>
+<td>работа поручена агентам: задание по шаблону, темп и капчи, приём и проверка отчётов; команда из пяти ролей и раунд; безопасность компьютера человека</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/research-session-handoff/SKILL.md"><code>research-session-handoff</code></a></td>
+<td>конец сессии, сжатие контекста, возобновление после перерыва: «сохрани всё», «продолжи с того места», файл «Продолжать отсюда»</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Место и источник</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Навык</th>
+<th>Когда срабатывает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/identifying-places/SKILL.md"><code>identifying-places</code></a></td>
+<td>найти местечко или село, уезд и губернию на нужный год, смены границ и названий</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/ukrainian-archives-on-commons/SKILL.md"><code>ukrainian-archives-on-commons</code></a></td>
+<td>дела украинских архивов на Wikimedia Commons и описи на Вікіджерелах</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/soviet-era-records/SKILL.md"><code>soviet-era-records</code></a></td>
+<td>война, эвакуация, блокада, репрессии, советский ЗАГС</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/tracing-emigrants-to-origin/SKILL.md"><code>tracing-emigrants-to-origin</code></a></td>
+<td>от документов США и Европы к местечку</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/searching-pogrom-records/SKILL.md"><code>searching-pogrom-records</code></a></td>
+<td>погромы 1918–1922 (с конца 1917): базы жертв, получатели помощи, сироты, беженцы</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/researching-jewish-cemeteries/SKILL.md"><code>researching-jewish-cemeteries</code></a></td>
+<td>где похоронен, базы захоронений, чтение надгробия, перевод еврейской даты</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Индекс и поиск по базам</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Навык</th>
+<th>Когда срабатывает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/using-community-surname-indexes/SKILL.md"><code>using-community-surname-indexes</code></a></td>
+<td>сначала фамильный указатель (форум «Еврейские корни», JewishGen, JGFF), потом листание; реестр непрочитанных разделов</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/searching-jewishgen/SKILL.md"><code>searching-jewishgen</code></a></td>
+<td>базы JewishGen: поиск, лимит строк, чтение полей, переход к скану</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/searching-familysearch-films/SKILL.md"><code>searching-familysearch-films</code></a></td>
+<td>плёнки FamilySearch: каталог → плёнка → кадр, границы книг, темп и капчи</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/searching-yandex-archives/SKILL.md"><code>searching-yandex-archives</code></a></td>
+<td>Яндекс «Поиск по архивам»: операторы, написания, как читать результат</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/searching-nli-jewish-press/SKILL.md"><code>searching-nli-jewish-press</code></a></td>
+<td>еврейские газеты в Национальной библиотеке Израиля</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Скан и чтение</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Навык</th>
+<th>Когда срабатывает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/reading-archive-scans/SKILL.md"><code>reading-archive-scans</code></a></td>
+<td>читать оцифрованные дела, оценить качество скана, усилить выцветшие чернила, карта тома</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/tracing-revision-records/SKILL.md"><code>tracing-revision-records</code></a></td>
+<td>идти вглубь по ревизским сказкам 1795–1858</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/reading-hebrew-yiddish-sources/SKILL.md"><code>reading-hebrew-yiddish-sources</code></a></td>
+<td>надгробия, ивритская часть метрик, подписи, газеты на идише</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/dating-old-photos/SKILL.md"><code>dating-old-photos</code></a></td>
+<td>датировать старую фотографию по паспарту, одежде, ателье</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/interpreting-jewish-family-photos/SKILL.md"><code>interpreting-jewish-family-photos</code></a></td>
+<td>что говорит еврейская семейная фотография об укладе и событии</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Проверка и результат</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Навык</th>
+<th>Когда срабатывает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/verifying-genealogy-findings/SKILL.md"><code>verifying-genealogy-findings</code></a></td>
+<td>проверить находку, понять, значит ли что-то «не нашёл», перебор написаний, полнотекстовый поиск</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/reconstructing-family-clusters/SKILL.md"><code>reconstructing-family-clusters</code></a></td>
+<td>нашли отца и детей — собрать пакет документов на семью и свести однофамильцев</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/dna-matches-endogamy/SKILL.md"><code>dna-matches-endogamy</code></a></td>
+<td>разбор ДНК-совпадений при эндогамии</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/citizenship-by-descent-dossier/SKILL.md"><code>citizenship-by-descent-dossier</code></a></td>
+<td>собрать цепочку документов для гражданства по происхождению</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/writing-family-history/SKILL.md"><code>writing-family-history</code></a></td>
+<td>превратить находки в читаемый текст для родных</td>
+</tr>
+</tbody>
+</table></div>
+<p>Полный список с описаниями — <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/README.md">skills/README.md</a>.</p>
+<p>Кроме навыков, в папке <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/agents/archive-mechanic.md">agents/</a> лежат два помощника-агента для Claude Code: <code>archive-mechanic</code> (массовая механическая работа со сканами) и <code>archive-transcriber</code> (внимательное чтение одного документа).</p>
+<h2 id="2-как-установить">2. Как установить</h2>
+<p><strong>Claude Code — плагином (навыки и агенты сразу).</strong> В Claude Code наберите:</p>
+<pre><code>/plugin marketplace add shefelchana/genealogy-guide-ru
+/plugin install genealogy-guide-ru@genealogy-guide-ru
+</code></pre>
+<p>Вторая команда открывает карточку плагина в меню <code>/plugin</code>, где установку подтверждают. Обновления плагина сами не приходят: включите автообновление в <code>/plugin</code> → Marketplaces или обновляйте командой <code>/plugin marketplace update genealogy-guide-ru</code> (code.claude.com/docs, «Host and maintain a marketplace»).</p>
+<p><strong>Claude Code — вручную.</strong> Скопируйте папки из <code>skills/</code> в <code>~/.claude/skills/</code>, файлы из <code>agents/</code> — в <code>~/.claude/agents/</code>.</p>
+<p><strong>Claude.ai и приложение Claude.</strong> На платных планах (Pro, Max, Team, Enterprise) плагин можно добавить и там: меню Customize → Plugins → Add → Add marketplace, затем адрес репозитория <code>shefelchana/genealogy-guide-ru</code>. Отдельный навык можно загрузить и без плагина: заархивируйте папку навыка целиком (ZIP, внутри папка с <code>SKILL.md</code>) и добавьте в Customize → Skills; для навыков нужно включённое выполнение кода (support.claude.com, статьи «Use plugins in Claude» и «Use skills in Claude»). Скрипты из папок <code>scripts/</code> в веб-версии могут не запускаться (например, без доступа к сети) [не проверено].</p>
+<p><strong>Другие помощники (Gemini, ChatGPT и др.).</strong> Навыки — обычные текстовые файлы. Можно приложить <code>SKILL.md</code> нужного навыка к разговору или дать ссылку на него и попросить работать по этой инструкции.</p>
+<h2 id="3-ограничения">3. Ограничения</h2>
+<ul>
+<li>Навыки не проходят капчи и не входят в аккаунты — это делает человек.</li>
+<li>Навыки не предлагают письмо в архив вместо поиска: сначала онлайн-пути. Письмо — адресное, с точным шифром; решение и отправка — за человеком; составить текст ИИ поможет, если вы попросите (<a href="../2-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/20-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%B8-%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0.html">Запросы и письма</a>).</li>
+<li>Сайты меняются: приёмы проверены в сентябре–октябре 2026 г.</li>
+</ul>
+<hr />
+<p><strong>См. также:</strong> <a href="05-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%B8%D0%B8.html">Инструменты ИИ</a> · <a href="03-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81-%D1%81-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8.html">Процесс с агентами</a> · <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/AGENTS.md">Инструкция для ИИ-агента</a></p>
+</main>
+<footer>Текст — CC BY 4.0. Составитель — Анна Шефель. <a href="https://github.com/shefelchana/genealogy-guide-ru">GitHub</a></footer>
+</body>
+</html>

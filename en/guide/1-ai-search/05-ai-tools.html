@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI tools: Claude, Gemini and others — Tracing Your Ancestors</title>
+<meta name="description" content="What kinds of AI assistants there are, what they can really do in searching for ancestors, where they go wrong, how to set them tasks and how to organise…">
+<link rel="canonical" href="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/05-ai-tools.html">
+<link rel="alternate" hreflang="en" href="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/05-ai-tools.html">
+<link rel="alternate" hreflang="ru" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/05-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%B8%D0%B8.html">
+<link rel="alternate" hreflang="x-default" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/05-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%B8%D0%B8.html">
+<meta property="og:title" content="AI tools: Claude, Gemini and others — Tracing Your Ancestors">
+<meta property="og:description" content="What kinds of AI assistants there are, what they can really do in searching for ancestors, where they go wrong, how to set them tasks and how to organise…">
+<meta property="og:url" content="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/05-ai-tools.html">
+<meta property="og:type" content="article">
+<style>
+:root{--ink:#1F3454;--muted:#5a6475;--gold:#9a6b25;--paper:#fbf9f4;--line:#e3dccd;--code:#f3efe6}
+@media (prefers-color-scheme:dark){:root{--ink:#e6e9ef;--muted:#a9b1bf;--gold:#d6a75a;--paper:#16191f;--line:#2c313b;--code:#1f232b}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header,main,footer{max-width:860px;margin:0 auto;padding:0 20px}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:15px}
+header a{color:var(--ink);text-decoration:none}header .site{font-weight:700;font-family:Georgia,serif;font-size:19px}
+nav a{margin-left:14px;color:var(--gold)}main{padding-top:10px;padding-bottom:40px;overflow-wrap:anywhere}html,body{max-width:100%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}h1{font-size:32px;margin:22px 0 14px}
+a{color:var(--gold)}code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:8px;overflow:auto}pre code{padding:0}
+blockquote{margin:16px 0;padding:6px 16px;border-left:4px solid var(--gold);background:var(--code);border-radius:6px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;overflow-wrap:normal;min-width:6em}th{background:var(--code)}
+img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padding-bottom:30px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><a class="site" href="../../../en/index.html">Tracing Your Ancestors</a>
+<nav><a href="../../../guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/05-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%B8%D0%B8.html" hreflang="ru">Русский</a><a href="../../../en/guide/1-ai-search/06-skills.html">Skills for AI agents</a><a href="../../../index.html#/en/guide/1-ai-search/05-ai-tools.md">Open in the interactive version</a></nav></header>
+<main>
+<h1 id="ai-tools-claude-gemini-and-others">AI tools: Claude, Gemini and others</h1>
+<p>What this section covers: what kinds of AI assistants there are, what they can really do in searching for ancestors, where they go wrong, how to set them tasks and how to organise the work so that finds can be checked. The experience of one real project (September–October 2026, Claude in the app with access to the project folder and a browser) plus the practices of other genealogists.</p>
+<p>The main rule, repeated by everyone: <strong>an AI answer is a hypothesis, not a source.</strong> "Do not trust these things. Verify, verify, verify" (IAJGS AI Virtual Summit, 2026).</p>
+<hr />
+<h2 id="1-what-an-ai-assistant-can-do">1. What an AI assistant can do</h2>
+<p><strong>Claude working with files and a browser</strong> (Claude Code, the Claude app, the Claude in Chrome extension), from the experience of one project:</p>
+<ul>
+<li><strong>reads old documents from scans</strong>: metrical books, revision lists, pre-reform orthography, handwritten 19th-century Russian, Hebrew and Yiddish (gravestones, newspapers, witnesses' signatures), Romanian and German forms. Enlarges the column needed and reads by fragments;</li>
+<li><strong>searches databases</strong>: JewishGen, FamilySearch, Yad Vashem, NLI newspapers, Yandex "Archive Search" (Поиск по архивам), Wikimedia Commons, archive.org — and does not tire of trying dozens of spellings of one surname;</li>
+<li><strong>pages through whole archival files</strong> (hundreds of frames) and keeps a log: which pages were viewed, what was found, what was not;</li>
+<li><strong>compares documents</strong>: age in a revision ↔ year of birth in a metrical record ↔ a name in a newspaper; notices contradictions;</li>
+<li><strong>translates</strong> (Yiddish, Hebrew, Romanian, German) and writes a historical note for a find;</li>
+<li><strong>keeps the project files</strong>: finds log, hypotheses, research log, family history — and records a find at once;</li>
+<li><strong>launches helper agents</strong> in parallel: for example, three read three different birth books at the same time;</li>
+<li><strong>writes a coherent text for relatives</strong> on the basis of checked facts.</li>
+</ul>
+<p><strong>Gemini (Google)</strong> was used little in the same project:</p>
+<ul>
+<li>useful as a <strong>second opinion</strong>: difficult handwriting, an inscription on a gravestone, checking a translation;</li>
+<li>the <strong>Deep Research</strong> mode — for an overview of a broad topic (the history of a shtetl, how an archive is organised);</li>
+<li>availability depends on the country and the plan (see below on Gemini in Chrome).</li>
+</ul>
+<p><strong>What AI does not do and should not do</strong> (CAPTCHAs, passwords, payment, letters on your behalf, information from memory instead of a source) — the list is in <a href="04-checking-results.html">Checking results</a>, section 6.</p>
+<h2 id="2-the-main-risks-and-what-to-do-about-them">2. The main risks — and what to do about them</h2>
+<p><strong>1. Plausible errors ("hallucinations").</strong> AI can confidently misread a surname or "see" what it expects. Real cases:</p>
+<ul>
+<li>a database index gave "Ester, daughter of Duvid" — in fact a field-parsing error;</li>
+<li>"Рашковскій мещ." meant "meshchanin of the shtetl Rashkov", not a surname;</li>
+<li>"Михель Кр…торъ" was tempting to read as "Репиторъ", but on enlargement it turned out to be "Кройторъ";</li>
+<li>an agent cited an "already deciphered record" that did not exist (the fact itself turned out to be right).</li>
+</ul>
+<p>→ <strong>Every find comes with an address (archive, file, frame) and a verbatim quotation; the key points are checked by eye on an enlarged fragment.</strong> Be especially careful with "expected" names from the task: AI tends to see what it is looking for.</p>
+<p><strong>2. Rediscovery of what has already been found.</strong> A new session or a new agent does not remember the previous conversation. → Keep everything <strong>in files</strong>, not "in the chat's memory"; before a new search the AI first searches the project files.</p>
+<p><strong>3. Use of resources.</strong> Agents can spawn agents themselves and spend many tokens. → In every task: "do not launch other agents; if the work is too large, return a plan".</p>
+<p><strong>4. Requests that are too fast → blocks.</strong> AI works faster than a human, and sites notice: FamilySearch shows a CAPTCHA, NLI closes, and several agents on one site all get CAPTCHAs. → Set a pace (no more than one frame every 5–10 seconds, with breaks), do not download a whole film, <strong>one site — one performer</strong>. Figures by site and cases — <a href="../2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a>.</p>
+<p><strong>5. The false zero.</strong> A mass pass returned "0 finds" because all the site's answers were access errors. → Check any mass pass against a <strong>positive control example</strong> and by response codes. Other kinds of false zero — a wrongly assembled query address, synonym and literal search, a catalogue that looks for all words in one title — are in the section <a href="09-false-zero.html">The false zero</a>.</p>
+<p><strong>6. Privacy.</strong> Do not give AI passwords, do not ask it to paste cookies or tokens into third-party services; be careful with data about living people. Steve Little's "water-cooler rule": do not enter anything sensitive where the storage policy is unclear. Kathryn Borges: do not upload DNA data — it cannot be taken back (RootsTech 2026). The authors of "Research Like a Pro with AI" warn that since September 2025 Claude by default trains on user data — check the privacy settings of your plan.</p>
+<h2 id="2a-technical-traps-scripts-files-downloads">2a. Technical traps: scripts, files, downloads</h2>
+<p>When an agent not only visits sites but also writes scripts, whole runs are lost on small things. The list was sent by a reader of the guide whose agents worked on Windows (October 2026, CC BY 4.0); the label <strong>[reader's experience]</strong> means checked by them, not repeated by the compiler (<a href="../0-start/06-glossary.html">Glossary</a>):</p>
+<ul>
+<li><strong>Script encoding and Cyrillic.</strong> A script with Cyrillic inside can silently give zeros for all queries — not an error, but empty results, because the environment read the file in the wrong encoding (for the author PowerShell 5.1 read a <code>.ps1</code> as ANSI). Pass Cyrillic as command-line arguments or check the file's encoding; a control query with a known result catches this at once. Also there for the author: reading text with an explicitly set encoding still switched to UTF-8 on seeing a BOM mark — for byte-level work, read bytes; and requests in PowerShell 5.1 without <code>-UseBasicParsing</code> failed with "NonInteractive mode" — a failure of the environment, not of the site [reader's experience]. Not only Cyrillic is dangerous but any byte above 127: an agent declared its source "pure ASCII", and a byte-by-byte check found five other bytes in it, among them an invisible soft hyphen (U+00AD) right inside the search pattern, and a diagnostic field silently gave zero in every measurement. Before a run, count the bytes above 127 in the file: Cyrillic catches the eye, a soft hyphen and non-breaking spaces (U+00A0, U+202F) do not. In PowerShell 5.1 a <code>.ps1</code> file with such characters is read as ANSI unless it has a UTF-8 BOM [reader's experience].</li>
+<li><strong>"Saved" does not yet mean saved.</strong> A script that printed a success message may have written nothing. Check the size and date of the output file [reader's experience]. The same goes for edits on sites — <a href="08-routine-for-agents.html">Hand the routine to agents</a>, section 3.</li>
+<li><strong>A 200 response is not necessarily a picture.</strong> An image store can return a success code and, instead of an image, the shell of a web application: for the author two different frames gave files of identical length. It is caught by checking the first bytes of the file: a JPEG begins with <code>FF D8</code> [reader's experience].</li>
+<li><strong>Results visible only in a browser.</strong> Some catalogues draw the results in with a script on the page, and they are not in the HTML that a program receives. A programmatic request will return a false zero — look in a browser [reader's experience].</li>
+<li><strong>Wikimedia Commons thumbnails.</strong> Take the thumbnail address from the <code>api.php</code> response (parameters <code>iiurlwidth</code> and <code>iiurlparam</code>) rather than assembling it yourself: a guessed address gives an instant 404 error that looks like a rate limit [reader's experience]. Permitted widths and other subtleties — the <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/reading-archive-scans/SKILL.md"><code>reading-archive-scans</code></a> skill.</li>
+<li><strong>JPEG 2000 inside a PDF.</strong> In some PDFs the images are stored in JPEG 2000 format (<code>/JPXDecode</code>). A byte search for the JPEG markers <code>FFD8…FFD9</code> then gives a false zero "no pictures", and the author found no decoder for Windows [reader's experience]. Check the type of images in a PDF before extracting; another non-standard case, a raw raster, is covered in the same skill.</li>
+<li><strong>The browser blocks multiple downloads.</strong> When an agent pulls a multi-page file through a browser, the browser blocks the automatic download of many files in a row. Join the pages into one file [reader's experience].</li>
+</ul>
+<p><strong>A disputed word</strong> [reader's experience]. Cut it out separately and stretch it to 1500–2000 pixels wide, and decide <strong>by the ending and the number of letters</strong>: "рабичовъ" is 8 letters and "-овъ", "рабиновичъ" is 10 letters and "-овичъ". Do not crop the leftmost columns: they show whether a row is complete. The other techniques — reading by strip, comparing with letters of the same pen, two passes with AI — are in the <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/reading-archive-scans/SKILL.md"><code>reading-archive-scans</code></a> skill and in <a href="../2-reference/05-handwriting-transliteration-dates.html">Handwriting, transliteration, dates</a>.</p>
+<h2 id="3-how-to-set-tasks-tested">3. How to set tasks (tested)</h2>
+<p>Don't read Russian? See <a href="../0-start/08-for-english-speakers.html">For English speakers</a>.</p>
+<ul>
+<li><strong>One question at a time</strong> with an answer criterion: "Find in the 1868 birth book of Kishinev the children of Yankel and Leya Levinsky".</li>
+<li><strong>Give what is already known</strong> (extracts from files), and a <strong>control record</strong> — a record from an index that certainly exists, to check that the AI reads correctly. In one project in a single day this technique showed three times at once whether the agent was reading correctly.</li>
+<li><strong>Demand a checkable report:</strong> "write only what you see"; for every hit — the frame and a quotation; mark an uncertain reading; a <strong>coverage log</strong> ("frame N: records no. X–Y"); an honest "not found" is a normal result.</li>
+<li><strong>Name the "doubles" in advance</strong> — people already checked and rejected.</li>
+<li><strong>Each agent gets its own folder</strong> for files (and its own browser tab).</li>
+<li><strong>Save at once</strong>: a find → the finds log, persons, hypotheses at the same moment.</li>
+<li><strong>Ask it to tell you before searching</strong>: what we are looking for, what we rely on, what method.</li>
+<li><strong>Read in two passes.</strong> In the first, give the AI the document type, year and place but not the expected names; in the second, compare what was read with your hypotheses. This combines two observations: context helps AI read (L. Kessler, 2024), while expected names push it to "see" what is needed.</li>
+</ul>
+<p>An example of a short task:</p>
+<blockquote>
+<p>Read the birth book [place, year] on FamilySearch (film …, frames …). We are looking for the children of [father] and [mother] [surname, all spellings, in Cyrillic]. Control record: [name, record number from the JewishGen index] — find it first. Write only what you see; for every find — the frame, record number, verbatim quotation, confidence. Keep a coverage log. Pace — no more than one frame every 10 seconds; on a CAPTCHA stop and report. Do not launch other agents.</p>
+</blockquote>
+<h2 id="4-how-to-organise-the-work">4. How to organise the work</h2>
+<ul>
+<li>A project folder on your computer to which the AI has access; "anchor" files: finds log, persons, hypotheses, research log, source register, family history (see <a href="../0-start/02-keeping-files.html">Keeping files</a>).</li>
+<li>A "Continue from here" file (<a href="../../templates/continue-from-here.html">template</a>) — so that a new session immediately understands where you stopped.</li>
+<li>Before compacting a long conversation — ask the AI to "save everything" into files.</li>
+<li>Backups before large edits of text.</li>
+<li>For texts that relatives will read, a separate "History" file written from checked facts (<a href="../3-results/02-family-history.html">How to write the family history</a>).</li>
+<li>Open every find by an agent yourself and check the quotation letter for letter.</li>
+</ul>
+<h2 id="5-what-ai-made-possible-examples">5. What AI made possible (examples)</h2>
+<ul>
+<li>The father of a man born in the 1860s in a town of southern Bessarabia was found in a <strong>University of Vienna student form of the late 1880s</strong> ("Vater: Berco, Kaufmann, …" — the merchant Berko from his home town): in a German-language archive that one would hardly have looked into by hand.</li>
+<li>A <strong>newspaper correspondence of 1887 in Yiddish</strong> was read and fully translated.</li>
+<li>A <strong>signature "Eliezer Moshkov Rosenberg, …, March 1884"</strong> was found in a newspaper — it linked an American emigrant to the family.</li>
+<li><strong>Whole volumes</strong> of revisions and metrical books (hundreds of pages) were read with a coverage log.</li>
+</ul>
+<p>More — <a href="../../examples/example-finds.html">Example finds</a> and <a href="../../examples/case-study-newspaper-to-family.html">A case study of a search</a>.</p>
+<h2 id="6-other-peoples-experience-reading-manuscripts">6. Other people's experience: reading manuscripts</h2>
+<ul>
+<li><strong>Gemini 3</strong> on 50 English manuscripts of the 18th–19th centuries (the experience of Mark Humphries): a character error rate of 1.67%, a word error rate of 4.42%, no invented text was found. <strong>But</strong> proper names and place names are recognised worse, and on illegible passages the result differs from run to run. Conclusion: treat the result as a draft, check names, dates and kinship first (aigenealogyinsights.com, 16.12.2025).</li>
+<li><strong>A Russian manuscript</strong> (Louis Kessler, 2024): ChatGPT and Copilot read a letter of 1966 correctly on the whole, but <strong>all three models misread the father's name</strong>, Claude 3.5 included; Claude noticed Yiddish influence. The author's conclusion: names must be checked by a human (beholdgenealogy.com).</li>
+<li><strong>A passport of 1864</strong> (pre-reform Cyrillic, Claude): with a detailed structured prompt the quality is much higher than with a short request. The model honestly marked what was illegible; the rule "never invent text to fill gaps" (jgeppert.com, 2026).</li>
+<li><strong>Transkribus</strong> — a specialised handwriting recognition program: Russian models (including "Russian Civil Records 1914–1968"), models for Hebrew and Yiddish. Free — 50 credits a month, about 50 pages [checked: transkribus.org/pricing, 2026-10-07].</li>
+<li><strong>Leo</strong> (tryleo.ai) does not read Cyrillic [from search snippet].</li>
+</ul>
+<h2 id="7-other-peoples-experience-agents-in-the-browser">7. Other people's experience: agents in the browser</h2>
+<ul>
+<li><strong>Claude in Chrome</strong> (the official help support.claude.com): reads pages, clicks, fills in forms; needs a paid plan and the Google Chrome browser on a computer; for local files — Claude Desktop.</li>
+<li><strong>Gemini in Chrome ("auto browse")</strong> (Google help): needs Google AI Pro or Ultra, at the time of checking <strong>the USA only</strong>, 18+, device language English; a daily limit of tasks; sensitive actions need confirmation.</li>
+<li>Agentic browsers have described vulnerabilities: malicious text on a page can take control of the agent (prompt injection). Do not let an agent act on unfamiliar sites unsupervised.</li>
+<li>The book by D. Elder and N. Elder Dyer <strong>"Research Like a Pro with AI"</strong> (2nd ed., 2026) walks through such scenarios: an agent opens up branches of the tree and looks for gaps, goes through library catalogues, keeps a log in a table.</li>
+</ul>
+<h2 id="8-principles-of-responsible-ai-in-genealogy">8. Principles of responsible AI in genealogy</h2>
+<p>The CRAIGEN coalition (craigen.org; adopted by the National Genealogical Society of the USA): <strong>accuracy, disclosure</strong> (say that AI was used), <strong>privacy, education, compliance with the rules</strong>. James Tanner (RootsTech 2026): when verifiable data runs out, AI "starts to please". Participants of the IAJGS AI Summit: talk to AI as to "a very smart intern on the first day" and ask it to give sources.</p>
+<p>More about people, courses and ready prompts — <a href="../../reading/ai-in-genealogy.html">AI in genealogy</a>.</p>
+<h2 id="9-which-tool-for-what">9. Which tool for what</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Format</th>
+<th>What it can do</th>
+<th>What to use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ordinary chat</strong> (Claude, ChatGPT, Gemini)</td>
+<td>reads an uploaded scan, translates, explains, builds a plan</td>
+<td>one document, translation from Yiddish/Hebrew, "what kind of document is this and where to look next"</td>
+</tr>
+<tr>
+<td><strong>Deep research mode</strong> (Deep Research)</td>
+<td>searches many sites itself and assembles a report with links</td>
+<td>an overview of a topic: the history of a shtetl, which archives exist for an uezd, how the documents of the era are organised</td>
+</tr>
+<tr>
+<td><strong>An AI plugin in the browser</strong></td>
+<td>visits sites in your browser, fills in search forms, pages through results</td>
+<td>searching databases where you are already logged in (JewishGen, FamilySearch, MyHeritage)</td>
+</tr>
+<tr>
+<td><strong>An AI agent with access to a folder on your computer</strong></td>
+<td>keeps the project files, reads whole files, launches helpers, records everything</td>
+<td>long research, continuous reading of volumes, cross-checking many documents</td>
+</tr>
+<tr>
+<td><strong>Specialised recognition programs</strong> (Transkribus and others)</td>
+<td>recognise manuscripts with trained models</td>
+<td>large volumes of manuscripts of one kind</td>
+</tr>
+</tbody>
+</table></div>
+<p>The availability of tools depends on the country — check beforehand.</p>
+<h2 id="10-example-prompts">10. Example prompts</h2>
+<p>Ready prompts by route step are in the <a href="02-prompt-library.html">Prompt library for AI</a>; prompts by topic are in the "How to ask AI" boxes in every section of the reference.</p>
+<h2 id="11-skills-for-claude-in-this-repository">11. Skills for Claude in this repository</h2>
+<p>Ready-made skills are instructions that Claude loads by itself when a task fits: checking finds, reading scans, revisions, FamilySearch films, JewishGen, the Jewish press, pogroms, cemeteries and others. The list and installation — <a href="06-skills.html">Skills for Claude</a>.</p>
+<hr />
+<p><strong>See also:</strong> <a href="03-working-with-agents.html">Working with agents</a> · <a href="04-checking-results.html">Checking results</a> · <a href="09-false-zero.html">The false zero</a> · <a href="../../reading/ai-in-genealogy.html">AI in genealogy: people and courses</a> · <a href="../2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a> · <a href="../3-results/01-standard-of-proof.html">Standard of proof</a> · <a href="07-scenarios.html">Scenarios: what to do if…</a> (scenario C2)</p>
+</main>
+<footer>Text — CC BY 4.0. Compiled by Anna Shefel. <a href="https://github.com/shefelchana/genealogy-guide-ru">GitHub</a></footer>
+</body>
+</html>

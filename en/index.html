@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracing Your Ancestors: A Practical Guide</title>
+<meta name="description" content="A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military…">
+<link rel="canonical" href="https://shefelchana.github.io/genealogy-guide-ru/en/index.html">
+<link rel="alternate" hreflang="en" href="https://shefelchana.github.io/genealogy-guide-ru/en/index.html">
+<link rel="alternate" hreflang="ru" href="https://shefelchana.github.io/genealogy-guide-ru/home.html">
+<link rel="alternate" hreflang="x-default" href="https://shefelchana.github.io/genealogy-guide-ru/home.html">
+<meta property="og:title" content="Tracing Your Ancestors: A Practical Guide">
+<meta property="og:description" content="A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military…">
+<meta property="og:url" content="https://shefelchana.github.io/genealogy-guide-ru/en/index.html">
+<meta property="og:type" content="article">
+<style>
+:root{--ink:#1F3454;--muted:#5a6475;--gold:#9a6b25;--paper:#fbf9f4;--line:#e3dccd;--code:#f3efe6}
+@media (prefers-color-scheme:dark){:root{--ink:#e6e9ef;--muted:#a9b1bf;--gold:#d6a75a;--paper:#16191f;--line:#2c313b;--code:#1f232b}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header,main,footer{max-width:860px;margin:0 auto;padding:0 20px}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:15px}
+header a{color:var(--ink);text-decoration:none}header .site{font-weight:700;font-family:Georgia,serif;font-size:19px}
+nav a{margin-left:14px;color:var(--gold)}main{padding-top:10px;padding-bottom:40px;overflow-wrap:anywhere}html,body{max-width:100%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}h1{font-size:32px;margin:22px 0 14px}
+a{color:var(--gold)}code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:8px;overflow:auto}pre code{padding:0}
+blockquote{margin:16px 0;padding:6px 16px;border-left:4px solid var(--gold);background:var(--code);border-radius:6px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;overflow-wrap:normal;min-width:6em}th{background:var(--code)}
+img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padding-bottom:30px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><a class="site" href="../en/index.html">Tracing Your Ancestors</a>
+<nav><a href="../home.html" hreflang="ru">Русский</a><a href="../en/guide/1-ai-search/06-skills.html">Skills for AI agents</a><a href="../index.html#/en/">Open in the interactive version</a></nav></header>
+<main>
+<p><strong>English</strong> · <a href="../home.html">Русский</a> · <a href="about.html">About the compiler</a></p>
+<h1 id="tracing-your-ancestors-a-practical-guide">Tracing Your Ancestors: A Practical Guide</h1>
+<h3 id="russian-empire-ussr-jewish-families-emigration-a-search-route-sources-and-working-with-ai">Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI</h3>
+<blockquote>
+<p>Version 0.5.3, November 2026. The guide keeps growing; websites change — check the links.</p>
+</blockquote>
+<p>A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.</p>
+<p><strong>An honest word about focus.</strong> The guide grew out of the search for Jewish families of Podolia, the Kyiv region and Bessarabia, and that is what it covers in the most depth. The search route, the checking of finds and the keeping of records work for any family. But Orthodox and peasant lines, the early revisions I–IV (1719–1782), confession lists, consistories and non-Jewish cemeteries are covered only a little. What there is can be found in <a href="guide/2-reference/01-records-empire-ussr.html">Records of the Russian Empire and the USSR</a>, in the section on <a href="catalog/archive-file-scans.html">Russian regional archives and the unified archival information system (ЕАИС, EAIS)</a> and in <a href="catalog/russian-language-resources.html">Russian-language resources</a>. General resources are in the <a href="catalog/index.html">catalog of sites</a>; a community for non-Jewish genealogy is the VGD forum (Всероссийское генеалогическое древо; see <a href="reading/groups-and-communities.html">Groups and communities</a>).</p>
+<p>The guide is written for two readers at once: for a <strong>human</strong> and for their <strong>AI assistant</strong> (Claude, Gemini, ChatGPT and others). The material is drawn from open guides and communities (links to authors and sources are in each section and in <a href="reading/index.html">reading/</a>) and from the practical experience of a real family research project carried out with the help of AI agents in <strong>Claude Code</strong>. But you do not need to work with agents: you can start with a single check in a browser with an AI plugin — see <a href="guide/0-start/00-three-levels.html">Three levels</a>.</p>
+<p><strong>The focus in brief:</strong> the emphasis is on Jewish genealogy; what is covered only a little is listed in <a href="guide/0-start/07-not-covered.html">What this guide does not cover</a>.</p>
+<h2 id="start-here">Start here</h2>
+<ul>
+<li><strong>Don't read Russian?</strong> → <a href="guide/0-start/08-for-english-speakers.html">For English speakers</a>: Cyrillic, transliteration, searching Russian and Ukrainian sites with translation and AI.</li>
+<li><strong>Descendants of emigrants (USA, UK, Canada, Israel…)</strong> → start from your own country's records and work back to the shtetl: <a href="guide/2-reference/13-emigration.html">Emigration</a>.</li>
+<li><strong>Just want to try</strong> → <a href="guide/0-start/00-three-levels.html">Three levels</a>: one check on one relative right in your browser, 15 minutes, nothing to install, no files. It also shows how to grow into a project with agents.</li>
+</ul>
+<h2 id="where-to-start">Where to start</h2>
+<ul>
+<li><strong>I'm just beginning</strong> — <a href="guide/0-start/01-quick-start.html">Quick start</a>: one page, the first hour of work. Unfamiliar words are in the <a href="guide/0-start/06-glossary.html">Glossary</a>.</li>
+<li><strong>I'm stuck</strong> — <a href="guide/1-ai-search/07-scenarios.html">Scenarios: what to do if…</a>.</li>
+<li><strong>I'm an AI agent</strong> — start with <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/AGENTS.md">AGENTS.md</a> (instructions for the agent) and <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/llms.txt">llms.txt</a> (a map of the guide). First ask the person about their goal and what is already known about the family.</li>
+</ul>
+<p>The whole guide follows one route: <strong>question → place → source → index → scan → verification → record</strong>. Details are in the <a href="guide/1-ai-search/01-search-route.html">Search route</a>.</p>
+<h2 id="how-to-read">How to read</h2>
+<p>Read the beginning in order: the sections are arranged in the order of the work. <strong>The Search route, Checking results and Scenarios</strong> sit in Part 1, but they are for everyone, not only for those who work with AI: they are the general order of a search and the way out of dead ends. Open the Reference (Part 2) as needed: every section has a "How to ask AI" box. The marks in square brackets (<strong>[checked]</strong>, <strong>[from search snippet]</strong>, <strong>[unverified]</strong>) show how well a piece of information has been checked; what they mean is explained at the end of the <a href="guide/0-start/06-glossary.html">Glossary</a>.</p>
+<h3 id="start-guide0-start">Start — <a href="guide/0-start/index.html">guide/0-start/</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/0-start/00-three-levels.html">Three levels</a></td>
+<td>from a single check in a browser with an AI plugin to a project with agents in Claude Code; what each level needs</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/08-for-english-speakers.html">For English speakers</a></td>
+<td>Cyrillic, transliteration, searching Russian and Ukrainian sites with translation and AI</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/01-quick-start.html">Quick start</a></td>
+<td>the first hour; where to go for the first check; how to give the guide to your AI assistant; five rules</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/02-keeping-files.html">Keeping files</a></td>
+<td>the finds log, persons file, hypotheses, research log, source register, "Continue from here"; scan names; 3-2-1 backups</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/03-where-to-start.html">Where to start</a></td>
+<td>the home archive, family memory as a hypothesis, place matters more than surname, one question at a time</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/04-talking-to-relatives.html">Talking to relatives</a></td>
+<td>preparation, "before or after the event" questions, talking about the war, recording and checking what you are told</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/05-plan-timeline-place.html">Plan, timeline, place guide</a></td>
+<td>a six-step plan, a timeline with an impossibility check, a file for each shtetl, the whole family</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/06-glossary.html">Glossary</a></td>
+<td>terms (archival reference, revision, registration, index and finding aid, DGS, FAN…), the status scale, the marks in the text</td>
+</tr>
+<tr>
+<td><a href="guide/0-start/07-not-covered.html">What this guide does not cover</a></td>
+<td>what it is built on and what is covered only a little: other faiths and communities, repression, South America, China; how to build it together</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="part-1-searching-with-ai-guide1-ai-search">Part 1. Searching with AI — <a href="guide/1-ai-search/index.html">guide/1-ai-search/</a></h3>
+<p>The route, checking results and scenarios are a general method for everyone; the other sections are about working with an AI assistant.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/1-ai-search/01-search-route.html">Search route</a></td>
+<td>the "question → place → source → index → scan → verification → record" scheme: the output of each step, what to give AI, what to check yourself</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/02-prompt-library.html">Prompt library</a></td>
+<td>ready-made prompts by route step; the closing line against answers "from memory"; which prompts are for a chat and which for an agent with a browser</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/03-working-with-agents.html">Working with agents</a></td>
+<td>roles, the work cycle, how to split the work, a task template, accepting results, failures, memory between sessions, costs; a team of five roles and the round, the safety of the researcher's computer, searching wide</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/04-checking-results.html">Checking results</a></td>
+<td>what to do with an AI answer: address and quotation, two reading passes, "not found" with coverage, status of a find</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/05-ai-tools.html">AI tools</a></td>
+<td>what Claude and Gemini can do, risks, other people's experience of reading manuscripts, browser agents, which tool for what</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/06-skills.html">Skills for Claude</a></td>
+<td>which skills the guide provides, when they trigger, how to install</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/07-scenarios.html">Scenarios: what to do if…</a></td>
+<td>typical situations and dead ends, step by step</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/08-routine-for-agents.html">Routine work for agents</a></td>
+<td>trees and charts, GEDCOM, filling in profiles on sites, downloading and uploading, reconciling storage places</td>
+</tr>
+<tr>
+<td><a href="guide/1-ai-search/09-false-zero.html">The false zero</a></td>
+<td>when the tool was wrong, not the source: "site unavailable", the request address, a control record by route, synonym search, catalogue query, the number and the denominator (from a reader's material); errors of the index, OCR and the chain of reports, a negative conclusion with the list of forms</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="part-2-reference-guide2-reference">Part 2. Reference — <a href="guide/2-reference/index.html">guide/2-reference/</a></h3>
+<p><strong>Documents and reading</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/2-reference/01-records-empire-ussr.html">Records of the Russian Empire and the USSR</a></td>
+<td>metrical books, the revision "ladder", the 1875 military census, estates and registration (<em>pripiska</em>), substitutes for metrical books, Soviet documents</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/03-names-spellings.html">Names, surnames, spellings</a></td>
+<td>spelling variants, recognition errors, double names and differing patronymics, Russification, when a namesake is a relative</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/04-special-groups-name-changes.html">Special groups and name changes</a></td>
+<td>converts, cantonists, Krymchaks, Karaites, Bukharan Jews, Subbotniks; Soviet changes of names and patronymics</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/05-handwriting-transliteration-dates.html">Handwriting, transliteration, dates</a></td>
+<td>Russian cursive, Polish and Latin metrical books, Kurrent; transliteration systems; Old and New Style, Jewish dates</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/21-orthodox-and-peasants.html">Orthodox and peasants</a></td>
+<td>parish metrical books, confession and clergy lists, peasant revisions, 1861, resettlers, other faiths</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Places and archives</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/2-reference/06-places-maps.html">Places and maps</a></td>
+<td>how to find a shtetl and a vanished village: gazetteers, old maps, guidebooks</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/07-archives-by-country.html">Archives by country</a></td>
+<td>Ukraine, Moldova, Russia, Belarus, Poland, the Baltics, Romania, Germany, Austria, Israel; FamilySearch: catalog → film → image</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/08-surname-indexes.html">Community surname indexes</a></td>
+<td>the index first, then page-by-page reading: forum lists, JewishGen, JGFF, full text; a register of unread material</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Family and connections</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/2-reference/09-whole-family.html">Reconstructing the whole family</a></td>
+<td>a document package for a family, signs of kinship between namesakes, levels of connection</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/15-dna.html">DNA</a></td>
+<td>kinds of tests, companies, endogamy and Ashkenazi norms, working with matches, ethics</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/16-tree-platforms.html">Tree platforms</a></td>
+<td>an overview of services and programs, who owns the data, a recommended combination</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/18-communities-researchers.html">Other people's trees, communities, researchers</a></td>
+<td>how to check other people's trees, how to ask in groups, how to hire a researcher</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Jewish specifics</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/2-reference/02-jewish-genealogy.html">Jewish genealogy</a></td>
+<td>the Pale of Settlement, rabbis and communities, rabbinical books, changing borders, the Jewish press</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/10-cemeteries.html">Cemeteries</a></td>
+<td>whether the cemetery survives, burial databases, reading a matzevah, converting a Jewish date</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/11-pogroms-1918-1922.html">Pogroms 1918–1922</a></td>
+<td>victim databases with archival references, aid recipients, orphans, refugees, the DAKO fond R-3050</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The 20th century and emigration</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/2-reference/12-war-repression-siege.html">War, repression, the siege</a></td>
+<td>Soviet sources by region, evacuation, ChGK (Extraordinary State Commission) acts, the Holocaust</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/13-emigration.html">Emigration</a></td>
+<td>from American documents to the shtetl: naturalization, manifests, censuses, ports, other countries</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/14-citizenship-by-descent.html">Citizenship by descent</a></td>
+<td>which genealogical documents are needed for Germany, Austria, Poland, Israel, Romania and others</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Practice</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/2-reference/17-photographs.html">Old photographs</a></td>
+<td>dating by four layers, studio directories; what a Jewish photograph tells about way of life and occasion</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/19-access-captchas-pace.html">Access, captchas, pace</a></td>
+<td>registration, protection against frequent requests, geo-restrictions</td>
+</tr>
+<tr>
+<td><a href="guide/2-reference/20-requests-letters.html">Requests and letters</a></td>
+<td>when and how to write to archives in different countries, letters to DNA matches and volunteers</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="part-3-results-guide3-results">Part 3. Results — <a href="guide/3-results/index.html">guide/3-results/</a></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="guide/3-results/01-standard-of-proof.html">Standard of proof</a></td>
+<td>the hierarchy of sources, Mills's three axes, the GPS standard, the status scale, independence of confirmations, "not found", FAN</td>
+</tr>
+<tr>
+<td><a href="guide/3-results/02-family-history.html">Writing the family history</a></td>
+<td>the two-layer record, historical context, text structure</td>
+</tr>
+<tr>
+<td><a href="guide/3-results/03-ethics-preservation.html">Ethics and preservation</a></td>
+<td>DNA surprises, living people, difficult finds, copyright; archive storage, passing on documents</td>
+</tr>
+<tr>
+<td><a href="guide/3-results/04-beginner-mistakes.html">Beginner mistakes</a></td>
+<td>a consolidated list of mistakes with sources and links to sections</td>
+</tr>
+<tr>
+<td><a href="guide/3-results/05-ideas-for-family-history.html">Ideas for a family history</a></td>
+<td>a brief on place and time, estate, schooling, newspapers and courts, surname history, map, roots trip, films and books</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="appendices">Appendices</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="catalog/index.html">catalog/</a></td>
+<td>Catalog of sites: what each has, registration, captchas and pace, working techniques; a "question → where to go" cheat sheet; a <a href="catalog/regional-overview.html">regional overview</a> — from Russia and the USSR to South America and Harbin, repression and deportations</td>
+</tr>
+<tr>
+<td><a href="reading/index.html">reading/</a></td>
+<td>Whom to read and where to learn: <a href="reading/what-to-read.html">what to read by level</a>, <a href="reading/institutes-and-projects.html">institutes and projects</a>, <a href="reading/genealogists-and-authors.html">genealogists and authors</a>, <a href="reading/groups-and-communities.html">groups and communities</a>, <a href="reading/dictionaries-and-encyclopedias.html">dictionaries and encyclopedias</a>, <a href="reading/ai-in-genealogy.html">AI in genealogy</a></td>
+</tr>
+<tr>
+<td><a href="examples/index.html">examples/</a></td>
+<td><a href="examples/worked-example-for-beginners.html">A worked example for beginners</a> · <a href="examples/example-finds.html">Examples of finds</a> and a <a href="examples/case-study-newspaper-to-family.html">case study of a search from a newspaper to a family</a></td>
+</tr>
+<tr>
+<td><a href="templates/index.html">templates/</a></td>
+<td>Templates: <a href="templates/finding.html">finding record</a>, <a href="templates/persons.html">persons</a>, <a href="templates/hypothesis.html">hypothesis</a>, <a href="templates/research-log.html">research log</a>, <a href="templates/source-register.html">source register</a>, <a href="templates/timeline.html">timeline</a>, <a href="templates/place-guide.html">place guide</a>, <a href="templates/continue-from-here.html">"Continue from here"</a>, <a href="templates/letter-to-archive.html">letter to an archive</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/README.md">skills/</a></td>
+<td>Skills for Claude — the same methods in the form of instructions for AI (in Russian)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/agents/archive-mechanic.md">agents/</a></td>
+<td>Descriptions of helper agents for Claude Code: <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/agents/archive-mechanic.md">archive-mechanic</a>, <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/agents/archive-transcriber.md">archive-transcriber</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/AGENTS.md">AGENTS.md</a>, <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/llms.txt">llms.txt</a></td>
+<td>instructions and a map of the guide for AI agents</td>
+</tr>
+</tbody>
+</table></div>
+<p>The five rules that save months are in the <a href="guide/0-start/01-quick-start.html">Quick start</a>; the rules for AI are in <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/AGENTS.md">AGENTS.md</a>.</p>
+<h2 id="skills-for-claude-how-to-install">Skills for Claude — how to install</h2>
+<p>The <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/README.md">skills/</a> folder contains 26 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA and writing the family history. Claude loads the right skill itself when the task fits. Details — <a href="guide/1-ai-search/06-skills.html">Skills for Claude</a>.</p>
+<p>The skills are written in Russian, but Claude reads them and works fine with prompts in English.</p>
+<p><strong>Claude Code — as a plugin</strong> (skills and agents at once):</p>
+<pre><code>/plugin marketplace add shefelchana/genealogy-guide-ru
+/plugin install genealogy-guide-ru@genealogy-guide-ru
+</code></pre>
+<p><strong>Claude Code — manually:</strong> copy the folders from <code>skills/</code> into <code>~/.claude/skills/</code>, and the files from <code>agents/</code> into <code>~/.claude/agents/</code>.</p>
+<p><strong>Claude.ai and the Claude app:</strong> on paid plans the plugin can be added there too: Customize → Plugins → Add → Add marketplace, the repository address <code>shefelchana/genealogy-guide-ru</code>. A single skill can also be uploaded without the plugin: zip the whole skill folder (a ZIP containing a folder with <code>SKILL.md</code>) and add it under Customize → Skills; skills require code execution to be enabled. Scripts from the <code>scripts/</code> folders may not run in the web version (for example, without network access) [unverified].</p>
+<p>More details and limitations — <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/README.md">skills/README.md</a>.</p>
+<p><strong>Via Agensi.</strong> The same 26-skill pack is on the Agensi marketplace; an agent connected to Agensi loads the right skill by itself, with no files to install: <a href="https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr">English edition</a> (subscription with updates) or <a href="https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr">one-time</a>; <a href="https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots">Russian edition</a> (subscription) or <a href="https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots">one-time</a>. Here on GitHub the skills stay free and open (CC BY 4.0).</p>
+<h2 id="whats-new-in-053">What's new in 0.5.3</h2>
+<ul>
+<li>The guide's skill pack is on Agensi (links above), in English and Russian editions.</li>
+<li>New article: <a href="articles/reading-revision-lists.html">How to read a Russian Empire revision list</a>.</li>
+<li>Scripts: <code>pogrom_search.py</code> runs on Python 3.9–3.11; the scripts' browser string no longer names an OS.</li>
+<li>Name pairs "metrical record → Soviet document" replaced with generic examples (RU/EN).</li>
+</ul>
+<h2 id="whats-new-in-052">What's new in 0.5.2</h2>
+<ul>
+<li><strong>Yandex "Archive Search"</strong> works only after signing in to a Yandex account from November 2026 — <a href="guide/2-reference/19-access-captchas-pace.html">Access to sites</a>, skill <code>searching-yandex-archives</code>.</li>
+<li><strong>"The site did not open":</strong> first check your own address rather than blaming a VPN at random; which Russian sites opened from abroad in November 2026 — <a href="guide/2-reference/19-access-captchas-pace.html">Access to sites</a>, sections 3–4.</li>
+<li><strong>Citizenship:</strong> Belarus and Uzbekistan checked against the official texts of the laws (pravo.by, lex.uz) — <a href="guide/2-reference/14-citizenship-by-descent.html">Citizenship by descent</a>, section 9a; a wrong "from a VPN address" note corrected.</li>
+<li><strong>Skills (Russian):</strong> a "who is who" table of namesakes before every identification, rewrite "Continue from here" in full, give agents excerpts instead of large logs, save browser crops to files (<code>organizing-genealogy-research</code>, <code>orchestrating-genealogy-agents</code>).</li>
+</ul>
+<h2 id="whats-new-in-051">What's new in 0.5.1</h2>
+<ul>
+<li><strong>Citizenship by descent</strong> re-checked on 17.10.2026: new sections on late resettlers to Germany (BVFG) and § 5 StAG, on Italy after law 74/2025; Romania (B1 language under law 14/2025) and Lithuania (the 11.03.1990 date) clarified. See <a href="guide/2-reference/14-citizenship-by-descent.html">Citizenship by descent</a>.</li>
+<li><strong>Names:</strong> one name in eight forms (Moshe → Max), "metrical record → Soviet document" pairs, surname changes in Israel and Germany — <a href="guide/2-reference/03-names-spellings.html">Names and spellings</a>.</li>
+<li><strong>Places:</strong> town renamings (Yekaterinoslav → Dnipropetrovsk → Dnipro and others), changes of rulers and alphabets, villages with the same name, where to check names by year — <a href="guide/2-reference/06-places-maps.html">Places and maps</a>, section 4b.</li>
+<li><strong>DNA and family legends about origin</strong> — <a href="guide/2-reference/15-dna.html">DNA</a>, section 1; <strong>how to order a test by country</strong> (Russia, Belarus, Ukraine, Kazakhstan, Armenia, Israel, EU), prices, raw data — section 3a.</li>
+<li><strong>Other ancestry-based routes:</strong> Armenia, Greece, Bulgaria, Ukraine, Ireland, Estonia, Croatia, Slovenia, Kazakhstan, Russia; what is closed; where to find any country's laws — <a href="guide/2-reference/14-citizenship-by-descent.html">Citizenship by descent</a>, sections 9a–9b.</li>
+<li><strong>New page <a href="guide/3-results/05-ideas-for-family-history.html">Ideas for a family history</a>:</strong> a brief on place and time, estate and occupation, schooling, newspapers, wills and courts, surname history, namesakes, a migration map and tree, notable people of the place, a roots trip, films and books.</li>
+<li>Added to the catalogue: Matricula, Archion, Familia Austria, Archives Portal Europe, avr.org.ua, the Sakharov Center martyrology.</li>
+<li><strong>From Polina Krivosheeva's practice</strong> (stream of 18.10.2026): scan preview sheets, recognised text next to the PDF, cheap helpers, a status for every fact, a "stopping point" — <a href="guide/1-ai-search/03-working-with-agents.html">Working with agents</a>, section 14.</li>
+<li>Examples from the author's research are anonymized.</li>
+</ul>
+<h2 id="whats-new-in-050">What's new in 0.5.0</h2>
+<ul>
+<li><strong>A team of agents.</strong> <a href="guide/1-ai-search/03-working-with-agents.html">Working with agents</a> has new sections 10–12: a team of five roles (historian, archive researcher, open-sources researcher, fact-checker, supervisor) and a round per question; answer criteria before the search, gate review and audit, limits, "one run per folder", when not to launch the team, how the coordinator processes the summary; the safety of the researcher's computer (what an agent must not do and what to do if it happened); the rules of "searching wide".</li>
+<li><strong>The false zero</strong>, sections 25–31: an index giving a field to the wrong person, a negative conclusion with the full list of forms, OCR and bracketed variants, the town of a directory entry, a misreading spreading along the chain of reports, an extract as a "second source", the structure of the source; additions on incomplete Commons categories and on re-reading by patronymic.</li>
+<li>The <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/orchestrating-genealogy-agents/SKILL.md"><code>orchestrating-genealogy-agents</code></a> skill (in Russian): rules for the team, the round and safety; new lines in the task template and the failures table. <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/AGENTS.md">AGENTS.md</a> has rule 14 on the person's computer. <a href="guide/2-reference/03-names-spellings.html">Names, surnames, spellings</a>, section 6: sound alternations in names and searching in other languages.</li>
+<li>A reader's material (since version 0.4): sections 15–24 of <a href="guide/1-ai-search/09-false-zero.html">The false zero</a> — server failures; "Is this the right document" in <a href="guide/1-ai-search/04-checking-results.html">Checking results</a>; "The denominator and what the source contains" in <a href="guide/3-results/01-standard-of-proof.html">Standard of proof</a>; name-change books; where ZAGS records are kept.</li>
+</ul>
+<h2 id="about-the-compiler">About the compiler</h2>
+<p>Anna Shefel — a family-history enthusiast, not a professional genealogist. Why I do this and how to reach me — <a href="about.html">about.md</a>. Telegram: <a href="https://t.me/shefel">@shefel</a>.</p>
+<p>Examples from my own research are anonymized: names, surnames and archival references are changed; the techniques and traps are real.</p>
+<h2 id="license">License</h2>
+<p>Texts — <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (may be copied and adapted with attribution), script code — MIT. Details — <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/LICENSE">LICENSE</a>.</p>
+</main>
+<footer>Text — CC BY 4.0. Compiled by Anna Shefel. <a href="https://github.com/shefelchana/genealogy-guide-ru">GitHub</a></footer>
+</body>
+</html>

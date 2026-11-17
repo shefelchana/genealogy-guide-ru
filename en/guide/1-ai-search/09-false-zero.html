@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The false zero: when the tool was wrong, not the source — Tracing Your Ancestors</title>
+<meta name="description" content="What to check when a search returns zero, before you write &quot;none&quot;. Why a site looks unavailable, how a zero comes from a wrongly assembled query, where…">
+<link rel="canonical" href="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/09-false-zero.html">
+<link rel="alternate" hreflang="en" href="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/09-false-zero.html">
+<link rel="alternate" hreflang="ru" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/09-%D0%BB%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9-%D0%BD%D0%BE%D0%BB%D1%8C.html">
+<link rel="alternate" hreflang="x-default" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/09-%D0%BB%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9-%D0%BD%D0%BE%D0%BB%D1%8C.html">
+<meta property="og:title" content="The false zero: when the tool was wrong, not the source — Tracing Your Ancestors">
+<meta property="og:description" content="What to check when a search returns zero, before you write &quot;none&quot;. Why a site looks unavailable, how a zero comes from a wrongly assembled query, where…">
+<meta property="og:url" content="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/09-false-zero.html">
+<meta property="og:type" content="article">
+<style>
+:root{--ink:#1F3454;--muted:#5a6475;--gold:#9a6b25;--paper:#fbf9f4;--line:#e3dccd;--code:#f3efe6}
+@media (prefers-color-scheme:dark){:root{--ink:#e6e9ef;--muted:#a9b1bf;--gold:#d6a75a;--paper:#16191f;--line:#2c313b;--code:#1f232b}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header,main,footer{max-width:860px;margin:0 auto;padding:0 20px}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:15px}
+header a{color:var(--ink);text-decoration:none}header .site{font-weight:700;font-family:Georgia,serif;font-size:19px}
+nav a{margin-left:14px;color:var(--gold)}main{padding-top:10px;padding-bottom:40px;overflow-wrap:anywhere}html,body{max-width:100%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}h1{font-size:32px;margin:22px 0 14px}
+a{color:var(--gold)}code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:8px;overflow:auto}pre code{padding:0}
+blockquote{margin:16px 0;padding:6px 16px;border-left:4px solid var(--gold);background:var(--code);border-radius:6px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;overflow-wrap:normal;min-width:6em}th{background:var(--code)}
+img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padding-bottom:30px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><a class="site" href="../../../en/index.html">Tracing Your Ancestors</a>
+<nav><a href="../../../guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/09-%D0%BB%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9-%D0%BD%D0%BE%D0%BB%D1%8C.html" hreflang="ru">Русский</a><a href="../../../en/guide/1-ai-search/06-skills.html">Skills for AI agents</a><a href="../../../index.html#/en/guide/1-ai-search/09-false-zero.md">Open in the interactive version</a></nav></header>
+<main>
+<h1 id="the-false-zero-when-the-tool-was-wrong-not-the-source">The false zero: when the tool was wrong, not the source</h1>
+<p>What this section covers: what to check when a search returns zero, before you write "none". Why a site looks unavailable, how a zero comes from a wrongly assembled query, where the control record ends, how to count the gap between spellings, how to query an archive catalogue, and why a mark in a database may not be about your person. Sections 15–24 are about how the server itself goes wrong: an empty answer through a failure, invisible characters in titles, results pages, response codes. Sections 25–31 are about errors of reading and of the negative conclusion: the index, the list of forms, OCR, directories, the chain of reports, the extract.</p>
+<p>Sections 1–24 were written from two contributions sent by one reader of the guide (October 2026), under the CC BY 4.0 licence. Sections 25–31 and the additions at the end of sections 7 and 11 come from the compiler's own research with a team of agents (October 2026) and carry no label; "the author" in sections 1–24 is the reader who sent the material.</p>
+<p>The label <strong>[reader's experience]</strong> means: the author of the contribution did this and checked it on live queries (September–October 2026, their own project), and the compiler of the guide did not repeat those queries. The figures belong to one project, sites may have changed since — check yourself before an important conclusion. The other labels are explained in the <a href="../0-start/06-glossary.html">Glossary</a>.</p>
+<p>The main point: <strong>"the record does not exist" and "I did not find it" are different statements</strong>, and the second is far more common. Before closing a direction, separately make sure that <strong>the instrument is in working order</strong>: the site, the query address, the search mode, the route. The general conditions of a negative conclusion (coverage, spellings, method, control record, date of search) are in <a href="../3-results/01-standard-of-proof.html">Standard of proof</a>, section 7. Here is what is added to them.</p>
+<hr />
+<h2 id="1-the-site-is-unavailable-six-diagnoses">1. "The site is unavailable": six diagnoses</h2>
+<p>The page did not open, but the causes differ. "Come back later" applies only to the first three.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Diagnosis</th>
+<th>Sign</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The site's name is not found (DNS)</td>
+<td>the browser does not know such an address</td>
+<td>wait, check from another network</td>
+</tr>
+<tr>
+<td>Connection refused</td>
+<td>"connection refused"</td>
+<td>wait; check whether the site works only over <code>http</code> (below)</td>
+</tr>
+<tr>
+<td>Certificate</td>
+<td>a TLS error, the browser warns of danger</td>
+<td>wait; whether to open it is for the human to decide</td>
+</tr>
+<tr>
+<td>Bot protection</td>
+<td>403, a Cloudflare stub, a CAPTCHA</td>
+<td>the human opens it themselves in an ordinary browser</td>
+</tr>
+<tr>
+<td>A refusal to the program specifically</td>
+<td>403 to a script or agent, while everything opens in an ordinary browser</td>
+<td>the site is alive, a zero from it is not a result; work in a browser</td>
+</tr>
+<tr>
+<td>The resource has changed</td>
+<td>the site works, but the section, database or function is no longer there</td>
+<td>re-read the site afresh: the notes about it in your files are out of date</td>
+</tr>
+</tbody>
+</table></div>
+<p>One more case — a block by country or because of a VPN — is covered in <a href="../2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a>, section 4. The same page has the list of sites that closed or changed in 2026.</p>
+<p>Details [reader's experience]:</p>
+<ul>
+<li><strong>A refusal to a program.</strong> The site of the Jewish community of Lithuania answered 403 to every automatic request and for three weeks stood in the author's notes as "dead", though it opened in a browser. The diagnosis: <strong>only your program gets 403, while in a browser the page opens</strong> — the site is alive, and a zero from it is not a result. What to do: open the page yourself in an ordinary browser or through an AI plugin in the browser. Do not disguise a program as a browser if the site's rules do not allow automatic access. On a CAPTCHA or a robot check — stop: from there a human acts (<a href="../2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a>, section 3).</li>
+<li><strong>A site without HTTPS.</strong> A tool that itself rewrites <code>http</code> to <code>https</code> gets a connection refusal, and it looks like "the archive is down". A South African catalogue of 8.3 million records opened only strictly over <code>http</code>.</li>
+<li><strong>403 for the whole domain, including <code>/robots.txt</code>,</strong> is a server protection, not the absence of a page. In the log write "blocked", not "none".</li>
+<li><strong>A link from someone else's database leads by an old address scheme.</strong> In one name database the "image" button led by an address scheme the archive had long abandoned. There is no 404 error: the link silently takes you to the archive's home page, and this is easy to take for "no image". If a link from an index brought you to the wrong place, look for the file <strong>by its archival reference</strong> on the archive's current site and do not write "not digitised".</li>
+</ul>
+<h2 id="2-the-instrument-too-has-a-shelf-life">2. The instrument too has a shelf life</h2>
+<p>That a negative result is valid only as of the date of the search is stated in <a href="../3-results/01-standard-of-proof.html">Standard of proof</a>, section 7: databases grow. The second half of the rule: <strong>the instrument itself changes</strong>. In a single day the author removed six false zeros, and two of them were about a resource, not about people. One site had put up a login, and "a zero from it" had since meant a zero from one database among many. On another, the text search had been switched off. The notes about them in the project files stayed the same [reader's experience].</p>
+<p>→ When you repeat a search on old resources, check at the same time that the resource is <strong>still the same</strong>: the same access, the same databases, the same kind of search. In the research log keep next to a zero the date and what the instrument was like.</p>
+<h2 id="3-a-zero-from-an-address-assembled-by-hand">3. A zero from an address assembled by hand</h2>
+<p>AI (and a human too) often builds a query address itself: it puts parameters into a link or an API. <strong>A wrong parameter name gives not an error but "nothing found".</strong></p>
+<p>Examples [reader's experience]:</p>
+<ul>
+<li>in the Yad Vashem API the field for the submitter's surname is named differently from the web form (<code>submitter_ln_search_en</code> versus <code>submitter_ln</code>). A field name from the form, put into the API, gave a silent zero on a whole series of queries;</li>
+<li>the place parameters in the advanced search of the same resource did not work at all: a query for a shtetl that certainly exists gave zero. The sign is in the header of the results ("Search criteria"), which shows not what you asked for.</li>
+</ul>
+<p>The opposite trap: <strong>a made-up filter parameter is silently skipped by the database, which returns everything it has</strong> — for the author 24 million records instead of a refusal [reader's experience]. A full list easily passes for the result of a search. Similar "quiet" failures of the JewishGen and USHMM forms are in <a href="../2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a>, section 3, item 8.</p>
+<p>→ <strong>Compare the number found with the total size of the database</strong>: if they match, the filter was not applied. And read what the database showed in the header of the results as your query.</p>
+<p>🔑 <strong>A zero from an address assembled by hand proves only that the address was assembled that way.</strong> Take addresses from the pages of the site itself; how to demand this of an agent — <a href="03-working-with-agents.html">Working with agents</a>, section 4.</p>
+<h2 id="4-a-control-record-for-each-route">4. A control record — for each route</h2>
+<p>A control record (<a href="../3-results/01-standard-of-proof.html">Standard of proof</a>, section 7) tests the search itself. It has two limits [reader's experience]:</p>
+<ul>
+<li><strong>The same database opened another way is a different instrument.</strong> One collection through the general search and through the collection's own page gave different results; in the second case a zero came out even for a surname known to be common. Run the control record <strong>for each route separately</strong>.</li>
+<li><strong>A control by place tests the place, not the surname.</strong> In a "smart" search different spellings have different dictionaries of synonyms: <code>KREEL</code> pulls in <code>KRELL</code>, while <code>KRIL</code> pulls in nothing. A zero for one spelling with a confirmed place proves only that <strong>this spelling</strong> is absent. To close off a surname you need to go through the spellings with the same place.</li>
+</ul>
+<h2 id="5-phonetic-search-also-depends-on-the-spelling">5. Phonetic search also depends on the spelling</h2>
+<p>In <a href="../2-reference/03-names-spellings.html">Names, surnames, spellings</a> (section 2) it is advised to begin with exact mode and add phonetic. The author's experience shows that phonetics does not cover everything either [reader's experience]:</p>
+<ul>
+<li><strong>Different sets.</strong> The JewishGen general search, the surname Рабичев (Rabichev): <code>Rabichev</code> phonetically — 355 records, <code>Ryabichev</code> by the same algorithm — 47. And this is <strong>not a subset</strong> of the first: the second result contains whole databases that are not in the first (Belarusian voter lists, a concentration-camp card file), and other households in the census.</li>
+<li><strong>The gap can be counted.</strong> The surname Пищик (Pishchik): <code>Pishchik</code> with synonyms — 111 records, literally — 107; <code>Piszczyk</code> — 1; together 108 of 111. <code>Pischik</code>, both with synonyms and literally, gives 10 — the remaining three do not fit in them. So at least seven records lie outside the earlier result, and the earlier note "all 111 viewed" was false. This is not a suspicion but a count.</li>
+<li><strong>It also happens the other way.</strong> In Yad Vashem the mode with synonyms gathers all the spellings known to the database into one set: nine forms of the surname Беленький (Belenky) give exactly 1,850 records each. But <code>Belenkij</code>, <code>Byelenky</code>, <code>Belenkyi</code> give zero even with synonyms — the database simply does not know them.</li>
+</ul>
+<p>🔑 So before you go through spellings, find out <strong>what the search does: widens the query with synonyms or searches literally</strong>. Going through spellings means different things in these two cases:</p>
+<ul>
+<li>in the literal one — so as to miss nothing;</li>
+<li>in the synonym one — to find out which spellings the database knows at all: a spelling it does not know gives a false zero.</li>
+</ul>
+<p>And within Cyrillic: in a part-of-word search in one catalogue "Беленк" and "Беленьк" found partly different things — <strong>the soft sign breaks the stem</strong> [reader's experience]. Try the stem both with "ь" and without.</p>
+<h2 id="6-pairs-of-cursive-letters-that-break-a-search-by-stem">6. Pairs of cursive letters that break a search by stem</h2>
+<p>Don't read Russian? See <a href="../0-start/08-for-english-speakers.html">For English speakers</a>.</p>
+<p>To the pairs from <a href="../2-reference/03-names-spellings.html">Names, surnames, spellings</a>, section 5 (Б/В, Ш/Т, Р/К, "-ель/-еръ"), the author adds: <strong>г/ч · н/п · и/н · л/м · я/и</strong> [reader's experience].</p>
+<p>An example: the surname Велигура (Veligura) in the Omsk ZAGS books is written "Виличура". The stem "лигур" is not in this word, and a search by a truncated stem passes it by. This is a property not of one scribe but of a whole corpus: in another family and another uezd a record turned up, "Велигуров Величуров Иван Ильич" — two forms of one person in one line, and under one archival reference "Любава" and "Любовь" [reader's experience].</p>
+<p>→ Found a form with "ч" — look for the form with "г", and vice versa.</p>
+<h2 id="7-search-by-what-the-scribe-could-not-distort">7. Search by what the scribe could not distort</h2>
+<p>The surname is the longest and rarest word in a record, and it is spoiled first. The given name, patronymic, year and place of registration are shorter and more familiar: the scribe had heard them hundreds of times. For the author a family was found by a query <strong>without the surname</strong> — "all children of any Tikhon registered in such-and-such a settlement" — and the distorted surname surfaced in the results by itself [reader's experience].</p>
+<p>The same technique for metrical records — write out the whole shtetl over a window of years and sort by the parents' names: <a href="07-scenarios.html">Scenarios</a>, B1, item 12.</p>
+<p><strong>Re-read a list checked by surname, this time by patronymic.</strong> In the compiler's research a man died in 1850 and had to appear in the revision (<em>reviziya</em>) of that same year, yet a search by surname "did not find" him. Re-read by patronymic in all its forms, and, where the list has a column "no. of the revision list", by that column too: the family number finds a person even when the surname is illegible. That is how, in one round, a man turned up whom an earlier pass by surname had missed.</p>
+<h2 id="8-an-archive-catalogue-ask-with-one-word">8. An archive catalogue: ask with one word</h2>
+<p>On the catalogue of one oblast archive (the design is typical) [reader's experience]:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>похозяйственные книги Называевск</code> (household registers Nazyvayevsk)</td>
+<td>0, "Nothing found"</td>
+</tr>
+<tr>
+<td><code>Называевского района похозяйственные</code> (of Nazyvayevsk district household)</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>похозяйственные</code> (household)</td>
+<td>6,644 files</td>
+</tr>
+<tr>
+<td><code>Называевск</code> (Nazyvayevsk)</td>
+<td>4,161 files</td>
+</tr>
+</tbody>
+</table></div>
+<p>The catalogue joins words with "AND" and looks for them <strong>in one file title</strong>. But files are titled "Household registers of the aul Ablay" (Похозяйственные книги аула Аблай): the document type and the district do not occur together in one title. <strong>A two-word query gives a guaranteed zero</strong>, however large the fond. This is the same case as in section 3: a zero proves only how the query was assembled.</p>
+<p>→ Ask separately for the document type and separately for the place, and intersect the lists yourself.</p>
+<p>In the same catalogue [reader's experience]:</p>
+<ul>
+<li><strong>a stem finds more than the full form</strong>: "Велигура" — 1 file, "Велигур" — 2; the second turned out to be a personal file with an autobiography;</li>
+<li><strong>a book can be selected whole by the file's reference</strong>, not by name: a query on the reference field (for the author of the form <code>fields[9]=д. 1336,</code>) returned all 492 records of the book. This removes the dependence on the "place of registration" column, which is filled in differently within one book;</li>
+<li><strong>one archive may have two search systems</strong> with different results: for the name of one village — 52 files in one and 37 in the other. These are different sets, not one with different paging.</li>
+</ul>
+<h2 id="9-the-most-reliable-zero-when-the-source-itself-names-the-total">9. The most reliable zero — when the source itself names the total</h2>
+<p>Before building an external check, see <strong>whether the source gives its own total</strong>. A metrical book closes a month with a line like "total male five" (итого мужескаго пола пять) with the rabbi's signature, a revision gives the number of souls per household, an inventory gives the number of storage units. If the total agreed with the number of records read, the list could not have been overlooked, and the zero for the surname is firm. Checking the numbering of records and households is in the <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/reading-archive-scans/SKILL.md"><code>reading-archive-scans</code></a> skill, the section "Proof of completeness" (Доказательство полноты).</p>
+<p>The arithmetic of the document itself can also decipher conventional marks [reader's experience]. In a list of parishioners of a prayer house for 1896 there were marks explained nowhere: a blue "V" and a red "Н". There were exactly 66 blue ones and 32 red ones, one line was struck out with the note "excluded on account of death" (за смертію исключенъ) — 99 living. In the minutes of a failed meeting on the neighbouring frame it says that attendance "makes up less than 2/3" (составляетъ менѣе 2/3), that is, a lawful meeting needs two thirds. Two thirds of 99 is exactly 66. The author's conclusion: V — "appeared" (явился), Н — "did not appear" (не явился). This is a conclusion from a converging count inside the file, not from analogy.</p>
+<h2 id="10-for-every-zero-a-number-and-a-denominator">10. For every zero — a number and a denominator</h2>
+<p>A zero without the number viewed does not count as a result (see "coverage" in the <a href="../0-start/06-glossary.html">Glossary</a>). But a number without a denominator also says little [reader's experience]:</p>
+<ul>
+<li>"106 records for the shtetl" is 19% of the shtetl if it has 551 households;</li>
+<li>"our man is not among the 118 signatories" is 118 of 245 householders, 48%, and the direction is not closed.</li>
+</ul>
+<p>→ Write in the research log: "viewed N of M (X%)" — and where M comes from.</p>
+<h2 id="11-one-archive-two-naming-schemes-on-commons">11. One archive — two naming schemes on Commons</h2>
+<p>On Wikimedia Commons the files of one archive may be uploaded under two schemes of file names [reader's experience]:</p>
+<ul>
+<li>the Ukrainian — <code>ЦДІАК 1167-1-500 Метрична книга…</code>;</li>
+<li>the Russian — <code>Фонд 1240 Опись 1 Дело 46 Метрическая книга…</code>.</li>
+</ul>
+<p>A query in one scheme does not find the files of the other: <code>ЦДІАК 1267</code> gave 0, <code>Фонд 1267</code> — 49 files. According to the author, in the same place, after several fonds were merged into one (2020), some files lie on Commons twice — under the old and the new number, as different scans. How to find a file by its reference in all variants of the name — the <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/ukrainian-archives-on-commons/SKILL.md"><code>ukrainian-archives-on-commons</code></a> skill, step 3.</p>
+<p><strong>A fond's category can be incomplete too.</strong> In the compiler's research the marriage books of one rabbinate for seven years lay on Commons outside the category of their fond, and the earlier conclusion "there are no books for these years" turned out to be a false zero. Check coverage in two ways: by category and by searching file names (<code>intitle:</code> with the reference; the same step 3 of the skill).</p>
+<h2 id="12-a-files-title-is-a-statement-not-a-fact">12. A file's title is a statement, not a fact</h2>
+<p>A file is titled "Metrical book of the synagogue of the shtetl Chernobyl, births 1864–1879" (Метрическая книга синагоги м. Чернобыль о рождении 1864–1879), and in the inventory itself there is a note: "error in the inventory, correctly the shtetl Khabnoe" (ошибка в описи, правильно м. Хабное) [reader's experience]. Read the annotation and the archive's notes in the inventory. File captions on Commons are also sometimes false — the <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/reading-archive-scans/SKILL.md"><code>reading-archive-scans</code></a> skill.</p>
+<p>Three more observations alongside [reader's experience]:</p>
+<ul>
+<li><strong>a fond may be by society, not by shtetl</strong>: the metrical books of shtetl A lie in the fond of society B, to which it is registered. A family "of such-and-such society" lives now in one village, now in another, while its records are in one fond (on <em>pripiska</em> — <a href="../2-reference/01-records-empire-ussr.html">Records of the Russian Empire and the USSR</a>, section 4);</li>
+<li><strong>one shtetl may have two fonds — one per confession</strong>, with neighbouring numbers: it is easy to order the Catholic one instead of the Jewish;</li>
+<li><strong>a whole kind of record may be absent because of the fond's composition, not because of loss</strong>: for one shtetl after 1862 there are neither death books nor divorce books — only births and marriages. Before looking for a death, check in the inventory <strong>whether death books were kept in this fond at all</strong>. Otherwise a month goes on searching for what does not exist, and "not found" goes into the log. How to record such a gap — <a href="../3-results/01-standard-of-proof.html">Standard of proof</a>, section 7, "Gaps in the sources themselves".</li>
+</ul>
+<h2 id="13-a-mark-in-a-database-is-a-property-of-the-collection-not-a-fact-read">13. A mark in a database is a property of the collection, not a fact read</h2>
+<p>Indexers often put a status ("murdered", "killed") on a whole collection by its type, without reading each record. For the author five cards carried the mark "murdered", and the death was recorded as proved. The collection was called "List of murdered Jews from Yizkor books", while the memorial entry itself said nothing about a death. The people it commemorated died their own death overseas — one five months before the Germans arrived, as the date on the gravestone shows [reader's experience].</p>
+<p>→ Before accepting a status, ask: <strong>was it read in a document or assigned to the whole collection?</strong> And check whether the source is able to distinguish: if neighbouring records directly write "died in such-and-such a town" and yours is silent, the silence does not mean what it seems.</p>
+<h2 id="14-a-relatives-story-what-to-believe">14. A relative's story: what to believe</h2>
+<p>In two long interviews, for the author <strong>dates, addresses and family links were confirmed, but names were not</strong> [reader's experience]. The narrator remembers that "uncle lived on such-and-such a street and left before the war", and mixes up whether it was Aron or Aaron. Do not fit a find to the name from the story — check it by date and address.</p>
+<p>With other narrators memory mixes up years too (<a href="../0-start/04-talking-to-relatives.html">Talking to relatives</a>, section 5), so the general conclusion is more cautious: a name from a story is the least reliable field, and only a document confirms it.</p>
+<h2 id="15-one-measurement-is-not-yet-a-result-the-server-sometimes-returns-an-empty-answer">15. One measurement is not yet a result: the server sometimes returns an empty answer</h2>
+<p>The signs of an honest zero from section 3 — code 200, the line "nothing found", your query echoed in the results header — check that the query was assembled correctly. They do not catch a failure of the server itself. For the author, one and the same query to a catalogue that always answers the same question the same way gave, seven times in a row, <code>2 · 0 · 2 · 2 · 2 · 2 · 2</code>. The empty answer carried the query in the header and "nothing found", and its length in bytes did not differ from an honest one [reader's experience].</p>
+<p>On this catalogue the author counted 8 empty answers in about 132 queries — about 6 %. If the failures are independent, the probability of getting a false zero in every measurement in a row is [reader's experience]:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Measurements</th>
+<th>Probability of a false zero</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>about 1 in 16</td>
+</tr>
+<tr>
+<td>3</td>
+<td>about 1 in 4,400</td>
+</tr>
+<tr>
+<td>6</td>
+<td>about 1 in 19 million</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ The rate was measured on one catalogue over a few days: on another site it may be higher or lower. And the calculation assumes the failures are independent, while the author noticed that they <strong>cling to fast series of queries</strong> — that is, exactly to running through spellings. The more conscientiously you go through the spellings, the more likely one of the forms gets a false zero and goes into the log as "does not occur".</p>
+<p>→ Repeat a zero on which a conclusion will rest <strong>with a pause, not back to back</strong>: the author's threshold is three measurements, six for an important conclusion. A support without repeats — section 18.</p>
+<h2 id="16-a-word-in-a-title-can-be-broken-by-an-invisible-character">16. A word in a title can be broken by an invisible character</h2>
+<p>A long word in a file title is sometimes broken by a hyphenation, and the author searched for it in parts, going through the possible break points. This works if the break is an ordinary hyphen. On one catalogue the author tried the forms with a hyphen, got zero, and a control query confirmed that the search worked. But in the real titles the words were broken by a <strong>soft hyphen</strong> (U+00AD) — a character you cannot see on screen [reader's experience]:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Found</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>техниче</code> + soft hyphen + <code>ский</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>техниче-ский</code> (ordinary hyphen)</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>технический</code> ("technical") whole</td>
+<td>47</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are different sets, and both are non-empty: the catalogue does not join words across a soft hyphen. In a full export for one uezd (district), 44 titles of 712 were broken this way — about 6 %. Such files drop out <strong>both from the results and from the "found: N" counter</strong>, so checking against the counter does not catch them [reader's experience].</p>
+<p>→ Before building conclusions on zeros from a catalogue, save the raw response and count the soft hyphens (U+00AD) and the different hyphens (U+002D, U+2010, U+2011) in it. Any AI agent with access to files can do this.</p>
+<p>The author's lesson about control: the control query worked, but it confirmed something other than what was being checked. A query for a known word checks that the search works. A guess about which character breaks a word is checked only by reading the real titles in the results.</p>
+<h2 id="17-a-typo-in-the-inventory-itself-only-a-truncated-stem-helps">17. A typo in the inventory itself: only a truncated stem helps</h2>
+<p>An export by the name of the uezd gave 712 files, by a truncated stem — 723. Of the 11 extra, 7 were noise (people with the same surname, another village), and 4 were real files of the same uezd: one broken by a soft hyphen (section 16), three written by the archivist with a missing letter — "Трубческий" instead of "Трубчевский" (Trubchevsk uezd) [reader's experience].</p>
+<p>A missing letter in the inventory is found neither by trying hyphenations nor by grammatical cases — only by a search on a truncated stem. The cost is about 1 % noise; the gain is files the full word does not see. That a stem finds more than the full form is said in section 8 too; here is one more "why": it protects against a typo in the catalogue itself.</p>
+<h2 id="18-a-zero-for-a-piece-of-a-word-confirms-the-zero-for-the-whole-word">18. A zero for a piece of a word confirms the zero for the whole word</h2>
+<p>If the search finds a string <strong>inside a word</strong> (search by part of a word), the results for a long string are wholly contained in the results for any piece of it. So if <code>ищик</code> gives zero, then any surname ending in "-ищик" (-ishchik) must give zero too [reader's experience].</p>
+<p>This is a second, independent support under a zero: one extra query instead of the repeated measurements of section 15. It works only if search by part of a word has been <strong>checked</strong>, not assumed: with one query for a piece from the middle of a word that certainly exists.</p>
+<p>The reverse case is useful too: the piece gave 1, and the full surname 0. Then the record found holds a <strong>different</strong> surname with the same piece.</p>
+<h2 id="19-to-section-3-an-unknown-parameter-returns-someone-elses-data">19. To section 3: an unknown parameter returns someone else's data</h2>
+<p>Besides "nothing found" and "everything there is", a wrongly assembled address has a third outcome. In one archive's API, a query with an invented fond parameter returned code 200 and the files of <strong>another fond</strong>, and with an invented file parameter — the image of <strong>another file</strong>. There is no error, the response format is correct: the server does not know such a parameter and returns the first thing at hand. The correct form, taken from the page, turned out to have quite a different syntax [reader's experience].</p>
+<p>→ Compare the ownership fields in the response — the fond name, the file number — with what you asked for. If not everything matches, the filter did not work.</p>
+<p>Where to get the real addresses: in the browser, open the developer console on the catalogue page and run <code>performance.getEntriesByType('resource').map(r=&gt;r.name)</code> — this lists the addresses the page itself requested [reader's experience]. How to require the same of an agent — <a href="03-working-with-agents.html">Working with agents</a>, section 4.</p>
+<h2 id="20-results-pages-that-overlap-each-other">20. Results pages that overlap each other</h2>
+<p>The usual paging traps are a skipped or a repeated page. On one catalogue the author met something else: the pages came not as a tape but as <strong>overlapping windows</strong>, and each next page was 100 records longer than the previous one. For 712 files the page lengths were 100, 200, 300, 400, 312, 212, 112, 12 — 1,648 in total. All the files ended on the fifth page, and the sixth to eighth were a repeat that looked like a short list of real files [reader's experience].</p>
+<p>→ Do not add up page lengths. Compare the first records of neighbouring pages — the overlap shows at once. After removing repeats by file number you must get <strong>exactly</strong> the announced number: for the author, 712 titles, 712 numbers, 712 by the counter.</p>
+<p>On short result lists of the same catalogue, paging worked differently [reader's experience]. So check how the pages work on your own result list rather than carrying it over from another query.</p>
+<h2 id="21-the-server-returned-less-than-you-asked-for-and-said-nothing">21. The server returned less than you asked for and said nothing</h2>
+<p>In another archive's API, a request for 200 rows (<code>$top=200</code>) and for 500 rows returned exactly 100, while the total counter was correct. A loop that advances by the requested number of rows reads half the file and reports a full pass [reader's experience].</p>
+<p>→ Take the paging step from the number of rows <strong>returned</strong>, not requested.</p>
+<h2 id="22-to-section-2-slow-is-not-yet-how-the-site-works">22. To section 2: "slow" is not yet how the site works</h2>
+<p>Section 2 is about the instrument changing. The opposite mistake is to take a temporary state of the server for its design. The author wrote down: "10 rows — 6 seconds, 25 — 16, 50 — error 504" — and spent half an hour exporting an inventory 25 rows at a time. A day later the same queries ran in a fraction of a second, 100 rows at a time without errors [reader's experience].</p>
+<p>→ A ceiling, as in section 21, is a property of the server; "slow" is a property of the hour. Before writing a limit into your notes on a resource, repeat the measurement at another time.</p>
+<h2 id="23-the-counter-may-sit-in-the-tab-labels">23. The counter may sit in the tab labels</h2>
+<p>On one catalogue there was no "found: N" line in the markup, and the author told the agents: count yourselves. Both agents found the counter on the first query — the numbers stood in the tab labels: "Geographic index (1) | Fonds (15) | Inventories (5) | File (712)" [reader's experience]. One query gives the denominator for all sections of the catalogue at once. If a section's tab is missing from the response altogether, that is a zero named by the catalogue itself — in the author's experience more reliable than a zero counted from the results (provided the response is not empty through a failure, section 15).</p>
+<p>The lesson: "I did not find the counter" is not the same as "there is no counter". An unchecked statement about the instrument spreads through all further work. How to check such statements in a task for an agent — <a href="03-working-with-agents.html">Working with agents</a>, section 4.</p>
+<h2 id="24-two-different-403s-what-robotstxt-shows">24. Two different 403s: what <code>/robots.txt</code> shows</h2>
+<p>Section 1 says: a 403 for the whole domain, including <code>/robots.txt</code>, is server protection. The author tells the cases apart by the response to <code>/robots.txt</code> — a service file for search robots that is usually served to everyone [reader's experience]:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Home page</th>
+<th><code>/robots.txt</code></th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>403</td>
+<td>403</td>
+<td>the whole domain is closed; the refusal came before the address was even parsed. In the log — "blocked". Look for the same material through the institution's open channels: for the author, the archive had a separate official service at another address, open to everyone without a login. This is not a way around a country block</td>
+</tr>
+<tr>
+<td>403</td>
+<td>404</td>
+<td>the server parsed the address and did not find the file, so the domain is open and the pages refuse <strong>your program</strong> — this is "a refusal to the program specifically" from section 1. For the author the site opened fully in an ordinary browser, and behind it was a fond of half a million images</td>
+</tr>
+<tr>
+<td>403</td>
+<td>200</td>
+<td>service files are served, pages are filtered — the site is alive</td>
+</tr>
+</tbody>
+</table></div>
+<p>→ What to do — as in section 1: check in an ordinary browser, do not circumvent the protection, and on a CAPTCHA or a block by country stop and hand the decision to the human (<a href="../2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a>, sections 3 and 4).</p>
+<h2 id="25-the-index-gave-a-field-to-the-wrong-person">25. The index gave a field to the wrong person</h2>
+<p>An index goes wrong not only in letters but also in whom a field belongs to. In an index of the 1858 revision a family's line was compiled so that the age of 26 stood with the father, while on the image it was his son's age. Searching for the father "aged about 26" in a neighbouring revision would give a false zero, and the family's chronology a false contradiction.</p>
+<p>→ Check every index field on which a conclusion rests (age, patronymic, relationship) against the image. Other field-parsing errors — <a href="../3-results/01-standard-of-proof.html">Standard of proof</a>, section 6.</p>
+<h2 id="26-a-negative-conclusion-with-the-full-list-of-forms-and-with-candidates-who-have-no-patronymic">26. A negative conclusion — with the full list of forms and with candidates who have no patronymic</h2>
+<p>The conclusion "so-and-so is not in the list" holds exactly as far as the list of forms that was searched. In one round three forms of a patronymic were left out of the list: with "iо", with "е" and the short one in "-овъ" (Лiозоровичъ, Лейзеровичъ, Лейзеровъ), and the fact-checker downgraded the conclusion. In the same round five men whose names began with "Абр…" (Abr…) and who had no patronymic recorded at all could not be dismissed with "none of them has the right patronymic": a person without a patronymic is a candidate, not someone excluded.</p>
+<p>→ In a negative conclusion, list every form searched and, separately, the candidates that nothing confirms or excludes.</p>
+<h2 id="27-ocr-breaks-surnames-with-a-variant-in-brackets">27. OCR breaks surnames with a variant in brackets</h2>
+<p>Directories often give a surname variant in brackets: "Surname (Variant)". In the recognised text (OCR) of a directory on archive.org such a line fell apart into single letters with spaces, and a regular expression for the surname returned zero.</p>
+<p>→ Read the directory sections for the towns you need from the image, not only from the recognised text. A zero from OCR without a control record from the same section is not a result. Typical recognition errors — <a href="../2-reference/03-names-spellings.html">Names, surnames, spellings</a>, section 4.</p>
+<h2 id="28-the-town-of-a-directory-entry-by-the-nearest-heading-above">28. The town of a directory entry — by the nearest heading above</h2>
+<p>In a directory divided into districts and towns, a town's heading appears once and the entries under it run for several pages. An entry at the top of a page belongs to the town whose heading stands above it — sometimes on the previous page. Two rounds assigned the same address-directory entry to different towns; the heading on the previous page settled it.</p>
+<p>→ Determine the town of an entry by the nearest heading above, paging back, not by the first heading on the same page.</p>
+<h2 id="29-a-misreading-spreads-along-the-chain-of-reports">29. A misreading spreads along the chain of reports</h2>
+<p>An agent read a patronymic in a record as the expected "Лейзоровичъ" (Leizorovich), while the record said "Лейбовичъ" (Leibovich); it also read the surname as one resembling the surname sought. The error passed through the archive researcher's report, the fact-check, the round summary, the audit and the hypothesis, and only a separate check against the crop removed it: each next role read the previous report, not the frame.</p>
+<p>→ A find on which a conclusion rests the coordinator checks against the crop itself (<a href="03-working-with-agents.html">Working with agents</a>, section 10, "Processing the summary"). Do not delete what was corrected in old reports; mark it with a link to the correction, or the error will be restored from the old text (compare "A correction made in one place has not been made", section 7 there). Do not complete a surname you could not read from what you expect: write "Ш[…] (not read)", and rest the identity on other signs — family number, given name, age, note.</p>
+<h2 id="30-an-extract-about-the-family-is-not-a-second-source-for-a-negative">30. An extract "about the family" is not a second source for a negative</h2>
+<p>A certified copy or extract "about the family of so-and-so" copies from the revision only those who were asked about. About a brother missing from the extract it is silent; it does not testify that there was no brother. A negative conclusion needs the list itself, where the person was bound to appear; an extract does not count as a second source. On the independence of confirmations — <a href="../3-results/01-standard-of-proof.html">Standard of proof</a>, section 5.</p>
+<h2 id="31-first-the-structure-of-the-source-then-conclusions">31. First the structure of the source, then conclusions</h2>
+<p>A list read without some of its columns gives false zeros. In the sheets of the 1875 military census a column on the right half-sheet holds notes such as "умеръ 18NN года" (died in 18NN) or a place of residence; without it a person looks "missing". Notes on the back of a sheet ("въ г. N" — in the town of N, "умеръ 18NN" — died 18NN) often give the decisive sign.</p>
+<p>→ Before reading names, work out from the header how many columns the sheet has and where they continue, and read the back of the sheet.</p>
+<blockquote>
+<p><strong>How to ask AI</strong></p>
+<p><em>For a plain chat, add: "If you can't open a source, say so; mark fonds, villages and dates you name from memory as [from memory, verify]. Answer in English, and give names, places and archive titles in the original script in parentheses." (<a href="02-prompt-library.html">why</a>). The label (agent with a browser) is for an AI that opens websites itself; the other prompts suit any chat.</em></p>
+<ul>
+<li><em>(agent with a browser)</em> "A query to the database [N] returned zero. Before recording a negative result, answer: did the control record pass by this same route; was the zero repeated once more, after a pause; how many records are in the database in all and how many did the query return; does this search widen the query with synonyms or search literally; was the query address taken from a page of the site or assembled by hand." <em>Check yourself:</em> the control record is certainly in the database; the query address, opened in a browser, gives the same.</li>
+<li>"The site [N] does not open: [what is visible on the screen]. What diagnosis is it — the site's name is not found, connection refused, certificate, bot protection, a refusal to the program specifically, the resource has changed, a block by country? What checks each? Do not circumvent the protection." <em>Check yourself:</em> open the site in an ordinary browser; pass the CAPTCHA yourself.</li>
+</ul>
+<p><em>Bad → good:</em> "Is [surname] in the database [N]?" (a zero without a control record and spellings proves nothing) → "In the database [N] first find the control record [who is certainly there], then [surname] in all spellings; for each zero, how many records the database has in all."</p>
+</blockquote>
+<hr />
+<p><strong>See also:</strong> <a href="04-checking-results.html">Checking results</a> · <a href="../3-results/01-standard-of-proof.html">Standard of proof</a>, section 7 · <a href="../2-reference/03-names-spellings.html">Names, surnames, spellings</a> · <a href="../2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a> · <a href="03-working-with-agents.html">Working with agents</a> · the <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/verifying-genealogy-findings/SKILL.md">verifying-genealogy-findings</a> skill</p>
+</main>
+<footer>Text — CC BY 4.0. Compiled by Anna Shefel. <a href="https://github.com/shefelchana/genealogy-guide-ru">GitHub</a></footer>
+</body>
+</html>

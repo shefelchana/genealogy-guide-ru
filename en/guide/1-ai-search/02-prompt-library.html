@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt library for AI — Tracing Your Ancestors</title>
+<meta name="description" content="Ready-made prompts for an AI assistant — Claude, Gemini, ChatGPT and others — following the steps of the route &quot;question → place → source → index → scan →…">
+<link rel="canonical" href="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/02-prompt-library.html">
+<link rel="alternate" hreflang="en" href="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/02-prompt-library.html">
+<link rel="alternate" hreflang="ru" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/02-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%BA-%D0%B8%D0%B8.html">
+<link rel="alternate" hreflang="x-default" href="https://shefelchana.github.io/genealogy-guide-ru/guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/02-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%BA-%D0%B8%D0%B8.html">
+<meta property="og:title" content="Prompt library for AI — Tracing Your Ancestors">
+<meta property="og:description" content="Ready-made prompts for an AI assistant — Claude, Gemini, ChatGPT and others — following the steps of the route &quot;question → place → source → index → scan →…">
+<meta property="og:url" content="https://shefelchana.github.io/genealogy-guide-ru/en/guide/1-ai-search/02-prompt-library.html">
+<meta property="og:type" content="article">
+<style>
+:root{--ink:#1F3454;--muted:#5a6475;--gold:#9a6b25;--paper:#fbf9f4;--line:#e3dccd;--code:#f3efe6}
+@media (prefers-color-scheme:dark){:root{--ink:#e6e9ef;--muted:#a9b1bf;--gold:#d6a75a;--paper:#16191f;--line:#2c313b;--code:#1f232b}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header,main,footer{max-width:860px;margin:0 auto;padding:0 20px}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:15px}
+header a{color:var(--ink);text-decoration:none}header .site{font-weight:700;font-family:Georgia,serif;font-size:19px}
+nav a{margin-left:14px;color:var(--gold)}main{padding-top:10px;padding-bottom:40px;overflow-wrap:anywhere}html,body{max-width:100%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}h1{font-size:32px;margin:22px 0 14px}
+a{color:var(--gold)}code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:var(--code);padding:12px;border-radius:8px;overflow:auto}pre code{padding:0}
+blockquote{margin:16px 0;padding:6px 16px;border-left:4px solid var(--gold);background:var(--code);border-radius:6px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left;overflow-wrap:normal;min-width:6em}th{background:var(--code)}
+img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padding-bottom:30px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><a class="site" href="../../../en/index.html">Tracing Your Ancestors</a>
+<nav><a href="../../../guide/1-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D0%B8%D0%B8/02-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%BA-%D0%B8%D0%B8.html" hreflang="ru">Русский</a><a href="../../../en/guide/1-ai-search/06-skills.html">Skills for AI agents</a><a href="../../../index.html#/en/guide/1-ai-search/02-prompt-library.md">Open in the interactive version</a></nav></header>
+<main>
+<h1 id="prompt-library-for-ai">Prompt library for AI</h1>
+<p>What this section covers: ready-made prompts for an AI assistant — Claude, Gemini, ChatGPT and others — following the steps of the <a href="01-search-route.html">route</a> "question → place → source → index → scan → verification → record". Copy them and put your own data in the square brackets. After each prompt it says what to check yourself.</p>
+<p>The general rule: <strong>an AI answer is a hypothesis, not a source.</strong> Ask for an address (archive, file, frame or link) and a verbatim quotation for every find. Every section of the reference has its own "How to ask AI" box with prompts on the section's topic.</p>
+<p>Don't read Russian? See <a href="../0-start/08-for-english-speakers.html">For English speakers</a>. Where a search needs Cyrillic, the prompts below say so.</p>
+<h2 id="add-to-any-prompt-not-from-memory">Add to any prompt: "not from memory"</h2>
+<p>An ordinary chat (ChatGPT, Gemini, Claude without access to websites) cannot open an archive inventory or a database. Asked "in which fond is … held", it will answer anyway — plausibly and often wrongly: it invents a fond number, mixes up villages with the same name, "remembers" a date. So add this to prompts that deal with facts:</p>
+<blockquote>
+<p>If you can't open a source, say so. Don't name fond or file numbers, village names, uezds, dates or website addresses from memory; if you do name them, mark each one "[from memory, verify]" and tell me where I can check it. Answer in English, and give names, places and archive titles in the original script in parentheses.</p>
+</blockquote>
+<p>And ask for <strong>a search plan and checkable sources</strong>, not ready-made facts: not "in which fond are the records of shtetl N", but "where can I check whether the records of shtetl N survive and in which fond they are held".</p>
+<p><strong>For a chat or for an agent.</strong> Prompts without a label suit any chat: you give the AI a text, a scan or a table, and it works with what it is given. Prompts labelled <em>(agent with a browser)</em> require the AI to open websites itself (Claude Code, Claude in Chrome, the agent mode of other assistants). In an ordinary chat, use the "draw up a search plan" version instead, and open the websites yourself.</p>
+<hr />
+<h2 id="rules-for-a-good-prompt">Rules for a good prompt</h2>
+<ul>
+<li><strong>One question at a time</strong>, with an answer criterion.</li>
+<li><strong>Give what is already known</strong>: extracts from your own files. Otherwise the AI will "discover" what has already been found.</li>
+<li><strong>Name the "doubles" that have been ruled out</strong>: people you have already checked and rejected.</li>
+<li><strong>Ask it to tell you the plan first</strong>: what we are looking for, what we rely on, what method.</li>
+<li><strong>Demand a checkable answer</strong>: "write only what you see", mark anything uncertain with "(?)", an honest "not found" is a normal result.</li>
+<li><strong>Do not give AI passwords</strong> or data about living people without need. Do not upload raw DNA data to a chat.</li>
+</ul>
+<h2 id="start-what-is-known-and-where-to-begin">Start: what is known and where to begin</h2>
+<p><strong>Break down a family story</strong></p>
+<blockquote>
+<p>Here is what I know about the family: [text]. Split it into three lists: (1) confirmed by a document — which one; (2) hearsay — whose; (3) contradictions and unclear points. Make a table "person — dates — place — source". Add nothing of your own.</p>
+</blockquote>
+<p><em>Check yourself:</em> the AI did not turn "hearsay" into "known" and did not add dates you never gave.</p>
+<p><strong>Lay the events of the era over the table</strong></p>
+<blockquote>
+<p>Here is a table "who — where — when": [table]. Lay the events of the era over it for these places and years: wars, pogroms, evacuation, border changes, conscription. Mark which family stories do not fit by date and which document could check this. Every historical event comes with a link to a source.</p>
+</blockquote>
+<p><em>Check yourself:</em> the dates of events at the links given; a mismatch is a reason to check the legend, not to discard it.</p>
+<p><strong>Choose the first question</strong></p>
+<blockquote>
+<p>Propose three options for a first research question based on this table. For each: which source can answer it, how accessible it is online, the stopping condition.</p>
+</blockquote>
+<h2 id="place">Place</h2>
+<blockquote>
+<p>I need to identify the place [name] [guberniya/oblast, if I know it] in [year]: what it was called then, which uezd and guberniya it belonged to, which state it belonged to, whether there are other places with the same name. Name the reference works to check this (JewishGen Communities, the "Lists of Populated Places" (Списки населённых мест), etc.) and say what to compare in them. Mark your guesses "[from memory, verify]".</p>
+</blockquote>
+<p><em>Check yourself:</em> in the reference work named; the uezd and volost match, not only the name.</p>
+<h2 id="source">Source</h2>
+<p><strong>What survives</strong></p>
+<blockquote>
+<p>I am looking for [event: birth, marriage, death, revision] of [whom] in [place, uezd, guberniya] around [year]. Which types of document could have recorded it? Draw up a plan for checking: in which archive such documents are usually held and <strong>where I can check</strong> what survives and is digitised (consolidated catalogue, inventory, archive website, FamilySearch catalogue). Separately — substitutes, if there are no direct documents. Give fond numbers only with a link to a source; otherwise mark them "[from memory, verify]".</p>
+</blockquote>
+<p><em>Check yourself:</em> fond references — against the archive's inventory or its website; "survives" — against the consolidated catalogue, not the AI's memory.</p>
+<p><strong>Plan</strong></p>
+<blockquote>
+<p>Here is what is known about the person: [extract]. The question: who were his parents? Draw up a plan: which documents could have mentioned him, where to look for them, in what order — from cheap (indexes, full text) to expensive (continuous reading); separately — what to do if the first step yields nothing.</p>
+</blockquote>
+<h2 id="index-and-spellings">Index and spellings</h2>
+<p><strong>All spellings of a surname</strong></p>
+<blockquote>
+<p>Make a list of all possible spellings of the surname [N]: Cyrillic (including pre-reform orthography), Latin, Polish, Romanian and German transcriptions, Yiddish and Hebrew. Add variants with a different vowel in the root, with -ский/-цкий, -ман/-манн, and without the first letter (text recognition often loses it).</p>
+</blockquote>
+<p><em>Check yourself:</em> doubtful forms — against the Beider dictionaries index (stevemorse.org); if a form is not in the dictionaries, it is most likely a reading error (but the dictionaries do not cover every surname).</p>
+<p><strong>Read an index row</strong></p>
+<blockquote>
+<p>Here is a row from the database: [text of the row, all fields]. Explain each field. What is the surname here, what is the patronymic, what is the place of registration? How do I get from this row to the record itself (archive, fond, inventory, file, frame)?</p>
+</blockquote>
+<p><em>Check yourself:</em> open the scan — the index mixes up fields.</p>
+<h2 id="scan-reading-a-document">Scan: reading a document</h2>
+<p><strong>Read a document (first pass — no expectations)</strong></p>
+<blockquote>
+<p>This is a scan of [document type: metrical book / revision list / ZAGS record], [place], [year]. First read the printed table header — what is in which column. Then, line by line, write out [the columns needed] as written, in the spelling of the original. Mark anything illegible "(?)" and explain what gets in the way. Do not guess.</p>
+</blockquote>
+<p><strong>Second pass — comparison with the hypothesis</strong></p>
+<blockquote>
+<p>Now compare what you read with what I am looking for: [names, age]. Which lines fit, which do not, and why? Where might your reading have adjusted itself to the expectation?</p>
+</blockquote>
+<p><em>Check yourself:</em> enlarge the fragment and read the name with your own eyes. AI reads proper names worse than everything else in the text.</p>
+<p><strong>Hebrew and Yiddish</strong></p>
+<blockquote>
+<p>Read the inscription on the gravestone: the name, the father's name, the date by the Jewish calendar; convert the date to Gregorian (allowing ±1 day). Give the original spelling of the names.</p>
+<p>Translate the Yiddish article close to the text; leave names and towns in the original next to the translation; mark doubtful words "(?)".</p>
+</blockquote>
+<h2 id="verification">Verification</h2>
+<p><strong>Two candidates</strong></p>
+<blockquote>
+<p>Here are two people with the same name: [data]. Make a table of features (age, patronymic, place, relatives, occupation), mark matches and contradictions and which document would settle the question. The conclusion "same person" only with two independent matches.</p>
+</blockquote>
+<p><strong>Check a conclusion</strong></p>
+<blockquote>
+<p>Here is my hypothesis and its grounds: [text]. Find the weak points: which grounds depend on each other, which contradictions are unexplained, which document could refute it.</p>
+</blockquote>
+<p><strong>Check a "not found"</strong></p>
+<blockquote>
+<p>I did not find [whom] in [source]. Here is how I searched: [limits of the view, spellings, method]. Does that mean anything? Was the person obliged to appear in this source? What else should I check before recording a negative result?</p>
+</blockquote>
+<h2 id="dead-ends">Dead ends</h2>
+<blockquote>
+<p>The person is not in the revision of [year], although by age he should be. List the possible reasons (spelling, double name, estate, another society, omission, border, loss of the document) and how to check each.</p>
+<p>Many namesakes have turned up in [place]. How do I tell which of them are relatives? Which features (a surname from a place name or occupation, the set of given names across two generations, a clerk's unique mistake, witnesses) will work here and which will not?</p>
+</blockquote>
+<h2 id="the-emigrant-branch">The emigrant branch</h2>
+<blockquote>
+<p>Here is a death certificate from the USA: [text]. Which other documents should I look for (census, naturalisation, ship manifest, draft card), what each may say about place of birth and parents, and how to recognise a distorted shtetl name.</p>
+</blockquote>
+<h2 id="record-and-family-history">Record and family history</h2>
+<p><strong>Record of a find</strong></p>
+<blockquote>
+<p>Write up the find using the template: date, source with the full archival reference and frame, verbatim quotation, translation, what it gives, what contradicts it, level of confidence. Add nothing beyond the document.</p>
+</blockquote>
+<p><strong>Historical note for relatives</strong></p>
+<blockquote>
+<p>Write a paragraph about life in the shtetl [N] in [years]: the authorities, restrictions on Jews, occupations of the inhabitants. Every fact comes with a link to a source. Invent nothing about our family — only the general background.</p>
+</blockquote>
+<h2 id="a-task-for-an-agent-continuous-reading-agent-with-a-browser-for-advanced-users">A task for an agent: continuous reading (agent with a browser, for advanced users)</h2>
+<blockquote>
+<p>Read [the birth book, year], frames [X–Y]. In the father's column look for the surname [N] in any spelling. First find a control record (one that certainly exists): [record]. For every hit — the frame, record number, verbatim quotation, a crop. Keep a log "frame → record numbers". Pace — no more than one frame every 5–10 seconds. If a CAPTCHA appears, stop and click nothing. Do not launch other agents.</p>
+</blockquote>
+<p>The full task template is in <a href="03-working-with-agents.html">Working with agents</a>, section 4.</p>
+<h2 id="continue-work-in-a-new-session">Continue work in a new session</h2>
+<blockquote>
+<p>Read the "Continue from here" file and the research log. Retell in five lines: what the current question is, what has been done, what is waiting for me (CAPTCHAs, decisions), what the next step is. Do not start searching for anything until I confirm.</p>
+</blockquote>
+<hr />
+<p><strong>See also:</strong> <a href="01-search-route.html">The search route</a> · <a href="04-checking-results.html">Checking results</a> · <a href="05-ai-tools.html">AI tools</a> · <a href="../../reading/ai-in-genealogy.html">Prompts from other authors</a></p>
+</main>
+<footer>Text — CC BY 4.0. Compiled by Anna Shefel. <a href="https://github.com/shefelchana/genealogy-guide-ru">GitHub</a></footer>
+</body>
+</html>
