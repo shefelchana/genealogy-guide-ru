@@ -1,5 +1,7 @@
 # Навыки (skills) для Claude
 
+> Все навыки этой папки одним набором — на Agensi: [русское издание](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots), [английское](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (необязательно; здесь они бесплатны).
+
 Порядок — по шагам маршрута поиска, тот же, что в [руководстве](../guide/1-поиск-с-ии/06-навыки.md).
 
 **Начало и организация работы**
