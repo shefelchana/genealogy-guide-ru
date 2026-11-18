@@ -1,60 +1,60 @@
 ---
 name: search-logic-navigator
-description: Guides a genealogy search through its decision points — the route question → place → source → index → scan → verification — and says what to do next in each typical situation, whether a match was found, nothing was found, too many namesakes turned up, a document is illegible, an index contradicts the scan, every online source seems exhausted, or a site blocks access. Diagnoses which step of the route the search is stuck at before suggesting anything, and records empty results with their coverage. Use whenever the user is stuck, unsure of the next move, or reports an outcome — even if the user only says "я застрял", "ничего не нахожу", "что дальше", "много однофамильцев", "не могу прочитать", "в индексе одно, в документе другое", "всё уже посмотрела", "сайт не пускает", "кажется, нашла".
+description: Guides a genealogy search through its decision points — the route question → place → source → index → scan → verification → record — and says what to do next in each typical situation. Covers a possible match, nothing found, too many namesakes, an illegible document, an index that contradicts the scan, every online source seemingly exhausted, and a site that blocks access. Diagnoses which step of the route the search is stuck at before suggesting anything, and logs empty results together with their coverage. Use whenever the user is stuck, unsure of the next move, or reports an outcome, e.g. "I'm stuck", "I can't find anything", "what next?", "too many people with the same surname", "I can't read this document", "the index says one thing, the record says another", "I've looked everywhere", "the site won't let me in", "I think I found him". Also triggers on Russian requests: «я застрял», «ничего не нахожу», «что дальше», «много однофамильцев», «не могу прочитать», «в индексе одно, в документе другое», «всё уже посмотрела», «сайт не пускает», «кажется, нашла».
 ---
 
-# Навигатор по развилкам поиска
+# Search Logic Navigator (decision points of a genealogy search)
 
-Большинство тупиков — не отсутствие документов, а пропущенный шаг маршрута: искали фамилию без места, верили индексу без скана, читали не тот том. Поэтому сначала определи, **на каком шаге** застрял поиск, и только потом советуй.
+Most dead ends are not a lack of documents but a skipped step of the route: searching for a surname without a place, trusting an index without the scan, reading the wrong volume. So first work out **which step** the search is stuck at, and only then give advice.
 
-## Маршрут
+## The route
 
 ```
-вопрос → место → источник → индекс → скан → проверка → запись
+question → place → source → index → scan → verification → record
 ```
 
-| Шаг | Что должно быть на выходе | Почему этот шаг нельзя пропустить |
+| Step | What you should have at the end | Why the step cannot be skipped |
 |---|---|---|
-| **Вопрос** | один вопрос с критерием ответа и условием остановки | без узкого вопроса нельзя понять, найден ли ответ |
-| **Место** | населённый пункт с уездом и губернией *на нужный год*; не второе место с тем же названием | место определяет архив и набор документов, фамилия — нет |
-| **Источник** | какой тип документа мог записать событие, сохранился ли он за эти годы и где лежит | «не нашёл» в несохранившемся томе — не результат поиска |
-| **Индекс** | есть ли указатель или полнотекстовый поиск; результат с номером записи и кадром | индекс быстро говорит, где смотреть, но сам не доказательство |
-| **Скан** | кадр, номер записи, дословная цитата в орфографии оригинала | индексы ошибаются в фамилиях, путают поля, принимают место за фамилию |
-| **Проверка** | второй независимый признак; разобранные противоречия | одна совпавшая фамилия — ещё не родство |
-| **Запись** | журнал находок, персоны, гипотеза, журнал поисков — включая пустой результат с охватом | иначе через месяц тот же поиск повторят |
+| **Question** | one question with an answer criterion and a stopping condition | without a narrow question you cannot tell whether the answer has been found |
+| **Place** | a settlement with its district (*uezd*) and province (*guberniya*) *for the year in question*; not a second place with the same name | the place determines the archive and the set of documents; the surname does not |
+| **Source** | which type of document could have recorded the event, whether it survived for those years, and where it is held | "not found" in a volume that did not survive is not a search result |
+| **Index** | whether there is an index or full-text search; a result with a record number and an image/frame | an index quickly tells you where to look, but it is not proof in itself |
+| **Scan** | the frame, the record number, a word-for-word quotation in the original spelling | indexes make mistakes in surnames, mix up fields, and take a place name for a surname |
+| **Verification** | a second independent identifier; contradictions worked through | one matching surname is not yet kinship |
+| **Record** | findings log, persons file, hypothesis, search log — including an empty result with its coverage | otherwise the same search will be repeated a month later |
 
-## Как пользоваться
+## How to use it
 
-1. **Спроси или найди в файлах, что уже сделано**: вопрос, место, где искали, какие написания, индекс или скан. Если этого нет в журнале поисков, сначала восстанови и запиши. Без этого советы пойдут по кругу.
-2. **Определи развилку** по таблице ниже.
-3. **Открой нужный раздел** в `references/scenarios.md` и пройди шаги по порядку. Не перескакивай к «написать в архив» или «сдать ДНК», пока дешёвые шаги не пройдены.
-4. **Закончи записью**: что сделано, охват, результат, следующий шаг.
-5. **Отвечай коротко**: диагноз развилки одной фразой, затем 3–5 шагов на сегодня. Если шаг маршрута, на котором застряли, неясен из рассказа, спроси, а не выводи сам. Длинные справки по источникам — ссылкой на раздел, а не в ответе.
+1. **Ask, or find in the project files, what has already been done**: the question, the place, where it was searched, which spellings, index or scan. If this is not in the search log, first reconstruct it and write it down. Without it the advice goes in circles.
+2. **Identify the decision point** from the table below.
+3. **Open the matching section** of `references/scenarios.md` and go through the steps in order. Do not jump to "write to the archive" or "take a DNA test" until the cheap steps have been done.
+4. **Finish with a record**: what was done, the coverage, the result, the next step.
+5. **Keep the answer short**: a one-sentence diagnosis of the decision point, then 3–5 steps for today. If the user's account does not make clear which step of the route they are stuck at, ask rather than infer. Point to a section for long reference material instead of pasting it into the answer. Answer in the user's language.
 
-## Развилки
+## Decision points
 
-| Ситуация | Первым делом | Раздел в `references/scenarios.md` |
+| Situation | First thing to do | Section in `references/scenarios.md` |
 |---|---|---|
-| «Кажется, нашёл» | скан и дословная цитата; затем второй независимый признак | «Нашёл» |
-| «Ничего не нахожу» / человек исчез | проверить шаги «место» и «источник»; затем написания, имя, сословие и приписку, границу | «Не нашёл» |
-| Много однофамильцев | таблица кандидатов и хронология каждого, отсев по несовместимому | «Много кандидатов» |
-| Документ не читается | исходный скан вместо превью, шапка таблицы, почерк писаря в соседних записях | «Документ не читается» |
-| Индекс говорит одно, скан другое | верить скану, расхождение записать | «Индекс против документа» |
-| Всё онлайн пройдено | проверить, действительно ли всё: боковые линии, окружение, другие типы источников | «Всё онлайн пройдено» |
-| Сайт не пускает | остановиться, капчу проходит человек, темп ниже, искать копию материала в другом месте | «Сайт не пускает» |
-| Знаю только имена / только фамилию и регион / начинаю с эмигрантов | стартовые сценарии | «Старт» |
-| Агент или ИИ принёс находку | открыть кадр самому, сверить цитату буква в букву | «Нашёл» |
+| "I think I found him" | the scan and a word-for-word quotation; then a second independent identifier | "Found it" |
+| "I can't find anything" / the person has vanished | check the "place" and "source" steps; then spellings, given name, estate and registration, borders | "Not found" |
+| Many namesakes | a table of candidates and a timeline for each, elimination by incompatibility | "Many candidates" |
+| The document is illegible | the original scan instead of a preview, the table header, the clerk's handwriting in neighbouring entries | "Document is illegible" |
+| The index says one thing, the scan another | trust the scan, record the discrepancy | "Index versus document" |
+| Everything online has been checked | check whether it really has: side lines, associates, other types of source | "Everything online has been checked" |
+| The site won't let me in | stop; a human solves the CAPTCHA; slow down; look for a copy of the material elsewhere | "Site blocks access" |
+| I know only names / only a surname and a region / I start from emigrants | starting scenarios | "Starting points" |
+| An agent or an AI brought a finding | open the frame yourself, check the quotation letter by letter | "Found it" |
 
-Если не знаешь, где искать по конкретному вопросу (врач, погиб на фронте, эвакуация, надгробие, эмиграция), открой `references/question-to-source.md`.
+If you do not know where to look for a particular question (a doctor, killed at the front, evacuation, a gravestone, emigration), open `references/question-to-source.md`.
 
-## Правила, общие для всех развилок
+## Rules common to all decision points
 
-- **Каждая находка — с адресом и дословной цитатой**: архив, фонд-опись-дело-лист или сайт-плёнка-кадр, номер записи. Ключевое проверяй по увеличенному фрагменту скана.
-- **Не додумывай.** Если букву не видно, пиши «(?)». Если совпало только имя, это кандидат, а не предок.
-- **«Не нашёл» имеет силу**, только если названы: источник и его границы, перечень написаний, способ (индекс, полнотекст, полистно; точно или фонетически), смотрели индекс или сам документ. Плюс контрольная запись найдена тем же способом. И ещё вопрос: обязан ли был человек попасть в этот источник?
-- **Ноль при ошибках сайта — не ноль.** Если были капча, 403/429 или обрывы, результат недействителен.
-- **Капчи, вход в аккаунты, оплату и письма делает человек.** На защищённых сайтах держи темп: одно обращение в несколько секунд, один исполнитель на сайт.
-- **Письмо в архив** — после того, как онлайн-пути пройдены и записаны; адресное, с точным шифром; решение и отправка — за человеком. Помоги составить текст, если человек попросит, но сам не предлагай письмо вместо поиска.
-- **Онлайн-дерево — только для подтверждённого.** Гипотезы живут в файле гипотез.
+- **Every finding comes with an address and a word-for-word quotation**: archive, fond-inventory-file-folio (*fond–opis–delo–list*) or site–film–frame, record number. Check the key part against an enlarged crop of the scan.
+- **Do not fill in the blanks.** If a letter cannot be seen, write "(?)". If only the given name matched, it is a candidate, not an ancestor.
+- **"Not found" counts** only if these are stated: the source and its limits, the list of spellings, the method (index, full text, page by page; exact or phonetic), whether the index or the document itself was searched. Plus a control record found by the same method. And one more question: was the person actually obliged to appear in this source?
+- **A zero during site errors is not a zero.** If there was a CAPTCHA, a 403/429 error or dropped connections, the result is invalid.
+- **CAPTCHAs, account logins, payments and letters are done by a human.** On protected sites keep a slow pace: one request every few seconds, one worker per site.
+- **A letter to an archive** comes only after the online routes have been exhausted and logged; it is targeted, with the exact archival reference; the decision and the sending are the human's. Help draft the text if the person asks, but do not suggest a letter in place of searching.
+- **Online trees are only for confirmed facts.** Hypotheses live in the hypotheses file.
 
-См. также навыки: `verifying-genealogy-findings` (условия «доказано» и отрицательного вывода, перебор написаний), `reading-archive-scans` (нечитаемый скан), `tracing-revision-records` (идти вглубь по ревизиям), `tracing-emigrants-to-origin` (эмигрантская ветка), `orchestrating-genealogy-agents` (раздать чтение агентам).
+See also these skills: `verifying-genealogy-findings` (conditions for "proven" and for a negative conclusion, trying spellings), `reading-archive-scans` (an unreadable scan), `tracing-revision-records` (going deeper through the revision lists), `tracing-emigrants-to-origin` (the emigrant branch), `orchestrating-genealogy-agents` (handing reading to agents).

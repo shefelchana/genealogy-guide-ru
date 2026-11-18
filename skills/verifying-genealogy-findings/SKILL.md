@@ -1,112 +1,113 @@
 ---
 name: verifying-genealogy-findings
-description: Establishes whether a genealogical finding actually holds — ranks sources by evidential weight, states the four conditions a negative conclusion must meet, searches surnames across period spellings and alphabets, queries free full-text corpora, and briefs a research agent so its report is verifiable rather than merely plausible. Use when confirming or rejecting a family-history claim, deciding whether "not found" means anything, searching a surname that may be spelled many ways, or coordinating agents on archival research.
+description: >-
+  Establishes whether a genealogical finding actually holds — ranks sources by evidential weight, states the four conditions a negative conclusion must meet, searches surnames across period spellings and alphabets, queries free full-text corpora, keeps a register of family legends broken into separate claims, and briefs a research agent so its report is verifiable rather than merely plausible. Use when the user asks "is this finding reliable?", "can I trust this record or family tree?", "does 'not found' mean anything?", "how do I search a surname spelled many ways?", or when confirming or rejecting a family-history claim, or coordinating agents on archival research. Also triggers on Russian requests: «проверь находку», «доказано или нет», «что значит „не найдено“».
 ---
 
-# Доказательность в генеалогии
+# Standard of proof in genealogy
 
-## Скрипт
+## The script
 
-**`scripts/fulltext.py`** — полнотекстовый поиск по `genealogyindexer.org` (2,24 млн страниц справочников, адрес-календарей, книг памяти, именных списков потерь Первой мировой; логина нет). Запускать, не читать.
+**`scripts/fulltext.py`** — full-text search on `genealogyindexer.org` (2.24 million pages of directories, address calendars, memorial books, name lists of First World War casualties; no login). Run it, do not read it.
 ```bash
 python3 scripts/fulltext.py Фейгель --scope podolia
 python3 scripts/fulltext.py Розенберг --scope any --match ocr --collection military
 ```
-Регионы: `podolia kiev volhynia ukraine galicia russia empire any`. Режимы: `regular`, `dm` (Daitch-Mokotoff), `ocr`.
-Строка запроса уходит на сайт как есть, поэтому работает его синтаксис (по руководству сайта): `'"фамилия имя"~4'` — оба слова в пределах четырёх слов в любом порядке; `'фамилия {1890-1917}'` — фильтр лет; `{d82,y17}` — коды собраний; `*` — только в режиме `regular`. Сайт пополняется: отрицательный поиск повторять после новых поступлений.
+Regions: `podolia kiev volhynia ukraine galicia russia empire any`. Modes: `regular`, `dm` (Daitch-Mokotoff), `ocr`.
+The query string goes to the site as is, so the site's own syntax works (per the site's manual): `'"surname name"~4'` — both words within four words of each other in any order; `'surname {1890-1917}'` — year filter; `{d82,y17}` — collection codes; `*` — only in `regular` mode. The site keeps growing: repeat a negative search after new additions. (Search in Cyrillic: Russian directories are recognized in Cyrillic, so the Russian spelling is what is searched.)
 
-## Иерархия источников
+## Hierarchy of sources
 
-Первичный документ (скан дела или подлинник того времени у родных, в том числе его фото) → печатный справочник эпохи → поздние семейные записи и рассказ → указатель, индекс, база → чужое дерево.
-**Архив и документ всегда выше записи в дереве и выше семейной памяти.** Чужое дерево — не источник, а чужая гипотеза.
-⚠️ Иерархия ранжирует носители, а решает конкретный документ и конкретное поле. Подлинник у родных (свидетельство ЗАГС, паспорт, справка) не ниже скана и выше справочника. Поля внутри документа неравны: возраст, названный самим человеком, слабее даты из метрики, хотя оба стоят в первичном документе.
-⚠️ **Энциклопедии, Википедия и опубликованные биографии стоят ниже метрики и переписи**, особенно в графе «место рождения»: там часто место приписки выдано за место рождения, а число детей занижено (умерших младенцев авторы не знали). Статью в дореволюционном словаре мог оплатить сам герой. Надя Липес, сверявшая такие биографии с метриками и переписями, считает ошибки в местах рождения очень частыми — это мнение практика, а не статистика.
-⚠️ **Ответ ИИ-чата без ссылки на конкретную запись — не источник**, даже если звучит как «зафиксировано в документах». Сначала найти запись, потом верить.
+Primary document (scan of an archival file, or an original of the time held by relatives, including a photo of it) → printed directory of the period → later family notes and oral account → pointer, index, database → someone else's tree.
+**An archive and a document are always above an entry in a tree and above family memory.** Someone else's tree is not a source but someone else's hypothesis.
+⚠️ The hierarchy ranks carriers, but what decides is the specific document and the specific field. An original held by relatives (ZAGS certificate — Soviet civil registry —, passport, certificate) is not lower than a scan and is higher than a directory. Fields within a document are not equal: an age stated by the person himself is weaker than a date from a metrical record, though both stand in a primary document.
+⚠️ **Encyclopedias, Wikipedia and published biographies rank below a metrical record and a census**, especially in the "place of birth" field: they often give the place of registration (*pripiska*) as the place of birth, and understate the number of children (the authors did not know of infants who died). An entry in a pre-revolutionary dictionary may have been paid for by the subject himself. Nadya Lipes, who compared such biographies with metrical records and censuses, considers errors in places of birth very common — this is a practitioner's opinion, not a statistic.
+⚠️ **An AI chat's answer without a reference to a specific record is not a source**, even if it sounds like "recorded in the documents". First find the record, then believe it.
 
-## Арифметика возраста
+## Age arithmetic
 
-Возраст в документах менялся не только случайно — у этого были причины, и их можно проверить расчётом.
-· **Призыв.** По уставу 1874 года к жребию призывали тех, кому к 1 января года набора исполнилось 20 лет; служили по жребию не все, срок действительной службы — 6 лет (позже сроки сокращали). Если известно, что мужчина женился после службы, брак не раньше примерно 26 лет — этим проверяется год рождения, когда метрик за нужный год нет. Сыновей из-за призыва и старили, и омолаживали.
-· **Брак.** Невесту моложе положенного возраста не венчали, поэтому ей возраст **завышали**.
-· **Анкеты НКВД и другие советские анкеты:** возраст детей, названный родными, бывает неверен.
-· **Перепись против легенды.** Семейная дата «старший сын 1895 года» опровергается переписью 1897 года, где матери 18 лет и она не замужем. Сверяй легенду с возрастом родителей в ближайшей переписи.
+Ages in documents shifted not only at random — there were reasons, and they can be tested by calculation.
+· **Conscription.** Under the 1874 statute, those who had turned 20 by 1 January of the draft year were called to the lottery; not all served by lot, and the term of active service was 6 years (later shortened). If it is known that a man married after service, the marriage is not earlier than about age 26 — this tests the birth year when there are no metrical records for the year you need. Sons were both aged and made younger because of the draft.
+· **Marriage.** A bride younger than the permitted age was not married, so her age was **inflated**.
+· **NKVD questionnaires and other Soviet questionnaires:** the ages of children given by relatives are sometimes wrong.
+· **Census against legend.** A family date "eldest son born 1895" is refuted by the 1897 census, in which the mother is 18 and unmarried. Check the legend against the parents' ages in the nearest census.
 
-## Отрицательный вывод
+## Negative conclusion
 
-⚠️ **Указатель — не доказательство.** Проверенный случай: человек есть в списке на кадре 502 и отсутствует в алфавитном указателе своего же раздела. По опыту JRI-Poland годовые указатели к метрикам верны примерно на 90 %: часть записей в них не попала, часть фамилий прочитана неверно.
+⚠️ **An index is not proof.** A verified case: a person is on the list at frame 502 and is absent from the alphabetical index of his own section. By JRI-Poland's experience, the annual indexes to metrical records are correct about 90% of the time: some records did not make it into them, some surnames were misread.
 
-**«Не нашёл» имеет силу, только если названы четыре вещи:**
-1. источник и его точные границы — дело, страницы, что именно просмотрено;
-2. перечень написаний, по которым искали;
-3. режим поиска — точный, фонетический, полистный;
-4. смотрели указатель или само дело.
+**"Not found" has force only if four things are stated:**
+1. the source and its exact limits — the file, the pages, what exactly was viewed;
+2. the list of spellings searched;
+3. the search mode — exact, phonetic, page by page;
+4. whether the index or the file itself was viewed.
 
-Пустой результат — полноценный результат, если охват назван: он экономит следующему заходу недели. Но «искал и не нашёл» — отчёт о работе, а не свидетельство: доказывает лишь отсутствие внутри документа, где запись обязана была быть.
+An empty result is a full result if the coverage is named: it saves the next attempt weeks. But "searched and did not find" is a report on work done, not evidence: it proves only absence inside a document where the record was bound to be.
 
-⚠️ Отрицательный результат часто **содержателен**, если понять устройство источника. Пример: фамилии нет в списке сельских поселенцев — потому что семья была городской и попасть туда не могла. Это не пробел, а подтверждение.
+⚠️ A negative result is often **meaningful** if you understand how the source is built. Example: a surname is not in the list of rural settlers — because the family was urban and could not have got there. That is not a gap but a confirmation.
 
-Ещё три проверки перед словами «книги нет» или «записи нет»:
-· **Книги местечка бывают подшиты в книги соседей.** JRI-Poland нашёл пропавшие метрики Говорова внутри книг Остроленки (статья С. Даймонда, Avotaynu, 2018) [по выдаче], а рождения Нового Тарга 1885 года — в книгах Кросценко [не проверено]. Прежде чем писать «метрик местечка X за годы Y нет», просмотреть книги соседних раввинатов и уездного города.
-· **Пополняемая база отвечает только на дату поиска.** JewishGen Ukraine Research Division выкладывает новые записи каждый месяц, Genealogy Indexer добавляет собрания. Отрицательный результат по такой базе записывать с датой (месяцем) поиска и повторять после выгрузок по нужному месту.
-· **Перепись 1897 года поимённо почти не сохранилась**: местные экземпляры полагалось уничтожить, уцелели единичные уезды; по Бессарабии именных листов в Национальном архиве Молдовы нет (доклад А. Частиной, IAJGS 2012). Отсутствие в переписи 1897 года почти ничего не значит.
+Three more checks before saying "there is no book" or "there is no record":
+· **A shtetl's books are sometimes bound into the books of neighbours.** JRI-Poland found the "missing" metrical records of Gowarczów inside the books of Ostrołęka (article by S. Diamond, Avotaynu, 2018) [from the search results], and the 1885 births of Nowy Targ inside the books of Krościenko [not verified]. Before writing "there are no metrical records of shtetl X for years Y", look through the books of neighbouring rabbinates and of the district town.
+· **A database that keeps growing answers only for the date of the search.** The JewishGen Ukraine Research Division posts new records every month, and Genealogy Indexer adds collections. Record a negative result from such a database with the date (month) of the search and repeat it after uploads for the place you need.
+· **The 1897 census survives by name almost nowhere**: the local copies were supposed to be destroyed, and only isolated uezds (districts) survived; for Bessarabia there are no name sheets in the National Archives of Moldova (paper by A. Chastina, IAJGS 2012). Absence from the 1897 census means almost nothing.
 
-## Написания фамилий
+## Spellings of surnames
 
-· **Идиш → русский**: латинская `s` обслуживает самех, син и сов и входит в `sh` и `ts`. Фейгель / Фейгаль / Файгель / Фейгелль / Фейгейль — закономерное множество, а не варианты.
-· **Фонетика**: Beider-Morse для оригинальных европейских написаний; Daitch-Mokotoff для англизированных (обрезает после шести согласных, все гласные считает одинаковыми, потому мусорит).
-· **Дореволюционный OCR часто съедает первую букву** — искать и без неё: «ейгель», «озенберг», «евин», «аплан».
-· Проверять окончание: «-ель» против «-еръ», «-манъ», «-бергъ», «-штейнъ» — разные фамилии, на плохом скане путаются. Отведённых кандидатов **выписывать явно**, чтобы следующий заход не тратил на них время.
-· Искать на всех языках места: русский, украинский, польский, немецкий, иврит, английский.
-· **Перебирать гласную корня**: Плет → Плит → Плат → Плот. Если семья «исчезла» из уезда, проверить **списки избирателей казённого раввина** и приговоры о его выборах: Липес нашла там десяток носителей фамилии в иной огласовке, которых не было в базе уезда.
-· **Расхождение в одну букву внутри одного города бывает намеренным**: родственники меняли букву, чтобы отделиться от другой семьи (вида «-ский» / «-цкий»). И наоборот: семья могла слиться с местной формой фамилии и стать «однофамильцем» чужих.
+· **Yiddish → Russian**: the Latin `s` serves samekh, sin and sov (Ashkenazi pronunciation of tav) and is part of `sh` and `ts`. Фейгель / Фейгаль / Файгель / Фейгелль / Фейгейль [Feigel / Feigal / Faigel / Feigell / Feigeil] — a regular family of forms, not variants.
+· **Phonetics**: Beider-Morse for original European spellings; Daitch-Mokotoff for anglicized ones (it truncates after six consonants and treats all vowels as the same, so it produces junk).
+· **Pre-revolutionary OCR often swallows the first letter** — search without it too: «ейгель», «озенберг», «евин», «аплан» [i.e. (F)eigel, (R)ozenberg, (L)evin, (K)aplan].
+· Check the ending: «-ель» versus «-еръ», «-манъ», «-бергъ», «-штейнъ» — different surnames, confused on a poor scan. **Write out explicitly** the candidates you have ruled out, so the next attempt does not waste time on them.
+· Search in all the languages of the place: Russian, Ukrainian, Polish, German, Hebrew, English.
+· **Run through the vowel of the root**: Плет → Плит → Плат → Плот [Plet → Plit → Plat → Plot]. If a family "disappeared" from a uezd, check the **electors' lists for the crown rabbi** (*kazyonny ravvin*) and the resolutions on his election: Lipes found there a dozen bearers of the surname in a different vocalization, who were not in the uezd's database.
+· **A one-letter difference within one town is sometimes deliberate**: relatives changed a letter to separate themselves from another family (of the type «-ский» / «-цкий» [-sky / -tsky]). And conversely: a family could merge with the local form of a surname and become a "namesake" of strangers.
 
-### Когда однофамилец — родня (по Н. Липес)
-· Фамилия-**топоним** или фамилия-**профессия** — по умолчанию **не** родство. Топонимическую фамилию обычно давали при уходе **из** места, поэтому носитель жил не там (исключения бывают).
-· Одна местность, фамилия не топоним и не профессия, тем более редкая — вероятно, родня; это гипотеза, её подтверждают документом.
-· 🔑 **Уникальная ошибка писаря — доказательство общего происхождения**: два независимых переписчика одну и ту же ошибку сделать не могли. Пример Липес: Ясногородский → Зиногород → Зиниград (буква «Я» прочитана как «З», окончание ушло на другую строку).
-· **Ареал фамилии** («родина фамилии») определять по **самым ранним ревизиям (1805–1816)**, а не по географии словаря Бейдера: она опирается на источники начала XX века, когда семьи уже разъехались.
-· Правило «одна фамилия + один регион = одна семья» (так его формулирует институт «Ам а-Зикарон») сильнее для Галиции и Царства Польского, где по правилам 1821 года и галицийским разным семьям одной местности предписывали разные фамилии; в черте оседлости оно слабее, для топонимов и профессий не работает.
-🔑 При работе с деревьями ДНК-совпаденцев **совпадение по местечку ценнее совпадения по фамилии**: фамилии у евреев новые (закон 1804 г.), местечко держится поколениями. Пример из одного поиска: эмигрант Moische Feigel в Филадельфии стал Max Fairman — по фамилии его потомков не найти.
+### When a namesake is a relative (after N. Lipes)
+· A **toponymic** surname or an **occupational** surname — by default **not** kinship. A toponymic surname was usually given on leaving **from** a place, so the bearer lived elsewhere (exceptions occur).
+· One locality, a surname that is neither a toponym nor an occupation, and especially a rare one — probably relatives; this is a hypothesis, to be confirmed by a document.
+· 🔑 **A unique scribe's error is evidence of common origin**: two independent enumerators could not have made the same error. Lipes's example: Ясногородский → Зиногород → Зиниград [Yasnogorodsky → Zinogorod → Zinigrad] (the letter «Я» read as «З», the ending moved to another line).
+· **The range of a surname** ("home of the surname") should be determined from the **earliest revisions (1805–1816)**, not from the geography of Beider's dictionary: it rests on sources of the early 20th century, when families had already dispersed.
+· The rule "one surname + one region = one family" (as the Am HaZikaron institute puts it) is stronger for Galicia and the Kingdom of Poland, where under the 1821 rules and the Galician rules different families of one locality were assigned different surnames; within the Pale of Settlement it is weaker, and for toponyms and occupations it does not work.
+🔑 When working with the trees of DNA matches, **a match by shtetl is worth more than a match by surname**: Jewish surnames are new (law of 1804), whereas the shtetl is held for generations. An example from one search: the emigrant Moische Feigel in Philadelphia became Max Fairman — his descendants cannot be found by surname.
 
-## Ресурсы
+## Resources
 
-Wikimedia Commons (целые архивные дела ДАХмО, ДАКО, ДАВіО), опись оцифровок на `uk.wikisource.org` в пространстве `Архів:` (структура `Архів:<АРХИВ>/<фонд>/<опись>`, выгружается через `?action=raw`), archive.org, НЭБ, Vivaldi РНБ, HathiTrust, JewishGen, Gesher Galicia, JRI-Poland, Яд ва-Шем.
-⚠️ Сайты архивов бывают доступны только по **http** (например `rgada.info`) — при молчании по https пробовать http.
-⚠️ **Ноль по полнотекстовому поиску ничего не доказывает**: проверено — известную строку в адрес-календаре genealogyindexer не индексирует, а фильтры по губерниям набиты советскими телефонными книгами.
+Wikimedia Commons (whole archival files of DAKhmO — State Archive of Khmelnytskyi Oblast —, DAKO — State Archive of Kyiv Oblast —, DAViO — State Archive of Vinnytsia Oblast), the list of digitized holdings on `uk.wikisource.org` in the `Архів:` namespace (structure `Архів:<ARCHIVE>/<fond>/<inventory>`, can be pulled via `?action=raw`), archive.org, NEB (National Electronic Library, Russia), Vivaldi of the Russian National Library, HathiTrust, JewishGen, Gesher Galicia, JRI-Poland, Yad Vashem.
+⚠️ Archive sites are sometimes available only over **http** (for example `rgada.info`) — if https is silent, try http.
+⚠️ **A zero from full-text search proves nothing**: verified — a known line in an address calendar is not indexed by genealogyindexer, and the filters by guberniya are stuffed with Soviet telephone directories.
 
-## Семейные легенды: реестр и разбор на части
-- Заведи файл легенд: одна строка — одно утверждение, статус (🟢 документ · 🟡 частично · ⚪ не проверено · 🔴 опровергнуто · ❓ противоречие) и чем проверено. Новая легенда сначала получает ⚪.
-- Разбирай легенду на части: «родилась в деревне N, из немцев, мать — знахарка» — три утверждения с разными статусами.
-- «Немцы» в старой речи — иноземцы вообще; проверяй и эту версию (местные неславянские группы, выходцы из остзейских губерний).
-- Сведения из чужих деревьев, подсказок сервисов и ДНК-процентов — гипотезы; в дерево — только после документа.
+## Family legends: a register and breaking them into parts
+- Keep a legends file: one line per claim, a status (🟢 document · 🟡 partly · ⚪ unchecked · 🔴 refuted · ❓ contradiction) and what it was checked against. A new legend starts at ⚪.
+- Break a legend into parts: "born in village N, came from the Germans, her mother was a healer" is three claims with different statuses.
+- In older Russian usage *nemtsy* ("Germans") meant foreigners in general; test that reading too (local non-Slavic groups, people from the Baltic provinces).
+- Information from other people's trees, service hints and DNA percentages are hypotheses; into the tree only after a document.
 
-## Как ставить задачу агенту
+## How to brief an agent
 
-Отчёт должен быть **проверяемым, а не правдоподобным**:
+The report must be **verifiable, not plausible**:
 
-1. **«Пиши только то, что видишь.»** Не достраивать, **не переносить в отчёт имена из самого задания**, если агент их не увидел. Это главная причина выдуманных находок: агент воспроизводит ожидаемое.
-2. **На каждое попадание — адрес и цитата:** дело, страница, номер двора, как именно написано имя, все возрасты и пометки дословно.
-3. **Неуверенное чтение помечать «неуверенно»** и объяснять, что мешает.
-4. **Журнал просмотренных страниц** с диапазонами номеров.
-5. **Честное «не найдено» объявить нормальным результатом** и явно запретить выдумывать.
-6. **Отвести заранее известных двойников** — перечислить уже проверенные и отброшенные фамилии.
-7. **Развести файлы**: каждому агенту свой подкаталог. Иначе перезаписывают скрипты друг друга посреди работы.
-8. **Просить поправлять задание.** Описание устройства дела в брифе может быть неверным; агент, который это проверил и сообщил, спасает работу. Проверенный случай: бриф утверждал «нечётные страницы — мужской пол», а на деле каждая страница оказалась целым разворотом, и просмотр «через одну» потерял бы половину дворов.
+1. **"Write only what you see."** Do not fill in, **do not carry names from the task itself into the report** if the agent did not see them. This is the main cause of invented finds: the agent reproduces what is expected.
+2. **For every hit, an address and a quotation:** file, page, household number, exactly how the name is written, all ages and notes verbatim.
+3. **Mark an uncertain reading "uncertain"** and explain what is in the way.
+4. **A log of pages viewed** with ranges of numbers.
+5. **Declare an honest "not found" a normal result** and explicitly forbid inventing.
+6. **Rule out known lookalikes in advance** — list the surnames already checked and rejected.
+7. **Separate the files**: each agent gets its own subdirectory. Otherwise they overwrite each other's scripts in the middle of the work.
+8. **Ask the agent to correct the brief.** A description of how the file is built, given in the brief, may be wrong; an agent who checked this and reported saves the work. A verified case: the brief claimed "odd pages are the male sex", but each page turned out to be a whole spread, and viewing "every other page" would have lost half the households.
 
-⚠️ **Проверять не только результат, но и источник.** Был случай: агент сослался на «уже расшифрованную запись», которой не существовало, — и при этом содержание оказалось верным. Сноска выдумана, факт настоящий. Такие места помечать «непроверено», а не удалять, и перепроверять по оригиналу.
+⚠️ **Check not only the result but the source.** There was a case where an agent cited an "already deciphered record" that did not exist — and the content turned out to be correct. The footnote was invented, the fact genuine. Mark such places "unverified" rather than deleting them, and re-check against the original.
 
-## 🔑 Проверка чтения фамилии по индексу Морзе—Бейдера
+## 🔑 Checking a surname reading against the Morse–Beider index
 
-`https://stevemorse.org/phonetics/beider.php` — официальный индекс к словарям Александра Бейдера, пять книг: **djsre** (Российская империя, 2008) · **djsg** (Галиция, 2004) · **djskp** (Царство Польское, 1996) · **djsp** (Прага) · **dgjs** (немецкие, Menk 2005).
+`https://stevemorse.org/phonetics/beider.php` — the official index to Alexander Beider's dictionaries, five books: **djsre** (Russian Empire, 2008) · **djsg** (Galicia, 2004) · **djskp** (Kingdom of Poland, 1996) · **djsp** (Prague) · **dgjs** (German, Menk 2005).
 
-✅ Смотреть **только колонку «BMPM exact»** — это заголовочные слова словаря. «approx» и «Daitch-Mokotoff soundex» — шум.
-⚠️ Индекс даёт **наличие статьи, но не её текст**: ни этимологии, ни списка уездов.
+✅ Look **only at the "BMPM exact" column** — these are the headwords of the dictionary. "approx" and "Daitch-Mokotoff soundex" are noise.
+⚠️ The index gives **the existence of an entry, but not its text**: no etymology and no list of uezds.
 
-**Как применять к спорному чтению:**
-· фамилия в индексе **есть** → чтение правдоподобно;
-· фамилия **отсутствует во всех пяти книгах** → 🔴 **чтение почти наверняка неверно**;
-· тогда прогнать по индексу **близкие по написанию варианты** и вернуть чтецу список реально существующих — пусть сверит на скане.
-Проверено: «Штейнтманъ» и «Кравнецъ» дали ноль совпадений и оказались ошибками чтения; «Фейгель», «Гроссъ», «Кройзманъ» нашлись сразу.
+**How to apply it to a disputed reading:**
+· the surname **is in** the index → the reading is plausible;
+· the surname **is absent from all five books** → 🔴 **the reading is almost certainly wrong**;
+· then run **closely spelled variants** through the index and return to the reader a list of those that really exist — let him check on the scan.
+Verified: «Штейнтманъ» and «Кравнецъ» [Steintman, Kravnets] gave zero matches and turned out to be misreadings; «Фейгель», «Гроссъ», «Кройзманъ» [Feigel, Gross, Kroizman] were found at once.
 
-⚠️ **Соседство фамилий в одном местечке ничего не доказывает.** «Фейгманъ» рядом с «Фейгелемъ» — не вариант одной фамилии, а **отдельная фамилия, образованная иначе**, со своим заголовком в словаре. Проверять по индексу, а не по сходству на глаз.
-⭐ За точной этимологией с привязкой к уездам — тема `forum.j-roots.info/viewtopic.php?t=92`, где **Бейдер отвечает лично** (нужен аккаунт пользователя).
+⚠️ **Neighbouring surnames in one shtetl prove nothing.** «Фейгманъ» [Feigman] next to «Фейгелемъ» [Feigel] is not a variant of one surname but **a separate surname formed differently**, with its own headword in the dictionary. Check by the index, not by resemblance to the eye.
+⭐ For exact etymology tied to uezds — the topic `forum.j-roots.info/viewtopic.php?t=92`, where **Beider answers personally** (a user account is needed).

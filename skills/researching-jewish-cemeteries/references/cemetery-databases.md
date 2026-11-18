@@ -1,101 +1,101 @@
-# Базы кладбищ и захоронений: что проверено и как искать
+# Cemetery and burial databases: what was checked and how to search
 
-Пометки: **[открыто]** — страница прочитана при составлении (октябрь 2026); **[по выдаче]** — только сниппет поисковой выдачи; **[не открылось]** — сайт закрыт от автоматического доступа или не ответил из нашей сети. Вход, регистрацию, капчу и любые запросы проходит человек. Общий обзор — `catalog/кладбища.md` в руководстве.
+Markers: **[opened]** means the page was read when this was compiled (October 2026); **[from search results]** means only a search-result snippet was seen; **[did not open]** means the site is closed to automated access or did not respond from our network. A human handles logins, registration, CAPTCHAs and any requests. For a general overview see `catalog/кладбища.md` in the guide.
 
-## Содержание
-1. Есть ли кладбище и сохранилось ли оно
-2. Поимённые базы: бывший СССР
-3. Польша
-4. Израиль
-5. США и мир
-6. Записи похоронных братств
-7. Даты: конвертер
+## Contents
+1. Does a cemetery exist and does it survive
+2. Name databases: the former USSR
+3. Poland
+4. Israel
+5. USA and the rest of the world
+6. Burial-society records
+7. Dates: the converter
 
 ---
 
-## 1. Есть ли кладбище и сохранилось ли оно
+## 1. Does a cemetery exist and does it survive
 
-### JewishGen Cemetery Discovery Project (cdp.jewishgen.org) — [открыто]
-- Бывший **IAJGS International Jewish Cemetery Project**: старые адреса iajgscemetery.org и iajgs.org/cemetery перенаправляют сюда.
-- Цель — каталог мест захоронений, а не поимённый поиск; для людей отсылает к JOWBR.
-- Как искать: регион → страна → населённый пункт. В Восточной Европе, например: Украина — 2563 места, Беларусь — 385, Польша — 1578, Молдова — 47, Россия — 49.
-- У пункта — история общины, расположение, иногда контакты, состояние, фото.
+### JewishGen Cemetery Discovery Project (cdp.jewishgen.org) [opened]
+- The former **IAJGS International Jewish Cemetery Project**: the old addresses iajgscemetery.org and iajgs.org/cemetery redirect here.
+- It is a catalogue of burial places, not a name search; for individuals it points to JOWBR.
+- How to search: region → country → locality. For Eastern Europe, for example: Ukraine has 2,563 places, Belarus 385, Poland 1,578, Moldova 47, Russia 49.
+- Each locality has the history of the community, location, sometimes contacts, condition and photos.
 
-### ESJF — European Jewish Cemeteries Initiative (esjf-cemeteries.org) — [открыто]
-- Съёмка (в том числе дронами): на главной — **4140 обследованных кладбищ, 10 стран** [открыто 08.10.2026]. В базе съёмок есть Польша, Украина, Словакия, Венгрия, Литва, Хорватия, Сербия, Грузия, Молдова, Греция, **Болгария** [проверено поиском по базе, 08.10.2026]. **Беларуси и Латвии в базе не нашлось** (Пинск, Минск, Брест, Даугавпилс — 0). Планы на Латвию, Эстонию и бывшую Югославию в 2026–2027 гг. — [не проверено].
-- **Поимённого указателя нет.** У каждого кладбища страница: регион, GPS, адрес, снесено ли, ограда, **число камней, дата самого старого и самого нового камня**, история общины, иногда 3D-модель.
-- Адрес страницы: `esjf-cemeteries.org/survey/<город>-jewish-cemetery/` (латиницей по-украински: chudniv, bratslav…). Карта с фильтром по стране и области — `/surveys-map/` (подгружается скриптом).
-- Статусы: снесено и застроено; снесено, не застроено; не огорожено; еврейский участок; огорожено.
+### ESJF: European Jewish Cemeteries Initiative (esjf-cemeteries.org) [opened]
+- Surveys (including by drone): the home page shows **4,140 surveyed cemeteries in 10 countries** [opened 08.10.2026]. The survey database includes Poland, Ukraine, Slovakia, Hungary, Lithuania, Croatia, Serbia, Georgia, Moldova, Greece and **Bulgaria** [checked by searching the database, 08.10.2026]. **Belarus and Latvia were not found in the database** (Pinsk, Minsk, Brest, Daugavpils: 0 results). Plans for Latvia, Estonia and the former Yugoslavia in 2026-2027 are [not verified].
+- **There is no name index.** Each cemetery has a page: region, GPS, address, whether it was demolished, fence, **number of stones, date of the oldest and the newest stone**, history of the community, sometimes a 3D model.
+- Page address: `esjf-cemeteries.org/survey/<town>-jewish-cemetery/` (the town in Latin letters, Ukrainian spelling: chudniv, bratslav...). The map with a filter by country and region is at `/surveys-map/` (loaded by script).
+- Statuses: demolished and built over; demolished, not built over; unfenced; Jewish section; fenced.
 
-### Lo Tishkach (lo-tishkach.org) — [открыто: главная и страница базы]
-- Проект Конференции европейских раввинов и Claims Conference: на странице базы — **11 061 кладбище и братская могила** Европы.
-- Сама база встроена окном с admin.lo-tishkach.org — **не открылось** (ошибка 503). Пробуй позже; поимённых данных там нет, только места.
+### Lo Tishkach (lo-tishkach.org) [opened: home page and the database page]
+- A project of the Conference of European Rabbis and the Claims Conference: the database page lists **11,061 cemeteries and mass graves** in Europe.
+- The database itself is embedded as a window from admin.lo-tishkach.org and **did not open** (error 503). Try again later; it has no data on individuals, only places.
 
-## 2. Поимённые базы: бывший СССР
+## 2. Name databases: the former USSR
 
-### «Мицват Эмет» (mitzvatemet.com) — [не открылось: Cloudflare, 403]
-- По выдаче: фотокаталог более 90–100 тыс. захоронений — Беларусь, Украина, Россия, Казахстан, Узбекистан, Молдова, Литва; есть Киев (Берковцы, Куренёвка), Львов, Одесса (Третье еврейское), Петербург (Преображенское) [по выдаче].
-- Опыт проекта: введи **начало** фамилии, **выбери подсказку** мышью, нажми «Поиск»; подсказка показывает, есть ли фамилия в каталоге вообще. По 20 результатов на странице. После ~5 поисков подряд срабатывает reCAPTCHA — форма молча перестаёт отправляться. Не обходи; повтори позже. На странице сам открывается чат — не пиши в него.
+### Mitzvat Emet (mitzvatemet.com) [did not open: Cloudflare, 403]
+- According to search results: a photo catalogue of more than 90-100 thousand burials in Belarus, Ukraine, Russia, Kazakhstan, Uzbekistan, Moldova and Lithuania; it includes Kyiv (Berkovtsy, Kurenivka), Lviv, Odesa (Third Jewish Cemetery) and Petersburg (Preobrazhenskoe) [from search results].
+- Experience of the project: enter the **beginning** of the surname, **choose the suggestion** with the mouse, press «Поиск» ("Search"); the suggestion shows whether the surname is in the catalogue at all. 20 results per page. After about 5 searches in a row a reCAPTCHA appears and the form silently stops submitting. Do not bypass it; try again later. A chat window opens on the page by itself: do not write in it.
 
-### Толдот, база кладбищ (toldot.com/life/cemetery) — [открыто]
-- Более 100 000 захоронений, **49 кладбищ** России, Украины, Беларуси, Узбекистана (Москва: Востряковское, Хованское, Малаховское, Салтыковское; Петербург; Казань; Киев — Байковое…).
-- Поля: фамилия (обязательно), имя, страна / город / кладбище. Без регистрации. Фамилия ищется **подстрокой**. Сайт сам предупреждает, что многие камни в плохом состоянии, — пробуй разные написания.
+### Toldot, cemetery database (toldot.com/life/cemetery) [opened]
+- More than 100,000 burials in **49 cemeteries** of Russia, Ukraine, Belarus and Uzbekistan (Moscow: Vostryakovo, Khovanskoe, Malakhovka, Saltykovka; Petersburg; Kazan; Kyiv: Baikove...).
+- Fields: surname (required), given name, country / town / cemetery. No registration. The surname is searched as a **substring**. The site itself warns that many stones are in poor condition, so try different spellings.
 
-### Москва: реестр хевра кадиша (hevkad.com/burial) — [открыто]
-- Востряковское иудейское, Востряковское центральное, Малаховское, Салтыковское.
-- Поиск по номеру, ФИО, датам рождения и смерти, ряду и месту. Без регистрации. Фото в реестре нет; данные неполные.
+### Moscow: hevra kadisha register (hevkad.com/burial) [opened]
+- Vostryakovo Jewish, Vostryakovo Central, Malakhovka, Saltykovka.
+- Search by number, full name, dates of birth and death, row and plot. No registration. The register has no photos; the data are incomplete.
 
-### Петербург: Преображенское еврейское кладбище — [по выдаче]
-- Захоронения 1875–1968 гг., около 80 тыс., по выдаче каталогизировано около 97 %; поиск по фамилии, инициалам, годам; фото и план участка.
-- Сайты: jekl.spb.ru, gravlov.com, aguterbeter.com — **не открылись** из нашей сети (вероятно, блокировка российских сайтов при VPN).
+### Petersburg: Preobrazhenskoe Jewish Cemetery [from search results]
+- Burials of 1875-1968, about 80 thousand; according to search results about 97% are catalogued; search by surname, initials, years; photos and a plan of the plot.
+- Sites: jekl.spb.ru, gravlov.com, aguterbeter.com **did not open** from our network (probably Russian sites being blocked while a VPN is on).
 
-### Киев, Одесса, Львов — [по выдаче]
-- Киев: Лукьяновское еврейское кладбище закрыто в 1962 г., разорено; часть захоронений после закрытия перенесли на Берковецкое, где в 1960-х появился еврейский участок.
-- Одесса: Первое (Старое) еврейское кладбище полностью уничтожено, сведения — только архивные; Третье еврейское — около 50 тыс. захоронений, фотокаталог у «Мицват Эмет».
-- Фото этих кладбищ — «Мицват Эмет»; общий поиск захоронений по Украине — pomnim.online (не открылся).
+### Kyiv, Odesa, Lviv [from search results]
+- Kyiv: the Lukyanivka Jewish cemetery was closed in 1962 and devastated; part of the burials were moved after closure to Berkovtsy, where a Jewish section appeared in the 1960s.
+- Odesa: the First (Old) Jewish Cemetery was completely destroyed, so information is archival only; the Third Jewish Cemetery has about 50 thousand burials, with a photo catalogue at Mitzvat Emet.
+- Photos of these cemeteries: Mitzvat Emet; a general search of burials in Ukraine: pomnim.online (did not open).
 
-### JOWBR (jewishgen.org/databases/cemetery) — [открыто]
-- Более 7 млн записей и 908 000 фото, около 9500 кладбищ в 143 странах.
-- Поиск по фамилии, имени, городу, любому полю; виды поиска — Phonetically Like, Sounds Like, Starts with, is Exactly (с синонимами городов и имён: Lodz = Litzmannstadt), три уровня Fuzzy; до четырёх условий; запятая — ИЛИ, пробел — И; фильтр по региону.
-- По опыту проекта (`catalog/кладбища.md`) результаты требуют бесплатного входа в JewishGen — входит человек. Подробности — навык `searching-jewishgen`.
+### JOWBR (jewishgen.org/databases/cemetery) [opened]
+- More than 7 million records and 908,000 photos, about 9,500 cemeteries in 143 countries.
+- Search by surname, given name, town, any field; search types: Phonetically Like, Sounds Like, Starts with, is Exactly (with synonyms for towns and names: Lodz = Litzmannstadt), three levels of Fuzzy; up to four conditions; a comma means OR, a space means AND; region filter.
+- According to the project's experience (`catalog/кладбища.md`), results require a free JewishGen login, which a human performs. Details are in the skill `searching-jewishgen`.
 
-### Bessarabia SIG — проект кладбищ
-- Около 75 тыс. захоронений Бессарабии (по каталогу руководства, `catalog/кладбища.md`).
-- Кишинёв: 18 751 запись и 14 150 снимков в JOWBR — перевод реестра «Дом вечности» (2004) [по выдаче: рассылка JewishGen].
+### Bessarabia SIG: cemetery project
+- About 75 thousand burials in Bessarabia (according to the guide catalogue, `catalog/кладбища.md`).
+- Chisinau: 18,751 records and 14,150 photographs in JOWBR, a translation of the register "House of Eternity" (2004) [from search results: JewishGen mailing list].
 
-## 3. Польша
+## 3. Poland
 
-### Фонд документации еврейских кладбищ (cemetery.jewish.org.pl) — [открыто]
-- Поимённая база по надписям: Варшава, ул. Окопова (инвентаризация 2006–2010), кладбища Мазовецкого воеводства, затем Сувалки, Августов, Тарнув и др.; список кладбищ — во вкладке «Bazy».
+### Foundation for Documentation of Jewish Cemeteries (cemetery.jewish.org.pl) [opened]
+- A name database built from inscriptions: Warsaw, Okopowa Street (inventory of 2006-2010), cemeteries of the Mazovia voivodeship, then Suwalki, Augustow, Tarnow and others; the list of cemeteries is under the "Bazy" tab.
 
-## 4. Израиль
+## 4. Israel
 
-Общегосударственной поимённой базы нет — у каждой хевра кадиша своя. Ищи **на иврите**.
+There is no nationwide name database: each hevra kadisha has its own. Search **in Hebrew**.
 
-| Где | Адрес | Что | Пометка |
+| Where | Address | What | Marker |
 |---|---|---|---|
-| Тель-Авив — Яффо и округ (6 кладбищ: Яркон, Кирьят-Шауль, Нахалат-Ицхак, Трумпельдор, Холон и др.) | kadisha.biz, поиск `/he/search` | поиск умерших без входа | [открыто] |
-| Реховот | kdr.org.il/deceased | поля: имя, фамилия, дата похорон, год смерти | [открыто] |
-| Хайфа | kdh.org.il, «Search for deceased» | свободный поиск; поиск солдат — только на иврите; **стоит reCAPTCHA** | [открыто] |
-| Иерусалим (ашкеназская община) | hkj.org.il/deceased | поиск по фамилии, имени | [не открылось: Cloudflare] |
-| Иерусалим (сефарды), Раанана, Хадера, Петах-Тиква | kadishaj.com, kadisha-raanana.co.il, kadisha-hadera.org, kpt.co.il | местные поиски | [по выдаче] |
-| **BillionGraves / MyHeritage** | billiongraves.com | по объявлению MyHeritage (02.03.2019) оцифрованы почти все кладбища Израиля: фото, GPS, транскрипция, бесплатно; поиск на латинице находит ивритские записи; захоронения после съёмки могут отсутствовать | [не открылось: 403; по выдаче: blog.myheritage.com, 2019] |
+| Tel Aviv-Yafo and surroundings (6 cemeteries: Yarkon, Kiryat Shaul, Nahalat Yitzhak, Trumpeldor, Holon and others) | kadisha.biz, search at `/he/search` | search for the deceased without login | [opened] |
+| Rehovot | kdr.org.il/deceased | fields: name, surname, date of burial, year of death | [opened] |
+| Haifa | kdh.org.il, "Search for deceased" | free search; the search for soldiers is in Hebrew only; **reCAPTCHA is in place** | [opened] |
+| Jerusalem (Ashkenazi community) | hkj.org.il/deceased | search by surname, given name | [did not open: Cloudflare] |
+| Jerusalem (Sephardi), Ra'anana, Hadera, Petah Tikva | kadishaj.com, kadisha-raanana.co.il, kadisha-hadera.org, kpt.co.il | local searches | [from search results] |
+| **BillionGraves / MyHeritage** | billiongraves.com | according to a MyHeritage announcement (02.03.2019) almost all Israeli cemeteries were digitized: photos, GPS, transcription, free; a search in Latin letters finds Hebrew records; burials made after the survey may be missing | [did not open: 403; from search results: blog.myheritage.com, 2019] |
 
-## 5. США и мир
+## 5. USA and the rest of the world
 
-- **Find a Grave** (findagrave.com) — мемориалы с фото; у мемориала есть запрос фото волонтёром (нужен аккаунт, делает человек) [не открылось: 403; по выдаче].
-- **BillionGraves** — фото с GPS, приложение поддерживает еврейский календарь [по выдаче].
-- **JGSNY: участки похоронных обществ** (jgsny.org/searchable-databases/burial-society-databases) — [открыто]: более 10 600 записей почти со 100 кладбищ Нью-Йорка, Лонг-Айленда, Уэстчестера, северного Нью-Джерси; участки обществ земляков, синагог, семейных кругов, профсоюзов. Поиск по названию общества, кладбища, ключевому слову или **местечку** (от 3 знаков). Есть планы участков и справочник кладбищ.
-- **Geni, проекты кладбищ** — например, «Jewish Cemeteries Online», «London Jewish Cemeteries», проекты земляков с участками на кладбищах Лонг-Айленда [по выдаче; страницы Geni закрыты защитой Incapsula].
+- **Find a Grave** (findagrave.com): memorials with photos; a memorial has a photo request for volunteers (needs an account, done by a human) [did not open: 403; from search results].
+- **BillionGraves**: photos with GPS; the app supports the Jewish calendar [from search results].
+- **JGSNY: burial society plots** (jgsny.org/searchable-databases/burial-society-databases) [opened]: more than 10,600 records from nearly 100 cemeteries in New York, Long Island, Westchester and northern New Jersey; plots of landsmanshaft societies, synagogues, family circles and trade unions. Search by society name, cemetery, keyword or **shtetl** (from 3 characters). There are plot plans and a directory of cemeteries.
+- **Geni, cemetery projects**: for example "Jewish Cemeteries Online", "London Jewish Cemeteries", and hometown-society projects with plots in Long Island cemeteries [from search results; Geni pages are closed by Incapsula protection].
 
-## 6. Записи похоронных братств
+## 6. Burial-society records
 
-- **Пинкас хевра кадиша** — книга записей братства; в эмигрантских общинах может называть город происхождения [по выдаче].
-- По выдаче: в 1981 г. было известно 23 пинкаса (YIVO и Национальная библиотека Израиля), позже нашли ещё около десяти; пример — пинкас Сигета 1895–1925 гг. на идише в НБИ, пинкас Слуцка — около 300 лет.
-- Ищи по названию местечка в каталогах YIVO и НБИ (навык `searching-nli-jewish-press` для НБИ), в KehilaLinks местечка на JewishGen.
+- **Pinkas of a hevra kadisha** is the society's record book; in emigrant communities it may name the town of origin [from search results].
+- According to search results: in 1981 there were 23 known pinkasim (YIVO and the National Library of Israel), and about ten more were found later; examples are the 1895-1925 pinkas of Sighet in Yiddish at the NLI, and the pinkas of Slutsk, about 300 years old.
+- Search by shtetl name in the YIVO and NLI catalogues (skill `searching-nli-jewish-press` for the NLI) and in the shtetl's KehilaLinks page on JewishGen.
 
-## 7. Даты: конвертер
+## 7. Dates: the converter
 
-**Hebcal** (hebcal.com/converter) — [открыто, проверено]. Машинный адрес:
+**Hebcal** (hebcal.com/converter) [opened, tested]. Machine-readable address:
 `https://www.hebcal.com/converter?cfg=json&hy=5665&hm=Kislev&hd=12&h2g=1` → 20.11.1904.
-Месяцы: Tishrei, Cheshvan, Kislev, Tevet, Sh'vat, Adar (в високосный — **Adar1** / **Adar2**; просто «Adar» Hebcal в високосный год понимает как адар II), Nisan, Iyyar, Sivan, Tamuz, Av, Elul. Также: JewishGen JOS-калькулятор, Steve Morse «Jewish Calendar Conversions in One Step» и его конвертер для надгробий — вводишь буквы даты с камня (stevemorse.org/jcal/tombstone.html) [открыто 08.10.2026].
+Months: Tishrei, Cheshvan, Kislev, Tevet, Sh'vat, Adar (in a leap year **Adar1** / **Adar2**; a plain "Adar" in a leap year is read by Hebcal as Adar II), Nisan, Iyyar, Sivan, Tamuz, Av, Elul. Also: the JewishGen JOS calculator, Steve Morse's "Jewish Calendar Conversions in One Step" and his tombstone converter, where you enter the letters of the date from the stone (stevemorse.org/jcal/tombstone.html) [opened 08.10.2026].

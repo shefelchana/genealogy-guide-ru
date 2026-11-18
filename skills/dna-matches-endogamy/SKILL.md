@@ -1,102 +1,102 @@
 ---
 name: dna-matches-endogamy
-description: Guides genetic genealogy work for families with endogamy, above all Ashkenazi Jews — choosing between autosomal, Y-DNA and mtDNA tests, where raw data can still be transferred (FamilyTreeDNA, GEDmatch, Living DNA; MyHeritage stopped accepting uploads in May 2025), sorting matches by longest shared segment instead of total cM, practical thresholds, why the Shared cM Project and company relationship labels overstate closeness under endogamy, pile-up regions, shared-match clusters, tying a match to documents, writing to matches, and consent and privacy rules. Use whenever the user says «что значат мои совпадения», «у меня тысячи дальних родственников», «кто этот 4th cousin», «сколько сантиморган», «загрузить ДНК на GEDmatch», «перенести данные с MyHeritage», «какой ДНК-тест сдать», «Y-тест», «написать совпадению», or pastes a match list from 23andMe, MyHeritage, Ancestry or FamilyTreeDNA, even if the word endogamy never comes up.
+description: Guides genetic genealogy for families with endogamy, above all Ashkenazi Jews. Covers choosing between autosomal, Y-DNA and mtDNA tests; where raw data can still be transferred (FamilyTreeDNA, GEDmatch, Living DNA; MyHeritage stopped accepting uploads in May 2025); sorting matches by longest shared segment instead of total cM; practical thresholds; why the Shared cM Project and company relationship labels overstate closeness under endogamy; pile-up regions; shared-match clusters; tying a match to documents; writing to matches; calibrating a test on known relatives and checking ethnicity shares with generation arithmetic; consent and privacy rules. Use whenever the user asks "what do my DNA matches mean", "I have thousands of distant cousins", "who is this 4th cousin", "how many cM", "upload my DNA to GEDmatch", "transfer my data from MyHeritage", "which DNA test should I take", "Y-DNA test", "write to a match", or pastes a match list from 23andMe, MyHeritage, Ancestry or FamilyTreeDNA, even if the word endogamy never comes up. Also triggers on Russian requests: «что значат мои совпадения», «у меня тысячи дальних родственников», «кто этот 4th cousin», «сколько сантиморган», «загрузить ДНК на GEDmatch», «перенести данные с MyHeritage», «какой ДНК-тест сдать», «Y-тест», «написать совпадению».
 ---
 
-# ДНК-совпадения при эндогамии
+# DNA matches under endogamy
 
-## Главное, что нужно сказать пользователю сразу
+## The main thing to tell the user at once
 
-ДНК — **вспомогательный** инструмент. Оно подсказывает, где искать, и проверяет гипотезу, но не заменяет документы. У ашкеназов из-за эндогамии (многовековых браков внутри общины) любые двое делят больше ДНК, чем обычные родственники той же степени. Поэтому **тысячи «четвероюродных» — норма, а не открытие**, и оценка «4th cousin» у компании обычно ближе, чем настоящее родство.
+DNA is a **supporting** tool. It suggests where to look and tests a hypothesis, but it does not replace documents. Because of endogamy (centuries of marriage within the community), any two Ashkenazi people share more DNA than ordinary relatives of the same degree. So **thousands of "fourth cousins" are normal, not a discovery**, and a company's "4th cousin" estimate is usually closer than the real relationship.
 
-## Шаг 1. Какой вопрос решаем — какой тест
+## Step 1. Which question are we solving, and so which test
 
-| Вопрос | Тест | Почему |
+| Question | Test | Why |
 |---|---|---|
-| Кто эти люди, подтверждается ли линия, найти живую родню | **аутосомный** | ДНК от обоих родителей, родство примерно до 6-го кузена, но чем дальше, тем грубее |
-| Одна ли это отцовская линия (две семьи одной фамилии, «он же» под другой фамилией) | **Y-ДНК** | только он отвечает «да/нет»; находит родню с **другими фамилиями** |
-| Прямая материнская линия | **мтДНК** | общий предок в пределах 1–50 поколений — для генеалогии слабо |
-| С какой стороны совпадение | **X-ДНК** (часть аутосомного) | сужает круг линий |
+| Who are these people, is the line confirmed, find living relatives | **autosomal** | DNA from both parents, relatedness out to about 6th cousins, but the further out, the coarser |
+| Is this one paternal line (two families of the same surname, "the same man" under a different surname) | **Y-DNA** | only it answers yes/no; finds relatives with **different surnames** |
+| The direct maternal line | **mtDNA** | common ancestor within 1–50 generations: weak for genealogy |
+| Which side a match comes from | **X-DNA** (part of the autosomal test) | narrows the range of lines |
 
-- Y-тест сдаёт **самый старший доступный мужчина** прямой отцовской линии. Полное совпадение по 37 маркерам — общий предок, по старой таблице FamilyTreeDNA, с вероятностью 95 % не дальше 8 поколений (другие расчёты дают более широкий разброс); окончательно — общий терминальный SNP.
-- Чтобы проверить **бумажную** отцовскую линию, тестируют двух **документально самых далёких** её потомков по мужской линии (протокол Джеффри Марка Полла), после того как оценено качество самих документов. Ловушки: неотцовство, неоформленное усыновление, фамилия, взятая от жены (у зятьёв это бывало). Y-гаплогруппа подтверждает принадлежность к линии, а не конкретного предка.
-- Этнические оценки ниже уровня континента ненадёжны и у разных компаний разные — **ничего не доказывают**.
+- The Y-test is taken by **the oldest available man** in the direct paternal line. A full match on 37 markers means a common ancestor who, by the old FamilyTreeDNA table, is with 95% probability no further back than 8 generations (other calculations give a wider spread); a shared terminal SNP settles it finally.
+- To check the **paper** paternal line, test two of its male-line descendants who are **documentarily the furthest apart** (the protocol of Jeffrey Mark Paull), after assessing the quality of the documents themselves. Traps: non-paternity, informal adoption, a surname taken from the wife (it happened with sons-in-law). A Y-haplogroup confirms membership in the line, not a particular ancestor.
+- Ethnicity estimates below the continental level are unreliable and differ between companies: they **prove nothing**.
 
-Сервисы, перенос данных, цены и ограничения по странам — `references/services.md` (на октябрь 2026). Ключевое:
-- **Не принимают чужие файлы:** AncestryDNA, 23andMe и **с мая 2025 года MyHeritage**. Многие статьи до 2025 г. ещё советуют загружать на MyHeritage — это устарело.
-- **Принимают:** FamilyTreeDNA, GEDmatch, Living DNA.
-- FamilyTreeDNA **не отправляет наборы** в Россию, Беларусь и Украину — Y-тест родственнику там планируй заранее (YSEQ, YFull по BAM, третья страна).
+Services, data transfer, prices and country restrictions: `references/services.md` (as of October 2026). The key points:
+- **They do not accept other people's files:** AncestryDNA, 23andMe and, **since May 2025, MyHeritage**. Many articles from before 2025 still advise uploading to MyHeritage: this is out of date.
+- **They accept:** FamilyTreeDNA, GEDmatch, Living DNA.
+- FamilyTreeDNA **does not ship kits** to Russia, Belarus and Ukraine: plan a Y-test for a relative there in advance (YSEQ, YFull from a BAM file, a third country).
 
-Создание аккаунтов, вход, загрузка файла, оплата — **делает пользователь**. Ты объясняешь, где кнопка и что выбрать.
+Creating accounts, logging in, uploading a file and paying are **done by the user**. You explain where the button is and what to choose.
 
-## Шаг 2. Отбор совпадений: самый длинный сегмент, а не сумма
+## Step 2. Selecting matches: the longest segment, not the total
 
-Почему: при эндогамии сумма сМ набирается из множества коротких общих кусков от разных далёких предков. Длинный непрерывный сегмент получен недавно и указывает на прослеживаемого общего предка.
+Why: under endogamy the total cM is built up from many short shared pieces from different distant ancestors. A long unbroken segment was inherited recently and points to a traceable common ancestor.
 
-1. **Сортируй по самому длинному сегменту.** Умеют FamilyTreeDNA, MyHeritage, GEDmatch (сортировка столбцов — в платном Tier 1). Ancestry не умеет (сегменты — только через выгрузку DNAGedcom), и её «самый длинный сегмент» показан до вычитания общепопуляционных участков — бывает больше всей суммы.
-2. **Пороги** — единого стандарта нет, называй их как ориентиры с авторами:
-   - практическое правило: самый длинный сегмент **меньше 15 сМ — отбросить; от 20 сМ — смотреть дерево; от 30 сМ — писать человеку**; общие **200–250 сМ и выше** — почти наверняка прослеживаемое родство;
-   - Китти Купер: один сегмент больше 20 сМ, второй больше 10 сМ и ещё несколько;
-   - FamilyLocket: отбрасывать при самом длинном меньше 23 сМ, сегменты меньше 10 сМ в сумме не считать; при сильной эндогамии нижний порог поднимать до 15 сМ.
-3. **Зоны скопления (pile-up):** некоторые участки есть почти у всех ашкеназов (в разборе FamilyLocket упоминаются конец 16-й хромосомы и 9-я хромосома). Сегмент короче 20–23 сМ, не выходящий за пределы такой зоны, не принимай.
-4. **Не переводи сМ в степень родства по таблице Shared cM Project** (DNA Painter) без оговорки: она не учитывает эндогамию, при ней одному числу сМ соответствует много степеней, и таблица показывает родство ближе настоящего. Говори диапазон и «скорее дальше, чем показывает сервис». Для ашкеназов сверяй с **ашкеназскими нормами** опроса Лары Даймонд (2022; например, у троюродных в среднем около 272 сМ при самом длинном сегменте около 49 сМ) — таблица и разброс в `references/services.md`.
-5. **Перед WATO и подобными калькуляторами отбрось сегменты меньше 7 сМ** (проверка Луиса Кесслера; подробности в `references/services.md`).
+1. **Sort by longest segment.** FamilyTreeDNA, MyHeritage and GEDmatch can do it (column sorting in GEDmatch is in paid Tier 1). Ancestry cannot (segments only through a DNAGedcom export), and its "longest segment" is shown before the population-wide stretches are subtracted, so it may exceed the whole total.
+2. **Thresholds**: there is no single standard; present them as rules of thumb with their authors:
+   - practical rule: longest segment **under 15 cM: discard; from 20 cM: look at the tree; from 30 cM: write to the person**; a total of **200–250 cM and above** is almost certainly a traceable relationship;
+   - Kitty Cooper: one segment over 20 cM, a second over 10 cM, and a few more;
+   - FamilyLocket: discard when the longest is under 23 cM, do not count segments under 10 cM in the total; with strong endogamy raise the lower threshold to 15 cM.
+3. **Pile-up regions:** some stretches are present in almost all Ashkenazim (FamilyLocket's analysis mentions the end of chromosome 16 and chromosome 9). Do not accept a segment shorter than 20–23 cM that does not extend beyond such a region.
+4. **Do not convert cM into a degree of relationship using the Shared cM Project table** (DNA Painter) without a caveat: it does not account for endogamy, under which one cM figure corresponds to many degrees, and the table shows a relationship closer than the real one. Give a range and say "more likely more distant than the service shows". For Ashkenazim compare with the **Ashkenazi norms** of Lara Diamond's survey (2022; for example, second cousins average about 272 cM with a longest segment of about 49 cM): table and spread in `references/services.md`.
+5. **Before WATO and similar calculators, discard segments under 7 cM** (Louis Kessler's check; details in `references/services.md`).
 
-## Шаг 3. Кластеры и общие совпадения
+## Step 3. Clusters and shared matches
 
-1. Для каждого отобранного совпадения открой **общих родственников** (Relatives in Common, Shared Matches). Группа людей, которые совпадают и с вами, и между собой, — кластер, обычно одна линия.
-2. **Метод Лидс** (раскраска совпадений 90–400 сМ на четыре группы по дедам) **при эндогамии не работает** — кластеры сливаются; так пишет сама Дана Лидс. Если эндогамна только часть дерева (например, одна неашкеназская линия), для неё метод годен.
-3. Помогают **хромосомные раскраски по этничности** (23andMe, FamilyTreeDNA) — подсказывают сторону.
-4. **Больше тестов в семье:** несколько потомков одной пары, особенно потомки тех, кто вышел из эндогамной среды. Совпадение и с вами, и с тётей по матери — скорее материнская сторона; только с вами — проверяйте отцовскую (при эндогамии это подсказка, а не вывод).
-5. В **DNA Painter** раскладывай сегменты по известным предкам, подняв минимальный порог с 7 до 10–15 сМ.
+1. For each selected match, open the **relatives in common** (Relatives in Common, Shared Matches). A group of people who match both you and each other is a cluster, usually one line.
+2. **The Leeds method** (colouring matches of 90–400 cM into four groups by grandparent) **does not work under endogamy**: the clusters merge; Dana Leeds herself says so. If only part of the tree is endogamous (for example one non-Ashkenazi line), the method suits that part.
+3. **Chromosome painting by ethnicity** (23andMe, FamilyTreeDNA) helps by suggesting the side.
+4. **More tests in the family:** several descendants of one couple, especially descendants of those who left the endogamous milieu. A match with both you and your maternal aunt is more likely maternal; with you alone, check the paternal side (under endogamy this is a pointer, not a conclusion).
+5. In **DNA Painter**, lay segments out across known ancestors, raising the minimum threshold from 7 to 10–15 cM.
 
-## Шаг 4. От совпадения к документу
+## Step 4. From a match to a document
 
-1. В дереве совпадения сначала сравни **места** рождения предков (местечко, уезд), **потом** фамилии. Общий предок ашкеназов часто старше фамилий (их закрепили в 1804–1835 гг.), так что отсутствие общих фамилий — нормально.
-2. Ашкеназские совпадения сверяй с неашкеназскими из тех же мест.
-3. Гипотезу «совпадение — через прадеда N» проверяй **документом**: метрикой, ревизией, переписью, где оба рода связаны. Без документа это гипотеза, и так её и записывай. Образец уверенной гипотезы (Н. Липес): имя одного совпадает с отчеством другого, жили в соседних местечках, занимались одним делом — плюс ДНК-совпадение с потомками брата прадеда. Для дерева этого достаточно как гипотезы 🟡, для консульства — нет.
-4. Совпадение, найденное в агрегаторе, **подтверждай сравнением сегментов на исходной платформе**: у Липес «родственники» из агрегатора на исходном сервисе не дали ни одного общего сегмента.
-5. Нет дерева у совпадения — это частая ситуация (на GEDmatch особенно). Не строй догадок; запиши и вернись, когда появится информация. Посоветуй пользователю **прикрепить ссылку на своё дерево** к профилю — тогда напишут ему.
-6. Полезная мелочь: в выгрузке списка родственников 23andMe есть колонка Y-гаплогруппы, заполненная даже у не принявших приглашение.
+1. In the match's tree first compare the **places** of the ancestors' birth (shtetl, uezd), **then** the surnames. The common ancestor of Ashkenazim is often older than surnames (which were fixed in 1804–1835), so the absence of shared surnames is normal.
+2. Compare Ashkenazi matches with non-Ashkenazi ones from the same places.
+3. Test the hypothesis "the match is through great-grandfather N" with a **document**: a metrical record, revision list (*revizskaya skazka*), census where both families are tied together. Without a document it is a hypothesis, and record it as one. A sample of a confident hypothesis (N. Lipes): one person's given name matches another's patronymic, they lived in neighbouring shtetls, they followed the same trade, plus a DNA match with descendants of the great-grandfather's brother. For a tree this is enough as a 🟡 hypothesis, for a consulate it is not.
+4. A match found in an aggregator should be **confirmed by comparing segments on the original platform**: with Lipes, "relatives" from an aggregator showed not a single shared segment on the original service.
+5. A match with no tree is a common situation (on GEDmatch especially). Do not guess; note it and come back when information appears. Advise the user to **attach a link to their own tree** to their profile, so that people write to them.
+6. A useful detail: the 23andMe relatives-list export has a Y-haplogroup column, filled in even for people who did not accept the invitation.
 
-Веди журнал по `assets/match-log.md`: кто (условное обозначение), сервис, сумма сМ, самый длинный сегмент, число сегментов, кластер, места в дереве, гипотеза, писали ли, ответ.
+Keep a log from `assets/match-log.md`: who (a code), service, total cM, longest segment, number of segments, cluster, places in the tree, hypothesis, whether you wrote, the reply.
 
-## Шаг 5. Письмо совпадению
+## Step 5. A letter to a match
 
-Образцы — `assets/match-letters.md`. Правила:
-- **коротко:** кто вы, одна-две фамилии, место, поколение, как связаться; сантиморганы и сегменты в первом письме не нужны — многие их не понимают;
-- **предложите своё:** самого раннего предка с местом, схему ветки;
-- **без давления:** молчание может значить «человек в шоке», а не «игнорирует»; повторно с нажимом не пиши;
-- если у человека несколько наборов — назови, какой.
+Templates: `assets/match-letters.md`. Rules:
+- **short:** who you are, one or two surnames, the place, the generation, how to reach you; centimorgans and segments are not needed in the first letter, since many people do not understand them;
+- **offer something of your own:** the earliest ancestor with the place, a chart of the branch;
+- **no pressure:** silence may mean "the person is in shock", not "ignoring"; do not write again with insistence;
+- if the person has several kits, say which one.
 
-Отправляет письмо **пользователь**: ты готовишь текст.
+The **user** sends the letter: you prepare the text.
 
-## Шаг 5а. Прежде чем делать выводы — калибровка и арифметика
+## Step 5a. Before drawing conclusions — calibration and arithmetic
 
-- **Откалибруй тест на известных родственниках.** Ожидания: родные брат/сестра ≈ 2 600 сМ; сводные, дед, тётя, племянница ≈ 1 750; двоюродные или полу-тётя/полу-племянница ≈ 870; двоюродные по одной бабушке ≈ 430. Прежде чем решить, что сервис «занижает», спроси: родство полное или по одному родителю? (Реальный случай: «занижение вдвое» оказалось точными цифрами для сестры по матери и тёти по одной бабушке.) О неполном родстве не делай выводов сам — спроси.
-- **Этнический процент проверяй арифметикой поколений:** дед/бабка 25 % (± 3–4), прадед 12,5 % (± 3), прапрадед 6 % (± 2), пятое колено ≈ 3 % или 0. «Прабабушка — немка» при 1 % германского — опровергнуто буквально, дальний предок возможен. Доли < 2–5 % — подсказка. Ancestry Timeline (23andMe) — ± поколение.
-- **mtDNA** у детей одной матери и детей её дочерей совпадает обязательно; разные подветви у тестов — артефакт чипа, верен общий уровень.
-- **Сторона без теста родителей:** фильтр общих совпадений с роднёй, связанной только с одной стороной (племянница по матери, двоюродные по одной бабушке).
-- **Деревья совпаденцев** — источник гипотез: смотри места и годы; совпадение имени отца и года рождения в чужом дереве подтверждает только документ.
+- **Calibrate the test on known relatives.** Expected: full siblings ≈ 2,600 cM; half-siblings, grandparent, aunt, niece ≈ 1,750; first cousins or half-aunt/half-niece ≈ 870; half first cousins (one shared grandparent) ≈ 430. Before deciding the service "underestimates", ask whether the relationship is full or half. (Invented example: a tester sees a "niece" at about 900 cM and a "first cousin" at about 420 cM and decides the service underestimates by half. In fact the niece is the daughter of a half-sibling (expected ≈ 870) and the cousin is related through only one shared grandparent (expected ≈ 430) — both figures are exactly right for half relationships.) Do not draw conclusions about a half relationship yourself — ask.
+- **Check an ethnicity share with generation arithmetic:** grandparent 25 % (± 3–4), great-grandparent 12.5 % (± 3), great-great-grandparent 6 % (± 2), fifth generation ≈ 3 % or zero. "Great-grandmother was German" with 1 % Germanic is refuted literally; a distant ancestor stays possible. Shares under 2–5 % are hints. 23andMe's Ancestry Timeline is ± one generation.
+- **mtDNA** must match for all children of one mother and the children of her daughters; different subclades between tests are a chip artefact — only the shared level is reliable.
+- **Side without parents' tests:** use the shared-matches filter with relatives tied to one side only (a niece on the mother's side, first cousins through one grandmother only).
+- **Matches' trees** are a source of hypotheses: look at places and years; a matching father's name and birth year in someone else's tree is confirmed only by a record.
 
-## Этика и приватность — соблюдай всегда
+## Ethics and privacy: always observe
 
-- Тест сдаёт **только сам человек** или законный представитель, по осознанному согласию; он должен знать, кто увидит данные и какие возможны неожиданности. Загрузка файла родственника на GEDmatch — только с его согласия.
-- **Тест может показать неожиданное** (биологический отец не тот, неизвестный брат). «Право знать есть, права на отношения нет». О таком не сообщай родным сразу: сначала исключи ошибку (две независимые линии совпадений), потом пусть пользователь решит, кому и зачем это знать.
-- **Не публикуй** данные сдавших тест и **не пересылай чужие списки совпадений** без согласия владельца. В текстах для родных имена живых совпадений скрывай.
-- **Сырой ДНК-файл не загружай никуда сам и не проси прислать его в чат**: генетические данные касаются всех родственников, утечку не отменить. Для анализа хватает списка совпадений; посоветуй убрать из него имена (оставить инициалы и цифры).
-- Доступ полиции различается по сервисам (GEDmatch — только opt-in, FamilyTreeDNA — opt-out) — скажи об этом до загрузки.
+- Only **the person themselves** (or a legal representative) takes the test, with informed consent; they must know who will see the data and what surprises are possible. Uploading a relative's file to GEDmatch is only with their consent.
+- **A test may show something unexpected** (the biological father is not the one thought, an unknown brother). "There is a right to know, but no right to a relationship." Do not tell relatives about such a thing at once: first rule out an error (two independent lines of matches), then let the user decide whom to tell and why.
+- **Do not publish** the data of those tested and **do not forward other people's match lists** without the owner's consent. In texts for relatives, hide the names of living matches.
+- **Do not upload a raw DNA file anywhere yourself and do not ask for it to be sent into the chat**: genetic data concerns all relatives, and a leak cannot be undone. A match list is enough for analysis; advise removing names from it (keep initials and figures).
+- Police access differs by service (GEDmatch is opt-in only, FamilyTreeDNA is opt-out): say so before uploading.
 
-## Как отвечать на «что значат мои совпадения»
+## How to answer "what do my matches mean"
 
-1. Объясни эндогамию в двух фразах и почему ярлык «4th cousin» завышен.
-2. Отфильтруй список по самому длинному сегменту, покажи, сколько осталось после порогов.
-3. Для оставшихся — что посмотреть (места в дереве, общие совпадения) и кому стоит писать.
-4. Какой тест или какой родственник для теста дал бы больше всего.
-5. Что пока нельзя утверждать.
+1. Explain endogamy in two sentences and why the "4th cousin" label is inflated.
+2. Filter the list by longest segment and show how many remain after the thresholds.
+3. For those that remain: what to look at (places in the tree, shared matches) and whom it is worth writing to.
+4. Which test, or which relative for a test, would give the most.
+5. What cannot yet be asserted.
 
-Не называй конкретную степень родства и общего предка, пока это не подтверждено документом. Не выдумывай цены и функции сервисов вне `references/services.md` — скажи, что их нужно проверить на сайте.
+Do not name a specific degree of relationship or common ancestor until it is confirmed by a document. Do not invent prices and features of services beyond `references/services.md`: say they need to be checked on the site.
 
-## Связанные навыки
+## Related skills
 
-`dna-matches-across-platforms` — если тест на нескольких сайтах или происхождение смешанное; `verifying-genealogy-findings` — проверка гипотезы документами; `tracing-emigrants-to-origin` — если совпадение из эмигрантской ветки.
+`dna-matches-across-platforms`: if the test is on several sites or the origin is mixed; `verifying-genealogy-findings`: testing a hypothesis with documents; `tracing-emigrants-to-origin`: if the match is from an emigrant branch.

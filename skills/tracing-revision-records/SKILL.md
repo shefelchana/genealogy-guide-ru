@@ -1,148 +1,150 @@
 ---
 name: tracing-revision-records
-description: Traces a family of the Russian Empire back through the revision skazki of 1795–1858, chaining generations by the "по последней ревизии" age column, and handles the problems of the early revisions — family numbers that do not carry over, surnames that vanish before the 1804 law, double Jewish given names, and estate changes between merchant and meshchanin. Use when pushing a line deeper in time, reading ревизские сказки or посемейные списки, or when a search fails because a surname does not appear in an early record.
+description: >-
+  Traces a family of the Russian Empire back through the revision lists (revizskie skazki) of 1795–1858, chaining generations by the "по последней ревизии" ("per the last revision") age column, and handles the problems of the early revisions — family numbers that do not carry over, surnames that vanish before the 1804 law, double Jewish given names, and estate changes between merchant and meshchanin. Use when pushing a line deeper in time, reading revision lists or family lists (posemeinye spiski), working with the 1795/1816/1834/1850/1858 revisions or the 1874–75 Jewish military census, or when a search fails because a surname does not appear in an early record. Typical requests: "how do I trace my family before 1858", "find my ancestors in the 1850 revision", "why is there no surname in the 1811 list". Also triggers on Russian requests: «ревизские сказки», «посемейные списки», «по последней ревизии», «вглубь по времени».
 ---
 
-# Вглубь по времени: ревизская лестница
+# Deeper in time: the revision ladder
 
-| Ревизия | Год | Состав |
+| Revision | Year | Coverage |
 |---|---|---|
-| I–IV | 1719–1782 | в основном православное и крестьянское население; I и II — только мужчины, с III (1761–1767) и женщины; евреев мало — большинство общин вошло в империю с разделами Польши (1772–1795) |
-| V | **1795** | первая после разделов Речи Посполитой; для евреев Правобережья **самая ранняя**; фамилий часто НЕТ; бывает двуязычной, русско-польской; женщин по общему правилу записывали, но полнота еврейских списков разная |
-| VI | 1811 | **только мужчины** — отсутствие жены или дочери ничего не значит |
-| VII | **1816** | снова мужчины и женщины; для многих еврейских общин первая, где семья записана целиком; фамилии почти у всех |
-| VIII | 1834 | полная |
-| IX | **1850** | полная |
-| X | **1858** | последняя; к ней отсылают посемейные списки 1870-х |
+| I–IV | 1719–1782 | mainly the Orthodox and peasant population; I and II men only, from III (1761–1767) women too; few Jews, since most communities entered the empire with the partitions of Poland (1772–1795) |
+| V | **1795** | the first after the partitions of the Polish–Lithuanian Commonwealth; for the Jews of the Right-Bank Ukraine **the earliest**; surnames often ABSENT; may be bilingual, Russian-Polish; women were as a rule recorded, but the completeness of Jewish lists varies |
+| VI | 1811 | **men only**: the absence of a wife or daughter means nothing |
+| VII | **1816** | men and women again; for many Jewish communities the first where the family is recorded whole; almost everyone has surnames |
+| VIII | 1834 | complete |
+| IX | **1850** | complete |
+| X | **1858** | the last; the family lists (*posemeinye spiski*) of the 1870s refer back to it |
 
-Глубже 1795 года по еврейским общинам Правобережья — почти только общинные пинкасы и податные реестры кагалов, сохранность единичная.
+Deeper than 1795, for the Jewish communities of the Right Bank, there is almost only community minute-books (*pinkasim*) and the tax registers of the *kahals*, with isolated survival.
 
-## 🔑 Мост между ступенями
+## 🔑 The bridge between rungs
 
-Графа «**по последней ревизии состояло и после оной прибыло — лета**» даёт возраст того же человека в предыдущей ревизии. Это и есть мост.
+The column "**по последней ревизии состояло и после оной прибыло — лета**" [per the last revision there were, and since then arrived — age (years)] gives the age of the same person in the previous revision. That is the bridge.
 
-**Спускаться строго последовательно, не через ступень:** нашли двор в 1858 → выписали возраст по 9-й ревизии → ищете тот же двор в 1850 в этом возрасте → оттуда в 1834.
+**Descend strictly in sequence, never skipping a rung:** you found a household in 1858 → copy out the age per the 9th revision → look for the same household in 1850 at that age → from there to 1834.
 
-Вторая обязательная графа — «**из того числа выбыло — когда именно**»: «умеръ въ 18.. году», «отданъ въ рекруты», «перечисленъ въ …». **Год смерти главы двора датирует поколение** и часто оказывается единственной доступной датой.
+The second mandatory column is "**из того числа выбыло — когда именно**" [of those, departed — exactly when]: «умеръ въ 18.. году» [died in 18..], «отданъ въ рекруты» [given up as a recruit], «перечисленъ въ …» [transferred to …]. **The year of death of the head of the household dates the generation** and often turns out to be the only date available.
 
-**В отчёте о каждой находке обязательна строка-мост:** «возраст по предыдущей ревизии — NN, значит в ревизии <год> искать в возрасте NN». Без неё находка наполовину бесполезна.
+**Every find report must contain a bridge line:** "age per the previous revision is NN, so look in the revision of <year> at age NN". Without it a find is half useless.
 
-✅ **Независимая проверка — порядок старшинства детей** (приём Хаима Фридмана). Порядок, выведенный из возрастов в одной ревизии, должен совпасть с порядком в другой. Совпал — ещё один довод, что это та же семья; не совпал — искать вторую жену или вторую семью под тем же номером. Так же цепочка ведётся глубже 1804 года: польские переписи 1765/1784 → ревизия 1795 → 1816, мостом служит отчество.
+✅ **Independent check: the order of seniority of the children** (a technique of Chaim Freedman). The order derived from the ages in one revision must coincide with the order in another. If it coincides, that is one more argument that it is the same family; if not, look for a second wife or a second family under the same number. The chain is carried back past 1804 in the same way: Polish censuses of 1765/1784 → revision of 1795 → 1816, with the patronymic as the bridge.
 
-## ⚠️ Номер семьи между ревизиями НЕ переносится
+## ⚠️ The family number does NOT carry over between revisions
 
-Наставление велит писать «по нынешнему разделению семей, а не по тому, как они при последней ревизии разделены были». Двор делился между сыновьями, семьи выбывали — нумерация каждый раз новая. Проверенный пример: семья № 237 по ревизии 1850 г. — это № 341 по ревизии 1858 г.
+The instruction (*Nastavlenie*) orders that families be written "per the present division of families, and not as they were divided at the last revision" («по нынешнему разделению семей, а не по тому, как они при последней ревизии разделены были»). A household split between sons, families departed: the numbering is new each time. A verified example: family No. 237 in the revision of 1850 is No. 341 in the revision of 1858.
 
-Сцепка только по **имени, отчеству, возрасту и составу двора**.
+The link is made only by **given name, patronymic, age and household composition**.
 
-⚠️ **Исключение — Бессарабия.** В бессарабских сказках 1848–1859 годов есть графа **прежнего номера семьи**, иногда двух («1835 — № 100, 1848 — № 120»): это прямой мост между ревизиями. Ранние списки Тираспольского уезда (1796, Дубоссары 1799) — без фамилий, но с указанием, **откуда семья пришла**; занятие главы иногда потом стало фамилией. Бывают **дополнительные ревизии** (Тирасполь, 1858) — опущенные при основной, отставные солдаты, прибывшие позже. Источник — вступления к базам ревизий Bessarabia SIG (И. Вайнер, Е. Коган).
+⚠️ **Exception: Bessarabia.** The Bessarabian lists of 1848–1859 have a column for the **former family number**, sometimes two ("1835 — No. 100, 1848 — No. 120"): this is a direct bridge between revisions. The early lists of Tiraspol uezd (1796, Dubossary 1799) have no surnames but state **where the family came from**; the head's occupation sometimes later became a surname. There are **supplementary revisions** (Tiraspol, 1858): people omitted from the main one, retired soldiers who arrived later. Source: the introductions to the revision databases of the Bessarabia SIG (I. Weiner, E. Cohen).
 
-⚠️ **Один номер семьи — не всегда одна семья.** Под одним номером бывают записаны несколько отдельных семей. «Приёмыш» 49 лет при 32-летнем главе двора — не усыновление, а приписанный к двору взрослый со своей семьёй. Пометы «приёмыш», «при семье» проверять по возрастам.
+⚠️ **One family number is not always one family.** Several separate families are sometimes recorded under one number. A "foster child" (*priyomysh*) of 49 beside a household head of 32 is not an adoption but an adult attached to the household with his own family. Check notes such as «приёмыш» [foster child] and «при семье» [with the family] against the ages.
 
-## ⚠️ Чем глубже, тем меньше фамилий
+## ⚠️ The deeper, the fewer surnames
 
-Фамилии у евреев империи вводились законом **1804 года** и закреплялись до 1830-х. В 1795 и 1811 годах человек записан «**Duwid Leybowicz**», «**Berko Jankielowicz**» — без фамилии вовсе.
+Surnames for the Jews of the empire were introduced by the law of **1804** and fixed up to the 1830s. In 1795 and 1811 a man is recorded as "**Duwid Leybowicz**", "**Berko Jankielowicz**", with no surname at all.
 
-1. В ранних ревизиях искать **не фамилию, а связку** имя + отчество + возраст + общество.
-2. Одна семья в 1795 и 1834 годах может носить **разные фамилии или никакой**.
-3. **Отчество — главный якорь.** «Берко **Нусёвич**» → отца звали Нусь → в предыдущей ревизии ищем **Нуся** подходящего возраста в том же обществе.
-4. Фамилия бывает **двойной**: «Нудельманъ **онъ же** Капланъ», «Шпильсбергъ **онъ же** Гольдвассеръ». Это норма эпохи, искать по обеим.
+1. In early revisions search not for a surname but for the **combination** given name + patronymic + age + community.
+2. One family in 1795 and in 1834 may bear **different surnames or none**.
+3. **The patronymic is the main anchor.** "Berko **Nusyovich**" → his father was called Nus → in the previous revision look for a **Nus** of suitable age in the same community.
+4. A surname may be **double**: «Нудельманъ **онъ же** Капланъ» [Nudelman, he is also Kaplan], «Шпильсбергъ **онъ же** Гольдвассеръ» [Shpilsberg, he is also Goldwasser]. This is normal for the period; search under both.
 
-## Имена
+## Names
 
-**Двойные еврейские имена** — Хаимъ-Іосъ, Иегуда-Лейбъ, Аврумъ-Ицко, Мойше-Иде — это ОДНО имя из двух частей; писарь мог записать любую половину. Искать по обеим и не принимать половину за другого человека.
-⚠️ «Іосъ» в «Хаимъ Іосъ Мендельовичъ» — часть имени, а не отчество: отчество здесь Мендельович.
-**Ивритский столбец метрики полнее русского** — двойное имя целиком стоит там. Брать разворот целиком.
-**Наречение в честь умерших** даёт подсказку «был покойный тёзка», но не дату: обычай блокируется живым тёзкой, иногда передаётся только первая буква. Помечать как гипотезу.
-⚠️ **Полные тёзки «дядя — племянник» близкого возраста** — частая причина перепутать поколения: оба названы в честь одного умершего деда. Сверять по отцу и составу двора.
-🔑 **Совпадение набора имён** (не одного имени, а нескольких имён двух-трёх поколений) в двух ревизиях или переписях — сильный признак одной семьи; им сшивают разорванные ветки.
-⚠️ **Двойное имя отца даёт детям разные отчества**: одни дети записаны по одной половине имени, другие по другой. Имя меняли и при жизни (болезнь, неудачи, дочь вышла за тёзку отца — Мордко стал Борухом), и дети «Мордковичи» в следующем документе становятся «Боруховичами». Другое отчество у детей одного отца **не опровергает** родство — решают номер семьи, возраст, окружение и приписка.
+**Double Jewish given names**: Хаимъ-Іосъ, Иегуда-Лейбъ, Аврумъ-Ицко, Мойше-Иде (Chaim-Yos, Yehuda-Leyb, Avrum-Itsko, Moyshe-Ide) are ONE name in two parts; the clerk could write either half. Search under both and do not take one half for a different person.
+⚠️ "Іосъ" in «Хаимъ Іосъ Мендельовичъ» is part of the name, not a patronymic: the patronymic here is Mendelovich.
+**The Hebrew column of a metrical record is fuller than the Russian**: the double name stands there in full. Take the whole spread.
+**Naming after the dead** gives the hint "there was a deceased namesake" but not a date: the custom is blocked by a living namesake, and sometimes only the first letter is passed on. Mark it as a hypothesis.
+⚠️ **Full namesakes "uncle and nephew" of close age** are a frequent cause of confusing generations: both are named after the same dead grandfather. Check by father and household composition.
+🔑 **A coincidence of sets of names** (not one name, but several names across two or three generations) in two revisions or censuses is a strong sign of one family; it is used to stitch torn branches together.
+⚠️ **A father's double name gives the children different patronymics**: some children are recorded by one half of the name, others by the other. A name was also changed during life (illness, misfortunes, a daughter marrying a namesake of the father: Mordko became Borukh), and children who were "Mordkovich" become "Borukhovich" in the next document. A different patronymic among the children of one father **does not refute** the kinship: what decides is the family number, age, the surroundings and the registration (*pripiska*).
 
-## Сословие — не род
+## Estate is not lineage
 
-Купец и мещанин — состояния, а не происхождение: гильдия выкупалась ежегодно, и одна семья в 1850 г. значится мещанами, а в 1875 г. купцами. В описях дела чаще называются «ревізькі казки **купців і міщан**» вместе. Купеческая часть тома бывает крошечной — одна-две семьи, — и тогда ссылка на «купцов № NN» указывает на другую ревизию, а не на эту.
+Merchant and meshchanin (townsman) are conditions, not origin: the guild certificate was bought annually, and one family is meshchane in 1850 and merchants in 1875. In inventories the files are more often titled «ревізькі казки **купців і міщан**» [revision lists of merchants and townsmen] together. The merchant part of a volume can be tiny, one or two families, and then a reference to "merchants No. NN" points to a different revision, not this one.
 
-## Еврейская воинская перепись 1874–1875 годов — мост к 1858
+## The Jewish military census of 1874–1875: a bridge to 1858
 
-Отдельный тип источника перед введением всеобщей воинской повинности (по описанию базы Н. Липес, lipesdatabase.com):
-· в записи стоит **номер семьи по прошлой ревизии** — прямой мост к ревизии 1858 года;
-· перечислены **члены семьи, живущие отдельно**: кто, где и по какому документу записан — так находятся ушедшие в другой город;
-· возраст писали по документам и, при сомнении, **«по виду»**; таких вносили в особый список — возраст там заведомо неточен;
-· отдельно составлялся список бродяг без паспортов.
-По Бессарабии в Национальном архиве Молдовы есть перепись 1875 года **подольских евреев, приписанных к бессарабским местам** (доклад А. Частиной, IAJGS 2012) — мост Подолия ↔ Бессарабия.
+A separate type of source before the introduction of universal military service (per the description of the N. Lipes database, lipesdatabase.com):
+· the entry carries the **family number from the previous revision**: a direct bridge to the revision of 1858;
+· it lists **family members living separately**: who, where and by what document they are registered; this is how people who went to another town are found;
+· age was written from documents and, when in doubt, **"by appearance"**; such people were entered on a special list, where the age is known to be inexact;
+· a separate list was compiled of vagrants without passports.
+For Bessarabia, the National Archives of Moldova hold a census of 1875 of **Podolian Jews registered to Bessarabian places** (report by A. Chastina, IAJGS 2012): a Podolia ↔ Bessarabia bridge.
 
-## Если по фамилии не находится — выписать местечко целиком
+## If the surname is not found: transcribe the whole shtetl
 
-Метод JRI-Poland: выписать в таблицу **все** записи местечка за нужное окно лет и отсортировать по именам отца и матери. Так находятся семьи, записанные двумя несозвучными формами фамилии, и вероятные девичьи фамилии матерей. Работает и для ревизий: все дворы с подходящей связкой «отец + имена сыновей + возрасты».
+The JRI-Poland method: transcribe into a table **all** records of the shtetl for the needed window of years and sort by the names of father and mother. This finds families recorded under two dissimilar forms of the surname, and the likely maiden names of mothers. It works for revisions too: all households with a suitable combination "father + sons' names + ages".
 
-## Списки по «Временным правилам» 3 мая 1882 года
+## Lists under the "Temporary Rules" of 3 May 1882
 
-Отдельный пласт: закон запретил евреям вновь селиться вне городов и местечек, и в 1888 г. составлялись **регистрационные списки сельских поселенцев** — глава двора, жена по имени и отчеству, все дети поимённо, откуда и когда переселился, занятие с номерами свидетельств. Полнота выше, чем в ревизиях.
-⚠️ Попадают туда только жившие **в сёлах**: горожан и купцов там нет по определению, и их отсутствие ничего не опровергает.
+A separate layer: the law forbade Jews to settle anew outside towns and shtetls, and in 1888 **registration lists of rural settlers** were compiled: the head of the household, the wife by name and patronymic, all the children by name, where and when they moved from, the occupation with certificate numbers. Completeness is higher than in revisions.
+⚠️ Only those who lived **in villages** get into them: townspeople and merchants are by definition absent, and their absence refutes nothing.
 
-## 🔑 До ~1820-х искать по ОТЧЕСТВУ, а не по фамилии
+## 🔑 Up to ~1820s, search by PATRONYMIC, not by surname
 
-Закон 1804 г. обязал евреев принять фамилии, но исполнялся десятилетиями, и прозвище долго не было родовым.
-**Доказано на месте:** в переписи 1811 г. по одному подольскому местечку три **родных брата**, сыновья одного отца, записаны под тремя разными прозвищами (условно **Фейгель**, **Гросс**, **Кравец**).
-→ Отпечаток для поиска в раннем слое — **связка «отец + имена сыновей + возрасты»**, а не фамилия. Фамильный поиск здесь даёт **ложные отрицательные результаты**.
-→ И обратное: отсутствие фамилии в раннем деле **ничего не доказывает** о роде.
+The law of 1804 obliged Jews to adopt surnames, but it was carried out over decades, and a nickname was for a long time not hereditary.
+**Proven on the spot:** in the census of 1811 for one Podolian shtetl, three **full brothers**, sons of one father, are recorded under three different nicknames (conventionally **Feigel**, **Gross**, **Kravets**).
+→ The fingerprint for searching the early layer is the **combination "father + sons' names + ages"**, not the surname. A surname search here gives **false negative results**.
+→ And the reverse: the absence of a surname in an early file **proves nothing** about the family.
 
-## 🔑 Сословных списков в одном местечке бывает ДВА, с независимой нумерацией
+## 🔑 A shtetl can have TWO estate lists, with independent numbering
 
-В одном подольском местечке и в 1811, и в 1834 г. — отдельно **цеховые** (ремесленники), отдельно **мещане**, и **нумерация дворов во втором списке начинается заново с № 1**.
-· Читая «двор № 26», всегда уточнять, **в каком из списков**.
-· Если род известен по одному сословию — проверять **оба**: переход между сословиями был обычным делом. (В одном поиске: в 1811 г. семья (условно Фейгель) записана цеховой, в 1834 г. цеховой список цел, и этой семьи в нём нет.)
+In one Podolian shtetl, in both 1811 and 1834, there are **guild artisans** (*tsekhovye*) listed separately and **meshchane** separately, and **the numbering of households in the second list starts again from No. 1**.
+· When reading "household No. 26", always establish **in which of the lists**.
+· If the family is known in one estate, check **both**: transfer between estates was common. (In one search: in 1811 a family (conventionally Feigel) is recorded as guild artisans; in 1834 the guild list is intact, and this family is not in it.)
 
-## 🔑 Предыдущую ступень лестницы проверять арифметикой, а не календарём
+## 🔑 Check the previous rung of the ladder by arithmetic, not by the calendar
 
-Графа «по последней ревизии состояло — лета» **не всегда** отсылает к ожидаемому году.
-**Пример:** в деле 1811 г. по одному подольскому уезду она отсылает к **переписи 1806 года**, а не к ревизии 1795 г. Доказано трижды: разность граф **ровно +5** во всех строках; прямая цитата «по переписи 1806 года мещанъ ошибкою записанъ»; все выбытия датированы 1806–1811.
-→ **Считать разность граф — она и назовёт предыдущую ступень.** Между канонических ревизий бывают промежуточные переписи и дополнительные сказки.
+The column "по последней ревизии состояло — лета" [per the last revision there were — age] **does not always** point to the expected year.
+**Example:** in a file of 1811 for one Podolian uezd it points to the **census of 1806**, not to the revision of 1795. Proven three times: the difference between the columns is **exactly +5** in all rows; a direct quotation «по переписи 1806 года мещанъ ошибкою записанъ» [by the census of 1806 wrongly recorded as meshchane]; all departures are dated 1806–1811.
+→ **Calculate the difference between the columns: it will name the previous rung.** Between the canonical revisions there are interim censuses and supplementary lists.
 
-## ⚠️ Номер семьи действителен только внутри своей ревизии
+## ⚠️ A family number is valid only within its own revision
 
-Правило известное, но нарушается легко: номер из ревизии 1850 г. **нельзя** применять к ревизии 1834 г. Связь между ревизиями — **только через графу «по последней ревизии»**.
+A well-known rule, but easily broken: a number from the revision of 1850 **cannot** be applied to the revision of 1834. The link between revisions is **only through the column "по последней ревизии"**.
 
-## 🔑 Сначала вывести и прочитать ПЕЧАТНУЮ ШАПКУ таблицы
+## 🔑 First print out and read the PRINTED HEADER of the table
 
-Первая колонка возраста в ревизской сказке почти всегда относится к **предыдущей** ревизии, а не к текущей. Типичная шапка:
+The first age column in a revision list almost always refers to the **previous** revision, not the current one. A typical header:
 > «**По послѣдней ревизiи состояло и послѣ оной прибыло — Лѣта**» ‖ «Изъ того числа выбыло» ‖ «Нынѣ налицо»
+> [Per the last revision there were, and since then arrived — Age (years)] ‖ [Of those, departed] ‖ [Now present]
 
-**Ошибка в один столбец даёт сдвиг в 16 лет** — ровно межревизский интервал — и снимает верные версии как «не подходит по возрасту».
-Реальный случай: возраст «13» был принят за 1850 год, вышло род. 1837, версия отброшена; на самом деле это 1834 год, род. 1821, и всё сошлось с расхождением в один год.
-✅ Шапку **выводить и читать буквально**, прежде чем выписать хоть один возраст. И записывать возраст всегда с указанием года, к которому он относится.
+**A one-column error gives a shift of 16 years**, exactly the interval between revisions, and removes correct versions as "does not fit by age".
+A real case: the age "13" was taken as being for 1850, which gave a birth year of 1837, and the version was rejected; in fact it was 1834, born 1821, and everything agreed within a year.
+✅ **Print out and read the header literally** before copying out a single age. And always record an age together with the year it refers to.
 
-## 🔑 Две колонки номеров — готовый мост между ревизиями
+## 🔑 Two number columns: a ready bridge between revisions
 
-В сказках 1858 г. часто стоят **два номера семьи сразу: «№ 9 ревизiи» и «№ 10 ревизiи»**. Это прямая ссылка на предыдущую ревизию, и она:
-· позволяет **сверить выписки** по обеим ревизиям без гадания;
-· даёт арифметическую проверку: возраст должен вырасти ровно на межревизский интервал (1850→1858 = +8, по первой колонке +16).
+In the lists of 1858 there are often **two family numbers at once: «№ 9 ревизiи» and «№ 10 ревизiи»** [No. 9 of the revision, No. 10 of the revision]. This is a direct reference to the previous revision, and it:
+· lets you **cross-check the extracts** from both revisions without guessing;
+· gives an arithmetic check: the age must grow by exactly the interval between revisions (1850→1858 = +8; by the first column +16).
 
-## 🔑 Отсутствие сына у отца НЕ опровергает переход в другое общество
+## 🔑 A son's absence from his father's household does NOT refute a transfer to another community
 
-Сын, перечислившийся в другое общество **до** ревизии, в старом обществе **не значится вовсе** — он появляется в списке нового общества как «**прибылый**». Пометы «выбылъ» и «перечисленъ» ставят только тому, чей переход оформляли через эту самую сказку.
-→ Поэтому «в отцовском дворе его нет» — **ожидаемо при верной версии** и не является доводом против. Решают: предыдущая ревизия старого общества и **следующая ревизия нового** (там у прибылого часто указано, откуда причислен).
+A son who was transferred to another community **before** the revision is **not listed at all** in the old community: he appears in the list of the new community as "**arrived**" («прибылый»). The notes «выбылъ» [departed] and «перечисленъ» [transferred] are put only against someone whose transfer was processed through this very list.
+→ So "he is not in his father's household" is **expected if the version is right** and is no argument against it. What decides: the previous revision of the old community and **the next revision of the new one** (where the new arrival often has stated where he was registered from).
 
-## 🔑 Целые сказки дублируются внутри одного дела
+## 🔑 Whole lists are duplicated within one file
 
-Проверено на одном томе дважды: один и тот же раздел подшит дважды, разными писарями.
-⚠️ **Совпадение номера сказки в титуле — НЕДОСТАТОЧНЫЙ признак.** Один такой случай оказался ложным: под тем же номером шла совсем другая сказка. **Сверять содержание первых дворов**, а не только титул.
-→ **Всегда сверять титул, прежде чем считать страницы непрочитанными.** Иначе планируешь работу по страницам, которых нет, а заодно теряешь возможность сверить спорное чтение по второму почерку.
+Verified twice in one volume: the same section is bound in twice, by different clerks.
+⚠️ **A coincidence of the list number on the title page is an INSUFFICIENT sign.** One such case turned out to be false: under the same number ran a quite different list. **Compare the content of the first households**, not just the title.
+→ **Always compare the title page before counting pages as unread.** Otherwise you plan work on pages that do not exist, and lose the chance to cross-check a disputed reading against the second hand.
 
-## 🔑 Писари сами исправляли ошибки предыдущей ревизии — искать эти правки
+## 🔑 Clerks themselves corrected the errors of the previous revision: look for those corrections
 
-В ревизских сказках встречаются прямые оговорки вида:
-> «по ревизiи 1795 года написанъ **ошибкою** Маiорковъ, а настоящее его имя…»
-> «по ревизiи 1795 года написанъ отчествомъ **Ерцковымъ ошибочно**, а настоящее его имя Абрашка Цибербаркъ»
+Revision lists contain direct statements such as:
+> «по ревизiи 1795 года написанъ **ошибкою** Маiорковъ, а настоящее его имя…» [in the revision of 1795 he was written by mistake as Mayorkov, but his real name is…]
+> «по ревизiи 1795 года написанъ отчествомъ **Ерцковымъ ошибочно**, а настоящее его имя Абрашка Цибербаркъ» [in the revision of 1795 he was written with the patronymic Yertskov in error, but his real name is Abrashka Tsiberbark]
 
-Из этого следует три вещи:
-1. **Отчества в ранних ревизиях бывают неверны**, и это признано самими писарями. → **Сцеплять поколения по возрасту и составу двора, а не по одному отчеству.**
-2. Если у вашего человека стоит та же форма, которую в этом же деле правят у другого, **его отчество тоже под подозрением**.
-3. Такая оговорка — **прямое свидетельство, что предыдущая ревизия существовала** и лежала у писаря на столе. Полезно, когда её наличие под вопросом.
-✅ Искать в деле слова «ошибкою», «ошибочно», «а настоящее» — они выводят на самые информативные строки.
+Three things follow:
+1. **Patronymics in early revisions are sometimes wrong**, and this was admitted by the clerks themselves. → **Link generations by age and household composition, not by the patronymic alone.**
+2. If your person has the same form that is corrected for someone else in the same file, **his patronymic is also under suspicion**.
+3. Such a remark is **direct evidence that the previous revision existed** and lay on the clerk's table. Useful when its existence is in question.
+✅ Search the file for the words «ошибкою» [by mistake], «ошибочно» [in error], «а настоящее» [but the real]: they lead to the most informative lines.
 
-## ⚠️ Номера семей сравнимы только внутри ОДНОГО местечка и ОДНОГО источника
+## ⚠️ Family numbers are comparable only within ONE shtetl and ONE source
 
-Соблазн «родня жила рядом, значит номера дворов близки» работает **только в ревизской сказке**, где порядок географический.
-⚠️ В **рекрутских и призывных списках порядок задаётся очередью призыва**, а не улицей. Проверено на реальном деле: на одном кадре подряд идут местечко А № 203, местечко Б № 29, местечко А № 188, местечко В № 29 — две разные семьи под одним номером, из разных местечек.
-✅ Прежде чем сравнивать номера, **убедиться, что оба взяты из одного местечка и одного документа**. И помнить, что между ревизиями номера не переносятся.
+The temptation "relatives lived next to each other, so the household numbers are close" works **only in a revision list**, where the order is geographical.
+⚠️ In **recruit and draft lists the order is set by the conscription queue**, not by the street. Verified on a real file: on a single frame in a row come shtetl A No. 203, shtetl B No. 29, shtetl A No. 188, shtetl C No. 29: two different families under one number, from different shtetls.
+✅ Before comparing numbers, **make sure both are taken from the same shtetl and the same document**. And remember that numbers do not carry over between revisions.

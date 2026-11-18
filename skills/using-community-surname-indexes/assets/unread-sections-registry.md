@@ -1,25 +1,25 @@
-# Реестр непросмотренных разделов
+# Registry of unread sections
 
-Один файл на проект. Строка появляется, **как только дело прочитано не целиком**: читали один раздел, одно местечко, одну фамилию, часть кадров. Строка закрывается, когда раздел дочитан (пиши дату и результат, строку не удаляй).
+One file per project. A row appears **as soon as a file has been read only in part**: one section, one shtetl, one surname, some of the frames. A row is closed when the section has been finished (write the date and result; do not delete the row).
 
-**Правило:** каждую новую фамилию, место или имя сначала сверь с этим реестром, потом иди в указатели и базы.
+**Rule:** check every new surname, place or name against this registry first, and only then go to the indexes and databases.
 
-## Открытые разделы
+## Open sections
 
-| № | Дело (архив, фонд-опись-дело, год, тип) | Скан (файл / плёнка, всего кадров) | Что прочитано (кадры / листы / разделы) | Что НЕ прочитано (кадры / местечки / разделы) | По какой фамилии / цели читали | Когда, кто | Почему остановились | Какие фамилии могут быть в непрочитанном (из указателей) |
+| No. | File (archive, fond-inventory-file, year, type) | Scan (file / film, total frames) | What was read (frames / folios / sections) | What was NOT read (frames / shtetls / sections) | For which surname / goal | When, by whom | Why we stopped | Which surnames may be in the unread part (from indexes) |
 |---|---|---|---|---|---|---|---|---|
-| 1 (пример) | ДАКО 280-2-1490, ревизия 1858, Сквирский уезд | Commons, PDF, 660 стр. | стр. 1–515 (Сквира, Ружин) | стр. 516–660 (Паволочь) | [фамилия А] | 2026-09-xx, агент-чтец | закончили по фамилии А | [фамилия Б] — указатель j-roots, пост p=… |
+| 1 (example) | DAKO 280-2-1490, revision 1858, Skvyra uezd | Commons, PDF, 660 pp. | pp. 1–515 (Skvyra, Ruzhyn) | pp. 516–660 (Pavoloch) | [surname A] | 2026-09-xx, reader agent | finished for surname A | [surname B]: j-roots index, post p=… |
 | 2 | | | | | | | | |
 
-## Закрытые разделы
+## Closed sections
 
-| № | Дело | Раздел | Дочитано когда, кем | Результат (по каким фамилиям, найдено / нет, ссылка на запись в журнале) |
+| No. | File | Section | Finished when, by whom | Result (for which surnames, found / not found, link to the log entry) |
 |---|---|---|---|---|
 | | | | | |
 
-## Как заполнять
+## How to fill it in
 
-- Пиши **кадры PDF и листы дела**, если известны оба: агенту нужны кадры, ссылке — листы.
-- «Что прочитано» указывай по факту журнала покрытия, а не по памяти.
-- «По какой фамилии читали» обязательно: раздел, просмотренный ради фамилии А, для фамилии Б **не просмотрен**, если читали выборочно, а не сплошь с выпиской всех семей.
-- Если раздел читали сплошь и выписали все семьи — так и пиши «сплошь, все семьи»: тогда новую фамилию можно проверить по выписке, не открывая скан.
+- Write the **PDF frames and the file's folios** if both are known: the agent needs frames, a citation needs folios.
+- State "what was read" from the coverage log, not from memory.
+- "For which surname we read" is mandatory: a section looked through for surname A is **not looked through** for surname B if the reading was selective rather than straight through with all families extracted.
+- If a section was read straight through and all families were extracted, write exactly that: "straight through, all families". Then a new surname can be checked against the extract without opening the scan.

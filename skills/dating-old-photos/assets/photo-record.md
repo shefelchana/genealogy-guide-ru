@@ -1,43 +1,43 @@
-# Карточка фотографии
+# Photograph record card
 
-**Условный номер / файл:** (например, `фото_017_лицо.tif`, `фото_017_оборот.tif`)
-**Откуда, у кого оригинал:** (владелец, из какого альбома, рядом с какими снимками лежал)
-**Дата записи:** ГГГГ-ММ-ДД
+**Working number / file:** (e.g. `photo_017_front.tif`, `photo_017_back.tif`)
+**Where from, who holds the original:** (owner, from which album, next to which photographs it lay)
+**Date of entry:** YYYY-MM-DD
 
-## Физическое описание
-- Тип: (отпечаток на паспарту / ферротип / открытка / любительский снимок …)
-- Формат и размер, мм:
-- Картон: цвет, толщина, углы (скруглённые / прямые), край (золочёный / простой)
-- Ателье, город, адрес (как напечатано, дословно):
-- Медали, типография, прочая печать на обороте:
+## Physical description
+- Type: (print on a mount / ferrotype / postcard / amateur snapshot …)
+- Format and size, mm:
+- Cardboard: colour, thickness, corners (rounded / square), edge (gilded / plain)
+- Studio, city, address (as printed, word for word):
+- Medals, printer, other printing on the back:
 
-## Надписи (дословно, с орфографией; непрочитанное — в [ ])
-- Лицевая сторона:
-- Оборот:
-- Чем и кем, по-видимому, сделана (чернила того времени / поздняя ручка / карандаш):
+## Inscriptions (word for word, with spelling; unread parts in [ ])
+- Front:
+- Back:
+- With what and by whom apparently written (ink of the period / later pen / pencil):
 
-## Датировка по слоям
+## Dating by layers
 
-| Слой | Что видно | Рамка: не раньше | Рамка: не позже | Откуда сведение |
+| Layer | What is visible | Frame: not earlier than | Frame: not later than | Where the information comes from |
 |---|---|---|---|---|
-| Техника, формат | | | | |
-| Паспарту, оборот | | | | |
-| Ателье (справочник) | | | | |
-| Одежда, причёски | | | | образец для сравнения: |
-| Фон, реквизит | | | | |
-| Надпись | | | | |
+| Technique, format | | | | |
+| Mount, back | | | | |
+| Studio (directory) | | | | |
+| Clothing, hairstyles | | | | comparison sample: |
+| Background, props | | | | |
+| Inscription | | | | |
 
-**Итог:** около ____ – ____ гг. **Уверенность:** высокая / средняя / низкая. **Что спорит:**
+**Result:** around ____ – ____. **Confidence:** high / medium / low. **What disagrees:**
 
-## Кто на снимке
+## Who is in the photograph
 
-| Место на снимке | Кто, по гипотезе | Возраст на снимке (оценка) | Год рождения кандидата | Сходится? | Кто так считает / на чём основано |
+| Position in photo | Who, by hypothesis | Age in photo (estimate) | Candidate's birth year | Does it fit? | Who thinks so / on what basis |
 |---|---|---|---|---|---|
-| слева стоит | | | | | |
+| standing on the left | | | | | |
 
-**Альтернативные кандидаты и почему отвергнуты:**
+**Alternative candidates and why they were rejected:**
 
-## Что сделать дальше
-- [ ] проверить ателье по: FotoTikon / «Большой Русский Альбом» / Попов / адресные книги
-- [ ] найти подписанный снимок для сравнения:
-- [ ] спросить:
+## What to do next
+- [ ] check the studio in: FotoTikon / "Bolshoi Russkii Albom" / Popov / address books
+- [ ] find a captioned photograph for comparison:
+- [ ] ask:

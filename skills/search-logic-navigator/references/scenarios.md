@@ -1,153 +1,153 @@
-# Сценарии: что делать на каждой развилке
+# Scenarios: what to do at each decision point
 
-Каждый сценарий: **когда** — **шаги по порядку** — **чем закончить**. Общее правило: сначала запиши, что уже известно и где искали, потом один вопрос, потом поиск. Названия разделов руководства (если оно доступно) даны в конце сценариев.
+Each scenario has: **when** — **steps in order** — **how to finish**. General rule: first write down what is already known and where it has been searched, then one question, then the search. Titles of guide sections (if the guide is available) are given at the end of the scenarios.
 
-## Содержание
-- Старт: только имена · только фамилия и регион · эмигрантская ветка
-- Нашёл (в том числе находка агента)
-- Не нашёл / человек исчез
-- Много кандидатов
-- Документ не читается
-- Индекс против документа
-- Всё онлайн пройдено
-- Сайт не пускает
-- Особые задачи: гражданство · судьба погибшего · живые родственники
-
----
-
-## Старт
-
-### Знаю только имена бабушек и дедушек
-1. Собери домашнее: фото (подписи на обороте), свидетельства, паспорта, трудовые книжки, военные билеты, справки об эвакуации, письма и открытки с адресами.
-2. Запиши семейную память дословно, с пометкой «так говорит …». Особенно ценны города, профессии, войны, эвакуация, «родственники за границей».
-3. Найди **место**: где родились бабушки и дедушки (по паспортам, свидетельствам, анкетам). Для еврейских семей — местечко и уезд.
-4. Пройди советский пласт, он доступнее всего: военные базы, Яд ва-Шем (эвакокарточки, листы свидетельских показаний), книги памяти, «Открытый список», сканы книг ЗАГС, кладбищенские базы.
-5. От самого старого человека с известным местом — шаг назад: метрики, переписи, ревизии того места.
-
-**Итог:** таблица «человек — даты — место — источник». Руководство: «С чего начать», «Беседы с родственниками», «Старые фотографии».
-
-### Есть только фамилия и примерный регион
-1. Проверь фамилию по словарям фамилий (для еврейских — словари А. Бейдера; региональные словари): где она встречается.
-2. Ищи по индексам — **по региону**, а не по всей стране: JewishGen (все базы, фонетически), FamilySearch, деревья MyHeritage и Geni (только как подсказку).
-3. Выпиши все варианты написания: кириллица (включая дореформенную), латиница, идиш и иврит, польский, румынский, немецкий; искажения распознавания, включая потерю первой буквы.
-4. Ищи **кластеры**: где фамилия встречается многократно, там вероятное родовое гнездо.
-
-**Итог:** 1–3 кандидата на «место рода» для проверки по документам. Руководство: «Имена, фамилии, написания».
-
-### Начинаю с эмигрантской ветки
-Цепочка: свидетельство о смерти → перепись → натурализация → судовой список → название местечка → документы местечка. Сверяй имена попутчиков и адрес назначения: они часто ведут к родне. Навык `tracing-emigrants-to-origin`; руководство: «Эмиграция: от США к местечку».
+## Contents
+- Starting points: only names · only a surname and a region · the emigrant branch
+- Found it (including a finding brought by an agent)
+- Not found / the person has vanished
+- Many candidates
+- Document is illegible
+- Index versus document
+- Everything online has been checked
+- Site blocks access
+- Special tasks: citizenship · the fate of someone who died · living relatives
 
 ---
 
-## Нашёл
+## Starting points
 
-Сюда же — когда агент или другой ИИ принёс находку.
+### I know only my grandparents' names
+1. Gather what is at home: photographs (inscriptions on the back), certificates, passports, work record books, military ID cards, evacuation certificates, letters and postcards with addresses.
+2. Write down family memory word for word, marked "so says …". Especially valuable are cities, occupations, wars, evacuation, "relatives abroad".
+3. Find the **place**: where the grandparents were born (from passports, certificates, questionnaires). For Jewish families, the shtetl (*mestechko*) and the district (*uezd*).
+4. Work through the Soviet layer, which is the most accessible: military databases, Yad Vashem (evacuation cards, Pages of Testimony), memorial books, "Open List" (*Otkrytyi spisok*), scans of ZAGS (Soviet civil registry) books, cemetery databases.
+5. From the oldest person with a known place, take a step back: metrical books, censuses and revision lists of that place.
 
-1. **Открой скан сам** и выпиши дословную цитату в орфографии оригинала. Если находка пришла от ИИ, сверь буква в букву. Особенно осторожно с «ожидаемыми» именами: ИИ склонен видеть то, что ищет.
-2. **Проверь контекст записи**: шапку таблицы (какая колонка что значит), год и место тома, соседние записи. Слово «…скій мещ.» может означать мещанина местечка, а не фамилию.
-3. **Оформи находку**: дата записи, вопрос, источник с шифром, где скан (сайт, плёнка, кадр, ссылка), кроп, цитата, уверенность чтения, «проверено по скану: да».
-4. **Второй независимый признак.** Совпадение одной фамилии — не родство. Нужно ещё хотя бы одно: возраст, отчество, место, род занятий, имена родни. Индекс и скан одной и той же записи — это одно свидетельство, не два.
-5. **Разбери противоречия** явно: почему они не опровергают находку. Не отбрасывай молча.
-6. **Обнови файлы**: журнал находок, персоны, статус гипотезы (🟢 подтверждена / 🟡 открыта / ⚪ не проверена / 🔴 снята — с причиной), журнал поисков.
-7. **Только потом — в дерево.** И, когда вопрос закрыт, абзац для семейной истории.
+**Result:** a table "person — dates — place — source". Guide: "Where to start", "Interviewing relatives", "Old photographs".
 
-**Итог:** запись в журнале находок с цитатой и шифром; статус гипотезы; следующий вопрос. Навык `verifying-genealogy-findings`.
+### I have only a surname and an approximate region
+1. Check the surname against surname dictionaries (for Jewish names, A. Beider's dictionaries; regional dictionaries): where it occurs.
+2. Search the indexes **by region**, not across the whole country: JewishGen (all databases, phonetically), FamilySearch, MyHeritage and Geni trees (only as a hint).
+3. Write out all spelling variants: Cyrillic (including pre-reform), Latin, Yiddish and Hebrew, Polish, Romanian, German; OCR distortions, including the loss of the first letter.
+4. Look for **clusters**: where the surname occurs many times, that is the likely ancestral nest.
 
----
+**Result:** 1–3 candidates for the "place of origin" to check against documents. Guide: "Names, surnames, spellings".
 
-## Не нашёл / человек исчез
-
-Сначала проверь, не пропущен ли шаг маршрута: то ли место (уезд и губерния на нужный год), тот ли источник (сохранился ли том за эти годы, отснят ли, не лежит ли в чужой коллекции). Потом по очереди:
-
-1. **Написание**: все варианты; поиск без первой буквы (распознавание её «съедает»); другая огласовка; буквы, которые путаются в почерке (Б/В, Ш/Т, окончания «-ель/-еръ»).
-2. **Имя**: двойное имя записано половиной; русская форма вместо еврейской (Берко → Борис, Сруль → Израиль); второе имя. В советских документах — новое имя (Хаим → Ефим, Мойше → Михаил) и «переделанное» отчество детей. Проверь, не был ли человек крещён или кантонистом.
-3. **Сословие и приписка**: ищи там, где человек **числился**, а не где жил. Мещане и купцы в разных списках, цеховые отдельно.
-4. **Граница и эпоха**: территория могла принадлежать другому государству (например, юг Бессарабии в 1856–1878 гг. был в составе Румынии). Проверь подчинение места в нужный год и нет ли второго места с тем же названием.
-5. **Источник**: книга могла не сохраниться или не быть отснятой. Проверь по разрыву нумерации листов, не вырваны ли листы. Запиши это как результат («книга за 1869 год не отснята»), а не как «не нашёл».
-6. **Отсутствие внутри документа** имеет смысл, только если человек **обязан** был там быть. Сын, перечислившийся в другое общество, в отцовском дворе не значится, и это нормально. Ревизии 1719, 1744 и 1811 годов записывали только мужчин; в еврейских списках 1795 года женщин бывает неполно.
-7. **Проверь сам поиск на контрольной записи** — имени или слове, которое в этом томе точно есть. Не нашлась контрольная — сломан поиск, а не отсутствует человек.
-8. **Годы**: смотри не те годы, которые назвала семья, а **все сохранившиеся** годы книги или алфавита. Выписывай всех носителей фамилии, а не только искомого. Так находятся умершие в младенчестве братья и сёстры (запись о таком ребёнке бывает единственной, что датирует брак родителей), кузены и год переезда. Надя Липес так нашла пропавшую девочку: она была близнецом брата, чей год рождения в советских документах сдвинут на десять лет.
-9. **Шифр есть, а скана не видно**: для украинских архивов проверь шифр в сводном указателе «Качиний Інспектор» (навык `ukrainian-archives-on-commons`) — он показывает, выложено ли дело и где.
-10. **Книга могла попасть к соседям**: записи местечка подшиты в книги соседнего раввината или уездного города; при отсутствии казённого раввина метрики передавали в земский суд, иногда **другого уезда**. Проверь их, прежде чем писать «книг нет».
-11. **Нет записи о браке**: это не довод против брака. Пара могла не зарегистрироваться (по Н. Липес, регистрация у казённого раввина была платной [не проверено]) или венчаться в другом городе. Следующий шаг — книги соседних раввинатов.
-12. **По фамилии пусто, а место известно**: выпиши местечко целиком за окно лет и отсортируй по именам родителей (навык `tracing-revision-records`, раздел «выписать местечко целиком»).
-
-**Итог:** строка в журнале поисков с охватом, написаниями и способом; если ноль, то с пояснением, что он значит. Руководство: «Доказательность» (раздел «Не нашёл»), «Особые группы и смена имён», «Места и карты».
+### I am starting from the emigrant branch
+The chain: death certificate → census → naturalization → ship manifest → name of the shtetl → documents of the shtetl. Compare the names of fellow passengers and the destination address: they often lead to relatives. Skill `tracing-emigrants-to-origin`; guide: "Emigration: from the US to the shtetl".
 
 ---
 
-## Много кандидатов (однофамильцы)
+## Found it
 
-1. **Таблица кандидатов**: имя, отчество, возраст, место, род занятий, родня, источник.
-2. **Хронология каждого.** «Невозможное» отсекает лишних: мать слишком юная или старая, ребёнок через год после смерти отца, человек в двух местах сразу.
-3. **Отсекай по несовместимым признакам**: возраст (с допуском 2–5 лет для старых документов), отчество, место.
-4. **Ищи второй независимый признак** у оставшихся: имена детей, свидетели, адрес, профессия, попутчики.
-5. **Обычай имянаречения**: в ашкеназских семьях ребёнка называли в честь **умершего** родственника. Имена детей подсказывают поколение выше и примерное время смерти.
-6. **Не выбирай «самого похожего».** Если двое равны, держи обоих как гипотезы и запиши, какой документ решит вопрос.
-7. **Когда однофамилец — родня**: фамилия-топоним или фамилия-профессия по умолчанию не родство; одна и та же редкая ошибка писаря у двух записей — сильный довод за общее происхождение; ареал фамилии — по самым ранним ревизиям. Подробнее — навык `verifying-genealogy-findings`.
-8. **Полные тёзки «дядя — племянник»** близкого возраста — обычное дело (оба названы в честь одного умершего). Не сливай их в одного человека и не путай поколения.
+This is also the scenario for when an agent or another AI has brought a finding.
 
-**Итог:** гипотезы с основаниями и способом проверки для каждого оставшегося кандидата. Руководство: «План, хронология, путеводитель по месту».
+1. **Open the scan yourself** and write out a word-for-word quotation in the original spelling. If the finding came from an AI, check it letter by letter. Be especially careful with "expected" names: an AI tends to see what it is looking for.
+2. **Check the context of the entry**: the table header (which column means what), the year and place of the volume, the neighbouring entries. The word "…скій мещ." (*-skii meshch.*, "meshchanin of …") may mean a townsman of a shtetl, not a surname.
+3. **Write up the finding**: date of the entry, question, source with its archival reference, where the scan is (site, film, frame, link), the crop, the quotation, confidence in the reading, "checked against the scan: yes".
+4. **A second independent identifier.** A match on one surname is not kinship. You need at least one more: age, patronymic, place, occupation, names of relatives. The index and the scan of the same entry count as one piece of evidence, not two.
+5. **Work through contradictions** explicitly: why they do not refute the finding. Do not discard them silently.
+6. **Update the files**: findings log, persons file, hypothesis status (🟢 confirmed / 🟡 open / ⚪ not checked / 🔴 withdrawn — with the reason), search log.
+7. **Only then into the tree.** And, when the question is closed, a paragraph for the family history.
 
----
-
-## Документ не читается
-
-1. Возьми **исходный скан**, а не превью. Для PDF — встроенное изображение, а не перекодированную картинку. Увеличь нужную колонку.
-2. Найди **шапку таблицы**: какая колонка что значит. Возраст «по прошлой ревизии» — не возраст сейчас.
-3. **Сравни почерк** в соседних записях: как этот писарь пишет Р, К, Ш, Т.
-4. **Проверь прочтение фамилии по словарю** (для еврейских фамилий — словари Бейдера). Если формы нет ни в одном словаре, скорее всего, это ошибка чтения; но словари не исчерпывают всех фамилий.
-5. Поищи **второй экземпляр** документа (у метрик и ревизий их было несколько) или вторую съёмку.
-6. Спроси сообщество (форумы, группы, ViewMate) или другой ИИ как «второе мнение» — и всё равно проверь сам.
-
-**Итог:** прочтение с пометкой уверенности, «(?)» на спорных местах и объяснением, что мешает. Навык `reading-archive-scans`; руководство: «Почерки, транслитерация, даты».
+**Result:** an entry in the findings log with the quotation and archival reference; the hypothesis status; the next question. Skill `verifying-genealogy-findings`.
 
 ---
 
-## Индекс против документа
+## Not found / the person has vanished
 
-1. **Верь документу.** Индекс — подсказка, где искать.
-2. Проверь, не перепутаны ли поля в индексе (отец жениха вместо отца невесты, место вместо фамилии).
-3. Запиши расхождение в журнал находок: что в индексе, что на скане, ссылки на оба. Это поможет другим и тебе самому через месяц.
-4. Если расхождение в имени или возрасте значимо для гипотезы, пересмотри её статус.
+First check that no step of the route has been skipped: is it the right place (district and province for the year in question), the right source (did the volume survive for those years, has it been filmed, is it perhaps in someone else's collection). Then, one by one:
 
-**Итог:** запись с обеими версиями и ссылкой на скан как основной источник.
+1. **Spelling**: all variants; a search without the first letter (OCR "eats" it); another vocalization; letters that are confused in handwriting (Б/В [B/V], Ш/Т [Sh/T], the endings «-ель/-еръ» [-el/-er]).
+2. **Given name**: a double name recorded by only one half; a Russian form instead of the Jewish one (Berko → Boris, Srul → Israel); a second name. In Soviet documents, a new name (Khaim → Efim, Moishe → Mikhail) and a "reworked" patronymic for the children. Check whether the person was baptized or was a cantonist.
+3. **Estate and registration**: look where the person was **registered**, not where they lived. Meshchane (townsmen) and merchants appear in different lists, guild artisans separately.
+4. **Border and era**: the territory may have belonged to another state (for example, the south of Bessarabia in 1856–1878 was part of Romania). Check which jurisdiction the place was under in the year in question and whether there is a second place with the same name.
+5. **Source**: the book may not have survived or may not have been filmed. Check by gaps in folio numbering whether leaves are missing. Record this as a result ("the book for 1869 has not been filmed"), not as "not found".
+6. **Absence inside a document** means something only if the person **had to** be there. A son who transferred to another community is not listed in his father's household, and that is normal. The revisions of 1719, 1744 and 1811 recorded only men; in the Jewish lists of 1795 women are sometimes incomplete.
+7. **Test the search itself on a control record** — a name or word that is certainly in this volume. If the control record is not found, the search is broken; it does not mean the person is absent.
+8. **Years**: look not at the years the family named but at **all surviving** years of the book or alphabetical index. Write out all bearers of the surname, not only the one you want. This is how you find siblings who died in infancy (an entry for such a child is sometimes the only thing that dates the parents' marriage), cousins and the year of a move. Nadia Lipes found a missing girl this way: she was the twin of a brother whose birth year is shifted by ten years in Soviet documents.
+9. **There is an archival reference but no scan in sight**: for Ukrainian archives, check the reference in the consolidated index "Kachynyi Inspektor" (skill `ukrainian-archives-on-commons`) — it shows whether the file has been posted and where.
+10. **The book may have gone to neighbours**: a shtetl's entries are bound into the books of a neighbouring rabbinate or district town; where there was no crown rabbi (*kazyonny ravvin*), metrical records were passed to the *zemsky sud* (rural court), sometimes **of another district**. Check them before writing "no books exist".
+11. **No marriage record**: this is not an argument against a marriage. The couple may not have registered (according to N. Lipes, registration with the crown rabbi was paid [not verified]) or may have married in another city. The next step is the books of neighbouring rabbinates.
+12. **Nothing under the surname, but the place is known**: write out the whole shtetl for a window of years and sort by parents' names (skill `tracing-revision-records`, section "write out the whole shtetl").
 
----
-
-## Всё онлайн пройдено
-
-Сначала проверь по журналу поисков, действительно ли всё: все написания, все годы, сами сканы, а не только индексы. Потом:
-
-1. **Боковые линии**: братья, сёстры, свояки, свидетели на свадьбах, моэли и крёстные. Их документы могут содержать твоих.
-2. **Окружение (FAN — friends, associates, neighbors)**: соседи по дому, компаньоны, поручители. Люди переезжали группами.
-3. **Другой тип источника**: газеты (объявления, списки жертвователей), справочники (купцы, врачи, адвокаты), учебные заведения, суды, нотариат, полиция иностранцев. Цепочка заменителей по Н. Липес: нет метрик — губернская перепись; нет её — городская; нет и её — **полицейские дела** губернского правления (паспорта, высылки, бродяжничество), они сохранились лучше всего. Ещё: налоговые списки, списки домовладельцев, рекрутские списки, **списки избирателей казённого раввина**. Дети одной семьи могли родиться в разных губерниях, и их метрики лежат в разных архивах, даже если семья помнит «никуда не уезжали».
-4. **Эмигрантская родня**: американские и европейские документы часто называют местечко и родителей.
-5. **ДНК**: тест и работа с совпадениями. Решение о тесте и загрузке данных принимает человек.
-6. **Новые оцифровки**: проверь, не появились ли новые описи и сканы (Commons, сайты архивов, FamilySearch).
-7. **Письмо в архив** — когда пункты выше пройдены и записаны. Адресное, с точным шифром; решение и отправка — за человеком; текст помоги составить, если человек попросит.
-8. **Отложить** и записать открытые вопросы. Через полгода могут появиться новые оцифровки.
-
-**Итог:** список следующих направлений по приоритету, а в журнале — что именно пройдено. Руководство: «Доказательность» (принцип FAN), «ДНК», «Запросы в архивы и письма».
+**Result:** a line in the search log with the coverage, spellings and method; if it is a zero, with a note of what it means. Guide: "Standard of proof" (section "Not found"), "Special groups and name changes", "Places and maps".
 
 ---
 
-## Сайт не пускает (капча, блокировка, гео-ограничение)
+## Many candidates (namesakes)
 
-1. **Остановись.** Не повторяй запросы подряд: это продлевает блокировку.
-2. **Капчу проходит человек** в той же вкладке. ИИ её не проходит и не обходит.
-3. **Работай медленнее**: одно обращение в 5–10 секунд, перерывы, **один исполнитель на сайт**. Не качай плёнку целиком.
-4. **Гео-ограничения**: некоторые российские государственные сайты не открываются из-за рубежа или через VPN, бывает и наоборот. Попробуй без VPN, из подходящей страны или попроси знакомых. Защиту не обходи.
-5. **Ищи тот же материал в другом месте**: FamilySearch ↔ сайт архива ↔ Wikimedia Commons ↔ archive.org.
-6. **Проверь «тихие» сбои**: некоторые формы молча игнорируют поля или не отправляются после капчи. Проверь на контрольном запросе.
-7. **Сайт на WordPress отвечает ошибкой на обычную страницу** (например, 406 на запрос без браузера): его открытый REST-адрес иногда отдаёт те же публичные тексты — `<сайт>/wp-json/wp/v2/posts?per_page=100`, поиск — `?search=<слово>`. Так читались блоги исследователей и базы на WordPress. Только чтение публичных записей; если REST закрыт, просит вход или капчу — не обходи.
+1. **A table of candidates**: given name, patronymic, age, place, occupation, relatives, source.
+2. **A timeline for each.** The "impossible" eliminates the extras: a mother too young or too old, a child born a year after the father's death, a person in two places at once.
+3. **Eliminate by incompatible identifiers**: age (with a tolerance of 2–5 years for old documents), patronymic, place.
+4. **Look for a second independent identifier** among those who remain: names of children, witnesses, address, profession, fellow travellers.
+5. **The naming custom**: in Ashkenazi families a child was named after a **deceased** relative. The children's names point to the generation above and the approximate time of death.
+6. **Do not choose "the most similar".** If two are equal, keep both as hypotheses and write down which document will decide the question.
+7. **When a namesake is a relative**: a toponymic or occupational surname does not by default mean kinship; the same rare clerk's error in two entries is a strong argument for common origin; the range of a surname is judged from the earliest revisions. More in the skill `verifying-genealogy-findings`.
+8. **Full namesakes "uncle — nephew"** of similar age are common (both named after the same deceased person). Do not merge them into one person and do not mix up the generations.
 
-**Итог:** пометка в журнале, где остановились (кадр, запрос), и что ждёт человека. Руководство: «Доступ, капчи, темп».
+**Result:** hypotheses with grounds and a way of checking each remaining candidate. Guide: "Plan, timeline, place guide".
 
 ---
 
-## Особые задачи
+## Document is illegible
 
-- **Гражданство или репатриация**: документы на каждое поколение, официальные копии, сведение разных написаний имён. Руководство: «Гражданство по происхождению».
-- **Судьба погибшего, репрессированного, умершего в блокаду**: военные и мемориальные базы по регионам; при искажённой фамилии — поиск по имени, году и месту рождения. Руководство: «Война, репрессии, блокада».
-- **Живые дальние родственники**: ДНК, эмигрантские ветки, чужие деревья как подсказка, вежливые короткие письма однофамильцам (отправляет человек). Неожиданный результат ДНК — бережно. Руководство: «Чужие деревья, сообщества, исследователи», «Этика и сохранение».
+1. Take the **original scan**, not the preview. For a PDF, the embedded image, not a re-encoded picture. Enlarge the column you need.
+2. Find the **table header**: which column means what. An age "by the last revision" is not the age now.
+3. **Compare the handwriting** in neighbouring entries: how this clerk writes Р, К, Ш, Т (R, K, Sh, T).
+4. **Check the reading of the surname against a dictionary** (for Jewish surnames, Beider's dictionaries). If the form is in no dictionary, it is most likely a misreading; but dictionaries do not cover every surname.
+5. Look for a **second copy** of the document (metrical books and revisions existed in several copies) or a second filming.
+6. Ask the community (forums, groups, ViewMate) or another AI for a "second opinion" — and still check it yourself.
+
+**Result:** a reading with a confidence note, "(?)" at doubtful places and an explanation of what gets in the way. Skill `reading-archive-scans`; guide: "Handwriting, transliteration, dates".
+
+---
+
+## Index versus document
+
+1. **Trust the document.** The index is a hint about where to look.
+2. Check whether the fields in the index are mixed up (the groom's father instead of the bride's, a place instead of a surname).
+3. Record the discrepancy in the findings log: what is in the index, what is on the scan, links to both. It will help others and yourself a month from now.
+4. If the discrepancy in a name or an age matters for the hypothesis, reconsider its status.
+
+**Result:** an entry with both versions and a link to the scan as the primary source.
+
+---
+
+## Everything online has been checked
+
+First check against the search log whether everything really has been: all spellings, all years, the scans themselves and not only the indexes. Then:
+
+1. **Side lines**: brothers, sisters, brothers-in-law, witnesses at weddings, mohels and godparents. Their documents may contain yours.
+2. **Associates (FAN — friends, associates, neighbors)**: neighbours in the house, business partners, guarantors. People moved in groups.
+3. **A different type of source**: newspapers (announcements, donor lists), directories (merchants, doctors, lawyers), educational institutions, courts, notaries, the police registration of foreigners. The chain of substitutes according to N. Lipes: no metrical books — the provincial census; no census — the city census; no city census either — the **police files** of the provincial administration (passports, expulsions, vagrancy), which survived best. Also: tax lists, lists of house owners, recruit lists, **voter lists of the crown rabbi**. Children of one family may have been born in different provinces, and their records lie in different archives even if the family remembers "they never moved".
+4. **Emigrant relatives**: American and European documents often name the shtetl and the parents.
+5. **DNA**: a test and work with the matches. The decision about a test and uploading data is the human's.
+6. **New digitizations**: check whether new inventories and scans have appeared (Commons, archive sites, FamilySearch).
+7. **A letter to the archive** — when the points above have been done and logged. Targeted, with the exact archival reference; the decision and the sending are the human's; help with the text if the person asks.
+8. **Set it aside** and write down the open questions. In six months new digitizations may appear.
+
+**Result:** a list of next directions in order of priority, and in the log, what exactly has been covered. Guide: "Standard of proof" (the FAN principle), "DNA", "Requests to archives and letters".
+
+---
+
+## Site blocks access (CAPTCHA, block, geo-restriction)
+
+1. **Stop.** Do not repeat requests one after another: this prolongs the block.
+2. **A human solves the CAPTCHA** in the same tab. The AI neither solves nor bypasses it.
+3. **Work more slowly**: one request every 5–10 seconds, breaks, **one worker per site**. Do not download a whole film.
+4. **Geo-restrictions**: some Russian government sites do not open from abroad or through a VPN, and sometimes the other way round. Try without a VPN, from a suitable country, or ask acquaintances. Do not circumvent the protection.
+5. **Look for the same material elsewhere**: FamilySearch ↔ the archive's site ↔ Wikimedia Commons ↔ archive.org.
+6. **Check for "silent" failures**: some forms quietly ignore fields or do not submit after the CAPTCHA. Test with a control query.
+7. **A WordPress site returns an error for an ordinary page** (for example 406 for a request without a browser): its open REST address sometimes serves the same public texts — `<site>/wp-json/wp/v2/posts?per_page=100`, search with `?search=<word>`. This is how researchers' blogs and WordPress-based databases have been read. Read public posts only; if REST is closed, asks for a login or a CAPTCHA, do not bypass it.
+
+**Result:** a note in the log of where you stopped (frame, query) and what is waiting for the human. Guide: "Access, CAPTCHAs, pace".
+
+---
+
+## Special tasks
+
+- **Citizenship or repatriation**: documents for every generation, official copies, reconciling different spellings of names. Guide: "Citizenship by descent".
+- **The fate of someone who died, was repressed, or died in the Leningrad siege**: military and memorial databases by region; if the surname is distorted, search by given name, year and place of birth. Guide: "War, repression, the siege".
+- **Living distant relatives**: DNA, emigrant branches, other people's trees as a hint, polite short letters to namesakes (sent by the human). Handle an unexpected DNA result with care. Guide: "Other people's trees, communities, researchers", "Ethics and preservation".

@@ -1,71 +1,71 @@
-# Матрица обязательных документов для семьи
+# Matrix of required documents for a family
 
-Как пользоваться: отметь годы жизни семьи, сословие, место приписки, место проживания и занятие. Пройди таблицы сверху вниз и перенеси в карточку семьи (`assets/family-card.md`) каждую строку, которая к ней относится. Колонка «По какому адресу» говорит, где искать: по месту **приписки** (П) или **проживания** (Ж).
+How to use: note the years of the family's life, estate, place of registration, place of residence and occupation. Go through the tables from top to bottom and transfer to the family card (`assets/family-card.md`) every line that applies. The column "At which address" says where to look: by place of **registration** (R, *pripiska*) or **residence** (L, *zhitelstvo*).
 
-Сохранность везде неполная. Строка «обязан быть» значит, что документ создавался; сохранился ли он, проверяй по каталогам и описям (навык `ukrainian-archives-on-commons`, `identifying-places`).
+Preservation is incomplete everywhere. The phrase "must exist" means the document was created; whether it survives, check in catalogues and inventories (skills `ukrainian-archives-on-commons`, `identifying-places`).
 
-## 1. Основа: все сословия, Российская империя
+## 1. The basics: all estates, Russian Empire
 
-| Тип документа | Годы | По какому адресу | Что даёт | Обязан содержать семью, если… |
+| Document type | Years | At which address | What it gives | Must contain the family if... |
 |---|---|---|---|---|
-| Ревизские сказки (V–X ревизии) | 1795, 1811, 1816, 1834, 1850, 1858 (+ дополнительные) | П | состав двора, возраст «по прошлой ревизии», выбывшие с годом | семья податного сословия числилась в обществе; 1811 — только мужчины |
-| Дела о перечислении, причислении, приписке | весь XIX век | П (оба общества) | откуда и куда перешла семья | семья сменила общество или сословие |
-| Рекрутские (очередные) списки | до 1874 | П | мужчины по очереди, возраст | в семье были мужчины призывного возраста |
-| Посемейные списки | 1870-е | П | семья с отсылкой к ревизии 1858 года | семья числилась в обществе после 1858 |
-| Призывные списки; у евреев — военная перепись 1875 года | с 1874 | П | возраст (иногда «по виду»), номер семьи по прошлой ревизии, **члены семьи, живущие отдельно — где и по какому документу** | в семье были мужчины, родившиеся примерно с 1850-х |
-| Списки по «Временным правилам» 1882 года | 1880-е | Ж | кто жил в селе вне местечка | семья жила в сельской местности |
-| Метрические книги (рождения, браки, разводы, смерти) | у евреев в основном с 1840–1850-х до 1919–1920 | Ж (иногда раввинат приписки) | даты, родители, свидетели, приписка | всегда; смотри **все** сохранившиеся годы |
-| Списки избирателей казённого раввина; приговоры о выборах | XIX — нач. XX века | Ж / П | взрослые мужчины общины | мужчина был членом общины |
-| Перепись 1897 года | 1897 | Ж | состав по месту жительства, приписка, занятие, грамотность | всегда, но местные экземпляры уцелели лишь по части уездов |
-| Местные переписи (например, перепись евреев Киева 1876 г. — по рассказу Н. Липес [не проверено]) | разные | Ж | семья в городе, часто без права жительства | семья жила в городе |
-| Полицейские дела губернского правления: паспорта, высылки, право жительства | весь период | Ж | адреса, переезды, родственники | семья жила вне черты или вне места приписки |
-| Списки избирателей в Государственную думу | 1906–1912 | Ж | взрослые мужчины с цензом | мужчина имел имущественный ценз |
-| Пресса: губернские ведомости, еврейская пресса, «Сенатские объявления» | весь период | Ж | торги, несостоятельность, вызовы наследников, пожертвования, некрологи | у семьи было имущество, дело или конфликт |
-| Справочники: «Вся Россия», памятные книжки, адрес-календари | 1850-е — 1917 | Ж | занятие, адрес, год за годом | семья вела дело или служила |
+| Revision lists (*revizskie skazki*, 5th-10th revisions) | 1795, 1811, 1816, 1834, 1850, 1858 (+ additional) | R | household composition, age "by the last revision", those who left, with the year | a family of a tax-paying estate was listed in the society; 1811: men only |
+| Files on transfer, assignment, registration | the whole 19th century | R (both societies) | where the family came from and went to | the family changed society or estate |
+| Recruit (turn) lists | until 1874 | R | men by turn, age | the family had men of draft age |
+| Family lists (*posemeinye spiski*) | 1870s | R | the family with a reference to the 1858 revision | the family was listed in the society after 1858 |
+| Draft lists; for Jews, the military census of 1875 | from 1874 | R | age (sometimes "by appearance"), family number from the last revision, **family members living separately: where and by which document** | the family had men born from about the 1850s |
+| Lists under the "Temporary Rules" of 1882 | 1880s | L | who lived in the village outside the shtetl | the family lived in the countryside |
+| Metrical books (births, marriages, divorces, deaths) | for Jews mostly from the 1840s-1850s to 1919-1920 | L (sometimes the rabbinate of registration) | dates, parents, witnesses, registration | always; look at **all** surviving years |
+| Voter lists for the crown rabbi; election sentences | 19th to early 20th century | L / R | adult men of the community | the man was a member of the community |
+| 1897 census | 1897 | L | composition by place of residence, registration, occupation, literacy | always, but local copies survive only for some uezds |
+| Local censuses (for example the 1876 census of the Jews of Kyiv, per N. Lipes [not verified]) | various | L | the family in town, often without the right of residence | the family lived in a town |
+| Police files of the guberniya administration: passports, expulsions, right of residence | the whole period | L | addresses, moves, relatives | the family lived outside the Pale or outside the place of registration |
+| Voter lists for the State Duma | 1906-1912 | L | adult men with a property qualification | the man had a property qualification |
+| Press: guberniya gazettes, Jewish press, "Senate announcements" (*Senatskie obyavleniya*) | the whole period | L | auctions, insolvency, summonses to heirs, donations, obituaries | the family had property, a business or a conflict |
+| Directories: "All Russia" (*Vsya Rossiya*), memorial books, address calendars | 1850s-1917 | L | occupation, address, year by year | the family ran a business or was in service |
 
-## 2. Добавки по сословию и занятию
+## 2. Additions by estate and occupation
 
-| Занятие / сословие | Документы | Где |
+| Occupation / estate | Documents | Where |
 |---|---|---|
-| **Купцы** | гильдейские свидетельства, списки объявленных капиталов, купеческие списки | казённая палата, городская дума; справочники |
-| **Цеховые ремесленники** | цеховые списки (часто отдельными делами по цехам), ремесленные управы | фонд ремесленной управы, ревизии цеховых |
-| **Лес, аренда, мельницы, лесопильни** | нотариальные договоры аренды, купли леса, доверенности; судебные иски; объявления о торгах | нотариальные архивы губерний, окружной суд, губернские ведомости; бумаги владельцев имений |
-| **Торговля** | торговые свидетельства, иски по векселям, несостоятельность | казённая палата, коммерческий / окружной суд, «Сенатские объявления» |
-| **Медицина, фармация** | «Российский медицинский список» погодно, дипломы, личные дела студентов | справочники, университетские фонды |
-| **Учащиеся** | личные дела студентов и гимназистов (метрическое свидетельство, свидетельство о приписке) | фонды университетов и учебных округов |
-| **Земледельцы-колонисты** | списки колоний, дела попечительства | фонды попечительных комитетов |
-| **Служители культа** | выборы казённого раввина, жалованье, жалобы | губернское правление, раввинат |
+| **Merchants** | guild certificates, lists of declared capital, merchant lists | treasury chamber, city duma; directories |
+| **Guild artisans** | guild lists (often separate files by guild), artisans' boards | fond of the artisans' board, revisions of guild members |
+| **Timber, leases, mills, sawmills** | notarial lease contracts, purchases of timber, powers of attorney; court suits; announcements of auctions | notarial archives of the guberniyas, district court, guberniya gazettes; papers of estate owners |
+| **Trade** | trade certificates, suits on promissory notes, insolvency | treasury chamber, commercial / district court, "Senate announcements" |
+| **Medicine, pharmacy** | the "Russian Medical List" year by year, diplomas, personal files of students | directories, university fonds |
+| **Students** | personal files of students and gymnasium pupils (metrical certificate, certificate of registration) | fonds of universities and educational districts |
+| **Agricultural colonists** | lists of colonies, files of the guardianship | fonds of the guardianship committees |
+| **Religious functionaries** | elections of the crown rabbi, salary, complaints | guberniya administration, rabbinate |
 
-## 3. 1914–1922: война, революция, погромы
+## 3. 1914-1922: war, revolution, pogroms
 
-| Тип | Что даёт | Навык |
+| Type | What it gives | Skill |
 |---|---|---|
-| Списки потерь Первой мировой | ранения, плен, гибель с уездом | `verifying-genealogy-findings` (полнотекст) |
-| Беженцы 1915–1917 | откуда и куда выселены | — |
-| Базы и фонды погромов (ДАКО Р-3050, ЦДАВО ф. 2497 и др.) | убитые, раненые, **получатели помощи 1922 г. с адресами**, сироты в детдомах | `searching-pogrom-records` |
-| Раввинат и ЗАГС 1918–1922 местечка **и ближайшего большого города** | смерти от насилия, тифа, голода | `soviet-era-records` |
+| Casualty lists of the First World War | wounded, prisoners, killed, with uezd | `verifying-genealogy-findings` (full text) |
+| Refugees 1915-1917 | where from and where expelled | none |
+| Pogrom databases and fonds (DAKO R-3050, TsDAVO fond 2497 and others) | killed, wounded, **recipients of aid in 1922 with addresses**, orphans in children's homes | `searching-pogrom-records` |
+| Rabbinate and ZAGS 1918-1922 of the shtetl **and the nearest large town** | deaths from violence, typhus, hunger | `soviet-era-records` |
 
-## 4. Советский период
+## 4. The Soviet period
 
-| Тип | Что даёт | Навык |
+| Type | What it gives | Skill |
 |---|---|---|
-| ЗАГС: рождения, браки, смерти — все сохранившиеся годы | новые имена, переезды, умершие младенцы; в 1928–1933 гг. документов у родителей часто не спрашивали — расхождения в именах ожидаемы | `soviet-era-records`, `ukrainian-archives-on-commons` |
-| Похозяйственные книги, личные дела, трудовые и учебные документы | состав семьи, адреса | `soviet-era-records` |
-| Военные документы 1941–1945 | место рождения, адрес родных | `soviet-era-records` |
-| Эвакуационные карточки 1941–1942 | кто выехал вместе: готовый список родни | `soviet-era-records` |
-| Следственные дела | анкета, родственники, иногда паспорт и письма | `soviet-era-records` |
+| ZAGS: births, marriages, deaths, all surviving years | new names, moves, infants who died; in 1928-1933 parents were often not asked for documents, so name discrepancies are to be expected | `soviet-era-records`, `ukrainian-archives-on-commons` |
+| Household books, personal files, work and study documents | family composition, addresses | `soviet-era-records` |
+| Military documents 1941-1945 | place of birth, address of relatives | `soviet-era-records` |
+| Evacuation cards 1941-1942 | who left together: a ready list of relatives | `soviet-era-records` |
+| Investigation files | questionnaire, relatives, sometimes a passport and letters | `soviet-era-records` |
 
-## 5. Холокост и эмиграция
+## 5. The Holocaust and emigration
 
-| Тип | Что даёт | Навык |
+| Type | What it gives | Skill |
 |---|---|---|
-| Листы свидетельских показаний, книги памяти, списки гетто | кто погиб, кем приходился подавшему | `soviet-era-records` |
-| Судовые списки, натурализация, переписи США и других стран | место происхождения, к кому ехал | `tracing-emigrants-to-origin` |
-| Землячества и их помощь родным (1920-е) | связь американской ветки с конкретной семьёй в местечке | `tracing-emigrants-to-origin`, `searching-pogrom-records` |
+| Pages of Testimony, memorial books, ghetto lists | who perished, relationship to the submitter | `soviet-era-records` |
+| Ship manifests, naturalization, censuses of the USA and other countries | place of origin, whom the person was joining | `tracing-emigrants-to-origin` |
+| Landsmanshaftn and their aid to relatives (1920s) | link between the American branch and a specific family in the shtetl | `tracing-emigrants-to-origin`, `searching-pogrom-records` |
 
-## 6. Как превратить матрицу в план
+## 6. How to turn the matrix into a plan
 
-1. Выпиши строки, относящиеся к семье, в карточку.
-2. Для каждой строки: каталог / опись → есть ли дело → есть ли указатель → есть ли скан.
-3. Отметь, что сохранилось, а что утрачено (и чем это подтверждено).
-4. Начни с дешёвых строк: указатели, полнотекст, базы; затем — сплошное чтение по одному делу на исполнителя.
+1. Copy the lines that apply to the family into the card.
+2. For each line: catalogue / inventory → is there a file → is there an index → is there a scan.
+3. Note what survives and what is lost (and how this is confirmed).
+4. Start with the cheap lines: indexes, full text, databases; then reading every page, one file per worker.

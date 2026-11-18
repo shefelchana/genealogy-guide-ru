@@ -1,74 +1,74 @@
 ---
 name: genealogy-intake
-description: Runs the first conversation with a person who is starting a family-history search or has just handed the assistant this guide — asks, in small batches, about names, dates, places, documents and photos at home, legends, relatives abroad, the goal (family story, citizenship, DNA, living relatives, fate of a war victim), languages, site access and accounts; sets up the project files from templates; turns what is known into a person–dates–place–source table; formulates the first research question with a stop condition; and proposes a concrete plan for the first one to two weeks. Use when someone begins genealogy research and the project has no files yet — even if the user only says "хочу найти предков", "с чего начать", "вот всё, что я знаю о бабушке", "прочитай руководство и помоги", "ищу деда, погибшего на войне". NOT for a project that already has its files — to resume after a break use research-session-handoff, to run the next research round use organizing-genealogy-research.
+description: Runs the first conversation with a person who is starting a family-history search or has just handed the assistant this guide — asks, in small batches, about names, dates, places, documents and photos at home, legends, relatives abroad, the goal (family story, citizenship, DNA, living relatives, fate of a war victim), languages, site access and accounts; sets up the project files from templates; turns what is known into a person–dates–place–source table; formulates the first research question with a stop condition; and proposes a concrete plan for the first one to two weeks. Use when someone begins genealogy research and the project has no files yet — even if the user only says "I want to find my ancestors", "where do I start", "here is everything I know about my grandmother", "read the guide and help me", "I am looking for my grandfather who was killed in the war". NOT for a project that already has its files — to resume after a break use research-session-handoff, to run the next research round use organizing-genealogy-research. Also triggers on Russian requests: «хочу найти предков», «с чего начать», «вот всё, что я знаю о бабушке», «прочитай руководство и помоги», «ищу деда, погибшего на войне».
 ---
 
-# Первый разговор: от «хочу найти предков» к первому вопросу и плану
+# The first conversation: from "I want to find my ancestors" to a first question and a plan
 
-Человек в начале поиска обычно приносит смесь: точные даты, обрывки легенд, фотографии без подписей и большое желание «узнать всё». Задача первого разговора — разложить это на проверяемое и непроверенное, завести файлы и выбрать **один** вопрос, с которого начнётся работа. Сам поиск по сайтам начинай после этого. Без опоры поиск превращается в метание между базами.
+A person at the start of a search usually brings a mixture: exact dates, scraps of legend, unlabelled photographs and a strong wish to "find out everything". The job of the first conversation is to sort this into verifiable and unverified, set up the files, and pick **one** question to start the work with. Start searching websites only after that. Without a foundation, searching turns into dashing between databases.
 
-## Если человек дал ссылку на руководство
+## If the person gave a link to the guide
 
-Прочитай сначала инструкцию для агента AGENTS.md и карту llms.txt — они задают правила и порядок работы; затем по необходимости разделы «С чего начать», «Как вести файлы», «Доказательность» и «Сценарии: что делать, если…». Остальное открывай, когда понадобится. Скажи человеку одной фразой, что прочитал и как будешь работать. Если руководство недоступно, работай по этому навыку: в нём есть всё нужное для первой беседы.
+First read the agent instructions AGENTS.md and the llms.txt map: they set the rules and the order of work. Then, as needed, the sections "Where to start", "How to keep files", "Standard of proof" and "Scenarios: what to do if…". Open the rest when it is needed. Tell the person in one sentence that you have read it and how you will work. If the guide is unavailable, work from this skill: it has everything needed for the first conversation.
 
-## Как вести разговор
+## How to run the conversation
 
-- **Спрашивай блоками по 3–5 вопросов**, а не анкетой из сорока пунктов. После каждого блока коротко повтори, что понял. Человек поправит, и ошибка не уйдёт в файлы.
-- **Начни с цели и с того, что человек уже знает.** Технические вопросы о доступах и аккаунтах задай позже.
-- **Записывай дословно и с пометкой источника**: «так говорит мама, разговор 12.03.2026». Названия мест — как их произносит рассказчик: домашнее название местечка может отличаться от официального, и это зацепка.
-- **Легенды — гипотезы, а не факты.** Не спорь и не отбрасывай. Запиши как гипотезу со статусом ⚪ (не проверена). В легендах часто путаются поколения и даты, но верная деталь бывает: место, профессия, родня за границей.
-- **Не обещай результата.** Скажи честно, что многое зависит от сохранности документов по месту.
-- **Тяжёлые темы** (война, Холокост, репрессии) затрагивай бережно и не настаивай.
-- **Если живы люди старшего поколения, их расспросы — первый пункт плана**: откладывать нельзя («Ам а-Зикарон»). Полезно разделить разговор на генеалогический (даты, браки, переезды, документы, фото) и биографический (характер, события). Спроси и про **очень дальних** родственников: у них часто хранится то, чего нет у близких. Расхождения между рассказами — зацепки, их записывают, а не сглаживают.
+- **Ask in batches of 3–5 questions**, not a forty-item questionnaire. After each batch, briefly repeat what you understood. The person will correct you, and the error will not reach the files.
+- **Start with the goal and with what the person already knows.** Ask the technical questions about access and accounts later.
+- **Record verbatim and with a note of the source**: "so says Mum, conversation of 12.03.2026". Write place names as the narrator pronounces them: the home name of a shtetl (*mestechko*) may differ from the official one, and that is a lead.
+- **Legends are hypotheses, not facts.** Do not argue and do not discard. Record them as a hypothesis with status ⚪ (not verified). Legends often confuse generations and dates, but a true detail does turn up: a place, a trade, relatives abroad.
+- **Do not promise a result.** Say honestly that much depends on how well the documents for the place have survived.
+- **Heavy subjects** (war, the Holocaust, repression) are touched gently and without insistence.
+- **If people of the older generation are alive, interviewing them is the first item of the plan**: it cannot be postponed (*Am a-Zikaron*). It helps to split the talk into a genealogical one (dates, marriages, moves, documents, photos) and a biographical one (character, events). Ask about **very distant** relatives too: they often keep what close ones do not. Discrepancies between accounts are leads; they are recorded, not smoothed over.
 
-Полный список вопросов по блокам — в `references/intake-questions.md`. Открой его перед беседой и выбирай то, что подходит к ситуации. Задавать все вопросы не нужно.
+The full list of questions by block is in `references/intake-questions.md`. Open it before the conversation and choose what fits the situation. There is no need to ask all the questions.
 
-## Что обязательно выяснить
+## What must be found out
 
-1. **Цель.** От неё зависит, какие документы нужны:
-   - история семьи для родных — достаточно сканов и цитат;
-   - гражданство или репатриация — нужны документы на **каждое поколение** и официальные копии, а разные написания имён придётся сводить;
-   - ДНК — что уже сдано и где (без загрузки сырых данных куда-либо по твоей инициативе);
-   - судьба погибшего или пропавшего — начинать с военных и мемориальных баз;
-   - живые родственники — ДНК, эмигрантские ветки, сообщества.
-2. **Люди**: самый старший человек, о котором есть хоть один документ, и его родители по рассказам.
-3. **Места**: где родились и жили, с уездом и губернией, если известны. Место важнее фамилии: оно определяет архив и набор сохранившихся документов.
-4. **Что лежит дома**: документы, фото с подписями, письма с адресами, трудовые книжки, военные билеты, справки об эвакуации. Попроси сфотографировать и прислать, а оригиналы не трогать.
-5. **Эмигрантские ветки**: кто уехал, куда и когда. Документы другой страны часто прямо называют местечко и родителей.
-6. **Языки**: на каких человек читает. Документы бывают на русском дореформенном, украинском, польском, румынском, идише, иврите, немецком.
-7. **Доступы**: страна проживания и VPN (некоторые сайты закрыты из-за рубежа или через VPN); в каких сервисах уже есть аккаунты (JewishGen, FamilySearch, MyHeritage и др.); есть ли у тебя доступ к папке на компьютере и к браузеру.
-8. **Время и бюджет**: сколько вечеров в неделю, готов ли платить за подписки или копии. Многое бесплатно, и платить за то, что лежит открыто, не нужно.
+1. **The goal.** It determines which documents are needed:
+   - a family history for relatives: scans and quotations are enough;
+   - citizenship or repatriation: documents for **every generation** and official copies are needed, and different spellings of names will have to be reconciled;
+   - DNA: what has already been tested and where (without uploading raw data anywhere on your own initiative);
+   - the fate of someone killed or missing: start with military and memorial databases;
+   - living relatives: DNA, emigrant branches, communities.
+2. **People**: the oldest person for whom there is at least one document, and his or her parents according to family accounts.
+3. **Places**: where they were born and lived, with uezd (district) and guberniya (province) if known. The place matters more than the surname: it determines the archive and the set of surviving documents.
+4. **What lies at home**: documents, photographs with captions, letters with addresses, work record books, military IDs, evacuation certificates. Ask the person to photograph and send them, and not to touch the originals.
+5. **Emigrant branches**: who left, where and when. Documents of another country often name the shtetl and the parents directly.
+6. **Languages**: which the person reads. Documents come in pre-reform Russian, Ukrainian, Polish, Romanian, Yiddish, Hebrew, German.
+7. **Access**: country of residence and VPN (some sites are closed from abroad or through a VPN); which services already have accounts (JewishGen, FamilySearch, MyHeritage and others); whether you have access to a folder on the computer and to the browser.
+8. **Time and budget**: how many evenings a week, whether the person is ready to pay for subscriptions or copies. Much is free, and there is no need to pay for what lies open.
 
-**Про аккаунты спрашивай только «есть ли».** Пароли не проси и не принимай. Если человек присылает пароль в чат, скажи, что он не нужен, и посоветуй его сменить. Вход, капчи, оплату и отправку писем человек делает сам, в своём браузере.
+**About accounts, ask only "do you have one".** Do not ask for or accept passwords. If the person sends a password into the chat, say it is not needed and advise changing it. Logging in, CAPTCHAs, payment and sending letters are done by the person, in their own browser.
 
-## Заведение файлов проекта
+## Setting up the project files
 
-Создай папку проекта (с согласия человека и там, где он скажет) и файлы из `assets/project-files.md`: журнал находок, персоны, гипотезы, журнал поисков, реестр источников, хронология, «Продолжать отсюда». Почему это важно с первого дня: новая сессия ИИ не помнит прошлую, а человек через месяц не вспомнит, где уже искал. Если у тебя нет доступа к папке (обычный чат), не делай вид, что файлы заведены: в конце каждого ответа давай блок «Записать в файлы» для человека (AGENTS.md, раздел 3а). Всё, что прозвучало в беседе, раздели так:
-- имена, даты и места **с документом** → в персоны и хронологию, с пометкой, какой документ;
-- рассказы и легенды → в гипотезы (⚪) и в персоны с пометкой «со слов …»;
-- что прислано (сканы, фото) → в реестр источников; файлы назови понятно: `год_тип_кто.jpg`.
+Create the project folder (with the person's consent and where they say) and the files from `assets/project-files.md`: findings log, persons, hypotheses, search log, source registry, timeline, "Continue from here". Why this matters from day one: a new AI session does not remember the previous one, and a month later the person will not remember where they already searched. If you have no access to a folder (an ordinary chat), do not pretend the files exist: at the end of every answer give a "Write to the files" block for the person (AGENTS.md, section 3a). Divide everything that came up in the conversation like this:
+- names, dates and places **with a document** → into persons and timeline, noting which document;
+- stories and legends → into hypotheses (⚪) and into persons with the note "according to …";
+- what was sent (scans, photos) → into the source registry; name the files clearly: `year_type_who.jpg`.
 
-## Первая сводная таблица
+## The first summary table
 
-Собери таблицу «человек — даты — место — источник» по каждому, о ком что-то известно. В графе «источник» честно пиши «рассказ мамы», если документа нет. Эта таблица сразу показывает, где опора есть, а где только память.
+Build a "person — dates — place — source" table for everyone about whom anything is known. In the "source" column honestly write "Mum's account" if there is no document. This table at once shows where there is a foundation and where there is only memory.
 
-Затем **наложи на таблицу события эпохи** по годам и местам (совет Н. Липес): войны, погромы, эвакуация, смены границ, призыв. Часть легенд сразу перестаёт сходиться по датам, и видно, каких документов не хватает. Это эвристика, а не приговор легенде: несовпадение — повод проверить, а не отбросить.
+Then **lay the events of the era over the table** by years and places (advice from N. Lipes): wars, pogroms, evacuation, border changes, conscription. Some legends immediately stop adding up by date, and you can see which documents are missing. This is a heuristic, not a verdict on the legend: a mismatch is a reason to check, not to discard.
 
-## Первый вопрос
+## The first question
 
-Выбери **один** вопрос с критерием ответа и условием остановки. Хороший первый вопрос:
-- про человека, у которого известно **место** (лучше с уездом);
-- решается доступным источником: советский и военный пласт ближе и доступнее дореволюционного; эмигрантские документы часто называют место прямо;
-- даёт шаг на поколение назад, а не прыжок через три.
+Choose **one** question with an answer criterion and a stop condition. A good first question:
+- concerns a person whose **place** is known (better with the uezd);
+- can be solved with an available source: the Soviet and military layer is closer and more accessible than the pre-revolutionary one; emigrant documents often name the place outright;
+- takes one generation back, rather than a leap over three.
 
-Плохо: «узнать больше о прадеде». Хорошо: «где родился дед, 1912 г. р.: найти его в базах участников войны и эвакокарточках; остановиться после трёх баз». Покажи человеку два-три варианта первого вопроса и дай выбрать.
+Bad: "find out more about my great-grandfather". Good: "where was grandfather, born 1912, born: look for him in the databases of war participants and in evacuation cards; stop after three databases". Show the person two or three variants of the first question and let them choose.
 
-## План на 1–2 недели
+## A plan for 1–2 weeks
 
-Заполни `assets/first-plan.md` и покажи человеку. В плане раздели, что делает он (найти документы дома, расспросить родных, войти в аккаунты, решить про ДНК) и что делаешь ты (поиск по базам, путеводитель по месту, хронология). Цель плана скромная: к концу двух недель есть таблица по всем известным людям, путеводитель по главному месту и ответ на первый вопрос, положительный или «не найдено» с охватом. В путеводитель входит **карта сохранности**: какие документы по месту и годам есть, а какие утрачены, — это проверяют до поиска конкретного человека.
+Fill in `assets/first-plan.md` and show it to the person. In the plan separate what the person does (find documents at home, interview relatives, log in to accounts, decide about DNA) from what you do (search the databases, a place guide, a timeline). The goal of the plan is modest: by the end of two weeks there is a table for all known people, a guide to the main place, and an answer to the first question, positive or "not found" with coverage. The guide includes a **survival map**: which documents exist for the place and years and which are lost; this is checked before searching for a specific person.
 
-## Чем закончить разговор
+## How to end the conversation
 
-Коротко перескажи: что записано, какой первый вопрос, что человеку сделать до следующей встречи, что сделаешь ты. Обнови «Продолжать отсюда», чтобы следующая сессия начала с этого места.
+Briefly retell: what has been recorded, what the first question is, what the person should do before the next meeting, what you will do. Update "Continue from here" (CONTINUE-FROM-HERE.md) so that the next session starts from this point.
 
-См. также навыки: `organizing-genealogy-research` (как вести исследование дальше), `research-session-handoff` (возобновить проект после перерыва), `search-logic-navigator` (куда идти от вопроса), `tracing-emigrants-to-origin` (если есть эмигрантская ветка).
+See also the skills: `organizing-genealogy-research` (how to carry the research on), `research-session-handoff` (resume a project after a break), `search-logic-navigator` (where to go from a question), `tracing-emigrants-to-origin` (if there is an emigrant branch).

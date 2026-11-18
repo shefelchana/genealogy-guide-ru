@@ -1,60 +1,60 @@
-# Справочники мест и старые карты
+# Gazetteers and old maps
 
-Читай на шаге «кандидаты» и при поиске исчезнувшего села. Пометки: **[стр]** — страница прочитана (2026); **[по выдаче]** — сведения из поисковой выдачи или чужого обзора, перед ссылкой проверь сам.
+Read at the "candidates" step and when searching for a vanished village. Markers: **[page]** means the page was read (2026); **[from search results]** means information from search results or someone else's survey: check it yourself before citing.
 
-## 1. Поиск по звучанию (начинай отсюда)
+## 1. Search by sound (start here)
 
-| Справочник | Что даёт | Ограничения |
+| Gazetteer | What it gives | Limitations |
 |---|---|---|
-| **JewishGen Communities Database** (jewishgen.org/Communities) | более 6000 еврейских общин: варианты названий, в том числе идишские; **подчинение по эпохам** (около 1900, между войнами, после войны, сейчас); численность; ссылки на базы и KehilaLinks [стр] | только места с еврейской общиной; эпохи — крупные срезы, не точный год |
-| **JewishGen Gazetteer** | более 2,4 млн населённых пунктов Европы, Северной Африки и Ближнего Востока (на странице поиска — более 4 млн в 63 странах); поиск по Daitch-Mokotoff Soundex и **по радиусу** от известного города; координаты [стр] | названия в основном в современной латинской форме; может потребовать бесплатный вход в JewishGen (входит человек) |
-| **Where Once We Walked** (Mokotoff, Sack, Sharon) | более 23 500 мест с довоенным еврейским населением, 17 500 альтернативных названий, координаты [стр: avotaynu.com] | бумажная книга, платно |
-| **Steve Morse One-Step** (stevemorse.org) | транслитерация русский ↔ латиница, Soundex [стр] | не справочник мест, а инструмент вариантов |
+| **JewishGen Communities Database** (jewishgen.org/Communities) | more than 6,000 Jewish communities: name variants, including Yiddish ones; **jurisdiction by era** (about 1900, interwar, post-war, present); population; links to databases and KehilaLinks [page] | only places with a Jewish community; the eras are broad slices, not an exact year |
+| **JewishGen Gazetteer** | more than 2.4 million localities of Europe, North Africa and the Middle East (the search page says more than 4 million in 63 countries); search by Daitch-Mokotoff Soundex and **by radius** from a known town; coordinates [page] | names mostly in the modern Latin form; may require a free JewishGen login (a human logs in) |
+| **Where Once We Walked** (Mokotoff, Sack, Sharon) | more than 23,500 places with a pre-war Jewish population, 17,500 alternative names, coordinates [page: avotaynu.com] | a paper book, paid |
+| **Steve Morse One-Step** (stevemorse.org) | transliteration Russian ↔ Latin, Soundex [page] | not a gazetteer but a tool for variants |
 
-## 2. Российская империя: точные справочники
+## 2. Russian Empire: exact gazetteers
 
-| Справочник | Что даёт | Ограничения |
+| Gazetteer | What it gives | Limitations |
 |---|---|---|
-| **«Списки населённых мест Российской империи»** (ЦСК МВД, по губерниям, по сведениям 1859–1870-х) | губерния → уезд → стан → поселение; тип поселения, число дворов и жителей, расстояние до уездного города [стр: FamilySearch Wiki «Russian Empire Gazetteers» — ссылки на цифровые копии по губерниям] | **без знания губернии не использовать**; Царства Польского нет |
-| **Губернские «Списки населённых мест»** и памятные книжки губерний (конец XIX — начало XX века) | более поздние состояния, волости; для Подолии — списки «по еврейским обществам» (Президентская библиотека), список 1905 года [по выдаче] | Президентская библиотека из-за рубежа может не открываться |
-| **«Волости и важнейшие селения Европейской России»** (1880-е) | волостное деление [по выдаче] | только важнейшие селения |
-| **«Населённые места Российской империи в 500 и более жителей»** (по переписи 1897) | крупные пункты с населением и вероисповеданием [по выдаче] | малых сёл нет |
-| **М. Фасмер, Russisches Geographisches Namenbuch** (11 томов) | самый полный перечень названий с отсылками к источникам [стр: FamilySearch Wiki] | только бумага, библиотеки |
-| **Справочники уездов и волостей по губерниям** (например, ukrfamily.com.ua, genealogy-ua.com для Подолии) | состав волостей поимённо — быстрый способ различить одноимённые сёла [по выдаче] | вторичные, сверяй с изданием эпохи |
-| **«Зведений каталог метричних книг»** (Украина, 10 томов в 15 книгах на Commons) | какие метрики по селу сохранились и где; заодно показывает приход и уезд | метрики, а не справочник мест; ЦДІАК не охвачен; в томах 1–10 нет Львовской обл. |
+| **"Lists of Populated Places of the Russian Empire"** (*Spiski naselyonnykh mest Rossiiskoi imperii*; Central Statistical Committee of the Ministry of Internal Affairs, by guberniya, based on data of 1859-1870s) | guberniya → uezd → stan → settlement; type of settlement, number of households and inhabitants, distance to the uezd town [page: FamilySearch Wiki "Russian Empire Gazetteers", with links to digital copies by guberniya] | **do not use without knowing the guberniya**; the Kingdom of Poland is not in them |
+| **Guberniya "Lists of Populated Places"** and memorial books of guberniyas (late 19th to early 20th century) | later states, volosts; for Podolia, lists "by Jewish societies" (Presidential Library), a list of 1905 [from search results] | the Presidential Library may not open from abroad |
+| **"Volosts and the most important villages of European Russia"** (1880s) | volost division [from search results] | only the most important villages |
+| **"Populated places of the Russian Empire with 500 or more inhabitants"** (from the 1897 census) | large settlements with population and religion [from search results] | no small villages |
+| **M. Vasmer, Russisches Geographisches Namenbuch** (11 volumes) | the fullest list of names with references to sources [page: FamilySearch Wiki] | paper only, libraries |
+| **Directories of uezds and volosts by guberniya** (for example ukrfamily.com.ua, genealogy-ua.com for Podolia) | volost composition village by village, a quick way to tell same-named villages apart [from search results] | secondary; check against the edition of the era |
+| **"Consolidated Catalogue of Metrical Books"** (*Zvedenyi katalog metrychnykh knyh*; Ukraine, 10 volumes in 15 books on Commons) | which metrical books survive for a village and where; it also shows the parish and uezd | metrical books, not a gazetteer; TsDIAK is not covered; volumes 1-10 do not include the Lviv oblast |
 
-## 3. Польша, Галиция, Пруссия, Беларусь, Бессарабия
+## 3. Poland, Galicia, Prussia, Belarus, Bessarabia
 
-- **Słownik geograficzny Królestwa Polskiego** (1880–1905) — Царство Польское, Галиция, западные губернии; статьи о сёлах и местечках с историей и принадлежностью.
-- **Указатель мест JRI-Poland** — губерния, координаты, какие метрики проиндексированы.
-- **Kartenmeister** — населённые пункты бывших прусских провинций, поиск по немецкому и польскому названию [стр].
-- **Gesher Galicia** — карты и материалы по Галиции; метрики мелких местечек велись по **метрическим округам**: запись может лежать в книге соседнего, более крупного места [по выдаче]. Часть баз с сентября 2026 закрыта за членство (по опыту; объявления на сайте не найдено — не проверено).
-- **Radzima.org** — справочник мест Беларуси с историческими картами [по FamilySearch].
-- **Bessarabia Geographical Dictionary** (Bessarabia SIG) — места Бессарабии, где жили или торговали евреи; Excel или PDF [по FamilySearch].
-- **Pinkas HaKehillot** (Яд ва-Шем) — энциклопедия общин; том «Румыния» включает Бессарабию, английский перевод на JewishGen [по выдаче].
+- **Słownik geograficzny Królestwa Polskiego** (1880-1905): the Kingdom of Poland, Galicia, the western guberniyas; entries on villages and shtetls with history and jurisdiction.
+- **JRI-Poland town index**: guberniya, coordinates, which metrical records are indexed.
+- **Kartenmeister**: localities of the former Prussian provinces, search by German and Polish name [page].
+- **Gesher Galicia**: maps and materials on Galicia; the metrical books of small shtetls were kept by **metrical districts**: the record may lie in the book of a neighbouring, larger place [from search results]. Part of the databases has been closed behind membership since September 2026 (from experience; no announcement was found on the site, so not verified).
+- **Radzima.org**: a gazetteer of places in Belarus with historical maps [from FamilySearch].
+- **Bessarabia Geographical Dictionary** (Bessarabia SIG): places in Bessarabia where Jews lived or traded; Excel or PDF [from FamilySearch].
+- **Pinkas HaKehillot** (Yad Vashem): an encyclopedia of communities; the volume "Romania" includes Bessarabia, with an English translation on JewishGen [from search results].
 
-## 4. Что должно было сохраниться
+## 4. What should have survived
 
-- **Routes to Roots** и книга **М. Вайнер, *Jewish Roots in Ukraine and Moldova*** — опись сохранившихся документов по местечкам с архивами и годами. Онлайн-форма в 2026 году не отдавала результатов; книга есть на archive.org, но только во временную выдачу (нужен вход).
-- **KehilaLinks** — сайты местечек: история, фото, списки фамилий, карты.
+- **Routes to Roots** and Miriam Weiner's book ***Jewish Roots in Ukraine and Moldova***: an inventory of surviving documents by shtetl with archives and years. The online form returned no results in 2026; the book is on archive.org but only for temporary lending (login needed).
+- **KehilaLinks**: shtetl sites with history, photos, lists of surnames, maps.
 
-## 5. Старые карты
+## 5. Old maps
 
-| Карта | Где пригодна | Где взять |
+| Map | Where useful | Where to get it |
 |---|---|---|
-| **Трёхвёрстка** (военно-топографическая, 3 версты в дюйме) | западные и центральные губернии, Бессарабия; детальна, есть хутора и мельницы | etomesto.ru (наложение на современную карту, в том числе трёхвёрстка Бессарабии) [по выдаче] |
-| **Карты Менде** (межевые атласы губерний, середина XIX века) | только часть центральных губерний России | etomesto.ru и подобные [по выдаче] |
-| **Карта Стрельбицкого** (10 вёрст в дюйме, 1860–1870-е) | вся Европейская Россия, крупные пункты | [по выдаче] |
-| **Межевые карты уездов и дач** | границы владений, исчезнувшие хутора | областные архивы, РГАДА [по выдаче] |
-| **Карты РККА 1:100 000** (1920–1940-е) | советский период, сёла накануне войны | [по выдаче] |
-| **WIG** (Военный географический институт Польши, 1:10 000 – 1:500 000) | межвоенная Польша, включая западные Украину и Беларусь | архив карт WIG [стр: блог «From Shepherds and Shoemakers»] |
-| **Mapster** | карты XV–XX веков; поиск всех карт с нужным пунктом | [стр: там же] |
-| **Arcanum Maps** | австро-венгерские съёмки; старая карта поверх современной с регулируемой прозрачностью | [стр: там же] |
-| **Австро-венгерские карты 1:200 000** | Галиция, Буковина, приграничье | [стр: там же] |
-| **Easteurotopo** | Центральная и Восточная Европа конца XVIII — начала XX века | [по выдаче] |
+| **Three-verst map** (military topographic, 3 versts to an inch) | western and central guberniyas, Bessarabia; detailed, shows khutors and mills | etomesto.ru (overlay on a modern map, including the three-verst map of Bessarabia) [from search results] |
+| **Mende maps** (survey atlases of guberniyas, mid-19th century) | only some of the central guberniyas of Russia | etomesto.ru and similar [from search results] |
+| **Strelbitsky map** (10 versts to an inch, 1860s-1870s) | all of European Russia, large settlements | [from search results] |
+| **Survey maps of uezds and estates** | boundaries of holdings, vanished khutors | oblast archives, RGADA (Russian State Archive of Ancient Acts) [from search results] |
+| **Red Army maps 1:100,000** (1920s-1940s) | Soviet period, villages on the eve of the war | [from search results] |
+| **WIG** (Military Geographical Institute of Poland, 1:10,000 to 1:500,000) | interwar Poland, including western Ukraine and Belarus | WIG map archive [page: the blog "From Shepherds and Shoemakers"] |
+| **Mapster** | maps of the 15th to 20th centuries; finds all maps with a given locality | [page: same] |
+| **Arcanum Maps** | Austro-Hungarian surveys; an old map over a modern one with adjustable transparency | [page: same] |
+| **Austro-Hungarian maps 1:200,000** | Galicia, Bukovina, border areas | [page: same] |
+| **Easteurotopo** | Central and Eastern Europe, late 18th to early 20th century | [from search results] |
 
-Совет для польских и галицийских названий: ищи и **с диакритикой, и без неё** (Łódź и Lodz).
+A tip for Polish and Galician names: search both **with and without diacritics** (Łódź and Lodz).
 
-## 6. Как записывать результат карты
+## 6. How to record the result of a map
 
-Название карты, год, масштаб, лист, ссылка; координаты найденного пункта и по каким соседям он опознан. Без этого через месяц нельзя будет проверить, то ли это место.
+The map's name, year, scale, sheet, link; the coordinates of the locality found and by which neighbours it was identified. Without this, a month later it will be impossible to check whether it is the right place.

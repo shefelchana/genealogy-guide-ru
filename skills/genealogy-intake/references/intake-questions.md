@@ -1,59 +1,59 @@
-# Вопросы для первой беседы
+# Questions for the first conversation
 
-Задавай блоками по 3–5 вопросов и выбирай подходящие к ситуации. После блока повтори, что понял. Ответы записывай дословно, с пометкой, кто сказал и когда.
+Ask in batches of 3–5 and pick those that fit the situation. After a batch, repeat what you understood. Write the answers down verbatim, noting who said it and when.
 
-## Блок 1. Цель и ожидания
-- Что хотите узнать в первую очередь: кто были предки, откуда семья, судьба конкретного человека?
-- Для чего: история для детей и родных, документы для гражданства или репатриации, ДНК, поиск живых родственников, памятник погибшему?
-- Есть ли срок (подача документов, семейное событие)?
-- Сколько времени в неделю готовы уделять? Готовы ли платить за подписки или копии документов?
+## Block 1. Goal and expectations
+- What do you want to find out first: who the ancestors were, where the family came from, the fate of a particular person?
+- What for: a story for children and relatives, documents for citizenship or repatriation, DNA, finding living relatives, a memorial for someone killed?
+- Is there a deadline (filing documents, a family event)?
+- How much time a week can you give? Are you ready to pay for subscriptions or copies of documents?
 
-## Блок 2. Что известно о людях
-- Кто самый старший родственник, о котором есть хоть один документ? Как его звали полностью, когда и где он родился?
-- Его родители и братья-сёстры: имена, хотя бы примерно годы.
-- Как человека звали дома, как в документах и как в синагоге или церкви (если применимо)? Не меняли ли имя или фамилию?
-- Профессии, учёба, служба: врач, учитель, купец, ремесленник, военный? Для многих профессий есть справочники эпохи.
-- Кто ещё в семье может что-то знать или хранить бумаги?
+## Block 2. What is known about the people
+- Who is the oldest relative for whom there is at least one document? What was his or her full name, and when and where was he or she born?
+- That person's parents and siblings: names, at least approximate years.
+- What was the person called at home, in documents, and in the synagogue or church (if applicable)? Was the first name or surname ever changed?
+- Occupations, education, service: doctor, teacher, merchant, craftsman, soldier? For many occupations there are directories of the period.
+- Who else in the family may know something or keep papers?
 
-## Блок 3. Места
-- Где родились и жили бабушки, дедушки, прадеды? Как место называли дома?
-- Известны ли уезд, губерния, район, область?
-- Переезды: откуда, куда, когда, почему?
-- Эвакуация, оккупация, депортация, ссылка — где семья была в войну?
+## Block 3. Places
+- Where were grandparents and great-grandparents born and where did they live? What was the place called at home?
+- Are the uezd (district), guberniya (province), raion, oblast known?
+- Moves: from where, to where, when, why?
+- Evacuation, occupation, deportation, exile: where was the family during the war?
 
-Время спрашивай через события, а не через годы: «до войны или после?», «до свадьбы?», «сколько вам было лет?». Так вспоминают охотнее.
+Ask about time through events, not years: "before the war or after?", "before the wedding?", "how old were you?". People recall more readily that way.
 
-## Блок 4. Что лежит дома
-- Свидетельства о рождении, браке, смерти; паспорта; трудовые книжки; военные билеты; дипломы.
-- Справки об эвакуации, похоронки, письма с фронта, наградные документы.
-- Фотографии с подписями на обороте (кто, где, когда).
-- Письма и открытки с адресами, записные книжки, вырезки из газет.
-- Попроси сфотографировать каждую вещь целиком и с обеих сторон. Оригиналы не реставрировать, не вклеивать; на обороте фото писать только карандашом.
+## Block 4. What lies at home
+- Birth, marriage and death certificates; passports; work record books; military IDs; diplomas.
+- Evacuation certificates, death notices, letters from the front, award documents.
+- Photographs with captions on the back (who, where, when).
+- Letters and postcards with addresses, notebooks, newspaper clippings.
+- Ask for each item to be photographed whole and on both sides. Do not restore originals or glue them in; write on the back of a photo only in pencil.
 
-## Блок 5. Легенды и семейная память
-- Что в семье рассказывают о происхождении фамилии, о «знатном» или «богатом» предке, о родне за границей?
-- Есть ли истории о войне, погромах, бегстве, смене фамилии?
-- Кто рассказывал и от кого сам это слышал?
+## Block 5. Legends and family memory
+- What does the family say about the origin of the surname, about a "noble" or "rich" ancestor, about relatives abroad?
+- Are there stories about the war, pogroms, flight, a change of surname?
+- Who told them, and from whom did that person hear them?
 
-Каждую легенду запиши как гипотезу со статусом ⚪ (не проверена): что утверждается, кто рассказал, как можно проверить.
+Record every legend as a hypothesis with status ⚪ (not verified): what is claimed, who told it, how it can be checked.
 
-## Блок 6. Эмигрантские ветки
-- Кто уехал: в США, Канаду, Аргентину, Палестину или Израиль, Западную Европу? Когда примерно?
-- Переписывались ли? Сохранились ли письма, конверты, фото оттуда?
-- Известны ли имена потомков там?
+## Block 6. Emigrant branches
+- Who left: to the USA, Canada, Argentina, Palestine or Israel, Western Europe? Roughly when?
+- Did they correspond? Do letters, envelopes, photographs from there survive?
+- Are the names of descendants there known?
 
-## Блок 7. ДНК
-- Сдавал ли кто-то из семьи ДНК-тест? Где (MyHeritage, 23andMe, FamilyTreeDNA, AncestryDNA, другое)?
-- Нужна ли помощь с выбором теста или с совпадениями?
-- Номера китов, сырые данные и списки совпадений в чат не присылать без необходимости. Загружать данные в новые сервисы человек решает сам.
+## Block 7. DNA
+- Has anyone in the family taken a DNA test? Where (MyHeritage, 23andMe, FamilyTreeDNA, AncestryDNA, other)?
+- Do you need help choosing a test or with matches?
+- Do not send kit numbers, raw data and match lists into the chat unless necessary. The person decides themselves about uploading data to new services.
 
-## Блок 8. Языки и доступы
-- На каких языках читаете? Нужна ли помощь с дореформенной орфографией, польским, румынским, идишем, ивритом, немецким?
-- В какой стране вы сейчас? Пользуетесь ли VPN? Некоторые российские государственные сайты не открываются из-за рубежа, бывает и наоборот.
-- В каких сервисах уже есть аккаунт: JewishGen, FamilySearch, MyHeritage, Geni, Ancestry, форумы? Пароли не нужны: вход человек делает сам в своём браузере.
-- Есть ли у ассистента доступ к папке на компьютере и к браузеру? Где хранить файлы проекта?
+## Block 8. Languages and access
+- Which languages do you read? Do you need help with pre-reform orthography, Polish, Romanian, Yiddish, Hebrew, German?
+- Which country are you in now? Do you use a VPN? Some Russian government sites do not open from abroad, and sometimes the reverse.
+- Which services already have an account: JewishGen, FamilySearch, MyHeritage, Geni, Ancestry, forums? Passwords are not needed: the person logs in themselves in their own browser.
+- Does the assistant have access to a folder on the computer and to the browser? Where should the project files be kept?
 
-## Блок 9. Деликатное
-- Есть ли темы, о которых не хотите писать или искать?
-- Можно ли упоминать живых родственников в файлах и в дереве? Публиковать живых людей без их согласия нельзя.
-- Если найдётся тяжёлое (гибель, репрессии, неожиданное родство по ДНК), как вы хотите об этом узнать?
+## Block 9. Sensitive matters
+- Are there subjects you do not want to write about or search for?
+- May living relatives be mentioned in the files and in the tree? Living people must not be published without their consent.
+- If something heavy turns up (a death, repression, unexpected relatedness in DNA), how do you want to be told?

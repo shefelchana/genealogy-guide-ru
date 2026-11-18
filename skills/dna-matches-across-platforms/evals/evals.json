@@ -3,18 +3,18 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "У меня один дед еврей, остальные русские из рязанских сёл. Тест 23andMe, перенесла в GEDmatch и FTDNA, ещё есть Genotek. В Genotek вижу результаты племянницы (дочь сестры по маме) и двоюродной по папиной маме. Как разобрать, кто с какой стороны?",
-      "expected_output": "Начинает с инвентаризации наборов (один файл в нескольких базах — не новые люди). Предлагает сначала отделить ашкеназскую сеть и не применять к ней Лидс. Объясняет фазировку: племянница по матери — только материнская сторона, двоюродная по одной бабушке — только эта бабушка; «нет в общих» ничего не значит (~¼ ДНК). Советует искать родные сёла по спискам «фамилия — место» во FTDNA и местам деревьев в Genotek, сверять совпаденцев между сайтами и позиции сегментов в GEDmatch. Пороги по самому длинному сегменту. Предка называет только документ."
+      "prompt": "У меня бабушка по папе из еврейской семьи из Гомеля, остальные предки — украинские крестьяне с Полтавщины. Тест MyHeritage, файл перенесла в GEDmatch и FTDNA, ещё сдала Genotek. В Genotek мне открыли результаты сына моего единокровного брата (у нас общий отец) и двоюродной сестры по маминому отцу. Как понять, кто из совпадений с какой стороны?",
+      "expected_output": "Starts with an inventory of kits (one file in several databases — not new people). Proposes separating the Ashkenazi network first and not applying Leeds to it. Explains phasing: the half-brother's son shares only the father's side, the cousin through the mother's father shares only that grandfather; first asks whether each relationship is full or half before reading the cM. «Нет в общих» [not among shared matches] means nothing (~¼ of the DNA). Advises searching for the home villages in the «фамилия — место» [surname — place] lists in FTDNA and the tree places in Genotek, cross-checking matches between sites and segment positions in GEDmatch. Thresholds by longest segment. Only a document names the ancestor."
     },
     {
       "id": 2,
-      "prompt": "Нашла во FTDNA женщину, 38 сМ, самый длинный 16. У неё в предках две мои фамилии из моего села. И ещё четверо с той же фамилией в общих. Это мои родственники? Как ей написать?",
-      "expected_output": "Оценивает как сильную гипотезу 🟡: две фамилии из того же села — общий предок, вероятно, там в XIX веке; какая фамилия — скажут метрики. Четверо в общих с тем же списком — одна семья, одно свидетельство. Предлагает письмо на английском B1, короткое и человеческое, на email из карточки, с вопросом про русский и просьбой загрузить ДНК в GEDmatch; отправляет пользователь."
+      "prompt": "Во FTDNA нашёлся мужчина, 27 сМ, самый длинный сегмент 13. В его списке предков две фамилии из деревни моего прадеда. И ещё трое с той же фамилией у нас в общих. Мы родственники? Как ему написать?",
+      "expected_output": "Rates it as a strong hypothesis 🟡: two surnames from the same village — the common ancestor was probably there in the 19th century; which surname — the metrical books will tell. Three people among the shared matches with the same ancestor list — one family, one piece of evidence. Offers a letter in B1 English, short and human, to the email from the match card, with a question about Russian and a request to upload the DNA to GEDmatch; the user sends it."
     },
     {
       "id": 3,
-      "prompt": "Мама и папа из соседних районов. Может, они родня? Родителей уже нет. Можно проверить?",
-      "expected_output": "Предлагает GEDmatch «Are your parents related?» по своему набору (по всем копиям): 0 сМ — не родня примерно в 5–6 поколениях; более ранние браки ДНК не видит — только метрики обоих сёл. Соседние уезды — повод проверить, а не доказательство."
+      "prompt": "Мои родители выросли в соседних сёлах одного района. Может, они в родстве? Спросить уже не у кого. Это можно проверить по ДНК?",
+      "expected_output": "Proposes GEDmatch \"Are your parents related?\" on the user's own kit (on all copies): 0 cM — not related within about 5–6 generations; earlier marriages DNA does not see — only the metrical books of both villages. Nearby villages are a reason to check, not proof."
     }
   ]
 }

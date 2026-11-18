@@ -1,41 +1,41 @@
-# Фонды и источники по погромам 1917–1922 годов
+# Fonds and sources on the pogroms of 1917–1922
 
-Пометки: [проверено] — открыто запросом 07.10.2026; [по базе] — шифр встречается в записях баз; [не проверено] — сведения из вторых рук.
+Markers: [checked] — opened by query on 07.10.2026; [from database] — the reference occurs in database records; [unverified] — second-hand information.
 
-## Главные архивные фонды
+## Main archival fonds
 
-| Архив, фонд | Что это | Где опись и сканы |
+| Archive, fond | What it is | Where the inventory and scans are |
 |---|---|---|
-| **ДАКО, ф. Р-3050** | Киевская районная комиссия Еврейского общественного комитета помощи пострадавшим от погромов (Евобщестком), 1919–1924. Оп. 1 — 754 дела, оп. 2 — 40, оп. 3 — 85 | Опись поштучно: Вікіджерела `Архів:ДАКО/Р-3050/1` (/2, /3) [проверено]. PDF описей и около 910 дел: Commons, категория `Funds of State Archive of Kyiv Oblast - Fund R-3050` [проверено]. На странице фонда в Вікіджерелах указаны цифровые копии в USHMM (irn523967) [не проверено] |
-| **ЦДАВО, ф. 2497** | Всеукраинский еврейский общественный комитет, Киев | Опись — Вікіджерела `Архів:ЦДАВО/2497` [проверено]; сканы на Commons по названию не нашлись [проверено: 0 по «ЦДАВО 2497»] |
-| ЦДАВО, ф. 5 | НКВД УССР; в оп. 5 — списки беженцев-иностранцев, заявления на выезд | Вікіджерела `Архів:ЦДАВО/5` [проверено]; беженцы 1920-х в базе Липес ссылаются на ф. 5 [по базе]. На Commons в категории фонда — «1921 год. Списки еврейских беженцев на румынской границе.pdf», 159 стр. [проверено 08.10.2026]; о тех же беженцах — дела ДАКО Р-3050-1-133, -135, -280 (переписка и докладные) |
-| ДАВіО, ф. 4262, 4954 | Документы по Тульчину, Тростянцу и др. (детдома, списки) | [по базе]; опись — на сайте архива или Вікіджерелах [не проверено] |
-| ДАОО, ф. Р-5275 | Одесса | [по базе Липес, раздел источников] |
-| ЦДИАК, ф. 1164, оп. 1, д. 171 | Фонд 1164 — метрические книги еврейских общин Киева и Киевского уезда, 1845–1920. На д. 171 «Ам а-Зикарон» ссылается в записях о киевлянах, умерших от ранений в 1918 г. (вместе с книгой Вейгмана): это **метрика смертей**, а не список убитых | Вікіджерела `Архів:ЦДІАК/1164` [проверено 08.10.2026]; ссылки — [по базе «Ам а-Зикарон»] |
-| YIVO, RG 80 | Архив Ильи Чериковера (Tcherikower Archive), папки по местечкам | [по базе «Ам а-Зикарон»] |
+| **DAKO (State Archive of Kyiv Oblast), fond R-3050** | The Kyiv district commission of the Jewish Public Committee for Aid to Victims of Pogroms (*Evobshchestkom*), 1919–1924. Inventory 1 — 754 files, inventory 2 — 40, inventory 3 — 85 | The inventory file by file: Vikisource (Вікіджерела) `Архів:ДАКО/Р-3050/1` (/2, /3) [checked]. PDFs of the inventories and about 910 files: Commons, category `Funds of State Archive of Kyiv Oblast - Fund R-3050` [checked]. The fond page on Vikisource lists digital copies at USHMM (irn523967) [unverified] |
+| **TsDAVO (Central State Archive of Supreme Bodies of Power and Government of Ukraine), fond 2497** | The All-Ukrainian Jewish Public Committee, Kyiv | Inventory — Vikisource `Архів:ЦДАВО/2497` [checked]; scans on Commons were not found by that name [checked: 0 for "ЦДАВО 2497"] |
+| TsDAVO, fond 5 | NKVD of the Ukrainian SSR; inventory 5 contains lists of foreign refugees and applications for departure | Vikisource `Архів:ЦДАВО/5` [checked]; refugees of the 1920s in the Lipes database refer to fond 5 [from database]. On Commons in the fond's category: "1921 год. Списки еврейских беженцев на румынской границе.pdf" ("1921. Lists of Jewish refugees on the Romanian border"), 159 pages [checked 08.10.2026]; about the same refugees there are DAKO files R-3050-1-133, -135, -280 (correspondence and reports) |
+| DAViO (State Archive of Vinnytsia Oblast), fonds 4262, 4954 | Documents on Tulchyn, Trostianets and others (orphanages, lists) | [from database]; inventory — on the archive's site or Vikisource [unverified] |
+| DAOO (State Archive of Odesa Oblast), fond R-5275 | Odesa | [from the Lipes database, sources section] |
+| TsDIAK (Central State Historical Archive of Ukraine, Kyiv), fond 1164, inventory 1, file 171 | Fond 1164 — metrical books of the Jewish communities of Kyiv and Kyiv district, 1845–1920. Am HaZikaron refers to file 171 in records of Kyiv residents who died of wounds in 1918 (together with Weigman's book): it is a **death register**, not a list of the killed | Vikisource `Архів:ЦДІАК/1164` [checked 08.10.2026]; references — [from the Am HaZikaron database] |
+| YIVO, RG 80 | The archive of Elias Tcherikower (Tcherikower Archive), folders by shtetl | [from the Am HaZikaron database] |
 
-## Что искать в описи Р-3050, кроме «списков убитых»
+## What to look for in the R-3050 inventory besides "lists of the killed"
 
-Заголовки дел в описи (Вікіджерела) прямо называют вложенные списки. Ищи на странице описи по названию местечка и по словам:
+The titles of files in the inventory (Vikisource) directly name the lists inside them. Search the inventory page by the name of the shtetl and by the words:
 
-- «список погромленных», «опросные листы» (1921) — пострадавшие по местечку;
-- «список детей», «детский дом», «приют» — сироты и дети в детдомах (Бердичев, Таращ, Липовец, Любар и др.);
-- «беженцы», «общее собрание беженцев» — кто бежал и куда;
-- «присланные деньги из Америки», «списки лиц, которым направлена сумма» — получатели помощи от землячеств;
-- «материалы переписи м. …» — бывают поимённые переписи местечек 1920 года;
-- «личное дело …» (оп. 1, в конце описи; на Commons встречаются д. 574–732) — сотрудники комитета и детучреждений, получатели помощи;
-- оп. 3: «Главный алфавит» 1923 года (д. 63–65), «Книга адресатов продпосылок» 1922 года (д. 45) — по названию, это алфавиты и адресаты продовольственных посылок [содержимое не проверено].
+- "список погромленных" ("list of those who suffered pogroms"), "опросные листы" ("questionnaires", 1921) — victims by shtetl;
+- "список детей" ("list of children"), "детский дом" ("orphanage"), "приют" ("shelter") — orphans and children in orphanages (Berdychiv, Tarashcha, Lypovets, Liubar and others);
+- "беженцы" ("refugees"), "общее собрание беженцев" ("general meeting of refugees") — who fled and where;
+- "присланные деньги из Америки" ("money sent from America"), "списки лиц, которым направлена сумма" ("lists of persons to whom a sum was sent") — recipients of relief from hometown societies;
+- "материалы переписи м. …" ("materials of the census of the shtetl …") — there are name-by-name censuses of shtetls of 1920;
+- "личное дело …" ("personal file …"; inventory 1, at the end of the inventory; files 574–732 occur on Commons) — staff of the committee and of children's institutions, recipients of relief;
+- inventory 3: the "Главный алфавит" ("Main alphabet") of 1923 (files 63–65), the "Книга адресатов продпосылок" ("Book of addressees of food parcels") of 1922 (file 45) — judging by the titles, these are alphabets and addressees of food parcels [contents unverified].
 
-## Опубликованные и вторичные источники
+## Published and secondary sources
 
-- Э. Д. Розенталь, «Свиток резни» (иврит; русский перевод на pogrom.amhazikaron.org).
-- «Книга погромов. Погромы на Украине, в Белоруссии и европейской части России в период Гражданской войны 1918–1922 гг.» (сборник документов, 2007).
-- «Khurbn Proskurov» (Нью-Йорк, 1924); «Проскурівський погром 1919 року в документах: міфи та реальність» (Хмельницкий, 2019; в приложениях — списки убитых, раненых и лечившихся в еврейской больнице; PDF выложен на KehilaLinks Красилова) [по выдаче]. Проскуровские списки собраны из разных источников, заметная часть — на идише (`reading-hebrew-yiddish-sources`).
-- С. Вейгман, «Кадиш сироты» — список евреев Киева, погибших в 1917–1919 гг.
-- Журналы перевязочных пунктов и списки раненых (Проскуров, 1919) — по источникам «Ам а-Зикарон».
+- E. D. Rosenthal, "Свиток резни" ("Svitok rezni", the Scroll of Slaughter; Hebrew; Russian translation on pogrom.amhazikaron.org).
+- "Книга погромов. Погромы на Украине, в Белоруссии и европейской части России в период Гражданской войны 1918–1922 гг." ("The Book of Pogroms. Pogroms in Ukraine, Belarus and the European part of Russia in the period of the Civil War, 1918–1922"; a collection of documents, 2007).
+- "Khurbn Proskurov" (New York, 1924); "Проскурівський погром 1919 року в документах: міфи та реальність" ("The Proskuriv pogrom of 1919 in documents: myths and reality", Khmelnytskyi, 2019; the appendices contain lists of the killed, the wounded and those treated in the Jewish hospital; the PDF is posted on the Krasyliv KehilaLinks) [from search snippet]. The Proskurov lists are compiled from different sources, a noticeable part in Yiddish (`reading-hebrew-yiddish-sources`).
+- S. Weigman, "Кадиш сироты" ("Kadish sirot", Orphan's Kaddish) — a list of Jews of Kyiv who perished in 1917–1919.
+- Registers of first-aid stations and lists of the wounded (Proskurov, 1919) — from the sources of Am HaZikaron.
 
-## Первичные источники вне фондов помощи
+## Primary sources outside the relief fonds
 
-- Раввинатские книги смертей 1918–1920 годов: причина смерти часто не названа, читать «между строк» (даты подряд, молодые мужчины).
-- ЗАГС 1919–1922 годов: графы национальности обычно нет (она появилась в форме 1926 г.); признак — еврейское кладбище и имя. Смотри **все** сохранившиеся годы и **соседний большой город**, куда бежали: зиму после погрома многие не пережили.
-- Метрические книги могли попасть в фонд земского суда соседнего уезда, если раввината не было.
+- Rabbinate death books of 1918–1920: the cause of death is often not named; read between the lines (dates in a row, young men).
+- ZAGS of 1919–1922: there is usually no column for nationality (it appeared in the 1926 form); the indicator is the Jewish cemetery and the name. Look at **all** surviving years and at **the neighbouring large city** where people fled: many did not survive the winter after the pogrom.
+- Metrical books could end up in the fond of the *zemsky sud* (rural court) of a neighbouring district if there was no rabbinate.

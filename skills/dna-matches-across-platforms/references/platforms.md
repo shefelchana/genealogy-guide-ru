@@ -1,28 +1,28 @@
-# Что даёт каждый сайт для разбора совпадений (проверено в ноябре 2026)
+# What each site gives for analysing matches (checked in November 2026)
 
-Функции и цены меняются — перед советом проверь на сайте. Входит, платит и пишет людям только пользователь.
+Features and prices change — check on the site before giving advice. Only the user logs in, pays and writes to people.
 
-| Сайт | Что видно бесплатно | Чего нет / что закрыто | Чем ценен в разборе |
+| Site | What is visible for free | What is missing / what is closed | Its value in the analysis |
 |---|---|---|---|
-| **23andMe** | список родни (доля общей ДНК в %, число сегментов, самый длинный), места рождения бабушек и дедушек, фамилии, «общие родственники» | позиций сегментов для большинства совпадений нет; чужие файлы не принимает | 1 % ≈ 74 сМ; фильтр по месту рождения предков; при ашкеназском деде верх списка занят ашкеназской сетью |
-| **Genotek** (Россия) | сМ, число сегментов, самый длинный, оценка года рождения общего предка, его «этничность», фамилии и места из деревьев, «общие родственники», регионы сходства; можно смотреть результаты родственников, если они дали доступ | позиций сегментов нет, триангуляция невозможна; списки грузятся медленно (перезагрузить страницу, если зависло) | лучшая база русских совпадений; фазировка через тесты родни, открытые на просмотр |
-| **GEDmatch** | One-to-Many (первые ~3 000 совпадений, сайт-источник у каждого), One-to-One с хромосомами и позициями, «Are your parents related?» | бесплатные сравнения ограничены по числу; сортировка и часть инструментов — в платном Tier 1 | мост между компаниями; позиции сегментов; триангуляция; проверка родства родителей |
-| **FamilyTreeDNA** (перенесённый набор) | Family Finder: весь список, «общие родственники», у многих — фамилии предков **с местами**, самые ранние известные предки, Y- и mtDNA-гаплогруппы | хромосомный браузер, Matrix, myOrigins — платный апгрейд (разблокировку за $19 отменили 18.08.2026; апгрейд ~ $29 по dna-explained) | поиск родного села по спискам «фамилия — место» у тысяч людей; много ашкеназов из США и людей с Y-тестами |
-| **MyHeritage** | список (в части стран закрыт: видна только цифра), сортировка по самому длинному сегменту | загрузку чужих файлов прекратили в мае 2025; выгрузку списка убрали | спрашивать сМ у самих людей |
+| **23andMe** | relatives list (share of DNA in %, number of segments, the longest), grandparents' birthplaces, surnames, "relatives in common" | no segment positions for most matches; does not accept other people's files | 1 % ≈ 74 cM; filter by ancestors' birthplace; when one line of the family is Ashkenazi (or otherwise endogamous), the top of the list is taken by that network |
+| **Genotek** (Russia) | cM, number of segments, the longest, estimated birth year of the common ancestor, its "ethnicity", surnames and places from trees, "relatives in common", regions of similarity; you can view relatives' results if they granted access | no segment positions, triangulation impossible; lists load slowly (reload the page if it hangs) | the best database of Russian matches; phasing through relatives' tests opened for viewing |
+| **GEDmatch** | One-to-Many (the first ~3,000 matches, the source site for each), One-to-One with chromosomes and positions, "Are your parents related?" | free comparisons are limited in number; sorting and some tools — in paid Tier 1 | a bridge between companies; segment positions; triangulation; checking whether the parents are related |
+| **FamilyTreeDNA** (transferred kit) | Family Finder: the whole list, "relatives in common", many have ancestral surnames **with places**, earliest known ancestors, Y and mtDNA haplogroups | chromosome browser, Matrix, myOrigins — paid upgrade (the $19 unlock was cancelled on 18.08.2026; upgrade ~ $29 according to dna-explained) | searching for the home village in the "surname — place" lists of thousands of people; many Ashkenazim from the USA and people with Y-tests |
+| **MyHeritage** | list (closed in some countries: only the figure is visible), sorting by longest segment | stopped accepting uploads of other people's files in May 2025; list export removed | ask the people themselves for the cM |
 
-## Как выгружать список целиком
+## How to export the whole list
 
-- Если у сайта есть штатная выгрузка (CSV, «Download») — пользоваться ей.
-- Если нет — список читается страницами. Бери небольшие порции (20–50 человек за раз), делай паузы, при ошибках «слишком много запросов» жди минуту. При зависании перезагружай страницу и продолжай с последней сохранённой позиции; промежуточный результат сохраняй.
-- Не обходи защиту сайта, капчу и входы; не трогай чужие закрытые данные.
+- If the site has a built-in export (CSV, "Download") — use it.
+- If not — the list is read page by page. Take small portions (20–50 people at a time), pause, and on "too many requests" errors wait a minute. If it hangs, reload the page and continue from the last saved position; save the intermediate result.
+- Do not bypass the site's protection, captchas or logins; do not touch other people's closed data.
 
-## Признаки, что совпадение настоящее
+## Signs that a match is real
 
-| Признак | Вес |
+| Sign | Weight |
 |---|---|
-| самый длинный сегмент ≥ 30 сМ | сильный |
-| та же семья с сегментом той же длины в двух компаниях | сильный |
-| в списке предков совпаденца — родное село и 2+ фамилии пользователя | сильный (сторона и место; предок — по документам) |
-| триангуляция: перекрытие сегментов + совпадают друг с другом там же | сильный |
-| 15–20 сМ одним сегментом в эндогамной сети | слабый (фон) |
-| общие с обеими сторонами при < 12 сМ | фон региона |
+| longest segment ≥ 30 cM | strong |
+| the same family with a segment of the same length at two companies | strong |
+| the match's ancestor list has the home village and 2+ of the user's surnames | strong (side and place; the ancestor — from documents) |
+| triangulation: overlapping segments + they match each other in the same place | strong |
+| 15–20 cM in one segment within the endogamous network | weak (background) |
+| shared with both sides at < 12 cM | regional background |

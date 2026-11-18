@@ -1,68 +1,68 @@
-# ДНК-сервисы: что принимает, что даёт, ограничения
+# DNA services: what they accept, what they give, limitations
 
-**Актуальность: сентябрь–октябрь 2026.** Цены и правила меняются — перед советом о покупке или загрузке скажи пользователю проверить на сайте.
+**Current as of September–October 2026.** Prices and rules change: before advising a purchase or an upload, tell the user to check the website.
 
-## Кто принимает чужие сырые данные
+## Who accepts other people's raw data
 
-| Сервис | Принимает загрузку? | Что бесплатно | Особенности |
+| Service | Accepts uploads? | What is free | Notes |
 |---|---|---|---|
-| **FamilyTreeDNA** | да (Ancestry, 23andMe, MyHeritage) | совпадения | разблокировка за 19 $ отменена 18.08.2026; хромосомный браузер и myOrigins — платный апгрейд (по dna-explained.com — 29 $); загруженное нельзя скачать обратно; сортирует по самому длинному сегменту |
-| **GEDmatch** | да | One-to-Many Limited — по умолчанию 50 совпадений, можно открыть до 3000; минимальный сегмент по умолчанию 7 сМ; сортировка столбцов — только Tier 1 [выдача: видеоурок и блог GEDmatch]; «один с одним» | Tier 1: 15 $/мес или 150 $/год для новых подписчиков с 01.09.2026 (прежние — 10 $/100 $); у совпадений часто нет дерева; полиция — только opt-in |
-| **Living DNA** | да | базовые совпадения | — |
-| **MyHeritage** | **нет, с мая 2025** | — | справка MyHeritage: «DNA uploads are no longer supported»; что стало со старыми загрузками — источники расходятся; встроенную выгрузку совпадений в таблицу убрали — работать скриншотами и фильтром «Has Theory of Family Relativity»; сортирует по самому длинному сегменту |
-| **AncestryDNA** | нет | — | продаётся в 119 странах (25.09.2026); самый длинный сегмент не сортируется, показан до вычитания общепопуляционных участков; сегменты — через DNAGedcom |
-| **23andMe** | нет | DNA Relatives, фильтры по фамилии и месту | фильтр по гаплогруппе — Premium; в выгрузке списка родственников есть колонка Y-гаплогруппы и страна; банкротство 23.03.2025, 14.07.2025 активы купила TTAM Research Institute (305 млн $), сервис работает |
+| **FamilyTreeDNA** | yes (Ancestry, 23andMe, MyHeritage) | matches | the $19 unlock was discontinued on 18.08.2026; the chromosome browser and myOrigins are a paid upgrade (per dna-explained.com, $29); uploaded data cannot be downloaded back; sorts by longest segment |
+| **GEDmatch** | yes | One-to-Many Limited: 50 matches by default, can be opened up to 3000; minimum segment 7 cM by default; column sorting only in Tier 1 [from search results: GEDmatch video tutorial and blog]; one-to-one | Tier 1: $15/month or $150/year for new subscribers from 01.09.2026 (previously $10/$100); matches often have no tree; police access only opt-in |
+| **Living DNA** | yes | basic matches | none |
+| **MyHeritage** | **no, since May 2025** | none | MyHeritage help: "DNA uploads are no longer supported"; sources differ on what happened to old uploads; the built-in export of matches to a spreadsheet was removed, so work with screenshots and the "Has Theory of Family Relativity" filter; sorts by longest segment |
+| **AncestryDNA** | no | none | sold in 119 countries (25.09.2026); the longest segment cannot be sorted and is shown before the population-wide stretches are subtracted; segments via DNAGedcom |
+| **23andMe** | no | DNA Relatives, filters by surname and place | haplogroup filter is Premium; the relatives-list export has a Y-haplogroup and country column; bankruptcy 23.03.2025, on 14.07.2025 the assets were bought by TTAM Research Institute ($305 million), the service is operating |
 
-## Y-ДНК и мтДНК
+## Y-DNA and mtDNA
 
-- **FamilyTreeDNA:** Big Y-700 — 449 $ (22.09.2026); мтДНК. **Не отправляет наборы в Россию, Беларусь, Украину** (официальная справка).
-- Запасные варианты: **YSEQ** (Берлин, полный геном WGS от 359 €, WGS+ — 399 €, магазин yseq.net, 07.10.2026), **YFull** — анализ готового файла BAM, пересылка набора через третью страну.
+- **FamilyTreeDNA:** Big Y-700 is $449 (22.09.2026); mtDNA. **Does not ship kits to Russia, Belarus, Ukraine** (official help page).
+- Fallback options: **YSEQ** (Berlin, whole-genome WGS from €359, WGS+ €399, shop yseq.net, 07.10.2026), **YFull** (analysis of a ready BAM file), forwarding a kit through a third country.
 
-## Ограничения по странам
+## Country restrictions
 
-- MyHeritage DNA в некоторых странах недоступен (официальное ограничение) — проверить до заказа.
-- AncestryDNA — не во всех странах.
+- MyHeritage DNA is unavailable in some countries (an official restriction): check before ordering.
+- AncestryDNA is not available in every country.
 
-## Доступ полиции
+## Police access
 
-По блогу GEDmatch (часть сведений устарела — перепроверять): GEDmatch — только opt-in; FamilyTreeDNA — разрешено, можно отказаться (opt-out); 23andMe и Ancestry — только по решению суда.
+Per the GEDmatch blog (part of this is out of date: re-check): GEDmatch is opt-in only; FamilyTreeDNA allows it, with an opt-out; 23andMe and Ancestry only by court order.
 
-## Российский сервис
+## A Russian service
 
-**Genotek** — бесплатно 2–3 имени в уведомлениях; полный список и древо — платно (990–2995 ₽; цены не проверены по сайту). Сравнительную пользу оценить не удалось.
+**Genotek**: 2–3 names free in the notifications; the full list and the tree are paid (990–2995 ₽; prices not checked on the site). Its comparative usefulness could not be assessed.
 
-## Инструменты
+## Tools
 
-- **DNA Painter** — раскладка сегментов по предкам (порог поднять до 10–15 сМ); таблица Shared cM Project — ⚠️ не учитывает эндогамию.
-- **DNAGedcom** — выгрузка сегментов, в т. ч. из Ancestry.
-- **YFull, YSEQ** — Y-ДНК.
-- Обзор, куда загружать: ancestrify.io/blog/where-to-upload-raw-dna.
+- **DNA Painter**: lays out segments across ancestors (raise the threshold to 10–15 cM); the Shared cM Project table ⚠️ does not account for endogamy.
+- **DNAGedcom**: segment export, including from Ancestry.
+- **YFull, YSEQ**: Y-DNA.
+- An overview of where to upload: ancestrify.io/blog/where-to-upload-raw-dna.
 
-## Ашкеназские нормы общих сМ (опрос Лары Даймонд)
+## Ashkenazi norms of shared cM (Lara Diamond's survey)
 
-Ashkenazic Shared DNA Survey, срез августа 2022 года, 6455 пар известного родства (larasgenealogy.blogspot.com/2022/08/ashkenazic-shared-dna-survey-august.html, таблица «All Responses») [открыто 07.10.2026]:
+Ashkenazic Shared DNA Survey, August 2022 snapshot, 6,455 pairs of known relationship (larasgenealogy.blogspot.com/2022/08/ashkenazic-shared-dna-survey-august.html, table "All Responses") [opened 07.10.2026]:
 
-| Родство | Пар | Среднее общее, сМ | Мин.–макс., сМ | Средний самый длинный сегмент, сМ |
+| Relationship | Pairs | Average shared, cM | Min–max, cM | Average longest segment, cM |
 |---|---|---|---|---|
-| 1C (двоюродные) | 471 | 922 | 54–1610 | 84 |
+| 1C (first cousins) | 471 | 922 | 54–1610 | 84 |
 | 1C1R | 693 | 485 | 7–1878 | 61 |
-| 2C (троюродные) | 1081 | 272 | 6,8–698 | 49 |
+| 2C (second cousins) | 1081 | 272 | 6.8–698 | 49 |
 | 2C1R | 1007 | 164 | 0–446 | 37 |
 | 3C | 529 | 113 | 0–361 | 28 |
 | 3C1R | 419 | 77 | 0–215 | 21 |
 | 4C | 260 | 53 | 0–664 | 13 |
 
-Разброс огромный, автор сама пишет, что по части степеней данных мало. Это ориентир, а не калькулятор: им проверяют, правдоподобна ли гипотеза, а не выводят степень.
+The spread is enormous, and the author herself writes that for some degrees there is little data. This is a guide, not a calculator: use it to check whether a hypothesis is plausible, not to derive a degree.
 
-## Очистка перед калькуляторами
+## Cleaning before calculators
 
-- **Перед WATO и подобными калькуляторами отбрось сегменты меньше 7 сМ.** У Луиса Кесслера (beholdgenealogy.com/blog/?p=3537, семья из 14 протестированных) WATO дал верный ответ на данных Ancestry и на данных FTDNA — но FTDNA только после такого фильтра; без него общее число завышалось примерно на 50 сМ.
-- Триангуляция сегмента отсеивает случайные совпадения, но не доказывает общего предка: его всё равно подтверждают документом.
+- **Before WATO and similar calculators, discard segments under 7 cM.** In Louis Kessler's test (beholdgenealogy.com/blog/?p=3537, a family of 14 tested people) WATO gave the correct answer on Ancestry data and on FTDNA data, but FTDNA only after such a filter; without it the total was overstated by about 50 cM.
+- Triangulating a segment weeds out chance matches but does not prove a common ancestor: that is still confirmed by a document.
 
-## Источники порогов и методов
+## Sources of thresholds and methods
 
-- FamilyLocket: «Strategies for Overcoming Endogamy», «Endogamy: Ashkenazi Jewish Case».
-- Kitty Cooper: «Ancestry and the Longest Segment» (blog.kittycooper.com, 2020).
-- Dana Leeds: danaleeds.com — «Can the Leeds Method help me?».
-- Средний размер сегмента от 15 сМ обычно поддаётся разбору, ниже 12 сМ — обычно нет (по выдаче поиска, не первоисточник).
-- Этика: BCG Code of Ethics; FamilySearch Wiki «Ethics and DNA Testing»; GeneticGenealogyStandards.com; интервью Джуди Рассел у Эми Джонсон Кроу «Ethics and Genetic Genealogy».
+- FamilyLocket: "Strategies for Overcoming Endogamy", "Endogamy: Ashkenazi Jewish Case".
+- Kitty Cooper: "Ancestry and the Longest Segment" (blog.kittycooper.com, 2020).
+- Dana Leeds: danaleeds.com, "Can the Leeds Method help me?".
+- An average segment size of 15 cM and above can usually be worked with, below 12 cM usually not (from search results, not a primary source).
+- Ethics: BCG Code of Ethics; FamilySearch Wiki "Ethics and DNA Testing"; GeneticGenealogyStandards.com; Judy Russell's interview with Amy Johnson Crow, "Ethics and Genetic Genealogy".

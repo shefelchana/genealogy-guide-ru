@@ -1,20 +1,20 @@
-# Двухслойная запись находки
+# The two-layer record of a find
 
-## Слой 1. Факт (для журнала находок и дерева)
+## Layer 1. Fact (for the findings log and the tree)
 
-**Источник:** архив · фонд-опись-дело · лист/страница · номер записи (или издание, год, страница)
-**Где скан:** сайт · кадр · ссылка · дата обращения
-**Дословно (орфография оригинала):**
-> «…»
+**Source:** archive · fond-inventory-file · folio/page · entry number (or publication, year, page)
+**Where the scan is:** site · frame · link · date accessed
+**Verbatim (original spelling):**
+> "…"
 
-**Проверено по скану:** да / нет (только указатель)
-**Надёжность:** первичный документ / справочник / указатель / семейная память; расчётная дата?
-**Противоречит ли другим документам:** нет / да — каким и в чём
+**Checked against the scan:** yes / no (index only)
+**Reliability:** primary document / reference work / index / family memory; calculated date?
+**Contradicts other documents:** no / yes — which and in what
 
-## Слой 2. Абзац для родных
+## Layer 2. Paragraph for the relatives
 
-(3–6 предложений: кто, где, когда; что это значит; что было вокруг — со ссылкой на источник контекста; чего документ **не** говорит.)
+(3–6 sentences: who, where, when; what it means; what was going on around — with a reference to the source of the context; what the document does **not** say.)
 
-**Уверенность в абзаце:** документ · «скорее всего» · «возможно» · «по семейному преданию» · «неизвестно»
+**Confidence in the paragraph:** document · "most likely" · "possibly" · "according to family legend" · "unknown"
 
-**Иллюстрация:** вырезка из документа / фото / карта — подпись: «…, [архив, шифр], л. …»
+**Illustration:** a cutting from a document / photo / map — caption: "…, [archive, reference], fol. …"

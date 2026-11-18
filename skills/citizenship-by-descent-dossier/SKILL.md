@@ -1,98 +1,114 @@
 ---
 name: citizenship-by-descent-dossier
-description: Builds the genealogical dossier for citizenship by descent or ancestry — picks the anchor ancestor and the programme that fits him (Germany § 15 StAG and Art. 116 GG, Austria § 58c, Poland potwierdzenie obywatelstwa, Israel Law of Return, Romania Art. 11 of Law 21/1991, Lithuania, Latvia, Czechia, Hungary, Slovakia), lays out an unbroken document chain generation by generation, reconciles different spellings of one person across Russian, Yiddish, Soviet and Latin-script records, and says where to order certificates and apostilles in Ukraine, Moldova, Russia and Belarus. Flags closed programmes (Spain 12/2015, Portugal Sephardic route since 19.05.2026). Use whenever the user says «хочу немецкое гражданство», «польское / румынское / израильское / австрийское гражданство», «гражданство по предку», «какие документы нужны на прадеда», «подтвердить происхождение», «репатриация», «справка о тождестве», «апостиль на архивную справку», even if they only ask which ancestor qualifies. Not legal advice.
+description: Builds the genealogical dossier for citizenship by descent or ancestry — picks the anchor ancestor and the programme that fits him (Germany § 15 StAG and Art. 116 GG, Austria § 58c, Poland confirmation of citizenship, Israel Law of Return, Romania Art. 11 of Law 21/1991, Lithuania, Latvia, Czechia, Hungary, Slovakia), lays out an unbroken document chain generation by generation, reconciles different spellings of one person across Russian, Yiddish, Soviet and Latin-script records, and says where to order certificates and apostilles in Ukraine, Moldova, Russia and Belarus. Flags closed programmes (Spain 12/2015, Portugal Sephardic route since 19.05.2026). Use when the user says "I want German/Polish/Romanian/Israeli/Austrian citizenship", "citizenship by descent documents", "which documents do I need for my great-grandfather", "prove my origin", "apostille for an archival certificate". Not legal advice. Also: «гражданство по предку», «справка о тождестве».
 ---
 
-# Досье для гражданства по происхождению
+# Dossier for citizenship by descent
 
-> **Не юридическая консультация.** Навык собирает *генеалогические* доказательства. Правила программ меняются, решение принимает ведомство по конкретному делу. Перед подачей пользователь сверяет условия на официальной странице ведомства или консульства, при спорных звеньях — с юристом. Говори это в начале каждого ответа о программе, коротко.
+> **Not legal advice.** This skill assembles *genealogical* evidence. Programme rules change, and the decision is made by the authority on the specific case. Before filing, the user checks the conditions on the official page of the authority or consulate, and for disputed links, with a lawyer. Say this briefly at the start of every answer about a programme.
 
-## Зачем этот порядок
+## Why this order
 
-Любая программа проверяет одно: **непрерывную цепочку документов от заявителя до предка с нужным статусом**. На каждом звене одно лицо должно узнаваться по имени, дате и месту рождения, а каждая смена имени — подтверждаться документом. Заказ справок, апостилей и переводов стоит денег и месяцев, поэтому сначала проверь дёшево — подходит ли предок и открыта ли программа, — и только потом заказывай документы.
+Every programme checks one thing: **an unbroken chain of documents from the applicant to an ancestor with the required status**. At every link the same person must be recognizable by name, date and place of birth, and every change of name must be confirmed by a document. Ordering certificates, apostilles and translations costs money and months, so first check cheaply — whether the ancestor qualifies and whether the programme is open — and only then order documents.
 
-## Шаг 1. Опорный предок и программа
+## Step 1. The anchor ancestor and the programme
 
-Спроси (или найди в файлах пользователя): кто из предков, где жил, в каких годах, какое гражданство или статус мог иметь, когда и почему уехал или потерял его. По ответу подбери программу по таблице в `references/programs.md` и проверь **ключевую дату**:
+Ask (or find in the user's files): which ancestor, where he lived, in which years, what citizenship or status he could have had, when and why he left or lost it. From the answer pick the programme from the table in `references/programs.md` and check the **key date**:
 
-| Предок… | Смотри программу | Ключевая проверка |
+| Ancestor… | See programme | Key check |
 |---|---|---|
-| жил в Германии до 30.01.1933 (даже без германского гражданства) и был преследуем | Германия, § 15 StAG; ст. 116 абз. 2 GG, если было гражданство | доказательство жительства до 1933 (Meldekarten, адресные книги) |
-| жил в Австрии, уехал из-за преследования до 15.05.1955 | Австрия, § 58c StbG | основное место жительства в Австрии; гражданство Австрии, государства-наследника или без гражданства |
-| жил в межвоенной Польше | Польша, подтверждение гражданства | не потерял ли гражданство (закон 1920, ст. 11; закон 1938) **до рождения** следующего звена |
-| еврей (или его ребёнок, внук) | Израиль, Закон о возвращении | еврейство предка в документах (графа «национальность») |
-| жил в Бессарабии, Северной Буковине или крае Герца в 1918–1940 | Румыния, ст. 11 закона 21/1991 | был румынским гражданином; потомки до III степени; язык B1 |
-| был гражданином Литвы до 15.06.1940 / Латвии на 17.06.1940 | Литва, Латвия | не умер и не потерял гражданство до этой даты |
-| жил в Подкарпатской Руси, Закарпатье | Чехия § 31, Венгрия, Словакия | гражданство ЧСР или Венгрии в нужные годы |
+| lived in Germany before 30.01.1933 (even without German citizenship) and was persecuted | Germany, § 15 StAG; Art. 116 para. 2 GG if he had citizenship | proof of residence before 1933 (Meldekarten, address books) |
+| lived in Austria, left because of persecution before 15.05.1955 | Austria, § 58c StbG | main residence in Austria; citizenship of Austria, a successor state, or stateless |
+| lived in interwar Poland | Poland, confirmation of citizenship | whether citizenship was lost (law of 1920, Art. 11; law of 1938) **before the birth** of the next link |
+| a Jew (or a child, grandchild of one) | Israel, Law of Return | the ancestor's Jewishness in documents (the "nationality" column) |
+| lived in Bessarabia, Northern Bukovina or the Hertsa region in 1918–1940 | Romania, Art. 11 of Law 21/1991 | was a Romanian citizen; descendants up to the 3rd degree; language B1 |
+| was a citizen of Lithuania before 15.06.1940 / Latvia on 17.06.1940 | Lithuania, Latvia | had not died or lost citizenship before that date |
+| lived in Subcarpathian Rus, Transcarpathia | Czechia § 31, Hungary, Slovakia | citizenship of Czechoslovakia or Hungary in the relevant years |
 
-**Закрыты для новых заявлений** — не трать на них время пользователя: Испания, закон 12/2015 (срок истёк 01.10.2019) и закон 20/2022 (приём до 22.10.2025); Португалия, сефардский режим (отменён Lei Orgânica 1/2026, новые правила с 19.05.2026). Если пользователь спрашивает именно о них — объясни, что путь закрыт, и предложи проверить другие линии.
+**Closed to new applications** — do not waste the user's time on them: Spain, law 12/2015 (deadline expired 01.10.2019) and law 20/2022 (applications accepted until 22.10.2025); Portugal, the Sephardic regime (abolished by Lei Orgânica 1/2026, new rules from 19.05.2026). If the user asks specifically about them, explain that the route is closed and suggest checking other lines.
 
-**Ловушка:** предок, уехавший из Российской империи до 1918–1920 годов, обычно **не был** гражданином возникших позже Польши, Литвы или Латвии. Проверь даты, прежде чем строить цепочку.
+**Trap:** an ancestor who left the Russian Empire before 1918–1920 usually **was not** a citizen of Poland, Lithuania or Latvia, which arose later. Check the dates before building the chain.
 
-## Шаг 2. Цепочка по поколениям
+**Check which state held the place on the ancestor's key dates.** Take his place (with county, not only the town name) and three dates — birth, the programme's key date, departure or naturalisation abroad. In `references/territory-timeline.md` find which state held the place on each date; in `references/citizenship-changes.md` check **by which rule** he became a citizen (domicile, registration, Heimatrecht, option) and whether he **lost** it before the next link was born (naturalisation, marriage for women, deprivation). If he never held the citizenship but the family belonged to the nation, look at the descent routes in `references/ethnic-programs.md`.
 
-Заполни шаблон `assets/chain-table.md`: строка на каждое звено от заявителя вверх до опорного предка. Для каждого звена нужны:
+## Step 2. The chain by generations
 
-1. **рождение** (кто родители — связывает с предыдущим звеном);
-2. **брак** родителей — особенно по материнской линии, где меняется фамилия;
-3. **каждая смена имени или фамилии**, развод, усыновление;
-4. у опорного предка, кроме того, **документ о статусе**: паспорт, Heimatschein, военный билет, перепись 1935 г. (Латвия), Meldebestätigung, отметка о вероисповедании или национальности.
+Fill in the template `assets/chain-table.md`: one row for each link from the applicant up to the anchor ancestor. For each link you need:
 
-Почему так строго: документ о статусе предка не доказывает родство, а метрика не доказывает статус. Нужны оба типа. Венгерская памятка прямо пишет: метрики одного прадеда мало, нужны все промежуточные звенья.
+1. **birth** (who the parents are — this connects to the previous link);
+2. the parents' **marriage** — especially on the maternal line, where the surname changes;
+3. **every change of name or surname**, divorce, adoption;
+4. for the anchor ancestor, in addition, a **document on status**: passport, Heimatschein, military booklet, 1935 census (Latvia), Meldebestätigung, an entry of religion or nationality.
 
-Для каждой клетки укажи: есть ли документ на руках, в каком виде (оригинал, повторное свидетельство, архивная справка, только запись в базе), где хранится запись и какой у неё шифр. Пустая клетка — это пункт плана, а не повод пропустить звено.
+Why so strict: a document on the ancestor's status does not prove kinship, and a metrical record does not prove status. Both types are needed. The Hungarian information note states plainly: the records of one great-grandfather are not enough, all the intermediate links are needed.
 
-## Шаг 3. Сведение написаний
+For every cell state: whether the document is in hand, in what form (original, repeat certificate, archival certificate, only an entry in a database), where the record is kept and what its archival reference is. An empty cell is an item of the plan, not a reason to skip the link.
 
-Одно лицо в документах разных эпох выглядит по-разному: «Мовша» в метрике, «Михаил» в советском паспорте, «Moshe» в израильском переводе, «Mojżesz» в польском. Ведомство не обязано догадываться, что это один человек.
+## Step 3. Reconciling spellings
 
-1. Составь **лист соответствий** по каждому человеку цепочки: все формы имени, отчества, фамилии с указанием документа, где каждая встречается. Используй пары из `references/name-identity.md`.
-2. Отметь **второй признак** совпадения: год и место рождения, имена родителей, супруга, адрес. Одного совпадения имени мало.
-3. Каждое расхождение закрой документом:
-   - запись о браке или о перемене имени (советские объявления о смене фамилии по декрету 1924 г. печатались в местных газетах);
-   - архивная справка, где архив прямо указывает обе формы;
-   - исправление актовой записи в ЗАГС/ДРАЦС;
-   - судебное установление факта родственных отношений или принадлежности документа — крайняя мера, решает юрист.
-4. **Транслитерацию** имени заявителя бери из его загранпаспорта и держи одинаковой во всех переводах. Для предков попроси переводчика давать кириллицу оригинала рядом с латиницей — так проверяющий сам увидит соответствие.
-5. ⚠️ Отчество детей в советское время меняли, даже если отец имя не менял: у отца «Берко», у дочери «Борисовна». Это не разрыв цепочки, но его нужно объяснить справкой.
+One person looks different in documents of different eras: «Мовша» [Movsha] in the metrical record, «Михаил» [Mikhail] in the Soviet passport, "Moshe" in the Israeli translation, "Mojżesz" in the Polish. The authority is not obliged to guess that this is one person.
 
-## Шаг 4. Что и где заказывать
+1. Compile a **correspondence sheet** for each person in the chain: all forms of the name, patronymic and surname, with the document where each occurs. Use the pairs from `references/name-identity.md`.
+2. Note a **second point** of coincidence: year and place of birth, names of parents, spouse, address. A match of the name alone is not enough.
+3. Close every discrepancy with a document:
+   - a marriage record or a record of a change of name (Soviet notices of a change of surname under the 1924 decree were printed in local newspapers);
+   - an archival certificate in which the archive itself states both forms;
+   - correction of the civil record in ZAGS/DRATS (the civil registry office);
+   - a court establishment of the fact of kinship or of the ownership of a document — a last resort, for a lawyer to decide.
+4. Take the **transliteration** of the applicant's name from his foreign passport and keep it the same in all translations. For ancestors ask the translator to give the original Cyrillic next to the Latin — so that the examiner can see the correspondence himself.
+5. ⚠️ In the Soviet period children's patronymics were changed even if the father did not change his name: the father is "Berko", the daughter is «Борисовна» [Borisovna]. This is not a break in the chain, but it must be explained by a certificate.
 
-Порядок: **сначала найди запись онлайн** (метрическая книга, база, опись) и узнай точный шифр, **потом** пусть пользователь заказывает справку или повторное свидетельство с этим шифром. Справка «по шифру» выдаётся быстрее и реже приходит с ответом «сведений нет».
+## Step 4. What to order and where
 
-Ведомства принимают только официальные документы: повторные свидетельства ЗАГС/ДРАЦС, архивные справки и выписки с печатью. Распечатки из JewishGen, Geni, MyHeritage и семейные деревья — **только ориентир для поиска**, в пакет не идут.
+Order: **first find the record online** (metrical book, database, inventory) and learn the exact archival reference, **then** have the user order a certificate or repeat certificate with this reference. A certificate "by reference" is issued faster and less often comes back with the answer "no information".
 
-Где заказывать и кто ставит апостиль по странам — `references/ordering-and-apostille.md`. Главные правила:
-- **апостиль ставит страна, выдавшая документ**, и только на документы своих органов;
-- **перевод — после апостиля**, у присяжного переводчика страны подачи (Германия признаёт только присяжный перевод);
-- если запись не нашлась, закажи «справку об отсутствии записи»: ведомство видит, что поиск сделан.
+Authorities accept only official documents: repeat certificates of ZAGS/DRATS, archival certificates and extracts with a seal. Printouts from JewishGen, Geni, MyHeritage and family trees are **only a guide for searching**, they do not go into the package.
 
-Заполнение анкет, заказ на порталах (Дія, Госуслуги, servicii.gov.md), оплата, письма в архивы и консульства — **делает человек**. Ты готовишь список, текст и шифры; входы в аккаунты, капчи и платежи не выполняешь.
+Where to order and who affixes the apostille, by country — `references/ordering-and-apostille.md`. The main rules:
+- **the apostille is affixed by the country that issued the document**, and only on documents of its own bodies;
+- **translation comes after the apostille**, by a sworn translator of the country of filing (Germany recognizes only a sworn translation);
+- if the record was not found, order a "certificate of absence of a record": the authority sees that a search was done.
 
-## Шаг 5. Проверка пакета перед подачей
+Filling in forms, ordering on portals (Diia, Gosuslugi, servicii.gov.md), payment, letters to archives and consulates — **are done by the person**. You prepare the list, the text and the archival references; you do not log into accounts, pass captchas or make payments.
 
-Пройди по списку типичных ошибок:
-- [ ] нет пропущенного звена (чаще всего — брак родителей по материнской линии);
-- [ ] каждое разное написание закрыто документом о тождестве или смене имени;
-- [ ] справки с печатью, без исправлений;
-- [ ] апостиль поставлен в стране выдачи, перевод сделан после него и признанным переводчиком;
-- [ ] справка о несудимости не старше срока программы (Австрия — 8 месяцев, Израиль — 6);
-- [ ] программа открыта на дату подачи (сверено на официальной странице, дата сверки записана);
-- [ ] учтён закон о потере гражданства у предка (Польша 1920 и 1938, Литва до 1940, Румыния — декрет 1938 г.);
-- [ ] ни одно звено не держится только на дереве MyHeritage или чужой базе;
-- [ ] пользователь знает, разрешает ли его нынешнее гражданство двойное (Австрия предупреждает про Украину; Латвия допускает двойное только с перечнем стран).
+## Step 5. Checking the package before filing
 
-## Как отвечать
+Go through the list of typical errors:
+- [ ] no link is missing (most often — the parents' marriage on the maternal line);
+- [ ] each different spelling is closed by a document on identity or change of name;
+- [ ] certificates with a seal, without corrections;
+- [ ] the apostille was affixed in the country of issue, the translation was made after it and by a recognized translator;
+- [ ] the certificate of no criminal record is not older than the programme's limit (Austria — 8 months, Israel — 6);
+- [ ] the programme is open on the date of filing (checked on the official page, the date of checking recorded);
+- [ ] the law on loss of citizenship for the ancestor was taken into account (Poland 1920 and 1938, Lithuania before 1940, Romania — the decree of 1938);
+- [ ] for each link the state that held the place on the birth date is known, and on the maternal line — the woman's citizenship at the child's birth (it usually followed the husband's);
+- [ ] no link rests only on a MyHeritage tree or someone else's database;
+- [ ] the user knows whether his current citizenship allows dual citizenship (Austria warns about Ukraine; Latvia allows dual citizenship only with a list of countries).
 
-1. Одна строка: «не юридическая консультация, сверить на сайте ведомства».
-2. Подходящие программы и **почему** (дата, статус предка) — и какие отпадают.
-3. Таблица цепочки из `assets/chain-table.md`, заполненная тем, что известно, с пустыми клетками как планом.
-4. Лист соответствий имён для спорных звеньев.
-5. Что найти онлайн до заказа и что заказать, где, кто ставит апостиль.
-6. Открытые вопросы для юриста или консульства.
+## How to answer
 
-Каждое правило программы подавай с датой сверки из `references/programs.md`. Если в справочнике стоит пометка «не проверено по странице», так и скажи — не выдавай её за установленный факт. Не придумывай сроки, пошлины и перечни документов, которых нет в справочнике: скажи, что их нужно уточнить на официальной странице.
+1. One line: "not legal advice, check on the authority's site" (in the user's language).
+2. The suitable programmes and **why** (date, ancestor's status) — and which drop out.
+3. The chain table from `assets/chain-table.md`, filled in with what is known, with empty cells as the plan.
+4. The name-correspondence sheet for disputed links.
+5. What to find online before ordering and what to order, where, who affixes the apostille.
+6. Open questions for a lawyer or consulate.
 
-## Связанные навыки
+Present every programme rule with the date of checking from `references/programs.md`. If the reference has a note "not verified against the page", say so — do not pass it off as an established fact. Do not invent deadlines, fees or document lists that are not in the reference: say that they need to be clarified on the official page. Answer in the user's language.
 
-`verifying-genealogy-findings` — проверить, что найденная запись действительно о нужном человеке; `reading-archive-scans` — прочитать метрику; `tracing-emigrants-to-origin` — если цепочка идёт через эмигрантов в США или Европу.
+## References
+
+| File | Use it for |
+|---|---|
+| `references/programs.md` | today's programmes: who qualifies, documents, status |
+| `references/territory-timeline.md` | region → state by exact dates (Bessarabia north/south, Bukovina, Hertsa, Galicia, Volhynia, Podolia, Chełm, Subcarpathia, Vilnius, Memel, Baltics, Poznań/Silesia/Danzig, western Belarus); where records of each period lie |
+| `references/citizenship-changes.md` | automatic citizenship and option (Versailles, Saint-Germain/Trianon, Riga, Romania 1924), Soviet citizenship 1939–1941, loss and deprivation, wife following husband, emigration before the state existed |
+| `references/ethnic-programs.md` | citizenship-based vs descent/ethnicity routes: Spätaussiedler, § 15 StAG, Art. 116(2) GG, Hungary, Karta Polaka, Lithuania, Latvia, Israel |
+| `references/name-identity.md` | one person under different names |
+| `references/ordering-and-apostille.md` | where to order certificates, who affixes the apostille |
+
+Every rule in the references carries its source and the date of checking; items marked ⚠️ come from secondary sources — say so to the user.
+
+## Related skills
+
+`verifying-genealogy-findings` — check that a found record really concerns the right person; `reading-archive-scans` — read a metrical record; `tracing-emigrants-to-origin` — if the chain runs through emigrants to the USA or Europe.

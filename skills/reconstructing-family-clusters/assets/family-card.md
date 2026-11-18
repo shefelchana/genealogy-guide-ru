@@ -1,65 +1,65 @@
-# Карточка семьи: [глава семьи — имя, отчество, фамилия], [общество приписки]
+# Family card: [head of family: given name, patronymic, surname], [society of registration]
 
-Одна карточка на семью (глава + жена + дети). Обновляй строки, а не переписывай карточку.
+One card per family (head + wife + children). Update the lines rather than rewriting the card.
 
-## 1. Якорь
+## 1. Anchor
 
-- Документ: [тип, год, архив, фонд-опись-дело, лист / кадр]
-- Дословно: «…»
-- Состав: [глава, возраст] · [жена, возраст] · [дети с возрастами]
-- Статус: [прочитано по скану / ⚪ только указатель — скан не открыт]
+- Document: [type, year, archive, fond-inventory-file, folio / frame]
+- Verbatim: "..."
+- Composition: [head, age] · [wife, age] · [children with ages]
+- Status: [read from the scan / ⚪ index only, scan not opened]
 
-## 2. Кто эта семья
+## 2. Who this family is
 
-| Параметр | Значение | Откуда известно |
+| Parameter | Value | How known |
 |---|---|---|
-| Сословие (по годам) | [мещане м. N до 18.., купцы … гильдии с 18..] | |
-| Приписка (П) — общество | | |
-| Проживание (Ж) — где жили по годам | | |
-| Губерния и уезд на год документа | | |
-| Занятие, образ жизни | | |
-| Окружение: свидетели, компаньоны, соседи | | |
+| Estate (by years) | [meshchane of shtetl N until 18.., merchants of the ... guild from 18..] | |
+| Registration (R): society | | |
+| Residence (L): where they lived, by years | | |
+| Guberniya and uezd for the year of the document | | |
+| Occupation, way of life | | |
+| Circle: witnesses, partners, neighbours | | |
 
-## 3. Пакет документов
+## 3. Document package
 
-Статусы: **есть** · **нет — искали** · **не сохранилось** · **не искали**.
+Statuses: **have** · **no, searched** · **not preserved** · **not searched**.
 
-| Тип документа | Годы | Адрес (П/Ж), архив | Статус | Шифр / где искали и как (формы, охват) | Что дало / что ожидаем |
+| Document type | Years | Address (R/L), archive | Status | Reference / where and how searched (forms, coverage) | What it gave / what we expect |
 |---|---|---|---|---|---|
-| Ревизия 1858 | 1858 | П | | | |
-| Ревизия 1850 (по мосту возрастов) | 1850 | П | | | |
-| Ревизия 1834 | 1834 | П | | | |
-| Ревизии 1795–1816 | | П | | | |
-| Посемейный список / перепись 1875 | 1874–1875 | П | | | |
-| Рекрутские / призывные списки | | П | | | |
-| Перепись 1897 | 1897 | Ж | | | |
-| Метрики: рождения всех детей | [все сохранившиеся годы] | Ж | | | |
-| Метрики: браки детей | | Ж | | | |
-| Метрики: смерти (родители, младенцы) | | Ж | | | |
-| Дела о перечислении / причислении | | П | | | |
-| Нотариат | | Ж | | | |
-| Суды | | Ж | | | |
-| Пресса | | Ж | | | |
-| Справочники | | Ж | | | |
-| 1914–1922: потери, беженцы, погромы | | Ж | | | |
-| ЗАГС 1920–1940-х | | Ж | | | |
-| Война, эвакуация, репрессии | | | | | |
-| Холокост | | | | | |
-| Эмиграция | | | | | |
+| Revision 1858 | 1858 | R | | | |
+| Revision 1850 (by age bridge) | 1850 | R | | | |
+| Revision 1834 | 1834 | R | | | |
+| Revisions 1795-1816 | | R | | | |
+| Family list / census 1875 | 1874-1875 | R | | | |
+| Recruit / draft lists | | R | | | |
+| Census 1897 | 1897 | L | | | |
+| Metrical books: births of all children | [all surviving years] | L | | | |
+| Metrical books: marriages of the children | | L | | | |
+| Metrical books: deaths (parents, infants) | | L | | | |
+| Files on transfer / assignment | | R | | | |
+| Notarial deeds | | L | | | |
+| Courts | | L | | | |
+| Press | | L | | | |
+| Directories | | L | | | |
+| 1914-1922: losses, refugees, pogroms | | L | | | |
+| ZAGS 1920s-1940s | | L | | | |
+| War, evacuation, repression | | | | | |
+| Holocaust | | | | | |
+| Emigration | | | | | |
 
-## 4. Люди семьи
+## 4. People of the family
 
-| Человек | Годы | Документы (шифры) | Дальше по нему (брак, дети, советская жизнь) |
+| Person | Years | Documents (references) | Next steps on him or her (marriage, children, Soviet life) |
 |---|---|---|---|
 | | | | |
 
-## 5. Отрицательные свидетельства
+## 5. Negative evidence
 
-| Где должен был быть | Кто | Чего нет | Охват поиска | Возможные объяснения |
+| Where it should have been | Who | What is missing | Coverage of the search | Possible explanations |
 |---|---|---|---|---|
-| | | | | умер / бежал / перечислен / приписан в другом месте / лист утрачен |
+| | | | | died / fled / transferred / registered elsewhere / folio lost |
 
-## 6. Открытые вопросы и следующий шаг
+## 6. Open questions and next step
 
-- [ ] […]
-- Непросмотренные разделы → в реестр (`using-community-surname-indexes/assets/unread-sections-registry.md`).
+- [ ] [...]
+- Unread sections → into the registry (`using-community-surname-indexes/assets/unread-sections-registry.md`).

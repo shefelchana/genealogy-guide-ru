@@ -1,88 +1,89 @@
 ---
 name: interpreting-jewish-family-photos
-description: Reads old Jewish family photographs (1860s–1950s, Russian Empire, Poland, Romania, USSR, emigrant communities) for signs of way of life — kapote, shtreimel, yarmulke, a married woman's wig or kerchief, beard and peyes, tallit, Shabbat candlesticks, books — and for the event behind the picture (wedding, funeral, kheder or gymnasium class, Zionist club, ORT school, army service, passport photo, a portrait sent «на память» overseas), then turns each sign into a search hypothesis (place, estate, religiosity, year, event) and names the document to look for. Use whenever the user shows an old family photo of Jewish relatives and asks «что можно понять по этой фотографии», «он в ермолке — значит, религиозный?», «бабушка в парике», «групповое фото хедера», «солдат-еврей», «надпись на идише на обороте», «what does this Jewish family photo tell me», «Hasidic clothing in photo», even if they only ask who is in the picture or where it was taken. Dating by mount and studio is in dating-old-photos.
+description: Reads old Jewish family photographs (1860s–1950s; Russian Empire, Poland, Romania, USSR, emigrant communities) for signs of way of life — kapote (long coat), shtreimel (fur hat), yarmulke, a married woman's wig or kerchief, beard and peyes, tallit, Shabbat candlesticks, books — and for the event behind the picture (wedding, funeral, kheder or gymnasium class, Zionist club, ORT school, army service, passport photo, a portrait sent «на память» ("as a keepsake") overseas). Turns each sign into a search hypothesis (place, estate, religiosity, year, event) and names the document to look for. Use whenever the user shows an old family photo of Jewish relatives and asks "what does this Jewish family photo tell me", "he wears a yarmulke, so is he religious?", "grandmother in a wig", "kheder group photo", "Jewish soldier", "Yiddish inscription on the back", "Hasidic clothing in photo", even if they only ask who is in the picture or where it was taken. Dating by mount and studio is in dating-old-photos. Also triggers on Russian requests: «что можно понять по этой фотографии», «он в ермолке — значит, религиозный?», «бабушка в парике», «групповое фото хедера», «солдат-еврей», «надпись на идише на обороте».
 ---
 
-# Еврейская семейная фотография как источник
+# The Jewish family photograph as a source
 
-## Принцип
+## Principle
 
-Снимок показывает **образ жизни и событие**, а не национальность и не имя. Каждый признак переводи в цепочку **признак → гипотеза → документ**: «капота и пейсы у отца, парик у матери → традиционная семья, вероятно местечко или уездный город → метрики раввината того места, ревизские и посемейные списки». Признак без документа остаётся догадкой.
+A photograph shows a **way of life and an event**, not nationality and not a name. Turn every sign into a chain **sign → hypothesis → document**: "a kapote and peyes on the father, a wig on the mother → a traditional family, probably a shtetl (*mestechko*) or a district town → metrical books of the rabbinate of that place, revision lists (*revizskie skazki*) and family lists (*posemeinye spiski*)". A sign without a document remains a guess.
 
-Сначала датируй снимок по технике, паспарту, ателье и одежде навыком `dating-old-photos`. Этот навык добавляет к датировке еврейский слой: что носили, какие предметы и события, что из кадра исчезает и почему.
+First date the photograph by technique, mount, studio and clothing with the skill `dating-old-photos`. This skill adds a Jewish layer to the dating: what was worn, which objects and events, what drops out of the frame and why.
 
-**Никогда не делай выводов о национальности или происхождении по лицу.** «Еврейской внешности» как признака нет. Говори только о том, что видно: одежда, предметы, надписи, место, событие.
+**Never draw conclusions about nationality or origin from a face.** There is no such thing as a "Jewish appearance" as evidence. Speak only of what can be seen: clothing, objects, inscriptions, place, event.
 
-## Шаг 0. Что попросить
+## Step 0. What to ask for
 
-- скан **обеих сторон**; штамп ателье, надписи, след уголковой печати;
-- откуда снимок, в чьём альбоме лежал, что говорят родные и **кто** это говорит;
-- известные места жизни семьи и годы — без них гипотезу не к чему привязать.
+- a scan of **both sides**; the studio stamp, inscriptions, the mark of a corner seal;
+- where the photograph came from, whose album it lay in, what relatives say and **who** is saying it;
+- the known places where the family lived and the years — without them the hypothesis has nothing to attach to.
 
-## Шаг 1. Опиши видимое, не толкуя
+## Step 1. Describe what is visible, without interpreting
 
-Сначала перечисли по людям: головной убор, борода и пейсы, верхняя одежда, у женщин — волосы (свои, парик, платок), украшения, обувь; предметы в руках и на столе; фон (студийный задник или дом, улица, кладбище); вывески и надписи в кадре. Отдельно — надписи на обороте дословно. Толкование — только после описания.
+First list, person by person: headwear, beard and peyes, outer clothing, and for women the hair (own hair, wig, kerchief), jewellery, shoes; objects in hands and on the table; the background (a studio backdrop or a home, street, cemetery); signs and inscriptions in the frame. Separately, the inscriptions on the back word for word. Interpretation comes only after the description.
 
-## Шаг 2. Одежда и головные уборы
+## Step 2. Clothing and headwear
 
-Подробная таблица с годами и ловушками — `references/signs-and-hypotheses.md`, раздел 1. Главное:
+A detailed table with years and pitfalls is in `references/signs-and-hypotheses.md`, section 1. In brief:
 
-- **Капота** (длинный тёмный сюртук), **штраймл** (меховая шапка; у хасидов — по субботам и праздникам), картуз, **ермолка** — традиционная среда. Штраймл указывает на хасидов вероятнее, чем просто капота.
-- В Российской империи — налог на шитьё (1839) и ношение (1844) еврейской одежды, запрет её ношения с 1 января 1851 г. (указ от 1 мая 1850 г.), запрет еврейкам брить голову (апрель 1851 г.) и пейсы (разъяснения 1851–1852 гг.); в Царстве Польском — свой указ 1846 г. с откупом до 1850 г. Применяли непоследовательно, после разъяснения 1865 г. запрет ослаб. Эти законы — **только контекст, не основание для датировки**: капота на снимке 1880-х — обычная картина местечка, а не нарушение и не признак «до 1851 года».
-- **Парик или платок у женщины** — признак замужества и соблюдения обычая; непокрытые волосы — не доказательство незамужества: в городской среде многие не покрывали голову.
-- **Городской костюм, галстук, гимназическая или студенческая форма** — ассимиляция, образование, город. В одной семье отец бывает в капоте, а сын — в сюртуке: это разница поколений, а не разные семьи.
+- **Kapote** (a long dark coat), **shtreimel** (a fur hat; among Hasidim worn on Sabbaths and festivals), a peaked cap (*kartuz*), **yarmulke** — a traditional milieu. A shtreimel points to Hasidim more probably than a kapote alone.
+- In the Russian Empire: a tax on the making (1839) and wearing (1844) of Jewish clothing, a ban on wearing it from 1 January 1851 (decree of 1 May 1850), a ban on Jewish women shaving their heads (April 1851) and on peyes (clarifications of 1851–1852); in the Kingdom of Poland, its own decree of 1846 with a payment option until 1850. They were applied inconsistently, and after the clarification of 1865 the ban weakened. These laws are **context only, not a basis for dating**: a kapote in a photograph of the 1880s is an ordinary sight in a shtetl, neither a violation nor a sign of "before 1851".
+- **A wig or kerchief on a woman** is a sign of marriage and of observing custom; uncovered hair is not proof that she was unmarried: in the urban milieu many did not cover their heads.
+- **A city suit, a necktie, a gymnasium or student uniform** — assimilation, education, the city. In one family the father may be in a kapote and the son in a frock coat: this is a difference of generations, not of families.
 
-## Шаг 3. Предметы и интерьер
+## Step 3. Objects and interior
 
-Талит и тфилин, книги, субботние подсвечники, ханукия, кидушный бокал — признак соблюдения или подчёркнутой учёности. Проверь, **не реквизит ли ателье**: та же книга или тот же подсвечник на чужих снимках этого ателье — студийный предмет. Снимок дома (не в ателье) с предметами — сильнее.
+A tallit and tefillin, books, Shabbat candlesticks, a hanukkiah, a Kiddush cup — a sign of observance or of pronounced learning. Check **whether it is a studio prop**: the same book or the same candlesticks in other people's photographs from this studio mean a studio object. A photograph taken at home (not in a studio) with such objects is stronger.
 
-## Шаг 4. Событие и тип снимка → документ
+## Step 4. Event and type of photograph → document
 
-| Что на снимке | Гипотеза | Какой документ искать |
+| What is in the photograph | Hypothesis | Which document to look for |
 |---|---|---|
-| пара в нарядном, у невесты фата, хупа | свадьба, год ± 1 | метрика брака (раввинат, после 1918 — ЗАГС) |
-| группа у свежей могилы, камень | похороны или открытие памятника | надгробие (`researching-jewish-cemeteries`), метрика смерти |
-| мальчики с учителем | хедер, талмуд-тора | метрики рождения мальчиков того места ±3 г. |
-| класс в форме, учителя в центре | гимназия, училище, ОРТ | списки учеников и выпускников, памятные книжки |
-| группа с флагом, плакатом на иврите | сионистский кружок (межвоенная Польша, Румыния, Прибалтика) | книги памяти местечка, пресса общины |
-| человек в форме | призыв, служба; форма и знаки называют род войск, иногда полк | призывные списки, списки потерь ПМВ, ОБД (`soviet-era-records`); город ателье — подсказка о месте службы (`dating-old-photos`) |
-| маленький снимок с уголком печати | фото с документа | паспорт, ходатайство о натурализации (в США — с 1929 г.), эмигрантское дело |
-| открытка-портрет «на память» | отправка родным за границу | письма, списки пассажиров (`tracing-emigrants-to-origin`) |
+| a couple in finery, a veil on the bride, a chuppah | wedding, year ± 1 | marriage record (rabbinate; after 1918, ZAGS — Soviet civil registry) |
+| a group at a fresh grave, a stone | funeral or unveiling of a monument | gravestone (`researching-jewish-cemeteries`), death record |
+| boys with a teacher | kheder, Talmud Torah | birth records of the boys of that place ±3 years |
+| a class in uniform, teachers in the centre | gymnasium, school, ORT (Society for Trades and Agricultural Labour) | lists of pupils and graduates, memorial books (*pamyatnye knizhki*) |
+| a group with a flag, a poster in Hebrew | Zionist club (interwar Poland, Romania, the Baltics) | memorial (yizkor) books of the shtetl, community press |
+| a person in uniform | conscription, service; the uniform and insignia name the branch of service, sometimes the regiment | draft lists, WWI casualty lists, OBD (`soviet-era-records`); the studio's town is a hint about the place of service (`dating-old-photos`) |
+| a small photo with the corner of a seal | a photo taken from a document | passport, naturalization petition (in the US from 1929), emigration file |
+| a portrait postcard "as a keepsake" | sent to relatives abroad | letters, passenger lists (`tracing-emigrants-to-origin`) |
 
-Подробно по каждому типу — `references/signs-and-hypotheses.md`, разделы 2–5.
+Details for each type are in `references/signs-and-hypotheses.md`, sections 2–5.
 
-## Шаг 5. Надписи
+## Step 5. Inscriptions
 
-Переписывай дословно, на языке оригинала, непрочитанное в [ ]. Частые формулы: идиш «צום אנדענק» (на память), иврит «למזכרת»; имя с отчеством по-еврейски; дата по еврейскому календарю. Чтение и перевод дат — навык `reading-hebrew-yiddish-sources`. Штамп ателье на идише или польском называет местечко — проверь его годы по справочникам из `dating-old-photos`.
+Copy them word for word, in the original language, with unread parts in [ ]. Common formulas: Yiddish «צום אנדענק» (*tsum andenk*, "as a keepsake"), Hebrew «למזכרת» (*lemazkeret*, "as a memento"); a name with patronymic in Jewish form; a date by the Jewish calendar. Reading and converting dates is covered by the skill `reading-hebrew-yiddish-sources`. A studio stamp in Yiddish or Polish names the shtetl: check its years in the directories listed in `dating-old-photos`.
 
-## Шаг 6. Сравнительный материал
+## Step 6. Comparative material
 
-Сверяй признаки с **датированными и подписанными** снимками той же среды: фотоархивы YIVO, Яд ва-Шем, Centropa, «Большой Русский Альбом», Еврейский этнографический фотомузей, книги памяти местечек. Что где искать и как — `references/photo-archives.md`. Если сайт требует регистрации, входа или капчи, это делает человек; ты подсказываешь, что вводить.
+Compare the signs with **dated and captioned** photographs of the same milieu: the photo archives of YIVO, Yad Vashem, Centropa, the "Great Russian Album" (*Bolshoi Russkii Albom*), the Jewish Ethnographic Photo Museum (myshtetl.org), memorial books of shtetls. What to look for where and how is in `references/photo-archives.md`. If a site requires registration, a login or a CAPTCHA, a human does that; you suggest what to enter.
 
-## Пример цепочки
+## Example chain
 
-Снимок: мальчик лет тринадцати в талите и с тфилин у стола с книгой, штамп ателье уездного города, на обороте «צום אנדענק» и дата תר״ע.
-- Признак: тфилин у мальчика → гипотеза: бар-мицва, ему 13 лет → документ: метрика рождения около 5657 года (1896–1897 гг.) в раввинате местечка.
-- Признак: надпись на идише «на память» → гипотеза: снимок послан родным, возможно за границу → документ: письма, списки пассажиров родственников.
-- Признак: ателье уездного города → гипотеза: семья жила в уезде, не обязательно в самом городе → документ: метрики всех раввинатов уезда.
-- Проверка: тот же стол и книга на чужих снимках ателье — значит, реквизит; бар-мицву это не отменяет, но религиозность дома не доказывает.
+The photograph: a boy of about thirteen in a tallit and tefillin at a table with a book, the stamp of a district-town studio, and on the back «צום אנדענק» and the date תר״ע (5670, i.e. 1909/1910).
+- Sign: tefillin on the boy → hypothesis: bar mitzvah, he is 13 → document: birth record around 5657 (1896–1897) in the rabbinate of the shtetl.
+- Sign: a Yiddish inscription meaning "as a keepsake" → hypothesis: the photograph was sent to relatives, possibly abroad → document: letters, passenger lists of relatives.
+- Sign: a district-town studio → hypothesis: the family lived in the district, not necessarily in the town itself → document: metrical books of all rabbinates of the district (*uezd*).
+- Check: the same table and book in other people's photographs from the studio mean a prop; this does not cancel the bar mitzvah, but does not prove the religiosity of the home.
 
-## Ловушки
+## Pitfalls
 
-- **Реквизит и костюмы ателье**: ателье держали шляпы, шали, книги, кресла.
-- **Ретушь и позднее увеличение**: советские мастерские «фотоувеличения» дорисовывали галстуки, пиджаки, убирали головные уборы. Сличай с исходным маленьким снимком.
-- **Монтаж**: в эмиграции и в 1920-х вклеивали портрет отсутствующего или умершего в семейную группу. Люди на одном снимке могли не встречаться.
-- **Надпись сделана позже** и могла ошибаться в имени, месте, годе.
-- **Отсутствие признаков ничего не значит**: советский снимок без ермолки и без бороды не говорит, что семья не соблюдала обычаев.
+- **Studio props and costumes**: studios kept hats, shawls, books, armchairs.
+- **Retouching and later enlargement**: Soviet "photo enlargement" workshops painted in neckties and jackets and removed headwear. Compare with the original small photograph.
+- **Montage**: in emigration and in the 1920s a portrait of an absent or dead person was pasted into a family group. The people in one photograph may never have met.
+- **The inscription was made later** and may be wrong about the name, place or year.
+- **The absence of signs means nothing**: a Soviet photograph without a yarmulke and without a beard does not say that the family did not keep its customs.
 
-## Этика
+## Ethics
 
-Не публикуй снимки живых людей без их согласия; права на снимок принадлежат фотографу (`writing-family-history`, глава об этике в руководстве). Отмечай, что религиозность и происхождение на снимке — гипотеза.
+Do not publish photographs of living people without their consent; the rights to a photograph belong to the photographer (`writing-family-history`, the chapter on ethics in the guide). Note that religiosity and origin in a photograph are hypotheses.
 
-## Формат ответа
+## Answer format
 
-1. Что видно — по людям и предметам, надписи дословно.
-2. Таблица: признак → гипотеза → насколько надёжно → какой документ искать.
-3. Что исключено или спорно и почему (реквизит, ретушь, поздняя подпись).
-4. Следующие шаги: какой документ, в каком фонде или базе, какой сравнительный снимок найти.
-5. Предложи заполнить `assets/photo-lifestyle-card.md`.
+1. What is visible — by person and object, inscriptions word for word.
+2. A table: sign → hypothesis → how reliable → which document to look for.
+3. What is excluded or disputed and why (prop, retouching, later caption).
+4. Next steps: which document, in which fond or database, which comparative photograph to find.
+5. Offer to fill in `assets/photo-lifestyle-card.md`.
+Answer in the user's language.

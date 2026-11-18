@@ -1,14 +1,14 @@
-# Запись урока (для файла методики проекта)
+# Lesson entry (for the project's methodology file)
 
-Уроки накапливаются в отдельном файле (например, `МЕТОДИКА-УРОКИ.md`), а не в «Продолжать отсюда». Раз в неделю их стоит перечитать: что из этого стало правилом?
+Lessons accumulate in a separate file (for example, `METHODOLOGY-LESSONS.md`), not in "Continue from here". Once a week it is worth rereading them: which of these have become a rule?
 
 ```
-## ГГГГ-ММ-ДД — [короткое название урока]
-**Что случилось:** (факт: например, массовый проход дал «0», а все ответы сайта были 403)
-**Чем обошлось:** (потерянное время, повторная работа, расход)
-**Почему:** (причина, а не виноватый)
-**Правило на будущее:** (одна строка, которую можно вставить в задание агенту или в чек-лист)
-**Куда внесено:** (шаблон задания / чек-лист приёма / путеводитель по сайту / ещё никуда)
+## YYYY-MM-DD — [short name of the lesson]
+**What happened:** (a fact: for example, a mass pass gave "0", and all the site's responses were 403)
+**What it cost:** (lost time, repeated work, expense)
+**Why:** (the cause, not who is to blame)
+**Rule for the future:** (one line that can be pasted into an agent's task or a checklist)
+**Where entered:** (task template / acceptance checklist / site guide / nowhere yet)
 ```
 
-Хорошие уроки конкретны и проверяемы: «на сайте X после ~100 запросов включается защита — пауза ≥ 5 с» лучше, чем «надо работать аккуратнее».
+Good lessons are concrete and checkable: "on site X protection switches on after ~100 requests — pause ≥ 5 s" is better than "we must work more carefully".

@@ -1,41 +1,42 @@
 ---
 name: searching-nli-jewish-press
-description: Searches the Historical Jewish Press of the National Library of Israel (nli.org.il/newspapers) for people and places in 19th–20th-century Hebrew and Yiddish newspapers (Ha-Tsefira, Ha-Melits, Ha-Magid, Yudishes folksblat and others) — builds spellings in Hebrew script, uses annual indexes of correspondents, reads the issue contents and the article image, translates, and handles Cloudflare checks by slowing down. Use whenever a family history question could be answered by a newspaper notice, correspondence, donation list or obituary — e.g. "поищи в еврейских газетах", "найди объявление", "что писали про местечко", "переведи заметку на идише" — even if NLI is not named.
+description: >-
+  Searches the Historical Jewish Press of the National Library of Israel (nli.org.il/newspapers) for people and places in 19th–20th-century Hebrew and Yiddish newspapers (Ha-Tsefira, Ha-Melits, Ha-Magid, Yudishes folksblat and others) — builds spellings in Hebrew script, uses annual indexes of correspondents, reads the issue contents and the article image, translates, and handles Cloudflare checks by slowing down. Use whenever a family history question could be answered by a newspaper notice, correspondence, donation list or obituary — e.g. "search the Jewish newspapers", "find an announcement about my ancestor", "what did the press write about the shtetl", "translate a Yiddish newspaper notice" — even if NLI is not named. Also triggers on Russian requests: «поищи в еврейских газетах», «найди объявление», «что писали про местечко», «переведи заметку на идише».
 ---
 
-# Еврейская пресса в Национальной библиотеке Израиля (NLI)
+# The Jewish press at the National Library of Israel (NLI)
 
-## Что там искать
-- **Объявления** (поиск пропавших мужей — «агуна», розыск родственников, свадьбы, траурные).
-- **Корреспонденции из местечек** (рубрика «Корреспонденции», подпись часто псевдонимом).
-- **Списки пожертвований** (имя, иногда отчество, город, сумма).
-- **Статьи местных авторов** (подпись с отчеством и городом: «Элиэзер Мошков Розенберг, [город], март 1884»).
-- **Годовые указатели** тома: список корреспондентов с городами и страницами — отдельная находка.
+## What to look for there
+- **Announcements** (searches for missing husbands — *agunah*, searches for relatives, weddings, mourning notices).
+- **Correspondence from shtetls** (the "Correspondence" section, often signed with a pen name).
+- **Donation lists** (name, sometimes patronymic, town, amount).
+- **Articles by local authors** (signature with patronymic and town: «Элиэзер Мошков Розенберг, [город], март 1884» [“Eliezer, son of Moshko, Rosenberg, [town], March 1884”]).
+- **Annual indexes** of a volume: a list of correspondents with towns and pages is a find in itself.
 
-## Как строить запрос
-1. Имя и город — **на иврите/идише**, в нескольких написаниях: קישינוב / קעשענעוו; ראָזענבערג / ראזענבערג / רויזענבערג; учитывать немую «ה» (в названии города она бывает и не бывает), удвоенные «וו/יי», окончания.
-2. Фамилию на русском газеты пишут по-идишски: Розенберг → ראָזענבערג/ראזענבערג; отчество — «מאשקאוו» (Мошков).
-3. Ограничивать **годами** и **изданием**: так меньше шума и меньше запросов.
-4. Распознавание старого шрифта ошибается: «ראזענבערג» может стать «ראזעגבערג». Пробовать 2–3 варианта и слово-соседа (город).
+## How to build a query
+1. Name and town **in Hebrew/Yiddish script**, in several spellings: קישינוב / קעשענעוו (Kishinev); ראָזענבערג / ראזענבערג / רויזענבערג (Rosenberg); allow for the silent "ה" (in a town name it sometimes appears and sometimes not), doubled "וו/יי", endings.
+2. Newspapers write a Russian surname in Yiddish fashion: Rosenberg → ראָזענבערג/ראזענבערג; the patronymic — «מאשקאוו» (Moshkov).
+3. Restrict by **years** and by **publication**: less noise and fewer requests.
+4. Recognition of the old typeface makes mistakes: «ראזענבערג» may become «ראזעגבערג». Try 2–3 variants and a neighbouring word (the town).
 
-## Как читать
-- Результат → страница выпуска → статья. Оглавление выпуска показывает рубрики.
-- **Решение принимать только по изображению**: распознанный текст (OCR) — для поиска, не для цитаты.
-- Изображение статьи целиком (блок) читается крупно; подпись обычно в конце.
-- Перевод — близко к тексту, с пометками «(?)» на неуверенных словах; сохранять оригинальные написания имён.
+## How to read
+- Result → issue page → article. The issue's table of contents shows the sections.
+- **Decide only from the image**: recognized text (OCR) is for searching, not for quoting.
+- The whole article image (block) is read at large size; the signature is usually at the end.
+- Translation — close to the text, with "(?)" marks on uncertain words; keep the original spellings of names.
 
-## Темп и Cloudflare (опыт октября 2026)
-- Проверка «Verify you are human» появляется при частых запросах (примерно после сотни быстрых обращений), после этого сайт может держать вкладку под подозрением.
-- Проверку проходит **человек**, в той же вкладке, где работает помощник.
-- Работать **навигацией по одной странице** с паузами ≥5 с; не перебирать номера газет скриптом подряд.
-- Массовый проход **проверять на заведомо положительном примере**: если сайт отвечает ошибкой (403), «ноль находок» ничего не значит.
+## Pace and Cloudflare (experience of October 2026)
+- The "Verify you are human" check appears with frequent requests (roughly after a hundred rapid requests), and afterwards the site may keep the tab under suspicion.
+- The check is passed by a **human**, in the same tab in which the assistant works.
+- Work by **navigating one page at a time** with pauses of at least 5 s; do not go through newspaper numbers with a script in a row.
+- **Test a bulk pass on a known positive example**: if the site answers with an error (403), "zero finds" means nothing.
 
-## Записать находку
-Издание, дата, номер выпуска, рубрика, страница/столбец, ссылка; дословно (в оригинальном письме) + перевод; кроп изображения.
+## Recording a find
+Publication, date, issue number, section, page/column, link; verbatim (in the original script) + translation; image crop.
 
-## Ловушки
-- Одинаковые фамилии в разных городах — сверять город и отчество.
-- Псевдонимы корреспондентов («А гутер бродер» — «добрый брат»): один псевдоним в разные годы может связать заметки.
-- Номер страницы в годовом указателе часто означает **столбец** всего тома, а не страницу выпуска.
+## Pitfalls
+- The same surnames in different towns — check the town and the patronymic.
+- Correspondents' pen names («А гутер бродер» [“A good brother”]): one pen name in different years can link notes together.
+- A page number in an annual index often means a **column** of the whole volume, not a page of the issue.
 
-См. также: `reading-hebrew-yiddish-sources`, `verifying-genealogy-findings`.
+See also: `reading-hebrew-yiddish-sources`, `verifying-genealogy-findings`.

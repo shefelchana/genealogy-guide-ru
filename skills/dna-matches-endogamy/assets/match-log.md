@@ -1,21 +1,21 @@
-# Журнал ДНК-совпадений
+# DNA match log
 
-**Чей тест:** (условно: «тест 1 — я», «тест 2 — тётя по матери»)
-**Сервисы:** 23andMe / MyHeritage / FamilyTreeDNA / GEDmatch / …
-**Пороги, которыми пользуемся:** самый длинный сегмент ≥ __ сМ; сегменты < __ сМ в сумме не считаем.
+**Whose test:** (by code: "test 1 — me", "test 2 — maternal aunt")
+**Services:** 23andMe / MyHeritage / FamilyTreeDNA / GEDmatch / …
+**Thresholds we use:** longest segment ≥ __ cM; segments < __ cM are not counted in the total.
 
-> Имена живых совпадений в этот файл можно не писать: достаточно условного обозначения и ссылки на профиль. Файл не публикуется и не пересылается без согласия людей из списка.
+> The names of living matches need not be written in this file: a code and a link to the profile are enough. The file is not published or forwarded without the consent of the people on the list.
 
-| № | Совпадение (условно) | Сервис / набор | Сумма сМ | Самый длинный сегмент, сМ | Сегментов | Хромосома, если известна | В pile-up зоне? | Кластер (общие совпадения) | Сторона (отц./мат./?) | Места в дереве совпадения | Фамилии в дереве | Гипотеза связи | Документ, который проверит гипотезу | Писали (дата) | Ответ |
+| No. | Match (code) | Service / kit | Total cM | Longest segment, cM | Segments | Chromosome, if known | In a pile-up region? | Cluster (shared matches) | Side (pat./mat./?) | Places in the match's tree | Surnames in the tree | Hypothesis of connection | Document that will test the hypothesis | Written to (date) | Reply |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | | | | | | | | | | | | | | | |
 
-## Кластеры
+## Clusters
 
-| Кластер | Кто входит | Общие места | Предполагаемая линия | Уверенность |
+| Cluster | Who belongs | Shared places | Presumed line | Confidence |
 |---|---|---|---|---|
-| A | | | | гипотеза / подкреплено документом |
+| A | | | | hypothesis / supported by a document |
 
-## Что нельзя утверждать пока
+## What cannot yet be asserted
 
 -

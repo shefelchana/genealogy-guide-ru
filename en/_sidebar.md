@@ -64,7 +64,7 @@
     - [A worked example for beginners](/en/examples/worked-example-for-beginners.md)
     - [Formats showcase](/en/examples/formats-showcase.md)
   - [Templates](/en/templates/README.md)
-  - [Skills (in Russian)](/skills/README.md)
+  - [Skills](/skills/README.md)
   - [Instructions for the AI agent](/en/AGENTS.md)
 - [Change log](/en/changelog.md)
 - [About the compiler](/en/about.md)

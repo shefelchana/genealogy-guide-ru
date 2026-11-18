@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""Поиск по двум открытым базам жертв и пострадавших от погромов 1917–1921 гг.
-без браузера. Печатает таблицу (TSV) и число найденных записей.
+"""Search two open databases of victims and sufferers of the 1917-1921 pogroms
+without a browser. Prints a table (TSV) and the number of records found.
 
-1) jewishpogroms.info (база Н. Липес, ~77 777 записей; поиск только латиницей)
+1) jewishpogroms.info (N. Lipes's database, ~77,777 records; Latin-letter search only)
    python3 pogrom_search.py lipes Rabinovich
-   python3 pogrom_search.py lipes "Rabin*"            # звёздочка = любые буквы
+   python3 pogrom_search.py lipes "Rabin*"            # asterisk = any letters
    python3 pogrom_search.py lipes Rabinovich --soundslike
-   python3 pogrom_search.py lipes "" --city Pavoloch  # все записи по городу
+   python3 pogrom_search.py lipes "" --city Pavoloch  # all records for a city
 
-2) pogrom.amhazikaron.org («Ам а-Зикарон», ~7 900 жертв; поиск подстрокой, кириллица)
+2) pogrom.amhazikaron.org (Am HaZikaron, ~7,900 victims; substring search, Cyrillic)
    python3 pogrom_search.py amh Проскуров
-   python3 pogrom_search.py amh Рабинович --all      # все страницы, а не первые 100
+   python3 pogrom_search.py amh Рабинович --all      # all pages, not just the first 100
 
-Вежливость: одна база — один исполнитель; между запросами пауза (по умолчанию 3 с).
-Скрипт не обходит капчи и не входит в аккаунты. Ответ, не похожий на таблицу
-(страница-заглушка, 403/429), печатается как ОШИБКА — это не «0 найдено».
+Courtesy: one database - one worker; a pause between requests (3 s by default).
+The script does not bypass CAPTCHAs and does not log in to accounts. A response that
+does not look like a table (a placeholder page, 403/429) is printed as an ERROR - it
+is not "0 found".
 """
 import html
 import json
@@ -48,9 +49,9 @@ def lipes(surname, soundslike=False, city=None):
     body = fetch(LIPES_URL, urllib.parse.urlencode(form).encode())
     m = re.search(r"pogroms-persons-info'>([^<]*)<", body)
     if not m:
-        print("ОШИБКА: ответ не похож на таблицу результатов:", body[:200].replace("\n", " "))
+        print("ERROR: the response does not look like a results table:", body[:200].replace("\n", " "))
         sys.exit(2)
-    print("#", m.group(1), "| запрос:", form)
+    print("#", m.group(1), "| query:", form)
     print("\t".join(FIELDS) + "\tRecord URL")
     for row in re.findall(r"<tr>(.*?)</tr>", body, re.S)[1:]:
         cells = dict(
@@ -69,21 +70,21 @@ def amh(query, all_pages=False, pause=3.0):
         try:
             body, hdr = fetch(f"{AMH_URL}?{qs}", headers=True)
         except Exception as e:  # noqa: BLE001
-            print("ОШИБКА:", e)
+            print("ERROR:", e)
             sys.exit(2)
         total = hdr.get("X-WP-Total") or hdr.get("x-wp-total")
         total_pages = int(hdr.get("X-WP-TotalPages") or hdr.get("x-wp-totalpages") or 1)
         if page == 1:
-            print(f"# найдено {total} записей, страниц по 100: {total_pages} | запрос: {query!r}")
-            print("id\tзапись\tтекст (с источником)")
+            print(f"# found {total} records, pages of 100: {total_pages} | query: {query!r}")
+            print("id\trecord\ttext (with source)")
         for rec in json.loads(body):
             title = html.unescape(rec["title"]["rendered"])
             text = html.unescape(re.sub(r"<[^>]+>", " ", rec["content"]["rendered"]))
-            flat = re.sub(r'\s+', ' ', text).strip()  # вне f-строки: Python < 3.12
+            flat = re.sub(r'\s+', ' ', text).strip()  # hoisted out of the f-string for older Python versions
             print(f"{rec['id']}\t{title}\t{flat}")
         if not all_pages:
             if total_pages > 1:
-                print(f"# показана только первая сотня; добавь --all")
+                print(f"# only the first hundred shown; add --all")
             break
         page += 1
         time.sleep(pause)

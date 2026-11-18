@@ -1,35 +1,35 @@
-# Связи между семьями одной фамилии: [фамилия], [регион]
+# Links between families of one surname: [surname], [region]
 
-Одна строка — одна предполагаемая связь между двумя семьями (по карточкам семей). Статусы (единая шкала руководства): 🟢 подтверждена (документ + второй независимый признак) · 🟡 открыта / сильная версия (≥ 2 независимых признака, без противоречий, есть письменное обоснование) · ⚪ не проверена / слабая (один признак) · 🔴 снята (с причиной).
+One row is one proposed link between two families (per the family cards). Statuses (the guide's single scale): 🟢 confirmed (document + a second independent feature) · 🟡 open / strong version (≥ 2 independent features, no contradictions, written rationale) · ⚪ unchecked / weak (one feature) · 🔴 withdrawn (with the reason).
 
-## Семьи
+## Families
 
-| Код | Глава семьи | Общество приписки | Где жили | Годы | Карточка |
+| Code | Head of family | Society of registration | Where they lived | Years | Card |
 |---|---|---|---|---|---|
-| А | | | | | |
-| Б | | | | | |
+| A | | | | | |
+| B | | | | | |
 
-## Связи
+## Links
 
-| № | Связь (кто кому) | Признаки «за» (документ, шифр) | Независимы? | Признаки «против» | Уровень | Чего не хватает до следующего уровня | Где это искать |
+| No. | Link (who to whom) | Features for (document, reference) | Independent? | Features against | Level | What is missing for the next level | Where to look |
 |---|---|---|---|---|---|---|---|
-| 1 | А.глава = брат Б.главы | общее общество (ревизия 1858, …); набор имён Х/Y/Z в обеих семьях | да / нет — почему | возраст расходится на … | 🟡 | мост возрастов к 1850 г.; дело о перечислении | ДАКО …; указатель … |
+| 1 | A's head = brother of B's head | shared society (1858 revision, ...); the set of names X/Y/Z in both families | yes / no, why | age differs by ... | 🟡 | age bridge to 1850; transfer file | DAKO ...; index ... |
 | 2 | | | | | | | |
 
-## Отведённые связи
+## Rejected links
 
-| Связь | Почему отведена | Документ |
+| Link | Why rejected | Document |
 |---|---|---|
-| | разные отцы по ревизии 1834 г. / фамилия-топоним, разные уезды / … | |
+| | different fathers per the 1834 revision / place-name surname, different uezds / ... | |
 
-## Обоснования для связей 🟡
+## Rationales for 🟡 links
 
-### Связь № [ ]
+### Link No. [ ]
 
-- Признаки и их источники: […]
-- Почему независимы: […]
-- Что против и как объяснено: […]
-- Какие альтернативы рассмотрены и почему отпали: […]
-- Чего не хватает до 🟢: […]
+- Features and their sources: [...]
+- Why independent: [...]
+- What speaks against and how it is explained: [...]
+- Which alternatives were considered and why they were dropped: [...]
+- What is missing for 🟢: [...]
 
-Решение о родстве и правки в общедоступном дереве принимает человек.
+The decision about kinship and edits to the publicly available tree are made by the person.

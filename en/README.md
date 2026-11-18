@@ -132,7 +132,7 @@ The route, checking results and scenarios are a general method for everyone; the
 | [reading/](reading/README.md) | Whom to read and where to learn: [what to read by level](reading/what-to-read.md), [institutes and projects](reading/institutes-and-projects.md), [genealogists and authors](reading/genealogists-and-authors.md), [groups and communities](reading/groups-and-communities.md), [dictionaries and encyclopedias](reading/dictionaries-and-encyclopedias.md), [AI in genealogy](reading/ai-in-genealogy.md) |
 | [examples/](examples/README.md) | [A worked example for beginners](examples/worked-example-for-beginners.md) · [Examples of finds](examples/example-finds.md) and a [case study of a search from a newspaper to a family](examples/case-study-newspaper-to-family.md) |
 | [templates/](templates/README.md) | Templates: [finding record](templates/finding.md), [persons](templates/persons.md), [hypothesis](templates/hypothesis.md), [research log](templates/research-log.md), [source register](templates/source-register.md), [timeline](templates/timeline.md), [place guide](templates/place-guide.md), ["Continue from here"](templates/continue-from-here.md), [letter to an archive](templates/letter-to-archive.md) |
-| [skills/](../skills/README.md) | Skills for Claude — the same methods in the form of instructions for AI (mostly in Russian) |
+| [skills/](../skills/README.md) | Skills for Claude — the same methods in the form of instructions for AI (in English) |
 | [agents/](agents/archive-mechanic.md) | Descriptions of helper agents for Claude Code: [archive-mechanic](agents/archive-mechanic.md), [archive-transcriber](agents/archive-transcriber.md) |
 | [AGENTS.md](AGENTS.md), [llms.txt](llms.txt) | instructions and a map of the guide for AI agents |
 
@@ -142,7 +142,7 @@ The five rules that save months are in the [Quick start](guide/0-start/01-quick-
 
 The [skills/](../skills/README.md) folder contains 35 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
 
-Most skill bodies are in Russian (newer ones are in English, and every description is in English); Claude reads them and works fine with prompts in English.
+All skills are written in English; each description also lists Russian trigger phrases, so the skills work with requests in either language.
 
 **Claude Code — as a plugin** (skills and agents at once):
 ```

@@ -40,7 +40,7 @@ The map of all sections is [llms.txt](llms.txt). Terms and marks — the [Glossa
 
 ## 3. Where to start: ask the person first
 
-Begin searching sites only after the first conversation (the order of the skill [`genealogy-intake`](../skills/genealogy-intake/SKILL.md), in Russian):
+Begin searching sites only after the first conversation (the order of the skill [`genealogy-intake`](../skills/genealogy-intake/SKILL.md)):
 
 1. **Ask in blocks of 3–5 questions**, and after each block briefly retell what you understood.
 2. **The goal**: a family history for relatives; citizenship or repatriation (documents are needed for every generation); DNA; the fate of someone who died or went missing; living relatives.
@@ -106,7 +106,7 @@ Roles, the cycle, the task template, accepting results, failures and costs — [
 
 ## 7. Skills and sections by task
 
-If you are Claude with the skills installed ([skills/](../skills/README.md)), they will connect on their own. If there are no skills, open the corresponding section. (The skill files are in Russian.)
+If you are Claude with the skills installed ([skills/](../skills/README.md)), they will connect on their own. If there are no skills, open the corresponding section. (The skill files are in English.)
 
 | Task | Skill | Section |
 |---|---|---|

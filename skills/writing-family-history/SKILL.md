@@ -1,108 +1,109 @@
 ---
 name: writing-family-history
-description: Turns verified genealogical findings into readable prose for relatives — a family history, a chapter about one ancestor, a family book or a short story for a reunion — without inventing facts. Uses a two-layer record (cited fact plus a paragraph for family), adds historical context about the place and era while keeping it separate from claims about the family, marks hypotheses and family legends in words, handles contradictions, footnotes, illustrations with captions, living people and sensitive topics, and ends with a source table, open questions, a name index and a preservation plan (three copies, durable formats). Use whenever the user says «напиши историю семьи», «сделай текст для родственников», «оформи главу про прадеда», «семейная книга», «рассказ о предках к юбилею», «перепиши досье понятным языком», «летопись семьи», or hands over research notes and asks for something relatives can read, even if they do not say the word history.
+description: >-
+  Turns verified genealogical findings into readable prose for relatives — a family history, a chapter about one ancestor, a family book or a short story for a reunion — without inventing facts. Uses a two-layer record (cited fact plus a paragraph for family), adds historical context about the place and era kept separate from claims about the family, marks hypotheses and family legends in words, handles contradictions, footnotes, captions, living people and sensitive topics, and ends with a source table, open questions, a name index and a preservation plan (three copies, durable formats). Use whenever the user asks for a family history, a text for relatives, a chapter about an ancestor, a family book or chronicle, or hands over research notes and asks for something relatives can read. Also triggers on Russian requests: «напиши историю семьи», «сделай текст для родственников», «оформи главу про прадеда», «семейная книга», «рассказ о предках к юбилею», «перепиши досье понятным языком», «летопись семьи».
 ---
 
-# Как писать историю семьи из проверенных находок
+# How to write a family history from verified findings
 
-## Главное правило
+## The main rule
 
-Пиши **только по фактам из журнала находок пользователя**. ИИ легко заполняет пробелы правдоподобным вымыслом — именем жены, профессией, «тёплым вечером в местечке». В семейной истории такой вымысел хуже пустого места: через двадцать лет его перепишут как факт. Если сведений нет, текст говорит «неизвестно» или «документа пока нет».
+Write **only from the facts in the user's findings log**. An AI easily fills gaps with plausible invention — a wife's name, a profession, "a warm evening in the shtetl". In a family history such invention is worse than a blank: in twenty years it will be retold as fact. If there is no information, the text says "unknown" or "no document yet".
 
-Поэтому сначала попроси материал: журнал находок, записи бесед, сканы с шифрами. Если пользователь просит «написать историю семьи» с нуля, без материалов, — не сочиняй; предложи начать с того, что он знает, и спроси, где лежат документы.
+So first ask for the material: the findings log, records of conversations, scans with archival references. If the user asks to "write the family history" from scratch, with no materials, do not compose it; suggest starting from what they know, and ask where the documents are.
 
-## Шаг 1. Двухслойная запись
+## Step 1. The two-layer record
 
-Каждую находку оформляй дважды (шаблон — `assets/two-layer-entry.md`):
+Write up each find twice (template — `assets/two-layer-entry.md`):
 
-1. **Факт для журнала находок и дерева** — коротко: источник с шифром, дословная цитата, проверено ли по скану.
-2. **Абзац для родных** — связно: кто, где, когда, что это значит, что было вокруг.
+1. **A fact for the findings log and the tree** — short: the source with its archival reference, a verbatim quotation, whether it was checked against the scan.
+2. **A paragraph for the relatives** — connected: who, where, when, what it means, what was going on around.
 
-Почему два слоя: родные читают абзац и пропускают шифр, следующий исследователь находит шифр и проверяет абзац. Это соответствует пятому элементу стандарта GPS (письменный вывод) и совету NGS отделять факт от изложения.
+Why two layers: relatives read the paragraph and skip the reference code; the next researcher finds the reference code and checks the paragraph. This corresponds to the fifth element of the GPS standard (the written conclusion) and the NGS advice to separate fact from presentation.
 
-Пример (вымышленный, шифр условный):
+Example (invented, reference code a placeholder):
 
-> **Факт:** [Архив], ф. N, оп. N, д. N, л. 12 об., браки 1895, № 31 (сверено по скану): «Лейба Мордковъ Гольдманъ, мѣщанинъ м. N, 24 лѣтъ».
+> **Fact:** [Archive], fond N, inventory N, file N, fol. 12 verso, marriages 1895, No. 31 (checked against the scan): «Лейба Мордковъ Гольдманъ, мѣщанинъ м. N, 24 лѣтъ» [Leiba Mordkov Goldman, townsman (*meshchanin*) of shtetl N, 24 years old].
 >
-> **Абзац:** Весной 1895 года двадцатичетырёхлетний Лейба, сын Мордко Гольдмана, женился в местечке N. В записи он назван мещанином — так в империи записывали горожан без купеческого капитала. Кем он работал, документ не говорит.
+> **Paragraph:** In the spring of 1895 the twenty-four-year-old Leiba, son of Mordko Goldman, married in the shtetl of N. In the record he is called a *meshchanin* (townsman) — the way the empire registered townspeople without merchant capital. What he worked at, the document does not say.
 
-Обрати внимание: последняя фраза абзаца прямо называет пробел.
+Note that the last sentence of the paragraph names the gap outright.
 
-## Шаг 2. Язык уверенности
+## Step 2. The language of confidence
 
-Для каждого утверждения выбери одну из ступеней и держись её в тексте:
+For each statement choose one rung and hold to it in the text:
 
-| Что есть | Как писать |
+| What there is | How to write |
 |---|---|
-| документ, проверенный по скану | утвердительно, сноска на источник |
-| несколько согласных косвенных свидетельств | «скорее всего», «по всей видимости», с объяснением почему |
-| одна подсказка (указатель, чужое дерево, имянаречение в честь умершего деда) | «возможно», «есть основания предполагать», «документа пока нет» |
-| семейная память | «по семейному преданию», «бабушка рассказывала, что…» — и кто рассказал |
-| ничего | «неизвестно» |
+| a document checked against the scan | assertively, a footnote to the source |
+| several agreeing pieces of indirect evidence | "most likely", "in all probability", explaining why |
+| a single hint (an index, someone else's tree, naming after a deceased grandfather) | "possibly", "there are grounds to suppose", "no document yet" |
+| family memory | "according to family legend", "Grandmother told that…" — and who told it |
+| nothing | "unknown" |
 
-- **Не прячь противоречия.** Если в двух документах разный возраст или имя, напиши об этом: родным интересно, исследователю необходимо.
-- Предание, опровергнутое документом, не выбрасывай — расскажи и предание, и что показал документ.
+- **Do not hide contradictions.** If two documents give a different age or name, write about it: relatives find it interesting, the researcher needs it.
+- Do not throw away a legend refuted by a document — tell both the legend and what the document showed.
 
-## Шаг 3. Исторический контекст — отдельно от семьи
+## Step 3. Historical context — separate from the family
 
-Документ отвечает «кто и когда», контекст — «почему»: почему семья переехала, почему человек исчез из списков, почему нет метрики. Добавляй события эпохи (погромы, войны, эвакуацию, смену границ), жизнь места (промыслы, ярмарки, синагоги), быт и обычаи, смысл профессий и сословий.
+A document answers "who and when", context answers "why": why the family moved, why a person disappeared from the lists, why there is no metrical record. Add the events of the era (pogroms, wars, evacuation, changes of borders), the life of the place (trades, fairs, synagogues), daily life and customs, the meaning of professions and estates.
 
-**Граница:** контекст описывает эпоху и место, а не поступки предков. Нельзя: «в 1905 году семья пережила погром» — если документа нет. Можно: «в октябре 1905 года в городе был погром; что пережила в эти дни семья, неизвестно». Каждый факт контекста тоже со ссылкой.
+**The boundary:** context describes the era and place, not the actions of ancestors. Not allowed: "in 1905 the family lived through a pogrom" — if there is no document. Allowed: "in October 1905 there was a pogrom in the town; what the family lived through in those days is unknown". Each fact of context also gets a reference.
 
-Где брать контекст — `references/context-sources.md`.
+Where to get context — `references/context-sources.md`.
 
-## Шаг 4. Структура
+## Step 4. Structure
 
-Выбери с пользователем одну из рабочих схем:
-1. **По местам** — глава о каждом городе или местечке, где жила семья, с картой и историей места.
-2. **По людям** — очерк о каждом ключевом человеке: что известно, откуда, что неизвестно.
-3. **Хронологически** — от самого раннего документа к семейной памяти.
+Choose with the user one of the working schemes:
+1. **By places** — a chapter on each town or shtetl where the family lived, with a map and the history of the place.
+2. **By people** — an essay on each key person: what is known, from where, what is unknown.
+3. **Chronologically** — from the earliest document to family memory.
 
-Начинай с предков, о которых **больше всего материала** (совет Лизы Альзо): так проще найти тон, и у текста появляется опора.
+Begin with the ancestors about whom there is **the most material** (advice of Lisa Alzo): it is easier to find the tone, and the text gets a foothold.
 
-Для большой семейной книги следуй 10 шагам (Мэган Кастелер, блог FamilySearch, по докладу Пенелопы Страттон на RootsTech 2019): помнить, что это **рассказ, а не отчёт** → читатель и период → формат → рамки, план, оглавление → правила оформления → писать → повествование и иллюстрации → перечитать и поправить → указатель имён → издать. Каркас главы — `assets/chapter-template.md`.
+For a large family book follow the 10 steps (Maegan Kasteler, FamilySearch blog, after Penelope Stratton's RootsTech 2019 talk): remember that it is **a story, not a report** → the reader and the period → format → scope, plan, table of contents → rules of layout → write → narrative and illustrations → reread and correct → name index → publish. The skeleton of a chapter — `assets/chapter-template.md`.
 
-**Обязательные приложения:**
-- таблица источников (шифр, что в документе, где скан);
-- **открытые вопросы** — что не найдено и где это может быть, чтобы историю мог продолжить следующий;
-- указатель имён (для книги);
-- схема родства для главы или всей книги.
+**Mandatory appendices:**
+- a table of sources (archival reference, what is in the document, where the scan is);
+- **open questions** — what has not been found and where it might be, so that someone else can continue the history;
+- a name index (for a book);
+- a kinship diagram for the chapter or the whole book.
 
-## Шаг 5. Сноски и иллюстрации
+## Step 5. Footnotes and illustrations
 
-- Источник — в сноске или в конце абзаца. Полная ссылка: архив или издатель, название, шифр, лист или кадр, для онлайн-копий — адрес и дата обращения; краткая пометка о надёжности, если есть сомнение (расчётная дата, только указатель).
-- **Иллюстрации:** вырезка из документа с подписью и шифром («запись о рождении, [архив, шифр], л. 5») убеждает лучше пересказа. Фото — с подписью: кто, когда, по каким признакам датировано, у кого оригинал (см. навык `dating-old-photos`). Карта места.
-- Право на фотографию принадлежит фотографу, а не владельцу отпечатка. Для чужих снимков (например, надгробия на Find a Grave) нужно разрешение того, кто снимал. Для публикации в книге на продажу — уточнить по праву своей страны.
+- The source goes in a footnote or at the end of the paragraph. A full reference: the archive or publisher, title, archival reference, folio or frame, and for online copies the address and the date accessed; a brief note on reliability if there is doubt (a calculated date, an index only).
+- **Illustrations:** a cutting from a document with a caption and archival reference ("birth record, [archive, reference], fol. 5") convinces better than a retelling. A photo — with a caption: who, when, by what signs it is dated, who holds the original (see the skill `dating-old-photos`). A map of the place.
+- The right to a photograph belongs to the photographer, not to the owner of the print. For other people's pictures (for example, gravestones on Find a Grave) permission is needed from whoever took them. For publication in a book for sale — check the law of your country.
 
-## Шаг 6. Живые люди и тяжёлые темы
+## Step 6. Living people and heavy topics
 
-- О **живых** — только с их согласия. В тексте для широкого круга заменяй имена живых на «двоюродный брат N.». Перед публикацией покажи текст тем, о ком он.
-- **Деликатное** — ДНК-сюрпризы, усыновление, внебрачные дети, судимость, репрессии, доносы, болезни — пиши только после обсуждения с пользователем: кому предназначен текст и кто может пострадать. Неожиданное отцовство без согласия не раскрывай.
-- О погибших и о тяжёлых находках пиши спокойно, без мелодрамы и без выдуманных подробностей гибели. Оценивай предков в контексте их эпохи.
+- About **living** people — only with their consent. In a text for a wide circle replace the names of the living with "cousin N.". Before publication show the text to the people it is about.
+- **Delicate** matters — DNA surprises, adoption, children born out of wedlock, criminal records, repressions, denunciations, illnesses — write only after discussing with the user who the text is for and who may be hurt. Do not reveal unexpected paternity without consent.
+- Write about the dead and about heavy finds calmly, without melodrama and without invented details of the death. Judge ancestors in the context of their era.
 
-## Шаг 7. Сверка перед выдачей текста
+## Step 7. Cross-check before handing over the text
 
-Пройди текст фразу за фразой: **каждое имя, дату, место и родственную связь** найди в журнале находок. Отдай пользователю вместе с текстом короткий лист сверки:
-- что взято из какого документа;
-- где формулировка — гипотеза или предание;
-- что ты добавил как контекст и откуда.
+Go through the text sentence by sentence: find **every name, date, place and family tie** in the findings log. Give the user, together with the text, a short cross-check sheet:
+- what is taken from which document;
+- where the wording is a hypothesis or a legend;
+- what you added as context, and from where.
 
-Фразу, которой нет в журнале находок, удали или переведи в «неизвестно».
+A sentence not in the findings log should be deleted or turned into "unknown".
 
-## Шаг 8. Сохранность
+## Step 8. Preservation
 
-Готовый текст — часть семейного архива. Подскажи (подробно — `references/preservation.md`):
-- **три копии, два типа носителей, одна — вне дома**; проверять раз в год, переносить на новый носитель примерно каждые 5 лет;
-- текст хранить **в нескольких форматах** (.docx, .pdf, .txt), сканы — мастер-копия в TIFF и рабочая в JPEG;
-- рядом — записка «как устроен архив»; родные должны знать, где он лежит и кто продолжит.
+The finished text is part of the family archive. Advise (in detail — `references/preservation.md`):
+- **three copies, two types of media, one outside the home**; check once a year, move to a new medium about every 5 years;
+- keep the text **in several formats** (.docx, .pdf, .txt), scans — a master copy in TIFF and a working one in JPEG;
+- beside it, a note "how the archive is arranged"; the relatives should know where it lies and who will continue.
 
-## Формат ответа
+## Format of the reply
 
-1. Короткий план (схема, главы) — согласовать, если текст большой.
-2. Текст главы или истории с пометками уверенности и сносками.
-3. Приложения: источники, открытые вопросы.
-4. Лист сверки.
+1. A short plan (scheme, chapters) — agree it if the text is large.
+2. The text of the chapter or history with marks of confidence and footnotes.
+3. Appendices: sources, open questions.
+4. The cross-check sheet.
 
-## Связанные навыки
+## Related skills
 
-`verifying-genealogy-findings` — если сомнение, держится ли факт; `dating-old-photos` — подписи к снимкам; `organizing-genealogy-research` — где лежат материалы и как вести файлы.
+`verifying-genealogy-findings` — if there is doubt whether a fact holds; `dating-old-photos` — captions for pictures; `organizing-genealogy-research` — where the materials lie and how to keep the files.

@@ -70,7 +70,7 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 | [`rendering-family-tree`](../../../skills/rendering-family-tree/SKILL.md) | pedigree chart, line ladder, places for the map |
 | [`checking-dna-against-tree`](../../../skills/checking-dna-against-tree/SKILL.md) | ethnicity estimate against the tree, checking an origin legend |
 
-The full list with descriptions is in [skills/README.md](../../../skills/README.md) (in Russian).
+The full list with descriptions is in [skills/README.md](../../../skills/README.md) (the list is in Russian; the skills themselves are in English).
 
 Besides skills, the [agents/](../../agents/archive-mechanic.md) folder holds two helper agents for Claude Code: `archive-mechanic` (mass mechanical work with scans) and `archive-transcriber` (careful reading of one document).
 

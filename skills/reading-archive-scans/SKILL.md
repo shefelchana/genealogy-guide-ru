@@ -1,268 +1,272 @@
 ---
 name: reading-archive-scans
-description: Reads digitised archival files — revision skazki, censuses, metrical books, посемейные списки — from Wikimedia Commons or a downloaded PDF. Extracts the original embedded image instead of a re-compressed preview, judges scan quality before work starts, enhances faded handwriting, detects out-of-focus pages, and maps a volume that has no index. Use when reading scanned historical documents, Ukrainian or Russian archive PDFs, ДАХмО/ДАКО/ДАВіО/ЦДІАК files, old handwriting, or when a scan seems unreadable.
+description: Reads digitised archival files — revision lists (revizskie skazki), censuses, metrical books, family lists (posemeinye spiski) — from Wikimedia Commons or a downloaded PDF. Extracts the original embedded image instead of a re-compressed preview, judges scan quality before work starts, enhances faded handwriting, detects out-of-focus pages, and maps a volume that has no index. Use when reading scanned historical documents, Ukrainian or Russian archive PDFs (DAKhmO, DAKO, DAViO, TsDIAK files), old handwriting, or when a scan seems unreadable, a name "is not found", or you need to work out which page holds which family. Also triggers on Russian requests: «посемейные списки», «ревизские сказки», «ДАХмО», «ДАКО», «ДАВіО», «ЦДІАК», «прочитай скан», «карта тома».
 ---
 
-# Чтение архивных сканов
+# Reading archive scans
 
-## Скрипты
+## Scripts
 
-**`scripts/pagetool.py`** — достаёт страницы без перекодирования. Запускать, не читать.
+**`scripts/pagetool.py`** — pulls out pages without re-encoding. Run it, do not read it.
 ```bash
-python3 scripts/pagetool.py info  ДЕЛО.pdf                  # страниц, размеры, МБ/стр
-python3 scripts/pagetool.py sharp ДЕЛО.pdf 55,57,59         # брак съёмки
-python3 scripts/pagetool.py sheet ДЕЛО.pdf 241,243,245 s.jpg --crop 0.04 0.40 0.10 0.99 --w 1840
-python3 scripts/pagetool.py page  ДЕЛО.pdf 128 p.jpg --rot 270
+python3 scripts/pagetool.py info  FILE.pdf                  # pages, sizes, MB per page
+python3 scripts/pagetool.py sharp FILE.pdf 55,57,59         # defective shots
+python3 scripts/pagetool.py sheet FILE.pdf 241,243,245 s.jpg --crop 0.04 0.40 0.10 0.99 --w 1840
+python3 scripts/pagetool.py page  FILE.pdf 128 p.jpg --rot 270
 ```
-**`scripts/mapvolume.py`** — ищет титульные листы в деле без оглавления.
+**`scripts/mapvolume.py`** — finds title pages in a file with no table of contents.
 ```bash
-python3 scripts/mapvolume.py ДЕЛО.pdf --mode both
+python3 scripts/mapvolume.py FILE.pdf --mode both
 ```
-⚠️ Обоим нужны `pypdf`, `Pillow`, `numpy`.
+⚠️ Both need `pypdf`, `Pillow`, `numpy`.
 
-## Порядок работы
+("FILE.pdf" is the archival file (*delo*) as a PDF.)
+
+## Order of work
 
 ```
-- [ ] 1. Скачать дело целиком (не превью)
-- [ ] 2. info — оценить, читаемо ли вообще
-- [ ] 3. mapvolume — построить карту тома
-- [ ] 4. Определить чётность разворота НА МЕСТЕ
-- [ ] 5. sheet по колонке имён, вести журнал номеров
+- [ ] 1. Download the whole file (not a preview)
+- [ ] 2. info — judge whether it is readable at all
+- [ ] 3. mapvolume — build the volume map
+- [ ] 4. Determine the spread parity ON THE SPOT
+- [ ] 5. sheet of the names column, keep a log of numbers
 ```
 
-### 1. Скачать целиком
+### 1. Download it whole
 
-Превью Wikimedia пережаты и на выцветших чернилах убивают именно то, что надо прочесть; произвольные ширины миниатюр сервер отдаёт как HTTP 400.
+Wikimedia previews are over-compressed and on faded ink they destroy exactly what you need to read; a request for an arbitrary thumbnail width gets HTTP 400 from the server.
 
 ```bash
-curl -s -A "<User-Agent браузера>" -X POST "https://commons.wikimedia.org/w/api.php" \
+curl -s -A "<browser User-Agent>" -X POST "https://commons.wikimedia.org/w/api.php" \
   --data-urlencode "action=query" --data-urlencode "format=json" \
   --data-urlencode "prop=imageinfo" --data-urlencode "iiprop=url|size" \
-  --data-urlencode "titles=File:<точное имя>.pdf"
+  --data-urlencode "titles=File:<exact name>.pdf"
 ```
-Только POST: GET упирается в лимиты. **Префикс каталога в URL (`a/ab`, `6/68`) у каждого файла свой** — брать из ответа, угаданный даёт 404. Точное имя искать тем же `api.php`: `list=search` с `srnamespace=6`.
+POST only: GET runs into rate limits. **The directory prefix in the URL (`a/ab`, `6/68`) is different for every file** — take it from the response; a guessed one gives 404. Find the exact name with the same `api.php`: `list=search` with `srnamespace=6`.
 
-Опись оцифровок украинских архивов — `uk.wikisource.org`, пространство **`Архів:`**, структура `Архів:<АРХИВ>/<фонд>/<опись>`. Выгружается через `?action=raw` и грепается.
+The register of digitised holdings of Ukrainian archives is on `uk.wikisource.org`, in the **`Архів:`** ("Archive:") namespace, with the structure `Архів:<ARCHIVE>/<fond>/<inventory>`. It can be exported via `?action=raw` and grepped.
 
-### 2. Оценить качество заранее
+### 2. Judge the quality in advance
 
-`info` делит размер файла на число страниц:
+`info` divides the file size by the number of pages:
 
-| МБ/стр | Разрешение | Вывод |
+| MB/page | Resolution | Conclusion |
 |---|---|---|
-| 2,5–3 | 4000×3000 | почерк свободно |
-| 0,9–1,6 | ~2000×1600 | читается, кадрирование помогает |
-| 0,25–0,5 | 690×920 … 840×1120 | только кадрированием колонок |
+| 2.5–3 | 4000×3000 | handwriting is easy |
+| 0.9–1.6 | ~2000×1600 | readable, cropping helps |
+| 0.25–0.5 | 690×920 … 840×1120 | only by cropping columns |
 
-⚠️ По делам нижней строки превью 1920 и 3840 px — **апскейл**: это потолок файла, а не настройки просмотра.
+⚠️ For files in the bottom row, previews of 1920 and 3840 px are **upscaled**: that is the ceiling of the file, not a viewing setting.
 
-### 3. Карта тома
+### 3. Volume map
 
-Печатные титулы много чернее рукописных страниц — `--mode printed` ловит их по доле чернил и числу длинных линеек. **Если титулы в деле рукописные, печатный признак не работает**: `--mode written` берёт сгущение чернил в верхней трети при пустом низе.
+Printed title pages are much blacker than handwritten ones — `--mode printed` catches them by the share of ink and the number of long ruled lines. **If the titles in the file are handwritten, the printed criterion does not work**: `--mode written` picks up a concentration of ink in the top third with an empty bottom.
 
-⭐ **Проверить первым делом, нет ли колонтитула** с названием места на каждом развороте: во многих ревизских сказках он есть, и тогда карта строится выборкой каждой 20–40-й страницы по верхней полосе, без всякой статистики.
+⭐ **First check whether there is a running header** with the name of the place on every spread: many revision lists have one, and then the map is built by sampling every 20th–40th page along the top strip, with no statistics at all.
 
-### 4. Ловушка разворота — главная причина ложных «не найдено»
+### 4. The spread trap — the main cause of false "not found"
 
-Бывает двояко, и **проверять надо на месте, открыв две соседние страницы**:
-* **страница PDF = один лист**: графы делятся между листами, имена на каждой второй странице. Чётность **сбивается** там, где вшит лишний лист — в одном деле трижды, в другом девятнадцать раз. Определять заново после каждого титула; контроль — архивная фолиация в углу.
-* **страница PDF = целый разворот**: слева мужской пол, справа женский, номера дворов идут подряд по всем страницам. Тут просмотр «через одну» теряет ровно половину дворов.
+It comes in two forms, and **you must check on the spot by opening two neighbouring pages**:
+* **PDF page = one sheet**: the columns are split between sheets, names appear on every second page. The parity **gets shifted** wherever an extra sheet is bound in — three times in one file, nineteen in another. Determine it afresh after every title; the control is the archival foliation in the corner.
+* **PDF page = a whole spread**: the male side on the left, the female side on the right, household numbers run consecutively across all pages. Here viewing "every other page" loses exactly half of the households.
 
-### 5. Чтение мелкого скана
+### 5. Reading a small scan
 
-**Не выводить страницу целиком** — вырезать полосу с нужными колонками и растягивать: на буквы придётся втрое-вчетверо больше пикселей. Не больше 3–4 страниц в лист.
+**Do not output the whole page** — cut out a strip with the columns you need and stretch it: the letters get three to four times more pixels. No more than 3–4 pages per sheet.
 
-`sharp` объективно отделяет «плохо читаю» от брака съёмки: дисперсия лапласиана втрое ниже медианы — снято не в фокусе, вытянуть нельзя. Это превращает «не смог прочесть» в точный запрос на пересъёмку.
+`sharp` objectively separates "I read it badly" from a defective shot: if the variance of the Laplacian is three times lower than the median, the shot is out of focus and cannot be rescued. This turns "could not read" into a precise request for a re-shoot.
 
-## Доказательство полноты
+## Proof of completeness
 
-**Непрерывность нумерации дворов.** Вести журнал «страница NNN: №№ X–Y» и сверять стыки.
-⚠️ Нумерацию читать осторожно: у части писарей ведущая «5» неотличима от «3», «2» от «4»; трёхзначные номера у корешка искажаются кривизной («290» читается как «190»). Сверять с соседними страницами — ряд должен быть монотонным. Если нумерация спорна, полнота держится на **постраничном покрытии**.
+**Continuity of household numbering.** Keep a log "page NNN: Nos. X–Y" and check the joins.
+⚠️ Read numbering with care: for some scribes a leading "5" is indistinguishable from "3", "2" from "4"; three-digit numbers at the spine are distorted by the curvature ("290" reads as "190"). Compare with neighbouring pages — the series must be monotonic. If the numbering is disputed, completeness rests on **page-by-page coverage**.
 
-## ⚠️ Если скан повреждён или пуст — искать ДРУГОЙ экземпляр, а не сдаваться
+## ⚠️ If a scan is damaged or empty — look for ANOTHER copy, do not give up
 
-Обязательный шаг, а не необязательный. Документ, которого не хватает в одной копии, часто цел в другой.
+This is a mandatory step, not an optional one. A document that is missing in one copy is often intact in another.
 
-**Ревизские сказки писались в нескольких экземплярах**, и они лежат в разных фондах:
-· экземпляр **казённой палаты** — обычно это и есть оцифрованный фонд;
-· экземпляр **городской думы, ратуши или волостного правления** — свой фонд того же архива;
-· экземпляр **уездного казначейства**;
-· сводки и выписки в делах **ревизской комиссии**.
-То же с метриками: приходской экземпляр и консисторский — две разные книги об одних и тех же людях.
+**Revision lists (*revizskie skazki*) were written in several copies**, and they lie in different fonds:
+· the copy of the **treasury chamber** (*kazennaya palata*) — usually this is the digitised fond;
+· the copy of the **city duma, town hall (*ratusha*) or volost board** — its own fond in the same archive;
+· the copy of the **district treasury**;
+· summaries and extracts in the files of the **revision commission**.
+The same goes for metrical books: the parish copy and the consistory copy are two different books about the same people.
 
-**Одно и то же дело бывает отснято дважды** — архивом и мормонами (микроплёнка FamilySearch). Испорченный кадр в одной съёмке в другой может быть целым. Признак плёночной съёмки — перфорация по краю кадра.
+**The same file is sometimes shot twice** — by the archive and by the Mormons (FamilySearch microfilm). A spoiled frame in one shoot may be intact in the other. A sign of a film shoot is perforation along the edge of the frame.
 
-**Порядок действий при дефекте:**
+**Order of action in case of a defect:**
 ```
-- [ ] 1. Назвать дефект точно: какие листы, какой характер (обрыв нумерации, защитный лист, не в фокусе)
-- [ ] 2. Проверить опись фонда: нет ли дубля того же года и уезда
-- [ ] 3. Проверить другие фонды-держатели (дума, ратуша, казначейство, комиссия)
-- [ ] 4. Проверить, нет ли второй съёмки того же дела
-- [ ] 5. Проверить смежные источники, где та же семья обязана всплыть:
-       рекрутские списки, посемейные списки, метрики, податные реестры кагала
-- [ ] 6. Только после этого — запрос в архив, и уже адресный
+- [ ] 1. Name the defect exactly: which sheets, what kind (break in numbering, protective sheet, out of focus)
+- [ ] 2. Check the fond's inventory: is there a duplicate of the same year and district
+- [ ] 3. Check other holding fonds (duma, town hall, treasury, commission)
+- [ ] 4. Check whether there is a second shoot of the same file
+- [ ] 5. Check adjacent sources in which the same family must surface:
+       recruit lists, family lists, metrical books, kahal tax registers
+- [ ] 6. Only after that — a request to the archive, and a targeted one
 ```
-Адресный запрос («двори 193–292 відсутні, розрив між стор. 450 і 454») дешевле и быстрее тематического («знайдіть родину Фейгель»).
+A targeted request ("двори 193–292 відсутні, розрив між стор. 450 і 454" [households 193–292 are missing, gap between pp. 450 and 454]) is cheaper and faster than a thematic one ("find the Feigel family").
 
-## ⚠️ Опись — только бумажная. Электронные росписи для отрицательных выводов не годятся
+## ⚠️ The inventory must be a paper one. Electronic itemisations are not good for negative conclusions
 
-Росписи в пространстве `Архів:` на uk.wikisource — **выборка, а не опись**. Проверено: `Архів:ДАХмО/226/79` расписывает **308 дел из 9288** и вдобавок врёт в названиях. Три ложных вывода подряд родились именно из неё.
+The itemisations in the `Архів:` namespace on uk.wikisource are **a sample, not an inventory**. Verified: `Архів:ДАХмО/226/79` itemises **308 files out of 9,288** and moreover gets the titles wrong. Three false conclusions in a row were born from it.
 
-✅ **На Commons лежит сплошная серия настоящих архивных описей** — машинописных, полных:
-`ДАХмО фонд N опис N.pdf` — **964 файла** · `ДАВіО фонд N опис N.pdf` — 211.
-Выгрузить список: POST на `commons.wikimedia.org/w/api.php`, `list=allimages&aiprefix=ДАХмО фонд 227 опис`.
+✅ **On Commons there is a continuous series of genuine archival inventories** — typewritten, complete:
+`ДАХмО фонд N опис N.pdf` — **964 files** · `ДАВіО фонд N опис N.pdf` — 211.
+(DAKhmO = State Archive of Khmelnytskyi Oblast; DAViO = State Archive of Vinnytsia Oblast; "фонд" = fond, "опис" = inventory.)
+To get the list: POST to `commons.wikimedia.org/w/api.php`, `list=allimages&aiprefix=ДАХмО фонд 227 опис`.
 
-**Рецепт чтения (неочевидный).** Файл описи может весить 275 МБ и **целиком не скачивается** — upload.wikimedia.org отдаёт **HTTP 429** на весь эндпоинт. Постранично читается свободно:
+**Reading recipe (not obvious).** An inventory file may weigh 275 MB and **cannot be downloaded whole** — upload.wikimedia.org returns **HTTP 429** for the whole endpoint. Page by page it can be read freely:
 ```
-https://thumb.wikimedia.org/wikipedia/commons/thumb/<пр/префикс>/<ИМЯ>/pageN-3840px-<ИМЯ>.jpg
+https://thumb.wikimedia.org/wikipedia/commons/thumb/<pr/prefix>/<NAME>/pageN-3840px-<NAME>.jpg
 ```
-· ширина **только 1280 или 3840**, иначе HTTP 400;
-· из URL, который отдаёт api.php, **отрезать хвост `?utm_source=…`** — с ним сервер отвечает ошибкой.
+· the width is **only 1280 or 3840**, otherwise HTTP 400;
+· from the URL that api.php returns, **cut off the tail `?utm_source=…`** — with it the server answers with an error.
 
-## 🔑 Плёнка или копи-стенд — проверяется шириной кадра
+## 🔑 Film or copy stand — determined by frame width
 
-Прежде чем искать «вторую съёмку» или страховой негатив, определи способ съёмки:
-· **плёнка** — ширина кадра при одной высоте **постоянна**;
-· **копи-стенд** — ширина скачет (пример: 1485 / 1950 / 911 px при высоте 2000). Негатива не существует, страховой фонд искать бессмысленно.
-⚠️ «Перфорация» по краю кадра бывает **артефактом растяжки контраста** на однородном фоне. Проверять профиль края на периодичность численно, а не глазом по обработанной картинке.
+Before looking for a "second shoot" or a security negative, determine the method of shooting:
+· **film** — the frame width at a given height is **constant**;
+· **copy stand** — the width jumps (example: 1485 / 1950 / 911 px at a height of 2000). No negative exists, so there is no point looking for the security fond.
+⚠️ "Perforation" along the edge of a frame may be an **artefact of contrast stretching** on a uniform background. Check the edge profile numerically for periodicity, not by eye on the processed picture.
 
-## ⚠️ Низкая резкость ≠ брак съёмки. Подтверждать глазом
+## ⚠️ Low sharpness ≠ defective shot. Confirm by eye
 
-У **чистого листа** дисперсия лапласиана такая же низкая, как у снятого не в фокусе: резкому нечему быть. Проверено дорого — два из трёх «дефектных» листов оказались пустыми страницами, и они попали в запрос на пересъёмку зря.
-✅ `sharp` только **отбирает кандидатов**. Каждый кандидат открывать и смотреть: есть ли на нём текст вообще, и если есть — размыт он или выбелен передержкой (второе усилением тоже не вытягивается, данных в файле нет).
+On a **blank sheet** the variance of the Laplacian is just as low as on one shot out of focus: there is nothing sharp to be had. This was learned expensively — two of three "defective" sheets turned out to be blank pages, and they went into the re-shoot request for nothing.
+✅ `sharp` only **selects candidates**. Open and look at every candidate: is there any text on it at all, and if there is, is it blurred or bleached out by overexposure (the latter also cannot be rescued by enhancement; the data is not in the file).
 
-## ⚠️ Шаг просмотра определять на месте — по номерам семей
+## ⚠️ Determine the viewing step on the spot — by family numbers
 
-Ловушка разворота срабатывает снова и снова, и каждый раз по-новому. Единственная защита:
-✅ Открыть **четыре страницы подряд** и выписать номера семей на каждой. Если ряд идёт 9–11, 12–15, 16–19, 22 — **страница = разворот**, и просмотр «через одну» теряет половину, «через три» — три четверти.
-Реальный случай: том читался по каждой четвёртой странице, охват вышел **25 %**, и отрицательный вывод «фамилии нет» не имел основания вообще.
+The spread trap springs again and again, and each time in a new way. The only defence:
+✅ Open **four pages in a row** and write out the family numbers on each. If the series runs 9–11, 12–15, 16–19, 22 — **page = spread**, and viewing "every other page" loses half, "every fourth page" loses three quarters.
+A real case: a volume was read at every fourth page, coverage came out at **25%**, and the negative conclusion "the surname is not there" had no basis whatsoever.
 
-## 🔑 Спорную букву сверять с заведомыми буквами того же пера
+## 🔑 Check a disputed letter against known letters of the same pen
 
-Не разглядывать спорный знак сам по себе. Найти на **соседних строках того же почерка** слова с заведомо известной буквой, вырезать их и спорное место **в одну колонку в одном масштабе** и сравнить форму.
-Рабочий пример: «Ли[д/б]еръ» решено сравнением с «А**б**рамко» и «Мен**д**ель» на соседних строках — в том почерке «б» даёт высокую петлю вверх-влево без выноса, «д» уходит петлёй **под строку**. Ответ: **Либеръ**.
+Do not stare at the disputed sign by itself. Find, on **neighbouring lines of the same hand**, words with a letter known for certain, cut them out together with the disputed spot **in one column at one scale** and compare the shape.
+A working example: "Ли[д/б]еръ" (Li-d/b-er) was resolved by comparison with "А**б**рамко" (Abramko) and "Мен**д**ель" (Mendel) on neighbouring lines — in that hand the "б" makes a tall loop up and to the left with no descender, while the "д" goes in a loop **below the line**. The answer: **Либеръ** (Liber).
 
-## 🔑 Имя вне ономастикона = неверное чтение, а не редкое имя
+## 🔑 A name outside the onomasticon = a misreading, not a rare name
 
-Еврейские личные имена Российской империи — **замкнутый список в несколько сотен**. Если прочитанное имя не находится ни в одном ономастиконе (Бейдер, JewishGen Given Names DB), это **сигнал ошибки чтения**, а не находка.
-Так пойманы: «Лидеръ» → **Либеръ** · «Маiорновъ» → **Маiорковъ** (от **Меиръ**).
-✅ Каждое непривычное имя прогонять по словарю имён **прежде**, чем записывать в результат.
+Jewish given names of the Russian Empire are **a closed list of a few hundred**. If the name read is found in no onomasticon (Beider, the JewishGen Given Names DB), that is a **signal of a reading error**, not a find.
+This is how these were caught: "Лидеръ" (Lider) → **Либеръ** (Liber) · "Маiорновъ" (Maiornov) → **Маiорковъ** (Maiorkov) (from **Меиръ**, Meir).
+✅ Run every unfamiliar name through a name dictionary **before** putting it in the result.
 
-## 🔑 Чтение рукописи с помощью ИИ — в два прохода
+## 🔑 Reading handwriting with AI — in two passes
 
-Печатную часть бланка ИИ-модели читают хорошо, рукописные имена и места — с ошибками (на рассылке JewishGen описан случай «Ломжа» вместо «Ловича» [не проверено]; у Луиса Кесслера, 2024, имя отца ошибочно прочли все три модели).
-1. **Первый проход — без ожидаемых имён.** Дать модели тип документа, год и место, но не фамилии и имена, которые ищешь: иначе она «увидит» их. Подавать **фрагмент в высоком разрешении** (нужную колонку), а не весь кадр уменьшенным. Просить сохранять орфографию оригинала и писать «(?)» или «illegible» на нечитаемом.
-2. **Второй проход — сверка с гипотезами**: сравнить прочтение со своими версиями и разобрать расхождения по буквам того же пера (раздел выше).
-Прочтение ИИ — подсказка; в результат идёт только проверенное глазом по скану.
-Перед чтением полезно увидеть, как искомая фамилия выглядит скорописью: инструмент Стива Морса «печатная ↔ рукописная кириллица» (stevemorse.org/russian/cyrprintcurs.html).
+AI models read the printed part of a form well, but handwritten names and places with errors (a JewishGen mailing-list case is described of "Ломжа" [Lomzha] instead of "Ловича" [Lowicz] [unverified]; in Louis Kessler's 2024 test all three models misread the father's name).
+1. **First pass — without the expected names.** Give the model the type of document, the year and the place, but not the surnames and names you are looking for: otherwise it will "see" them. Supply a **fragment in high resolution** (the column you need), not the whole frame reduced. Ask it to keep the original spelling and to write "(?)" or "illegible" for what cannot be read.
+2. **Second pass — comparison with hypotheses**: compare the reading with your own versions and resolve the discrepancies by the letters of the same pen (section above).
+An AI reading is a hint; only what has been checked by eye against the scan goes into the result.
+Before reading it is useful to see what the surname you seek looks like in cursive: Steve Morse's "printed ↔ handwritten Cyrillic" tool (stevemorse.org/russian/cyrprintcurs.html).
 
-## ⚠️ В `pagetool.py` кроп применяется ПОСЛЕ поворота
+## ⚠️ In `pagetool.py` the crop is applied AFTER rotation
 
-При работе с `--rot` координаты `--crop` задаются **в системе уже повёрнутого изображения**, а не исходного. Пересчитывать заранее, иначе вырезается не та область.
+When working with `--rot`, the `--crop` coordinates are given **in the coordinate system of the already rotated image**, not the original. Recalculate in advance, or the wrong area is cut out.
 
-## 🔑 Прежде чем искать «откуда прибыл» — прочитать шапку таблицы
+## 🔑 Before looking for "where he came from" — read the table header
 
-В блоке «прибылых» графы происхождения может не быть вовсе. Проверяется за одну минуту: прочитать **заголовки столбцов** дословно.
-Реальный случай: в переписи 1811 г. столбцов ровно три («по послѣдней ревизiи состояли» · «изъ того числа выбыли» · «нынѣ налицо съ причисленными и вновь рожденными»), и происхождение не записано ни у кого.
-⚠️ Вертикальная надпись поперёк пустых граф — обычно **росчерк погашения неиспользуемых столбцов**, а не текст о человеке. Признаки: одна на страницу, а не на семью; слишком коротка для формулы с топонимом; **одинакова на разных листах**.
+In a block of "arrivals" there may be no origin column at all. This is checked in a minute: read the **column headings** verbatim.
+A real case: in the census of 1811 there are exactly three columns ("по послѣдней ревизiи состояли" [stood per the last revision] · "изъ того числа выбыли" [of these, left] · "нынѣ налицо съ причисленными и вновь рожденными" [now present, with those added and newly born]), and the origin is recorded for nobody.
+⚠️ A vertical inscription across empty columns is usually **a stroke cancelling the unused columns**, not text about a person. Signs: one per page, not per family; too short for a formula with a place name; **identical on different sheets**.
 
-## 🔑 Как искать титульные листы: мерить ЧЕРНИЛА, а не вес файла
+## 🔑 How to find title pages: measure INK, not file weight
 
-Вес сжатого кадра **не годится** — он отражает фактуру бумаги, а не количество чернил (проверено: «лёгкие» кадры слиплись в один кусок вместо того, чтобы указать на титулы).
+The weight of a compressed frame is **no good** — it reflects the texture of the paper, not the amount of ink (verified: the "light" frames merged into one lump instead of pointing to the titles).
 
-✅ **Работающий способ, полностью локальный:**
-1. декодировать JPEG в режиме **`draft` (1/8 разрешения)** — быстро;
-2. взять уровень бумаги как **80-й процентиль** яркости кадра;
-3. посчитать **долю пикселей темнее него** — это и есть доля чернил.
+✅ **A working method, entirely local:**
+1. decode the JPEG in **`draft` mode (1/8 resolution)** — fast;
+2. take the paper level as the **80th percentile** of the frame's brightness;
+3. count the **share of pixels darker than it** — this is the share of ink.
 
-Титул даёт долю заметно **ниже** медианы по делу. Реальные числа на деле в 2862 кадра: медиана **0,3156**, порог **0,2253**, ниже порога 229 кадров в 140 группах, **рассыпанных по всему делу** — то есть признак действительно указывает на структуру. Прогон занял **~6 минут, сети не нужно**.
+A title gives a share noticeably **below** the median for the file. Real numbers on a file of 2,862 frames: median **0.3156**, threshold **0.2253**, below the threshold 229 frames in 140 groups, **scattered throughout the file** — that is, the criterion really does point to the structure. The run took **~6 minutes, no network needed**.
 
-⚠️ И не судить о языке дела по выборке: в одном и том же деле **таблицы могут быть на иврите, а титулы, выписи и заверительные надписи — на русском**. Именно заверения называют общину, уезд, вид записей и год.
+⚠️ And do not judge the language of the file from a sample: in one and the same file **the tables may be in Hebrew while the titles, extracts and certifying inscriptions are in Russian**. It is the certifications that name the community, district, kind of records and year.
 
-## ⚠️ Страница может быть НЕ JPEG, а сырой растр под FlateDecode
+## ⚠️ A page may be NOT a JPEG but a raw raster under FlateDecode
 
-`pagetool.py` падает с «cannot identify image file», когда страница записана не как `/DCTDecode` (JPEG), а как **сырой растр под `/FlateDecode`** (встречается ICCBased, 1600×1200). PIL такой поток не опознаёт.
+`pagetool.py` fails with "cannot identify image file" when a page is stored not as `/DCTDecode` (JPEG) but as a **raw raster under `/FlateDecode`** (ICCBased, 1600×1200, is encountered). PIL does not recognise such a stream.
 
-✅ **Обход:** распаковать zlib, определить число компонент как `len(raw) // (width*height)`, собрать через `Image.frombytes`:
+✅ **Workaround:** decompress with zlib, determine the number of components as `len(raw) // (width*height)`, and assemble with `Image.frombytes`:
 ```python
 raw = zlib.decompress(stream_bytes)
 comp = len(raw) // (w*h)                      # 1 = L, 3 = RGB
 img = Image.frombytes("L" if comp==1 else "RGB", (w,h), raw)
 ```
-Ширину и высоту брать из `/Width` и `/Height` объекта изображения.
-⚠️ Такие кадры часто лежат **набок** — проверить и применить `--rot 270`.
+Take the width and height from `/Width` and `/Height` of the image object.
+⚠️ Such frames often lie **on their side** — check and apply `--rot 270`.
 
-## ⚠️ Ориентация кадров бывает разной ВНУТРИ одной серии — и кадр 1 не показатель
+## ⚠️ Frame orientation varies WITHIN one series — and frame 1 is no guide
 
-В одной и той же серии книг ориентация меняется от дела к делу: портрет 1500×2000 (поворот не нужен), альбом 1600×1200 и альбом 4000×3000 (нужен `--rot 270`).
-⚠️ **Обложка часто портретная даже у альбомной книги** — по кадру 1 судить нельзя.
-✅ **Смотреть `/Width` и `/Height` КАДРА 2.** Шире, чем выше → `--rot 270`, иначе без поворота. Проверять для **каждого дела отдельно**.
+Within the same series of books the orientation changes from file to file: portrait 1500×2000 (no rotation needed), landscape 1600×1200 and landscape 4000×3000 (`--rot 270` needed).
+⚠️ **The cover is often portrait even in a landscape book** — you cannot judge by frame 1.
+✅ **Look at `/Width` and `/Height` of FRAME 2.** Wider than tall → `--rot 270`, otherwise no rotation. Check **each file separately**.
 
-## ⚠️ В двуязычных метриках чётность русских кадров своя в КАЖДОЙ книге
+## ⚠️ In bilingual metrical books the parity of the Russian frames is its own in EACH book
 
-В одной серии: в двух делах русские записи на **чётных** кадрах, в трёх других — на **нечётных**. Правило, выведенное на одном деле, на соседнем **не работает**.
-✅ Определять заново **в каждом деле**, открыв два-три кадра подряд.
+In one series: in two files the Russian entries are on **even** frames, in three others on **odd** ones. A rule derived from one file **does not work** on the next.
+✅ Determine afresh **in each file**, by opening two or three frames in a row.
 
-## ⚠️ Подписи на Commons бывают ложными — читать обложку ДО работы
+## ⚠️ Captions on Commons can be false — read the cover BEFORE working
 
-Проверено на одном массиве трижды подряд: шифр фонда, которого нет в справочном аппарате архива; номер дела, отсутствующий в оцифровке; и **подмена содержания** — файл подписан «посемейный список по уездам губернии», а внутри очередной список христиан одного города.
-✅ **Перед тем как вкладываться в дело: открыть обложку и один кадр из середины.** Пять минут против часов работы не по тому документу.
-✅ Проверять не только название, но и **графу возрастов** — она называет год предыдущей ревизии и сразу выдаёт, к какому году относится дело.
+Verified on one batch three times running: a fond code that is not in the archive's finding aids; a file number missing from the digitisation; and a **substitution of contents** — the file is captioned "family list by districts of the guberniya", and inside is an ordinary list of Christians of a single town.
+✅ **Before investing in a file: open the cover and one frame from the middle.** Five minutes against hours of work on the wrong document.
+✅ Check not only the title but the **age column** — it names the year of the previous revision and at once shows which year the file belongs to.
 
-## 🔑 Большие файлы с upload.wikimedia.org качаются целиком через range-запросы
+## 🔑 Large files from upload.wikimedia.org can be downloaded whole with range requests
 
-Файл в 774 МБ берётся **целиком** (HTTP 206, range-запросы) — постраничные превью не нужны, и получается **нативное разрешение**.
-Превью, если всё же нужны: `page<N>-1280px-<ИМЯ>.jpg`; ширина **только 1280 или 3840**, промежуточные значения дают HTTP 400.
+A file of 774 MB can be taken **whole** (HTTP 206, range requests) — page-by-page previews are not needed, and you get the **native resolution**.
+If previews are nevertheless needed: `page<N>-1280px-<NAME>.jpg`; the width is **only 1280 or 3840**, intermediate values give HTTP 400.
 
-## ⚠️ Коэффициент усиления зависит от разрешения скана
+## ⚠️ The enhancement coefficient depends on the scan's resolution
 
-`DEFAULT_K = 1.6` рассчитан на ~2000 px по ширине. На крупных сканах (**6883×5539**) даже `k = 1.4` даёт «чеканку» — ложный рельеф вместо штриха. Для таких кадров брать **k = 0.8–1.0**.
-✅ Правило: чем больше пикселей на букву, тем **меньше** нужно усиление.
+`DEFAULT_K = 1.6` is calculated for ~2000 px in width. On large scans (**6883×5539**) even `k = 1.4` gives "embossing" — a false relief instead of a stroke. For such frames use **k = 0.8–1.0**.
+✅ Rule: the more pixels per letter, the **less** enhancement is needed.
 
-## 🔑 Ведомость поданных сказок — указатель к утраченному
+## 🔑 The register of submitted returns — an index to what is lost
 
-Если сказок общества нет ни в оцифровке, ни в описи, искать **сводные ведомости ревизской комиссии**: «Вѣдомость … поданнымъ въ Коммиссiю Сказкамъ по N Ревизiи». Они дают **номер исходного дела, название общества и число душ** — то есть доказывают, что сказка существовала, и называют её шифр.
-С такой ведомостью запрос в архив становится адресным вместо тематического.
+If the returns (*skazki*) of a community are neither in the digitisation nor in the inventory, look for the **summary registers of the revision commission**: "Вѣдомость … поданнымъ въ Коммиссiю Сказкамъ по N Ревизiи" [Register of the returns submitted to the Commission for the Nth Revision]. They give the **number of the source file, the name of the community and the number of souls** — that is, they prove that the return existed, and give its reference code.
+With such a register a request to the archive becomes targeted instead of thematic.
 
-## Печатные издания в библиотечных читалках (без OCR)
+## Printed editions in library readers (no OCR)
 
-Старое издание часто оцифровано только библиотекой, без распознанного текста и без PDF. Оно всё равно читается — читалки отдают страницы картинками по предсказуемым адресам.
+An old edition is often digitised only by a library, with no recognised text and no PDF. It can still be read — the readers serve pages as pictures at predictable addresses.
 
-**Рецепт (проверен на ГПИБ `elib.shpl.ru`):**
-1. Открыть HTML страницы книги и выдрать из неё **все** пути превью (`/system/pages/NNN/NNN/NN/images/...`). **Идентификаторы страниц идут подряд** — из них строится полный список, даже если читалка догружает их скриптом.
-2. Подобрать максимальный зум: `…/pages/<id>/zooms/<N>`, N от 0 до 8. Восьмой обычно ~2000×3200 — печатному тексту XIX века хватает с запасом.
-3. Проверить, нет ли текстового слоя: `…/pages/<id>/read`. Ответ `{"text":null}` значит OCR нет, читать глазами.
-4. **Вывести формулу `скан = константа + номер страницы`** по двум-трём известным страницам и проверить её на четвёртой. Дальше любая страница берётся прямым расчётом, без перебора.
-⚠️ У многотомника **у каждого выпуска своя константа** — обложки и ненумерованные листы сдвигают отсчёт.
+**Recipe (verified on GPIB `elib.shpl.ru`):**
+1. Open the HTML of the book page and pull out **all** the preview paths (`/system/pages/NNN/NNN/NN/images/...`). **Page identifiers run consecutively** — from them build a full list, even if the reader loads them in by script.
+2. Find the maximum zoom: `…/pages/<id>/zooms/<N>`, N from 0 to 8. The eighth is usually ~2000×3200 — more than enough for nineteenth-century printed text.
+3. Check whether there is a text layer: `…/pages/<id>/read`. The answer `{"text":null}` means there is no OCR, read by eye.
+4. **Derive the formula `scan = constant + page number`** from two or three known pages and check it on a fourth. After that any page is obtained by direct calculation, with no trial and error.
+⚠️ In a multi-volume work **each issue has its own constant** — covers and unnumbered sheets shift the count.
 
-**Навигация по алфавитному указателю — бинарным поиском, а не подряд.**
-Взять 5 страниц с широким шагом, вырезать у каждой **верхнюю полосу с первыми строками**, склеить в один контактный лист и прочитать одной картинкой. Две-три такие пробы приводят к нужной букве. Это на порядок дешевле, чем листать.
+**Navigating an alphabetical index — by binary search, not in sequence.**
+Take 5 pages at wide intervals, cut from each the **top strip with the first lines**, join them into one contact sheet and read it as one picture. Two or three such probes lead to the right letter. This is an order of magnitude cheaper than leafing through.
 
-## ⚠️ Когда сайт не отдаёт: отличать бота-стену от геоблока
+## ⚠️ When a site does not deliver: tell a bot wall from a geoblock
 
-- **Бот-стена** (Imperva/Incapsula, Cloudflare): curl получает 403 с `_Incapsula_Resource` или challenge-страницей. Иногда **проходит настоящий браузер**.
-- **Геоблок по IP**: браузер видит то же, что curl — «Access denied», код ошибки и свой IP в тексте. Браузер **не поможет**, и Chrome пользователя тоже: у него тот же адрес.
-- Проверено: `szukajwarchiwach.gov.pl` (каталог польских архивов) **блокирует израильские IP целиком** — Imperva «Error 16». `cdiak.archives.gov.ua` — Akamai 403, обходится через `archium.cdiak.archives.gov.ua`.
-📌 Прежде чем звать пользователя «открой у себя», понять, какой это случай. Просить человека повторить то, что заведомо не сработает, — потеря его времени.
+- **Bot wall** (Imperva/Incapsula, Cloudflare): curl gets 403 with `_Incapsula_Resource` or a challenge page. Sometimes **a real browser gets through**.
+- **Geoblock by IP**: the browser sees the same as curl — "Access denied", an error code and its own IP in the text. A browser **will not help**, nor will the user's Chrome: it has the same address.
+- Verified: `szukajwarchiwach.gov.pl` (the catalogue of Polish archives) **blocks Israeli IPs entirely** — Imperva "Error 16". `cdiak.archives.gov.ua` — Akamai 403, bypassed via `archium.cdiak.archives.gov.ua`.
+📌 Before asking the user to "open it on your side", work out which case this is. Asking a person to repeat what will certainly not work wastes their time.
 
-## ⚠️ Что нельзя читать с уменьшенного превью
+## ⚠️ What cannot be read from a reduced preview
 
-Возрасты и личные имена на превью шириной ~1280 px разбираются, **названия мест — нет**. Реальный случай: «Проскуровъ» и «**Проскуровкъ**» на превью неразличимы, а это город и село в **разных уездах** — и на этом чуть не построили вывод, что дело подписано неверно.
+Ages and personal names can be made out on a preview ~1280 px wide, **place names cannot**. A real case: "Проскуровъ" (Proskurov) and "**Проскуровкъ**" (Proskurovka) are indistinguishable on the preview, and yet one is a town and the other a village in **different districts** — and a conclusion was almost built on that, that the file was captioned wrongly.
 
-**Правило: любое название места, которое пойдёт в отчёт или в вывод, перечитывать на максимальном разрешении.** Возраст и имя — можно с превью; топоним — никогда.
+**Rule: any place name that is going into a report or conclusion must be reread at maximum resolution.** Age and name — a preview will do; a place name — never.
 
-## Дела ниже порога читаемости: ловить обложки формы, а не читать подряд
+## Files below the readability threshold: catch the form covers, do not read in sequence
 
-Бывает **0,04–0,11 МБ/стр при 1024 px**, и превью шире не существует. Сплошной просмотр бессмыслен: 2000 страниц не прочесть, а нужная строка в каждом дворе одна.
+There are files with **0.04–0.11 MB/page at 1024 px**, and no wider preview exists. A continuous viewing is pointless: 2,000 pages cannot be read, and the line you need is one per household.
 
-**Приём (проверен на переписи 1897 г., ДАКО ф. 384 оп. 4):**
-1. Понять, есть ли в деле **печатный бланк с постоянной разметкой**. В переписных листах страница PDF — разворот, и **правый полулист всегда обложка формы** с единственной нужной строкой «Имя, отчество и фамилия главы двора».
-2. Ловить обложку **по печатному элементу, а не по тексту**: герб, рамка, крупная гарнитура. Считать долю тёмных пикселей в фиксированной коробке (для этого бланка — `x 0,66–0,80 / y 0,04–0,14`). Контроль: заголовки 0,172–0,220, не-заголовки 0,092–0,120 — разделение чистое.
-3. ⚠️ **Порог брать по медиане конкретного файла**: экспозиция у дел разная, абсолютное значение не переносится.
-4. Из каждой найденной обложки вырезать **одну строку**, сложить по 25 в контактный лист и читать одной картинкой.
-➜ 2021 страница просматривается за **девять снимков** вместо сотен.
+**Technique (verified on the 1897 census, DAKO fond 384 inventory 4):**
+1. Find out whether the file has a **printed form with fixed layout**. In the census sheets a PDF page is a spread, and **the right half-sheet is always the form's cover** with the single line you need, "Name, patronymic and surname of the head of the household".
+2. Catch the cover **by a printed element, not by text**: coat of arms, frame, large typeface. Count the share of dark pixels in a fixed box (for this form — `x 0.66–0.80 / y 0.04–0.14`). Control: headings 0.172–0.220, non-headings 0.092–0.120 — a clean separation.
+3. ⚠️ **Take the threshold from the median of the specific file**: exposure differs between files, and the absolute value does not carry over.
+4. From each cover found cut out **one line**, put them 25 to a contact sheet and read as one picture.
+➜ 2,021 pages are viewed in **nine images** instead of hundreds.
+(DAKO = State Archive of Kyiv Oblast.)
 
-## ⚠️ Различать «в источнике нет» и «источника нет»
+## ⚠️ Distinguish "it is not in the source" from "there is no source"
 
-Заверительная надпись дела говорит, **сколько листов в нём подшито**. Если ведомость перечисляет листы № 1–36, а в деле «підшито 2 аркуші» — значит **самих листов нет**, и отрицательный результат относится к **доступности источника**, а не к содержанию.
-📌 Формулировать так: «двор не найден, потому что городской счётный участок не оцифрован», а **не** «двора в местечке нет». Это та же ошибка, что принимать чужую роспись за опись.
+The certifying inscription of a file says **how many sheets are bound in it**. If a register lists sheets Nos. 1–36 and the file has "підшито 2 аркуші" [2 sheets bound], then **the sheets themselves are missing**, and the negative result concerns the **availability of the source**, not its content.
+📌 Word it like this: "the household was not found because the city counting district is not digitised", and **not** "there is no such household in the shtetl". This is the same error as taking someone else's itemisation for an inventory.

@@ -1,33 +1,33 @@
 #!/usr/bin/env python3
-"""Достаёт страницы из архивного PDF без перекодирования и собирает контактные листы.
+"""Extracts pages from an archival PDF without re-encoding and assembles contact sheets.
 
-Встроенное изображение берётся как сырой JPEG (o._data), поэтому потерь нет.
-Требуется: pypdf, Pillow, numpy.
+The embedded image is taken as a raw JPEG (o._data), so there is no loss.
+Requires: pypdf, Pillow, numpy.
 
-  python3 pagetool.py info   FILE.pdf                       — страниц, размеры, МБ/стр
-  python3 pagetool.py sharp  FILE.pdf 55,57,59              — резкость (брак съёмки)
-  python3 pagetool.py page   FILE.pdf 128 out.jpg [опции]   — одна страница
-  python3 pagetool.py sheet  FILE.pdf 241,243,245 out.jpg [опции] — несколько в ряд
+  python3 pagetool.py info   FILE.pdf                       - pages, sizes, MB per page
+  python3 pagetool.py sharp  FILE.pdf 55,57,59              - sharpness (defective shots)
+  python3 pagetool.py page   FILE.pdf 128 out.jpg [options]   - one page
+  python3 pagetool.py sheet  FILE.pdf 241,243,245 out.jpg [options] - several in a row
 
-Опции: --crop x0 x1 y0 y1 (доли 0..1) --w ШИРИНА --rot ГРАДУСЫ --k КОЭФФ
+Options: --crop x0 x1 y0 y1 (fractions 0..1) --w WIDTH --rot DEGREES --k COEFF
 """
 import argparse, io, sys
 import numpy as np
 import pypdf
 from PIL import Image, ImageDraw, ImageFilter
 
-# Радиус размытия фона: ~1 % высоты листа. Меньше — съедает штрихи буквы,
-# больше — не снимает неравномерность освещения и тень у корешка.
+# Background blur radius: ~1% of the sheet height. Smaller eats the letter strokes,
+# larger does not remove uneven lighting and the shadow at the spine.
 BLUR_RADIUS = 11
-# Усиление контраста. Выше 1.8 JPEG-артефакты превращаются в ложные штрихи.
+# Contrast gain. Above 1.8 JPEG artefacts turn into false strokes.
 DEFAULT_K = 1.6
-# Обрезка гистограммы: 2 % с каждого края убирают выбросы (дырокол, тень),
-# не трогая сами чернила.
+# Histogram clipping: 2% at each end removes outliers (hole punch, shadow),
+# without touching the ink itself.
 CLIP_LO, CLIP_HI = 2, 98
 
 
 def images(reader, page_no):
-    """Все изображения страницы (обычно одно). page_no с 1."""
+    """All images on the page (usually one). page_no starts at 1."""
     res = reader.pages[page_no - 1].get("/Resources")
     if res is None:
         return []
@@ -43,17 +43,17 @@ def images(reader, page_no):
 
 
 def native(reader, page_no):
-    """Страница как есть, в градациях серого. None, если изображения нет."""
+    """The page as is, in greyscale. None if there is no image."""
     for obj in images(reader, page_no):
         try:
             return Image.open(io.BytesIO(obj._data)).convert("L")
-        except Exception as exc:                      # битый поток — не валимся
-            print(f"стр.{page_no}: не читается ({exc})", file=sys.stderr)
+        except Exception as exc:                      # broken stream - do not crash
+            print(f"p.{page_no}: unreadable ({exc})", file=sys.stderr)
     return None
 
 
 def enhance(im, k=DEFAULT_K):
-    """Вычитание фона + растяжка. Вытягивает выцветшие чернила."""
+    """Background subtraction + stretch. Brings out faded ink."""
     a = np.asarray(im, np.float32)
     bg = np.asarray(im.filter(ImageFilter.GaussianBlur(BLUR_RADIUS)), np.float32)
     d = (a - bg) * k + 128
@@ -74,7 +74,7 @@ def prepare(reader, page_no, crop, rot, k):
 
 
 def sharpness(reader, page_no):
-    """Дисперсия лапласиана. Вчетверо ниже соседних — снято не в фокусе."""
+    """Variance of the Laplacian. A third of the median of the neighbours or lower - out of focus."""
     im = native(reader, page_no)
     if im is None:
         return None
@@ -90,8 +90,8 @@ def main():
     ap.add_argument("pages", nargs="?", default="")
     ap.add_argument("out", nargs="?", default="out.jpg")
     ap.add_argument("--crop", nargs=4, type=float, default=[0, 1, 0, 1])
-    ap.add_argument("--w", type=int, default=1750, help="ширина листа в пикселях")
-    ap.add_argument("--rot", type=int, default=0, help="поворот против часовой")
+    ap.add_argument("--w", type=int, default=1750, help="sheet width in pixels")
+    ap.add_argument("--rot", type=int, default=0, help="counter-clockwise rotation")
     ap.add_argument("--k", type=float, default=DEFAULT_K)
     a = ap.parse_args()
 
@@ -99,12 +99,12 @@ def main():
 
     if a.cmd == "info":
         n = len(reader.pages)
-        print(f"страниц: {n}")
+        print(f"pages: {n}")
         probe = sorted({1, 2, 3, n // 2, n}) if n > 4 else range(1, n + 1)
         for p in probe:
             for obj in images(reader, p):
                 mb = len(obj._data) / 1e6
-                print(f"  стр.{p}: {obj['/Width']}x{obj['/Height']} px, {mb:.2f} МБ")
+                print(f"  p.{p}: {obj['/Width']}x{obj['/Height']} px, {mb:.2f} MB")
                 break
         return
 
@@ -115,8 +115,8 @@ def main():
         good = [v for _, v in vals if v]
         med = float(np.median(good)) if good else 0.0
         for p, v in vals:
-            flag = "  ← НЕ В ФОКУСЕ" if v and med and v < med / 3 else ""
-            print(f"  стр.{p}: резкость {v:.0f}{flag}" if v else f"  стр.{p}: нет изображения")
+            flag = "  <- OUT OF FOCUS" if v and med and v < med / 3 else ""
+            print(f"  p.{p}: sharpness {v:.0f}{flag}" if v else f"  p.{p}: no image")
         return
 
     tiles = []
@@ -126,7 +126,7 @@ def main():
             continue
         tiles.append((p, im))
     if not tiles:
-        sys.exit("ни одна страница не извлеклась")
+        sys.exit("no page could be extracted")
 
     if a.cmd == "page" or len(tiles) == 1:
         p, im = tiles[0]
@@ -141,7 +141,7 @@ def main():
             sheet.paste(im.resize((cw, ch)), (i * cw, 18))
             draw.text((i * cw + 3, 4), str(p), fill=0)
         sheet.save(a.out, quality=92)
-    print(f"{a.out}: страницы {pages}")
+    print(f"{a.out}: pages {pages}")
 
 
 if __name__ == "__main__":

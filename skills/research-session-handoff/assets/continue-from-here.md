@@ -1,46 +1,46 @@
-# Продолжать отсюда
+# Continue from here
 
-**Обновлено:** ГГГГ-ММ-ДД ЧЧ:ММ  **Кем:** (сессия / человек)
+**Updated:** YYYY-MM-DD HH:MM  **By:** (session / human)
 
-## ⏳ Ждёт человека
-<!-- Конкретно: что, где, зачем. Сделанное — вычёркивать или удалять. -->
-- [ ] пройти капчу на [сайт] во вкладке агента [имя] — без этого агент стоит на кадре [N]
-- [ ] выключить VPN для [сайт] — сайт не открывается из-за рубежа / через VPN
-- [ ] войти в аккаунт [сервис] в своём браузере
-- [ ] решить: [вопрос — например, вносить ли N в дерево; принимать ли версию Г-07]
-- [ ] расспросить [кого] о [чём]
+## ⏳ Waiting for the human
+<!-- Concretely: what, where, why. Cross out or delete what is done. -->
+- [ ] pass the captcha on [site] in the tab of agent [name] — without it the agent stands at frame [N]
+- [ ] switch off the VPN for [site] — the site does not open from abroad / through a VPN
+- [ ] log in to the [service] account in your own browser
+- [ ] decide: [question — for example, whether to enter N into the tree; whether to accept version H-07]
+- [ ] ask [whom] about [what]
 
-## 🎯 Текущий вопрос
-**Вопрос:** (один, с критерием ответа)
-**Гипотеза:** Г-NN — [формулировка], статус ⚪ / 🟡 / 🟢 / 🔴
-**Условие остановки:** (лимит времени / источников; что делать, если ответа нет)
-**Файл направления:** [путь]
+## 🎯 Current question
+**Question:** (one, with an answer criterion)
+**Hypothesis:** H-NN — [wording], status ⚪ / 🟡 / 🟢 / 🔴
+**Stop condition:** (limit of time / sources; what to do if there is no answer)
+**Line-of-inquiry file:** [path]
 
-## ▶️ Следующий шаг
-1. (первый исполнимый шаг: источник, кадр, что искать, контрольная запись)
+## ▶️ Next step
+1. (the first executable step: source, frame, what to look for, control record)
 2. …
 3. …
 
-## 🤖 Фоновые агенты
-| Агент / задача | Задание (кратко) и файл задания | Журнал и папка | Статус | Точка продолжения | Отчёт принят? |
+## 🤖 Background agents
+| Agent / task | Task (brief) and task file | Log and folder | Status | Resume point | Report accepted? |
 |---|---|---|---|---|---|
-| [имя/id] | книга рождений 1869, кадры 210–290; задания/…md | агенты/…/журнал.md | работает / закончил / оборвался / капча | кадр 254, запись м. 97 | нет — сверить находки 3 и 5 |
+| [name/id] | birth book 1869, frames 210–290; tasks/…md | agents/…/log.md | working / finished / dropped / captcha | frame 254, male entry 97 | no — check finds 3 and 5 |
 
-## ✅ Сделано в последней сессии
-- (находка: кратко + ссылка на запись в журнале находок)
-- (пустой поиск: где, охват — строка в журнале поисков)
-- (гипотеза Г-NN: статус изменён на … потому что …)
+## ✅ Done in the last session
+- (find: brief + link to the entry in the findings log)
+- (empty search: where, coverage — a line in the search log)
+- (hypothesis H-NN: status changed to … because …)
 
-## 🧭 Состояние направлений
-| Направление | Статус | Где остановились | Файл |
+## 🧭 State of the lines of inquiry
+| Line of inquiry | Status | Where we stopped | File |
 |---|---|---|---|
-| | активно / отложено / закрыто (почему) | | |
+| | active / postponed / closed (why) | | |
 
-## 📌 Постоянные договорённости с человеком
-<!-- Правила, которые не надо переспрашивать: что можно вносить в дерево, какие сайты не трогать, кто проходит капчи и как сообщать. Без паролей и ключей. -->
+## 📌 Standing agreements with the human
+<!-- Rules that need not be asked again: what may be entered into the tree, which sites not to touch, who passes captchas and how to report it. No passwords or keys. -->
 -
 
 ---
 
-## История направлений (старое — сюда, вниз)
-- ГГГГ-ММ-ДД — [направление] — закрыто/отложено, потому что …
+## History of lines of inquiry (old material — down here)
+- YYYY-MM-DD — [line of inquiry] — closed/postponed because …

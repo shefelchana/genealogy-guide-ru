@@ -1,49 +1,49 @@
-# Карточка фото: признаки образа жизни → гипотезы → документы
+# Photo card: signs of way of life → hypotheses → documents
 
-**Файл / условный номер:** (например, `фото_023_лицо.tif`, `фото_023_оборот.tif`)
-**Откуда, у кого оригинал:**
-**Датировка** (по навыку `dating-old-photos`): около ____ – ____ гг., по признакам:
-**Дата записи:** ГГГГ-ММ-ДД
+**File / working number:** (e.g. `photo_023_front.tif`, `photo_023_back.tif`)
+**Where from, who holds the original:**
+**Dating** (by the skill `dating-old-photos`): around ____ – ____, based on:
+**Date of entry:** YYYY-MM-DD
 
-## 1. Что видно (описание без толкования)
+## 1. What is visible (description without interpretation)
 
-| Человек (место на снимке) | Головной убор / волосы | Борода, пейсы | Одежда | Предметы в руках, рядом |
+| Person (position in photo) | Headwear / hair | Beard, peyes | Clothing | Objects in hands, nearby |
 |---|---|---|---|---|
-| сидит слева | | | | |
+| seated on the left | | | | |
 | | | | | |
 
-- **Фон:** студийный задник / дом / двор / улица / кладбище / класс / мастерская
-- **Предметы в кадре:** (книги, подсвечники, талит, флаг, плакат, вывеска …)
-- **Надписи в кадре** (вывеска, табличка, плакат) — дословно:
-- **Надписи на обороте** — дословно, язык, чем написано; непрочитанное в [ ]:
-- **Штамп ателье** (город, улица, язык штампа):
+- **Background:** studio backdrop / home / yard / street / cemetery / classroom / workshop
+- **Objects in the frame:** (books, candlesticks, tallit, flag, poster, shop sign …)
+- **Inscriptions in the frame** (shop sign, plaque, poster) — word for word:
+- **Inscriptions on the back** — word for word, language, written with what; unread parts in [ ]:
+- **Studio stamp** (town, street, language of the stamp):
 
-## 2. Признак → гипотеза → документ
+## 2. Sign → hypothesis → document
 
-| Признак | Гипотеза | Надёжность (высокая / средняя / низкая) и почему | Что может опровергнуть (реквизит, ретушь, монтаж, поздняя подпись) | Какой документ искать, где |
+| Sign | Hypothesis | Reliability (high / medium / low) and why | What could refute it (prop, retouching, montage, later caption) | Which document to look for, where |
 |---|---|---|---|---|
-| | место: | | | |
-| | сословие / занятие: | | | |
-| | религиозность: | | | |
-| | событие: | | | |
-| | примерный год события: | | | |
+| | place: | | | |
+| | estate / occupation: | | | |
+| | religiosity: | | | |
+| | event: | | | |
+| | approximate year of the event: | | | |
 
-## 3. Сравнительный материал
+## 3. Comparative material
 
-| Где найден похожий снимок | Ссылка / номер в каталоге | Подпись дословно | Что подтверждает |
+| Where a similar photograph was found | Link / catalogue number | Caption word for word | What it confirms |
 |---|---|---|---|
 | | | | |
 
-## 4. Итог
+## 4. Conclusion
 
-- **Что можно считать установленным** (подтверждено надписью того времени или документом):
-- **Гипотезы** (формулировка «вероятно, …, потому что …»):
-- **Чего снимок не говорит** (например: «отсутствие ермолки на советском снимке не означает отказа от обычаев»):
+- **What can be considered established** (confirmed by a contemporary inscription or a document):
+- **Hypotheses** (wording: "probably …, because …"):
+- **What the photograph does not say** (for example: "the absence of a yarmulke in a Soviet photograph does not mean abandoning custom"):
 
-## 5. Следующие шаги
-- [ ] документ:
-- [ ] база или фонд:
-- [ ] сравнительный снимок:
-- [ ] кого из родных спросить:
+## 5. Next steps
+- [ ] document:
+- [ ] database or fond:
+- [ ] comparative photograph:
+- [ ] which relative to ask:
 
-**Публикация:** живые люди на снимке — есть согласие? да / нет / не требуется
+**Publication:** living people in the photograph — is there consent? yes / no / not required

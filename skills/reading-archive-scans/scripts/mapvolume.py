@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Ищет титульные листы в архивном деле, у которого нет оглавления.
+"""Finds title pages in an archival file that has no table of contents.
 
-Два признака, по очереди:
-  printed — печатный титул: много чернил и много длинных вертикальных линеек;
-  written — рукописный титул: чернила сгущены в верхней трети, низ пуст.
-Промеряет том целиком через DCT-превью (быстро: 2500 страниц ≈ 10 с).
+Two criteria, in turn:
+  printed - printed title: a lot of ink and many long vertical rules;
+  written - handwritten title: ink concentrated in the top third, empty bottom.
+Measures the whole volume via DCT previews (fast: 2500 pages ~ 10 s).
 
   python3 mapvolume.py FILE.pdf [--mode printed|written|both] [--top N]
 """
@@ -13,12 +13,12 @@ import numpy as np
 import pypdf
 from PIL import Image
 
-# Делитель DCT-превью. 8 — минимум, на котором ещё различимы линейки.
+# DCT preview divisor. 8 is the minimum at which ruled lines are still distinguishable.
 DRAFT_DIV = 8
-# Порог «это чернила»: доля затемнения относительно фона (85-й перцентиль).
-# 0.22 отделяет письмо от желтизны бумаги на всех проверенных делах.
+# 'This is ink' threshold: share of darkening relative to the background (85th percentile).
+# 0.22 separates writing from the yellowing of the paper on all files checked.
 INK = 0.22
-# Колонка считается линейкой, если затемнена по всей высоте полосы.
+# A column counts as a ruled line if it is darkened over the whole height of the strip.
 RULE_FRAC = 0.65
 
 
@@ -57,7 +57,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("pdf")
     ap.add_argument("--mode", choices=["printed", "written", "both"], default="both")
-    ap.add_argument("--top", type=int, default=80, help="сколько кандидатов вывести")
+    ap.add_argument("--top", type=int, default=80, help="how many candidates to print")
     a = ap.parse_args()
 
     reader = pypdf.PdfReader(a.pdf)
@@ -68,21 +68,21 @@ def main():
         if arr is not None:
             feats[p] = features(arr)
     if not feats:
-        raise SystemExit("изображений не найдено")
+        raise SystemExit("no images found")
 
     tops = np.array([f["top"] for f in feats.values()])
     mids = np.array([f["mid"] for f in feats.values()])
     hi_top, lo_mid = np.percentile(tops, 80), np.percentile(mids, 35)
 
     if a.mode in ("printed", "both"):
-        # Пороги выведены на делах ДАХмО: печатный бланк заметно чернее
-        # рукописной таблицы и несёт больше длинных линеек.
+        # Thresholds derived on DAKhmO files: a printed form is noticeably blacker
+        # than a handwritten table and carries more long ruled lines.
         c = [p for p, f in feats.items() if f["ink"] > 0.18 and f["rules"] > 12]
-        print(f"печатные титулы ({len(c)}):", c[:a.top])
+        print(f"printed titles ({len(c)}):", c[:a.top])
     if a.mode in ("written", "both"):
         c = [p for p, f in feats.items() if f["top"] > hi_top and f["mid"] < lo_mid]
-        print(f"рукописные титулы ({len(c)}):", c[:a.top])
-    print(f"промерено страниц: {len(feats)} из {n}")
+        print(f"handwritten titles ({len(c)}):", c[:a.top])
+    print(f"pages measured: {len(feats)} of {n}")
 
 
 if __name__ == "__main__":

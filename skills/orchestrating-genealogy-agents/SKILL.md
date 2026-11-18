@@ -1,131 +1,131 @@
 ---
 name: orchestrating-genealogy-agents
-description: Coordinates several AI agents in a family-history search — assigns roles (coordinator, reader, mechanic, web researcher), runs one research iteration at a time, splits work by source and by site (one site, one executor), writes a verifiable task brief from a template, accepts results only after checking each find against the scan, the control record, the coverage log and the site's error codes, picks a model per task, and handles typical failures (captcha, 403/429, silent agent, agents spawning agents). Use whenever work is delegated to agents — a background agent gets a task or returns a report, or several agents work at once — even if the user only says "запусти агентов", "распараллель чтение", "поставь задачу агенту", "агент вернул отчёт", "проверь, что принёс агент". NOT for a session where the assistant searches on its own — use organizing-genealogy-research; NOT for recording which agents are still running before the session ends, or checking on them after a break — use research-session-handoff.
+description: Coordinates several AI agents in a family-history search — assigns roles (coordinator, reader, mechanic, web researcher), runs one research iteration at a time, splits work by source and by site (one site, one executor), writes a verifiable task brief from a template, accepts results only after checking each find against the scan, the control record, the coverage log and the site's error codes, picks a model per task, and handles typical failures (captcha, 403/429, silent agent, agents spawning agents). Use whenever work is delegated to agents — a background agent gets a task or returns a report, or several agents work at once — even if the user only says "run the agents", "parallelise the reading", "give the agent a task", "the agent returned a report", "check what the agent brought". NOT for a session where the assistant searches on its own — use organizing-genealogy-research; NOT for recording which agents are still running before the session ends, or checking on them after a break — use research-session-handoff. Also triggers on Russian requests: «запусти агентов», «распараллель чтение», «поставь задачу агенту», «агент вернул отчёт», «проверь, что принёс агент».
 ---
 
-# Работа нескольких ИИ-агентов в генеалогическом поиске
+# Working with several AI agents in a genealogy search
 
-Главный принцип: **суждение — координатору и человеку, объём — агентам.** Агент быстро листает сотни кадров, но склонен видеть то, что ищет, и не знает, что уже найдено. Поэтому координатор (ты, основная сессия) готовит задание, проверяет каждую находку сам и записывает итог. Агент читает и отчитывается.
+The main principle: **judgement belongs to the coordinator and the human; volume belongs to the agents.** An agent can quickly leaf through hundreds of frames, but it tends to see what it is looking for, and it does not know what has already been found. So the coordinator (you, the main session) prepares the task, checks every find yourself, and records the outcome. The agent reads and reports.
 
-## Роли
+## Roles
 
-| Роль | Что делает | Чего не делает |
+| Role | What it does | What it does not do |
 |---|---|---|
-| **Человек** — владелец исследования | ставит цель; решает о родстве и о дереве; проходит капчи; входит в аккаунты; платит; отправляет письма | не перечитывает сотни страниц сам |
-| **Координатор** — основная сессия | держит общую картину и файлы проекта; формулирует вопрос; ставит задания; **сам проверяет находки по скану**; записывает итог; докладывает человеку | не читает тома целиком, а поручает |
-| **Агент-чтец** — средняя модель | читает один том, плёнку или дело; ведёт журнал покрытия; присылает цитаты и кропы | не делает выводов о родстве; не запускает других агентов |
-| **Агент-механик** — дешёвая модель | скачивает файлы; строит карту тома; считает страницы; ищет по распознанному тексту | не читает почерк; не судит о содержании |
-| **Агент-исследователь** | ищет в интернете руководства, базы, справочники; сводит отчёт со ссылками | не правит файлы проекта, кроме своего отчёта |
+| **Human** — owner of the research | sets the goal; decides on kinship and on the tree; solves captchas; logs in to accounts; pays; sends letters | does not reread hundreds of pages by hand |
+| **Coordinator** — the main session | holds the overall picture and the project files; formulates the question; sets tasks; **checks finds against the scan personally**; records the outcome; reports to the human | does not read whole volumes, but delegates them |
+| **Reader agent** — mid-tier model | reads one volume, film or file; keeps a coverage log; sends quotations and crops | draws no conclusions about kinship; does not launch other agents |
+| **Mechanic agent** — cheap model | downloads files; builds a volume map; counts pages; searches recognised text | does not read handwriting; does not judge content |
+| **Researcher agent** | searches the internet for guides, databases, reference books; compiles a report with links | does not edit project files other than its own report |
 
-## Цикл одной итерации
+## The cycle of one iteration
 
-Делай шаги по порядку. Пропуск любого шага потом обходится дороже, чем сам шаг.
+Do the steps in order. Skipping any step costs more later than the step itself.
 
-1. **Вопрос.** Один, с критерием ответа и лимитом времени. Например: «найти в книге рождений города N за 1868 год детей отца X; ответ — номер записи и цитата; лимит — два прохода».
-2. **Что уже известно.** Найди в файлах проекта всё по фамилии, месту и имени (`grep` по журналу находок, персонам, гипотезам, реестру источников, журналу поисков). Агент без этого переоткрывает найденное и тратит сотни тысяч токенов впустую.
-3. **Источник.** Где ответ может быть: место → архив или база → том, плёнка, кадры.
-4. **Индекс.** Есть ли указатель или полнотекстовый поиск? Сначала дешёвая проверка, потом сплошное чтение.
-5. **Задание.** По шаблону из `assets/task-template.md`.
-6. **Чтение.** Агент читает, ведёт журнал после каждой пачки, присылает находки.
-7. **Проверка.** Координатор открывает каждый кадр сам (см. «Приём результата»).
-8. **Запись.** Сразу: журнал находок, персоны, статус гипотезы, строка в журнале поисков.
-9. **Решение.** Человеку: подтверждено, ослаблено или снято, и что дальше.
+1. **Question.** One question, with an answer criterion and a time limit. For example: "find, in the birth register of town N for 1868, the children of father X; the answer is the entry number and a quotation; limit — two passes".
+2. **What is already known.** Find everything in the project files by surname, place and given name (`grep` through the findings log, persons file, hypotheses, source register, search log). Without this the agent rediscovers what is already found and wastes hundreds of thousands of tokens.
+3. **Source.** Where the answer can be: place → archive or database → volume, film, frames.
+4. **Index.** Is there an index or full-text search? Do the cheap check first, continuous reading afterwards.
+5. **Task.** From the template in `assets/task-template.md`.
+6. **Reading.** The agent reads, updates its log after each batch, and sends finds.
+7. **Verification.** The coordinator opens every frame personally (see "Accepting the result").
+8. **Recording.** Immediately: findings log, persons file, hypothesis status, a line in the search log.
+9. **Decision.** For the human: confirmed, weakened or withdrawn, and what next.
 
-## Как делить работу
+## How to divide the work
 
-- **Один агент — один источник**: том, плёнка или газета за год. Широкие задания вроде «пройди 8 библиотек» агенты не вытягивают. Давай один-два источника и требуй запись в журнал после каждого.
-- **Один сайт — один исполнитель одновременно.** Сайты защищаются от частых обращений. Три агента на одном сайте получат капчу все через полчаса, и работа встанет у всех.
-- **Сайты без защиты можно параллелить**: Wikimedia Commons, archive.org, локальные PDF. Большой том можно делить по кадрам на 2–3 агентов, только если файлы уже скачаны или источники на разных сайтах.
-- **Сначала дешёвые проверки, потом сплошное чтение.** Индекс или полнотекстовый поиск за минуту иногда отвечают на вопрос, на который чтение потратило бы час.
-- **Длинное дели на части по 15–45 минут.** Короткий результат легко проверить и продолжить, «всё за ночь» — нет.
-- **Параллельность планируй до запуска сам.** Не рассчитывай, что агент спросит разрешения по ходу.
+- **One agent — one source**: a volume, a film, or a newspaper for one year. Agents cannot cope with broad tasks such as "go through 8 libraries". Give one or two sources and require a log entry after each.
+- **One site — one executor at a time.** Sites protect themselves against frequent requests. Three agents on one site will all get a captcha within half an hour, and work stops for everyone.
+- **Unprotected sites can be parallelised**: Wikimedia Commons, archive.org, local PDFs. A large volume may be split by frames between 2–3 agents only if the files are already downloaded or the sources are on different sites.
+- **Cheap checks first, continuous reading after.** An index or full-text search sometimes answers in a minute a question that reading would spend an hour on.
+- **Divide long work into parts of 15–45 minutes.** A short result is easy to verify and continue; "everything overnight" is not.
+- **Plan parallelism yourself before launch.** Do not count on the agent asking permission along the way.
 
-## Задание агенту
+## The task for the agent
 
-**Сначала решение, потом задания.** Ответ человеку начинай с одной строки: что запускаешь сейчас, что откладываешь (и почему — капча, вход, нужен человек), что нужно от него. Если не хватает данных для контрольной записи или номера плёнки — спроси коротко до того, как писать задания с пропусками.
+**Decision first, tasks after.** Begin your answer to the human with one line: what you are launching now, what you are postponing (and why — captcha, login, a human is needed), and what you need from them. If data is missing for a control record or a film number, ask briefly before writing tasks with gaps.
 
-Бери шаблон `assets/task-template.md` и заполняй каждый раздел. Если раздел пропущен, отчёт обычно нельзя проверить. Обязательные строки:
+Take the template `assets/task-template.md` and fill in every section. If a section is skipped, the report usually cannot be verified. Mandatory lines:
 
-- **Уже известно** — дословно, с шифрами, и список **отведённых двойников**. Приложи таблицу тёзок проекта (`КТО-ЕСТЬ-КТО.md`), если она есть. Большие журналы целиком не давай — только выдержки по вопросу.
-- **Контрольная запись** — заведомо существующая запись в этом источнике. Агент находит её первой. Если не нашёл или прочитал иначе, значит сломано чтение, а не «нет человека».
-- **«Пиши только то, что видишь»**; на каждое попадание кадр, номер записи, дословная цитата и кроп; неуверенное помечай «(?)».
-- **Журнал покрытия** после каждой пачки: «кадр → записи № …». Без него «не найдено» ничего не значит, а оборванную работу нельзя продолжить.
-- **Темп** числом, например «не чаще кадра в 10 секунд, перерыв каждые 30 кадров». Пример цифр (октябрь 2026): на FamilySearch капча появлялась примерно после ~45–150 открытых кадров (чаще около 130 за 40 минут; со временем — раньше).
-- **При капче или блокировке — остановись, ничего не нажимай, отчитайся.**
-- **«Других агентов не запускай. Если объём слишком велик — верни план и остановись».** Без этой строки агент может сам запустить десяток помощников и умножить расходы.
-- **Своя папка и своя вкладка браузера** для каждого агента.
+- **Already known** — verbatim, with archival references, and a list of **ruled-out lookalikes** (namesakes already excluded). Attach the project's namesakes table (`WHO-IS-WHO.md`; in a Russian-language project `КТО-ЕСТЬ-КТО.md`), if there is one. Do not hand over large logs whole — only excerpts relevant to the question.
+- **Control record** — a record that certainly exists in this source. The agent finds it first. If it is not found, or read differently, then the reading is broken, not "the person is absent".
+- **"Write only what you see"**; for each hit, the frame, entry number, verbatim quotation and crop; mark anything uncertain with "(?)".
+- **Coverage log** after each batch: "frame → entries No. …". Without it "not found" means nothing, and interrupted work cannot be continued.
+- **Pace** as a number, for example "no more than one frame per 10 seconds, a break every 30 frames". Example figures (October 2026): on FamilySearch a captcha appeared after roughly 45–150 opened frames (most often around 130 in 40 minutes; earlier as time goes on).
+- **On a captcha or block — stop, click nothing, report.**
+- **"Do not launch other agents. If the volume is too large, return a plan and stop."** Without this line an agent may launch a dozen helpers on its own and multiply costs.
+- **Its own folder and its own browser tab** for each agent.
 
-## Выбор агента и модели
+## Choosing the agent and the model
 
-| Задача | Кто | Уровень модели |
+| Task | Who | Model tier |
 |---|---|---|
-| Скачать страницы, карта тома, поиск по распознанному тексту, проверка шифра в описи | механик | дешёвая (например, Haiku) |
-| Прочитать и выписать один скан или один том | чтец | средняя (например, Sonnet) |
-| Сопоставить противоречия, решить о тождестве, свести отчёты, написать итог | координатор | сильная, модель основной сессии |
+| Download pages, volume map, search of recognised text, check a reference code in an inventory | mechanic | cheap (e.g. Haiku) |
+| Read and transcribe one scan or one volume | reader | mid-tier (e.g. Sonnet) |
+| Reconcile contradictions, decide on identity, merge reports, write the summary | coordinator | strong, the model of the main session |
 
-Не отдавай механику суждение, а сильной модели — скачивание. Дешёвая модель часто сдаётся на первой ошибке (429, неверный адрес) и пишет «обратитесь в архив» вместо обходного пути. Её быстрый отрицательный результат с малым числом действий перепроверяй выборочно.
+Do not give the mechanic a judgement task, and do not give a strong model a download. A cheap model often gives up at the first error (429, wrong address) and writes "contact the archive" instead of finding a workaround. Spot-check its quick negative result that took few actions.
 
-## Приём результата
+## Accepting the result
 
-Пройди все пункты, прежде чем писать «найдено» или «нет».
+Go through all items before writing "found" or "not found".
 
-1. **Открой каждую находку сам** по указанному кадру и сверь цитату буква в букву. Агенты видят ожидаемое. Бывает, что слово «…скій мещ.» означает мещанина местечка, а не фамилию. Бывает, что нужную фамилию «прочитали» в чужом слове. Бывает ссылка на «уже расшифрованную запись», которой нет.
-2. **Контрольная запись**: нашёл ли агент её и правильно ли прочитал.
-3. **Охват**: что прочитано, что пропущено, где дубли съёмки и разрывы нумерации.
-4. **Ноль при отказах сайта — не ноль.** Спроси или проверь в журнале: были ли капча, ответы 403/429, обрывы. Массовый проход, где все ответы были ошибками доступа, вернёт «0 находок», и это ничего не значит.
-5. **Сноски не принимай на веру.** Если агент ссылается на документ, найди этот документ.
-6. **Запиши сразу**: находку (шифр, адрес, цитата, уверенность, «проверено по скану: да») в журнал находок и персоны; статус гипотезы; строку в журнал поисков, включая пустой результат с охватом.
-7. **Доложи человеку коротко**: что подтвердилось, что нет, что ждёт его решения.
+1. **Open every find yourself** at the frame indicated and compare the quotation letter by letter. Agents see what they expect. Sometimes the word «…скій мещ.» (…sky meshch., i.e. "…sky townsman") means a townsman of a shtetl, not a surname. Sometimes the wanted surname is "read" inside another word. Sometimes there is a reference to an "already deciphered entry" that does not exist.
+2. **Control record**: did the agent find it, and read it correctly.
+3. **Coverage**: what was read, what was skipped, where there are duplicate shots and gaps in numbering.
+4. **A zero during site refusals is not a zero.** Ask or check the log: were there captchas, 403/429 responses, dropped connections. A mass pass in which all responses were access errors will return "0 finds", and that means nothing.
+5. **Do not take footnotes on trust.** If the agent refers to a document, find that document.
+6. **Record immediately**: the find (archival reference, address, quotation, confidence, "verified against the scan: yes") in the findings log and persons file; the hypothesis status; a line in the search log, including an empty result with its coverage.
+7. **Report to the human briefly**: what was confirmed, what was not, what awaits their decision.
 
-**Массовая выписка (сотни записей) принимается по образцу проекта mandatenamechanges.org** (19 043 смены имён в «Palestine Gazette», распознаны Gemini; автор — Филип Трауринг, по разбору [не проверено]): распознавание → автоматические проверки (свои для каждого источника, задаются заранее; у нас это, например, имя есть в словаре имён, возраст в допустимых пределах, число записей на странице сходится) → в таблицу идут **только записи, прошедшие проверки, и у каждой ссылка на точную страницу скана**; остальное — вручную или с пометкой «не проверено». Правило классификации (например, «гебраизировано или нет») — прозрачное, записанное словами и сверенное с прежним результатом. В дерево — только запись со ссылкой на кадр.
+**Mass transcription (hundreds of entries) is accepted on the model of the mandatenamechanges.org project** (19,043 name changes in the "Palestine Gazette", recognised by Gemini; author Philip Trauring, per a write-up [unverified]): recognition → automatic checks (specific to each source and set in advance; for us, for example, the name is in the name dictionary, the age is within plausible limits, the number of entries on a page adds up) → only **entries that passed the checks go into the table, each with a link to the exact scan page**; the rest are handled by hand or marked "unverified". The classification rule (for example, "Hebraised or not") is transparent, written in words, and checked against the earlier result. Into the tree goes only an entry with a link to the frame.
 
-Подробная таблица сбоев и что с ними делать — в `references/failures.md`. Читай её, когда агент молчит, вернул странный ноль, получил капчу или когда расход вырос неожиданно.
+A detailed table of failures and what to do about them is in `references/failures.md`. Read it when an agent is silent, returned a strange zero, got a captcha, or when costs rose unexpectedly.
 
-## Что делает только человек
+## What only the human does
 
-Капчи, вход в аккаунты и пароли, оплату, отправку писем и сообщений, решения о родстве и правки в общедоступном дереве. Агент, встретив такой шаг, останавливается и сообщает координатору. Координатор передаёт человеку, что именно нужно сделать и где: какая вкладка, какой сайт. Пароли, cookie и ключи не вставляй ни в задания, ни в файлы.
+Captchas, logging in to accounts and passwords, payment, sending letters and messages, decisions on kinship, and edits to a publicly visible tree. An agent that meets such a step stops and informs the coordinator. The coordinator tells the human exactly what to do and where: which tab, which site. Do not paste passwords, cookies or keys into tasks or files.
 
-## Безопасность компьютера человека
+## Safety of the human's computer
 
-Агент работает на компьютере человека. Что ему можно, определяет набор инструментов, а не его намерения. Был случай: агенту без инструментов браузера понадобился сайт под входом человека, и агент управлял браузером через системные скрипты, прочитал буфер обмена, закрыл чужую вкладку — а в отчёте написал, что ничего не обходил. Поэтому в каждое задание:
+The agent works on the human's computer. What it may do is determined by its set of tools, not by its intentions. There was a case where an agent without browser tools needed a site behind the human's login, controlled the browser through system scripts, read the clipboard, closed someone else's tab — and wrote in its report that it had bypassed nothing. Therefore in every task:
 
-- **Нет нужных инструментов — стоп** и строка «нужно решение человека». Обходной путь не искать.
-- **Запрещено:** системные скрипты для управления приложениями (автоматизация других приложений средствами ОС: вкладки, нажатия клавиш, переключение окон), системные снимки экрана, буфер обмена (системные команды буфера), профиль, куки и настройки браузера, чужие вкладки.
-- **Не предлагать человеку ослабить защиту** браузера или системы ради агента. Условие следующего шага — «какой агент с какими инструментами».
-- **Агент с браузером** работает в своей новой вкладке и закрывает только её; капча или повторный вход — стоп. Кропы он **сохраняет в файлы** в своей папке (снимок экрана в переписке потом не проверить), имя файла описывает, что на кропе видно.
-- **«Сайт не открылся» — сначала проверь свой адрес** (например, ipinfo.io) и запиши ответ сайта. Не объясняй отказ VPN-ом или блокировкой страны наугад: был случай, когда VPN у человека не было, а причина была в другом — странице, собранной скриптом, или требовании входа.
-- **Никаких личных данных человека в сетевых запросах** (User-Agent, заголовки, адреса, тела запросов). Пиши «User-Agent нейтральный, без личных данных», а не «описательный».
+- **No suitable tools — stop** and write the line "a human decision is needed". Do not look for a workaround.
+- **Forbidden:** system scripts for controlling applications (OS-level automation of other apps: tabs, keystrokes, window switching), system screenshots, the clipboard (system clipboard commands), the browser profile, cookies and settings, other people's tabs.
+- **Do not suggest that the human weaken the protection** of the browser or system for the agent's sake. The condition for the next step is "which agent with which tools".
+- **An agent with a browser** works in its own new tab and closes only that one; a captcha or re-login means stop. It **saves crops to files** in its own folder (a screenshot in the conversation cannot be checked later), and the file name describes what the crop shows.
+- **"The site would not open" — check your own address first** (for example ipinfo.io) and record the site's response. Do not explain the refusal by a VPN or a country block at random: there was a case where the human had no VPN and the cause was something else — a page assembled by a script, or a login requirement.
+- **No personal data of the human in network requests** (User-Agent, headers, addresses, request bodies). Write "User-Agent neutral, no personal data", not "descriptive".
 
-Перед запуском сверь, что у типа агента есть инструменты для задания. Принимая отчёт, сверяй «не обходил», «не трогал» с реальными вызовами в транскрипте. Любое нарушение, которое касается компьютера, аккаунтов или данных человека, сообщи ему сразу; если в буфере обмена мог быть пароль или код — посоветуй сменить.
+Before launch, check that the agent type has the tools for the task. When accepting a report, check "did not bypass" and "did not touch" against the actual calls in the transcript. Report any violation that touches the human's computer, accounts or data to them at once; if a password or code could have been on the clipboard, advise changing it.
 
-## Команда из пяти ролей и раунд
+## A team of five roles and the round
 
-Для вопроса, которому нужны несколько источников и независимая проверка, роли разводят шире. **Историк-генеалог** — план (контекст, гипотезы, какие документы обязаны существовать, задания) и итог. **Исследователь архивов** — дела и сканы. **Исследователь открытых источников** — базы, индексы, газеты, справочники. **Фактчекер** — критерии ответа до поиска и вердикт после. **Супервизор** — допуск до поиска и аудит после; он не командует, а пишет координатору список действий. Координатор и человек — как выше.
+For a question that needs several sources and independent checking, roles are spread more widely. The **historian-genealogist** — the plan (context, hypotheses, which documents must exist, tasks) and the summary. The **archive researcher** — files and scans. The **open-sources researcher** — databases, indexes, newspapers, reference books. The **fact-checker** — answer criteria before the search and a verdict after. The **supervisor** — gate review before the search and audit after; it does not command, but writes the coordinator a list of actions. The coordinator and the human are as above.
 
 ```
-00-вопрос (координатор) → 01-план (историк) → 00-критерии (фактчекер) → допуск (супервизор)
-→ 02-архив ∥ 03-открытые → 04-фактчек → [перепроверка, не больше круга] → 05-итог (историк)
-→ аудит (супервизор) → файлы проекта (координатор)
+00-question (coordinator) → 01-plan (historian) → 00-criteria (fact-checker) → gate review (supervisor)
+→ 02-archive ∥ 03-open sources → 04-fact-check → [recheck, no more than one loop] → 05-summary (historian)
+→ audit (supervisor) → project files (coordinator)
 ```
 
-- **Критерии до поиска:** документ, графа, значение; что подтвердит и что опровергнет; двойники; обязательный контроль. Поисковики их не читают: в заданиях — что искать и где, без ожидаемого ответа. Критерий должен «падать» на уже известном. Вопрос формулируй нейтрально, версии — на равных.
-- **Допуск:** вопрос один; «уже известно» — дословно; прочитанное не повторяется; задания исполнимы и не пересекаются; критерии есть; карта вариантов имён и мест есть; **у исполнителя есть инструменты**. Действия допуска с пометкой «сейчас» выполни до поиска и отметь.
-- **Не запускай команду**, если ответ дают 1–3 кадра или книга на десяток страниц, — открой сам. Оцени вопрос по ценности, контексту, инструментам и проверяемости; если инструменты или проверяемость низкие — это работа вместе с человеком, а не раунд.
-- **Ограничители на агента** (ориентиры): историк ≤ 60 вызовов / 20 мин; критерии и допуск ≤ 40 / 10 мин; архивы ≤ 250 вызовов, ≤ 300 страниц, 60 мин; открытые источники ≤ 150 вызовов, ≤ 3 сайта, 45 мин; вердикт и аудит ≤ 120 / 30 мин. Действие упало 3 раза — стоп по этому пути. **Два технических нуля подряд — стоп** и «какое решение нужно от человека». **Перепроверка не повторяет технический блок**: тот же вход или капча дадут тот же ноль.
-- Агент **сначала открывает уже найденных кандидатов**, сплошное «сито» — потом. Число вызовов в отчёте — по счёту, не на глаз. Свой файл дописывает по ходу и не перезаписывает; рабочие файлы — во временной папке; в задании — список уже скачанного.
-- **Один прогон на папку раунда:** файл-замок при запуске; проверка перед запуском или продолжением; снять после аудита.
-- **Охват в итоге — поимённо** (по кадру / по отчёту / не открыто), без «все» и «целиком». 🟢 в итоге — только то, что 🟢 у фактчекера.
-- **Обработка итога:** прочитать итог, фактчек и аудит → ключевые находки сверить по кропу самому (ошибка чтения проходит через все роли) → внести поправки аудита → записать журнал находок, гипотезы, персоны, журнал поисков и строку журнала раундов (агенты, вызовы, токены, время, прошло и снято, нарушения) → сказать человеку о нарушениях → снять замок → назвать, где ещё проверить находки, и предложить один следующий вопрос. Исправленное в старых отчётах помечай ссылкой на поправку, не удаляй.
-- **Поиск широко** для всех ролей: перекрёстно по языкам, туда и обратно; источник на каждую эпоху жизни; параллельные ветки записывать, «не наш» — с доводом; фамилия, все места семьи, отчество и имя в четырёх слоях (два имени, идиш и русский, европеизация, произношение); у каждой находки — «Где ещё искать». Вариант имени тождество не доказывает: нужен второй признак.
-- Письмо в архив ни одна роль не предлагает вместо поиска — правило руководства (AGENTS.md, п. 8).
+- **Criteria before the search:** document, column, value; what would confirm and what would refute; lookalikes; the mandatory control. Searchers do not read them: tasks say what to look for and where, without the expected answer. The criterion must "fail" on what is already known. Formulate the question neutrally, versions on equal terms.
+- **Gate review:** there is one question; "already known" is verbatim; what has been read is not repeated; tasks are feasible and do not overlap; criteria exist; a map of name and place variants exists; **the executor has the tools**. Carry out the gate review's actions marked "now" before the search and tick them off.
+- **Do not launch a team** if the answer is 1–3 frames or a book of a dozen pages — open it yourself. Assess the question by value, context, tools and verifiability; if tools or verifiability are low, it is work together with the human, not a round.
+- **Limits per agent** (guidelines): historian ≤ 60 calls / 20 min; criteria and gate review ≤ 40 / 10 min; archives ≤ 250 calls, ≤ 300 pages, 60 min; open sources ≤ 150 calls, ≤ 3 sites, 45 min; verdict and audit ≤ 120 / 30 min. An action failed 3 times — stop on that path. **Two technical zeros in a row — stop** and state "what decision is needed from the human". **A recheck does not repeat a technical block**: the same login or captcha will give the same zero.
+- The agent **first opens candidates already found**; the continuous "sieve" comes after. The number of calls in the report is counted, not eyeballed. It appends to its own file as it goes and does not overwrite; working files go in a temporary folder; the task lists what has already been downloaded.
+- **One run per round folder:** a lock file at start; checked before starting or continuing; removed after the audit.
+- **Coverage in the summary is by name** (by frame / by report / not opened), without "all" and "entirely". A 🟢 in the summary is only what is 🟢 with the fact-checker.
+- **Processing the summary:** read the summary, fact-check and audit → check key finds yourself against the crop (a reading error passes through all roles) → apply the audit's corrections → record the findings log, hypotheses, persons file, search log and a line in the rounds log (agents, calls, tokens, time, what passed and what was withdrawn, violations) → tell the human about violations → remove the lock → say where else the finds can be checked and propose one next question. Mark what has been corrected in old reports with a link to the correction; do not delete.
+- **Search wide** for all roles: across languages, there and back; a source for each epoch of life; record parallel branches, and a "not ours" with its reasoning; surname, all the family's places, patronymic and given name in four layers (two names, Yiddish and Russian, Europeanisation, pronunciation); each find gets "Where else to look". A name variant does not prove identity: a second identifier is needed.
+- No role proposes a letter to an archive instead of searching — a rule of the guide (AGENTS.md, item 8).
 
-Подробно — руководство, «Процесс с агентами», разделы 10–12.
+In detail — the guide, "Process with agents", sections 10–12.
 
-## Расходы
+## Costs
 
-- Параллельность ограничивай сайтами, а не желанием: три агента на трёх разных источниках — хорошо, три на одном — плохо.
-- Механику отдавай дешёвой модели, чтение — средней, суждение оставляй себе.
-- На направление ставь лимит времени и заранее записанное условие остановки.
-- Если агент всё же размножился без спроса, не обрывай работу на середине: потери от обрыва часто больше. Зафиксируй случай, поправь шаблон задания и держи эту ветку под контролем.
+- Limit parallelism by sites, not by desire: three agents on three different sources is good, three on one is bad.
+- Give mechanics to the cheap model, reading to the mid-tier, keep judgement for yourself.
+- Put a time limit on each line of work and a stop condition written in advance.
+- If an agent has nevertheless multiplied without asking, do not cut the work off midway: the loss from cutting off is often greater. Record the case, fix the task template, and keep that branch under control.
 
-См. также навыки: `organizing-genealogy-research` (ход работы, когда агентов нет), `verifying-genealogy-findings` (когда находка доказана), `research-session-handoff` (как сохранить состояние агентов между сессиями), `search-logic-navigator` (что делать на развилке).
+See also the skills: `organizing-genealogy-research` (course of work when there are no agents), `verifying-genealogy-findings` (when a find is proven), `research-session-handoff` (how to save the agents' state between sessions), `search-logic-navigator` (what to do at a fork).

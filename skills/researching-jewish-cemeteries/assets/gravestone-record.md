@@ -1,65 +1,65 @@
-# Запись надгробия
+# Gravestone record
 
-**Условный номер / файлы фото:** (например, `камень_007_лицо.jpg`, `камень_007_оборот.jpg`, `камень_007_общий_план.jpg`)
-**Дата записи:** ГГГГ-ММ-ДД
+**Working number / photo files:** (for example `stone_007_front.jpg`, `stone_007_back.jpg`, `stone_007_wide.jpg`)
+**Date of record:** YYYY-MM-DD
 
-## 1. Где
-- Кладбище, город, страна:
-- Статус кладбища (действует / закрыто / снесено; по ESJF или CDP):
-- Участок, ряд, место; GPS:
-- Откуда фото: снято на месте (кем, когда) / база (название, ссылка, номер записи):
+## 1. Where
+- Cemetery, town, country:
+- Cemetery status (active / closed / demolished; per ESJF or CDP):
+- Plot, row, place; GPS:
+- Source of the photo: taken on site (by whom, when) / database (name, link, record number):
 
-## 2. Камень
-- Тип: вертикальная мацева / плита / советский памятник / кенотаф или памятная доска
-- Языки надписи: иврит / идиш / русский / украинский / польский / другие
-- Символы: (руки коэна, кувшин, подсвечники, книги, сломанное дерево, животное …)
-- Эмалевое фото: есть / нет
-- Состояние: читается целиком / частично / восстановленная надпись
+## 2. The stone
+- Type: upright matzevah / slab / Soviet-era monument / cenotaph or memorial plaque
+- Languages of the inscription: Hebrew / Yiddish / Russian / Ukrainian / Polish / other
+- Symbols: (Kohen hands, pitcher, candlesticks, books, broken tree, animal ...)
+- Enamel photo: yes / no
+- Condition: fully legible / partly legible / restored inscription
 
-## 3. Транскрипция (дословно, по строкам; непрочитанное — в [ ], сомнительное — с «?»)
-
-```
-строка 1:
-строка 2:
-строка 3:
-…
-```
-Обратная сторона / русский текст:
-```
+## 3. Transcription (verbatim, line by line; unread parts in [ ], doubtful ones with "?")
 
 ```
+line 1:
+line 2:
+line 3:
+...
+```
+Reverse side / Russian text:
+```
 
-## 4. Перевод (близко к тексту; имена в оригинальном написании рядом)
+```
 
-## 5. Разбор
+## 4. Translation (close to the text; names in the original spelling alongside)
 
-| Поле | На камне | Толкование |
+## 5. Analysis
+
+| Field | On the stone | Interpretation |
 |---|---|---|
-| Вводная формула | | |
-| Эпитет, титул | | (семейное положение, учёность) |
-| Имя | | |
-| Имя отца | | отец жив (נ״י) / умер (ז״ל, ע״ה) к дате смерти |
-| Коэн / левит | | |
-| Фамилия, город | | |
-| Возраст | | год рождения около: |
-| Символы | | совпадают ли с именем |
+| Opening formula | | |
+| Epithet, title | | (marital status, learning) |
+| Name | | |
+| Father's name | | father alive (נ״י) / dead (ז״ל, ע״ה) at the date of death |
+| Kohen / Levite | | |
+| Surname, town | | |
+| Age | | year of birth about: |
+| Symbols | | do they match the name |
 
-## 6. Дата
+## 6. Date
 
-| Еврейская дата на камне | Буквами → числа | Григорианская | Юлианская (для русских документов до 1918 г.) | Чем проверено |
+| Jewish date on the stone | Letters → numbers | Gregorian | Julian (for Russian documents before 1918) | Checked with |
 |---|---|---|---|---|
 | | | | | Hebcal / JOS / Morse |
 
-Примечание: високосный год? адар I или II? смерть вечером?
+Note: leap year? Adar I or II? death in the evening?
 
-## 7. Связи
-- Соседние камни (кто, на каком расстоянии, общая ограда):
-- Участок общества земляков (название общества, местечко):
-- С кем в дереве совпадает и по каким **двум** признакам:
-- Что спорит:
+## 7. Connections
+- Neighbouring stones (who, at what distance, shared enclosure):
+- Landsmanshaft society plot (name of the society, shtetl):
+- Who in the tree it matches, and on which **two** features:
+- What disagrees:
 
-## 8. Следующий документ
-- [ ] метрика смерти / запись ЗАГС:
-- [ ] метрика рождения (по возрасту на камне):
-- [ ] запись об отце (по имени отца на камне):
-- [ ] соседние камни прочитать:
+## 8. Next document
+- [ ] death record / ZAGS record:
+- [ ] birth record (from the age on the stone):
+- [ ] record of the father (from the father's name on the stone):
+- [ ] read the neighbouring stones:

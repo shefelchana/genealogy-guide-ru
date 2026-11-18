@@ -1,27 +1,29 @@
 #!/usr/bin/env python3
-"""Разбор сохранённой страницы темы форума phpBB (например, forum.j-roots.info)
-с фамильными указателями к архивным делам.
+"""Parse a saved page of a phpBB forum topic (for example forum.j-roots.info)
+that holds surname indexes to archival files.
 
-Что делает:
-  * делит страницу на посты (div id="pNNNN");
-  * берёт текст поста ЦЕЛИКОМ из HTML, включая скрытые спойлеры «Показать»
-    (innerText браузера их пропускает);
-  * идёт по строкам и запоминает ближайший заголовок документа
-    («Фонд N, опись N, дело N» / «ф. N оп. N д. N») и ближайший заголовок
-    раздела (строка ЗАГЛАВНЫМИ буквами — обычно местечко);
-  * печатает каждое попадание искомой фамилии вместе с постом, заголовком
-    документа, разделом и ближайшей выше полной ссылкой на PDF.
+What it does:
+  * splits the page into posts (div id="pNNNN");
+  * takes the post text IN FULL from the HTML, including the hidden "Show"
+    spoilers (the browser's innerText skips them);
+  * walks through the lines and remembers the nearest document header
+    ("Фонд N, опись N, дело N" / "ф. N оп. N д. N", i.e. fond / inventory /
+    file) and the nearest section header (a line in CAPITAL letters,
+    usually a shtetl);
+  * prints every hit of the searched surname together with the post, the
+    document header, the section and the nearest full PDF link above it.
 
-Страницу сначала сохрани сам, например:
+Save the page yourself first, for example:
   curl -sk -A "Mozilla/5.0 ..." "https://forum.j-roots.info/viewtopic.php?p=NNNN" -o post.html
 
-Запуск:
-  python3 forum_post_index.py post.html Фамилия [Фамилия2 ...] [--loose]
+Usage:
+  python3 forum_post_index.py post.html Surname [Surname2 ...] [--loose]
 
---loose  дополнительно ищет форму без первой буквы и с заменой е/э, и/ы/й
-         (указатели теряют буквы; см. SKILL.md, раздел «Ловушки»).
+--loose  additionally searches the form without the first letter and with
+         е/э and и/ы/й swapped (indexes lose letters; see SKILL.md,
+         section "Traps").
 
-Ничего не скачивает и в сеть не ходит.
+Downloads nothing and makes no network requests.
 """
 import html
 import re
@@ -37,8 +39,8 @@ SECTION_RE = re.compile(r"^[\d,\-\s]*([А-ЯЁІЇЄҐ][А-ЯЁІЇЄҐ\-\s\.\(\
 
 
 def post_text(body: str) -> str:
-    # ссылки на PDF превращаем в отдельную строку с полным адресом:
-    # видимый текст ссылки на форуме обрезан («upload.wikimedia.org/... .pdf»)
+    # turn PDF links into a separate line with the full address:
+    # the visible link text on the forum is truncated ("upload.wikimedia.org/... .pdf")
     body = re.sub(r'<a[^>]+href="([^"]+\.pdf[^"]*)"[^>]*>.*?</a>',
                   lambda m: "\nPDF: " + unquote(html.unescape(m.group(1))) + "\n", body, flags=re.S)
     body = re.sub(r"<br\s*/?>", "\n", body)
@@ -68,7 +70,7 @@ def main():
     page = open(args[0], encoding="utf-8", errors="replace").read()
     names = args[1:]
     title = re.search(r"<title>(.*?)</title>", page, re.S)
-    print("Тема:", html.unescape(title.group(1)).strip() if title else "?")
+    print("Topic:", html.unescape(title.group(1)).strip() if title else "?")
 
     parts = re.split(r'<div id="p(\d+)" class="post', page)
     hits = 0
@@ -91,13 +93,13 @@ def main():
             for name in names:
                 if any(v in low for v in variants(name, loose)):
                     hits += 1
-                    print(f"\n[{name}] пост p={pid}  спойлеров в посте: {spoilers}")
-                    print(f"  строка:   {line[:160]}")
-                    print(f"  документ: {header}")
-                    print(f"  раздел:   {section}")
+                    print(f"\n[{name}] post p={pid}  spoilers in post: {spoilers}")
+                    print(f"  line:     {line[:160]}")
+                    print(f"  document: {header}")
+                    print(f"  section:  {section}")
                     print(f"  pdf:      {pdf}")
-    print(f"\nВсего попаданий: {hits}. Каждое сверь с постом глазами: "
-          "заголовок документа и PDF выбраны автоматически как ближайшие выше.")
+    print(f"\nTotal hits: {hits}. Check each one against the post by eye: "
+          "the document header and PDF were chosen automatically as the nearest above.")
 
 
 if __name__ == "__main__":

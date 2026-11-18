@@ -1,101 +1,104 @@
 ---
 name: dna-matches-across-platforms
-description: Full workflow for analysing autosomal DNA matches of one person across several sites at once (23andMe, Genotek, GEDmatch, FamilyTreeDNA, MyHeritage) when the family is of mixed origin — for example one Ashkenazi grandparent and three Russian or East Slavic lines. Covers inventory of kits, calibration, splitting the endogamous network off first, phasing without parents through half-siblings' children and cousins via one grandparent, searching every match's ancestral-place list for the home village, confirming a match through the same family on two sites, triangulation and «population background» in GEDmatch, the «Are your parents related?» check, treating one tested family as one piece of evidence, living relatives in a parent's social-network «Family» list, a short human B1 letter to the match, and the journal. Use when the user says «разбери мои совпадения на всех сайтах», «с какой стороны этот родственник», «у меня есть доступ к тесту племянницы/двоюродной», «родители не родня ли», «нашла совпаденку — как проверить и написать», «что даст GEDmatch/FTDNA», or brings match lists from more than one company, even if they never say «phasing» or «triangulation».
+description: >-
+  Analyses one person's autosomal DNA matches across several sites (23andMe, Genotek, GEDmatch, FTDNA, MyHeritage) when the family is of mixed origin (one endogamous line, e.g. Ashkenazi, next to rural lines with scattered matches). Covers kit inventory, calibration, splitting off the endogamous network, phasing without parents through one-side relatives (a half-sibling's child, a cousin via one grandparent), searching place lists for the home village, cross-site confirmation, triangulation and population background in GEDmatch, "Are your parents related?", one tested family as one piece of evidence, a B1 letter to the match and the journal. Use when the user asks which side a match is from, can see a relative's test, or brings match lists from more than one company, even without saying "phasing". Also triggers on Russian requests: «разбери мои совпадения на всех сайтах», «с какой стороны этот родственник», «у меня есть доступ к тесту родственника», «родители не родня ли», «как написать совпаденке».
 ---
 
-# ДНК-совпадения на нескольких сайтах: полный разбор при смешанном происхождении
+# DNA matches on several sites: a full analysis for mixed origin
 
-**Главное:** ДНК подсказывает, где искать, и проверяет гипотезу; называет предка только документ. Каждый вывод записывай с уровнем: 🟢 доказано документом, 🟡 сильная гипотеза, 💭 догадка, ⚪ фон или шум.
+Write files and reports in the user's language unless asked otherwise.
 
-Работа с сайтами (вход, оплата, письма) — **только руками пользователя**: ты готовишь, объясняешь, читаешь то, что он открыл. Платные апгрейды и отправку писем решает он.
+**The main thing:** DNA suggests where to look and tests a hypothesis; only a document names the ancestor. Record every conclusion with its level: 🟢 proven by a document, 🟡 strong hypothesis, 💭 guess, ⚪ background or noise.
 
-## Шаг 0. Инвентаризация: где чьи тесты
+Work on the sites (logging in, paying, letters) — **by the user's hands only**: you prepare, explain, and read what they have opened. Paid upgrades and sending letters are their decision.
 
-Составь таблицу: человек → сайт → номер набора → доступ (свой / «только просмотр» / нет) → откуда данные (сдан здесь или перенесён).
-- Один и тот же сырой файл часто лежит в 2–4 базах (например, тест 23andMe перенесён в GEDmatch и FamilyTreeDNA). Это **не новые люди**: совпаденцы в каждой базе разные, а сам человек тот же.
-- Проверь, к чьим тестам у пользователя уже есть доступ: в российских сервисах родственники часто дают «просмотр результатов». Тест **единоутробной сестры или её ребёнка** и тест **двоюродной по одной бабушке** — главные инструменты фазировки (шаг 3).
-- Что умеет каждый сайт и где у него ограничения — `references/platforms.md`.
+## Step 0. Inventory: whose tests are where
 
-## Шаг 1. Калибровка на известной родне
+Make a table: person → site → kit number → access (own / "view only" / none) → where the data came from (tested here or transferred).
+- The same raw file often sits in 2–4 databases (for example, a 23andMe test transferred to GEDmatch and FamilyTreeDNA). These are **not new people**: the matches in each database are different, but the person is the same.
+- Check which tests the user already has access to: in Russian services relatives often grant "view results". The test of **a relative connected to one side only** — a half-sibling or a half-sibling's child, a cousin through one grandparent — is the main phasing tool (step 3).
+- What each site can do and where its limits are — `references/platforms.md`.
 
-Найди в списках известных родственников и сравни сМ с ожиданием (сводные/полу- ≈ 1 750, двоюродные ≈ 870, полу-двоюродные ≈ 430). Прежде чем решить, что тест «занижает», спроси, **полное ли родство**. Выводы о неполном родстве не делай сам. Подробно — раздел «ДНК» руководства, § 6а.
+## Step 1. Calibration on known relatives
 
-## Шаг 2. Сначала отделить эндогамную сеть
+Find known relatives in the lists and compare the cM with the expectation (half-siblings ≈ 1,750, first cousins ≈ 870, half first cousins ≈ 430). Before deciding that the test "underestimates", ask whether **the relationship is full**. Do not draw conclusions about half relationships yourself. Details — the guide's DNA section, § 6a (`guide/2-справочник/15-днк.md`; English: `en/guide/2-reference/15-dna.md`).
 
-Если одна линия ашкеназская (или другая эндогамная), её совпадения займут верх любого списка: тысячи людей по 15–20 сМ одним сегментом, кластеры по методу Лидс сливаются. Поэтому:
-1. Пометь как «эндогамная сеть» тех, у кого ашкеназская метка сервиса (Genotek, 23andMe), ашкеназские фамилии и места черты оседлости, или кто в общих с заведомо еврейским родственником.
-2. **Метод Лидс к этой части не применяй** (навык `dna-matches-endogamy`). К остальным — применяй.
-3. Даже сильный сегмент из этой сети (30+ сМ) почти никогда не разделить по линиям (какой из двух еврейских прадедов). Запиши это честно.
+## Step 2. Separate the endogamous network first
 
-## Шаг 3. Фазировка без родителей
+If one line is Ashkenazi (or otherwise endogamous), its matches will take the top of any list: thousands of people at 15–20 cM in one segment, and Leeds-method clusters merge. So:
+1. Mark as "endogamous network" those who have the service's Ashkenazi label (Genotek, 23andMe), Ashkenazi surnames and places in the Pale of Settlement, or who are among the shared matches with a known Jewish relative.
+2. **Do not apply the Leeds method to this part** (skill `dna-matches-endogamy`). Apply it to the rest.
+3. Even a strong segment from this network (30+ cM) can almost never be assigned to a line (which of two Jewish great-grandparents). Record this honestly.
 
-Родителей нет — используй родню, связанную **только с одной стороной**:
-- ребёнок единоутробной (единокровной) сестры → только сторона общего родителя;
-- двоюродная по одной бабушке → только эта бабушка.
+## Step 3. Phasing without parents
 
-Совпаденец в общих с ними → сторона определена. **Нет в общих → ничего не значит**: такой родственник несёт лишь около ¼ ДНК нужной линии. Человек, общий и с «материнской», и с «отцовской» роднёй, при сумме меньше 12 сМ — обычно региональный фон, а не брак линий.
+No parents — use relatives connected **to one side only**:
+- a half-sibling or a half-sibling's child → only the side of the shared parent;
+- a cousin through one grandparent → only that grandparent (example: a first cousin who is a child of the mother's brother shares only the mother's parents; a half-cousin through the maternal grandfather's second marriage shares only that grandfather).
 
-## Шаг 4. ⭐ Поиск родного села по всем спискам предков
+The match is among the shared matches with them → the side is determined. **Not among the shared ones → means nothing**: such a relative carries only about ¼ of the DNA of the line in question. A person shared with both the "maternal" and the "paternal" relatives, with a total under 12 cM, is usually regional background, not a marriage between the lines.
 
-Самый сильный приём для неэндогамных линий (крестьяне, однодворцы, казаки — где фамилий у совпаденцев много, а деревьев мало):
-1. Выгрузи **весь** список совпадений с полями «фамилии предков с местами», «места рождения в дереве», «страны предков». Во FamilyTreeDNA у многих есть список «фамилия — место», в Genotek — места и фамилии деревьев.
-2. Ищи **название села, волости, уезда** (кириллицей и всеми латинскими написаниями: с апострофом мягкого знака и без, -oye/-oe, старое и новое название), а не только фамилии. Добавь соседние сёла и уездный город.
-3. Совпаденец, у которого в списке **две и больше фамилий пользователя из того же села**, даже при 30–40 сМ и самом длинном 15–16 сМ — сильная зацепка 🟡: общий предок, вероятно, в этом селе в XIX веке. Какая из фамилий общая, ДНК не скажет — скажут метрики.
-4. Чужая фамилия в польском или латинском написании рядом с русской из того же села (условно: Kowalewski ↔ Kovalev) — скорее одна семья в двух записях. Не приписывай её пользователю.
+## Step 4. ⭐ Searching for the home village in all ancestor lists
 
-## Шаг 5. Одна семья — одно свидетельство
+The strongest technique for non-endogamous lines (peasants, odnodvortsy, Cossacks — where matches have many surnames and few trees):
+1. Export the **whole** match list with the fields "ancestral surnames with places", "birthplaces in the tree", "ancestral countries". In FamilyTreeDNA many people have a "surname — place" list; in Genotek, places and surnames from the trees.
+2. Search for the **name of the village, volost, uezd** (in Cyrillic and in all Latin spellings: with and without the apostrophe for the soft sign, -oye/-oe, old and new name), not only surnames. Add neighbouring villages and the uezd town.
+3. A match whose list has **two or more of the user's surnames from the same village**, even at a modest total (say 25–45 cM) and a longest segment under 20 cM, is a strong lead 🟡: the common ancestor was probably in that village in the 19th century. Which of the surnames is the shared one, DNA will not say — the metrical books will.
+4. Someone else's surname in a Polish or Latin spelling next to a Russian one from the same village (hypothetically: Kowalewski ↔ Kovalev) is more likely one family in two records. Do not attribute it to the user.
 
-Если в общих у совпаденца несколько людей **с тем же списком предков** (мать, сестра, дети), это одна семья, протестированная несколько раз. Это **одно** подтверждение, а не пять. Их собственные фамилии вне общего списка — их другая линия; не ищи в ней своих предков без причины.
+## Step 5. One family — one piece of evidence
 
-## Шаг 6. Сверка между сайтами
+If a match's shared list contains several people **with the same ancestor list** (mother, sister, children), it is one family tested several times. That is **one** confirmation, not five. Their own surnames outside the shared list are their other line; do not look for your ancestors in it without a reason.
 
-- Та же семья (одна фамилия, близкие имена) с сегментом **той же длины** в двух компаниях → совпадение почти наверняка настоящее 🟡.
-- Перенос в GEDmatch: многие пользователи Genotek, MyHeritage, FamilyTreeDNA загружены туда. Совпаденца с другого сайта ищи там по имени или фамилии и по сайту-источнику. Если найден, сравни **позиции сегментов** (One-to-One).
-- Одинаковое имя — ещё не тот же человек: разная раскладка сегментов у «одного и того же» → не подтверждено.
+## Step 6. Cross-checking between sites
 
-## Шаг 7. Триангуляция и фон (GEDmatch или хромосомный браузер)
+- The same family (one surname, similar names) with a segment **of the same length** at two companies → the match is almost certainly real 🟡.
+- Transfer to GEDmatch: many users of Genotek, MyHeritage and FamilyTreeDNA are uploaded there. Look for a match from another site there by name or surname and by source site. If found, compare **segment positions** (One-to-One).
+- The same name is not yet the same person: a different segment layout for "the same" person → not confirmed.
 
-1. Для 3–6 ключевых людей получи сегменты (хромосома, начало–конец, сМ).
-2. **Триангуляция:** их сегменты с пользователем **перекрываются**, и они совпадают **друг с другом на том же участке** → довод за одного общего предка.
-3. Совпадают друг с другом, но **в другом месте**, а с пользователем — на разных хромосомах → общий популяционный фон, не общий предок.
-4. Сегмент, проходящий через центромеру, может быть склейкой двух. Считай его осторожно.
-5. Бесплатные сравнения в GEDmatch ограничены: при отказе («доступ закрыт») остановись, не повторяй.
+## Step 7. Triangulation and background (GEDmatch or a chromosome browser)
 
-## Шаг 8. «Родня ли родители?»
+1. For 3–6 key people get the segments (chromosome, start–end, cM).
+2. **Triangulation:** their segments with the user **overlap**, and they match **each other on the same stretch** → an argument for one common ancestor.
+3. They match each other, but **in a different place**, and match the user on different chromosomes → shared population background, not a common ancestor.
+4. A segment that runs through the centromere may be two glued together. Count it with caution.
+5. Free comparisons in GEDmatch are limited: on a refusal ("access closed") stop, do not repeat.
 
-GEDmatch «Are your parents related?» ищет длинные одинаковые участки от обоих родителей (ROH ≥ 7 сМ).
-- **0 сМ** → в пределах примерно 5–6 поколений родители не родня.
-- Браки линий раньше (XVIII век) ДНК не видит и не исключает. Проверка только по метрикам обоих сёл. Если два села в соседних уездах, это повод посмотреть, но не доказательство.
-- Прогони все наборы одного человека: результаты должны совпасть.
+## Step 8. "Are the parents related?"
 
-## Шаг 9. Живая родня рядом: социальные сети родителей
+GEDmatch "Are your parents related?" looks for long identical stretches from both parents (ROH ≥ 7 cM).
+- **0 cM** → within roughly 5–6 generations the parents are not related.
+- Earlier marriages between the lines (18th century) DNA does not see and does not rule out. The check is only through the metrical books of both villages. If the parents' home villages lie close to each other (the same or a neighbouring uezd), that is a reason to look, but not proof.
+- Run all of one person's kits: the results should agree.
 
-Страница родителя в соцсети (раздел «Семья», друзья с девичьей фамилией в скобках, место «с. …, … район») часто показывает живых родственников по линии, которую ищут. Правила:
-- **только чтение**, по прямой просьбе пользователя, на странице, которую он назвал; не собирай досье на посторонних;
-- записывай имя, место, год рождения, если показан, и отметку «родственник/семья»;
-- кем кто приходится, **спрашивай у пользователя**, не угадывай. Совпадения дат (день рождения совпадает с днём рождения деда) — только повод спросить;
-- писать людям решает пользователь.
+## Step 9. Living relatives nearby: the parents' social networks
 
-## Шаг 10. Письмо совпаденцу
+A parent's page on a social network (the "Family" section, friends with a maiden name in brackets, a place "с. …, … район" [village …, … district]) often shows living relatives on the line being searched for. Rules:
+- **read only**, at the user's direct request, on the page they named; do not compile a dossier on outsiders;
+- record the name, place, year of birth if shown, and the "relative/family" mark;
+- who is related to whom and how — **ask the user**, do not guess. Coinciding dates (a birthday that matches the grandfather's birthday) are only a reason to ask;
+- writing to people is the user's decision.
 
-Образец — `assets/first-letter.md`. Коротко, просто, по-человечески:
-- английский — **уровень B1**: короткие фразы, обычные слова, без канцелярита и «гладкого» стиля ИИ;
-- откуда вы человека знаете (сайт, сМ), **одно общее место и две фамилии**, вопрос «говорите ли по-русски?», просьба загрузить ДНК в GEDmatch;
-- писать на email из карточки совпадения на сайте, а не искать человека в соцсетях. Соцсеть — только если письмо осталось без ответа;
-- отправляет **пользователь**.
+## Step 10. A letter to the match
 
-## Шаг 11. Журнал и запись находок
+Template — `assets/first-letter.md`. Short, simple, human:
+- English — **level B1**: short sentences, ordinary words, no officialese and no "smooth" AI style;
+- how you know the person (site, cM), **one shared place and two surnames**, the question "do you speak Russian?", a request to upload the DNA to GEDmatch;
+- write to the email from the match card on the site, rather than looking for the person on social networks. A social network — only if the letter got no reply;
+- the **user** sends it.
 
-Шаблон — `assets/journal.md`. Для каждого сайта: что выгружено (сколько, какие поля), пороги, что закрыто (платные функции), стороны, главные зацепки, «что ДНК опровергает / допускает», что дальше. Находку записывай **сразу**, как нашёл: длинная сессия может оборваться.
+## Step 11. The journal and recording finds
 
-## Чего не делать
+Template — `assets/journal.md`. For each site: what was exported (how many, which fields), thresholds, what is closed (paid features), sides, main leads, "what DNA refutes / allows", what next. Record a find **at once**, as soon as you find it: a long session may break off.
 
-- Не объявлять общего предка без документа.
-- Не считать «нет в общих» доказательством другой стороны.
-- Не считать несколько протестированных членов одной семьи независимыми подтверждениями.
-- Не покупать апгрейды, не принимать условия, не входить в аккаунты, не отправлять письма за пользователя.
-- Не публиковать имена живых совпаденцев и их списки; в текстах для родных и в публичных примерах — условные имена.
+## What not to do
 
-## Связанные навыки
+- Do not declare a common ancestor without a document.
+- Do not treat "not among the shared matches" as proof of the other side.
+- Do not count several tested members of one family as independent confirmations.
+- Do not buy upgrades, accept terms, log in to accounts or send letters for the user.
+- Do not publish the names of living matches and their lists; in texts for relatives and in public examples — placeholder names.
 
-`checking-dna-against-tree` (этнические доли против дерева), раздел «ДНК» руководства, § 6а (калибровка, гаплогруппы); `y-and-mtdna-lineage-testing` (Y и мтДНК); `dna-matches-endogamy` (пороги и кластеры при эндогамии); `verifying-genealogy-findings` (проверка документами); `soviet-era-records` и `searching-familysearch-films` (метрики села для проверки).
+## Related skills
+
+`checking-dna-against-tree` (ethnicity shares against the tree), the guide's DNA section, § 6a (calibration, haplogroups); `y-and-mtdna-lineage-testing` (Y-DNA and mtDNA); `dna-matches-endogamy` (thresholds and clusters under endogamy); `verifying-genealogy-findings` (checking with documents); `soviet-era-records` and `searching-familysearch-films` (the village's metrical books for checking).

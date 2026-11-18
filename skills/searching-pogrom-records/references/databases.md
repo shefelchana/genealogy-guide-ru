@@ -1,14 +1,14 @@
-# Базы погромов: рецепты запросов и разбор полей
+# Pogrom databases: query recipes and field explanations
 
-Проверено запросами 07.10.2026. Сайты меняются: перед массовой работой повтори контрольный запрос.
+Checked with queries on 07.10.2026. Sites change: repeat the control query before any mass work.
 
-## 1. jewishpogroms.info — база Нади Липес
+## 1. jewishpogroms.info — Nadia Lipes's database
 
-**Что это.** «Jewish Pogroms Memorial», около 77 777 записей (счётчик на главной). Источники — только архивные документы и листы памяти. В базе убитые, раненые, ограбленные, беженцы, **получатели помощи** (например, «people who get financial help from America (… zemlyachestvo)», сумма в примечании «100 $»), **воспитанники детдомов** («Pupil of the 3rd orphanage»), сотрудники детучреждений.
+**What it is.** "Jewish Pogroms Memorial", about 77,777 records (the counter on the home page). The sources are only archival documents and memorial sheets. The database holds the killed, the wounded, the robbed, refugees, **recipients of relief** (for example "people who get financial help from America (… zemlyachestvo)", with the sum in the note, "100 $"), **orphanage pupils** ("Pupil of the 3rd orphanage"), staff of children's institutions.
 
-**Форма на сайте.** Поле фамилии принимает только латиницу; флажок «Sounds like»; выпадающие списки Region, City, Record type, Incident, Notes, Found, Register, Case, Archive, Is Alive. Город можно выбрать без фамилии.
+**The form on the site.** The surname field accepts only Latin letters; a "Sounds like" checkbox; drop-down lists Region, City, Record type, Incident, Notes, Found, Register, Case, Archive, Is Alive. A city can be chosen without a surname.
 
-**Запрос без браузера** (тот же, что шлёт страница):
+**A query without a browser** (the same one the page sends):
 
 ```
 curl -s -A "Mozilla/5.0 ... Chrome/129.0 Safari/537.36" \
@@ -18,59 +18,59 @@ curl -s -A "Mozilla/5.0 ... Chrome/129.0 Safari/537.36" \
   [--data-urlencode "soundslike=yes"] [--data-urlencode "city=Pavoloch"]
 ```
 
-Ответ — HTML-фрагмент: строка `NN persons found`, затем таблица. Скрипт `scripts/pogrom_search.py lipes …` делает то же и печатает TSV.
+The answer is an HTML fragment: a line `NN persons found`, then a table. The script `scripts/pogrom_search.py lipes …` does the same and prints TSV.
 
-**Как ведёт себя поиск** (проверено на контрольной фамилии):
+**How the search behaves** (checked on the control surname):
 
-| Запрос | Результат | Вывод |
+| Query | Result | Conclusion |
 |---|---|---|
-| `Lipes`, без флажка | 24 записи (вкл. «Lipes/Libes ?») | точный поиск ловит и составные записи |
-| `Lipes`, soundslike=yes | 23 | «Sounds like» не надмножество точного поиска |
-| `Libes`, soundslike=yes | 8, только Libes | Б/П «Sounds like» не сводит |
-| `Lip*s` | 49: Lipes, Lipets, Lipshits, Lips, Lipis… | звёздочка — главный инструмент |
-| `city=Pavoloch`, фамилия пустая | 131 | поиск по месту без фамилии работает |
+| `Lipes`, no checkbox | 24 records (incl. "Lipes/Libes ?") | the exact search also catches compound records |
+| `Lipes`, soundslike=yes | 23 | "Sounds like" is not a superset of the exact search |
+| `Libes`, soundslike=yes | 8, only Libes | "Sounds like" does not merge B/P |
+| `Lip*s` | 49: Lipes, Lipets, Lipshits, Lips, Lipis… | the asterisk is the main tool |
+| `city=Pavoloch`, surname empty | 131 | a search by place without a surname works |
 
-Порядок: точный запрос → со звёздочкой в середине и в начале → soundslike → по городу. Каждый запрос — строка в журнале.
+Order: exact query → with an asterisk in the middle and at the start → soundslike → by city. Every query is a line in the log.
 
-**Поля записи → архивный шифр**
+**Record fields → archival reference**
 
-| Поле | Значение |
+| Field | Meaning |
 |---|---|
-| Region / City | губерния или область / местечко (латиницей, как записал волонтёр) |
-| Record type | `list` — поимённый список, `text` — упоминание в тексте |
-| Family name / Name / Patronymic / Age | как в документе, в латинской передаче |
-| Incident | что случилось: murdered, wounded, robbed, refugee, помощь, детдом |
-| Is Alive | yes / no / пусто |
-| Notes | подробности: кем убит, когда, откуда родом, сумма помощи, «child» |
-| **Found / Register / Case / Page** | **фонд / опись / дело / лист** |
-| Archive | Dako (ДАКО), State archive of Vinnytsia region (ДАВіО), DAOO (Одесса), ЦДАВО и др. |
+| Region / City | guberniya or oblast / shtetl (in Latin letters, as the volunteer entered it) |
+| Record type | `list` — a name-by-name list, `text` — a mention in a text |
+| Family name / Name / Patronymic / Age | as in the document, in Latin transliteration |
+| Incident | what happened: murdered, wounded, robbed, refugee, relief, orphanage |
+| Is Alive | yes / no / empty |
+| Notes | details: killed by whom, when, where from, sum of relief, "child" |
+| **Found / Register / Case / Page** | **fond / inventory / file / folio** |
+| Archive | Dako (DAKO), State archive of Vinnytsia region (DAViO), DAOO (Odesa), TsDAVO, etc. |
 
-Ссылка на отдельную запись (`/pogroms_people/pogroms-post/?id=…`) без браузера содержимого не показывает [проверено: страница пустая для curl] — данные бери из таблицы ответа.
+A link to an individual record (`/pogroms_people/pogroms-post/?id=…`) shows no content without a browser [checked: the page is empty for curl] — take the data from the answer table.
 
-⚠️ Данные введены волонтёрами: в выпадающих списках видны сдвинутые колонки (название города в поле «Region», имя в поле «Is Alive»). Номер дела и листа сверяй с описью и сканом. Пример расхождения: запись о помощи 1922 года по местечку ссылается на дело, которое в описи названо перепиской с комитетом другого города, — значит, список вложен в чужое дело или в базе опечатка; решает только лист.
+⚠️ The data was entered by volunteers: shifted columns are visible in the drop-down lists (a city name in the "Region" field, a given name in the "Is Alive" field). Check the file and folio number against the inventory and the scan. An example of a discrepancy: a 1922 relief record for a shtetl refers to a file that the inventory names as correspondence with the committee of another city — so either the list is filed into someone else's file or the database has a typo; only the folio decides.
 
-## 2. pogrom.amhazikaron.org — «Ам а-Зикарон»
+## 2. pogrom.amhazikaron.org — Am HaZikaron
 
-**Что это.** Мемориальный проект: около 7 929 жертв (заголовок `X-WP-Total` без фильтров), 136 рубрик-местечек (`categories`, проверено 08.10.2026) и 118 страниц о местечках (`/wp-json/wp/v2/mestechki`). Источники в каждой записи: «Свиток резни» Э. Д. Розенталя (перевод на русский), ДАКО Р-3050 (с листами **и страницами PDF**), ЦДАВО ф. 2497, YIVO RG 80 (архив Чериковера), ЦДИАК ф. 1164 оп. 1 д. 171 (метрическая книга Киева — смерти 1918 г.), «Кадиш сироты» С. Вейгмана (Киев), проскуровские списки с адресами. Около трети документов проекта — на идише.
+**What it is.** A memorial project: about 7,929 victims (the `X-WP-Total` header without filters), 136 shtetl categories (`categories`, checked 08.10.2026) and 118 pages about shtetls (`/wp-json/wp/v2/mestechki`). Sources in each record: E. D. Rosenthal's "Свиток резни" ("Svitok rezni", the Scroll of Slaughter; Russian translation), DAKO R-3050 (State Archive of Kyiv Oblast; with folios **and PDF pages**), TsDAVO fond 2497 (Central State Archive of Supreme Bodies of Power of Ukraine), YIVO RG 80 (the Tcherikower archive), TsDIAK fond 1164 inventory 1 file 171 (Central State Historical Archive of Ukraine, Kyiv; a metrical book of Kyiv — deaths of 1918), S. Weigman's "Кадиш сироты" ("Kadish sirot", Orphan's Kaddish; Kyiv), the Proskurov lists with addresses. About a third of the project's documents are in Yiddish.
 
-**Запрос** (открытый REST WordPress, браузерный User-Agent):
+**Query** (open WordPress REST, browser User-Agent):
 
 ```
 https://pogrom.amhazikaron.org/wp-json/wp/v2/victims?search=Проскуров&per_page=100&page=1
 ```
 
-- Число найденного — в заголовках ответа `X-WP-Total`, `X-WP-TotalPages`.
-- Поиск по подстроке в заголовке и тексте записи, кириллицей.
-- Рубрики-местечки: `/wp-json/wp/v2/categories?per_page=100` (поле `count`), записи рубрики — `victims?categories=ID`.
-- Текст записи — `content.rendered`: обстоятельства, занятие, откуда родом, источники.
+- The number found is in the response headers `X-WP-Total`, `X-WP-TotalPages`.
+- The search is by substring in the title and text of the record, in Cyrillic.
+- Shtetl categories: `/wp-json/wp/v2/categories?per_page=100` (the `count` field), records of a category: `victims?categories=ID`.
+- The text of the record is `content.rendered`: circumstances, occupation, place of origin, sources.
 
-Скрипт: `scripts/pogrom_search.py amh Проскуров [--all]`.
+Script: `scripts/pogrom_search.py amh Проскуров [--all]`.
 
-⚠️ Одна запись — часто целая семья в одном заголовке («Иоханан …, его жена …, их дочь …, её муж …»): ищи по фамилии каждого члена семьи, по именам и по местечку. Возраст «по разным спискам» указан через «или» — это честная пометка расхождения, переноси её в досье как есть.
+⚠️ One record is often a whole family in one title ("Yohanan …, his wife …, their daughter …, her husband …"): search by the surname of each family member, by given names and by shtetl. Age "by different lists" is given with "or" — this is an honest note of a discrepancy; carry it into the dossier as it is.
 
-⚠️ Пустой ответ не значит «у Розенталя нет»: база покрывает «Свиток резни» не целиком.
+⚠️ An empty answer does not mean "Rosenthal does not have him": the database does not cover the "Svitok rezni" in full.
 
-## 3. Чего в открытом доступе нет
+## 3. What is not openly available
 
-- lipesdatabase.com: публичного поиска сейчас нет, внутренняя база — платная услуга (по состоянию на октябрь 2026).
-- «Книга погромов» (сборник документов) и «Khurbn Proskurov» (1924) — книги; искать в них фамилию можно только в полнотекстовых копиях, если они есть (см. `verifying-genealogy-findings`, полнотекстовые корпуса) [не проверено].
+- lipesdatabase.com: there is no public search at present; the internal database is a paid service (as of October 2026).
+- "Книга погромов" ("Kniga pogromov", The Book of Pogroms; a collection of documents) and "Khurbn Proskurov" (1924) are books; you can search them for a surname only in full-text copies, if they exist (see `verifying-genealogy-findings`, full-text corpora) [unverified].

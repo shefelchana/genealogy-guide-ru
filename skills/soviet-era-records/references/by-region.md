@@ -1,123 +1,123 @@
-# Советские источники по регионам
+# Soviet-era sources by region
 
-Читай нужный раздел, когда известно, где человек родился, жил, служил, был арестован или погиб. Сначала общесоюзные базы, затем региональные.
+Read the relevant section once you know where the person was born, lived, served, was arrested or died. All-Union databases first, then regional ones.
 
-Пометки: **[открыто]** — страница прочитана (сентябрь–октябрь 2026); **[по выдаче]** — сведения из поисковой выдачи или сводного обзора, перед цитированием проверь на самом сайте; **[закрыто]** — сайт перестал работать или убрал поиск. Числа записей приблизительные.
+Markers: **[open]** — the page was read (September–October 2026); **[from search results]** — information from search results or a consolidated overview, check on the site itself before quoting; **[closed]** — the site stopped working or removed its search. Numbers of records are approximate.
 
-## Содержание
-1. Общесоюзные и международные базы
-2. Россия (кроме Ленинграда)
-3. Ленинград и Петербург
-4. Украина
-5. Беларусь
-6. Молдова и Бессарабия
-7. Страны Балтии
-8. Узбекистан и другие места эвакуации
-9. Что закрылось и чем заменить
+## Contents
+1. All-Union and international databases
+2. Russia (except Leningrad)
+3. Leningrad and St Petersburg
+4. Ukraine
+5. Belarus
+6. Moldova and Bessarabia
+7. The Baltic states
+8. Uzbekistan and other places of evacuation
+9. What has closed and what to use instead
 
 ---
 
-## 1. Общесоюзные и международные базы
+## 1. All-Union and international databases
 
-| База | Что там | Как искать, ограничения |
+| Database | What is there | How to search, limits |
 |---|---|---|
-| ОБД «Мемориал» (obd-memorial.ru) | погибшие и пропавшие без вести, документы ЦАМО: донесения о потерях, похоронные книги, документы о пленных | точный поиск по фамилии; без капчи; сканы в карточке |
-| «Память народа» (pamyat-naroda.ru) | награды, донесения, госпитальные ведомости, документы пленных, юбилейная картотека 1985 года | капча на автоматику — проходит человек; фильтр по месту рождения; из-за рубежа может не открываться |
-| «Подвиг народа» (podvignaroda.ru) | наградные листы со сканами | вошёл в «Память народа», отдельный сайт работает |
-| «Дорога памяти» | фотографии фронтовиков, в том числе из личных дел [по выдаче] | из-за рубежа может не открываться |
-| «Бессмертный полк» (moypolk.ru) | истории фронтовиков от родных | обычный поиск по фамилии |
-| База советских военнопленных, Dokumentationsstelle Dresden (stsg.de) | от 700 до 900 тыс. записей — источники расходятся, на stsg.de число не указано [по выдаче]: фамилия, имя, имя отца, дата рождения | бесплатно, интерфейс есть на русском [открыто] |
-| Arolsen Archives (collections.arolsen-archives.org) | концлагеря, остарбайтеры, перемещённые лица; десятки миллионов документов | поиск открыт; запрос можно подать по-русски, бесплатно [открыто] |
-| Яд ва-Шем, центральная база имён (collections.yadvashem.org) | жертвы Холокоста (листы свидетельских показаний, списки), эвакуационные списки 1941–1942 (внесены только евреи) | искать в ролях «жертва», «подавший», «упомянутый»; латиница и кириллица |
-| USHMM, Holocaust Survivors and Victims Names Database (ushmm.org/remember/resources-holocaust-survivors-victims/database-of-holocaust-survivor-and-victim-names) | те же эвакокарточки, списки жертв и выживших; режимы Exact, Fuzzy, D-M Soundex | ⚠️ база переехала на новый сайт (бета); старый адрес ushmm.org/online/hsv перестаёт работать осенью 2026 — старые ссылки на записи замени новыми [открыто] |
-| Акты ЧГК: поимённые списки погибших в оккупации 1944–1945 (ГАРФ ф. 7021) | по районам и сёлам, рукописные, по-русски | микрофильм USHMM RG-22.002M, указатель примерно на 1456 мест (ushmm.org/online/hsv/source_view.php?SourceId=32400 — старый адрес HSV, осенью 2026 может перестать открываться) [открыто] |
-| Holocaust-коллекции Ancestry | списки, частично не совпадающие с Яд ва-Шем, Arolsen и USHMM | бесплатны (вход — бесплатная регистрация, делает человек) [по выдаче: форум Tapuz, 2026] |
-| Медали «За оборону Москвы» (vov.mos.ru), «За оборону Ленинграда» (medal.spbarchives.ru) | списки награждённых [по выдаче] | — |
-| Первая мировая: картотека потерь 1914–1918 (gwar.mil.ru), 1914.svrt.ru | губерния, уезд, волость рождения солдата | gwar.mil.ru из-за рубежа не открывался |
+| OBD Memorial (obd-memorial.ru) | the dead and missing, documents of TsAMO (Central Archive of the Russian Ministry of Defence): loss reports, burial books, documents on prisoners | exact search by surname; no captcha; scans in the card |
+| Pamyat Naroda (pamyat-naroda.ru) | awards, loss reports, hospital registers, prisoner documents, the 1985 anniversary card file | captcha for automation — a human passes it; filter by place of birth; may not open from abroad |
+| Podvig Naroda (podvignaroda.ru) | award sheets with scans | merged into Pamyat Naroda, the separate site works |
+| Doroga Pamyati ("Road of Memory") | photographs of frontline soldiers, including from personal files [from search results] | may not open from abroad |
+| Immortal Regiment (moypolk.ru) | stories of frontline soldiers from relatives | ordinary search by surname |
+| Database of Soviet prisoners of war, Dokumentationsstelle Dresden (stsg.de) | from 700 to 900 thousand records — sources differ, the number is not given on stsg.de [from search results]: surname, given name, father's name, date of birth | free, interface available in Russian [open] |
+| Arolsen Archives (collections.arolsen-archives.org) | concentration camps, *Ostarbeiter*, displaced persons; tens of millions of documents | search is open; a request can be submitted in Russian, free [open] |
+| Yad Vashem, central names database (collections.yadvashem.org) | Holocaust victims (Pages of Testimony, lists), evacuation lists 1941–1942 (only Jews entered) | search in the roles "victim", "submitter", "mentioned"; Latin and Cyrillic |
+| USHMM, Holocaust Survivors and Victims Names Database (ushmm.org/remember/resources-holocaust-survivors-victims/database-of-holocaust-survivor-and-victim-names) | the same evacuation cards, lists of victims and survivors; modes Exact, Fuzzy, D-M Soundex | ⚠️ the database moved to a new site (beta); the old address ushmm.org/online/hsv stops working in autumn 2026 — replace old links to records with new ones [open] |
+| ChGK acts (Extraordinary State Commission): name lists of those killed under occupation 1944–1945 (GARF fond 7021; GARF = State Archive of the Russian Federation) | by districts and villages, handwritten, in Russian | USHMM microfilm RG-22.002M, index of about 1,456 places (ushmm.org/online/hsv/source_view.php?SourceId=32400 — old HSV address, may stop opening in autumn 2026) [open] |
+| Ancestry Holocaust collections | lists partly not matching Yad Vashem, Arolsen and USHMM | free (login is a free registration, done by a human) [from search results: Tapuz forum, 2026] |
+| Medals "For the Defence of Moscow" (vov.mos.ru), "For the Defence of Leningrad" (medal.spbarchives.ru) | lists of those awarded [from search results] | — |
+| First World War: card file of losses 1914–1918 (gwar.mil.ru), 1914.svrt.ru | guberniya, uezd, volost of the soldier's birth | gwar.mil.ru did not open from abroad |
 
-Сводный перечень бесплатных баз: Lost Russian Family, «Free databases» (lostrussianfamily.wpcomstaging.com/free-databases/) [открыто]; числа на нём на самих сайтах не проверены.
+A consolidated list of free databases: Lost Russian Family, "Free databases" (lostrussianfamily.wpcomstaging.com/free-databases/) [open]; the numbers on it were not checked on the sites themselves.
 
-## 2. Россия (кроме Ленинграда)
+## 2. Russia (except Leningrad)
 
-**Репрессии**
-- «Открытый список» (ru.openlist.wiki) — более 3,38 млн записей 1917–1991 [открыто]; префиксный поиск по названию страницы; поиск по месту рождения; пауза от 6 с. Внутри — категории по книгам памяти («Москва, расстрельные списки — Коммунарка», «Ленинградский мартиролог» и др.).
-- «Бессмертный барак» (bessmertnybarak.ru, перенаправляет на bessmertnybarak.com) — на главной 2 862 436 имён (07.10.2026) [открыто]. На их странице: нужны полное имя, год рождения, место жительства на момент репрессии; книг памяти около 600 томов, оцифровано более 300 [открыто].
-- «Последний адрес» (poslednyadres.ru) — поиск по базе «Мемориала», только приговорённые к расстрелу, около 400 тыс. записей [по выдаче].
-- Региональные книги памяти: Челябинская, Свердловская (раскулаченные), Забайкалье, Чувашия и другие [по выдаче]. Их имена часто уже внесены в «Открытый список» — но не все.
-- Москва: «Расстрельные списки. Москва, 1937–1941. „Коммунарка“, Бутово» (2000) — имена в «Открытом списке» по категориям [по выдаче].
+**Repressions**
+- Open List ("Otkrytyi spisok", ru.openlist.wiki) — more than 3.38 million records 1917–1991 [open]; prefix search by page title; search by place of birth; pause of at least 6 s. Inside are categories by books of memory ("Moscow, execution lists — Kommunarka", "Leningrad Martyrology" and others).
+- "Immortal Barrack" (bessmertnybarak.ru, redirects to bessmertnybarak.com) — 2,862,436 names on the main page (07.10.2026) [open]. On their page: full name, year of birth, place of residence at the time of the repression are needed; about 600 volumes of books of memory, more than 300 digitized [open].
+- "Last Address" (poslednyadres.ru) — search of the Memorial database, only those sentenced to be shot, about 400 thousand records [from search results].
+- Regional books of memory: Chelyabinsk, Sverdlovsk (dekulakized), Transbaikalia, Chuvashia and others [from search results]. Their names are often already entered in the Open List — but not all.
+- Moscow: "Execution lists. Moscow, 1937–1941. Kommunarka, Butovo" (2000) — names in the Open List by category [from search results].
 
-**Эвакуация**
-- Челябинская обл. (archive74.ru) — 401 624 записи об эвакуированных [по выдаче].
-- Киров (cgako.ru) — на форме reCAPTCHA: только человек.
-- Томск, Республика Алтай, Коми (дети из московских интернатов) [по выдаче].
-- Ведомости областных архивов («Движение детей», списки эвакопунктов) — через описи и ЕАИС областных архивов; часто платно и только из России.
+**Evacuation**
+- Chelyabinsk oblast (archive74.ru) — 401,624 records of evacuees [from search results].
+- Kirov (cgako.ru) — reCAPTCHA on the form: a human only.
+- Tomsk, Altai Republic, Komi (children from Moscow boarding schools) [from search results].
+- Registers of oblast archives ("Movement of children", lists of evacuation points) — through the inventories and the EAIS of oblast archives; often paid and only from Russia.
 
-**ЗАГС и бытовые документы**
-- Записи ЗАГС — в органах ЗАГС и в областных архивах; онлайн почти нет. Яндекс «Поиск по архивам» содержит распознанные рукописи ряда российских архивов, но главным образом дореволюционные (навык `searching-yandex-archives`).
-- Похозяйственные книги — в областных и районных архивах; у некоторых архивов есть межфондовые указатели к ним в открытых PDF-описях.
+**ZAGS and household documents**
+- ZAGS records are in ZAGS bodies and oblast archives; almost nothing online. Yandex "Archive Search" contains recognized manuscripts of a number of Russian archives, but mainly pre-revolutionary (skill `searching-yandex-archives`).
+- Household books (*pokhozyaistvennye knigi*) are in oblast and district archives; some archives have cross-fond indexes to them in open PDF inventories.
 
-## 3. Ленинград и Петербург
+## 3. Leningrad and St Petersburg
 
-- «Блокада. 1941–1944. Ленинград. Книга памяти» — 35 томов, 631 063 записи; электронная версия на сайте «Возвращённые имена» РНБ (visz.nlr.ru/blockade), поиск по фамилии и тексту справки [по выдаче]; из-за рубежа сайт не открывался.
-- Сводная «Книга памяти блокадного Ленинграда» (blockade.spb.ru) — ЦАМО, блокадные книги, эвакуация, региональные архивы; без капчи. Только ленинградский круг. Сканы дел — файлы с последовательной нумерацией: соседние образы открываются заменой номера.
-- «Ленинградский мартиролог 1937–1938» — тома и сводный именной указатель на visz.nlr.ru [по выдаче].
-- Эвакуация из Ленинграда 1941–1943 (evacuation.spbarchives.ru, ЦГА СПб) — около 620,8 тыс. карточек; поиск по ФИО, году рождения, году эвакуации [по выдаче].
-- Пискарёвское кладбище (pmemorial.ru) — [закрыто] базы поиска на сайте больше нет (сентябрь 2026).
-- Смена фамилий 1924–1932 — объявления в «Вестнике Ленинградского облисполкома» [по выдаче].
+- "Blockade. 1941–1944. Leningrad. Book of Memory" — 35 volumes, 631,063 records; the electronic version is on the site "Vozvrashchennye imena" (Returned Names) of the Russian National Library (visz.nlr.ru/blockade), search by surname and by the text of the entry [from search results]; the site did not open from abroad.
+- The consolidated "Book of Memory of Besieged Leningrad" (blockade.spb.ru) — TsAMO, siege books, evacuation, regional archives; no captcha. Only the Leningrad circle. The scans of files are files with sequential numbering: neighbouring images open by changing the number.
+- "Leningrad Martyrology 1937–1938" — volumes and a consolidated name index on visz.nlr.ru [from search results].
+- Evacuation from Leningrad 1941–1943 (evacuation.spbarchives.ru, TsGA SPb — Central State Archive of St Petersburg) — about 620.8 thousand cards; search by name, year of birth, year of evacuation [from search results].
+- Piskaryovskoye cemetery (pmemorial.ru) — [closed] the search database is no longer on the site (September 2026).
+- Change of surnames 1924–1932 — notices in the "Vestnik of the Leningrad Oblast Executive Committee" [from search results].
 
-## 4. Украина
+## 4. Ukraine
 
-**Война**
-- martyrology.org.ua (Национальный музей истории Украины во Второй мировой войне) — 697 836 записей по 12 областям, в том числе Винницкой, Хмельницкой, Житомирской, Киевской, Черновицкой; поиск по началу фамилии [открыто].
-- «Архів пам'яті українців» (archive.memory.org.ua) — красноармейцы из Украины в немецком плену, пока Винницкая обл.; ФИО кириллицей и латиницей, дата и место рождения, лагеря [открыто].
-- Книга памяти Украины (memory-book.ua) — 1 008 363 имени, 3243 воинских захоронения [открыто]. ⚠️ На главной странице посторонние спам-ссылки (07.10.2026) — по ним не переходить.
-- Фильтрационные дела репатриантов Киевской обл. (opisi.dako.gov.ua/camps/filtr) — 115 834 записи [открыто]; наличие сканов не проверено.
-- FamilySearch, «Ukraine, Soviet Population Filtration Records, 1943–1991» — около 230 тыс. записей, поиск по-английски; пока Полтавская, Киевская, Хмельницкая и Кировоградская обл., обещано расширение [по выдаче: lostrussianfamily.wordpress.com].
+**War**
+- martyrology.org.ua (National Museum of the History of Ukraine in the Second World War) — 697,836 records for 12 oblasts, including Vinnytsia, Khmelnytskyi, Zhytomyr, Kyiv, Chernivtsi; search by the start of the surname [open].
+- "Archive of Ukrainians' Memory" (archive.memory.org.ua) — Red Army soldiers from Ukraine in German captivity, so far Vinnytsia oblast; full name in Cyrillic and Latin, date and place of birth, camps [open].
+- Book of Memory of Ukraine (memory-book.ua) — 1,008,363 names, 3,243 military burials [open]. ⚠️ The main page has foreign spam links (07.10.2026) — do not follow them.
+- Filtration files of repatriates of Kyiv oblast (opisi.dako.gov.ua/camps/filtr) — 115,834 records [open]; the availability of scans was not checked.
+- FamilySearch, "Ukraine, Soviet Population Filtration Records, 1943–1991" — about 230 thousand records, search in English; so far Poltava, Kyiv, Khmelnytskyi and Kirovohrad oblasts, expansion promised [from search results: lostrussianfamily.wordpress.com].
 
-**Репрессии**
-- Архив национальной памяти, ГДА УИНП (hdauinp.org.ua) — бесплатно, доступно из-за рубежа; видеоуроки по поиску репрессированных; пособия «Практичний посібник з доступу до архівів. Право на правду» и «Архіви КДБ для медіа» [открыто].
-- Отраслевой государственный архив СБУ — по закону № 316-VIII от 09.04.2015 архивы репрессивных органов открыты; закон предписывает передать их в Архив национальной памяти (ГДА УИНП) [открыто: текст закона на uinp.gov.ua]. Основа — уголовные дела 1920–1980-х [по выдаче]. Областные архивы тоже хранят переданные дела репрессированных.
-- Национальный банк данных репрессированных (reabit.org.ua), «Український мартиролог ХХ ст.» [по выдаче].
-- Голодомор: memorialholodomors.org.ua [по выдаче].
+**Repressions**
+- Archive of National Memory, HDA UINP (hdauinp.org.ua) — free, available from abroad; video lessons on searching for the repressed; manuals «Практичний посібник з доступу до архівів. Право на правду» [“Practical guide to access to archives. The right to truth”] and «Архіви КДБ для медіа» [“KGB archives for the media”] [open].
+- Sectoral State Archive of the SBU — under law No. 316-VIII of 09.04.2015 the archives of the repressive organs are open; the law requires their transfer to the Archive of National Memory (HDA UINP) [open: text of the law on uinp.gov.ua]. The basis is criminal cases of the 1920s–1980s [from search results]. Oblast archives also hold transferred files of the repressed.
+- National data bank of the repressed (reabit.org.ua), «Український мартиролог ХХ ст.» [“Ukrainian martyrology of the 20th century”] [from search results].
+- Holodomor: memorialholodomors.org.ua [from search results].
 
-**Холокост и оккупация**
-- Бабий Яр — база имён Мемориального центра (babynyar.org), 29 732 записи с возрастом, адресами, родными [по выдаче].
-- «Книга скорботи України» — гражданские жертвы оккупации по областям; часть томов на archive.org [по выдаче]; по Хмельницкой обл. онлайн нашлись только районы Красилова и Старокостянтинова (KehilaLinks).
-- «(Не)Відомий Голокост» — документальный фильм, а не база.
+**Holocaust and occupation**
+- Babi Yar — names database of the Memorial Centre (babynyar.org), 29,732 records with age, addresses, relatives [from search results].
+- "Book of Sorrow of Ukraine" — civilian victims of the occupation by oblast; some volumes on archive.org [from search results]; for Khmelnytskyi oblast only the districts of Krasyliv and Starokostiantyniv were found online (KehilaLinks).
+- «(Не)Відомий Голокост» [“(Un)Known Holocaust”] — a documentary film, not a database.
 
-**ЗАГС 1919–1944**
-- Книги ЗАГС ряда городов и районов выложены на Wikimedia Commons (например, Проскуров, Киев, районы Хмельницкой обл.). Порядок поиска — навык `ukrainian-archives-on-commons`.
+**ZAGS 1919–1944**
+- ZAGS books of a number of cities and districts are posted on Wikimedia Commons (for example Proskurov, Kyiv, districts of Khmelnytskyi oblast). The search procedure is in the skill `ukrainian-archives-on-commons`.
 
-## 5. Беларусь
+## 5. Belarus
 
-- Книга памяти Республики Беларусь (memory.mil.by) — погибшие во Второй мировой [по выдаче].
-- Партизаны Беларуси (partizany.by) — на главной «374 000 партизан» — это общее число участников движения [открыто]; электронных карточек в базе меньше (по выдаче — более 82 тыс.).
-- USHMM: указатель «Jewish Partisans in Belarus 1941–1944» — 8451 человек; ФИО с отчеством, год рождения, место жительства, бригада, отряд, дата гибели [по выдаче]; тот же указатель есть на JewishGen (0218_Belarus_partisans).
-- JewishGen Belarus Database [по выдаче].
+- Book of Memory of the Republic of Belarus (memory.mil.by) — the dead of the Second World War [from search results].
+- Partisans of Belarus (partizany.by) — "374,000 partisans" on the main page is the total number of participants in the movement [open]; there are fewer electronic cards in the database (by search results — more than 82 thousand).
+- USHMM: the index "Jewish Partisans in Belarus 1941–1944" — 8,451 people; full name with patronymic, year of birth, place of residence, brigade, detachment, date of death [from search results]; the same index is on JewishGen (0218_Belarus_partisans).
+- JewishGen Belarus Database [from search results].
 
-## 6. Молдова и Бессарабия
+## 6. Moldova and Bessarabia
 
-- «Moldavian Jewish Victims of Soviet Oppression 1941–1951» (JewishGen) — 4750 записей; фамилия, имя, имя отца, год и место рождения, адрес, отношение к главе семьи, дата депортации, **номер эшелона**, шифр судебного дела [открыто]. Номер эшелона связывает семьи, депортированных вместе.
-- Депортация 13–16 июня 1941 года (JewishGen) [по выдаче]; рассекреченные поимённые списки 1941 и 1949 годов в PDF у Национального агентства архивов Молдовы [по выдаче].
-- Помни: Бессарабия в 1918–1940 и 1941–1944 годах была под Румынией; документы этих лет — румынские (навык `identifying-places`, справочник границ).
+- "Moldavian Jewish Victims of Soviet Oppression 1941–1951" (JewishGen) — 4,750 records; surname, given name, father's name, year and place of birth, address, relation to the head of the family, date of deportation, **train number**, reference of the court case [open]. The train number links families deported together.
+- Deportation of 13–16 June 1941 (JewishGen) [from search results]; declassified name lists of 1941 and 1949 in PDF at the National Archives Agency of Moldova [from search results].
+- Remember: Bessarabia in 1918–1940 and 1941–1944 was under Romania; documents of these years are Romanian (skill `identifying-places`, reference of borders).
 
-## 7. Страны Балтии
+## 7. The Baltic states
 
-- Литва: JewishGen «Evacuation, Exile and Return» — анкеты возвращавшихся из России после Первой мировой (14 383), эвакуированные 1941 года, репрессированные и депортированные 1940–1941 (2606) [открыто]; регистр Центра исследования геноцида и сопротивления Литвы (lietuviaisibire.lt), на литовском [открыто: LRT].
-- Латвия, Эстония: онлайн-базы репрессированных не проверялись. Не делай вывода «не найдено» по этим странам без проверки местных баз.
+- Lithuania: JewishGen "Evacuation, Exile and Return" — questionnaires of those returning from Russia after the First World War (14,383), those evacuated in 1941, the repressed and deported 1940–1941 (2,606) [open]; the register of the Genocide and Resistance Research Centre of Lithuania (lietuviaisibire.lt), in Lithuanian [open: LRT].
+- Latvia, Estonia: online databases of the repressed were not checked. Do not conclude "not found" for these countries without checking local databases.
 
-## 8. Узбекистан и другие места эвакуации
+## 8. Uzbekistan and other places of evacuation
 
-- Ташкент, JewishGen (jewishgen.org/databases/holocaust/0136_uzbek.html) — 151 966 карточек евреев-эвакуированных 1941–1942 из ЦГА Узбекистана; фамилия, имя, отчество, год рождения, пол, откуда, район эвакуации; по номеру — скан карточки; только прибывшие до февраля 1942 и только прямо в Ташкент; из общей картотеки (около 339 тыс. человек, есть и неевреи) отобраны одни евреи [открыто].
-- Перепись эвакуированных в РСФСР весной 1942 года и списки Центрального справочного бюро — частично в базах Яд ва-Шем и USHMM [по выдаче].
-- Эвакуированные часто числятся по месту **размещения** (город и район назначения), а не по месту выезда: ищи и по тому, и по другому.
+- Tashkent, JewishGen (jewishgen.org/databases/holocaust/0136_uzbek.html) — 151,966 cards of Jewish evacuees 1941–1942 from the Central State Archive of Uzbekistan; surname, given name, patronymic, year of birth, sex, from, district of evacuation; the number opens the scan of the card; only those who arrived before February 1942 and only directly in Tashkent; from the general card file (about 339 thousand people, non-Jews included) only Jews were selected [open].
+- The census of evacuees in the RSFSR in spring 1942 and the lists of the Central Information Bureau — partly in the databases of Yad Vashem and USHMM [from search results].
+- Evacuees are often listed by the place of **accommodation** (city and district of destination), not by the place of departure: search under both.
 
-## 9. Что закрылось и чем заменить
+## 9. What has closed and what to use instead
 
-| Было | Состояние | Замена |
+| What there was | State | Replacement |
 |---|---|---|
-| «Жертвы политического террора в СССР» (base.memo.ru) | [закрыто] с весны 2026; остались архивные копии | «Открытый список», «Бессмертный барак» |
-| USHMM HSV (старый адрес ushmm.org/online/hsv) | перестаёт работать осенью 2026; база переехала на новый сайт USHMM (бета) | новый сайт USHMM; Яд ва-Шем (те же эвакокарточки), Arolsen |
-| Пискарёвское кладбище (pmemorial.ru) | [закрыто] база поиска исчезла | сводная книга памяти блокады, ОБД |
-| Киров, эвакуированные | reCAPTCHA на форме | только человек |
-| «Память народа», «Дорога памяти», «Возвращённые имена», gwar.mil.ru | не открываются с части зарубежных адресов | ОБД, Яд ва-Шем, Arolsen; решение о смене сети — за человеком |
+| "Victims of political terror in the USSR" (base.memo.ru) | [closed] since spring 2026; archived copies remain | Open List, Immortal Barrack |
+| USHMM HSV (old address ushmm.org/online/hsv) | stops working in autumn 2026; the database moved to the new USHMM site (beta) | the new USHMM site; Yad Vashem (the same evacuation cards), Arolsen |
+| Piskaryovskoye cemetery (pmemorial.ru) | [closed] the search database has disappeared | the consolidated siege book of memory, OBD |
+| Kirov, evacuees | reCAPTCHA on the form | a human only |
+| Pamyat Naroda, Doroga Pamyati, Vozvrashchennye imena, gwar.mil.ru | do not open from some foreign addresses | OBD, Yad Vashem, Arolsen; the decision to change networks is for the person |

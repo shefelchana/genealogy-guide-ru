@@ -1,82 +1,82 @@
 ---
 name: researching-jewish-cemeteries
-description: Uses Jewish cemeteries as a genealogical source — finds whether a cemetery exists and survives (JewishGen Cemetery Discovery Project, ESJF surveys, Lo Tishkach), searches burial databases (JOWBR, Mitzvat Emet, Toldot, Moscow and Petersburg registers, Israeli hevra kadisha searches, BillionGraves, Find a Grave, JGSNY landsmanshaft plots), reads the matzevah (פ״נ, בן/בת and the father's name, ר׳, מו״ה, הבתולה, ת.נ.צ.ב.ה., the year in gematria and לפ״ק, Kohen hands, Levite pitcher, name animals), converts the Hebrew date, reads Soviet stones, uses neighbouring graves, society plots, burial-society pinkasim and destroyed cemeteries, and states a not-found result honestly. Use whenever the user mentions a grave, gravestone, надгробие, мацева, еврейское кладбище, «где похоронен прадед», «прочитай надпись на памятнике», «что значат руки на камне», JOWBR, Мицват Эмет, find a Jewish grave, Hebrew tombstone, even if they only send a photo of a stone.
+description: Uses Jewish cemeteries as a genealogical source. Finds whether a cemetery exists and survives (JewishGen Cemetery Discovery Project, ESJF surveys, Lo Tishkach), searches burial databases (JOWBR, Mitzvat Emet, Toldot, Moscow and Petersburg registers, Israeli hevra kadisha searches, BillionGraves, Find a Grave, JGSNY landsmanshaft plots), reads the matzevah (פ״נ, בן/בת and the father's name, ר׳, מו״ה, הבתולה, ת.נ.צ.ב.ה., the year in gematria and לפ״ק, Kohen hands, Levite pitcher, name animals), converts the Hebrew date, reads Soviet-era stones, uses neighbouring graves, society plots, burial-society pinkasim and destroyed cemeteries, and states a not-found result honestly. Use whenever the user mentions a grave, gravestone, matzevah, Jewish cemetery, "where is my great-grandfather buried", "read the inscription on this stone", "what do the hands on the stone mean", JOWBR, Mitzvat Emet, "find a Jewish grave", "Hebrew tombstone", even if they only send a photo of a stone. Also triggers on Russian requests: «надгробие», «мацева», «еврейское кладбище», «где похоронен прадед», «прочитай надпись на памятнике», «что значат руки на камне», «Мицват Эмет».
 ---
 
-# Еврейские кладбища как источник
+# Jewish cemeteries as a source
 
-## Принцип
+## Principle
 
-Мацева (надгробие) часто даёт то, чего нет в метриках: **имя отца** (בן/בת), точную дату смерти по еврейскому календарю, принадлежность к коэнам или левитам, иногда город и фамилию. Имя отца двигает линию на поколение вверх. Но охват всех кладбищенских баз неполный, а многие кладбища уничтожены. Поэтому «не нашёл в базе» — не вывод.
+A matzevah (*matseva*, gravestone) often gives what the vital records do not: **the father's name** (בן/בת, "son/daughter of"), the exact date of death in the Jewish calendar, Kohen or Levite descent, sometimes a town and a surname. The father's name moves a line up one generation. But the cemetery databases cover only part of the graves, and many cemeteries are destroyed. So "not found in the database" is not a conclusion.
 
-Связанные навыки: `reading-hebrew-yiddish-sources` (имена и почерки), `searching-jewishgen` (JOWBR и вход в JewishGen), `tracing-emigrants-to-origin` (США), `verifying-genealogy-findings` (отрицательный вывод).
+Related skills: `reading-hebrew-yiddish-sources` (names and handwriting), `searching-jewishgen` (JOWBR and the JewishGen login), `tracing-emigrants-to-origin` (USA), `verifying-genealogy-findings` (negative conclusions).
 
-## Шаг 1. Установи, где мог быть похоронен человек
+## Step 1. Establish where the person could have been buried
 
-Место смерти, а не рождения. Для каждого места проверь:
-1. **Есть ли там еврейское кладбище** — JewishGen Cemetery Discovery Project (бывший проект IAJGS): страна → населённый пункт.
-2. **Сохранилось ли оно** — съёмки ESJF (Украина, Молдова, Польша, Литва, Венгрия и др.; Беларуси в списке нет): статус «снесено и застроено» / «снесено, не застроено» / «огорожено», **даты самого старого и самого нового камня**, GPS. Если старейший камень 1885 г., а человек умер в 1850-м, его камня там, скорее всего, нет.
-3. Если кладбище снесено — были ли **переносы** (например, часть могил с уничтоженного киевского Лукьяновского еврейского кладбища переносили на Берковецкое).
+The place of death, not of birth. For each place check:
+1. **Is there a Jewish cemetery there?** The JewishGen Cemetery Discovery Project (formerly the IAJGS project): country → locality.
+2. **Does it survive?** ESJF surveys (Ukraine, Moldova, Poland, Lithuania, Hungary and others; Belarus is not on the list) give a status of "demolished and built over" / "demolished, not built over" / "fenced", **the dates of the oldest and newest stone**, and GPS. If the oldest stone is from 1885 and the person died in 1850, their stone is most likely not there.
+3. If the cemetery was demolished, were there **relocations**? (For example, part of the graves of the destroyed Lukyanivka Jewish cemetery in Kyiv were moved to Berkovtsy.)
 
-Ресурсы, адреса и приёмы — `references/cemetery-databases.md`.
+Resources, addresses and tips: `references/cemetery-databases.md`.
 
-## Шаг 2. Ищи захоронение по базам
+## Step 2. Search the databases for the burial
 
-Порядок по региону:
-- **Украина, Беларусь, Россия, Молдова, Казахстан, Узбекистан** — «Мицват Эмет» (фото камней), Толдот (подстрока фамилии), JOWBR.
-- **Москва** — реестр хевра кадиша (Востряковское, Малаховское, Салтыковское), Толдот. **Петербург** — база Преображенского еврейского кладбища.
-- **Польша** — база Фонда документации еврейских кладбищ (Варшава-Окопова и другие), JOWBR.
-- **Израиль** — поиск каждой местной хевра кадиша отдельно (Тель-Авив, Иерусалим, Хайфа, Реховот…) и BillionGraves / MyHeritage (по объявлению MyHeritage, к марту 2019 г. сняты почти все кладбища Израиля; поздние захоронения могут отсутствовать). Ищи **на иврите**.
-- **США** — Find a Grave, BillionGraves, JOWBR, база участков обществ земляков JGSNY.
+Order by region:
+- **Ukraine, Belarus, Russia, Moldova, Kazakhstan, Uzbekistan**: Mitzvat Emet (photos of stones), Toldot (surname substring), JOWBR.
+- **Moscow**: the hevra kadisha register (Vostryakovo, Malakhovka, Saltykovka cemeteries), Toldot. **Petersburg**: the database of the Preobrazhenskoe Jewish Cemetery.
+- **Poland**: the Foundation for Documentation of Jewish Cemeteries database (Warsaw-Okopowa and others), JOWBR.
+- **Israel**: search each local hevra kadisha separately (Tel Aviv, Jerusalem, Haifa, Rehovot...) plus BillionGraves / MyHeritage (according to a MyHeritage announcement, almost all Israeli cemeteries had been photographed by March 2019; later burials may be missing). Search **in Hebrew**.
+- **USA**: Find a Grave, BillionGraves, JOWBR, the JGSNY database of landsmanshaft society plots.
 
-Ищи все написания фамилии и имени, в том числе советские формы (Хаим → Ефим) и ивритские. «Мицват Эмет»: начало фамилии → **выбрать подсказку** → «Поиск»; после ~5 поисков подряд форма молча перестаёт отправляться — не обходи, повтори позже, по одному поиску за заход. Капчу, вход и регистрацию проходит человек.
+Search every spelling of the surname and given name, including Soviet forms (Khaim → Yefim) and Hebrew ones. Mitzvat Emet: type the beginning of the surname → **choose the suggestion** → «Поиск» ("Search", the button label on the site). After about 5 searches in a row the form silently stops submitting. Do not work around it; try again later, one search per visit. A human handles CAPTCHAs, logins and registration.
 
-## Шаг 3. Прочитай мацеву
+## Step 3. Read the matzevah
 
-Подробная таблица формул, сокращений, эпитетов и символов — `references/reading-matzevot.md`. Порядок чтения:
-1. Сверху **פ״נ** (здесь погребён) или **פ״ט** (здесь сокрыт).
-2. Эпитеты и титул: **ר׳** — «реб», вежливое обращение, **не** раввин; **מו״ה** «наш учитель господин» — учёность; **הבתולה** — незамужняя девушка; **האשה החשובה** — «почтенная женщина», замужняя; **הילד/הילדה** — ребёнок.
-3. Имя, затем **בן / בת** + имя отца (часто **ב״ר** — «сын реб …»); **הכהן / הלוי** — коэн или левит.
-4. Фамилия и город — не всегда.
-5. Дата: день, месяц, год буквами (гематрия), часто с **לפ״ק** — «по малому счёту», без тысяч.
-6. В конце **ת.נ.צ.ב.ה.** — «да будет душа его вплетена в узел жизни».
+A detailed table of formulas, abbreviations, epithets and symbols is in `references/reading-matzevot.md`. Reading order:
+1. At the top **פ״נ** ("here lies buried") or **פ״ט** ("here lies hidden").
+2. Epithets and title: **ר׳** is "reb", a polite form of address, **not** a rabbi; **מו״ה** "our teacher, Mr." signals learning; **הבתולה** is an unmarried girl; **האשה החשובה** "the esteemed woman" is a married woman; **הילד/הילדה** is a child.
+3. The name, then **בן / בת** + the father's name (often **ב״ר**, "son of reb ..."); **הכהן / הלוי** means Kohen or Levite.
+4. Surname and town: not always present.
+5. Date: day, month and year in letters (gematria), often with **לפ״ק** ("by the small count", without the thousands).
+6. At the end **ת.נ.צ.ב.ה.** ("may his soul be bound up in the bond of life").
 
-**Символы**: руки в жесте благословения — коэн; кувшин — левит; подсвечники — женщина; книги — учёный; сломанное дерево или свеча — ранняя смерть; животные часто **шифруют имя**: олень — Цви/Гирш/Нафтали, лев — Арье/Лейб/Иегуда, медведь — Дов/Бер, птица — Ципора/Фейга.
+**Symbols**: hands in the blessing gesture mean a Kohen; a pitcher means a Levite; candlesticks mean a woman; books mean a scholar; a broken tree or candle means an early death; animals often **encode the name**: deer is Tsvi/Hirsch/Naftali, lion is Aryeh/Leib/Yehuda, bear is Dov/Ber, bird is Tsipora/Faige.
 
-**Советские памятники** (1920–1980-е): русский текст с ФИО и датами, эмалевое фото, иногда одна строка на иврите с еврейским именем и именем отца. Русское отчество и ивритское имя отца сверяй: «Борисович» и «בן דוב בער» — один человек. Бывает, что имя по документам и имя на камне **не сводятся** ни через русификацию, ни через двойное имя: так и запиши обе формы рядом, не подгоняя одну под другую.
+**Soviet-era monuments** (1920s-1980s): Russian text with full name and dates, an enamel photo, sometimes one line in Hebrew with the Jewish name and the father's name. Compare the Russian patronymic with the Hebrew father's name: "Borisovich" and "בן דוב בער" (son of Dov Ber) are the same man. Sometimes the name in the documents and the name on the stone **do not reconcile**, neither through Russification nor through a double name: then record both forms side by side and do not force one to fit the other.
 
-**Пример.** פ״נ / הבחור / משה / בן ר׳ יעקב הכהן ז״ל / נפ׳ ט״ו אדר ב׳ תרע״ג — здесь погребён неженатый юноша Моше, сын реб Якова, коэн; отец к этому времени умер; дата — 15 адара II 5673 года. Выводы: брака не было; отец умер раньше марта 1913 г.; род — коэны (руки на камне должны это подтверждать); следующий документ — метрика смерти и запись о смерти отца.
+**Example.** פ״נ / הבחור / משה / בן ר׳ יעקב הכהן ז״ל / נפ׳ ט״ו אדר ב׳ תרע״ג [Here lies buried the unmarried young man Moshe, son of reb Yaakov the Kohen, of blessed memory; died 15 Adar II 5673.] The father had died by this time; the date is 15 Adar II 5673. Conclusions: he never married; the father died before March 1913; the family are Kohanim (the hands on the stone should confirm it); the next documents are the death record and the death record of the father.
 
-## Шаг 4. Переведи дату
+## Step 4. Convert the date
 
-Год буквами + 5000 (если тысячи опущены) − 3760 = григорианский; для месяцев тишрей, хешван, кислев и части тевета — **на год меньше** (+1239 вместо +1240 к сокращённому году). Пример: 12 кислева תרס״ה → 20 ноября 1904 г.; 12 нисана того же года → 17 апреля 1905 г. В високосный год проверь **адар I или адар II**: 7 адара תרע״ג — 14 февраля или 16 марта 1913 г. Конвертер — Hebcal (`references/reading-matzevot.md`). Для сравнения с русскими документами переведи в юлианский: −12 дней в XIX в., −13 с 1 марта 1900 г. до перехода на новый стиль в феврале 1918 г. Тот же расчёт — в конвертере Стива Морса для надгробий (stevemorse.org/jcal/tombstone.html).
+Year in letters + 5000 (if the thousands are omitted) − 3760 = Gregorian year; for the months Tishrei, Cheshvan, Kislev and part of Tevet the result is **one year less** (+1239 instead of +1240 to the abbreviated year). Example: 12 Kislev תרס״ה → 20 November 1904; 12 Nisan of the same year → 17 April 1905. In a leap year check **Adar I or Adar II**: 7 Adar תרע״ג is 14 February or 16 March 1913. Use the Hebcal converter (`references/reading-matzevot.md`). To compare with Russian documents, convert to the Julian calendar: −12 days in the 19th century, −13 from 1 March 1900 until the switch to the new style in February 1918. The same calculation is done by Steve Morse's tombstone converter (stevemorse.org/jcal/tombstone.html).
 
-## Шаг 5. Соседи и участки
+## Step 5. Neighbours and plots
 
-- Рядом лежащие часто родня: супруги рядом, дети у родителей, семейные ограды. Сфотографируй и прочитай **соседние** камни.
-- В США общества земляков (landsmanshaftn) покупали участки; секция общества называет **местечко происхождения** — база JGSNY по названию общества или местечка. Это довод, не доказательство: в общество вступали и выходцы из соседних мест; подтверждай натурализацией и манифестами.
-- В Израиле и на советских кладбищах участки шли по годам захоронения: номер участка сужает год.
+- Neighbouring graves are often relatives: spouses side by side, children near their parents, family enclosures. Photograph and read the **neighbouring** stones too.
+- In the USA, landsmanshaft societies (*landsmanshaftn*, hometown societies) bought plots; the society's section names the **shtetl of origin**. Use the JGSNY database by society or shtetl name. This is an argument, not proof: people from neighbouring places also joined the society; confirm with naturalization papers and ship manifests.
+- In Israel and in Soviet cemeteries the plots were allocated by year of burial: the plot number narrows down the year.
 
-## Шаг 6. Книги и записи о захоронениях
+## Step 6. Books and records of burials
 
-- **Пинкасы похоронных братств** (хевра кадиша) уцелели единицами; известные хранятся в YIVO и Национальной библиотеке Израиля. Ищи по названию местечка в каталогах.
-- **Кладбищенские книги** советского времени — у администрации кладбища или городской ритуальной службы; запись о смерти — в ЗАГС (`soviet-era-records`).
-- Уничтоженное кладбище: ищи списки, сделанные до сноса (краеведы, ESJF, JOWBR), снимки в книгах памяти и снимки похорон в семейных альбомах (`interpreting-jewish-family-photos`). Пример изданного реестра: кладбище Кишинёва — 18 751 запись и 14 150 снимков в JOWBR, по книге-реестру 2004 г. (проект Bessarabia SIG) [по выдаче].
-- **Родословная «от великого раввина»** (ихус) проверяется камнями: имена отцов на надгробиях и хронология поколений должны сходиться с пересказом. См. `reading-hebrew-yiddish-sources`, раздел о раввинских семьях.
+- **Burial-society pinkasim** (*pinkas*, record book of the hevra kadisha): only a handful survive; the known ones are held at YIVO and the National Library of Israel. Search the catalogues by shtetl name.
+- **Cemetery registers** of the Soviet period are held by the cemetery administration or the city funeral service; the record of death is in the ZAGS (Soviet civil registry office) (`soviet-era-records`).
+- A destroyed cemetery: look for lists made before the demolition (local historians, ESJF, JOWBR), photographs in memorial books and photographs of funerals in family albums (`interpreting-jewish-family-photos`). An example of a published register: the Chisinau cemetery has 18,751 records and 14,150 photographs in JOWBR, taken from a 2004 register book (Bessarabia SIG project) [from search results].
+- **A pedigree "from a great rabbi"** (*yichus*) is tested against the stones: the fathers' names on the gravestones and the chronology of the generations must agree with the family story. See `reading-hebrew-yiddish-sources`, the section on rabbinic families.
 
-## Шаг 7. Фото на месте
+## Step 7. Photographs at the site
 
-Сфотографировать камень может сам человек или волонтёр. Договаривается, просит и платит **только человек** — ты не пишешь и не отправляешь запросы. Подскажи, как снимать: камень целиком и надпись крупно, при боковом свете, обе стороны, соседние камни, общий план с ориентиром, GPS. Камень не чистить химией и не обводить мелом.
+The person themselves or a volunteer can photograph the stone. Arranging it, asking and paying is done **only by the person**: you do not write or send requests. Advise how to shoot: the whole stone and the inscription close up, in raking side light, both sides, the neighbouring stones, a wide shot with a landmark, GPS. Do not clean the stone with chemicals or outline the letters with chalk.
 
-## Шаг 8. Что считать находкой и как писать «не найдено»
+## Step 8. What counts as a find and how to write "not found"
 
-- **Находка**: фото камня (или запись базы со ссылкой), транскрипция дословно, перевод, дата в обоих календарях, совпадение **минимум двух** признаков с известным человеком (имя + имя отца, имя + дата, имя + место).
-- **Не найдено**: перечисли базы, написания, кладбища и их статус (сохранилось / снесено / охват базы). Формула: «в базах X, Y по написаниям A, B не найден; кладбище частично уничтожено; вывод о месте захоронения не делается».
+- **A find**: a photo of the stone (or a database record with a link), a verbatim transcription, a translation, the date in both calendars, and a match of **at least two** features with a known person (name + father's name, name + date, name + place).
+- **Not found**: list the databases, the spellings, the cemeteries and their status (survives / demolished / coverage of the database). Formula: "Not found in databases X, Y under spellings A, B; the cemetery is partly destroyed; no conclusion about the place of burial is drawn."
 
-## Формат ответа
+## Answer format
 
-1. Где человек мог быть похоронен и что известно о кладбищах (сохранность, годы камней).
-2. Где искали и что нашли — со ссылками и пометками.
-3. Чтение камня: транскрипция, перевод, дата → григорианская, символы и что они значат.
-4. Новые сведения (имя отца, коэн/левит, город) и следующий документ, который их проверит.
-5. Предложи заполнить `assets/gravestone-record.md` для каждого камня.
+1. Where the person could have been buried and what is known about the cemeteries (state of preservation, years of the stones).
+2. Where you searched and what you found, with links and markers.
+3. Reading of the stone: transcription, translation, date → Gregorian, symbols and what they mean.
+4. New information (father's name, Kohen/Levite, town) and the next document that will check it.
+5. Offer to fill in `assets/gravestone-record.md` for each stone.

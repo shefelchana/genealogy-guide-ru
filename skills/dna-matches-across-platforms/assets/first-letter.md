@@ -1,6 +1,6 @@
-# Первое письмо совпаденцу (английский B1)
+# First letter to a match (English B1)
 
-Правила: коротко, просто, как обычный человек. Одно общее место, две фамилии, вопрос про язык, просьба о GEDmatch. Без сМ-таблиц, без длинных благодарностей, без «I'd love to», «reach out», «delve». Отправляет пользователь — на email из карточки совпадения.
+Rules: short, simple, like an ordinary person — plain B1 English, sounds like a person, not like AI. One shared place, two surnames, a question about language, a request about GEDmatch. No cM tables, no long thanks, no "I'd love to", "reach out", "delve". The user sends it — to the email from the match card.
 
 ```text
 Subject: DNA match - [Surname 1] and [Surname 2] from [Village]
@@ -18,4 +18,4 @@ Thank you,
 [Your name]
 ```
 
-Если ответа нет 3–4 недели — одно короткое напоминание, без нажима. Молчание — не отказ.
+If there is no reply in 3–4 weeks — one short reminder, without pressure. Silence is not a refusal.

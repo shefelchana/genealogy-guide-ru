@@ -1,24 +1,24 @@
-# Журнал разбора совпадений: [сайт], [дата]
+# Match analysis journal: [site], [date]
 
-**Чей тест / набор:** (условно)  **Перенесён из:**  **Всего совпадений:**  **Выгружено:** (поля)
-**Закрыто / платно:**
-**Пороги:** самый длинный ≥ 30 — писать; 20–30 — смотреть; 15–20 — слабо; < 15 при эндогамии — фон.
+**Whose test / kit:** (placeholder name)  **Transferred from:**  **Total matches:**  **Exported:** (fields)
+**Closed / paid:**
+**Thresholds:** longest ≥ 30 — write; 20–30 — look; 15–20 — weak; < 15 under endogamy — background.
 
-## 0. Фазировка
-| Родственник с доступом | Связан только через | Сколько общих |
+## 0. Phasing
+| Relative with access | Connected only through | How many shared |
 |---|---|---|
 
-## 1. По сторонам
-| Сторона | Совпаденец (условно) | сМ / сегм / max | Признаки (общие, места, фамилии) | Версия и уровень |
+## 1. By side
+| Side | Match (placeholder name) | cM / segm / max | Signs (shared, places, surnames) | Version and level |
 |---|---|---|---|---|
 
-## 2. Поиск по местам
-Искали: (названия, написания, соседние сёла)  →  Нашли:
+## 2. Search by place
+Searched for: (names, spellings, neighbouring villages)  →  Found:
 
-## 3. Сверка между сайтами и сегменты
-| Совпаденец | Сайт 1 | Сайт 2 | Хромосома, позиция | Триангуляция / фон |
+## 3. Cross-checking between sites and segments
+| Match | Site 1 | Site 2 | Chromosome, position | Triangulation / background |
 |---|---|---|---|---|
 
-## 4. Что ДНК опровергает / что допускает
+## 4. What DNA refutes / what it allows
 
-## 5. Что дальше (документы, письма — решение пользователя)
+## 5. What next (documents, letters — the user's decision)

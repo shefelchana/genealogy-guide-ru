@@ -1,80 +1,80 @@
-# Шаблон задания агенту
+# Task template for an agent
 
-Скопируй, заполни все поля в квадратных скобках, лишнее удали. Если поле нечем заполнить (например, нет контрольной записи), напиши об этом в задании явно и учти при приёме результата.
+Copy it, fill in all the fields in square brackets, delete what is not needed. If a field cannot be filled (for example, there is no control record), say so explicitly in the task and allow for it when accepting the result.
 
 ```
-Задача: [один источник] — [что ищем] — [зачем это нужно].
+Task: [one source] — [what we are looking for] — [why it is needed].
 
-Уже известно (не переоткрывать):
-- [факт дословно, с шифром: архив, фонд-опись-дело, лист/кадр]
-- [факт …]
-Отведённые двойники (не наши, не докладывать как находку): [имя, год, место — почему отведён]
+Already known (do not rediscover):
+- [fact verbatim, with archival reference: archive, fond-inventory-file, folio/frame]
+- [fact …]
+Ruled-out lookalikes (not ours, do not report as a find): [name, year, place — why ruled out]
 
-Источник: [сайт, коллекция, плёнка/дело, кадры X–Y]
-Как устроена книга: [если известно — разделы, где мужские/женские записи, есть ли дубли съёмки]
-Контрольная запись (точно есть, найди её первой): [кадр/номер записи/дата/имена]
+Source: [site, collection, film/file, frames X–Y]
+How the book is arranged: [if known — sections, where the male/female entries are, whether there are duplicate shots]
+Control record (certainly exists, find it first): [frame/entry number/date/names]
 
-Что искать: [фамилия во всех написаниях, включая искажения и без первой буквы; имена; в какой колонке]
-Что НЕ нужно: [например, выводы о родстве, поиск в других источниках]
+What to look for: [surname in all spellings, including distortions and without the first letter; given names; in which column]
+What is NOT needed: [for example, conclusions about kinship, search in other sources]
 
-Как отчитываться:
-- пиши только то, что видишь; ожидаемое не досказывай;
-- на каждое попадание: кадр, номер записи, дословная цитата в орфографии оригинала, кроп в папку [папка агента];
-- неуверенное помечай «(?)» и пиши, что мешает прочесть;
-- журнал покрытия «кадр → записи № …» в файл [путь] после каждой пачки;
-- отмечай технические сбои: капча, коды ошибок 403/429, обрывы, пропущенные кадры;
-- «не найдено» — нормальный результат, но с охватом.
+How to report:
+- write only what you see; do not complete what you expect;
+- for each hit: frame, entry number, verbatim quotation in the original's spelling, crop saved to [agent's folder];
+- mark anything uncertain with "(?)" and say what prevents reading it;
+- a coverage log "frame → entries No. …" to the file [path] after each batch;
+- note technical failures: captcha, error codes 403/429, dropped connections, skipped frames;
+- "not found" is a normal result, but with coverage.
 
-Темп и ограничения:
-- не чаще [1 кадра / 1 запроса] в [N] секунд; пачки по [4]; перерыв каждые [30] кадров;
-- при капче или блокировке — остановись, ничего не нажимай, отчитайся, с какого кадра продолжать;
-- работай только в своей вкладке и своей папке;
-- пароли не вводи, писем не отправляй, ничего не оплачивай;
-- нет нужных инструментов — остановись и напиши «нужно решение человека»; системные скрипты (OS-level automation of other apps), снимки экрана, буфер обмена, настройки браузера и чужие вкладки не трогай;
-- в сетевых запросах — нейтральный User-Agent, без личных данных;
-- свой файл дописывай по ходу и не перезаписывай; рабочие файлы — во временной папке; уже скачано: [пути];
-- два технических нуля подряд (капча, вход, блокировка) — стоп и отчёт;
-- других агентов не запускай; если объём слишком велик — верни план и остановись.
+Pace and restrictions:
+- no more than [1 frame / 1 request] per [N] seconds; batches of [4]; a break every [30] frames;
+- on a captcha or block — stop, click nothing, report which frame to continue from;
+- work only in your own tab and your own folder;
+- do not enter passwords, send no letters, pay for nothing;
+- no suitable tools — stop and write "a human decision is needed"; do not touch system scripts (OS-level automation of other apps), screenshots, the clipboard, browser settings or other people's tabs;
+- in network requests — a neutral User-Agent, no personal data;
+- append to your own file as you go and do not overwrite; working files go in a temporary folder; already downloaded: [paths];
+- two technical zeros in a row (captcha, login, block) — stop and report;
+- do not launch other agents; if the volume is too large, return a plan and stop.
 
-Итоговый отчёт: находки (по форме выше) → контрольная запись (нашёл? как прочитал?) → охват → сбои → что осталось непрочитанным.
-```
-
----
-
-## Короткие варианты
-
-**Механик (скачивание, карта тома):**
-```
-Скачай [файл/кадры X–Y] с [адрес] в [папка]. Темп — [N] с между запросами.
-Проверь каждый файл: размер не нулевой, открывается, разрешение [≥ …].
-Построй карту тома: номер страницы → заголовок раздела/год/тип записей.
-Содержание не толкуй, почерк не читай. При ошибке доступа — повтори один раз через минуту, потом остановись и сообщи код ошибки.
-Других агентов не запускай.
-```
-
-**Исследователь (поиск в интернете):**
-```
-Найди [что] по [месту/теме, годы]. Источников проверь не больше [2–3], после каждого — запись в [файл отчёта].
-На каждое утверждение — адрес страницы и дословная цитата; пометь, открывал ли ты страницу или видел только выдачу поиска.
-Файлы проекта не правь, кроме своего отчёта. Капчи не проходи. Других агентов не запускай.
+Final report: finds (in the form above) → control record (found? how read?) → coverage → failures → what remains unread.
 ```
 
 ---
 
-## Пример заполнения (обобщённый)
+## Short variants
+
+**Mechanic (downloading, volume map):**
+```
+Download [file/frames X–Y] from [address] to [folder]. Pace — [N] s between requests.
+Check each file: size not zero, opens, resolution [≥ …].
+Build a volume map: page number → section heading/year/type of entries.
+Do not interpret the content, do not read handwriting. On an access error — retry once after a minute, then stop and report the error code.
+Do not launch other agents.
+```
+
+**Researcher (internet search):**
+```
+Find [what] for [place/topic, years]. Check no more than [2–3] sources, with an entry in [report file] after each.
+For every statement — the page address and a verbatim quotation; mark whether you opened the page or only saw the search results.
+Do not edit project files other than your own report. Do not pass captchas. Do not launch other agents.
+```
+
+---
+
+## Example of filling in (generalised)
 
 ```
-Задача: книга рождений еврейской общины города N за 1869 г. — найти детей Хаима и Ривки [фамилия] — проверить гипотезу Г-07 о том, что Мордко 1869 г. р. их сын.
+Task: birth register of the Jewish community of town N for 1869 — find the children of Chaim and Rivka [surname] — test hypothesis H-07 that Mordko, born 1869, is their son.
 
-Уже известно (не переоткрывать):
-- Мордко Хаимович [фамилия], 27 лет, в посемейном списке 1896 г. (архив А, ф. 1-2-345, л. 12, семья № 84).
-Отведённые двойники: Мордко Хаимович 1867 г. р. из местечка M (другая мать, см. Г-05).
+Already known (do not rediscover):
+- Mordko Chaimovich [surname], 27 years old, in the family list of 1896 (archive A, fond 1-2-345, fol. 12, family No. 84).
+Ruled-out lookalikes: Mordko Chaimovich, born 1867, from shtetl M (different mother, see H-05).
 
-Источник: FamilySearch, плёнка DGS 00XXXXXXX, кадры 210–290 (книга 1869 г.).
-Как устроена книга: мужские записи на левой половине разворота; развороты сняты дважды подряд.
-Контрольная запись: № 41 муж., кадр 224 (по индексу JewishGen — сын Лейбы и Хаи).
+Source: FamilySearch, film DGS 00XXXXXXX, frames 210–290 (book of 1869).
+How the book is arranged: male entries on the left half of the spread; spreads were shot twice in a row.
+Control record: No. 41 male, frame 224 (per the JewishGen index — son of Moshko and Ita).
 
-Что искать: фамилия [вариант 1, вариант 2, без первой буквы]; колонка «отец и мать».
+What to look for: surname [variant 1, variant 2, without the first letter]; the "father and mother" column.
 …
-Темп: не чаще кадра в 10 с; перерыв каждые 30 кадров.
+Pace: no more than one frame per 10 s; a break every 30 frames.
 ```

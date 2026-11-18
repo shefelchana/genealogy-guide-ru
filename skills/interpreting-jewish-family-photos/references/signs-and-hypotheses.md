@@ -1,82 +1,82 @@
-# Признаки образа жизни на снимке и что из них следует
+# Signs of way of life in a photograph and what follows from them
 
-Пометки: **[открыто]** — страница прочитана при составлении (октябрь 2026); **[по выдаче]** — только сниппет поисковой выдачи. Строки без пометки — рабочие ориентиры: сверяй их с датированными снимками той же среды, прежде чем опираться.
+Markers: **[checked]** — the page was read when this was compiled (October 2026); **[from search snippet]** — only a search-result snippet; rows without a marker are working guidelines: check them against dated photographs of the same milieu before relying on them.
 
-## Содержание
-1. Одежда, волосы, головные уборы
-2. Ритуальные предметы и интерьер
-3. События и групповые снимки
-4. Военные снимки
-5. Эмиграция, документы, снимки «на память»
-6. Советские снимки: что исчезает из кадра
-7. Ателье в местечках
+## Contents
+1. Clothing, hair, headwear
+2. Ritual objects and interior
+3. Events and group photographs
+4. Military photographs
+5. Emigration, documents, "keepsake" photographs
+6. Soviet photographs: what disappears from the frame
+7. Studios in shtetls
 
 ---
 
-## 1. Одежда, волосы, головные уборы
+## 1. Clothing, hair, headwear
 
-| Признак | О чём говорит | Чего НЕ доказывает |
+| Sign | What it indicates | What it does NOT prove |
 |---|---|---|
-| **Капота** (длинный кафтан или сюртук), кушак | традиционный уклад; Электронная еврейская энциклопедия называет её основой мужского костюма вместе с ермолкой и меховой шапкой [открыто: eleven.co.il, статья «Одежда»] | хасидизма — капоту носили и нехасиды |
-| **Штраймл** (меховая шапка) | хасидская среда, чаще суббота или праздник; хасиды особо держались костюма [открыто: там же] | что снимок сделан в субботу: в ателье могли надеть праздничное |
-| Картуз, тёмная шляпа | обычный головной убор горожанина и местечкового еврея | религиозности |
-| **Ермолка (кипа)** на улице или в ателье | соблюдение; после указа 1852 г. — в синагоге и дома [по выдаче: сводка указов] | что человек раввин |
-| Борода, **пейсы** | традиционный уклад, обычно старшее поколение | возраста: борода старит на снимке |
-| Бритое лицо, усы, городской костюм | ассимиляция, город, профессия | отказа от религии |
-| **Парик (шейтл) или платок** у женщины | замужество и соблюдение обычая; энциклопедия называет парик и платок признаком замужней [открыто: eleven.co.il] | незамужества при непокрытой голове: в городе многие не покрывали |
-| Харбанд, штернтихл (жемчужное очелье), купке | традиционный женский праздничный убор XIX в. [открыто: там же] | точного года — убор хранили и передавали |
-| Гимназическая, реальная, студенческая форма | образование, город, обычно состоятельная семья; ищи списки учащихся | места жительства семьи: учились и в чужом городе |
+| **Kapote** (a long caftan or coat), a sash | a traditional way of life; the Electronic Jewish Encyclopedia (in Russian) names it as the basis of the men's costume together with the yarmulke and the fur hat [checked: eleven.co.il, article "Clothing"] | Hasidism — non-Hasidim also wore the kapote |
+| **Shtreimel** (fur hat) | a Hasidic milieu, more often Sabbath or a festival; Hasidim held especially firmly to the costume [checked: same] | that the photograph was taken on a Sabbath: a studio might put on something festive |
+| Peaked cap (*kartuz*), dark hat | ordinary headwear of a townsman and of a shtetl Jew | religiosity |
+| **Yarmulke (kippah)** outdoors or in a studio | observance; after the decree of 1852, in the synagogue and at home [from search snippet: summary of decrees] | that the man is a rabbi |
+| Beard, **peyes** | a traditional way of life, usually the older generation | age: a beard makes a person look older in a photograph |
+| Clean-shaven, moustache, a city suit | assimilation, the city, a profession | abandonment of religion |
+| **Wig (sheitel) or kerchief** on a woman | marriage and observance of custom; the encyclopedia names the wig and kerchief as the sign of a married woman [checked: eleven.co.il] | being unmarried when the head is uncovered: in the city many did not cover it |
+| Harband, shterntikhl (pearl headband), kupke | traditional festive women's headdress of the 19th century [checked: same] | an exact year — the headdress was kept and passed on |
+| Gymnasium, *realschule* or student uniform | education, the city, usually a well-off family; look for lists of pupils | the family's place of residence: they also studied in another city |
 
-**Законы Николая I** [открыто: eleven.co.il, статья «Одежда», 08.10.2026]: Положение о коробочном сборе 1839 г. — налог на шитьё еврейской одежды, с 1844 г. — на её ношение; указ 1 мая 1850 г. запретил ношение еврейской одежды с 1 января 1851 г.; в апреле 1851 г. еврейкам запрещено брить голову; разъяснения запрещали пейсы, длинные капоты, пояса, меховые шапки; разъяснение 1865 г. смягчило запрет. В Царстве Польском — налог с 1845 г. и указ 1846 г., до 1850 г. традиционную одежду можно было носить за плату от 3 до 50 руб. [по выдаче: YIVO «Dress», Pinkas HaKehillot]. Применяли закон непоследовательно. Вывод для снимков: законы — фон, **не способ датировки**; в 1860–1910-е традиционный костюм — обычная картина местечка, а не протест.
+**The laws of Nicholas I** [checked: eleven.co.il, article "Clothing", 8.10.2026]: the Regulation on the box tax (*korobochny sbor*) of 1839 — a tax on the making of Jewish clothing, from 1844 on wearing it; the decree of 1 May 1850 banned the wearing of Jewish clothing from 1 January 1851; in April 1851 Jewish women were forbidden to shave their heads; clarifications banned peyes, long kapotes, sashes, fur hats; a clarification of 1865 softened the ban. In the Kingdom of Poland — a tax from 1845 and a decree of 1846; until 1850 traditional clothing could be worn for a fee of 3 to 50 roubles [from search snippet: YIVO "Dress", Pinkas HaKehillot]. The law was applied inconsistently. Conclusion for photographs: the laws are background, **not a way of dating**; in the 1860s–1910s a traditional costume is an ordinary sight in a shtetl, not a protest.
 
-**Разница поколений** на одном снимке (дед в капоте, внук в костюме) — норма 1890–1930-х. Не принимай её за смешанный брак или за две разные семьи.
+**A difference of generations** in one photograph (a grandfather in a kapote, a grandson in a suit) is normal for the 1890s–1930s. Do not take it for a mixed marriage or for two different families.
 
-## 2. Ритуальные предметы и интерьер
+## 2. Ritual objects and interior
 
-- **Талит, тфилин, раскрытая книга** — подчёркнутая учёность или ритуальный портрет (бар-мицва, раввин, меламед). У мальчика с тфилин — возраст около 13 лет: ищи метрику рождения за 13 лет до снимка.
-- **Субботние подсвечники, ханукия, кидушный бокал** на столе дома — соблюдающий дом. В ателье — проверь, не реквизит ли.
-- **Портреты раввинов на стене**, полки с книгами — религиозная среда; портреты Герцля — сионистская.
-- **Вывеска лавки**, мастерская на заднем плане — профессия. Профессию ищи в адрес-календарях, памятных книжках, торговых списках.
+- **Tallit, tefillin, an open book** — pronounced learning or a ritual portrait (bar mitzvah, rabbi, *melamed*). A boy with tefillin is about 13: look for a birth record 13 years before the photograph.
+- **Shabbat candlesticks, a hanukkiah, a Kiddush cup** on a table at home — an observant home. In a studio, check whether it is a prop.
+- **Portraits of rabbis on the wall**, shelves of books — a religious milieu; portraits of Herzl — a Zionist one.
+- **A shop sign**, a workshop in the background — a profession. Look for the profession in address calendars, memorial books (*pamyatnye knizhki*), trade lists.
 
-## 3. События и групповые снимки
+## 3. Events and group photographs
 
-| Тип снимка | Признаки | Гипотеза | Документ |
+| Type of photograph | Signs | Hypothesis | Document |
 |---|---|---|---|
-| Свадебный портрет | пара, у невесты фата и белое платье, цветы | брак, год ± 1 | метрика брака раввината; с 1919–1920-х — ЗАГС |
-| Хупа на улице или во дворе | балдахин, толпа | свадьба, место | то же; место съёмки часто = место брака |
-| Похороны, открытие памятника | группа у могилы, свежий камень | смерть, место захоронения | надгробие, метрика смерти; снимок могилы часто посылали родным за океан, оплатившим камень |
-| Хедер, талмуд-тора | мальчики 4–12 лет вокруг меламеда | обучение, местечко | метрики рождения мальчиков ±3 г. |
-| Класс гимназии или училища | форма, учителя в центре, табличка с годом | учёба, город | списки учащихся, выпускные книги, отчёты училищ |
-| Училище **ОРТ** (Общество ремесленного труда) | станки, мастерские, подпись общества | ремесленная выучка; фотоархив ОРТ на Украине 1920–1930-х [открыто: myshtetl.org] | списки учащихся, архив ОРТ |
-| Колония, колхоз, **ОЗЕТ** | поле, техника, лозунги на идише и русском | переселение 1925–1938 гг. [открыто: myshtetl.org, раздел «Фотоархив ОЗЕТ»] | списки переселенцев, колхозные книги |
-| Сионистский кружок, «Тарбут», молодёжное движение | флаг, плакат на иврите, форма движения | межвоенная Польша, Румыния, Литва, Латвия | книги памяти местечка (yizkor), пресса |
-| Похоронное братство, правление общины, благотворительное общество | мужчины за столом, книга-пинкас | роль в общине | пинкасы и отчёты общин, пресса |
+| Wedding portrait | a couple, a veil and white dress on the bride, flowers | marriage, year ± 1 | marriage record of the rabbinate; from the 1919–1920s, ZAGS |
+| Chuppah in the street or yard | a canopy, a crowd | wedding, place | the same; the place of the photograph is often the place of the marriage |
+| Funeral, unveiling of a monument | a group at a grave, a fresh stone | death, burial place | gravestone, death record; a photograph of the grave was often sent to relatives overseas who had paid for the stone |
+| Kheder, Talmud Torah | boys of 4–12 around a *melamed* | schooling, shtetl | birth records of the boys ±3 years |
+| Class of a gymnasium or school | uniform, teachers in the centre, a sign with a year | studies, city | lists of pupils, graduation books, school reports |
+| **ORT** school (Society for Trades and Agricultural Labour) | machines, workshops, the society's caption | craft training; the ORT photo archive in Ukraine of the 1920s–1930s [checked: myshtetl.org] | lists of pupils, ORT archive |
+| Colony, kolkhoz, **OZET** (Society for the Settlement of Toiling Jews on the Land) | a field, machinery, slogans in Yiddish and Russian | resettlement of 1925–1938 [checked: myshtetl.org, section "OZET photo archive"] | lists of settlers, kolkhoz books |
+| Zionist club, "Tarbut", youth movement | a flag, a poster in Hebrew, a movement uniform | interwar Poland, Romania, Lithuania, Latvia | memorial (yizkor) books of the shtetl, press |
+| Burial society, community board, charitable society | men at a table, a minute-book (*pinkas*) | role in the community | pinkasim and reports of communities, press |
 
-Групповые снимки местечек часто напечатаны в **книгах памяти** (yizkor) с подписями — ищи там тот же снимок или тех же людей.
+Group photographs of shtetls are often printed in **memorial (yizkor) books** with captions — look there for the same photograph or the same people.
 
-## 4. Военные снимки
+## 4. Military photographs
 
-- **Царская армия** до 1917 г.: евреи служили с 1827 г. Солдатский портрет в ателье гарнизонного города указывает на место службы, а не на место жительства.
-- **Первая мировая**: открытки-портреты с надписями на идише родным. Документы — списки потерь (раненые, пленные, убитые) по губернии и уезду призыва.
-- **Красная армия**: петлицы до 1943 г., погоны — с 1943 г. (см. `dating-old-photos`). Документы — ОБД, «Память народа», навык `soviet-era-records`.
-- Форма говорит о **роде войск** (пехота, кавалерия, артиллерия, флот), шифровка или номер на погонах — иногда о полке; отсюда — призывные списки уезда и списки потерь. Форму и знаки различия опознавай по справочникам униформы, не на глаз. Город ателье как подсказка о месте — в `dating-old-photos`.
+- **The tsarist army** before 1917: Jews served from 1827. A soldier's portrait taken in a garrison town's studio points to the place of service, not of residence.
+- **World War I**: portrait postcards with Yiddish inscriptions to relatives. Documents — casualty lists (wounded, prisoners, killed) by the guberniya and district of conscription.
+- **The Red Army**: collar tabs until 1943, shoulder boards from 1943 (see `dating-old-photos`). Documents — OBD, "People's Memory" (*Pamyat naroda*), skill `soviet-era-records`.
+- The uniform tells the **branch** (infantry, cavalry, artillery, navy); a cipher or number on shoulder boards sometimes tells the regiment; from there, the district's draft lists and casualty lists. Identify the uniform and insignia from uniform reference books, not by eye. The studio's town as a hint about the place is in `dating-old-photos`.
 
-## 5. Эмиграция, документы, снимки «на память»
+## 5. Emigration, documents, "keepsake" photographs
 
-- **Открытка-портрет** с надписью «צום אנדענק» (идиш, «на память») или «למזכרת» (иврит) — снимок для родных; надпись может назвать отправителя, адресата и город.
-- **Монтаж**: в эмигрантских семьях вклеивали в группу портрет уехавшего или умершего. Проверь тени, масштаб, края.
-- **Маленький снимок с полукругом печати или следом тиснения** — снят с документа: паспорта, вида на жительство, ходатайства о натурализации. В США декларации о намерении с **1 июля 1929 г.** содержат фото заявителя — на копиях Бюро натурализации и самого заявителя, на судебном оригинале фото нет [по выдаче: USCIS «History of the Declaration of Intention»]. Ищи само дело — навык `tracing-emigrants-to-origin`.
-- **Общества земляков** (landsmanshaftn) в США фотографировались с флагом, где название местечка, и покупали кладбищенские участки — см. `researching-jewish-cemeteries`.
+- **A portrait postcard** with the inscription «צום אנדענק» (Yiddish, "as a keepsake") or «למזכרת» (Hebrew, "as a memento") — a photograph for relatives; the inscription may name the sender, the addressee and the city.
+- **Montage**: in emigrant families a portrait of someone who had left or died was pasted into a group. Check shadows, scale, edges.
+- **A small photograph with a semicircle of a seal or an embossing mark** was taken from a document: a passport, a residence permit, a naturalization petition. In the US, declarations of intention from **1 July 1929** contain the applicant's photograph — on the copies of the Naturalization Bureau and of the applicant himself; the court original has no photo [from search snippet: USCIS "History of the Declaration of Intention"]. Look for the file itself — skill `tracing-emigrants-to-origin`.
+- **Hometown societies** (landsmanshaftn) in the US were photographed with a flag bearing the name of the shtetl and bought cemetery plots — see `researching-jewish-cemeteries`.
 
-## 6. Советские снимки: что исчезает из кадра
+## 6. Soviet photographs: what disappears from the frame
 
-- С 1920-х уходят ермолки, бороды, ритуальные предметы — антирелигиозная политика и ассимиляция, а не обязательно отказ семьи от обычаев. Старшее поколение в платке или с бородой рядом с внуками-пионерами — обычная картина 1920–1930-х.
-- Школы на идише (1920–1930-е) снимали классы с надписями на идише — ищи списки учащихся и метрики детей.
-- **Вырезанные или замазанные лица** — часто репрессированный или эмигрировавший родственник. Это повод искать по базам репрессированных (`soviet-era-records`).
-- Послевоенные **увеличенные портреты** (мастерские фотоувеличения): ретушь меняет одежду и причёску — для чтения образа жизни не годятся без исходного снимка.
+- From the 1920s yarmulkes, beards and ritual objects disappear — anti-religious policy and assimilation, not necessarily the family's abandonment of custom. An older generation in a kerchief or with a beard next to grandchildren in Pioneer uniform is an ordinary sight of the 1920s–1930s.
+- Yiddish-language schools (1920s–1930s) photographed classes with Yiddish inscriptions — look for lists of pupils and the children's birth records.
+- **Cut-out or painted-over faces** are often a repressed or emigrated relative. This is a reason to search the databases of the repressed (`soviet-era-records`).
+- Postwar **enlarged portraits** (photo-enlargement workshops): retouching changes clothing and hairstyle — they are unsuitable for reading a way of life without the original photograph.
 
-## 7. Ателье в местечках
+## 7. Studios in shtetls
 
-- Штамп ателье на русском, польском или идише называет местечко и иногда улицу. Годы работы ищи по справочникам из `dating-old-photos` (FotoTikon, «Большой Русский Альбом», словарь Попова).
-- Отдельной базы еврейских ателье местечек нет (см. `dating-old-photos`). Ищи ателье местечка или ближайшего уездного города.
-- Ателье было там, где **снимались**, а не там, где жили: в уездный город ездили на ярмарку, на призыв, к врачу.
+- A studio stamp in Russian, Polish or Yiddish names the shtetl and sometimes the street. Look for the years of work in the directories listed in `dating-old-photos` (FotoTikon, the "Great Russian Album", Popov's dictionary).
+- There is no separate database of Jewish studios in shtetls (see `dating-old-photos`). Look for the studio of the shtetl or of the nearest district town.
+- The studio was where people **were photographed**, not where they lived: people went to the district town for a fair, for conscription, to a doctor.

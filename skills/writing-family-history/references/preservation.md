@@ -1,28 +1,28 @@
-# Сохранность семейной истории и архива
+# Preserving the family history and archive
 
-## Правило трёх копий (FamilySearch Newsroom, формулировка Дика Истмена)
-- **три копии, два типа носителей, три места, одно — вне дома**;
-- принцип **LOCKSS** — «много копий — сохранность»;
-- важное — **в нескольких форматах**: текст в .docx, .pdf и .txt;
-- заранее скажите тому, кто продолжит исследование, где лежат копии и как получить к ним доступ (пароли пользователь передаёт сам, не через ИИ).
+## The rule of three copies (FamilySearch Newsroom, in Dick Eastman's formulation)
+- **three copies, two types of media, three places, one outside the home**;
+- the principle of **LOCKSS** — "lots of copies keep stuff safe";
+- keep what matters **in several formats**: text as .docx, .pdf and .txt;
+- tell in advance whoever will continue the research where the copies are and how to get access to them (the user passes on passwords personally, not through AI).
 
-## Порядок Библиотеки Конгресса («Personal Archiving: Photos»)
-1. Найти все файлы — на дисках, телефонах, в облаках.
-2. Отобрать то, что стоит хранить.
-3. Назвать понятно и добавить описание (кто на фото, откуда документ).
-4. Минимум две копии в местах, **физически удалённых** друг от друга.
-5. Проверять раз в год, что копии открываются.
-6. Переносить на новый носитель примерно **каждые 5 лет**.
-7. Опись хранить вместе с важными бумагами.
+## The Library of Congress procedure ("Personal Archiving: Photos")
+1. Find all the files — on disks, phones, in clouds.
+2. Select what is worth keeping.
+3. Name them clearly and add a description (who is in the photo, where the document comes from).
+4. At least two copies in places **physically distant** from each other.
+5. Check once a year that the copies open.
+6. Move to a new medium about **every 5 years**.
+7. Keep the inventory together with the important papers.
 
-Сканы: **мастер-копия в TIFF**, рабочая — в JPEG.
+Scans: **a master copy in TIFF**, a working one in JPEG.
 
-## Что ещё сделать
-- Записка «как устроен мой архив» в корне папки.
-- Готовую историю — родным в печатном виде: бумага переживает смену форматов.
-- **FamilySearch Memories** — фото, документы, рассказы с привязкой к людям в дереве. По справке FamilySearch, загруженные воспоминания **по умолчанию публичны** (даже с живыми людьми на снимке) и могут находиться через Google; приватным воспоминание делают вручную при загрузке или на его странице. Сведения о живых туда не выкладывайте.
+## What else to do
+- A note "how my archive is arranged" in the root of the folder.
+- Give the finished history to the relatives in printed form: paper survives changes of format.
+- **FamilySearch Memories** — photos, documents, stories attached to people in the tree. According to FamilySearch's help, uploaded memories are **public by default** (even with living people in the picture) and can be found through Google; a memory is made private by hand at upload or on its page. Do not post information about living people there.
 
-## Куда передать оригиналы
-- **Яд ва-Шем, «Gathering the Fragments»** (с 2011 г.) — фото, письма, документы, предметы, в дар или во временное пользование; консервируют, каталогизируют, оцифровывают.
-- **Центральный государственный архив Москвы** принимает семейные архивы (бывший Центральный московский архив-музей личных собраний); порядок передачи не проверялся.
-- Перед передачей всё отсканировать, копию оставить в семье, записать, что, куда, когда передано и номер хранения.
+## Where to hand over originals
+- **Yad Vashem, "Gathering the Fragments"** (since 2011) — photos, letters, documents, objects, as a gift or on temporary loan; they conserve, catalogue and digitise.
+- **The Central State Archive of Moscow** accepts family archives (the former Central Moscow Archive-Museum of Personal Collections); the procedure for handing over was not checked.
+- Before handing over, scan everything, keep a copy in the family, and note what was handed over, where, when, and the storage number.

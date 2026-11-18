@@ -1,32 +1,32 @@
-# Где брать исторический контекст
+# Where to get historical context
 
-Контекст всегда со ссылкой, как и факт о семье. Если сведение взято из энциклопедии, укажи статью.
+Context always carries a reference, like a fact about the family. If a piece of information is taken from an encyclopaedia, give the article.
 
-## Энциклопедии
-- **Еврейская энциклопедия Брокгауза и Ефрона** (1908–1913) — статьи о городах и местечках, общинах, законах, обычаях дореволюционной эпохи.
-- **Российская еврейская энциклопедия** — биографии и места.
-- **Электронная еврейская энциклопедия** (ЭЕЭ).
-- **YIVO Encyclopedia of Jews in Eastern Europe** — история, быт, институты.
-- Общие: Энциклопедический словарь Брокгауза и Ефрона, «Географическо-статистический словарь», памятные книжки губерний.
+## Encyclopaedias
+- **The Jewish Encyclopedia of Brockhaus and Efron** (*Evreiskaya entsiklopediya Brokgauza i Efrona*, 1908–1913) — articles on towns and shtetls, communities, laws, customs of the pre-revolutionary era.
+- **The Russian Jewish Encyclopedia** (*Rossiiskaya evreiskaya entsiklopediya*) — biographies and places.
+- **The Electronic Jewish Encyclopedia** (*Elektronnaya evreiskaya entsiklopediya*, EEE).
+- **YIVO Encyclopedia of Jews in Eastern Europe** — history, daily life, institutions.
+- General: the Brockhaus and Efron Encyclopaedic Dictionary, the "Geographical-Statistical Dictionary", the guberniya memorial calendars (*pamyatnye knizhki*).
 
-## О местечке
-- **Книги памяти (yizkor)** о местечках — воспоминания уроженцев, планы, списки погибших.
-- **Pinkas HaKehillot** — энциклопедия общин.
-- **Справочники населённых мест** и памятные книжки губерний — подчинение, население, промыслы, учреждения.
-- **Газеты эпохи** — корреспонденции из местечек: пожары, ярмарки, выборы раввина.
+## About the shtetl
+- **Memorial books (yizkor)** about shtetls — memoirs of natives, plans, lists of the dead.
+- **Pinkas HaKehillot** — an encyclopaedia of communities.
+- **Gazetteers of inhabited places** and guberniya memorial calendars — subordination, population, trades, institutions.
+- **Newspapers of the era** — correspondences from shtetls: fires, fairs, the election of a rabbi.
 
-## Голоса эпохи
-- **«Прожито»** — дневники XVIII–XX веков, поиск по месту и дате.
-- Мемуары уроженцев тех же мест.
+## Voices of the era
+- **"Prozhito"** — diaries of the 18th–20th centuries, searchable by place and date.
+- Memoirs of natives of the same places.
 
-## О быте, профессиях, сословиях — что объяснить читателю
-- мещанин, купец второй гильдии, казённый раввин, кантонист;
-- черта оседлости, ревизия, посемейный список;
-- агуна (брошенная жена, искавшая мужа, в том числе через газету);
-- эвакуация 1941 г., эвакокарточки;
-- смена границ (например, юг Бессарабии в 1856–1878 гг. был румынским — это объясняет отсутствие русской метрики).
+## On daily life, professions, estates — what to explain to the reader
+- *meshchanin* (townsman), merchant of the second guild, crown rabbi (*kazyonny ravvin*), cantonist;
+- the Pale of Settlement, the revision, the family list (*posemeinyi spisok*);
+- the *agunah* (an abandoned wife who looked for her husband, including through a newspaper);
+- the evacuation of 1941, evacuation cards;
+- changes of borders (for example, the south of Bessarabia in 1856–1878 was Romanian — which explains the absence of a Russian metrical record).
 
-## Чего не делать
-- Не переносить общую историю на семью как факт («семья бежала от погрома» без документа).
-- Не брать описания из художественной литературы как свидетельство о конкретном месте.
-- Не использовать сведения из чужих онлайн-деревьев как контекст: это чужие гипотезы.
+## What not to do
+- Do not transfer general history onto the family as fact ("the family fled a pogrom" without a document).
+- Do not take descriptions from fiction as evidence about a specific place.
+- Do not use information from other people's online trees as context: these are other people's hypotheses.

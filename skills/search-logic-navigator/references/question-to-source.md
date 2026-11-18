@@ -1,32 +1,32 @@
-# Какой вопрос — куда идти (шпаргалка)
+# Which question — where to go (cheat sheet)
 
-Читай, когда понятен вопрос, но не ясно, с какого источника начать. Состояние сайтов — на октябрь 2026; сайты меняются, проверяй доступность. Порядок внутри строки — от дешёвого (индекс, полнотекст) к дорогому (полистное чтение).
+Read this when the question is clear but it is not obvious which source to start with. The state of the sites is as of October 2026; sites change, so check availability. The order within a row goes from cheap (index, full text) to expensive (page-by-page reading).
 
-| Вопрос | С чего начать |
+| Question | Where to start |
 |---|---|
-| Что сохранилось по местечку и в каком архиве | Routes to Roots или книга М. Вайнер → «Зведений каталог метричних книг» (Украина) → опись архива (сайт архива, Commons) → индекс JewishGen / FamilySearch → сам скан |
-| Как место называлось и к какому уезду относилось | JewishGen Gazetteer и Communities, Radzima (Беларусь), Bessarabia Geographical Dictionary, «Списки населённых мест Российской империи» |
-| Родился, женился, умер до 1917 | JewishGen, FamilySearch (индексы) → скан на плёнке FamilySearch или на Commons |
-| Ревизии и посемейные списки | индекс JewishGen → дело на Commons или плёнке; навык `tracing-revision-records` |
-| Врач, учитель, купец, промышленник | «Российский медицинский список», памятные книжки губерний, «Вся Россия» на archive.org; Яндекс «Поиск по архивам»; Genealogy Indexer |
-| Студент университета | Album Academicum (Тарту), архив Венского университета (PHAIDRA), «Личный состав…» в Google Книгах |
-| Погиб, пропал, был в плену | ОБД «Мемориал», «Память народа», Яд ва-Шем |
-| Эвакуация | Яд ва-Шем (эвакокарточки), USHMM, базы беженцев на JewishGen, региональные базы |
-| Репрессирован | «Открытый список», «Бессмертный барак», региональные книги памяти |
-| Жертва Холокоста | Яд ва-Шем (листы свидетельских показаний), региональные «книги скорби», JewishGen Holocaust, Arolsen Archives, USHMM |
-| Уехал в США или другую страну | FamilySearch, поисковые формы Steve Morse, свидетельства о смерти штатов, JOWBR, Find a Grave; навык `tracing-emigrants-to-origin` |
-| Надгробие | JOWBR, «Мицват Эмет», Толдот, j-roots |
-| Еврейская газета, объявление, корреспонденция | Национальная библиотека Израиля (NLI); Яндекс «Поиск по архивам»; навык `searching-nli-jewish-press` |
-| Польша, Литва, Латвия, Эстония | JRI-Poland, Geneteka, LitvakSIG, Raduraksti, Rahvusarhiiv |
-| Советские акты ЗАГС 1920–1940-х | сканы на Commons (часть украинских архивов), сайты областных архивов |
-| Живые родственники | ДНК-сервисы, JewishGen Family Finder, кто подавал листы в Яд ва-Шем |
-| Перевод с идиша, иврита, старого русского | ViewMate (JewishGen), форумы; навык `reading-hebrew-yiddish-sources` |
+| What has survived for a shtetl and in which archive | Routes to Roots or M. Weiner's book → "Zvedenyi katalog metrychnykh knyh" (consolidated catalogue of metrical books, Ukraine) → the archive's inventory (archive site, Commons) → JewishGen / FamilySearch index → the scan itself |
+| What the place was called and which district it belonged to | JewishGen Gazetteer and Communities, Radzima (Belarus), Bessarabia Geographical Dictionary, "Lists of Populated Places of the Russian Empire" (*Spiski naselennykh mest Rossiiskoi imperii*) |
+| Born, married, died before 1917 | JewishGen, FamilySearch (indexes) → the scan on a FamilySearch film or on Commons |
+| Revision lists and family lists | JewishGen index → the file on Commons or on a film; skill `tracing-revision-records` |
+| Doctor, teacher, merchant, industrialist | "Russian Medical List" (*Rossiiskii meditsinskii spisok*), provincial memorial books (*pamyatnye knizhki*), "All Russia" (*Vsya Rossiya*) on archive.org; Yandex "Archive Search" (*Poisk po arkhivam*); Genealogy Indexer |
+| University student | Album Academicum (Tartu), the University of Vienna archive (PHAIDRA), "Personnel of …" (*Lichnyi sostav…*) in Google Books |
+| Killed, missing, taken prisoner | OBD "Memorial", "People's Memory" (*Pamyat naroda*), Yad Vashem |
+| Evacuation | Yad Vashem (evacuation cards), USHMM, refugee databases on JewishGen, regional databases |
+| Repressed | "Open List" (*Otkrytyi spisok*), "Immortal Barrack" (*Bessmertnyi barak*), regional memorial books |
+| Holocaust victim | Yad Vashem (Pages of Testimony), regional "books of sorrow", JewishGen Holocaust, Arolsen Archives, USHMM |
+| Emigrated to the US or another country | FamilySearch, Steve Morse search forms, state death certificates, JOWBR, Find a Grave; skill `tracing-emigrants-to-origin` |
+| Gravestone | JOWBR, Mitzvat Emet, Toldot, j-roots |
+| Jewish newspaper, announcement, correspondence | National Library of Israel (NLI); Yandex "Archive Search"; skill `searching-nli-jewish-press` |
+| Poland, Lithuania, Latvia, Estonia | JRI-Poland, Geneteka, LitvakSIG, Raduraksti, Rahvusarhiiv |
+| Soviet ZAGS records of the 1920s–1940s | scans on Commons (some Ukrainian archives), the websites of regional archives |
+| Living relatives | DNA services, JewishGen Family Finder, whoever submitted Pages of Testimony to Yad Vashem |
+| Translation from Yiddish, Hebrew, old Russian | ViewMate (JewishGen), forums; skill `reading-hebrew-yiddish-sources` |
 
-## Порядок по местечку (выработан практикой)
-1. Что **должно** быть по местечку (Routes to Roots, книга М. Вайнер).
-2. Что **сохранилось** и в каком архиве (сводный каталог метрик, описи).
-3. Какие дела **оцифрованы** (опись на сайте архива или на Commons).
-4. Есть ли **индекс** (JewishGen, FamilySearch). Сначала индекс, потом сплошное чтение.
-5. **Скан** (Commons, плёнка FamilySearch). Каждое совпадение из индекса — по скану.
-6. **Справочники и пресса**: занятия, адреса, объявления.
-7. Если дело не оцифровано — довести ссылку до точного шифра и проверить сохранность. Дальше решает человек.
+## Order for a shtetl (worked out in practice)
+1. What **should** exist for the shtetl (Routes to Roots, M. Weiner's book).
+2. What has **survived** and in which archive (the consolidated catalogue of metrical books, inventories).
+3. Which files have been **digitized** (the inventory on the archive's site or on Commons).
+4. Whether there is an **index** (JewishGen, FamilySearch). Index first, continuous reading afterwards.
+5. The **scan** (Commons, FamilySearch film). Check every match from the index against the scan.
+6. **Directories and the press**: occupations, addresses, announcements.
+7. If the file has not been digitized, take the reference to an exact archival code and check its preservation. After that the human decides.

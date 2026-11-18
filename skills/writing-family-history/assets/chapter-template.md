@@ -1,34 +1,34 @@
-# Глава: [Имя предка во всех формах] ([годы жизни, «около» если расчётные])
+# Chapter: [Ancestor's name in all forms] ([years of life, "about" if calculated])
 
-*Для кого:* (родные / широкий круг — тогда имена живых скрыты)
-*Опирается на:* (список документов из журнала находок — номера строк таблицы источников)
+*For whom:* (relatives / a wide circle — then the names of the living are hidden)
+*Based on:* (list of documents from the findings log — row numbers of the source table)
 
-## Коротко
-Два-три предложения: кто он, где жил, чем запомнился. Только факты из документов.
+## In brief
+Two or three sentences: who he was, where he lived, what he is remembered for. Only facts from documents.
 
-## Место и время
-Местечко или город, губерния, уезд; что там было в эти годы (со ссылками на контекст). Карта.
+## Place and time
+The shtetl or town, guberniya, uezd; what was there in these years (with references for the context). A map.
 
-## Что говорят документы
-Рассказ по документам в хронологическом порядке. Каждое утверждение — со сноской. Противоречия — открыто.
+## What the documents say
+An account from the documents in chronological order. Every statement with a footnote. Contradictions in the open.
 
-## Что рассказывают в семье
-Предания с указанием, кто и когда рассказал. Что из них подтверждено, что опровергнуто, что не проверено.
+## What is told in the family
+Legends, stating who told them and when. Which of them are confirmed, which refuted, which untested.
 
-## Чего мы не знаем
-Пробелы и почему они есть (документы не сохранились / не найдены / не искали).
+## What we do not know
+The gaps and why they exist (documents have not survived / not found / not searched for).
 
-## Иллюстрации
-| № | Что | Подпись | Источник / у кого оригинал |
+## Illustrations
+| No. | What | Caption | Source / who holds the original |
 |---|---|---|---|
 
-## Сноски
+## Footnotes
 1.
 
-## Открытые вопросы
-| Вопрос | Где может быть ответ | Что уже проверено |
+## Open questions
+| Question | Where the answer may be | What has already been checked |
 |---|---|---|
 
-## Лист сверки (не для публикации)
-| Фраза или факт в тексте | Документ в журнале находок | Ступень уверенности |
+## Cross-check sheet (not for publication)
+| Phrase or fact in the text | Document in the findings log | Rung of confidence |
 |---|---|---|

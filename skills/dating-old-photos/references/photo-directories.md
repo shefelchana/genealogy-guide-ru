@@ -1,49 +1,49 @@
-# Справочники фотографов и ателье; форматы
+# Directories of photographers and studios; formats
 
-Пометки: **[стр]** — страница прочитана при составлении; **[по выдаче]** — сведения из поисковой выдачи. Сверено в сентябре–октябре 2026 г.
+Markers: **[page]** — the page was read when this was compiled; **[from search snippet]** — information from search results. Checked in September–October 2026.
 
-## Справочники фотографов Российской империи
+## Directories of photographers of the Russian Empire
 
-| Справочник | Что внутри | Как искать | Пометка |
+| Directory | What is inside | How to search | Note |
 |---|---|---|---|
-| **FotoTikon** (fototikon.blogspot.com) | фотографы 1839–1917, около 9500–10 000 имён, с городами и годами | по фамилии фотографа, в алфавите | [стр] |
-| **«Большой Русский Альбом»** (rusalbom.ru/foto-atelie.html) | каталог ателье по городам, адреса, иногда годы («в 1870», «ок. 1880»), образцы паспарту | по городу, когда фамилия читается плохо | [стр] |
-| **А. П. Попов, «Российские фотографы (1839–1930). Словарь-справочник»** | около 16 000 имён | электронная версия на сайте Музея российской фотографии | [стр: по блогу «Эль Фолио, эсквайр»] |
-| **В. И. Срезневский, «Справочная книжка фотографа» (1-е изд. 1883, затем переиздания)** | практическое руководство по технике фотографии, **не перечень фотографов** — для датировки ателье не годится | наличие в цифре не проверено | [по выдаче: биография В. И. Срезневского, СПбГУ] |
+| **FotoTikon** (fototikon.blogspot.com) | photographers 1839–1917, about 9,500–10,000 names, with cities and years | by the photographer's surname, in the alphabet | [page] |
+| **"Bolshoi Russkii Albom"** (Great Russian Album) (rusalbom.ru/foto-atelie.html) | a catalogue of studios by city, addresses, sometimes years ("in 1870", "ca. 1880"), samples of mounts | by city, when the surname is hard to read | [page] |
+| **A. P. Popov, "Rossiiskie fotografy (1839–1930). Slovar-spravochnik"** (Russian Photographers (1839–1930): A Dictionary-Reference) | about 16,000 names | an electronic version on the website of the Museum of Russian Photography | [page: via the blog "El Folio, esquire"] |
+| **V. I. Sreznevsky, "Spravochnaya knizhka fotografa"** (A Photographer's Handbook) (1st ed. 1883, then reprints) | a practical guide to the technique of photography, **not a list of photographers** — unsuitable for dating a studio | availability in digital form not checked | [from search snippet: biography of V. I. Sreznevsky, St Petersburg State University] |
 
-### Приёмы поиска
-- Фамилию фотографа ищи в FotoTikon и у Попова, город — в «Большом Русском Альбоме».
-- Пробуй написания: дореформенное («Фотографія»), латиница на картонах («Photographie», польская и немецкая форма фамилии), без первой буквы, если тиснение стёрто.
-- **Адрес** ателье бывает надёжнее имени: ателье переезжали, а владельцы передавали имя наследникам.
-- Совпадение лет в двух справочниках — рамка датировки. Одно упоминание — только нижняя или верхняя точка.
-- Адресные книги и справочники городов («Вся Москва», памятные книжки губерний) тоже перечисляют фотографов по годам — поиск по фамилии фотографа в нужном городе по выпускам даёт годы работы по адресу.
-- Еврейские ателье местечек отдельной базы не имеют (статей и баз, например в Avotaynu, найти не удалось): ищи ателье местечка или ближайшего уездного города.
+### Search techniques
+- Look for the photographer's surname in FotoTikon and in Popov, the city in the "Bolshoi Russkii Albom".
+- Try spellings: pre-reform («Фотографія», "Photography"), Latin on cards ("Photographie", the Polish and German form of the surname), without the first letter if the embossing is worn.
+- A studio's **address** is sometimes more reliable than its name: studios moved, and owners passed the name on to heirs.
+- A match of years in two directories gives a dating frame. A single mention gives only a lower or an upper point.
+- Address books and city directories ("Vsya Moskva", memorial books of the guberniyas) also list photographers by year — a search for the photographer's surname in the right city, issue by issue, gives the years of operation at an address.
+- Jewish studios in shtetls have no separate database (no articles or databases, e.g. in Avotaynu, could be found): look for the studio of the shtetl or of the nearest district town.
 
-## Слои Морин Тейлор
+## Maureen Taylor's layers
 
-1. **Техника:** дагеротип — с 1839; амбротип — с 1854; ферротип — с 1856; визитная карточка — после 1859.
-2. **Фотограф и адрес** — годы работы ателье.
-3. **Одежда, причёски, головные уборы.**
-4. **Фон, мебель, реквизит.**
+1. **Technique:** daguerreotype — from 1839; ambrotype — from 1854; ferrotype — from 1856; carte de visite — after 1859.
+2. **Photographer and address** — the studio's years of operation.
+3. **Clothing, hairstyles, headwear.**
+4. **Background, furniture, props.**
 
-Источник: maureentaylor.com, «How to Date an Old Photograph» [стр].
+Source: maureentaylor.com, "How to Date an Old Photograph" [page].
 
-## Паспарту и форматы [по выдаче: photorepair.ru, nasledie.digital]
+## Mounts and formats [from search snippet: photorepair.ru, nasledie.digital]
 
-- лицевая сторона и оборот: тиснение, имя ателье, медали выставок;
-- типография и сорт картона;
-- углы — скруглённые или прямые;
-- точность по совокупности — около ±5 лет;
-- **визит-портрет** — около 65×105 мм; **кабинет-портрет** — около 110×165 мм, общепринят с 1870-х.
+- front and back: embossing, the studio's name, exhibition medals;
+- the printer and the grade of cardboard;
+- corners — rounded or square;
+- accuracy for the combination — about ±5 years;
+- **visit portrait** — about 65×105 mm; **cabinet portrait** — about 110×165 mm, in general use from the 1870s.
 
-## Мягкие ориентиры (рассуждение, сверять с другими слоями)
+## Soft guidelines (reasoning; check against other layers)
 
-- Медаль выставки с годом на обороте — карточка напечатана не раньше этого года.
-- Дореформенная орфография на картоне — картон отпечатан до реформы 1917–1918 гг. (запасы могли доиспользовать позже).
-- Советские наименования учреждений (артель, кооператив) — 1920-е и позже.
-- Разметка почтовой открытки на обороте — XX век.
-- Даты в надписях до февраля 1918 г. — по юлианскому календарю.
+- An exhibition medal with a year on the back — the card was printed not earlier than that year.
+- Pre-reform spelling on the cardboard — the cardboard was printed before the reform of 1917–1918 (stock could be used up later).
+- Soviet names of institutions (artel, cooperative) — the 1920s and later.
+- A postcard layout on the back — the 20th century.
+- Dates in inscriptions before February 1918 — by the Julian calendar.
 
-## Обращение с оригиналами
+## Handling originals
 
-Совет форума ВГД: не реставрировать самим, не вклеивать в альбомы, на обороте писать **карандашом**, кто, где и когда. Сканировать обе стороны; хранить мастер-копию в TIFF, рабочую — в JPEG (общая практика; на странице Библиотеки Конгресса «Personal Archiving: Photos» про TIFF не сказано, там — две копии в разных местах, проверка раз в год, перенос на новый носитель раз в 5 лет).
+Advice from the VGD forum (Russian genealogy forum): do not restore them yourself, do not paste them into albums, write on the back in **pencil** who, where and when. Scan both sides; keep a master copy in TIFF and a working copy in JPEG (common practice; the Library of Congress page "Personal Archiving: Photos" does not mention TIFF — it recommends two copies in different places, a check once a year, and migration to a new medium every 5 years).

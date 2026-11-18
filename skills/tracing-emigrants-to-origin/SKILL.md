@@ -1,38 +1,39 @@
 ---
 name: tracing-emigrants-to-origin
-description: Traces an emigrant from the Russian Empire (often Jewish) back to the home town using records of the destination country — US death certificates, censuses, naturalization papers, passenger manifests, draft cards, Social Security applications, passports, border crossings — and then matches the person to Old-World records. Use whenever the family has a branch that left for America, Canada, Argentina, Palestine or Western Europe, or the user asks "откуда приехал", "найти местечко эмигранта", "натурализация", "Эллис-Айленд", "судовой список", even if they only know an American name.
+description: >-
+  Traces an emigrant from the Russian Empire (often Jewish) back to the home town using records of the destination country — US death certificates, censuses, naturalization papers, passenger manifests, draft cards, Social Security applications, passports, border crossings — and then matches the person to Old-World records. Use whenever the family has a branch that left for America, Canada, Argentina, Palestine or Western Europe, or the user says "my great-grandfather came from…", "where did he emigrate from", "find the shtetl of an emigrant", "naturalization", "Ellis Island", "ship manifest", even if they only know an American name. Also triggers on Russian requests: «откуда приехал», «найти местечко эмигранта», «натурализация», «Эллис-Айленд», «судовой список».
 ---
 
-# От документов эмиграции к местечку
+# From emigration documents to the home shtetl
 
-## Логика (порядок шагов)
-1. **Свидетельство о смерти** (штат/город): место рождения, **имена родителей**, информант (часто сын/дочь), адрес, профессия.
-2. **Переписи** страны прибытия (США 1900–1950): год иммиграции, статус гражданства, родной язык (Yiddish), состав семьи.
-3. **Натурализация** (в США после 1906 г. — подробные формы): точная дата и место рождения, судно и дата прибытия, имена жены и детей, прежнее написание имени.
-4. **Судовой список (манифест)**: город последнего проживания, **родственник на родине** (с 1907 г.), к кому едет в Америке, попутчики.
-5. **Дополнительно**: призывные карточки (1917–18, 1942), заявления в соцстрахование (SS-5 — имена родителей), загранпаспорта, пересечения сухопутной границы (Мексика/Канада), кладбища землячеств (landsmanshaftn), некрологи.
-6. **Европейский выезд**: Гамбург, Бремен, Антверпен (полицейские досье иностранцев), Роттердам — место происхождения и семья.
-7. **Опознание местечка**: искажённое название сверять по справочникам мест (JewishGen Communities/Gazetteer, инструменты Стива Морса) — по звучанию, уезду, губернии.
-8. **Документы местечка**: метрики, ревизии, переписи — найти семью с теми же **именами родителей и детей**.
-9. **Сверка** минимум по трём признакам: имя (во всех формах), возраст (± несколько лет), родители/попутчики/адресат. Один признак — не доказательство.
+## The logic (order of steps)
+1. **Death certificate** (state/city): place of birth, **parents' names**, informant (often a son or daughter), address, occupation.
+2. **Censuses** of the destination country (US 1900–1950): year of immigration, citizenship status, mother tongue (Yiddish), household members.
+3. **Naturalization** (in the US, forms after 1906 are detailed): exact date and place of birth, ship and arrival date, names of wife and children, earlier spelling of the name.
+4. **Passenger manifest**: last place of residence, **a relative back home** (from 1907), whom the person is going to in America, travelling companions.
+5. **Additional records**: draft cards (1917–18, 1942), Social Security applications (SS-5 — parents' names), passports, land border crossings (Mexico/Canada), landsmanshaft cemeteries (*landsmanshaftn*, hometown benevolent societies), obituaries.
+6. **European departure**: Hamburg, Bremen, Antwerp (police files on foreigners), Rotterdam — place of origin and family.
+7. **Identifying the shtetl**: check a garbled place name against gazetteers (JewishGen Communities/Gazetteer, Steve Morse's tools) — by sound, uezd (district), guberniya (province).
+8. **Shtetl records**: metrical books, revision lists (*revizskie skazki*), censuses — find a family with the same **names of parents and children**.
+9. **Cross-check** on at least three points: name (in all its forms), age (± a few years), parents/companions/addressee. One point is not proof.
 
-## Ловушки
-- «Фамилию сменили на Эллис-Айленде» — миф; меняли сами иммигранты позже.
-- Возраст «плавает» на 2–5 лет от документа к документу.
-- Имя меняется: Мойше → Morris, Лейзер → Louis/Leizer, Берко → Bernard/Boris.
-- Название местечка в американских документах — по слуху (Ismail, «Izmail, Bessarabia, Roumania» и т. п.); губерния и страна — по состоянию на момент рассказа (Румыния/Польша вместо Российской империи).
-- Один человек может въезжать несколько раз (Мексика/Канада → США) — каждая карточка добавляет данные.
-- Гамбургские судовые списки **до 1920 года не указывают религию** (Ю. Зилеманн, Государственный архив Гамбурга) — фильтровать по «еврей» нельзя, только по имени, возрасту и месту.
-- Ветвь, уехавшая в Палестину, могла официально гебраизировать имя: объявления о смене имён в «Palestine Gazette» 1921–1947 (набор данных mandatenamechanges.org — старое и новое имя, у каждой записи ссылка на страницу скана).
+## Pitfalls
+- "The name was changed at Ellis Island" is a myth; immigrants changed names themselves later.
+- Age "floats" by 2–5 years from document to document.
+- Names change: Moishe → Morris, Leizer → Louis/Leizer, Berko → Bernard/Boris.
+- The shtetl name in American documents is spelled by ear (Ismail, "Izmail, Bessarabia, Roumania", etc.); the guberniya and country are those at the time of the statement (Romania/Poland instead of the Russian Empire).
+- One person may enter several times (Mexico/Canada → US) — each card adds data.
+- Hamburg passenger lists **before 1920 do not state religion** (J. Sielemann, Hamburg State Archive) — you cannot filter by "Jewish", only by name, age and place.
+- A branch that went to Palestine may have officially Hebraized the name: notices of name changes in the "Palestine Gazette" 1921–1947 (dataset mandatenamechanges.org — old and new name, each record links to the scan page).
 
-## Нет фамилии или она неузнаваема — ищи по месту
-- **Форма Стива Морса для Эллис-Айленда (Gold)** ищет пассажиров по **началу названия города**, без фамилии: все прибывшие из местечка за нужные годы.
-- **Брачные заявления Нью-Йорка 1908–1929**: полные трёхстраничные заявления (хранятся в Муниципальном архиве Нью-Йорка) называют **более точный город рождения** жениха и невесты, чем свидетельство о браке. Бесплатно выложен **индекс** к ним (около 450 тыс. записей, 48 плёнок; Reclaim The Records — archive.org/details/nycmarriageindex): по нему находится номер записи. Сам индекс места рождения не даёт.
+## No surname, or it is unrecognizable — search by place
+- **Steve Morse's Ellis Island form (Gold)** searches passengers by the **beginning of the town name**, without a surname: everyone who arrived from the shtetl in the years you need.
+- **New York marriage applications 1908–1929**: the full three-page applications (held by the New York City Municipal Archives) give a **more precise birthplace** of the groom and bride than the marriage certificate. An **index** to them is freely available (about 450,000 records, 48 reels; Reclaim The Records — archive.org/details/nycmarriageindex): it gives you the record number. The index itself does not give the place of birth.
 
-## Где искать (бесплатно в первую очередь)
-FamilySearch (переписи, натурализации, манифесты, свидетельства о смерти многих штатов), Steve Morse One-Step (поиск по манифестам Эллис-Айленда), сайты штатов (например, свидетельства о смерти Миссури), NARA, Find a Grave/JOWBR, Канада — база «Immigrants from the Russian Empire 1898–1922», Израиль — натурализация в Государственном архиве.
+## Where to look (free sources first)
+FamilySearch (censuses, naturalizations, manifests, death certificates of many states), Steve Morse One-Step (search of Ellis Island manifests), state websites (for example Missouri death certificates), NARA, Find a Grave/JOWBR, Canada — the database "Immigrants from the Russian Empire 1898–1922", Israel — naturalization in the State Archive.
 
-## Записать
-Для каждого документа: что сказано о месте рождения и родителях **дословно**; таблица «документ — имя — возраст/год — место — родственники» для сверки.
+## What to record
+For each document: what it says about the place of birth and parents, **verbatim**; a table "document — name — age/year — place — relatives" for cross-checking.
 
-См. также: `verifying-genealogy-findings`, `searching-jewishgen`.
+See also: `verifying-genealogy-findings`, `searching-jewishgen`.

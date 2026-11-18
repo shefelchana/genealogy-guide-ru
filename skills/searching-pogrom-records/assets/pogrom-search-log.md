@@ -1,37 +1,37 @@
-# Журнал проверки баз погромов — [фамилия / семья], [местечко], [дата]
+# Pogrom database search log — [surname / family], [shtetl], [date]
 
-Заполняй строку на **каждый** запрос, включая пустые. Без строк контроля и охвата «нет в базах» не записывай.
+Fill in a line for **every** query, including empty ones. Without the control and coverage lines, do not record "not in the databases".
 
-## Опознавательный набор
+## Identification set
 
-- Фамилия, кириллица: [все формы, вкл. без первой буквы и с другой гласной корня]
-- Фамилия, латиница: [Rabinovich / Rabinovitch / Rabinowicz / Rabin* …]
-- Имена и отчества (еврейские и русские формы): […]
-- Возраст около 1919 г.: […]
-- Места: [местечко], [соседние местечки], [ближайший большой город]
+- Surname, Cyrillic: [all forms, incl. without the first letter and with a different root vowel]
+- Surname, Latin: [Rabinovich / Rabinovitch / Rabinowicz / Rabin* …]
+- Given names and patronymics (Jewish and Russian forms): […]
+- Age around 1919: […]
+- Places: [shtetl], [neighbouring shtetls], [nearest large city]
 
-## Контроль
+## Control
 
-| База | Контрольный запрос | Ожидалось | Получено | Дата |
+| Database | Control query | Expected | Received | Date |
 |---|---|---|---|---|
 | jewishpogroms.info | Lipes | 23–24 | | |
 | pogrom.amhazikaron.org | Проскуров | ≈284 | | |
 
-## Запросы
+## Queries
 
-| № | База | Запрос (точно как отправлен) | Режим (точный / * / soundslike / город / подстрока) | Найдено | Наши? (кто, почему) | Ошибки сайта |
+| No. | Database | Query (exactly as sent) | Mode (exact / * / soundslike / city / substring) | Found | Ours? (who, why) | Site errors |
 |---|---|---|---|---|---|---|
 | 1 | | | | | | |
 
-## Кандидаты → дело
+## Candidates → file
 
-| Кто (как в базе) | База, id записи | Фонд-опись-дело-лист | Заголовок дела в описи | Совпадает с записью? | Скан (файл, стр. PDF) | Прочитано по скану? | Дословно |
+| Who (as in the database) | Database, record id | Fond-inventory-file-folio | File title in the inventory | Matches the record? | Scan (file, PDF page) | Read from the scan? | Word for word |
 |---|---|---|---|---|---|---|---|
-| | | | | да / нет / ? | | да / нет | |
+| | | | | yes / no / ? | | yes / no | |
 
-## Итог
+## Result
 
-- Найдено и проверено по скану: […]
-- Подсказки без скана (⚪): […]
-- Не нашлось — где искали: [базы, формы, режимы, места]; контроль пройден: [да/нет]
-- Что не покрыто базами и куда идти дальше: [раввинат и ЗАГС 1918–1922 местечка и большого города; разделы описи Р-3050 по местечку → реестр непросмотренных разделов]
+- Found and checked against the scan: […]
+- Hints without a scan (⚪): […]
+- Not found — where searched: [databases, forms, modes, places]; control passed: [yes/no]
+- What the databases do not cover and where to go next: [rabbinate and ZAGS records of 1918–1922 for the shtetl and the large city; sections of the R-3050 inventory by shtetl → register of unviewed sections]

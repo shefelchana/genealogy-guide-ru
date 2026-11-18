@@ -1,70 +1,71 @@
 ---
 name: searching-pogrom-records
-description: Finds victims and survivors of the 1917–1922 pogroms in Ukraine and neighbouring regions — the Lipes database jewishpogroms.info (Latin-only search, wildcard, POST recipe without a browser), pogrom.amhazikaron.org (WordPress REST, Rosenthal's «Свиток резни» and archival lists), the Kyiv relief committee fond ДАКО Р-3050 with its inventories and 900 scans on Wikimedia Commons, ЦДАВО ф. 2497, YIVO Tcherikower archive. Covers the living too — 1922 relief recipients with addresses, orphanage children, refugees — and how to go from a database row to the archival file and page. Use whenever a relative lived in a shtetl in 1917–1922, disappeared or died around 1919–1921, the family speaks of погром, банда, петлюровцы, деникинцы, убит в 1919, сироты, детдом, беженцы, помощь из Америки, землячество — or the user asks «проверь базы погромов», «был ли он в списках жертв», «pogrom victims database», even if no database is named.
+description: >-
+  Finds victims and survivors of the 1917–1922 pogroms in Ukraine and nearby regions — the Lipes database jewishpogroms.info (Latin-only search, wildcard, POST recipe without a browser), pogrom.amhazikaron.org (WordPress REST; Rosenthal's "Svitok rezni" and archival lists), the Kyiv relief committee fond DAKO R-3050 with inventories and about 900 scans on Commons, TsDAVO fond 2497, the YIVO Tcherikower archive. Covers the living too — 1922 relief recipients with addresses, orphanage children, refugees — and the path from a database row to the archival file and page. Use whenever a relative lived in a shtetl in 1917–1922 or died around 1919–1921, or the family speaks of a pogrom, a gang, orphans, refugees, help from America — even if no database is named. Also triggers on Russian requests: «погром», «банда», «петлюровцы», «деникинцы», «убит в 1919», «сироты», «детдом», «беженцы», «помощь из Америки», «землячество», «проверь базы погромов», «был ли он в списках жертв».
 ---
 
-# Погромы 1918–1922 (с конца 1917): жертвы, пострадавшие, сироты, беженцы
+# Pogroms 1918–1922 (from late 1917): victims, the injured, orphans, refugees
 
-## Когда применять
+## When to apply
 
-- Семья жила в местечке Киевской, Подольской, Волынской, Херсонской, Екатеринославской или Черниговской губернии в 1917–1922 годах.
-- Человек «пропал» или умер около 1919–1921 годов, в семье говорят о погроме, банде, бегстве, детдоме, деньгах «из Америки».
-- Нужна стандартная проверка всей семьи за эти годы (см. `reconstructing-family-clusters`): базы погромов входят в обязательный пакет для 1918–1922 годов наряду с ЗАГС и раввинатскими книгами.
+- The family lived in a shtetl (*mestechko*) of Kyiv, Podolia, Volhynia, Kherson, Ekaterinoslav or Chernigov guberniya in 1917–1922.
+- A person "vanished" or died around 1919–1921, and the family speaks of a pogrom, a gang, flight, an orphanage, money "from America".
+- A standard check of the whole family for those years is needed (see `reconstructing-family-clusters`): the pogrom databases belong in the mandatory package for 1918–1922 alongside ZAGS (Soviet civil registry) and rabbinate books.
 
-В этих источниках не только убитые. Там есть раненые, ограбленные, вдовы, **получатели денежной помощи 1922 года с адресами**, **дети в детдомах 1920-х**, сотрудники детучреждений, беженцы. Поэтому проверяй и живых родственников, а не только погибших.
+These sources hold not only the killed. They include the wounded, the robbed, widows, **recipients of money relief in 1922 with addresses**, **children in orphanages of the 1920s**, staff of children's institutions, refugees. So check living relatives too, not only those who died.
 
-## Порядок работы
+## Procedure
 
-### Шаг 0. Опознавательный набор
+### Step 0. Identification set
 
-Запиши до первого запроса: фамилию во всех написаниях (кириллица и латиница, с гласной корня в разных вариантах, без первой буквы), имена и отчества (еврейские и русские формы), возраст около 1919 года, местечко **и соседние местечки, и ближайший крупный город** — бежали туда, там и умирали от тифа и голода зимой 1919–1920 годов.
+Write down before the first query: the surname in all spellings (Cyrillic and Latin, with the root vowel in different variants, without the first letter), given names and patronymics (Jewish and Russian forms), age around 1919, the shtetl **and the neighbouring shtetls and the nearest large city** — people fled there and died there of typhus and hunger in the winter of 1919–1920.
 
-### Шаг 1. База Липес, jewishpogroms.info
+### Step 1. The Lipes database, jewishpogroms.info
 
-Около 77 777 записей, у каждой — фонд, опись, дело, лист и архив. Поиск **только латиницей**. Рецепт без браузера и разбор полей — в `references/databases.md`; готовый скрипт — `scripts/pogrom_search.py lipes`.
+About 77,777 records, each with fond, inventory, file, folio and archive. The search is **Latin letters only**. The recipe without a browser and an explanation of the fields are in `references/databases.md`; the ready-made script is `scripts/pogrom_search.py lipes`.
 
-1. Сначала **контрольный запрос**: фамилия, которая там заведомо есть (например, `Lipes` — 23–24 записи, проверено 07.10.2026). Нет ответа или пришла страница-заглушка — сломан запрос, а не «нет человека».
-2. Перебирай латинские формы по одной: `Rabinovich`, `Rabinovitch`, `Rabinowicz`. **Звёздочка работает** и даёт больше всего: `Rabin*`, `*binovich`. Флажок «Sounds like» почти не расширяет поиск (проверено: `Libes` с ним не находит `Lipes`), поэтому варианты перебирай сам.
-3. Ищи и **по местечку без фамилии** (`--city Pavoloch`): так видно, какие списки по месту вообще есть в базе, и ловятся искажённые фамилии.
+1. First a **control query**: a surname that is certainly there (for example `Lipes` — 23–24 records, checked 07.10.2026). If there is no answer or a placeholder page comes back, the query is broken; it does not mean "the person is not there".
+2. Try Latin forms one at a time: `Rabinovich`, `Rabinovitch`, `Rabinowicz`. **The asterisk works** and gives the most: `Rabin*`, `*binovich`. The "Sounds like" checkbox hardly widens the search (checked: `Libes` with it does not find `Lipes`), so go through the variants yourself.
+3. Search **by shtetl without a surname** too (`--city Pavoloch`): this shows which lists for the place exist in the database at all, and catches distorted surnames.
 
-### Шаг 2. «Ам а-Зикарон», pogrom.amhazikaron.org
+### Step 2. Am HaZikaron (Am a-Zikaron), pogrom.amhazikaron.org
 
-Около 7 900 жертв, у каждой — источник: «Свиток резни» Розенталя в русском переводе, дела ДАКО Р-3050, ЦДАВО ф. 2497, архив Чериковера (YIVO RG 80), ЦДИАК ф. 1164 и др. Поиск **кириллицей, по подстроке** через открытый REST: `scripts/pogrom_search.py amh Проскуров` (контроль: «Проскуров» — 284 записи, 07.10.2026). Одна запись часто описывает **всю семью** («его жена…, их дочь…»), поэтому ищи и по фамилии зятя, и по имени.
+About 7,900 victims, each with a source: Rosenthal's "Свиток резни" ("Svitok rezni", the Scroll of Slaughter) in Russian translation, DAKO (State Archive of Kyiv Oblast) files R-3050, TsDAVO (Central State Archive of Supreme Bodies of Power of Ukraine) fond 2497, the Tcherikower archive (YIVO RG 80), TsDIAK (Central State Historical Archive of Ukraine, Kyiv) fond 1164, and others. The search is **in Cyrillic, by substring**, through the open REST: `scripts/pogrom_search.py amh Проскуров` (control: "Проскуров" — 284 records, 07.10.2026). One record often describes **a whole family** ("his wife…, their daughter…"), so search by the son-in-law's surname and by given name as well.
 
-### Шаг 3. Сверка двух баз
+### Step 3. Cross-checking the two databases
 
-Базы перекрываются, но не совпадают: возраст и имена «по разным спискам» расходятся, а у «Ам а-Зикарон» указаны **страницы документа** (номер кадра PDF) рядом с листами. Совпадение человека в двух базах со ссылкой на одно и то же дело — одно свидетельство, а не два.
+The databases overlap but do not coincide: age and names "by different lists" diverge, and Am HaZikaron gives the **pages of the document** (the PDF frame number) beside the folios. A person matched in two databases with a reference to the same file is one piece of evidence, not two.
 
-### Шаг 4. От записи к делу
+### Step 4. From the record to the file
 
-1. Переведи поля в шифр: `Found / Register / Case / Page` = **фонд / опись / дело / лист**, `Archive` = архив (Dako = ДАКО; State archive of Vinnytsia region = ДАВіО).
-2. Найди дело в описи: ДАКО Р-3050 расписан поштучно на Вікіджерелах (`Архів:ДАКО/Р-3050/1`, `/2`, `/3`). **Сверь заголовок дела с записью базы.** Если в описи дело о другом месте, пометь расхождение и не делай вывода, пока не откроешь лист.
-3. Найди скан: Commons, категория `Funds of State Archive of Kyiv Oblast - Fund R-3050` (около 910 файлов, названия вида «ДАКО Р-3050-1-22. 1920. …pdf»; описи — «ДАКО фонд Р-3050 опис 1.pdf», 2, 3). Как читать PDF — навыки `ukrainian-archives-on-commons` и `reading-archive-scans`.
-4. Прочитай лист сам. Выпиши дословно: имя, возраст, что случилось, **адрес**, кто подал сведения (часто родственник — ещё одна связь), сумма помощи и от какого землячества.
+1. Turn the fields into an archival reference: `Found / Register / Case / Page` = **fond / inventory / file / folio**, `Archive` = the archive (Dako = DAKO; State archive of Vinnytsia region = DAViO, the State Archive of Vinnytsia Oblast).
+2. Find the file in the inventory: DAKO R-3050 is itemized file by file on Vikisource (Вікіджерела) (`Архів:ДАКО/Р-3050/1`, `/2`, `/3`). **Check the file title against the database record.** If the inventory has the file as being about another place, mark the discrepancy and do not draw a conclusion until you open the folio.
+3. Find the scan: Commons, category `Funds of State Archive of Kyiv Oblast - Fund R-3050` (about 910 files, names like "ДАКО Р-3050-1-22. 1920. …pdf"; inventories are "ДАКО фонд Р-3050 опис 1.pdf", 2, 3). How to read the PDF: the skills `ukrainian-archives-on-commons` and `reading-archive-scans`.
+4. Read the folio yourself. Copy word for word: name, age, what happened, the **address**, who submitted the information (often a relative — one more link), the sum of relief and from which hometown society.
 
-Справочник фондов и что в них искать — `references/archives-and-fonds.md`.
+A guide to the fonds and what to look for in them: `references/archives-and-fonds.md`.
 
-### Шаг 5. Запись результата
+### Step 5. Recording the result
 
-Заполняй журнал по шаблону `assets/pogrom-search-log.md`: каждая база, каждый вариант написания, режим поиска, число записей, контроль. Без этого «в базах погромов нет» ничего не значит.
+Fill in the log from the template `assets/pogrom-search-log.md`: every database, every spelling variant, search mode, number of records, control. Without it "not in the pogrom databases" means nothing.
 
-## Что считать находкой
+## What counts as a finding
 
-- **Находка** — запись в базе **плюс** лист дела, прочитанный по скану, где совпадают фамилия, имя и хотя бы ещё один признак: отчество, возраст, местечко, имена родных, адрес.
-- Строка базы без открытого листа — **подсказка ⚪**, а не факт. Поля в базе бывают сдвинуты (в выпадающих списках сайта видны «съехавшие» колонки), номер дела бывает неточен.
-- Получатель помощи 1922 года по списку землячества — сильная зацепка к **американской ветке**: деньги посылали конкретным людям через землячество конкретного местечка (см. `tracing-emigrants-to-origin`).
-- Ребёнок в детдомовском списке с местом рождения и именами родителей — часто единственный документ о «пропавшем» ребёнке; дальше ищи советские документы детдома и ЗАГС.
+- A **finding** is a database record **plus** a folio of the file read from the scan, where the surname, the given name and at least one more identifier match: patronymic, age, shtetl, names of relatives, address.
+- A database row without an opened folio is a **hint ⚪**, not a fact. Fields in the database can be shifted (shifted columns are visible in the site's drop-down lists), and the file number can be inaccurate.
+- A recipient of 1922 relief on a hometown-society list is a strong lead to the **American branch**: money was sent to specific people through the society of a specific shtetl (see `tracing-emigrants-to-origin`).
+- A child on an orphanage list with a place of birth and the parents' names is often the only document about a "vanished" child; next look for the orphanage's Soviet documents and ZAGS.
 
-## Если ничего не нашлось
+## If nothing was found
 
-1. Проверь, прошёл ли контрольный запрос в каждой базе. Нет — повтори позже, это технический ноль.
-2. Убедись, что перебраны все латинские формы и звёздочка, поиск по местечку и по соседним местечкам.
-3. Помни границы: база Липес собрана из части фондов (в основном ДАКО Р-3050, ДАВіО, ДАОО, ЦДАВО); «Ам а-Зикарон» не покрывает даже «Свиток резни» целиком. **Отсутствие в базах не доказывает, что человек не пострадал**, и не доказывает, что он выжил.
-4. Дальше — первичные источники того же времени: раввинатские книги смертей и ЗАГС 1918–1922 годов местечка **и ближайшего большого города**. В актах ЗАГС этих лет графы национальности обычно нет: смотри место погребения (еврейское кладбище) и имя. Причину смерти в раввинатских книгах читай «между строк». См. `soviet-era-records`, `ukrainian-archives-on-commons`.
-5. Опись Р-3050 листай по местечку (поиск по странице описи на Вікіджерелах): дела с «опросными листами», «списками погромленных», «списками детей» по уездам. Непрочитанные разделы занеси в реестр (навык `using-community-surname-indexes`).
+1. Check whether the control query passed in each database. If not, repeat later: it is a technical zero.
+2. Make sure all Latin forms and the asterisk have been tried, together with a search by shtetl and by neighbouring shtetls.
+3. Remember the limits: the Lipes database is compiled from part of the fonds (mainly DAKO R-3050, DAViO, DAOO — State Archive of Odesa Oblast, TsDAVO); Am HaZikaron does not cover even the "Svitok rezni" in full. **Absence from the databases does not prove that the person was not harmed, and does not prove that he survived.**
+4. Next, primary sources of the same time: rabbinate death books and ZAGS of 1918–1922 for the shtetl **and the nearest large city**. ZAGS records of these years usually have no column for nationality: look at the burial place (the Jewish cemetery) and the name. Read the cause of death in the rabbinate books "between the lines". See `soviet-era-records`, `ukrainian-archives-on-commons`.
+5. Page through the R-3050 inventory by shtetl (search within the inventory page on Vikisource): files with "questionnaires" (*oprosnye listy*), "lists of those who suffered pogroms", "lists of children" by district. Enter unread sections in the register (skill `using-community-surname-indexes`).
 
-Письма и запросы в архивы как шаг поиска не предлагай. Капчи, вход, оплату делает только человек. Одна база — один исполнитель одновременно.
+Do not suggest letters and requests to archives as a step of the search. CAPTCHAs, logins and payment are done only by a human. One database — one worker at a time.
 
-## См. также
+## See also
 
-`verifying-genealogy-findings` (четыре условия отрицательного вывода, написания) · `reconstructing-family-clusters` (пакет документов на семью) · `using-community-surname-indexes` (указатели перед листанием) · `ukrainian-archives-on-commons` · `reading-archive-scans` · `reading-hebrew-yiddish-sources` (около трети документов — на идише) · `tracing-emigrants-to-origin` · `soviet-era-records` · `search-logic-navigator` · `orchestrating-genealogy-agents`
+`verifying-genealogy-findings` (the four conditions of a negative conclusion, spellings) · `reconstructing-family-clusters` (the package of documents for a family) · `using-community-surname-indexes` (indexes before paging) · `ukrainian-archives-on-commons` · `reading-archive-scans` · `reading-hebrew-yiddish-sources` (about a third of the documents are in Yiddish) · `tracing-emigrants-to-origin` · `soviet-era-records` · `search-logic-navigator` · `orchestrating-genealogy-agents`

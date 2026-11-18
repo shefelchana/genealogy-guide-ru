@@ -1,112 +1,112 @@
-# Файлы нового проекта
+# Files of a new project
 
-Создай в папке проекта перечисленные файлы, каждый со своей заготовкой. Названия можно менять, но держи их одинаковыми во всём проекте: по ним ищут перед каждым новым поиском. Подпапки: `сканы/` (исходные кадры), `кропы/` (вырезки нужных строк), `ветки/` (когда направлений станет несколько).
+Create the listed files in the project folder, each with its own template. The names can be changed, but keep them the same throughout the project: they are what you search before every new search. Subfolders: `scans/` (original frames), `crops/` (cut-outs of the needed lines), `branches/` (when there are several lines of enquiry).
 
 ---
 
-## ЖУРНАЛ-НАХОДОК.md
+## FINDINGS-LOG.md
 
 ```
-# Журнал находок
-Одна запись — одна находка. Записывать сразу, в момент находки.
+# Findings log
+One entry, one find. Record at once, at the moment of the find.
 
-## ГГГГ-ММ-ДД — [кратко: кто, что]
-**Вопрос:** …
-**Источник:** архив · фонд-опись-дело · лист · № записи
-**Где скан:** сайт · плёнка/файл · кадр · ссылка
-**Кроп:** кропы/год_архив-шифр_кадр_кто-что.png
-**Дословно:** «…»
-**Пояснение / перевод:** …
-**Уверенность чтения:** уверенно / неуверенно (что мешает)
-**Что меняет:** …
-**Проверено по скану:** да / нет (только индекс)
+## YYYY-MM-DD — [briefly: who, what]
+**Question:** …
+**Source:** archive · fond-inventory-file · folio · record no.
+**Where the scan is:** site · film/file · frame · link
+**Crop:** crops/year_archive-code_frame_who-what.png
+**Verbatim:** "…"
+**Explanation / translation:** …
+**Confidence of reading:** confident / unsure (what gets in the way)
+**What it changes:** …
+**Checked against the scan:** yes / no (index only)
 ```
 
-## ПЕРСОНЫ.md — справочник по людям
+## PERSONS.md — reference on people
 
 ```
-# Персоны
+# Persons
 
-## [Фамилия Имя Отчество] (годы жизни, как известно сейчас)
-- Варианты имени и фамилии в документах: …
-- Родился: дата, место — источник
-- Брак: … — источник
-- Умер: … — источник
-- Занятия, адреса: … — источник
-- Родители / супруг(а) / дети: …
-- Окружение (свидетели, компаньоны, соседи, попутчики): …
-- Со слов родных (не проверено): «…» — кто, когда
-- Открытые вопросы: …
+## [Surname Given-name Patronymic] (years of life, as known now)
+- Variants of name and surname in documents: …
+- Born: date, place — source
+- Marriage: … — source
+- Died: … — source
+- Occupations, addresses: … — source
+- Parents / spouse / children: …
+- Associates (witnesses, business partners, neighbours, fellow travellers): …
+- According to relatives (not verified): "…" — who, when
+- Open questions: …
 ```
 
-## ГИПОТЕЗЫ.md
+## HYPOTHESES.md
 
 ```
-# Гипотезы
-Статус: ⚪ не проверена / 🟡 открыта, сильная версия / 🟢 подтверждена (дата, чем: документ + второй признак) / 🔴 снята (дата, почему)
+# Hypotheses
+Status: ⚪ not verified / 🟡 open, strong version / 🟢 confirmed (date, by what: document + a second marker) / 🔴 withdrawn (date, why)
 
-## Г-01. [Короткая формулировка]
-**Статус:** ⚪
-**Основания:** (каждое совпадение — отдельной строкой)
-**Слабые места:** …
-**Как проверить:** (какой документ решит вопрос, где он может быть)
-**В дерево:** в общедоступное — только 🟢; в личное — 🟡 с пометкой «версия».
+## H-01. [Short statement]
+**Status:** ⚪
+**Grounds:** (each match on its own line)
+**Weak points:** …
+**How to check:** (which document will settle it, where it may be)
+**Into the tree:** into a public one only 🟢; into a private one 🟡 with the note "version".
 ```
 
-## ЖУРНАЛ-ПОИСКОВ.md
+## SEARCH-LOG.md
 
 ```
-# Журнал поисков
-| Дата | Где (сайт/архив, коллекция) | Что искали (все написания; имя; место; годы) | Как (индекс / полистно / полнотекст; точно / фонетически) | Охват | Результат |
+# Search log
+| Date | Where (site/archive, collection) | What was searched (all spellings; name; place; years) | How (index / page by page / full text; exact / phonetic) | Coverage | Result |
 |---|---|---|---|---|---|
 ```
-Пустой результат записывается тоже, с охватом и пояснением, что значит ноль: фамилии нет вовсе, нет нужного имени или нет человека нужного возраста.
+An empty result is recorded too, with its coverage and an explanation of what the zero means: the surname is not there at all, the needed given name is not there, or there is no person of the needed age.
 
-## ИСТОЧНИКИ.md — реестр источников
+## SOURCES.md — source registry
 
 ```
-# Реестр источников
-| Код | Архив и шифр | Что это (тип, годы, место) | Где скан / как получить | Статус чтения | Что найдено |
+# Source registry
+| Code | Archive and reference code | What it is (type, years, place) | Where the scan is / how to obtain it | Reading status | What was found |
 |---|---|---|---|---|---|
-| S-001 | домашний архив | свидетельство о рождении, 1938 | сканы/1938_свид-рожд_имя.jpg | прочитано | … |
+| S-001 | home archive | birth certificate, 1938 | scans/1938_birth-cert_name.jpg | read | … |
 ```
 
-## ХРОНОЛОГИЯ-[фамилия или семья].md
+## TIMELINE-[surname or family].md
 
 ```
-# Хронология: [кто]
-**Вопрос, ради которого составлена:** …
-| Дата (как в документе) | Расчётный год | Событие | Кто (возраст по документу) | Место (тогдашнее название, уезд, губерния) | Источник | Надёжность (скан / индекс / рассказ) |
+# Timeline: [who]
+**The question it was drawn up for:** …
+| Date (as in the document) | Calculated year | Event | Who (age per document) | Place (name at the time, uezd, guberniya) | Source | Reliability (scan / index / account) |
 |---|---|---|---|---|---|---|
 
-Проверка на невозможное: возраст матери; промежутки между детьми; ребёнок после смерти отца; два места одновременно; расхождения в возрасте.
+Check for the impossible: mother's age; gaps between children; a child after the father's death; two places at once; discrepancies in age.
 ```
 
-## МЕСТО-[название].md — путеводитель по месту (заводится, когда место известно)
+## PLACE-[name].md — guide to the place (created once the place is known)
 
 ```
-# Место: [название сейчас; названия в документах]
-Годы, которые нужны: …   Обновлено: ГГГГ-ММ-ДД
-1. Где это и как называлось
-2. Подчинение по годам (государство, губерния, уезд, волость)
-3. Карты (каждая — со ссылкой на источник)
-4. Краткая история, гибель документов
-5. Какие документы существуют (тип, годы, где хранится, онлайн?, индекс?)
-6. Архивы и шифры
-7. Что уже просмотрено (ссылка на журнал поисков)
+# Place: [name now; names in documents]
+Years needed: …   Updated: YYYY-MM-DD
+1. Where it is and what it was called
+2. Jurisdiction by year (state, guberniya, uezd, volost)
+3. Maps (each with a link to its source)
+4. Brief history, destruction of documents
+5. Which documents exist (type, years, where held, online?, index?)
+6. Archives and reference codes
+7. What has already been looked through (link to the search log)
 ```
 
-## ИСТОРИЯ.md — текст для родных
+## FAMILY-HISTORY.md — text for relatives
 
-Связный текст только по проверенным фактам. Заводится пустым и пополняется, когда закрывается вопрос.
+A continuous text based only on verified facts. Created empty and added to as questions are closed.
 
-## ПРОДОЛЖАТЬ-ОТСЮДА.md
+## CONTINUE-FROM-HERE.md
 
-Шаблон — в навыке `research-session-handoff`. Если его нет, минимум такой:
+The template is in the `research-session-handoff` skill. If it is not available, the minimum is this:
 ```
-# Продолжать отсюда (обновлено ГГГГ-ММ-ДД)
-Текущий вопрос: …
-Что сделано в последней сессии: …
-Ждёт человека: (найти документы, расспросить родных, войти в аккаунт, решение)
-Следующий шаг: …
+# Continue from here (updated YYYY-MM-DD)
+Current question: …
+What was done in the last session: …
+Waiting for the person: (find documents, interview relatives, log in to an account, a decision)
+Next step: …
 ```

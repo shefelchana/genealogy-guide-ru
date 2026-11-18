@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-"""Полнотекстовый поиск по genealogyindexer.org — справочники, адрес-календари,
-книги памяти, именные списки потерь Первой мировой. Логина не требует.
+"""Full-text search on genealogyindexer.org: directories, address calendars,
+memorial books, name lists of First World War casualties. No login required.
 
   python3 fulltext.py Фейгель --scope 19800
   python3 fulltext.py Розенберг --scope any --match ocr --collection military
-  python3 fulltext.py Левин --counts      # только счётчики по регионам
+  python3 fulltext.py Левин --counts      # only the per-region counts
 
-⚠️ Искать КИРИЛЛИЦЕЙ: русские справочники распознаны кириллицей,
-латинская транслитерация по ним не ищется.
-⚠️ Ноль по этому инструменту НЕ доказывает отсутствия — OCR теряет записи.
+⚠️ Search in CYRILLIC: the Russian directories are recognized in Cyrillic,
+a Latin transliteration will not find anything in them.
+⚠️ A zero from this tool does NOT prove absence: OCR loses records.
 """
 import argparse, html, re, sys, urllib.parse, urllib.request
 
-# Форма живёт на домене БЕЗ www: адрес с www отдаёт 301, и POST при этом теряется.
+# The form lives on the domain WITHOUT www: the www address returns a 301 and the POST is lost.
 ENDPOINT = "https://genealogyindexer.org/"
-# Сервер отдаёт форму ботам без узнаваемого UA.
+# The server serves the form to bots only without a recognizable bot UA.
 UA = "Mozilla/5.0 AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
 
 SCOPES = {
@@ -34,7 +34,7 @@ def search(term, scope="any", match="regular", collection="any", date="any"):
         with urllib.request.urlopen(req, timeout=60) as r:
             return r.read().decode("utf-8", "replace")
     except Exception as exc:
-        print(f"запрос не прошёл: {exc}", file=sys.stderr)
+        print(f"request failed: {exc}", file=sys.stderr)
         return ""
 
 
@@ -47,12 +47,12 @@ def lines(page):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("term")
-    ap.add_argument("--scope", default="any", help="|".join(SCOPES) + " или код")
+    ap.add_argument("--scope", default="any", help="|".join(SCOPES) + " or a code")
     ap.add_argument("--match", default="regular", choices=["regular", "dm", "ocr"])
     ap.add_argument("--collection", default="any",
                     choices=["any", "directories", "yizkor", "military", "history", "school"])
     ap.add_argument("--date", default="any")
-    ap.add_argument("--counts", action="store_true", help="только счётчики по регионам")
+    ap.add_argument("--counts", action="store_true", help="only the per-region counts")
     a = ap.parse_args()
 
     page = search(a.term, a.scope, a.match, a.collection, a.date)
@@ -63,16 +63,16 @@ def main():
     L = L[(idx[0] + 1 if idx else 0):]
 
     counts = [l for l in L if re.match(r"^[A-Z][\w .+-]* \(~?\d+\)$", l)]
-    print("── совпадений по регионам:")
+    print("-- matches by region:")
     for c in dict.fromkeys(counts):
         print("   ", c)
     if a.counts:
         return
 
-    print("── источники и фрагменты:")
+    print("-- sources and fragments:")
     for l in L:
         if re.match(r"^\d{4} ", l):
-            print("\n  ИСТОЧНИК:", l[:120])
+            print("\n  SOURCE:", l[:120])
         elif l.startswith("Original Title") or l.startswith("image "):
             print("    ", l[:120])
         elif a.term.lower() in l.lower():

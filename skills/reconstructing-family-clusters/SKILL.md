@@ -1,90 +1,90 @@
 ---
 name: reconstructing-family-clusters
-description: Turns a single find — a father with his children — into a whole-family reconstruction, then joins same-surname families into one tree. Establishes estate and registration (listed where versus lived where), the guberniya and uezd for that year, occupation, then builds a matrix of documents that must exist for such a family (revisions bridged by ages, 1874–75 family and draft lists, 1897 census, metrical books of every surviving year, notarial, court, press, directories, Soviet, Holocaust, emigration) and a per-family package of have, missing and where to look. Weighs kinship signals between families and grades each link as document, strong version or hypothesis. Use whenever the user found a parent and children, says «нашёл отца и детей», «собрать всю семью», «свести однофамильцев в одно дерево», «это одна семья или разные», «пакет документов», «family reconstruction», «cluster research», or has many unconnected families of one surname — even if they ask only about one person.
+description: Turns a single find, a father with his children, into a whole-family reconstruction, then joins same-surname families into one tree. Establishes estate and registration (listed where versus lived where), the guberniya and uezd for that year, and occupation, then builds a matrix of documents that must exist for such a family (revision lists bridged by ages, 1874–75 family and draft lists, 1897 census, metrical books of every surviving year, notarial, court, press, directories, Soviet, Holocaust, emigration) and a per-family package of have, missing and where to look. Weighs kinship signals between families and grades each link as document, strong version or hypothesis. Use whenever the user found a parent and children, wants to reconstruct the whole family, merge same-surname families into one tree, asks whether this is one family or different ones, asks for a document package, "family reconstruction" or "cluster research", or has many unconnected families of one surname, even if they ask only about one person. Also triggers on Russian requests: «нашёл отца и детей», «собрать всю семью», «свести однофамильцев в одно дерево», «это одна семья или разные», «пакет документов».
 ---
 
-# Нашёл семью — собери её целиком, затем сведи семьи в одно дерево
+# You found a family: reconstruct it whole, then join the families into one tree
 
-## Когда применять
+## When to use
 
-- Найдена запись, где видны отец и дети (ревизия, посемейный список, перепись, ряд метрик).
-- В проекте накопилось несколько семей одной фамилии без доказанных связей.
-- Пользователь спрашивает про одного человека, а документы о нём лежат в делах братьев, сестёр, свояков.
+- You have found a record that shows a father and children (a revision list, a family list, a census, a run of metrical records).
+- The project has accumulated several families of one surname with no proven links.
+- The user asks about one person, but the documents about him lie in the files of brothers, sisters and brothers-in-law.
 
-Одиночная находка не связывает ветви. Семья, собранная пакетом, даёт возрасты всех детей, место приписки, занятие, свидетелей — и именно по ним видно родство с другими семьями. Поэтому работай по **перечню документов, которые обязаны существовать**, а не от находки к находке.
+A single find does not connect branches. A family reconstructed as a package gives the ages of all the children, the place of registration, the occupation, the witnesses, and it is by these that kinship with other families becomes visible. So work from the **list of documents that must exist**, not from find to find.
 
-## Порядок работы
+## Order of work
 
-### Шаг 1. Якорь
+### Step 1. The anchor
 
-Запиши найденное дословно, с шифром, кадром, уровнем доказательности: глава, жена, дети, возрасты, номер семьи, сословие, общество. Это якорь; всё остальное проверяется против него.
+Write down what was found verbatim, with the archival reference, frame and standard-of-proof level: head, wife, children, ages, family number, estate, society. This is the anchor; everything else is checked against it.
 
-### Шаг 2. Кто эта семья в системе империи
+### Step 2. Who this family is in the imperial system
 
-1. **Сословие**: мещане, купцы (гильдия), цеховые, земледельцы, почётные граждане, крестьяне. Сословие — состояние, а не происхождение: семья переходит из мещан в купцы и обратно.
-2. **Приписка и проживание.** Где числились (общество, по которому шли ревизии и призыв) и где жили (там рождаются дети, там перепись 1897 года, справочники, суды). Это два разных архивных адреса. Запиши оба.
-3. **Регион на тот год**: губерния и уезд именно для года документа; границы и подчинение менялись. Навык `identifying-places`.
-4. **Занятие и образ жизни**: лес и аренда, мельница, торговля, ремесло (цех), медицина, служба при раввинате, извоз. От занятия зависят справочники, суды, нотариат, пресса.
+1. **Estate** (*soslovie*): meshchane (townspeople), merchants (guild), guild artisans (*tsekhovye*), agricultural colonists, honorary citizens, peasants. Estate is a status, not an origin: a family moves from meshchane to merchants and back.
+2. **Registration and residence.** Where they were listed (the society under which the revisions and the draft were conducted) and where they lived (where the children are born, where the 1897 census, directories and courts are). These are two different archival addresses. Write down both.
+3. **The region for that year**: the guberniya and uezd for the year of the document; borders and jurisdiction changed. Skill `identifying-places`.
+4. **Occupation and way of life**: timber and leases, a mill, trade, a craft (guild), medicine, service at the rabbinate, carting. The occupation determines which directories, courts, notaries and press to use.
 
-### Шаг 3. Матрица обязательных документов
+### Step 3. The matrix of required documents
 
-Для этой семьи составь перечень типов документов по годам: какие **должны** были быть созданы, где хранятся и сохранились ли. Подробная матрица по периодам, сословиям и занятиям — `references/document-matrix.md`. Минимум:
+For this family compile a list of document types by year: which ones **should** have been created, where they are kept and whether they survive. The detailed matrix by period, estate and occupation is in `references/document-matrix.md`. The minimum:
 
-- ревизии по мосту возрастов (каждая ступень отдельно, по месту приписки) — `tracing-revision-records`;
-- посемейные и призывные списки 1874–1875 годов (у евреев — военная перепись 1875 года с номером семьи по 1858 году);
-- перепись 1897 года — по месту проживания;
-- метрики **всех сохранившихся лет**, не только «нужного»: умершие младенцы, браки детей, смерти родителей;
-- нотариат, суды, пресса, справочники; рекрутские списки (до 1874 года);
-- советские документы, Холокост, эвакуация, эмиграция.
+- revision lists bridged by ages (each step separately, by place of registration): `tracing-revision-records`;
+- family and draft lists of 1874-1875 (for Jews, the military census of 1875 with the family number according to 1858);
+- the 1897 census, by place of residence;
+- metrical books for **all surviving years**, not only the "right" one: infants who died, marriages of the children, deaths of the parents;
+- notarial deeds, courts, press, directories; recruit lists (before 1874);
+- Soviet documents, the Holocaust, evacuation, emigration.
 
-### Шаг 4. Пакет документов на семью
+### Step 4. The document package for the family
 
-Заведи карточку по шаблону `assets/family-card.md`. По каждому типу документа одна строка: **есть** (шифр, кадр) / **нет — искали** (где, какими формами, охват) / **не сохранилось** (чем подтверждено) / **не искали — где искать**. Перед листанием каждого дела проверь указатели и реестр непросмотренных разделов (навык `using-community-surname-indexes`).
+Start a card from the template `assets/family-card.md`. One line per document type: **have** (reference, frame) / **no, searched** (where, with which forms, coverage) / **not preserved** (how confirmed) / **not searched, where to look**. Before paging through each file, check the indexes and the registry of unread sections (skill `using-community-surname-indexes`).
 
-Отсутствие там, где запись **обязана** быть, — отрицательное свидетельство (умер, бежал, перечислен, приписан в другом месте). Записывай его как результат, а не как пустой поиск.
+An absence where a record **must** be is negative evidence (died, fled, transferred, registered elsewhere). Record it as a result, not as an empty search.
 
-### Шаг 5. Идти по перечню
+### Step 5. Go down the list
 
-Одна семья за раз, по строкам карточки, от дешёвого (указатели, полнотекст) к дорогому (сплошное чтение). Каждого найденного ребёнка проверяй как отдельного человека: его брак, его дети, его советская жизнь. При работе с агентами — одно дело на агента, один сайт — один исполнитель (`orchestrating-genealogy-agents`).
+One family at a time, line by line of the card, from cheap (indexes, full text) to expensive (reading every page). Check each child found as a separate person: his marriage, his children, his Soviet life. When working with agents: one file per agent, one site per worker (`orchestrating-genealogy-agents`).
 
-Если в местечке приписки следов мало, посмотри **записи крупного города**, куда уезжали: в полных выписках метрик Лодзи за 1906 год (около 5500 записей) названо 884 других места рождения или жительства (JRI-Poland, статья С. Даймонда в Avotaynu, 2018) [по выдаче]. Такие записи указывают на местечко происхождения.
+If the shtetl of registration holds few traces, look at **the records of the large city** where people moved: the full extracts of the 1906 Lodz metrical records (about 5,500 records) name 884 other places of birth or residence (JRI-Poland, an article by S. Diamond in Avotaynu, 2018) [from search results]. Such records point to the shtetl of origin.
 
-### Шаг 6. Свести семьи в одно дерево
+### Step 6. Join the families into one tree
 
-Когда собраны две или больше семей одной фамилии, ищи связи между ними по признакам из `references/kinship-signals.md`: общее место приписки, переходы между обществами, имена в честь умерших, двойные имена и разные отчества у детей, уникальная ошибка писаря, свидетели и поручители, общий бизнес, совпадающий **набор** имён в двух-трёх поколениях.
+When two or more families of one surname have been assembled, look for links between them using the signals in `references/kinship-signals.md`: a shared place of registration, transfers between societies, names given in memory of the dead, double names and different patronymics among the children, a clerk's unique error, witnesses and guarantors, a shared business, a matching **set** of names across two or three generations.
 
-Каждую связь занеси в таблицу `assets/family-links-table.md` со статусом (единая шкала руководства, `guide/3-результат/01-доказательность.md`, раздел 4а):
+Enter each link in the table `assets/family-links-table.md` with a status (the guide's single scale: `guide/3-результат/01-доказательность.md`, section 4a; English: `en/guide/3-results/01-standard-of-proof.md` § 4a):
 
-| Статус | Что нужно |
+| Status | What is needed |
 |---|---|
-| 🟢 **Подтверждена** | запись, прямо называющая родство (сын, брат, вдова), или мост возрастов между ревизиями — плюс второй независимый признак (совпадение состава семьи и т. п.) |
-| 🟡 **Открыта / сильная версия** | два и более независимых косвенных признака, ни одного противоречия; оформлена развёрнутым обоснованием |
-| ⚪ **Не проверена / слабая** | один признак (фамилия + место, совпадение имени и отчества, строка указателя) |
-| 🔴 **Снята** | опровергнута; записать причину |
+| 🟢 **Confirmed** | a record that directly names the kinship (son, brother, widow), or an age bridge between revisions, plus a second independent feature (matching family composition and the like) |
+| 🟡 **Open / strong version** | two or more independent indirect features, no contradictions; set out with a written rationale |
+| ⚪ **Unchecked / weak** | one feature (surname + place, matching name and patronymic, an index line) |
+| 🔴 **Withdrawn** | refuted; record the reason |
 
-## Ловушки
+## Traps
 
-- **Однофамильцы с фамилией-топонимом или профессией** по умолчанию не родня: такие фамилии возникали независимо в разных местах.
-- **Ареал фамилии** смотри по самым ранним спискам с фамилиями — дополнительным сказкам V ревизии (1805–1808), ревизиям 1811 и 1816 годов (в сказках 1795 года у евреев фамилий обычно ещё нет), а не по спискам начала XX века: к 1900-м семьи разъехались.
-- **Дети одного главы двора бывают от разных жён**: большой разрыв в возрастах детей или другое имя матери в метрике — повод искать второй брак, а не вторую семью. Разводы у евреев в первой половине XIX века были частыми (Ч. Фриз) [по выдаче].
-- **Возраст «плавает»** на 2–5 лет между документами; призывной возраст сыновей правили нарочно, невест «старили». Сравнивай интервалы и порядок детей, а не точный год.
-- **Номер семьи между ревизиями не переносится.** Связь даёт только мост возрастов, совпадение состава семьи или явная отсылка писаря («по ревизии 1858 г. № …»).
-- **Тёзки «дядя — племянник»** близкого возраста из-за обычая называть в честь умерших: легко перепутать поколения.
-- **Разные отчества у родных детей** — норма при двойном имени отца или смене имени при жизни; это не опровергает родство.
-- **Совпадение по одному указателю, перепечатанному в нескольких местах**, — одно свидетельство, а не несколько.
+- **Namesakes whose surname is a place name or an occupation** are by default not relatives: such surnames arose independently in different places.
+- **The area of a surname** should be judged from the earliest lists with surnames, namely the additional lists of the 5th revision (1805-1808) and the revisions of 1811 and 1816 (Jews usually have no surnames yet in the 1795 lists), not from lists of the early 20th century: by the 1900s families had scattered.
+- **Children of one head of household may be by different wives**: a big gap in the children's ages or a different mother's name in a metrical record is a reason to look for a second marriage, not a second family. Divorce among Jews in the first half of the 19th century was frequent (C. Freeze) [from search results].
+- **Age "floats"** by 2-5 years between documents; the draft age of sons was altered on purpose, and brides were made "older". Compare intervals and the order of the children, not the exact year.
+- **The family number is not carried over between revisions.** A link is given only by an age bridge, matching family composition or the clerk's explicit reference ("by the revision of 1858 No. ...").
+- **Namesakes "uncle and nephew"** of similar age, because of the custom of naming after the dead: it is easy to confuse the generations.
+- **Different patronymics among siblings** are normal with a father's double name or a change of name during life; they do not disprove kinship.
+- **A match in one index reprinted in several places** is one piece of evidence, not several.
 
-## Что считать находкой
+## What counts as a find
 
-- Для семьи: якорь подтверждён по скану, и по каждому обязательному типу документа есть статус (есть / нет с охватом / не сохранилось).
-- Для связи между семьями: статус 🟢 или 🟡 с записанным обоснованием. В общедоступное дерево — только 🟢; в личное рабочее — 🟡 с пометкой «версия»; ⚪ — только в файле гипотез. Решение о родстве и правки дерева за человеком.
+- For a family: the anchor is confirmed from the scan, and for each required document type there is a status (have / no, with coverage / not preserved).
+- For a link between families: status 🟢 or 🟡 with a written rationale. Only 🟢 goes into a publicly available tree; into a personal working tree 🟡 with the note "version"; ⚪ only in the hypotheses file. The decision about kinship and edits to the tree belong to the person.
 
-## Если ничего не нашлось
+## If nothing was found
 
-1. Проверь, по тому ли архивному адресу ищешь: приписка или проживание; уезд на тот год; соседние общества и уезды.
-2. Расширь годы: все сохранившиеся годы метрик, все ревизии, а не только «нужную».
-3. Ищи через окружение: братьев, свояков, свидетелей, компаньонов (принцип FAN).
-4. Пустые и несохранившиеся строки оставь в карточке: они показывают, что связь пока не доказана, и не дают выдать гипотезу за факт.
+1. Check whether you are searching at the right archival address: registration or residence; the uezd for that year; neighbouring societies and uezds.
+2. Widen the years: all surviving years of metrical books, all revisions, not only the "right" one.
+3. Search through the circle: brothers, brothers-in-law, witnesses, business partners (the FAN principle: friends, associates, neighbours).
+4. Leave the empty and unpreserved lines in the card: they show that the link is not yet proven and stop a hypothesis from being passed off as fact.
 
-## См. также
+## See also
 
 `verifying-genealogy-findings` · `tracing-revision-records` · `using-community-surname-indexes` · `searching-pogrom-records` · `identifying-places` · `soviet-era-records` · `tracing-emigrants-to-origin` · `dna-matches-endogamy` · `search-logic-navigator` · `orchestrating-genealogy-agents` · `writing-family-history`
