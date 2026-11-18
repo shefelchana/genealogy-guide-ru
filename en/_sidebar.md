@@ -66,5 +66,6 @@
   - [Templates](/en/templates/README.md)
   - [Skills (in Russian)](/skills/README.md)
   - [Instructions for the AI agent](/en/AGENTS.md)
+- [Change log](/en/changelog.md)
 - [About the compiler](/en/about.md)
 - [Русский](/README.md)

@@ -53,6 +53,8 @@ Students' personal files are kept in national archives and are not digitised eve
 
 A surname can have several explanations: from a word, a place, an occupation, the mother's name. Jews of the Russian Empire were given surnames in 1804–1830s, and the same surname arose independently in different places. So namesakes often turn out to be different families. You can check a surname in the index to Beider's dictionaries at [stevemorse.org](https://www.stevemorse.org/phonetics/beider.php): whether it exists and in which uezds. More in [Names and spellings](../2-reference/03-names-spellings.md).
 
+Commercial "surname origin certificates" often say the same for everyone. An honest version with versions, levels and sources, and the truth about a "family coat of arms", is in the [Formats showcase](../../examples/formats-showcase.md), sections 10–11.
+
 > "What versions of the origin of the surname [X] exist? In which uezds was it found? What supports each version?"
 
 ## 6. Namesakes from one region
@@ -67,6 +69,8 @@ Put everyone with the surname from the guberniya into one table: who, where, whe
 - **A one-page tree:** a chart from a GEDCOM export or a table, to show relatives.
 
 Use only verified data. If you send the tree to someone, remove living people.
+
+Ready-made samples — a migration map, a pedigree chart and a one-line "ladder", person cards, an ethnicity estimate next to the expectation from the tree, chapters of a life with photos — on one invented family: the [Formats showcase](../../examples/formats-showcase.md) and its [interactive version](https://shefelchana.github.io/genealogy-guide-ru/en/examples/formats-showcase-shapiro.html).
 
 > "Draw a map of the family's moves by year from this table. Label each point with its document."
 

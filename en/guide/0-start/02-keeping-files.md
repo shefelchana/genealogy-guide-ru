@@ -86,6 +86,7 @@ Which platform to choose — see [Tree platforms](../2-reference/16-tree-platfor
 
 - **A register of partly read files.** A file read for the sake of one surname later passes itself off as "viewed" for another. Write down: the file, which sections and images have been read, which surname you searched for, what is left. When a new surname appears, look here first ([Community surname indexes](../2-reference/08-surname-indexes.md)).
 - **Contradictions.** When inconsistent information has piled up about a person, it is handy to draw a map: the person in the centre, the sources as branches, arrows showing which statements agree and which conflict (a technique of Ron Arons from the book "Mind Maps for Genealogy", 2014) [from search snippet]. In a file it can be a table "statement — source — agrees with — conflicts with".
+- **Samples.** A filterable source catalogue, an evidence matrix, a folder scheme, a file-naming rule and a document card are shown on an invented family in the [Formats showcase](../../examples/formats-showcase.md), sections 2, 8 and 12.
 
 ## 7. If you work with an AI assistant
 

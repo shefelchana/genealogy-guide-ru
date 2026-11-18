@@ -28,8 +28,8 @@ import markdown
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://shefelchana.github.io/genealogy-guide-ru/'
 REPO = 'https://github.com/shefelchana/genealogy-guide-ru/blob/main/'
-INCLUDE = ['README.md', 'about.md', 'guide', 'catalog', 'reading', 'examples', 'templates',
-           'en/README.md', 'en/about.md', 'en/GLOSSARY.md', 'en/guide', 'en/catalog', 'en/reading',
+INCLUDE = ['README.md', 'about.md', 'обновления.md', 'guide', 'catalog', 'reading', 'examples', 'templates',
+           'en/README.md', 'en/about.md', 'en/changelog.md', 'en/GLOSSARY.md', 'en/guide', 'en/catalog', 'en/reading',
            'en/examples', 'en/templates', 'en/articles']
 # Hand-written interactive pages without a .md source: listed in sitemap.xml as they are.
 STANDALONE = ['examples/витрина-форматов-шапиро.html', 'en/examples/formats-showcase-shapiro.html']
@@ -271,6 +271,8 @@ def lastmod(md):
 
 
 def main():
+    import build_changelog
+    build_changelog.main()
     pages = collect()
     pairs = pathmap()
     today = date.today().isoformat()

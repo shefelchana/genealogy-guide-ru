@@ -63,5 +63,6 @@
   - [Шаблоны](/templates/README.md)
   - [Навыки (skills)](/skills/README.md)
   - [Инструкция для ИИ-агента](/AGENTS.md)
+- [Обновления](/обновления.md)
 - [О составителе](/about.md)
 - [English](/en/README.md)

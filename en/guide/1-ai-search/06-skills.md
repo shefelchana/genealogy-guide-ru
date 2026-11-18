@@ -58,8 +58,14 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 | [`verifying-genealogy-findings`](../../../skills/verifying-genealogy-findings/SKILL.md) | check a find, understand whether "not found" means anything, try spellings, full-text search |
 | [`reconstructing-family-clusters`](../../../skills/reconstructing-family-clusters/SKILL.md) | you found a father and children — assemble a package of documents on the family and sort out namesakes |
 | [`dna-matches-endogamy`](../../../skills/dna-matches-endogamy/SKILL.md) | analysing DNA matches under endogamy |
+| [`dna-matches-across-platforms`](../../../skills/dna-matches-across-platforms/SKILL.md) | matches on several sites when the origin is mixed |
 | [`citizenship-by-descent-dossier`](../../../skills/citizenship-by-descent-dossier/SKILL.md) | assemble a chain of documents for citizenship by descent |
 | [`writing-family-history`](../../../skills/writing-family-history/SKILL.md) | turn finds into a readable text for relatives |
+| [`building-research-showcase`](../../../skills/building-research-showcase/SKILL.md) | one interactive page from the project data: catalogues, tree, map, DNA, comparisons |
+| [`building-research-catalogs`](../../../skills/building-research-catalogs/SKILL.md) | source and people catalogues, a person profile, a document library |
+| [`building-evidence-matrix`](../../../skills/building-evidence-matrix/SKILL.md) | documents disagree: a matrix of versions and a verdict with a level |
+| [`rendering-family-tree`](../../../skills/rendering-family-tree/SKILL.md) | pedigree chart, line ladder, places for the map |
+| [`checking-dna-against-tree`](../../../skills/checking-dna-against-tree/SKILL.md) | ethnicity estimate against the tree, checking an origin legend |
 
 The full list with descriptions is in [skills/README.md](../../../skills/README.md) (in Russian).
 

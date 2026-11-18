@@ -122,10 +122,11 @@
 | война, эвакуация, репрессии, Холокост | [`soviet-era-records`](skills/soviet-era-records/SKILL.md) | [Война, репрессии, блокада](guide/2-справочник/12-война-репрессии-блокада.md) |
 | эмигранты | [`tracing-emigrants-to-origin`](skills/tracing-emigrants-to-origin/SKILL.md) | [Эмиграция](guide/2-справочник/13-эмиграция.md) |
 | гражданство по происхождению | [`citizenship-by-descent-dossier`](skills/citizenship-by-descent-dossier/SKILL.md) | [Гражданство](guide/2-справочник/14-гражданство-по-происхождению.md) |
-| ДНК | [`dna-matches-endogamy`](skills/dna-matches-endogamy/SKILL.md) | [ДНК](guide/2-справочник/15-днк.md) |
+| ДНК | [`dna-matches-endogamy`](skills/dna-matches-endogamy/SKILL.md), [`dna-matches-across-platforms`](skills/dna-matches-across-platforms/SKILL.md), [`checking-dna-against-tree`](skills/checking-dna-against-tree/SKILL.md) | [ДНК](guide/2-справочник/15-днк.md) |
 | фотографии | [`dating-old-photos`](skills/dating-old-photos/SKILL.md), [`interpreting-jewish-family-photos`](skills/interpreting-jewish-family-photos/SKILL.md) | [Старые фотографии](guide/2-справочник/17-фотографии.md) |
 | задания агентам, сохранение | [`orchestrating-genealogy-agents`](skills/orchestrating-genealogy-agents/SKILL.md), [`research-session-handoff`](skills/research-session-handoff/SKILL.md), [`organizing-genealogy-research`](skills/organizing-genealogy-research/SKILL.md) | [Процесс с агентами](guide/1-поиск-с-ии/03-процесс-с-агентами.md) |
 | история семьи | [`writing-family-history`](skills/writing-family-history/SKILL.md) | [Как писать историю семьи](guide/3-результат/02-история-семьи.md) |
+| показать результат: каталоги, карточки, дерево, карта, сопоставления, страница для родных | [`building-research-showcase`](skills/building-research-showcase/SKILL.md), [`building-research-catalogs`](skills/building-research-catalogs/SKILL.md), [`rendering-family-tree`](skills/rendering-family-tree/SKILL.md), [`building-evidence-matrix`](skills/building-evidence-matrix/SKILL.md) | [Витрина форматов](examples/витрина-форматов.md) |
 
 Готовые запросы по шагам — [Библиотека запросов к ИИ](guide/1-поиск-с-ии/02-запросы-к-ии.md). Особенности сайтов (регистрация, капчи, темп) — [Доступ, капчи, темп](guide/2-справочник/19-доступ-капчи-темп.md) и [каталог](catalog/README.md).
 

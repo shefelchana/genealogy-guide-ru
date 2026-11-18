@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.4, November 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.5, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -140,7 +140,7 @@ The five rules that save months are in the [Quick start](guide/0-start/01-quick-
 
 ## Skills for Claude — how to install
 
-The [skills/](../skills/README.md) folder contains 26 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA and writing the family history. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
+The [skills/](../skills/README.md) folder contains 32 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
 
 The skills are written in Russian, but Claude reads them and works fine with prompts in English.
 
@@ -156,7 +156,14 @@ The skills are written in Russian, but Claude reads them and works fine with pro
 
 More details and limitations — [skills/README.md](../skills/README.md).
 
-**Via Agensi.** The same 26-skill pack is on the Agensi marketplace; an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+**Via Agensi.** The skill pack is also on the Agensi marketplace (new skills reach it with a delay); an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+
+## What's new in 0.5.5
+
+- **[Formats showcase](examples/formats-showcase.md):** 13 ways to show and store a research project — source and people catalogues, a person profile, a tree and a line ladder, a migration map, DNA against the tree, an evidence matrix, chapters of a life with photos, a surname certificate, an emblem instead of a "coat of arms", a document library — on an invented family, with an [interactive version](https://shefelchana.github.io/genealogy-guide-ru/en/examples/formats-showcase-shapiro.html).
+- **Five new skills:** `building-research-showcase` builds such a page from the project files with several agents in a fixed order and checks the data with a script (including real names left in a public version); `building-research-catalogs`, `building-evidence-matrix`, `rendering-family-tree`, `checking-dna-against-tree` — one format each.
+- **[Change log](changelog.md):** every change by date from the commit history, rebuilt automatically.
+- The `dna-matches-across-platforms` skill is now listed in the agent instructions and skill lists.
 
 ## What's new in 0.5.4
 

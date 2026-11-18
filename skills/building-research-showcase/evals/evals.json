@@ -1,0 +1,17 @@
+{
+  "skill_name": "building-research-showcase",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Вот папка моего исследования (журнал находок, персоны, гипотезы, ДНК, рассказы). Сделай наглядную страницу для родных: дерево, карточки людей, карта переездов, ДНК — всё, что можно показать. Один HTML-файл.",
+      "expected_output": "One HTML page with source catalogue, people, profile, pedigree, map, DNA vs tree, comparisons, story; levels preserved; traps handled (wrong grandmother, namesake, 🟡 not raised).",
+      "files": ["evals/files/fixture-melnyk/"]
+    },
+    {
+      "id": 2,
+      "prompt": "Сделай по этой папке обезличенную витрину для публикации в методичке: настоящие фамилии Мельник, Гринберг, Орлов, Шевчук, Кузьмина и село Заречье нигде не должны остаться. Один HTML-файл.",
+      "expected_output": "Same kind of page with all listed names replaced, invented references marked, structure kept.",
+      "files": ["evals/files/fixture-melnyk/"]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+# Change log
+
+> Every change to the guide by date, newest first, taken from the repository's commit history. The page is rebuilt automatically with the site. A summary by version is in "What's new" on the [main page](README.md). Commit messages are in the language of the change (Russian or English).
+
+
+## 18 November 2026
+
+- Витрина форматов: новый пример ДНК (проверка легенды «бабушка из поляков» по тесту матери); интерактивные страницы в sitemap через STANDALONE в build\_static.py ([c000768](https://github.com/shefelchana/genealogy-guide-ru/commit/c000768))
+- EN: formats showcase — 13 ways to show and store a family research project (invented Shapiro family, interactive page); RU↔EN links ([4659873](https://github.com/shefelchana/genealogy-guide-ru/commit/4659873))
+- Примеры: витрина форматов — 13 способов показать и хранить исследование (условная семья Шапиро, интерактивная страница) ([e15f119](https://github.com/shefelchana/genealogy-guide-ru/commit/e15f119))
+
+## 17 November 2026
+
+- ДНК § 6в и навык dna-matches-across-platforms: разбор на нескольких сайтах при смешанном происхождении ([7e6e11b](https://github.com/shefelchana/genealogy-guide-ru/commit/7e6e11b))
+- ДНК § 6б: порядок работы со списком совпадений (BCG, Shared cM Project, Лидс при смешанном происхождении, журнал); поправка о гаплогруппах 23andMe ([e4b3341](https://github.com/shefelchana/genealogy-guide-ru/commit/e4b3341))
+- Section 7a: neutral example names ([09726de](https://github.com/shefelchana/genealogy-guide-ru/commit/09726de))
+- EN 0.5.4: DNA section 6a, legend register, peasant migrants 7a, false zero 32-33 ([978bdb9](https://github.com/shefelchana/genealogy-guide-ru/commit/978bdb9))
+- 0.5.4: DNA calibration and generation arithmetic, legend registry, migrant peasants, false-zero filters; pack skills updated ([0f53f6f](https://github.com/shefelchana/genealogy-guide-ru/commit/0f53f6f))
+- Static HTML pages and sitemap.xml for search engines (tools/build\_static.py) ([b6c1cb8](https://github.com/shefelchana/genealogy-guide-ru/commit/b6c1cb8))
+- 0.5.3: links to the skill pack on Agensi, revision-list article, script fixes ([8924d83](https://github.com/shefelchana/genealogy-guide-ru/commit/8924d83))
+- orchestrating-genealogy-agents: OS-neutral wording for the ban on app automation ([2328c27](https://github.com/shefelchana/genealogy-guide-ru/commit/2328c27))
+- Scripts: drop OS token from User-Agent ([8022c9b](https://github.com/shefelchana/genealogy-guide-ru/commit/8022c9b))
+- Add English article: How to read a Russian Empire revision list ([4cfd0f0](https://github.com/shefelchana/genealogy-guide-ru/commit/4cfd0f0))
+
+## 15 November 2026
+
+- Fix f-string for Python \<3.12 in pogrom\_search.py; author name in writing-family-history ([883bba9](https://github.com/shefelchana/genealogy-guide-ru/commit/883bba9))
+- Пары имён и пример двойного имени — общие примеры вместо семейных (RU/EN) ([3fe2aae](https://github.com/shefelchana/genealogy-guide-ru/commit/3fe2aae))
+
+## 13 November 2026
+
+- 0.5.2: Яндекс архивы только со входом; проверка адреса вместо догадки про VPN; Беларусь и Узбекистан по текстам законов; навыки — таблица тёзок, выдержки агентам, кропы в файлы (RU/EN) ([61f60ed](https://github.com/shefelchana/genealogy-guide-ru/commit/61f60ed))
+
+## 11 November 2026
+
+- Из практики Полины Кривошеевой: порядок и экономия (RU/EN); опознание по фото ([0556a56](https://github.com/shefelchana/genealogy-guide-ru/commit/0556a56))
+
+## 17 October 2026
+
+- EN: точное название подраздела ([7c0efda](https://github.com/shefelchana/genealogy-guide-ru/commit/7c0efda))
+- Процесс с агентами: экономия токенов и слепой тест фактчекера; три уровня — Cursor и Obsidian (RU/EN) ([5abb4ca](https://github.com/shefelchana/genealogy-guide-ru/commit/5abb4ca))
+- Идеи для истории семьи: семь лайфхаков на память (RU/EN) ([b047c2f](https://github.com/shefelchana/genealogy-guide-ru/commit/b047c2f))
+- Новая страница «Идеи для истории семьи» (RU/EN) ([4c06d97](https://github.com/shefelchana/genealogy-guide-ru/commit/4c06d97))
+- Каталог: Matricula, Archion, Familia Austria, Archives Portal Europe, avr.org.ua, мартиролог Сахаровского центра ([4f3c121](https://github.com/shefelchana/genealogy-guide-ru/commit/4f3c121))
+- 0.5.1: другие страны по происхождению и заказ ДНК-тестов по странам ([dad87da](https://github.com/shefelchana/genealogy-guide-ru/commit/dad87da))
+- Поиск предков 0.5.1: руководство по генеалогии с ИИ ([0a6bf9d](https://github.com/shefelchana/genealogy-guide-ru/commit/0a6bf9d))

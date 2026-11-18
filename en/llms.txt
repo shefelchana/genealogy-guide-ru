@@ -11,6 +11,7 @@ Rules for the AI agent: every find comes with an address (archive, file, frame o
 - [Instructions for the AI agent](AGENTS.md): rules, the first conversation, working without access to files, order of work, find format, skills by task
 - [README](README.md): an overview of the guide for the human, installing the skills
 - [About the compiler](about.md): who compiled the guide and how to get in touch
+- [Change log](changelog.md): every change by date from the commit history, newest first
 - [Русская версия](../llms.txt): the same map in Russian (original)
 - [Three levels](guide/0-start/00-three-levels.md): level 1 — a single check in a browser with an AI plugin (bring together scattered records about one person on one site), level 2 — a chat and three files, level 3 — a project with agents in Claude Code
 - [For English speakers](guide/0-start/08-for-english-speakers.md): Cyrillic, transliteration, searching Russian and Ukrainian sites with translation and AI
@@ -79,12 +80,12 @@ Practice:
 
 ## Skills
 
-- [List of skills](../skills/README.md): 26 skills for Claude with trigger conditions and installation (the skill files are in Russian; Claude reads them and works fine with English prompts)
+- [List of skills](../skills/README.md): 32 skills for Claude with trigger conditions and installation (the skill files are in Russian; Claude reads them and works fine with English prompts)
 - [genealogy-intake](../skills/genealogy-intake/SKILL.md): the first conversation, project files, the first question and plan
 - [search-logic-navigator](../skills/search-logic-navigator/SKILL.md): forks in the search route
 - [verifying-genealogy-findings](../skills/verifying-genealogy-findings/SKILL.md): verifying finds and negative conclusions
 - [orchestrating-genealogy-agents](../skills/orchestrating-genealogy-agents/SKILL.md): tasks for agents and accepting reports; a team of five roles, the round, the safety of the person's computer
-- The rest (path ../skills/<name>/SKILL.md): organizing-genealogy-research, research-session-handoff, identifying-places, ukrainian-archives-on-commons, soviet-era-records, tracing-emigrants-to-origin, searching-pogrom-records, researching-jewish-cemeteries, using-community-surname-indexes, searching-jewishgen, searching-familysearch-films, searching-yandex-archives, searching-nli-jewish-press, reading-archive-scans, tracing-revision-records, reading-hebrew-yiddish-sources, dating-old-photos, interpreting-jewish-family-photos, reconstructing-family-clusters, dna-matches-endogamy, citizenship-by-descent-dossier, writing-family-history
+- The rest (path ../skills/<name>/SKILL.md): organizing-genealogy-research, research-session-handoff, identifying-places, ukrainian-archives-on-commons, soviet-era-records, tracing-emigrants-to-origin, searching-pogrom-records, researching-jewish-cemeteries, using-community-surname-indexes, searching-jewishgen, searching-familysearch-films, searching-yandex-archives, searching-nli-jewish-press, reading-archive-scans, tracing-revision-records, reading-hebrew-yiddish-sources, dating-old-photos, interpreting-jewish-family-photos, reconstructing-family-clusters, dna-matches-endogamy, citizenship-by-descent-dossier, writing-family-history, dna-matches-across-platforms, building-research-showcase, building-research-catalogs, building-evidence-matrix, rendering-family-tree, checking-dna-against-tree
 
 ## Optional
 

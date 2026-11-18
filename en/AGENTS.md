@@ -125,10 +125,11 @@ If you are Claude with the skills installed ([skills/](../skills/README.md)), th
 | war, evacuation, repression, the Holocaust | [`soviet-era-records`](../skills/soviet-era-records/SKILL.md) | [War, repression, the siege](guide/2-reference/12-war-repression-siege.md) |
 | emigrants | [`tracing-emigrants-to-origin`](../skills/tracing-emigrants-to-origin/SKILL.md) | [Emigration](guide/2-reference/13-emigration.md) |
 | citizenship by descent | [`citizenship-by-descent-dossier`](../skills/citizenship-by-descent-dossier/SKILL.md) | [Citizenship by descent](guide/2-reference/14-citizenship-by-descent.md) |
-| DNA | [`dna-matches-endogamy`](../skills/dna-matches-endogamy/SKILL.md) | [DNA](guide/2-reference/15-dna.md) |
+| DNA | [`dna-matches-endogamy`](../skills/dna-matches-endogamy/SKILL.md), [`dna-matches-across-platforms`](../skills/dna-matches-across-platforms/SKILL.md), [`checking-dna-against-tree`](../skills/checking-dna-against-tree/SKILL.md) | [DNA](guide/2-reference/15-dna.md) |
 | photographs | [`dating-old-photos`](../skills/dating-old-photos/SKILL.md), [`interpreting-jewish-family-photos`](../skills/interpreting-jewish-family-photos/SKILL.md) | [Old photographs](guide/2-reference/17-photographs.md) |
 | tasks for agents, saving | [`orchestrating-genealogy-agents`](../skills/orchestrating-genealogy-agents/SKILL.md), [`research-session-handoff`](../skills/research-session-handoff/SKILL.md), [`organizing-genealogy-research`](../skills/organizing-genealogy-research/SKILL.md) | [Working with agents](guide/1-ai-search/03-working-with-agents.md) |
 | family history | [`writing-family-history`](../skills/writing-family-history/SKILL.md) | [Writing the family history](guide/3-results/02-family-history.md) |
+| showing the result: catalogues, cards, tree, map, comparisons, a page for relatives | [`building-research-showcase`](../skills/building-research-showcase/SKILL.md), [`building-research-catalogs`](../skills/building-research-catalogs/SKILL.md), [`rendering-family-tree`](../skills/rendering-family-tree/SKILL.md), [`building-evidence-matrix`](../skills/building-evidence-matrix/SKILL.md) | [Formats showcase](examples/formats-showcase.md) |
 
 Ready-made prompts by step — the [Prompt library](guide/1-ai-search/02-prompt-library.md). Site specifics (registration, captchas, pace) — [Access, captchas, pace](guide/2-reference/19-access-captchas-pace.md) and the [catalog](catalog/README.md).
 
