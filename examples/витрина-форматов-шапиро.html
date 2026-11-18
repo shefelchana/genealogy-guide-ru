@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Витрина семейных форматов</title>
+<meta name="description" content="Учебный пример: 13 способов показать и хранить семейное исследование на условной семье Шапиро — каталог источников и персон, дерево, карта, ДНК, матрица доказательств, истории, сертификат фамилии, библиотека документов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1EF; --card:#FBFCFB; --card-2:#F4F6F5; --ink:#18212F; --muted:#5B6676; --line:#CBD3D6;
+  --accent:#2E4F7A; --stamp:#A2343F; --gold:#9A7A2E; --sepia:#E9E1D2; --sepia-ink:#6B5A3E;
+  --l-shapiro:#2a78d6; --l-kovalev:#eb6834; --l-savelyev:#1baf7a; --l-goldman:#6250d6; --l-tkachenko:#e87ba4; --l-none:#5B6676;
+  --ok:#2F7D4A; --mid:#A87A12; --weak:#7A8290; --idea:#6250d6; --bad:#B23A3A;
+  --shadow:0 1px 2px rgba(24,33,47,.06),0 4px 14px rgba(24,33,47,.06);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#121821; --card:#1A2230; --card-2:#202a3a; --ink:#E6EAF0; --muted:#9AA5B5; --line:#2C3747;
+    --accent:#7FA4D6; --stamp:#E07A84; --gold:#D4B263; --sepia:#2A2620; --sepia-ink:#CDBB97;
+    --l-shapiro:#3987e5; --l-kovalev:#d95926; --l-savelyev:#199e70; --l-goldman:#9085e9; --l-tkachenko:#d55181; --l-none:#9AA5B5;
+    --ok:#5DBB7E; --mid:#E0B24A; --weak:#9AA5B5; --idea:#9085e9; --bad:#E07A7A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --paper:#121821; --card:#1A2230; --card-2:#202a3a; --ink:#E6EAF0; --muted:#9AA5B5; --line:#2C3747;
+    --accent:#7FA4D6; --stamp:#E07A84; --gold:#D4B263; --sepia:#2A2620; --sepia-ink:#CDBB97;
+    --l-shapiro:#3987e5; --l-kovalev:#d95926; --l-savelyev:#199e70; --l-goldman:#9085e9; --l-tkachenko:#d55181; --l-none:#9AA5B5;
+    --ok:#5DBB7E; --mid:#E0B24A; --weak:#9AA5B5; --idea:#9085e9; --bad:#E07A7A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+    color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "PT Sans",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Forum",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,6vw,58px)}
+h2{font-size:clamp(26px,4vw,36px)}
+h3{font-size:21px}
+p{margin:.4em 0 .8em}
+a{color:var(--accent)}
+.mono{font-family:"PT Mono",ui-monospace,monospace;font-size:.86em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-right)) 0 max(16px,env(safe-area-inset-left))}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+
+/* header */
+header.hero{padding:44px 0 26px;border-bottom:1px solid var(--line)}
+.kicker{font-family:"PT Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp)}
+.hero p.lead{font-size:19px;max-width:760px;color:var(--muted)}
+.legend-lines{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:14px}
+.legend-lines span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block;flex:none}
+.levels{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--muted)}
+
+/* nav */
+nav.toc{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+nav.toc a.on{color:var(--card);background:var(--accent);border-color:var(--accent)}
+
+/* sections */
+section.fmt{padding:46px 0 10px}
+.fhead{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;margin-bottom:16px}
+.fnum{font-family:"Forum",serif;font-size:44px;color:var(--gold);line-height:1}
+.fhead p{grid-column:2;margin:4px 0 0;color:var(--muted);max-width:780px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:18px}
+.aside{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+.aside .box{box-shadow:none;background:var(--card-2);padding:14px 16px;font-size:15px}
+.aside h4{margin:0 0 6px;font-size:12px;font-family:"PT Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.aside ul{margin:0;padding-left:18px}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.lvl{display:inline-flex;align-items:center;gap:4px;font-size:13px;white-space:nowrap}
+.chip{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font:inherit;font-size:14px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;align-items:center}
+.filters .lab{font-size:13px;color:var(--muted);margin-right:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+
+/* methods */
+.cycle{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;counter-reset:st}
+.cycle .st{position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 10px 10px}
+.cycle .st b{display:block;font-family:"Forum",serif;font-size:18px;font-weight:400;margin-bottom:4px}
+.cycle .st::before{counter-increment:st;content:counter(st);position:absolute;top:-10px;left:10px;background:var(--gold);color:var(--card);font:12px "PT Mono",monospace;padding:1px 7px;border-radius:999px}
+.cycle .st .ex{font-size:13.5px;color:var(--muted)}
+@media (max-width:900px){.cycle{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.cycle{grid-template-columns:1fr}}
+.methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:16px}
+.methods .box{padding:14px 16px}
+.methods h3{font-size:19px;margin-bottom:4px}
+.methods .ex{font-size:14.5px;border-left:3px solid var(--gold);padding-left:10px;margin-top:8px}
+
+/* table */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:760px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:400;font-size:12px;font-family:"PT Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--card-2);position:sticky;top:0}
+tr:last-child td{border-bottom:none}
+td .code{font-family:"PT Mono",monospace;font-size:13px;white-space:nowrap}
+.linebar{display:inline-block;width:4px;height:14px;border-radius:2px;vertical-align:-2px;margin-right:6px}
+.count{font-size:14px;color:var(--muted);margin-left:auto}
+
+/* person catalog */
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;grid-template-columns:48px 1fr;gap:4px 12px;position:relative;overflow:hidden}
+.pc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--lc)}
+.mono-av{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:"Forum",serif;font-size:20px;color:#fff;background:var(--lc);grid-row:span 3}
+.pc .nm{font-weight:700;line-height:1.25}
+.pc .yr{font-size:13.5px;color:var(--muted)}
+.pc .rl{font-size:13.5px;grid-column:2}
+.pc .ft{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+
+/* profile card */
+.profile{display:grid;grid-template-columns:260px 1fr;gap:0;padding:0;overflow:hidden}
+.profile .side{background:var(--card-2);padding:20px;border-right:1px solid var(--line)}
+.photo{aspect-ratio:3/4;border-radius:8px;background:var(--sepia);border:6px solid var(--card);box-shadow:var(--shadow);display:grid;place-items:center;text-align:center;color:var(--sepia-ink);font-family:"Forum",serif;position:relative}
+.photo .ini{font-size:54px;line-height:1}
+.photo .cap{position:absolute;bottom:8px;left:0;right:0;font:12px "PT Sans",sans-serif;opacity:.8}
+.profile .main{padding:20px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:14px 0 12px;overflow-x:auto}
+.tabs button{font:inherit;font-size:15px;background:none;border:none;border-bottom:2px solid transparent;padding:8px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:62px 1fr auto;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.tl li:last-child{border-bottom:none}
+.tl .y{font-family:"PT Mono",monospace;color:var(--accent);font-size:14px}
+.tl .src{display:block;font-size:12.5px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14.5px;margin-top:14px}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+.rel{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.rel div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14.5px}
+.rel small{display:block;color:var(--muted);font-size:12.5px}
+@media (max-width:760px){.profile{grid-template-columns:1fr}.profile .side{border-right:none;border-bottom:1px solid var(--line)}.photo{max-width:180px;margin:0 auto}}
+
+/* svg holders */
+.svgwrap{overflow-x:auto}
+.svgwrap svg{display:block;width:100%;height:auto}
+svg text{font-family:"PT Sans",sans-serif}
+.ladder{list-style:none;margin:0;padding:0;position:relative}
+.ladder li{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:7px 0;position:relative}
+.ladder li .g{width:28px;height:28px;border-radius:50%;border:2px solid var(--l-shapiro);display:grid;place-items:center;font:12px "PT Mono",monospace;color:var(--l-shapiro);background:var(--card);z-index:1}
+.ladder::before{content:"";position:absolute;left:14px;top:20px;bottom:20px;width:2px;background:var(--line)}
+.ladder .who{font-size:15px}
+.ladder .who small{display:block;color:var(--muted);font-size:13px}
+
+/* dna */
+.stack{display:flex;height:34px;border-radius:6px;overflow:hidden;gap:2px;background:var(--card)}
+.stack div{height:100%}
+.bars{display:grid;gap:10px;margin-top:16px}
+.bar{display:grid;grid-template-columns:200px 1fr 54px;gap:10px;align-items:center;font-size:14.5px}
+.bar .track{position:relative;height:16px;background:var(--card-2);border-radius:4px}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0}
+.bar .exp{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--ink)}
+.bar .band{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--ink) 18%,transparent) 0 3px,transparent 3px 7px)}
+.bar .v{font-family:"PT Mono",monospace;text-align:right}
+@media (max-width:560px){.bar{grid-template-columns:1fr 50px}.bar .track{grid-column:1/-1;grid-row:2}}
+.tip{position:fixed;pointer-events:none;z-index:50;background:var(--ink);color:var(--card);font-size:13px;padding:6px 9px;border-radius:6px;max-width:260px;opacity:0;transition:opacity .12s}
+
+/* comparison */
+.matrix th:first-child,.matrix td:first-child{width:28%}
+.verdict{margin-top:10px;padding:10px 14px;border-radius:8px;background:var(--card-2);border-left:4px solid var(--accent);font-size:15px}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1.25fr;gap:22px}
+@media (max-width:820px){.story{grid-template-columns:1fr}}
+.album{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.album .photo{aspect-ratio:4/5}
+.album .photo:nth-child(2){transform:rotate(1.5deg)}
+.album .photo:nth-child(3){transform:rotate(-1.2deg)}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--stamp);font-family:"Forum",serif;font-size:21px;line-height:1.35}
+blockquote small{display:block;font-family:"PT Sans",sans-serif;font-size:13px;color:var(--muted);margin-top:4px}
+.chapter{margin:14px 0}
+.chapter .when{font:12px "PT Mono",monospace;letter-spacing:.08em;color:var(--stamp);text-transform:uppercase}
+
+/* certificate */
+.cert{position:relative;padding:34px clamp(18px,5vw,54px);background:var(--card);border-radius:4px;box-shadow:var(--shadow);outline:1px solid var(--gold);outline-offset:-10px;border:10px solid var(--card)}
+.cert::after{content:"";position:absolute;inset:16px;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);pointer-events:none}
+.cert .ttl{text-align:center;font-family:"Forum",serif;font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.cert .sur{text-align:center;font-family:"Forum",serif;font-size:clamp(48px,9vw,82px);line-height:1;margin:10px 0 2px}
+.cert .heb{text-align:center;font-size:22px;color:var(--muted)}
+.cert .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px;margin-top:22px}
+@media (max-width:640px){.cert .cols{grid-template-columns:1fr}}
+.cert h4{font-family:"PT Mono",monospace;font-weight:400;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 4px}
+.cert .seal{position:absolute;right:28px;bottom:24px;width:88px;height:88px;border-radius:50%;border:2px solid var(--stamp);color:var(--stamp);display:grid;place-items:center;text-align:center;font:11px/1.2 "PT Mono",monospace;transform:rotate(-12deg);opacity:.85}
+.cert .foot{margin-top:22px;font-size:13px;color:var(--muted);padding-right:100px}
+@media (max-width:640px){.cert .seal{position:static;margin:16px auto 0}.cert .foot{padding-right:0}}
+
+/* library */
+pre.tree{margin:0;font:13.5px/1.6 "PT Mono",monospace;white-space:pre;overflow-x:auto;color:var(--ink)}
+pre.tree .c{color:var(--muted)}
+.pipeline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}
+.pipeline span.s{padding:5px 10px;border-radius:6px;border:1px solid var(--line);background:var(--card)}
+.pipeline span.a{color:var(--muted)}
+.meta{display:grid;grid-template-columns:150px 1fr;font-size:14px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.meta div{padding:6px 10px;border-bottom:1px solid var(--line)}
+.meta div:nth-child(odd){background:var(--card-2);color:var(--muted);font-family:"PT Mono",monospace;font-size:12.5px}
+.meta div:nth-last-child(-n+2){border-bottom:none}
+footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:40px}
+.theme-btn{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:30;font:inherit;font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);box-shadow:var(--shadow);cursor:pointer}
+@media print{nav.toc,.theme-btn{display:none}}
+.note-banner{margin:16px 0 4px;padding:10px 14px;border-radius:8px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);font-size:15px;max-width:780px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Поиск предков · примеры · 13 форматов</div>
+    <h1>Витрина семейных форматов</h1>
+    <p class="lead">Какими способами можно показать и хранить семейное исследование: от каталога источников до сертификата фамилии. Всё собрано на одной условной семье Шапиро. Под каждым форматом — где такой сделать и где об этом подробнее в руководстве.</p>
+    <div class="note-banner"><b>Учебный пример.</b> Семья условная: все имена, даты и шифры дел вымышлены, шифры помечены [усл.]. Архивы, типы документов, сайты и методы — настоящие. Структура взята из живого исследования составителя.</div>
+    <div class="legend-lines" id="lineLegend"></div>
+    <div class="levels">
+      <span>🟢 доказано документом</span><span>🟡 вероятно, есть пробел</span><span>⚪ не решено</span><span>💭 версия, семейная память</span><span>🔴 опровергнуто</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Разделы"><div class="wrap" id="toc">
+  <a href="#metody">Как работают</a><a href="#katalog">Каталог данных</a><a href="#persony">Персоны</a><a href="#kartochka">Карточка</a><a href="#derevo">Дерево</a><a href="#karta">Перемещения</a><a href="#dnk">Этнос и ДНК</a><a href="#sravnenie">Сопоставления</a><a href="#istorii">Фото и истории</a><a href="#familiya">Фамилия</a><a href="#emblema">Эмблема</a><a href="#biblioteka">Библиотека</a><a href="#rukovodstvo">В руководстве</a>
+</div></nav>
+
+<main class="wrap">
+
+<!-- 1 -->
+<section class="fmt" id="metody">
+  <div class="fhead"><div class="fnum">01</div><h2>Как работают генеалоги</h2>
+  <p>Не «найти предка», а цикл: вопрос → версия → где обязан лежать документ → поиск → сверка по скану → уровень доказательности → запись. Ниже — один проход по циклу.</p></div>
+  <div class="cycle">
+    <div class="st"><b>Вопрос</b><span class="ex">Почему Ицко Шапиро в переписи 1897 г. — житомирский мещанин, если вся семья бердичевская?</span></div>
+    <div class="st"><b>Версия</b><span class="ex">Семью перечислили в другое мещанское общество</span></div>
+    <div class="st"><b>Где документ</b><span class="ex">Перечисление шло через Казённую палату губернии → фонд палаты в областном архиве</span></div>
+    <div class="st"><b>Поиск</b><span class="ex">Опись фонда по фамилии и городу (описи онлайн)</span></div>
+    <div class="st"><b>Сверка</b><span class="ex">Дело 1912 [усл.]: «о перечислении Ицка Лейбова Шапиро с семейством»</span></div>
+    <div class="st"><b>Уровень</b><span class="ex">🟡 — найдено в описи, текст дела ещё не прочитан</span></div>
+    <div class="st"><b>Запись</b><span class="ex">Журнал находок, гипотеза Г-3, карточка персоны</span></div>
+  </div>
+
+  <div class="methods">
+    <div class="box"><h3>Кластер: друзья, соседи, свидетели</h3><p class="small muted">Если сам предок «молчит», смотрят тех, кто рядом с ним в документах.</p><div class="ex">Шмуль Ройтман — поручитель в деле 1912 и сосед Шапиро по переписи 1897 ⇒ его семью стоит проследить вместе с нашей.</div></div>
+    <div class="box"><h3>Изучение одного дома</h3><p class="small muted">Все жильцы адреса за годы: кто съехал, кто погиб, кто чей родственник.</p><div class="ex">Ленинградский дом Савельевых: все жильцы по Книге памяти «Блокада», коммунальная квартира 12 — кто из соседей мог быть роднёй.</div></div>
+    <div class="box"><h3>Изучение одной фамилии</h3><p class="small muted">Собрать всех носителей фамилии в месте и разложить по семьям.</p><div class="ex">Шапиро в Бердичеве — сотни. Отбор по отчеству, приписке и именам детей, иначе «нашли» будет чужая семья.</div></div>
+    <div class="box"><h3>Ноль с охватом</h3><p class="small muted">«Не нашла» что-то значит, только если записано, что прочитано целиком.</p><div class="ex">Метрики прихода 1905 года прочитаны все — Ивана Савельева нет ⇒ приход из семейной памяти, скорее всего, не тот.</div></div>
+    <div class="box"><h3>Сопоставление источников</h3><p class="small muted">Разные документы спорят — сравнить, кто ближе к событию.</p><div class="ex">Мать Наума: Хая, Хана или Анна? → раздел 08.</div></div>
+    <div class="box"><h3>ДНК против дерева</h3><p class="small muted">Посчитать ожидание по дереву и сравнить с тестом.</p><div class="ex">Один еврейский дед ⇒ ожидание 25 %, тест 24,3 % — сходится. → раздел 07.</div></div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>Где сделать</h4>Схема цикла — любой редактор схем (Miro, Excalidraw) или прямо в журнале находок.</div>
+    <div class="box"><h4>В руководстве</h4><a href="../guide/1-поиск-с-ии/01-маршрут-поиска.html">Маршрут поиска</a> · <a href="../guide/3-результат/01-доказательность.html">Доказательность</a> · <a href="../guide/1-поиск-с-ии/09-ложный-ноль.html">Ложный ноль</a></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="fmt" id="katalog">
+  <div class="fhead"><div class="fnum">02</div><h2>Каталог данных</h2>
+  <p>Таблица всех найденных источников: шифр, год, тип, о ком, что дал, уровень. Фильтры отвечают на вопросы «что у нас есть по Ковалёвым?» и «где мы честно получили ноль?».</p></div>
+  <div class="filters" id="srcLineF"><span class="lab">Линия:</span></div>
+  <div class="filters" id="srcTypeF"><span class="lab">Тип:</span><span class="count" id="srcCount"></span></div>
+  <div class="tablewrap"><table id="srcTable"><thead><tr><th>Шифр</th><th>Год</th><th>Тип</th><th>О ком</th><th>Что дал</th><th>Уровень</th></tr></thead><tbody></tbody></table></div>
+  <div class="aside">
+    <div class="box"><h4>Где сделать</h4><ul><li>Google Таблицы / Excel — проще всего, фильтры встроены</li><li>Notion или Airtable — та же таблица, но с карточками и связями «источник ↔ персона»</li><li>Zotero — если важны библиографические ссылки</li></ul></div>
+    <div class="box"><h4>Минимум полей</h4>шифр · год · тип · о ком · что дал (одной фразой) · уровень · где лежит скан · где записан вывод · дата, когда смотрели.</div>
+    <div class="box"><h4>В руководстве</h4>Шаблон <a href="../templates/реестр-источников.html">«Реестр источников»</a>. Строка «ноль с охватом» — тоже источник.</div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="fmt" id="persony">
+  <div class="fhead"><div class="fnum">03</div><h2>Каталог персон</h2>
+  <p>Картотека людей: один человек — одна карточка с цветом линии, годами, ролью и уровнем доказанности главной связи. Отсюда видно, кто «висит» на одной семейной памяти.</p></div>
+  <div class="filters" id="pLineF"><span class="lab">Линия:</span></div>
+  <div class="people" id="people"></div>
+  <div class="aside">
+    <div class="box"><h4>Где сделать</h4><ul><li>MyHeritage / Geni / FamilySearch — карточки строятся сами из дерева</li><li>Notion — база «Персоны» с видом «галерея»</li><li>Obsidian — одна заметка на человека, ссылки между ними</li></ul></div>
+    <div class="box"><h4>Совет</h4>Уровень ставить не человеку целиком, а <b>связи</b> «сын такого-то»: имя может быть 🟢, а родство — 💭. Шаблон — <a href="../templates/персоны.html">«Персоны»</a>.</div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="fmt" id="kartochka">
+  <div class="fhead"><div class="fnum">04</div><h2>Карточка персоны, как в MyHeritage</h2>
+  <p>Профиль одного человека: фото, главные факты, хронология с источником у каждой строки, семья, открытые вопросы. В отличие от типичного сайта-дерева, у каждого факта виден уровень доказанности.</p></div>
+  <div class="box profile">
+    <div class="side">
+      <div class="photo"><div><div class="ini">НШ</div></div><div class="cap">место для фото</div></div>
+      <dl class="facts">
+        <dt>Имена</dt><dd>Наум, Нохем</dd>
+        <dt>Родился</dt><dd>1899, Бердичев 🟢</dd>
+        <dt>Умер</dt><dd>1966, Москва 🟢</dd>
+        <dt>Сословие</dt><dd>житомирский мещанин с 1912 🟡</dd>
+        <dt>Линия</dt><dd><span class="sw" style="background:var(--l-shapiro)"></span> Шапиро</dd>
+      </dl>
+    </div>
+    <div class="main">
+      <div class="kicker">Прадед · линия Шапиро</div>
+      <h3 style="font-size:30px;margin-top:4px">Наум (Нохем) Ицкович Шапиро</h3>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-tab="t1">Хронология</button>
+        <button role="tab" aria-selected="false" data-tab="t2">Семья</button>
+        <button role="tab" aria-selected="false" data-tab="t3">Источники (5)</button>
+        <button role="tab" aria-selected="false" data-tab="t4">Открытые вопросы</button>
+      </div>
+      <div data-panel="t1">
+        <ul class="tl">
+          <li><span class="y">1899</span><span>Родился в Бердичеве; отец Ицко Лейбович, мать Хая<span class="src">метрика, ДАЖО 67-3-220 [усл.]</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1912</span><span>Вместе с отцом перечислен в житомирские мещане<span class="src">дело Казённой палаты, ДАЖО 118-14-702 [усл.]</span></span><span class="lvl">🟡</span></li>
+          <li><span class="y">1931</span><span>Брак с Ривой Хаимовной Гольдман, Одесса<span class="src">актовая запись ЗАГС [усл.]</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1932</span><span>Родился сын Лев<span class="src">свидетельство о рождении (дома)</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1941</span><span>Эвакуирован с семьёй в Ташкент<span class="src">эвакуационная карточка [усл.]</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1966</span><span>Умер в Москве<span class="src">свидетельство о смерти (дома)</span></span><span class="lvl">🟢</span></li>
+        </ul>
+      </div>
+      <div data-panel="t2" hidden>
+        <div class="rel">
+          <div>Ицко Лейбович<small>отец · 1840–1910 · лавочник</small></div>
+          <div>Хая / Хана / Анна<small>мать · одна женщина? (см. 08)</small></div>
+          <div>Рива Хаимовна Гольдман<small>жена · зубной врач</small></div>
+          <div>Лев Наумович<small>сын · 1932–1999</small></div>
+          <div>Хаим Гольдман<small>тесть · аптекарь, Одесса</small></div>
+        </div>
+      </div>
+      <div data-panel="t3" hidden>
+        <ul class="tl">
+          <li><span class="y mono">ДАЖО</span><span>67-3-220 [усл.] — метрика о рождении, 1899</span><span class="lvl">🟢</span></li>
+          <li><span class="y mono">ДАЖО</span><span>118-14-702 [усл.] — дело о перечислении, 1912</span><span class="lvl">🟡</span></li>
+          <li><span class="y mono">ЗАГС</span><span>Одесса, брак, 1931 [усл.]</span><span class="lvl">🟢</span></li>
+          <li><span class="y mono">эвак.</span><span>карточка эвакуированного, 1941 [усл.]</span><span class="lvl">🟢</span></li>
+          <li><span class="y mono">дом</span><span>свидетельство о смерти, 1966</span><span class="lvl">🟢</span></li>
+        </ul>
+      </div>
+      <div data-panel="t4" hidden>
+        <ul class="tl">
+          <li><span class="y">?</span><span>Хая, Хана и Анна в разных документах — одна ли это женщина</span><span class="lvl">🟡</span></li>
+          <li><span class="y">?</span><span>Зачем семья перешла в житомирское общество: торговля, призыв, долги?</span><span class="lvl">💭</span></li>
+          <li><span class="y">?</span><span>Есть ли Наум в посемейных списках Житомира 1910-х</span><span class="lvl">⚪</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>Чем лучше обычной карточки</h4>Сайт-дерево показывает факт и «источник: дерево». Здесь у каждой строки — шифр и уровень, а спорное вынесено в «Открытые вопросы», а не спрятано.</div>
+    <div class="box"><h4>Где сделать</h4>Профиль в MyHeritage/Geni (поля «Биография», «Источники») · страница в Notion · HTML-карточка, как эта. Сравнение платформ — <a href="../guide/2-справочник/16-платформы-для-дерева.html">Платформы для дерева</a>.</div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="fmt" id="derevo">
+  <div class="fhead"><div class="fnum">05</div><h2>Дерево: два вида</h2>
+  <p>Слева направо — классическая «родословная таблица» (pedigree): исследовательница и все предки на 4 поколения, цвет = линия. Ниже — «лестница» одной прямой линии вглубь, где у каждой ступени виден уровень.</p></div>
+  <div class="box svgwrap" style="padding:12px"><svg id="pedigree" viewBox="0 0 920 582" role="img" aria-label="Родословная таблица на 4 поколения" style="min-width:720px"></svg></div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="box">
+      <h3 style="margin-bottom:10px">Лестница линии Шапиро</h3>
+      <ul class="ladder">
+        <li><span class="g">1</span><span class="who">Мордко<small>~1790, Бердичев · ревизия 1816</small></span><span class="lvl">🟡</span></li>
+        <li><span class="g">2</span><span class="who">Лейб Мордкович<small>~1815, Бердичев · ревизия 1858</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">3</span><span class="who">Ицко Лейбович<small>1840–1910 · лавочник, Житомир</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">4</span><span class="who">Наум Ицкович × Рива Гольдман<small>1899–1966</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">5</span><span class="who">Лев Наумович<small>1932 Одесса – 1999</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">6</span><span class="who">Андрей Львович<small>1960</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">7</span><span class="who">Мария<small>1991 · исследовательница</small></span><span class="lvl"></span></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Какие ещё бывают деревья</h3>
+      <ul style="padding-left:18px;margin:10px 0 0">
+        <li><b>Веер</b> (fan chart) — предки полукругами; сразу видно, где «дыры». Есть в MyHeritage, Gramps, Geni.</li>
+        <li><b>Нисходящее</b> — от одного предка ко всем потомкам, включая эмигрантские ветки.</li>
+        <li><b>Песочные часы</b> — человек в центре, предки вверх, потомки вниз.</li>
+        <li><b>Дерево с ДНК</b> — у родственника подписаны общие сМ.</li>
+        <li><b>Дерево гипотез</b> — пунктиром связи 💭, чтобы не путать с доказанным.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="aside"><div class="box"><h4>Где сделать</h4>Gramps (бесплатно, свои отчёты и веер) · MyHeritage (печать постера) · Family Echo (быстро, в браузере) · Topola — просмотр файла GEDCOM.</div><div class="box"><h4>Правило</h4>Неизвестных предков оставлять пустыми «?», а не заполнять именем из легенды.</div></div>
+</section>
+
+<!-- 6 -->
+<section class="fmt" id="karta">
+  <div class="fhead"><div class="fnum">06</div><h2>Перемещения</h2>
+  <p>Схема без подложки: точки по настоящим координатам, дуги — пути семей, цвет = линия. Нажмите на линию в фильтре, чтобы оставить только её. Наведите на точку — кто и когда там был.</p></div>
+  <div class="filters" id="mapF"><span class="lab">Показать:</span></div>
+  <div class="box svgwrap" style="padding:8px"><svg id="map" viewBox="0 0 600 640" role="img" aria-label="Схема перемещений семей" style="min-width:480px;max-width:720px;margin:0 auto"></svg></div>
+  <div class="aside">
+    <div class="box"><h4>Что видно сразу</h4>Еврейские линии шли с юго-запада (Волынь, Бессарабия) через Одессу в Москву; русские и украинская — с севера и юга в Ленинград и Ярославль. Встречаются все в Москве.</div>
+    <div class="box"><h4>Где сделать</h4>Google My Maps (слои по линиям) · kepler.gl / Felt · карты по годам — см. <a href="../guide/2-справочник/06-места-и-карты.html">Места и карты</a>.</div>
+    <div class="box"><h4>Варианты</h4>Анимация по годам · карта «где жили в 1897 / 1926 / 1941» · одна карта на одного человека.</div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="fmt" id="dnk">
+  <div class="fhead"><div class="fnum">07</div><h2>Этнический состав и проверка по дереву</h2>
+  <p>Проценты теста — модель, а не измерение. Полезнее всего ставить рядом ожидание, посчитанное по дереву. Чёрная черта — ожидание, штриховка — обычный разброс. Цифры условные.</p></div>
+  <div class="box">
+    <div class="small muted" style="margin-bottom:6px">Тест условной компании, весь состав</div>
+    <div class="stack" id="dnaStack" aria-hidden="true"></div>
+    <div class="bars" id="dnaBars"></div>
+    <div class="verdict"><b>Вывод:</b> один еврейский дед (Лев Наумович — оба его родителя евреи) ⇒ ожидание 25 % ± ~3,3; тест показал 24,3 % — сходится. «Финны и карелы» 3,1 % — на границе шума; совместимо с северной (вологодской) линией Савельевых 💭, но доказательством не является. Другая компания на тех же данных может назвать большую долю «русскими» — это другая референсная база, а не противоречие.</div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>Ещё форматы</h4><ul><li>Хромосомная раскраска (23andMe, GEDmatch) — какой кусок от какой стороны</li><li>Таблица совпаденцев: сМ, сторона, место предков</li><li>Сравнение двух компаний рядом</li></ul></div>
+    <div class="box"><h4>В руководстве</h4><a href="../guide/2-справочник/15-днк.html">ДНК</a>: арифметика поколений 50/25/12,5 %, почему доли меньше 2–5 % — шум.</div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="fmt" id="sravnenie">
+  <div class="fhead"><div class="fnum">08</div><h2>Сопоставления: матрица доказательств</h2>
+  <p>Когда документы спорят, их ставят в одну таблицу: кто составил, когда относительно события, первичный или пересказ. Решение принимается по весу, а не по количеству.</p></div>
+  <div class="grid2">
+    <div class="box">
+      <h3>Мать Наума Шапиро</h3>
+      <div class="tablewrap" style="margin-top:10px"><table class="matrix" style="min-width:0"><thead><tr><th>Имя</th><th>Источник</th><th>Вес</th></tr></thead><tbody>
+        <tr><td><b>Хая</b></td><td>метрика о рождении, 1899</td><td>🟢 запись в момент события</td></tr>
+        <tr><td><b>Хана</b></td><td>брак, ЗАГС 1931</td><td>🟡 со слов сына, через 32 года</td></tr>
+        <tr><td><b>Анна</b></td><td>анкета 1950</td><td>🟡 русская замена имени</td></tr>
+      </tbody></table></div>
+      <div class="verdict">Вероятно 🟡: одна женщина — Хая. «Хана» — близкая форма, «Анна» — обрусение. Проверить: возраст и отчество во всех трёх.</div>
+    </div>
+    <div class="box">
+      <h3>Дата гибели Фёдора Ковалёва</h3>
+      <div class="tablewrap" style="margin-top:10px"><table class="matrix" style="min-width:0"><thead><tr><th>Дата</th><th>Источник</th><th>Вес</th></tr></thead><tbody>
+        <tr><td><b>12.08.1943</b></td><td>донесение о потерях, ЦАМО [усл.]</td><td>🟢 составлено в части</td></tr>
+        <tr><td><b>сентябрь 1943</b></td><td>анкета розыска 1948</td><td>🔴 по памяти жены</td></tr>
+        <tr><td><b>«летом, под Курском»</b></td><td>семейный рассказ</td><td>💭 не спорит с донесением</td></tr>
+      </tbody></table></div>
+      <div class="verdict">Решено 🟢: 12 августа 1943. Первичная запись важнее пересказа.</div>
+    </div>
+    <div class="box" style="grid-column:1/-1">
+      <h3>Отчество Хаима Гольдмана</h3>
+      <div class="tablewrap" style="margin-top:10px"><table class="matrix"><thead><tr><th>Что говорит</th><th>Источник</th><th>Год</th><th>Вес</th></tr></thead><tbody>
+        <tr><td>«Хаимъ Берковъ Гольдманъ»</td><td>ревизия / посемейный список, Кишинёв [усл.]</td><td>1875</td><td>🟢 официальный учёт</td></tr>
+        <tr><td>«Гольдман Хаим Борисович, аптека»</td><td>справочник «Вся Одесса»</td><td>1914</td><td>🟢 запись; «Борис» — частая русская форма имени Берко</td></tr>
+        <tr><td>«Хаим Бенционович»</td><td>чужое дерево на сайте</td><td>—</td><td>🔴 без источника</td></tr>
+      </tbody></table></div>
+      <div class="verdict">Решено 🟢: Берко и Борис — одно имя в двух формах. Версию из чужого дерева не переносить в своё.</div>
+    </div>
+  </div>
+  <div class="aside"><div class="box"><h4>В руководстве</h4><a href="../guide/3-результат/01-доказательность.html">Доказательность</a> (иерархия источников) · <a href="../guide/2-справочник/03-имена-фамилии-написания.html">Имена, фамилии, написания</a> (Берко ↔ Борис и другие пары).</div></div>
+</section>
+
+<!-- 9 -->
+<section class="fmt" id="istorii">
+  <div class="fhead"><div class="fnum">09</div><h2>Фото и личные истории</h2>
+  <p>Документы дают даты, а история — человека. Формат «глава жизни»: короткие главы с датой, у каждой — откуда мы это знаем. Фото подписываются так же строго, как документы.</p></div>
+  <div class="story">
+    <div>
+      <div class="album">
+        <div class="photo"><div><div class="ini">ПС</div></div><div class="cap">Пётр, ~1940? · кто опознал</div></div>
+        <div class="photo"><div><div class="ini">ИС</div></div><div class="cap">Иван Савельев</div></div>
+        <div class="photo"><div><div class="ini">АМ</div></div><div class="cap">Анна Михайловна</div></div>
+        <div class="photo"><div><div class="ini">ГТ</div></div><div class="cap">Галина, 1950-е</div></div>
+      </div>
+      <div class="box" style="margin-top:14px;box-shadow:none">
+        <h4 class="kicker" style="margin:0 0 6px">Подпись к каждому фото</h4>
+        <div class="meta">
+          <div>кто</div><div>имена слева направо</div>
+          <div>когда</div><div>год или «~1940, по одежде»</div>
+          <div>где</div><div>город, ателье (штамп на обороте)</div>
+          <div>кто опознал</div><div>надпись на обороте / семья / сравнение</div>
+          <div>оригинал</div><div>у кого хранится, файл скана</div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="kicker">История · линия Савельевых</div>
+      <h3 style="font-size:28px;margin:4px 0 8px">Пётр: детство, которое кончилось в блокаду</h3>
+      <div class="chapter"><div class="when">1934 · Вологда</div>Родился в семье Ивана Савельева и Анны Михайловны. Через два года семья переезжает в Ленинград (семейная память).</div>
+      <div class="chapter"><div class="when">Февраль 1942 🟢</div>Отец, Иван Савельев, умирает в блокадном Ленинграде. Запись в Книге памяти «Блокада».</div>
+      <div class="chapter"><div class="when">Весна 1942 🟢</div>Мать с семилетним Петром вывозят по Ладоге. Эвакуационный список называет конечный пункт — Ярославль.</div>
+      <blockquote>«Бабушка была из поляков»<small>семейная память об Анне Михайловне 💭 — проверить: место рождения в эвакосписке, вероисповедание в метрике</small></blockquote>
+      <div class="chapter"><div class="when">1950-е · Ярославль</div>Встречает Галину Ткаченко из Полтавы (семейная память).</div>
+      <div class="chapter"><div class="when">1963</div>Рождается дочь Елена — мать исследовательницы.</div>
+    </div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>Работа с фото</h4><ul><li>Датировка по ателье, одежде, формату карточки</li><li>Сканировать и оборот — надписи важнее лица</li><li>Сравнение лиц — только подсказка 💭</li><li>Раскраска и «оживление» — помечать как обработку</li></ul></div>
+    <div class="box"><h4>В руководстве</h4><a href="../guide/2-справочник/17-фотографии.html">Старые фотографии</a> · <a href="../guide/3-результат/02-история-семьи.html">История семьи</a> · <a href="../guide/0-старт/04-беседы-с-родственниками.html">Беседы с родственниками</a></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="fmt" id="familiya">
+  <div class="fhead"><div class="fnum">10</div><h2>Сертификат о происхождении фамилии</h2>
+  <p>Коммерческие сертификаты красивые, но часто одинаковые для всех: «фамилия произошла от прозвища…». Честный вариант — то же оформление, но с версиями, уровнями и источниками.</p></div>
+  <div class="cert">
+    <div class="ttl">Свидетельство о происхождении фамилии</div>
+    <div class="sur">Шапиро</div>
+    <div class="heb" dir="rtl" lang="he">שפירא</div>
+    <div class="cols">
+      <div><h4>Значение</h4>По названию города Шпайер на Рейне (Speyer, в еврейских текстах — Шпира). Одна из старейших ашкеназских фамилий.</div>
+      <div><h4>Что это значит для семьи</h4>Фамилия-топоним передавалась веками и широко распространена: из значения <b>не следует</b>, что предки жили в Шпайере или были роднёй известным Шапиро 💭.</div>
+      <div><h4>Где жили носители</h4>Почти по всей черте оседлости; у нашей линии — Бердичев и Житомир (ревизии, перепись 1897).</div>
+      <div><h4>Самая ранняя запись в роду</h4>Мордко Шапиро, Бердичев, ревизия 1816 🟡.</div>
+      <div><h4>Написания</h4>Шапиро · Шапира · Спиро · Shapiro · Szapiro · Schapiro — искать все.</div>
+      <div><h4>Практический вывод</h4>Фамилия частая ⇒ «нашли Шапиро» ничего не значит без второго признака: отчества, места, имён родных.</div>
+    </div>
+    <div class="foot">Составлено по словарю: A. Beider, <i>A Dictionary of Jewish Surnames from the Russian Empire</i>. Версии без документа помечены 💭.</div>
+    <div class="seal">ПРОВЕРЕНО<br>ПО<br>ДОКУМЕНТАМ</div>
+  </div>
+  <div class="box" style="margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:14px 20px;align-items:center">
+    <div style="font-family:Forum,serif;font-size:42px;color:var(--l-kovalev)">Ковалёв</div>
+    <div>От слова <b>коваль</b> — кузнец (южнорусское и украинское). Сначала прозвище или имя отца «Коваль», потом фамилия с «-ёв». Значение говорит о прозвище далёкого предка, а не о том, что прадеды были кузнецами 💭.</div>
+  </div>
+  <div class="aside"><div class="box"><h4>Где брать значения</h4>Бейдер (еврейские фамилии) · Унбегаун, Никонов, Федосюк (русские) · Forebears.io (распространённость). Не брать: сайты-генераторы «значение фамилии».</div><div class="box"><h4>Формат</h4>Печать А4 в рамку, PDF в подарок родным, обложка семейной книги. Подробнее — <a href="../guide/2-справочник/03-имена-фамилии-написания.html">Имена, фамилии, написания</a>.</div></div>
+</section>
+
+<!-- 11 -->
+<section class="fmt" id="emblema">
+  <div class="fhead"><div class="fnum">11</div><h2>Герб или семейная эмблема</h2>
+  <p>Гербы в Российской империи были у дворянских родов; у мещан, купцов и крестьян гербов не было, и «герб фамилии» в интернет-магазине — выдумка. Зато можно честно собрать семейную эмблему из того, что известно.</p></div>
+  <div class="grid2">
+    <div class="box" style="display:grid;place-items:center"><svg id="emblem" viewBox="0 0 260 350" width="260" role="img" aria-label="Семейная эмблема из четырёх частей"></svg></div>
+    <div class="box">
+      <h3>Что означает каждая четверть</h3>
+      <ul class="tl" style="margin-top:8px">
+        <li><span class="y">I</span><span>Городские ворота — Шпайер, от которого фамилия Шапиро<span class="src">значение фамилии 💭 · не родина предков</span></span><span class="lvl"><span class="sw" style="background:var(--l-shapiro)"></span></span></li>
+        <li><span class="y">II</span><span>Аптечные весы — аптека Хаима Гольдмана в Одессе<span class="src">справочник 1914 🟢</span></span><span class="lvl"><span class="sw" style="background:var(--l-goldman)"></span></span></li>
+        <li><span class="y">III</span><span>Молот и подкова — «коваль», значение фамилии Ковалёв<span class="src">значение фамилии 💭</span></span><span class="lvl"><span class="sw" style="background:var(--l-kovalev)"></span></span></li>
+        <li><span class="y">IV</span><span>Волна — Нева, ленинградская блокада Савельевых<span class="src">Книга памяти, эвакосписок 🟢</span></span><span class="lvl"><span class="sw" style="background:var(--l-savelyev)"></span></span></li>
+      </ul>
+      <p class="small muted" style="margin-top:10px">Девиз на ленте — главное правило исследования. Цвета четвертей — цвета линий.</p>
+    </div>
+  </div>
+  <div class="aside"><div class="box"><h4>Другие «фамильные темы»</h4><ul><li>Семейная палитра и шрифт для всех материалов</li><li>Экслибрис для семейной книги</li><li>Карта-постер «откуда мы»</li><li>Календарь памятных дат (дни рождения и йорцайт)</li></ul></div><div class="box"><h4>Где проверить настоящий герб</h4>«Общий гербовник дворянских родов Всероссийской империи» — если фамилии там нет, герба у рода не было. Идеи — <a href="../guide/3-результат/05-идеи-для-истории-семьи.html">Идеи для истории семьи</a>.</div></div>
+</section>
+
+<!-- 12 -->
+<section class="fmt" id="biblioteka">
+  <div class="fhead"><div class="fnum">12</div><h2>Библиотека документов: как хранить</h2>
+  <p>Чтобы через год найти любой скан за 10 секунд: одна схема папок, одно правило имени файла, карточка метаданных и путь документа от «нашла в указателе» до «записано в журнале».</p></div>
+  <div class="grid2">
+    <div class="box">
+      <h3 style="margin-bottom:10px">Папки</h3>
+<pre class="tree">Семья/
+├─ 00-ЖУРНАЛ-НАХОДОК.md   <span class="c"># все находки по порядку, §§</span>
+├─ 01-ПЕРСОНЫ.md          <span class="c"># одна запись = один человек</span>
+├─ 02-ГИПОТЕЗЫ.md         <span class="c"># Г-1, Г-2… со статусами</span>
+├─ 03-ИСТОЧНИКИ.xlsx      <span class="c"># каталог данных (раздел 02)</span>
+├─ Архив/
+│  ├─ Шапиро/
+│  │  ├─ ДАЖО_118-14-702_1912_перечисление-Ицко.pdf
+│  │  └─ ДАЖО_67-3-220_1899_рожд-Наум_кроп.png
+│  ├─ Гольдманы/
+│  ├─ Савельевы/
+│  └─ ДНК/              <span class="c"># сырые файлы, выгрузки</span>
+├─ Фото/
+│  ├─ оригиналы/         <span class="c"># TIFF, не трогать</span>
+│  └─ рабочие/           <span class="c"># JPG, кропы, раскраска</span>
+└─ Бэкап/               <span class="c"># + облако + внешний диск</span></pre>
+    </div>
+    <div class="box">
+      <h3 style="margin-bottom:10px">Имя файла</h3>
+      <p class="mono" style="background:var(--card-2);padding:10px;border-radius:8px;word-break:break-all">Архив_фонд-опись-дело_год_о-ком_что.расширение</p>
+      <p class="small">Пример: <span class="mono">ЦАМО_донесение_1943_Ковалёв-Ф_лист2.jpg</span>. Шифр впереди — найдётся поиском; год рядом — видно эпоху.</p>
+      <h3 style="margin:14px 0 10px">Карточка документа</h3>
+      <div class="meta">
+        <div>шифр</div><div>ДАЖО ф. 118 оп. 14 д. 702 [усл.]</div>
+        <div>год</div><div>1912</div>
+        <div>тип</div><div>дело Казённой палаты</div>
+        <div>о ком</div><div>Ицко Лейбович, Наум, Ш. Ройтман</div>
+        <div>где нашли</div><div>онлайн-опись фонда, дата просмотра</div>
+        <div>скан</div><div>нет, только строка описи</div>
+        <div>статус</div><div>найден в описи → нужен текст</div>
+        <div>вывод</div><div>журнал § 14 · уровень 🟡</div>
+      </div>
+    </div>
+  </div>
+  <div class="box" style="margin-top:14px">
+    <h3 style="margin-bottom:10px">Путь документа</h3>
+    <div class="pipeline"><span class="s">найден в указателе</span><span class="a">→</span><span class="s">скан скачан</span><span class="a">→</span><span class="s">прочитан</span><span class="a">→</span><span class="s">сверен по кадру</span><span class="a">→</span><span class="s">записан в журнал</span><span class="a">→</span><span class="s">уровень поставлен</span></div>
+    <p class="small muted" style="margin-top:10px">Правило 3-2-1: три копии, на двух разных носителях, одна — вне дома. Оригиналы фото и сырые ДНК-файлы — только для чтения.</p>
+  </div>
+  <div class="aside"><div class="box"><h4>Инструменты</h4>Obsidian (Markdown-файлы) · Zotero (источники + PDF) · Tropy (фото архивов) · Gramps (дерево + медиа) · git — история правок.</div><div class="box"><h4>В руководстве</h4><a href="../guide/0-старт/02-как-вести-файлы.html">Как вести файлы</a> · <a href="../guide/3-результат/03-этика-и-сохранение.html">Этика и сохранение</a> · <a href="../templates/index.html">Шаблоны</a></div></div>
+</section>
+
+<!-- 13 -->
+<section class="fmt" id="rukovodstvo">
+  <div class="fhead"><div class="fnum">13</div><h2>С чего начать</h2>
+  <p>Не нужно делать все 13 форматов. Два обязательных — каталог данных и библиотека документов: без них остальное не на чем строить. Дальше — по задаче.</p></div>
+  <div class="tablewrap"><table><thead><tr><th>Формат</th><th>Сложность</th><th>Чем делать</th><th>Для кого</th></tr></thead><tbody>
+    <tr><td>Каталог данных</td><td>●○○</td><td>Таблица</td><td>каждому, с первого дня</td></tr>
+    <tr><td>Библиотека документов</td><td>●○○</td><td>папки + правило имени</td><td>каждому, с первого дня</td></tr>
+    <tr><td>Дерево и лестница линии</td><td>●○○</td><td>Gramps, MyHeritage</td><td>всем</td></tr>
+    <tr><td>Матрица доказательств</td><td>●○○</td><td>таблица на 3 колонки</td><td>при любом споре документов</td></tr>
+    <tr><td>Каталог персон и карточка</td><td>●●○</td><td>Notion / Obsidian / сайт дерева</td><td>когда людей больше 30</td></tr>
+    <tr><td>Карта перемещений</td><td>●●○</td><td>Google My Maps</td><td>для рассказа родным</td></tr>
+    <tr><td>ДНК против дерева</td><td>●●○</td><td>таблица + формула 50/25/12,5</td><td>после теста</td></tr>
+    <tr><td>Главы жизни + фото</td><td>●●○</td><td>текст, Tropy</td><td>для семьи</td></tr>
+    <tr><td>Сертификат фамилии, эмблема</td><td>●●●</td><td>Canva / Figma / HTML</td><td>подарок</td></tr>
+  </tbody></table></div>
+  <p class="small muted" style="margin-top:10px">Описание всех форматов текстом — на странице <a href="витрина-форматов.html">«Витрина форматов»</a>. Наверх — <a href="../index.html">Поиск предков</a>.</p>
+</section>
+</main>
+
+<footer><div class="wrap">Учебный пример руководства «Поиск предков». Семья условная. Текст — CC BY 4.0. Составитель — Анна Шефель.</div></footer>
+<button class="theme-btn" id="themeBtn" type="button">Тема</button>
+<div class="tip" id="tip"></div>
+
+<script>
+const LINES={shapiro:{n:"Шапиро",c:"var(--l-shapiro)"},goldman:{n:"Гольдманы",c:"var(--l-goldman)"},kovalev:{n:"Ковалёвы",c:"var(--l-kovalev)"},savelyev:{n:"Савельевы",c:"var(--l-savelyev)"},tkachenko:{n:"Ткаченко",c:"var(--l-tkachenko)"}};
+const $=s=>document.querySelector(s);
+const el=(t,a={},h="")=>{const e=document.createElement(t);for(const k in a)e.setAttribute(k,a[k]);if(h)e.innerHTML=h;return e};
+const tip=$("#tip");
+function showTip(e,html){tip.innerHTML=html;tip.style.opacity=1;const x=Math.min(e.clientX+12,innerWidth-270);tip.style.left=x+"px";tip.style.top=(e.clientY+14)+"px"}
+function hideTip(){tip.style.opacity=0}
+
+const lg=$("#lineLegend");for(const k in LINES)lg.append(el("span",{},`<i class="sw" style="background:${LINES[k].c}"></i>${LINES[k].n}`));
+
+$("#themeBtn").onclick=()=>{const r=document.documentElement;const cur=r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");r.dataset.theme=cur==="dark"?"light":"dark"};
+
+const links=[...document.querySelectorAll("#toc a")];
+links.forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t){const y=t.getBoundingClientRect().top+scrollY-56;scrollTo({top:y,behavior:"smooth"})}}));
+const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+x.target.id));const on=links.find(a=>a.classList.contains("on"));if(on){const bar=$("#toc");bar.scrollLeft=on.offsetLeft-bar.clientWidth/2+on.offsetWidth/2}}})},{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section.fmt").forEach(s=>io.observe(s));
+
+// ---------- sources (all codes fictional)
+const SRC=[
+["ДАЖО 118-14-702 [усл.]",1912,"суд и учёт","Ицко Лейбович, Наум","перечислены из бердичевских в житомирские мещане","🟡","shapiro"],
+["ДАЖО 67-3-220 [усл.]",1899,"метрики","Наум Ицкович","рождение в Бердичеве; мать «Хая»","🟢","shapiro"],
+["ДАЖО 118-17-415 [усл.]",1858,"ревизии","семья Лейба Мордковича","Лейб 43 года, сын Ицко 18","🟢","shapiro"],
+["ДАЖО 118-17-90 [усл.]",1834,"ревизии","Мордко","том прочитан целиком — Мордко нет","ноль","shapiro"],
+["Перепись 1897, Житомир [усл.]",1897,"переписи","Ицко Лейбович","57 лет, лавочник, житомирский мещанин","🟢","shapiro"],
+["«Вся Одесса»",1914,"справочники","Хаим Борисович Гольдман","аптека; родство с Ривой — по адресу и отчеству","🟡","goldman"],
+["Посемейный список, Кишинёв [усл.]",1875,"ревизии","Хаим Берков Гольдман","5 лет, отец Берко","🟢","goldman"],
+["ЗАГС Одессы [усл.]",1931,"ЗАГС","Наум × Рива","брак; мать жениха «Хана»","🟢","goldman"],
+["Яд Вашем, лист показаний [усл.]",1941,"военные","Хаим Гольдман","погиб в Одессе в 1941; лист заполнила внучка","🟡","goldman"],
+["ЗАГС Тулы [усл.]",1935,"ЗАГС","Зинаида Ковалёва","рождение; отец Фёдор, мать Мария","🟢","kovalev"],
+["ГАТО, исповедная ведомость [усл.]",1910,"метрики","Ковалёвы, с. Дубки","семья с сыном Фёдором, 1 год","🟡","kovalev"],
+["ЦАМО, донесение о потерях [усл.]",1943,"военные","Фёдор Ковалёв","погиб 12.08.1943","🟢","kovalev"],
+["ЦАМО, анкета розыска [усл.]",1948,"военные","Фёдор Ковалёв","со слов жены «сентябрь 1943» — дата ошибочна","🟢","kovalev"],
+["Книга памяти «Блокада»",1942,"военные","Иван Савельев","1905 г. р., умер в феврале 1942","🟢","savelyev"],
+["Эвакуационный список [усл.]",1942,"эвакуация","Анна Михайловна, Пётр","вывезены по Ладоге, Ярославль","🟢","savelyev"],
+["Метрики прихода, Вологда [усл.]",1905,"метрики","Иван Савельев","все рождения прочитаны — записи нет","ноль","savelyev"],
+["ЗАГС Полтавы [усл.]",1937,"ЗАГС","Галина Ткаченко","рождение; отец Остап","🟢","tkachenko"]
+];
+const TYPES=[...new Set(SRC.map(r=>r[2]))];
+let sLine="all",sType="all";
+function chips(holder,items,onPick,first="all"){items.forEach(([v,lab,col])=>{const b=el("button",{class:"chip",type:"button","aria-pressed":v===first},(col?`<i class="sw" style="background:${col}"></i>`:"")+lab);b.onclick=()=>{holder.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));onPick(v)};holder.insertBefore(b,holder.querySelector(".count"))})}
+chips($("#srcLineF"),[["all","все"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{sLine=v;drawSrc()});
+chips($("#srcTypeF"),[["all","все"],...TYPES.map(t=>[t,t]),["zero","ноль с охватом"]],v=>{sType=v;drawSrc()});
+function drawSrc(){const tb=$("#srcTable tbody");tb.innerHTML="";let n=0;SRC.forEach(r=>{if(sLine!=="all"&&r[6]!==sLine)return;if(sType==="zero"?r[5]!=="ноль":(sType!=="all"&&r[2]!==sType))return;n++;const lv=r[5]==="ноль"?'<span class="tag">ноль с охватом</span>':r[5];tb.append(el("tr",{},`<td><span class="linebar" style="background:${LINES[r[6]].c}"></span><span class="code">${r[0]}</span></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${lv}</td>`))});$("#srcCount").textContent=n+" из "+SRC.length}
+drawSrc();
+
+// ---------- people
+const P=[
+["Мордко Шапиро","~1790","Бердичев · самый ранний предок линии","shapiro","🟡"],
+["Лейб Мордкович","~1815","Бердичев · ревизия 1858","shapiro","🟢"],
+["Ицко Лейбович","1840–1910","Бердичев → Житомир · лавочник","shapiro","🟢"],
+["Наум (Нохем) Ицкович","1899–1966","Бердичев → Одесса → Москва · прадед","shapiro","🟢"],
+["Лев Наумович","1932–1999","Одесса · дед","shapiro","🟢"],
+["Хаим Берков Гольдман","~1870–1941","Кишинёв → Одесса · аптекарь","goldman","🟡"],
+["Рива Хаимовна Гольдман","1903–1979","Одесса · зубной врач · прабабушка","goldman","🟢"],
+["Зинаида Фёдоровна Ковалёва","1935–2010","Тула · бабушка","kovalev","🟢"],
+["Фёдор Ковалёв","1909–1943","с. Дубки → фронт · погиб","kovalev","🟢"],
+["Мария Сорокина","?","жена Фёдора · фамилия по рассказу","kovalev","💭"],
+["Пётр Иванович Савельев","1934–2005","Вологда → Ленинград → Ярославль · дед","savelyev","🟢"],
+["Иван Савельев","1905–1942","Вологда → Ленинград · блокада","savelyev","🟢"],
+["Анна Михайловна","1908–1987","«из поляков»? · девичья фамилия ?","savelyev","🟢"],
+["Галина Остаповна Ткаченко","1937–2016","Полтава → Ярославль · бабушка","tkachenko","🟢"],
+["Остап Ткаченко","?","Полтава · известен по отчеству дочери","tkachenko","🟡"],
+["Ганна","?","Полтава · по семейной памяти","tkachenko","💭"]
+];
+let pLine="all";
+chips($("#pLineF"),[["all","все"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{pLine=v;drawP()});
+function initials(n){return n.replace(/[()«»]/g,"").split(/\s+/).filter(w=>/^[А-ЯЁ]/.test(w)).slice(0,2).map(w=>w[0]).join("")}
+function drawP(){const h=$("#people");h.innerHTML="";P.filter(p=>pLine==="all"||p[3]===pLine).forEach(p=>{h.append(el("div",{class:"pc",style:`--lc:${LINES[p[3]].c}`},`<div class="mono-av">${initials(p[0])}</div><div class="nm">${p[0]}</div><div class="yr">${p[1]}</div><div class="rl">${p[2]}</div><div class="ft"><span>${LINES[p[3]].n}</span><span>связь ${p[4]}</span></div>`))})}
+drawP();
+
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{const box=b.closest(".main");box.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));box.querySelectorAll("[data-panel]").forEach(p=>p.hidden=p.dataset.panel!==b.dataset.tab)});
+
+// ---------- pedigree
+const NS="http://www.w3.org/2000/svg";
+const sv=(t,a,parent)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(parent)parent.append(e);return e};
+const G=[
+ [["Мария","ШАПИРО · 1991","none"]],
+ [["Андрей Львович","ШАПИРО · 1960","shapiro"],["Елена Петровна","САВЕЛЬЕВА · 1963","savelyev"]],
+ [["Лев Наумович","ШАПИРО · 1932–1999","shapiro"],["Зинаида Фёдоровна","КОВАЛЁВА · 1935–2010","kovalev"],["Пётр Иванович","САВЕЛЬЕВ · 1934–2005","savelyev"],["Галина Остаповна","ТКАЧЕНКО · 1937–2016","tkachenko"]],
+ [["Наум Ицкович","ШАПИРО · 1899–1966","shapiro"],["Рива Хаимовна","ГОЛЬДМАН · 1903–1979","goldman"],["Фёдор","КОВАЛЁВ · 1909–1943","kovalev"],["Мария 💭","СОРОКИНА","kovalev"],["Иван","САВЕЛЬЕВ · 1905–1942","savelyev"],["Анна Михайловна","дев. фамилия ?","savelyev"],["Остап","ТКАЧЕНКО","tkachenko"],["Ганна 💭","фамилия ?","tkachenko"]]
+];
+const ped=$("#pedigree");const W=212,H=58,X=[6,236,466,696],rowH=71;
+const pos=G.map((gen,gi)=>gen.map((_,i)=>{const span=8/gen.length;const y=8+(i*span+span/2)*rowH-H/2;return [X[gi],y]}));
+for(let g=0;g<3;g++)pos[g].forEach((p,i)=>{[2*i,2*i+1].forEach(j=>{const q=pos[g+1][j];const x1=p[0]+W,y1=p[1]+H/2,x2=q[0],y2=q[1]+H/2,mx=(x1+x2)/2;sv("path",{d:`M${x1} ${y1} H${mx} V${y2} H${x2}`,fill:"none",stroke:"var(--line)","stroke-width":2},ped)})});
+G.forEach((gen,gi)=>gen.forEach((p,i)=>{const [x,y]=pos[gi][i];const c=p[2]==="none"?"var(--ink)":LINES[p[2]].c;const g=sv("g",{},ped);sv("rect",{x,y,width:W,height:H,rx:8,fill:"var(--card)",stroke:"var(--line)"},g);sv("rect",{x,y,width:5,height:H,rx:2,fill:c},g);const t1=sv("text",{x:x+14,y:y+24,"font-size":14,"font-weight":700,fill:"var(--ink)"},g);t1.textContent=p[0];const t2=sv("text",{x:x+14,y:y+44,"font-size":12,fill:"var(--muted)","letter-spacing":".03em"},g);t2.textContent=p[1]}));
+["исследователь","родители","деды и бабушки","прадеды"].forEach((s,i)=>{const t=sv("text",{x:X[i]+W/2,y:578,"text-anchor":"middle","font-size":11,fill:"var(--muted)","font-family":"PT Mono"},ped);t.textContent=s});
+
+// ---------- map
+const PTS={
+ ber:["Бердичев",49.9,28.6,"Мордко, Лейб, Ицко; Наум род. 1899"],
+ zhi:["Житомир",50.25,28.66,"Ицко — житомирский мещанин; перепись 1897"],
+ kis:["Кишинёв",47.01,28.86,"Хаим Гольдман род. ~1870"],
+ ode:["Одесса",46.48,30.73,"аптека Гольдмана 1914; брак Наума и Ривы 1931; Лев род. 1932"],
+ pol:["Полтава",49.59,34.55,"Галина Ткаченко род. 1937"],
+ tul:["Тула",54.19,37.62,"Ковалёвы; Зинаида род. 1935"],
+ msk:["Москва",55.76,37.62,"Наум †1966; Андрей род. 1960; Мария род. 1991"],
+ yar:["Ярославль",57.63,39.87,"эвакуация Савельевых 1942"],
+ vol:["Вологда",59.22,39.89,"Иван Савельев род. 1905; Пётр род. 1934"],
+ len:["Ленинград",59.94,30.31,"Савельевы с 1936; блокада"]
+};
+const ROUTES=[
+ ["shapiro",["ber","zhi","ode","msk"],-.24],
+ ["goldman",["kis","ode"]],
+ ["kovalev",["tul","msk"]],
+ ["savelyev",["vol","len","yar","msk"]],
+ ["tkachenko",["pol","yar"]]
+];
+const map=$("#map");const k=38;const proj=(la,lo)=>[(lo-26)*Math.cos(52*Math.PI/180)*k+60,(60.8-la)*k+20];
+for(let lo=28;lo<=42;lo+=2){const [x]=proj(50,lo);sv("line",{x1:x,y1:0,x2:x,y2:640,stroke:"var(--line)","stroke-width":.6,"stroke-dasharray":"2 5"},map)}
+for(let la=46;la<=60;la+=2){const [,y]=proj(la,26);sv("line",{x1:0,y1:y,x2:600,y2:y,stroke:"var(--line)","stroke-width":.6,"stroke-dasharray":"2 5"},map);const t=sv("text",{x:4,y:y-3,"font-size":10,fill:"var(--muted)","font-family":"PT Mono"},map);t.textContent=la+"°"}
+const routeG=sv("g",{},map);const ptG=sv("g",{},map);
+const arrowDefs=sv("defs",{},map);
+Object.keys(LINES).forEach(l=>{const m=sv("marker",{id:"ar-"+l,viewBox:"0 0 10 10",refX:8,refY:5,markerWidth:6,markerHeight:6,orient:"auto-start-reverse"},arrowDefs);sv("path",{d:"M0 0 L10 5 L0 10 z",fill:LINES[l].c},m)});
+ROUTES.forEach(([l,ps,bend=.18])=>{let d="";ps.forEach((p,i)=>{const [x,y]=proj(PTS[p][1],PTS[p][2]);if(!i){d=`M${x} ${y}`;return}const [px,py]=proj(PTS[ps[i-1]][1],PTS[ps[i-1]][2]);const dx=x-px,dy=y-py;const cx=(px+x)/2-dy*bend,cy=(py+y)/2+dx*bend;d+=` Q${cx} ${cy} ${x} ${y}`});sv("path",{d,fill:"none",stroke:LINES[l].c,"stroke-width":2.5,"stroke-linejoin":"round","stroke-linecap":"round","marker-end":`url(#ar-${l})`,"data-line":l,opacity:.9},routeG)});
+const labelSide={ber:"l",zhi:"l",kis:"l",ode:"r",pol:"r",tul:"r",msk:"l",yar:"r",vol:"r",len:"l"};
+const labelDy={ber:10,zhi:-6};
+for(const key in PTS){const [n,la,lo,info]=PTS[key];const [x,y]=proj(la,lo);const g=sv("g",{style:"cursor:pointer"},ptG);sv("circle",{cx:x,cy:y,r:14,fill:"transparent"},g);sv("circle",{cx:x,cy:y,r:5,fill:"var(--card)",stroke:"var(--ink)","stroke-width":2},g);const s=labelSide[key];const t=sv("text",{x:s==="l"?x-9:x+9,y:y+4+(labelDy[key]||0),"text-anchor":s==="l"?"end":"start","font-size":13,fill:"var(--ink)"},g);t.textContent=n;g.addEventListener("pointermove",e=>showTip(e,`<b>${n}</b><br>${info}`));g.addEventListener("pointerleave",hideTip)}
+const tn=sv("text",{x:590,y:612,"text-anchor":"end","font-size":12,fill:"var(--muted)"},map);tn.textContent="↘ Ташкент (эвакуация 1941) — за пределами схемы";
+chips($("#mapF"),[["all","все линии"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{routeG.querySelectorAll("path").forEach(p=>p.setAttribute("opacity",v==="all"||p.dataset.line===v?.95:.08))});
+
+// ---------- dna (illustrative numbers)
+const DNA=[["Ашкеназы",24.3,"var(--l-shapiro)",25,3.3],["Восточноевропейцы",49.8,"var(--l-savelyev)"],["Русские",21.6,"var(--l-kovalev)"],["Финны и карелы",3.1,"var(--l-goldman)"],["Прочее",1.2,"var(--l-tkachenko)"]];
+const st=$("#dnaStack"),bars=$("#dnaBars");
+const fmt=v=>v.toFixed(1).replace(".",",");
+DNA.forEach(([n,v,c,e,sd])=>{const d=el("div",{style:`width:${v}%;background:${c}`});d.addEventListener("pointermove",ev=>showTip(ev,`<b>${n}</b>: ${fmt(v)} %`));d.addEventListener("pointerleave",hideTip);st.append(d);
+ const scale=60;const b=el("div",{class:"bar"},`<span>${n}</span><div class="track">${e?`<div class="band" style="left:${(e-sd)/scale*100}%;width:${2*sd/scale*100}%"></div>`:""}<div class="fill" style="width:${v/scale*100}%;background:${c}"></div>${e?`<div class="exp" style="left:${e/scale*100}%" title="ожидание 25 %"></div>`:""}</div><span class="v">${fmt(v)}%</span>`);
+ b.addEventListener("pointermove",ev=>showTip(ev,e?`<b>${n}</b>: ${fmt(v)} %<br>ожидание по дереву ${e} % ± ${String(sd).replace(".",",")}`:`<b>${n}</b>: ${fmt(v)} %`));b.addEventListener("pointerleave",hideTip);bars.append(b)});
+bars.append(el("div",{class:"small muted"},"Шкала до 60 %. Черта и штриховка только у ашкеназского компонента — для остальных дерево не даёт точного ожидания (референсы соседних народов перекрываются)."));
+
+// ---------- emblem
+const em=$("#emblem");
+const shield="M30 20 H230 V150 Q230 250 130 300 Q30 250 30 150 Z";
+const clip=sv("clipPath",{id:"sh"},sv("defs",{},em));sv("path",{d:shield},clip);
+const q=sv("g",{"clip-path":"url(#sh)"},em);
+[[30,20,"var(--l-shapiro)"],[130,20,"var(--card-2)"],[30,150,"var(--card-2)"],[130,150,"var(--l-savelyev)"]].forEach(([x,y,f])=>sv("rect",{x,y,width:100,height:y===20?130:160,fill:f},q));
+sv("rect",{x:130,y:20,width:100,height:130,fill:"var(--l-goldman)",opacity:.16},q);
+sv("rect",{x:30,y:150,width:100,height:160,fill:"var(--l-kovalev)",opacity:.16},q);
+// I: city gate
+const Gt=sv("g",{fill:"#fff"},em);sv("rect",{x:52,y:62,width:16,height:58},Gt);sv("rect",{x:92,y:62,width:16,height:58},Gt);sv("path",{d:"M60 82 H100 V120 H90 V100 Q80 88 70 100 V120 H60 Z"},Gt);[[52,54],[62,54],[92,54],[102,54]].forEach(([x,y])=>sv("rect",{x,y,width:6,height:8},Gt));sv("rect",{x:70,y:74,width:20,height:8},Gt);
+// II: scales
+const Sc=sv("g",{fill:"none",stroke:"var(--ink)","stroke-width":3,"stroke-linecap":"round"},em);sv("path",{d:"M180 48 V118 M164 118 H196 M150 62 H210"},Sc);sv("path",{d:"M150 62 L140 90 M150 62 L160 90 M210 62 L200 90 M210 62 L220 90"},Sc);sv("path",{d:"M138 90 Q150 102 162 90 Z M198 90 Q210 102 222 90 Z",fill:"var(--gold)"},Sc);sv("circle",{cx:180,cy:46,r:4,fill:"var(--ink)"},Sc);
+// III: hammer and horseshoe
+const Hm=sv("g",{},em);sv("path",{d:"M58 236 A22 22 0 1 1 102 236",fill:"none",stroke:"var(--ink)","stroke-width":9,"stroke-linecap":"butt"},Hm);[[60,226],[66,206],[94,206],[100,226]].forEach(([cx,cy])=>sv("circle",{cx,cy,r:1.8,fill:"var(--card)"},Hm));sv("rect",{x:76,y:172,width:8,height:34,rx:2,fill:"var(--gold)",transform:"rotate(-35 80 189)"},Hm);sv("rect",{x:66,y:166,width:28,height:12,rx:2,fill:"var(--ink)",transform:"rotate(-35 80 172)"},Hm);
+// IV: waves
+const Wv=sv("g",{fill:"none",stroke:"#fff","stroke-width":4,"stroke-linecap":"round"},em);[190,210,230].forEach(y=>sv("path",{d:`M146 ${y} q10 -10 20 0 t20 0 t20 0 t20 0`},Wv));
+sv("path",{d:shield,fill:"none",stroke:"var(--gold)","stroke-width":4},em);
+sv("path",{d:"M130 20 V300 M30 150 H230",stroke:"var(--gold)","stroke-width":2,opacity:.7},em);
+sv("path",{d:"M14 300 Q130 340 246 300 L240 322 Q130 360 20 322 Z",fill:"var(--card)",stroke:"var(--gold)","stroke-width":1.5},em);
+const mt=sv("text",{x:130,y:325,"text-anchor":"middle","font-size":13,fill:"var(--ink)","font-family":"Forum","letter-spacing":".12em"},em);mt.textContent="СНАЧАЛА ДОКУМЕНТ";
+</script>
+</body>
+</html>
