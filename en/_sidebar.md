@@ -62,6 +62,7 @@
   - [What to read by level](/en/reading/what-to-read.md)
   - [Examples](/en/examples/README.md)
     - [A worked example for beginners](/en/examples/worked-example-for-beginners.md)
+    - [Formats showcase](/en/examples/formats-showcase.md)
   - [Templates](/en/templates/README.md)
   - [Skills (in Russian)](/skills/README.md)
   - [Instructions for the AI agent](/en/AGENTS.md)

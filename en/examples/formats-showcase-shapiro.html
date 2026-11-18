@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Family Research Formats</title>
+<meta name="description" content="A teaching example: 13 ways to show and store a family research project on an invented Shapiro family — source and people catalogues, tree, migration map, DNA, evidence matrix, stories, surname certificate, document library.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1EF; --card:#FBFCFB; --card-2:#F4F6F5; --ink:#18212F; --muted:#5B6676; --line:#CBD3D6;
+  --accent:#2E4F7A; --stamp:#A2343F; --gold:#9A7A2E; --sepia:#E9E1D2; --sepia-ink:#6B5A3E;
+  --l-shapiro:#2a78d6; --l-kovalev:#eb6834; --l-savelyev:#1baf7a; --l-goldman:#6250d6; --l-tkachenko:#e87ba4; --l-none:#5B6676;
+  --ok:#2F7D4A; --mid:#A87A12; --weak:#7A8290; --idea:#6250d6; --bad:#B23A3A;
+  --shadow:0 1px 2px rgba(24,33,47,.06),0 4px 14px rgba(24,33,47,.06);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#121821; --card:#1A2230; --card-2:#202a3a; --ink:#E6EAF0; --muted:#9AA5B5; --line:#2C3747;
+    --accent:#7FA4D6; --stamp:#E07A84; --gold:#D4B263; --sepia:#2A2620; --sepia-ink:#CDBB97;
+    --l-shapiro:#3987e5; --l-kovalev:#d95926; --l-savelyev:#199e70; --l-goldman:#9085e9; --l-tkachenko:#d55181; --l-none:#9AA5B5;
+    --ok:#5DBB7E; --mid:#E0B24A; --weak:#9AA5B5; --idea:#9085e9; --bad:#E07A7A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --paper:#121821; --card:#1A2230; --card-2:#202a3a; --ink:#E6EAF0; --muted:#9AA5B5; --line:#2C3747;
+    --accent:#7FA4D6; --stamp:#E07A84; --gold:#D4B263; --sepia:#2A2620; --sepia-ink:#CDBB97;
+    --l-shapiro:#3987e5; --l-kovalev:#d95926; --l-savelyev:#199e70; --l-goldman:#9085e9; --l-tkachenko:#d55181; --l-none:#9AA5B5;
+    --ok:#5DBB7E; --mid:#E0B24A; --weak:#9AA5B5; --idea:#9085e9; --bad:#E07A7A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+    color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "PT Sans",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Forum",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,6vw,58px)}
+h2{font-size:clamp(26px,4vw,36px)}
+h3{font-size:21px}
+p{margin:.4em 0 .8em}
+a{color:var(--accent)}
+.mono{font-family:"PT Mono",ui-monospace,monospace;font-size:.86em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-right)) 0 max(16px,env(safe-area-inset-left))}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+
+/* header */
+header.hero{padding:44px 0 26px;border-bottom:1px solid var(--line)}
+.kicker{font-family:"PT Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp)}
+.hero p.lead{font-size:19px;max-width:760px;color:var(--muted)}
+.legend-lines{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:14px}
+.legend-lines span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block;flex:none}
+.levels{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:14px;color:var(--muted)}
+
+/* nav */
+nav.toc{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+nav.toc a.on{color:var(--card);background:var(--accent);border-color:var(--accent)}
+
+/* sections */
+section.fmt{padding:46px 0 10px}
+.fhead{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;margin-bottom:16px}
+.fnum{font-family:"Forum",serif;font-size:44px;color:var(--gold);line-height:1}
+.fhead p{grid-column:2;margin:4px 0 0;color:var(--muted);max-width:780px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:18px}
+.aside{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+.aside .box{box-shadow:none;background:var(--card-2);padding:14px 16px;font-size:15px}
+.aside h4{margin:0 0 6px;font-size:12px;font-family:"PT Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.aside ul{margin:0;padding-left:18px}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.lvl{display:inline-flex;align-items:center;gap:4px;font-size:13px;white-space:nowrap}
+.chip{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font:inherit;font-size:14px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;align-items:center}
+.filters .lab{font-size:13px;color:var(--muted);margin-right:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+
+/* methods */
+.cycle{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;counter-reset:st}
+.cycle .st{position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 10px 10px}
+.cycle .st b{display:block;font-family:"Forum",serif;font-size:18px;font-weight:400;margin-bottom:4px}
+.cycle .st::before{counter-increment:st;content:counter(st);position:absolute;top:-10px;left:10px;background:var(--gold);color:var(--card);font:12px "PT Mono",monospace;padding:1px 7px;border-radius:999px}
+.cycle .st .ex{font-size:13.5px;color:var(--muted)}
+@media (max-width:900px){.cycle{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.cycle{grid-template-columns:1fr}}
+.methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:16px}
+.methods .box{padding:14px 16px}
+.methods h3{font-size:19px;margin-bottom:4px}
+.methods .ex{font-size:14.5px;border-left:3px solid var(--gold);padding-left:10px;margin-top:8px}
+
+/* table */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:760px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:400;font-size:12px;font-family:"PT Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--card-2);position:sticky;top:0}
+tr:last-child td{border-bottom:none}
+td .code{font-family:"PT Mono",monospace;font-size:13px;white-space:nowrap}
+.linebar{display:inline-block;width:4px;height:14px;border-radius:2px;vertical-align:-2px;margin-right:6px}
+.count{font-size:14px;color:var(--muted);margin-left:auto}
+
+/* person catalog */
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;grid-template-columns:48px 1fr;gap:4px 12px;position:relative;overflow:hidden}
+.pc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--lc)}
+.mono-av{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:"Forum",serif;font-size:20px;color:#fff;background:var(--lc);grid-row:span 3}
+.pc .nm{font-weight:700;line-height:1.25}
+.pc .yr{font-size:13.5px;color:var(--muted)}
+.pc .rl{font-size:13.5px;grid-column:2}
+.pc .ft{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+
+/* profile card */
+.profile{display:grid;grid-template-columns:260px 1fr;gap:0;padding:0;overflow:hidden}
+.profile .side{background:var(--card-2);padding:20px;border-right:1px solid var(--line)}
+.photo{aspect-ratio:3/4;border-radius:8px;background:var(--sepia);border:6px solid var(--card);box-shadow:var(--shadow);display:grid;place-items:center;text-align:center;color:var(--sepia-ink);font-family:"Forum",serif;position:relative}
+.photo .ini{font-size:54px;line-height:1}
+.photo .cap{position:absolute;bottom:8px;left:0;right:0;font:12px "PT Sans",sans-serif;opacity:.8}
+.profile .main{padding:20px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:14px 0 12px;overflow-x:auto}
+.tabs button{font:inherit;font-size:15px;background:none;border:none;border-bottom:2px solid transparent;padding:8px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:62px 1fr auto;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.tl li:last-child{border-bottom:none}
+.tl .y{font-family:"PT Mono",monospace;color:var(--accent);font-size:14px}
+.tl .src{display:block;font-size:12.5px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14.5px;margin-top:14px}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+.rel{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.rel div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14.5px}
+.rel small{display:block;color:var(--muted);font-size:12.5px}
+@media (max-width:760px){.profile{grid-template-columns:1fr}.profile .side{border-right:none;border-bottom:1px solid var(--line)}.photo{max-width:180px;margin:0 auto}}
+
+/* svg holders */
+.svgwrap{overflow-x:auto}
+.svgwrap svg{display:block;width:100%;height:auto}
+svg text{font-family:"PT Sans",sans-serif}
+.ladder{list-style:none;margin:0;padding:0;position:relative}
+.ladder li{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:7px 0;position:relative}
+.ladder li .g{width:28px;height:28px;border-radius:50%;border:2px solid var(--l-shapiro);display:grid;place-items:center;font:12px "PT Mono",monospace;color:var(--l-shapiro);background:var(--card);z-index:1}
+.ladder::before{content:"";position:absolute;left:14px;top:20px;bottom:20px;width:2px;background:var(--line)}
+.ladder .who{font-size:15px}
+.ladder .who small{display:block;color:var(--muted);font-size:13px}
+
+/* dna */
+.stack{display:flex;height:34px;border-radius:6px;overflow:hidden;gap:2px;background:var(--card)}
+.stack div{height:100%}
+.bars{display:grid;gap:10px;margin-top:16px}
+.bar{display:grid;grid-template-columns:200px 1fr 54px;gap:10px;align-items:center;font-size:14.5px}
+.bar .track{position:relative;height:16px;background:var(--card-2);border-radius:4px}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0}
+.bar .exp{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--ink)}
+.bar .band{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--ink) 18%,transparent) 0 3px,transparent 3px 7px)}
+.bar .v{font-family:"PT Mono",monospace;text-align:right}
+@media (max-width:560px){.bar{grid-template-columns:1fr 50px}.bar .track{grid-column:1/-1;grid-row:2}}
+.tip{position:fixed;pointer-events:none;z-index:50;background:var(--ink);color:var(--card);font-size:13px;padding:6px 9px;border-radius:6px;max-width:260px;opacity:0;transition:opacity .12s}
+
+/* comparison */
+.matrix th:first-child,.matrix td:first-child{width:28%}
+.verdict{margin-top:10px;padding:10px 14px;border-radius:8px;background:var(--card-2);border-left:4px solid var(--accent);font-size:15px}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1.25fr;gap:22px}
+@media (max-width:820px){.story{grid-template-columns:1fr}}
+.album{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.album .photo{aspect-ratio:4/5}
+.album .photo:nth-child(2){transform:rotate(1.5deg)}
+.album .photo:nth-child(3){transform:rotate(-1.2deg)}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--stamp);font-family:"Forum",serif;font-size:21px;line-height:1.35}
+blockquote small{display:block;font-family:"PT Sans",sans-serif;font-size:13px;color:var(--muted);margin-top:4px}
+.chapter{margin:14px 0}
+.chapter .when{font:12px "PT Mono",monospace;letter-spacing:.08em;color:var(--stamp);text-transform:uppercase}
+
+/* certificate */
+.cert{position:relative;padding:34px clamp(18px,5vw,54px);background:var(--card);border-radius:4px;box-shadow:var(--shadow);outline:1px solid var(--gold);outline-offset:-10px;border:10px solid var(--card)}
+.cert::after{content:"";position:absolute;inset:16px;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);pointer-events:none}
+.cert .ttl{text-align:center;font-family:"Forum",serif;font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.cert .sur{text-align:center;font-family:"Forum",serif;font-size:clamp(48px,9vw,82px);line-height:1;margin:10px 0 2px}
+.cert .heb{text-align:center;font-size:22px;color:var(--muted)}
+.cert .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px;margin-top:22px}
+@media (max-width:640px){.cert .cols{grid-template-columns:1fr}}
+.cert h4{font-family:"PT Mono",monospace;font-weight:400;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 4px}
+.cert .seal{position:absolute;right:28px;bottom:24px;width:88px;height:88px;border-radius:50%;border:2px solid var(--stamp);color:var(--stamp);display:grid;place-items:center;text-align:center;font:11px/1.2 "PT Mono",monospace;transform:rotate(-12deg);opacity:.85}
+.cert .foot{margin-top:22px;font-size:13px;color:var(--muted);padding-right:100px}
+@media (max-width:640px){.cert .seal{position:static;margin:16px auto 0}.cert .foot{padding-right:0}}
+
+/* library */
+pre.tree{margin:0;font:13.5px/1.6 "PT Mono",monospace;white-space:pre;overflow-x:auto;color:var(--ink)}
+pre.tree .c{color:var(--muted)}
+.pipeline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}
+.pipeline span.s{padding:5px 10px;border-radius:6px;border:1px solid var(--line);background:var(--card)}
+.pipeline span.a{color:var(--muted)}
+.meta{display:grid;grid-template-columns:150px 1fr;font-size:14px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.meta div{padding:6px 10px;border-bottom:1px solid var(--line)}
+.meta div:nth-child(odd){background:var(--card-2);color:var(--muted);font-family:"PT Mono",monospace;font-size:12.5px}
+.meta div:nth-last-child(-n+2){border-bottom:none}
+footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:40px}
+.theme-btn{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:30;font:inherit;font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);box-shadow:var(--shadow);cursor:pointer}
+@media print{nav.toc,.theme-btn{display:none}}
+.note-banner{margin:16px 0 4px;padding:10px 14px;border-radius:8px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);font-size:15px;max-width:780px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Tracing Your Ancestors · examples · 13 formats · <a href="../../examples/витрина-форматов-шапиро.html">Русский</a></div>
+    <h1>A showcase of family research formats</h1>
+    <p class="lead">Ways to show and store a family research project, from a source catalogue to a surname certificate. Everything is built on one invented family, the Shapiros. Under each format: where to make it and where the guide covers it in more detail.</p>
+    <div class="note-banner"><b>A teaching example.</b> An invented family: all names, dates and archival references are made up; references are marked [invented]. The archives, record types, websites and methods are real. The structure is taken from the compiler's own research.</div>
+    <div class="legend-lines" id="lineLegend"></div>
+    <div class="levels">
+      <span>🟢 proven by a document</span><span>🟡 likely, with a gap</span><span>⚪ unresolved</span><span>💭 version, family memory</span><span>🔴 disproved</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections"><div class="wrap" id="toc">
+  <a href="#metody">How it works</a><a href="#katalog">Source catalogue</a><a href="#persony">People</a><a href="#kartochka">Profile</a><a href="#derevo">Tree</a><a href="#karta">Migrations</a><a href="#dnk">Ethnicity and DNA</a><a href="#sravnenie">Comparisons</a><a href="#istorii">Photos and stories</a><a href="#familiya">Surname</a><a href="#emblema">Emblem</a><a href="#biblioteka">Library</a><a href="#rukovodstvo">Where to start</a>
+</div></nav>
+
+<main class="wrap">
+
+<!-- 1 -->
+<section class="fmt" id="metody">
+  <div class="fhead"><div class="fnum">01</div><h2>How genealogists work</h2>
+  <p>Not "find an ancestor" but a cycle: question → version → where the document must be → search → check against the scan → level of evidence → record. Below is one pass through the cycle.</p></div>
+  <div class="cycle">
+    <div class="st"><b>Question</b><span class="ex">Why is Itsko Shapiro registered as a <i>meshchanin</i> of Zhytomyr in 1897, when the whole family is from Berdychiv?</span></div>
+    <div class="st"><b>Version</b><span class="ex">The family was transferred to another town community</span></div>
+    <div class="st"><b>Where</b><span class="ex">Transfers went through the provincial Treasury Chamber → its fond in the regional archive</span></div>
+    <div class="st"><b>Search</b><span class="ex">The fond's inventory (opis) online, by surname and town</span></div>
+    <div class="st"><b>Check</b><span class="ex">File of 1912 [invented]: "on the transfer of Itsko Leibov Shapiro with family"</span></div>
+    <div class="st"><b>Level</b><span class="ex">🟡 — found in the inventory, the file itself not read yet</span></div>
+    <div class="st"><b>Record</b><span class="ex">Findings log, hypothesis H-3, person profile</span></div>
+  </div>
+
+  <div class="methods">
+    <div class="box"><h3>Cluster: friends, neighbours, witnesses</h3><p class="small muted">When the ancestor is "silent", look at the people next to him in documents.</p><div class="ex">Shmul Roitman is a guarantor in the 1912 file and the Shapiros' neighbour in the 1897 census ⇒ trace his family together with ours.</div></div>
+    <div class="box"><h3>One-house study</h3><p class="small muted">All residents of one address over the years: who moved, who died, who was related.</p><div class="ex">The Savelyevs' Leningrad house: all residents from the Siege Book of Memory, communal flat 12 — which neighbours could be relatives.</div></div>
+    <div class="box"><h3>One-name study</h3><p class="small muted">Collect everyone with the surname in one place and sort them into families.</p><div class="ex">There are hundreds of Shapiros in Berdychiv. Sort by patronymic, registration and children's names — or "found" will be someone else's family.</div></div>
+    <div class="box"><h3>Zero with coverage</h3><p class="small muted">"Not found" means something only if you record what was read in full.</p><div class="ex">All 1905 births of the parish read — no Ivan Savelyev ⇒ the parish from family memory is probably wrong.</div></div>
+    <div class="box"><h3>Comparing sources</h3><p class="small muted">Documents disagree — compare who was closer to the event.</p><div class="ex">Naum's mother: Khaya, Khana or Anna? → section 08.</div></div>
+    <div class="box"><h3>DNA against the tree</h3><p class="small muted">Work out the expected share from the tree and compare with the test.</p><div class="ex">One Jewish grandparent ⇒ expected 25 %, test 24.3 % — fits. → section 07.</div></div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>Where to make it</h4>A cycle diagram in any diagram tool (Miro, Excalidraw) or right in your findings log.</div>
+    <div class="box"><h4>In the guide</h4><a href="../guide/1-ai-search/01-search-route.html">Search route</a> · <a href="../guide/3-results/01-standard-of-proof.html">Standard of proof</a> · <a href="../guide/1-ai-search/09-false-zero.html">False zero</a></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="fmt" id="katalog">
+  <div class="fhead"><div class="fnum">02</div><h2>Source catalogue</h2>
+  <p>A table of every source found: reference, year, type, who, what it gave, level. Filters answer "what do we have on the Kovalevs?" and "where did we honestly get a zero?".</p></div>
+  <div class="filters" id="srcLineF"><span class="lab">Line:</span></div>
+  <div class="filters" id="srcTypeF"><span class="lab">Type:</span><span class="count" id="srcCount"></span></div>
+  <div class="tablewrap"><table id="srcTable"><thead><tr><th>Reference</th><th>Year</th><th>Type</th><th>Who</th><th>What it gave</th><th>Level</th></tr></thead><tbody></tbody></table></div>
+  <div class="aside">
+    <div class="box"><h4>Where to make it</h4><ul><li>Google Sheets / Excel — simplest, filters built in</li><li>Notion or Airtable — the same table with cards and "source ↔ person" links</li><li>Zotero — if citations matter</li></ul></div>
+    <div class="box"><h4>Minimum fields</h4>reference · year · type · who · what it gave (one phrase) · level · where the scan is · where the conclusion is recorded · date checked.</div>
+    <div class="box"><h4>In the guide</h4>The <a href="../templates/source-register.html">Source register</a> template. A "zero with coverage" row is also a source.</div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="fmt" id="persony">
+  <div class="fhead"><div class="fnum">03</div><h2>People catalogue</h2>
+  <p>A card index: one person — one card with the line colour, years, role and the level of the key link. You can see at once who rests on family memory alone.</p></div>
+  <div class="filters" id="pLineF"><span class="lab">Line:</span></div>
+  <div class="people" id="people"></div>
+  <div class="aside">
+    <div class="box"><h4>Where to make it</h4><ul><li>MyHeritage / Geni / FamilySearch — cards are built from the tree</li><li>Notion — a "People" database in gallery view</li><li>Obsidian — one note per person, linked</li></ul></div>
+    <div class="box"><h4>Tip</h4>Give the level not to the person as a whole but to the <b>link</b> "son of…": the name may be 🟢 and the kinship 💭. Template: <a href="../templates/persons.html">Persons</a>.</div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="fmt" id="kartochka">
+  <div class="fhead"><div class="fnum">04</div><h2>A person profile, like on MyHeritage</h2>
+  <p>One person: photo, key facts, a timeline with a source on every line, family, open questions. Unlike a typical tree site, every fact shows its level of evidence.</p></div>
+  <div class="box profile">
+    <div class="side">
+      <div class="photo"><div><div class="ini">NS</div></div><div class="cap">photo here</div></div>
+      <dl class="facts">
+        <dt>Names</dt><dd>Naum, Nokhem</dd>
+        <dt>Born</dt><dd>1899, Berdychiv 🟢</dd>
+        <dt>Died</dt><dd>1966, Moscow 🟢</dd>
+        <dt>Estate</dt><dd><i>meshchanin</i> of Zhytomyr from 1912 🟡</dd>
+        <dt>Line</dt><dd><span class="sw" style="background:var(--l-shapiro)"></span> Shapiro</dd>
+      </dl>
+    </div>
+    <div class="main">
+      <div class="kicker">Great-grandfather · Shapiro line</div>
+      <h3 style="font-size:30px;margin-top:4px">Naum (Nokhem) Itskovich Shapiro</h3>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-tab="t1">Timeline</button>
+        <button role="tab" aria-selected="false" data-tab="t2">Family</button>
+        <button role="tab" aria-selected="false" data-tab="t3">Sources (5)</button>
+        <button role="tab" aria-selected="false" data-tab="t4">Open questions</button>
+      </div>
+      <div data-panel="t1">
+        <ul class="tl">
+          <li><span class="y">1899</span><span>Born in Berdychiv; father Itsko Leibovich, mother Khaya<span class="src">birth record, DAZhO 67-3-220 [invented]</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1912</span><span>Transferred with his father to the Zhytomyr town community<span class="src">Treasury Chamber file, DAZhO 118-14-702 [invented]</span></span><span class="lvl">🟡</span></li>
+          <li><span class="y">1931</span><span>Married Riva Khaimovna Goldman, Odesa<span class="src">civil registry record [invented]</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1932</span><span>Son Lev born<span class="src">birth certificate (at home)</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1941</span><span>Evacuated with his family to Tashkent<span class="src">evacuation card [invented]</span></span><span class="lvl">🟢</span></li>
+          <li><span class="y">1966</span><span>Died in Moscow<span class="src">death certificate (at home)</span></span><span class="lvl">🟢</span></li>
+        </ul>
+      </div>
+      <div data-panel="t2" hidden>
+        <div class="rel">
+          <div>Itsko Leibovich<small>father · 1840–1910 · shopkeeper</small></div>
+          <div>Khaya / Khana / Anna<small>mother · one woman? (see 08)</small></div>
+          <div>Riva Khaimovna Goldman<small>wife · dentist</small></div>
+          <div>Lev Naumovich<small>son · 1932–1999</small></div>
+          <div>Khaim Goldman<small>father-in-law · pharmacist, Odesa</small></div>
+        </div>
+      </div>
+      <div data-panel="t3" hidden>
+        <ul class="tl">
+          <li><span class="y mono">DAZhO</span><span>67-3-220 [invented] — birth record, 1899</span><span class="lvl">🟢</span></li>
+          <li><span class="y mono">DAZhO</span><span>118-14-702 [invented] — transfer file, 1912</span><span class="lvl">🟡</span></li>
+          <li><span class="y mono">ZAGS</span><span>Odesa, marriage, 1931 [invented]</span><span class="lvl">🟢</span></li>
+          <li><span class="y mono">evac.</span><span>evacuee card, 1941 [invented]</span><span class="lvl">🟢</span></li>
+          <li><span class="y mono">home</span><span>death certificate, 1966</span><span class="lvl">🟢</span></li>
+        </ul>
+      </div>
+      <div data-panel="t4" hidden>
+        <ul class="tl">
+          <li><span class="y">?</span><span>Khaya, Khana and Anna in different documents — is it one woman?</span><span class="lvl">🟡</span></li>
+          <li><span class="y">?</span><span>Why did the family move to the Zhytomyr community: trade, conscription, debts?</span><span class="lvl">💭</span></li>
+          <li><span class="y">?</span><span>Is Naum in the Zhytomyr family lists of the 1910s?</span><span class="lvl">⚪</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>Better than a usual profile</h4>A tree site shows a fact and "source: tree". Here each line has a reference and a level, and disputed points go to "Open questions" instead of being hidden.</div>
+    <div class="box"><h4>Where to make it</h4>A MyHeritage/Geni profile (Biography, Sources) · a Notion page · an HTML card like this one. Comparison: <a href="../guide/2-reference/16-tree-platforms.html">Tree platforms</a>.</div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="fmt" id="derevo">
+  <div class="fhead"><div class="fnum">05</div><h2>The tree: two views</h2>
+  <p>Left to right — a classic pedigree chart: the researcher and all ancestors for 4 generations, colour = line. Below — a "ladder" of one direct line going back, with the level on each step.</p></div>
+  <div class="box svgwrap" style="padding:12px"><svg id="pedigree" viewBox="0 0 920 582" role="img" aria-label="Pedigree chart, 4 generations" style="min-width:720px"></svg></div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="box">
+      <h3 style="margin-bottom:10px">Ladder of the Shapiro line</h3>
+      <ul class="ladder">
+        <li><span class="g">1</span><span class="who">Mordko<small>~1790, Berdychiv · revision of 1816</small></span><span class="lvl">🟡</span></li>
+        <li><span class="g">2</span><span class="who">Leib Mordkovich<small>~1815, Berdychiv · revision of 1858</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">3</span><span class="who">Itsko Leibovich<small>1840–1910 · shopkeeper, Zhytomyr</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">4</span><span class="who">Naum Itskovich × Riva Goldman<small>1899–1966</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">5</span><span class="who">Lev Naumovich<small>1932 Odesa – 1999</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">6</span><span class="who">Andrei Lvovich<small>1960</small></span><span class="lvl">🟢</span></li>
+        <li><span class="g">7</span><span class="who">Maria<small>1991 · the researcher</small></span><span class="lvl"></span></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Other kinds of trees</h3>
+      <ul style="padding-left:18px;margin:10px 0 0">
+        <li><b>Fan chart</b> — ancestors in half-circles; gaps show at once. In MyHeritage, Gramps, Geni.</li>
+        <li><b>Descendant chart</b> — from one ancestor to all descendants, emigrant branches included.</li>
+        <li><b>Hourglass</b> — the person in the middle, ancestors up, descendants down.</li>
+        <li><b>Tree with DNA</b> — shared cM written next to each relative.</li>
+        <li><b>Hypothesis tree</b> — 💭 links dashed, so they are not mixed with proven ones.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="aside"><div class="box"><h4>Where to make it</h4>Gramps (free, its own reports and fan chart) · MyHeritage (poster print) · Family Echo (quick, in the browser) · Topola — a GEDCOM viewer.</div><div class="box"><h4>Rule</h4>Leave unknown ancestors as "?" rather than filling them in with a name from a legend.</div></div>
+</section>
+
+<!-- 6 -->
+<section class="fmt" id="karta">
+  <div class="fhead"><div class="fnum">06</div><h2>Migrations</h2>
+  <p>A diagram without a base map: points at real coordinates, arcs are family routes, colour = line. Click a line in the filter to show only it. Hover a point to see who was there and when.</p></div>
+  <div class="filters" id="mapF"><span class="lab">Show:</span></div>
+  <div class="box svgwrap" style="padding:8px"><svg id="map" viewBox="0 0 600 640" role="img" aria-label="Family migration diagram" style="min-width:480px;max-width:720px;margin:0 auto"></svg></div>
+  <div class="aside">
+    <div class="box"><h4>What you see at once</h4>The Jewish lines moved from the south-west (Volhynia, Bessarabia) through Odesa to Moscow; the Russian and Ukrainian lines — from north and south to Leningrad and Yaroslavl. Everyone meets in Moscow.</div>
+    <div class="box"><h4>Where to make it</h4>Google My Maps (a layer per line) · kepler.gl / Felt · maps by year — see <a href="../guide/2-reference/06-places-maps.html">Places and maps</a>.</div>
+    <div class="box"><h4>Variants</h4>Animation by year · a map "where they lived in 1897 / 1926 / 1941" · one map per person.</div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="fmt" id="dnk">
+  <div class="fhead"><div class="fnum">07</div><h2>Ethnicity estimate, checked against the tree</h2>
+  <p>Test percentages are a model, not a measurement. It helps most to put the expectation worked out from the tree next to them. The black mark is the expectation, the hatching is the usual spread. The numbers are invented.</p></div>
+  <div class="box">
+    <div class="small muted" style="margin-bottom:6px">An invented company's test, full composition</div>
+    <div class="stack" id="dnaStack" aria-hidden="true"></div>
+    <div class="bars" id="dnaBars"></div>
+    <div class="verdict"><b>Conclusion:</b> one Jewish grandparent (Lev Naumovich — both his parents were Jewish) ⇒ expected 25 % ± ~3.3; the test shows 24.3 % — fits. "Finnish and Karelian" 3.1 % is at the noise level; it is compatible with the northern (Vologda) Savelyev line 💭 but is not proof. Another company may call a larger share "Russian" on the same data — that is a different reference panel, not a contradiction.</div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>More formats</h4><ul><li>Chromosome painting (23andMe, GEDmatch) — which segment came from which side</li><li>A match table: cM, side, ancestral places</li><li>Two companies side by side</li></ul></div>
+    <div class="box"><h4>In the guide</h4><a href="../guide/2-reference/15-dna.html">DNA</a>: generation arithmetic 50/25/12.5 %, why shares under 2–5 % are noise.</div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="fmt" id="sravnenie">
+  <div class="fhead"><div class="fnum">08</div><h2>Comparisons: an evidence matrix</h2>
+  <p>When documents disagree, put them in one table: who made it, how long after the event, original or retold. Decide by weight, not by count.</p></div>
+  <div class="grid2">
+    <div class="box">
+      <h3>Naum Shapiro's mother</h3>
+      <div class="tablewrap" style="margin-top:10px"><table class="matrix" style="min-width:0"><thead><tr><th>Name</th><th>Source</th><th>Weight</th></tr></thead><tbody>
+        <tr><td><b>Khaya</b></td><td>birth record, 1899</td><td>🟢 written at the event</td></tr>
+        <tr><td><b>Khana</b></td><td>marriage, civil registry 1931</td><td>🟡 told by her son, 32 years later</td></tr>
+        <tr><td><b>Anna</b></td><td>questionnaire, 1950</td><td>🟡 a Russian substitute name</td></tr>
+      </tbody></table></div>
+      <div class="verdict">Likely 🟡: one woman — Khaya. "Khana" is a close form, "Anna" a Russified one. Check: age and patronymic in all three.</div>
+    </div>
+    <div class="box">
+      <h3>Date of Fyodor Kovalev's death</h3>
+      <div class="tablewrap" style="margin-top:10px"><table class="matrix" style="min-width:0"><thead><tr><th>Date</th><th>Source</th><th>Weight</th></tr></thead><tbody>
+        <tr><td><b>12.08.1943</b></td><td>loss report, TsAMO [invented]</td><td>🟢 made by the unit</td></tr>
+        <tr><td><b>September 1943</b></td><td>search questionnaire, 1948</td><td>🔴 from his wife's memory</td></tr>
+        <tr><td><b>"summer, near Kursk"</b></td><td>family story</td><td>💭 does not contradict the report</td></tr>
+      </tbody></table></div>
+      <div class="verdict">Resolved 🟢: 12 August 1943. The original record outweighs the retelling.</div>
+    </div>
+    <div class="box" style="grid-column:1/-1">
+      <h3>Khaim Goldman's patronymic</h3>
+      <div class="tablewrap" style="margin-top:10px"><table class="matrix"><thead><tr><th>What it says</th><th>Source</th><th>Year</th><th>Weight</th></tr></thead><tbody>
+        <tr><td>"Khaim Berkov Goldman"</td><td>revision / family list, Chișinău [invented]</td><td>1875</td><td>🟢 official register</td></tr>
+        <tr><td>"Goldman Khaim Borisovich, pharmacy"</td><td>directory "All Odesa"</td><td>1914</td><td>🟢 record; "Boris" is a common Russian form of Berko</td></tr>
+        <tr><td>"Khaim Bentsionovich"</td><td>someone else's online tree</td><td>—</td><td>🔴 no source</td></tr>
+      </tbody></table></div>
+      <div class="verdict">Resolved 🟢: Berko and Boris are one name in two forms. Do not copy the version from someone else's tree into yours.</div>
+    </div>
+  </div>
+  <div class="aside"><div class="box"><h4>In the guide</h4><a href="../guide/3-results/01-standard-of-proof.html">Standard of proof</a> (ranking of sources) · <a href="../guide/2-reference/03-names-spellings.html">Names, surnames, spellings</a> (Berko ↔ Boris and other pairs).</div></div>
+</section>
+
+<!-- 9 -->
+<section class="fmt" id="istorii">
+  <div class="fhead"><div class="fnum">09</div><h2>Photos and personal stories</h2>
+  <p>Documents give dates; a story gives the person. The "chapters of a life" format: short chapters with a date, each saying how we know it. Photos get captions as strict as documents.</p></div>
+  <div class="story">
+    <div>
+      <div class="album">
+        <div class="photo"><div><div class="ini">PS</div></div><div class="cap">Pyotr, ~1940? · who identified</div></div>
+        <div class="photo"><div><div class="ini">IS</div></div><div class="cap">Ivan Savelyev</div></div>
+        <div class="photo"><div><div class="ini">AM</div></div><div class="cap">Anna Mikhailovna</div></div>
+        <div class="photo"><div><div class="ini">GT</div></div><div class="cap">Galina, 1950s</div></div>
+      </div>
+      <div class="box" style="margin-top:14px;box-shadow:none">
+        <h4 class="kicker" style="margin:0 0 6px">A caption for every photo</h4>
+        <div class="meta">
+          <div>who</div><div>names, left to right</div>
+          <div>when</div><div>year or "~1940, by clothing"</div>
+          <div>where</div><div>town, studio (stamp on the back)</div>
+          <div>identified by</div><div>writing on the back / family / comparison</div>
+          <div>original</div><div>who keeps it, scan file</div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="kicker">Story · Savelyev line</div>
+      <h3 style="font-size:28px;margin:4px 0 8px">Pyotr: a childhood that ended in the siege</h3>
+      <div class="chapter"><div class="when">1934 · Vologda</div>Born to Ivan Savelyev and Anna Mikhailovna. Two years later the family moves to Leningrad (family memory).</div>
+      <div class="chapter"><div class="when">February 1942 🟢</div>His father, Ivan Savelyev, dies in besieged Leningrad. Entry in the Siege Book of Memory.</div>
+      <div class="chapter"><div class="when">Spring 1942 🟢</div>His mother and seven-year-old Pyotr are taken out across Lake Ladoga. The evacuation list names the destination — Yaroslavl.</div>
+      <blockquote>"Grandmother was Polish"<small>family memory about Anna Mikhailovna 💭 — to check: birthplace in the evacuation list, religion in the birth record</small></blockquote>
+      <div class="chapter"><div class="when">1950s · Yaroslavl</div>Meets Galina Tkachenko from Poltava (family memory).</div>
+      <div class="chapter"><div class="when">1963</div>Daughter Elena is born — the researcher's mother.</div>
+    </div>
+  </div>
+  <div class="aside">
+    <div class="box"><h4>Working with photos</h4><ul><li>Date by studio, clothing, card format</li><li>Scan the back too — writing matters more than faces</li><li>Face comparison is only a hint 💭</li><li>Colourising and "animating" — mark as processing</li></ul></div>
+    <div class="box"><h4>In the guide</h4><a href="../guide/2-reference/17-photographs.html">Old photographs</a> · <a href="../guide/3-results/02-family-history.html">Family history</a> · <a href="../guide/0-start/04-talking-to-relatives.html">Talking to relatives</a></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="fmt" id="familiya">
+  <div class="fhead"><div class="fnum">10</div><h2>A surname origin certificate</h2>
+  <p>Commercial certificates look nice but often say the same for everyone: "the surname comes from a nickname…". An honest version keeps the design but adds versions, levels and sources.</p></div>
+  <div class="cert">
+    <div class="ttl">Certificate of surname origin</div>
+    <div class="sur">Shapiro</div>
+    <div class="heb" dir="rtl" lang="he">שפירא</div>
+    <div class="cols">
+      <div><h4>Meaning</h4>From the town of Speyer on the Rhine (in Jewish texts — Shpira). One of the oldest Ashkenazi surnames.</div>
+      <div><h4>What it means for the family</h4>A place-name surname passed down for centuries and is very widespread: the meaning does <b>not</b> show that the ancestors lived in Speyer or were related to famous Shapiros 💭.</div>
+      <div><h4>Where bearers lived</h4>Almost all over the Pale of Settlement; for our line — Berdychiv and Zhytomyr (revisions, 1897 census).</div>
+      <div><h4>Earliest record in the family</h4>Mordko Shapiro, Berdychiv, revision of 1816 🟡.</div>
+      <div><h4>Spellings</h4>Шапиро · Шапира · Спиро · Shapiro · Szapiro · Schapiro — search them all.</div>
+      <div><h4>Practical conclusion</h4>A common surname ⇒ "found a Shapiro" means nothing without a second feature: patronymic, place, relatives' names.</div>
+    </div>
+    <div class="foot">Compiled from: A. Beider, <i>A Dictionary of Jewish Surnames from the Russian Empire</i>. Versions without a document are marked 💭.</div>
+    <div class="seal">CHECKED<br>AGAINST<br>RECORDS</div>
+  </div>
+  <div class="box" style="margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:14px 20px;align-items:center">
+    <div style="font-family:Forum,serif;font-size:42px;color:var(--l-kovalev)">Kovalev</div>
+    <div>From <b>koval</b> — blacksmith (South Russian and Ukrainian). First a nickname or the father's name "Koval", then a surname with "-ev". The meaning tells you about a distant ancestor's nickname, not that the great-grandparents were blacksmiths 💭.</div>
+  </div>
+  <div class="aside"><div class="box"><h4>Where to find meanings</h4>Beider (Jewish surnames) · Unbegaun, Nikonov, Fedosyuk (Russian) · Forebears.io (distribution). Avoid "meaning of your surname" generator sites.</div><div class="box"><h4>Format</h4>A framed A4 print, a PDF gift for relatives, the cover of a family book. More: <a href="../guide/2-reference/03-names-spellings.html">Names, surnames, spellings</a>.</div></div>
+</section>
+
+<!-- 11 -->
+<section class="fmt" id="emblema">
+  <div class="fhead"><div class="fnum">11</div><h2>Coat of arms or a family emblem</h2>
+  <p>In the Russian Empire coats of arms belonged to noble families; townspeople, merchants and peasants had none, so a "family coat of arms" from an online shop is invented. You can honestly build a family emblem from what is known instead.</p></div>
+  <div class="grid2">
+    <div class="box" style="display:grid;place-items:center"><svg id="emblem" viewBox="0 0 260 350" width="260" role="img" aria-label="A four-part family emblem"></svg></div>
+    <div class="box">
+      <h3>What each quarter means</h3>
+      <ul class="tl" style="margin-top:8px">
+        <li><span class="y">I</span><span>Town gate — Speyer, the origin of the surname Shapiro<span class="src">surname meaning 💭 · not the ancestors' home</span></span><span class="lvl"><span class="sw" style="background:var(--l-shapiro)"></span></span></li>
+        <li><span class="y">II</span><span>Pharmacy scales — Khaim Goldman's pharmacy in Odesa<span class="src">directory, 1914 🟢</span></span><span class="lvl"><span class="sw" style="background:var(--l-goldman)"></span></span></li>
+        <li><span class="y">III</span><span>Hammer and horseshoe — "koval", the meaning of Kovalev<span class="src">surname meaning 💭</span></span><span class="lvl"><span class="sw" style="background:var(--l-kovalev)"></span></span></li>
+        <li><span class="y">IV</span><span>Waves — the Neva, the Savelyevs' siege of Leningrad<span class="src">Book of Memory, evacuation list 🟢</span></span><span class="lvl"><span class="sw" style="background:var(--l-savelyev)"></span></span></li>
+      </ul>
+      <p class="small muted" style="margin-top:10px">The motto on the ribbon is the main rule of research. Quarter colours are the line colours.</p>
+    </div>
+  </div>
+  <div class="aside"><div class="box"><h4>Other "family themes"</h4><ul><li>A family palette and font for all materials</li><li>A bookplate for the family book</li><li>A "where we come from" map poster</li><li>A calendar of memorial dates (birthdays and yahrzeits)</li></ul></div><div class="box"><h4>Where to check a real coat of arms</h4>The "General Armorial of the Noble Families of the All-Russian Empire" — if the surname is not there, the family had no arms. Ideas: <a href="../guide/3-results/05-ideas-for-family-history.html">Ideas for a family history</a>.</div></div>
+</section>
+
+<!-- 12 -->
+<section class="fmt" id="biblioteka">
+  <div class="fhead"><div class="fnum">12</div><h2>A document library: how to store</h2>
+  <p>To find any scan in 10 seconds a year from now: one folder scheme, one file-naming rule, a metadata card and a document's path from "found in an index" to "recorded in the log".</p></div>
+  <div class="grid2">
+    <div class="box">
+      <h3 style="margin-bottom:10px">Folders</h3>
+<pre class="tree">Family/
+├─ 00-FINDINGS-LOG.md      <span class="c"># all findings in order, §§</span>
+├─ 01-PERSONS.md           <span class="c"># one entry = one person</span>
+├─ 02-HYPOTHESES.md        <span class="c"># H-1, H-2… with statuses</span>
+├─ 03-SOURCES.xlsx         <span class="c"># source catalogue (section 02)</span>
+├─ Archive/
+│  ├─ Shapiro/
+│  │  ├─ DAZhO_118-14-702_1912_transfer-Itsko.pdf
+│  │  └─ DAZhO_67-3-220_1899_birth-Naum_crop.png
+│  ├─ Goldman/
+│  ├─ Savelyev/
+│  └─ DNA/               <span class="c"># raw files, exports</span>
+├─ Photos/
+│  ├─ originals/          <span class="c"># TIFF, never edit</span>
+│  └─ working/            <span class="c"># JPG, crops, colourised</span>
+└─ Backup/               <span class="c"># + cloud + external drive</span></pre>
+    </div>
+    <div class="box">
+      <h3 style="margin-bottom:10px">File name</h3>
+      <p class="mono" style="background:var(--card-2);padding:10px;border-radius:8px;word-break:break-all">Archive_fond-opis-file_year_who_what.ext</p>
+      <p class="small">Example: <span class="mono">TsAMO_loss-report_1943_Kovalev-F_sheet2.jpg</span>. Reference first — easy to search; year next — the era is visible.</p>
+      <h3 style="margin:14px 0 10px">Document card</h3>
+      <div class="meta">
+        <div>reference</div><div>DAZhO f. 118 op. 14 d. 702 [invented]</div>
+        <div>year</div><div>1912</div>
+        <div>type</div><div>Treasury Chamber file</div>
+        <div>who</div><div>Itsko Leibovich, Naum, Sh. Roitman</div>
+        <div>found where</div><div>online fond inventory, date checked</div>
+        <div>scan</div><div>none, inventory line only</div>
+        <div>status</div><div>found in inventory → need the text</div>
+        <div>conclusion</div><div>log § 14 · level 🟡</div>
+      </div>
+    </div>
+  </div>
+  <div class="box" style="margin-top:14px">
+    <h3 style="margin-bottom:10px">A document's path</h3>
+    <div class="pipeline"><span class="s">found in an index</span><span class="a">→</span><span class="s">scan downloaded</span><span class="a">→</span><span class="s">read</span><span class="a">→</span><span class="s">checked against the frame</span><span class="a">→</span><span class="s">recorded in the log</span><span class="a">→</span><span class="s">level set</span></div>
+    <p class="small muted" style="margin-top:10px">The 3-2-1 rule: three copies, on two different media, one away from home. Photo originals and raw DNA files are read-only.</p>
+  </div>
+  <div class="aside"><div class="box"><h4>Tools</h4>Obsidian (Markdown files) · Zotero (sources + PDF) · Tropy (archive photos) · Gramps (tree + media) · git — history of edits.</div><div class="box"><h4>In the guide</h4><a href="../guide/0-start/02-keeping-files.html">Keeping files</a> · <a href="../guide/3-results/03-ethics-preservation.html">Ethics and preservation</a> · <a href="../templates/index.html">Templates</a></div></div>
+</section>
+
+<!-- 13 -->
+<section class="fmt" id="rukovodstvo">
+  <div class="fhead"><div class="fnum">13</div><h2>Where to start</h2>
+  <p>You do not need all 13 formats. Two are a must — the source catalogue and the document library: without them there is nothing to build on. The rest depends on the task.</p></div>
+  <div class="tablewrap"><table><thead><tr><th>Format</th><th>Effort</th><th>Made with</th><th>For whom</th></tr></thead><tbody>
+    <tr><td>Source catalogue</td><td>●○○</td><td>a spreadsheet</td><td>everyone, from day one</td></tr>
+    <tr><td>Document library</td><td>●○○</td><td>folders + naming rule</td><td>everyone, from day one</td></tr>
+    <tr><td>Tree and line ladder</td><td>●○○</td><td>Gramps, MyHeritage</td><td>everyone</td></tr>
+    <tr><td>Evidence matrix</td><td>●○○</td><td>a 3-column table</td><td>whenever documents disagree</td></tr>
+    <tr><td>People catalogue and profile</td><td>●●○</td><td>Notion / Obsidian / tree site</td><td>once you have 30+ people</td></tr>
+    <tr><td>Migration map</td><td>●●○</td><td>Google My Maps</td><td>to tell relatives</td></tr>
+    <tr><td>DNA against the tree</td><td>●●○</td><td>table + 50/25/12.5 rule</td><td>after a test</td></tr>
+    <tr><td>Chapters of a life + photos</td><td>●●○</td><td>text, Tropy</td><td>for the family</td></tr>
+    <tr><td>Surname certificate, emblem</td><td>●●●</td><td>Canva / Figma / HTML</td><td>a gift</td></tr>
+  </tbody></table></div>
+  <p class="small muted" style="margin-top:10px">All formats described in text: <a href="formats-showcase.html">"Formats showcase"</a>. Back to <a href="../index.html">Tracing Your Ancestors</a>.</p>
+</section>
+</main>
+
+<footer><div class="wrap">A teaching example from "Tracing Your Ancestors". An invented family. Text — CC BY 4.0. Compiled by Anna Shefel.</div></footer>
+<button class="theme-btn" id="themeBtn" type="button">Theme</button>
+<div class="tip" id="tip"></div>
+
+<script>
+const LINES={shapiro:{n:"Shapiro",c:"var(--l-shapiro)"},goldman:{n:"Goldman",c:"var(--l-goldman)"},kovalev:{n:"Kovalev",c:"var(--l-kovalev)"},savelyev:{n:"Savelyev",c:"var(--l-savelyev)"},tkachenko:{n:"Tkachenko",c:"var(--l-tkachenko)"}};
+const $=s=>document.querySelector(s);
+const el=(t,a={},h="")=>{const e=document.createElement(t);for(const k in a)e.setAttribute(k,a[k]);if(h)e.innerHTML=h;return e};
+const tip=$("#tip");
+function showTip(e,html){tip.innerHTML=html;tip.style.opacity=1;const x=Math.min(e.clientX+12,innerWidth-270);tip.style.left=x+"px";tip.style.top=(e.clientY+14)+"px"}
+function hideTip(){tip.style.opacity=0}
+
+const lg=$("#lineLegend");for(const k in LINES)lg.append(el("span",{},`<i class="sw" style="background:${LINES[k].c}"></i>${LINES[k].n}`));
+
+$("#themeBtn").onclick=()=>{const r=document.documentElement;const cur=r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");r.dataset.theme=cur==="dark"?"light":"dark"};
+
+const links=[...document.querySelectorAll("#toc a")];
+links.forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t){const y=t.getBoundingClientRect().top+scrollY-56;scrollTo({top:y,behavior:"smooth"})}}));
+const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+x.target.id));const on=links.find(a=>a.classList.contains("on"));if(on){const bar=$("#toc");bar.scrollLeft=on.offsetLeft-bar.clientWidth/2+on.offsetWidth/2}}})},{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section.fmt").forEach(s=>io.observe(s));
+
+// ---------- sources (all references invented)
+const SRC=[
+["DAZhO 118-14-702 [invented]",1912,"court and registers","Itsko Leibovich, Naum","transferred from the Berdychiv to the Zhytomyr town community","🟡","shapiro"],
+["DAZhO 67-3-220 [invented]",1899,"vital records","Naum Itskovich","birth in Berdychiv; mother \"Khaya\"","🟢","shapiro"],
+["DAZhO 118-17-415 [invented]",1858,"revisions","Leib Mordkovich's family","Leib aged 43, son Itsko 18","🟢","shapiro"],
+["DAZhO 118-17-90 [invented]",1834,"revisions","Mordko","volume read in full — no Mordko","zero","shapiro"],
+["1897 census, Zhytomyr [invented]",1897,"censuses","Itsko Leibovich","aged 57, shopkeeper, Zhytomyr meshchanin","🟢","shapiro"],
+["\"All Odesa\" directory",1914,"directories","Khaim Borisovich Goldman","pharmacy; link to Riva — by address and patronymic","🟡","goldman"],
+["Family list, Chișinău [invented]",1875,"revisions","Khaim Berkov Goldman","aged 5, father Berko","🟢","goldman"],
+["Odesa civil registry [invented]",1931,"civil registry","Naum × Riva","marriage; groom's mother \"Khana\"","🟢","goldman"],
+["Yad Vashem, Page of Testimony [invented]",1941,"war","Khaim Goldman","killed in Odesa in 1941; submitted by a granddaughter","🟡","goldman"],
+["Tula civil registry [invented]",1935,"civil registry","Zinaida Kovaleva","birth; father Fyodor, mother Maria","🟢","kovalev"],
+["Tula archive, confession list [invented]",1910,"vital records","Kovalevs, village of Dubki","family with son Fyodor, aged 1","🟡","kovalev"],
+["TsAMO, loss report [invented]",1943,"war","Fyodor Kovalev","killed 12.08.1943","🟢","kovalev"],
+["TsAMO, search questionnaire [invented]",1948,"war","Fyodor Kovalev","his wife says \"September 1943\" — wrong date","🟢","kovalev"],
+["Siege Book of Memory",1942,"war","Ivan Savelyev","born 1905, died February 1942","🟢","savelyev"],
+["Evacuation list [invented]",1942,"evacuation","Anna Mikhailovna, Pyotr","taken out across Ladoga, to Yaroslavl","🟢","savelyev"],
+["Parish registers, Vologda [invented]",1905,"vital records","Ivan Savelyev","all births read — no record","zero","savelyev"],
+["Poltava civil registry [invented]",1937,"civil registry","Galina Tkachenko","birth; father Ostap","🟢","tkachenko"]
+];
+const TYPES=[...new Set(SRC.map(r=>r[2]))];
+let sLine="all",sType="all";
+function chips(holder,items,onPick,first="all"){items.forEach(([v,lab,col])=>{const b=el("button",{class:"chip",type:"button","aria-pressed":v===first},(col?`<i class="sw" style="background:${col}"></i>`:"")+lab);b.onclick=()=>{holder.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));onPick(v)};holder.insertBefore(b,holder.querySelector(".count"))})}
+chips($("#srcLineF"),[["all","all"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{sLine=v;drawSrc()});
+chips($("#srcTypeF"),[["all","all"],...TYPES.map(t=>[t,t]),["zero","zero with coverage"]],v=>{sType=v;drawSrc()});
+function drawSrc(){const tb=$("#srcTable tbody");tb.innerHTML="";let n=0;SRC.forEach(r=>{if(sLine!=="all"&&r[6]!==sLine)return;if(sType==="zero"?r[5]!=="zero":(sType!=="all"&&r[2]!==sType))return;n++;const lv=r[5]==="zero"?'<span class="tag">zero with coverage</span>':r[5];tb.append(el("tr",{},`<td><span class="linebar" style="background:${LINES[r[6]].c}"></span><span class="code">${r[0]}</span></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${lv}</td>`))});$("#srcCount").textContent=n+" of "+SRC.length}
+drawSrc();
+
+// ---------- people
+const P=[
+["Mordko Shapiro","~1790","Berdychiv · earliest ancestor of the line","shapiro","🟡"],
+["Leib Mordkovich","~1815","Berdychiv · revision of 1858","shapiro","🟢"],
+["Itsko Leibovich","1840–1910","Berdychiv → Zhytomyr · shopkeeper","shapiro","🟢"],
+["Naum (Nokhem) Itskovich","1899–1966","Berdychiv → Odesa → Moscow · great-grandfather","shapiro","🟢"],
+["Lev Naumovich","1932–1999","Odesa · grandfather","shapiro","🟢"],
+["Khaim Berkov Goldman","~1870–1941","Chișinău → Odesa · pharmacist","goldman","🟡"],
+["Riva Khaimovna Goldman","1903–1979","Odesa · dentist · great-grandmother","goldman","🟢"],
+["Zinaida Fyodorovna Kovaleva","1935–2010","Tula · grandmother","kovalev","🟢"],
+["Fyodor Kovalev","1909–1943","village of Dubki → front · killed","kovalev","🟢"],
+["Maria Sorokina","?","Fyodor's wife · surname from family story","kovalev","💭"],
+["Pyotr Ivanovich Savelyev","1934–2005","Vologda → Leningrad → Yaroslavl · grandfather","savelyev","🟢"],
+["Ivan Savelyev","1905–1942","Vologda → Leningrad · the siege","savelyev","🟢"],
+["Anna Mikhailovna","1908–1987","\"Polish\"? · maiden name ?","savelyev","🟢"],
+["Galina Ostapovna Tkachenko","1937–2016","Poltava → Yaroslavl · grandmother","tkachenko","🟢"],
+["Ostap Tkachenko","?","Poltava · known from his daughter's patronymic","tkachenko","🟡"],
+["Hanna","?","Poltava · family memory","tkachenko","💭"]
+];
+let pLine="all";
+chips($("#pLineF"),[["all","all"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{pLine=v;drawP()});
+function initials(n){return n.replace(/[()"]/g,"").split(/\s+/).filter(w=>/^[A-Z]/.test(w)).slice(0,2).map(w=>w[0]).join("")}
+function drawP(){const h=$("#people");h.innerHTML="";P.filter(p=>pLine==="all"||p[3]===pLine).forEach(p=>{h.append(el("div",{class:"pc",style:`--lc:${LINES[p[3]].c}`},`<div class="mono-av">${initials(p[0])}</div><div class="nm">${p[0]}</div><div class="yr">${p[1]}</div><div class="rl">${p[2]}</div><div class="ft"><span>${LINES[p[3]].n}</span><span>link ${p[4]}</span></div>`))})}
+drawP();
+
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{const box=b.closest(".main");box.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));box.querySelectorAll("[data-panel]").forEach(p=>p.hidden=p.dataset.panel!==b.dataset.tab)});
+
+// ---------- pedigree
+const NS="http://www.w3.org/2000/svg";
+const sv=(t,a,parent)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(parent)parent.append(e);return e};
+const G=[
+ [["Maria","SHAPIRO · 1991","none"]],
+ [["Andrei Lvovich","SHAPIRO · 1960","shapiro"],["Elena Petrovna","SAVELYEVA · 1963","savelyev"]],
+ [["Lev Naumovich","SHAPIRO · 1932–1999","shapiro"],["Zinaida Fyodorovna","KOVALEVA · 1935–2010","kovalev"],["Pyotr Ivanovich","SAVELYEV · 1934–2005","savelyev"],["Galina Ostapovna","TKACHENKO · 1937–2016","tkachenko"]],
+ [["Naum Itskovich","SHAPIRO · 1899–1966","shapiro"],["Riva Khaimovna","GOLDMAN · 1903–1979","goldman"],["Fyodor","KOVALEV · 1909–1943","kovalev"],["Maria 💭","SOROKINA","kovalev"],["Ivan","SAVELYEV · 1905–1942","savelyev"],["Anna Mikhailovna","maiden name ?","savelyev"],["Ostap","TKACHENKO","tkachenko"],["Hanna 💭","surname ?","tkachenko"]]
+];
+const ped=$("#pedigree");const W=212,H=58,X=[6,236,466,696],rowH=71;
+const pos=G.map((gen,gi)=>gen.map((_,i)=>{const span=8/gen.length;const y=8+(i*span+span/2)*rowH-H/2;return [X[gi],y]}));
+for(let g=0;g<3;g++)pos[g].forEach((p,i)=>{[2*i,2*i+1].forEach(j=>{const q=pos[g+1][j];const x1=p[0]+W,y1=p[1]+H/2,x2=q[0],y2=q[1]+H/2,mx=(x1+x2)/2;sv("path",{d:`M${x1} ${y1} H${mx} V${y2} H${x2}`,fill:"none",stroke:"var(--line)","stroke-width":2},ped)})});
+G.forEach((gen,gi)=>gen.forEach((p,i)=>{const [x,y]=pos[gi][i];const c=p[2]==="none"?"var(--ink)":LINES[p[2]].c;const g=sv("g",{},ped);sv("rect",{x,y,width:W,height:H,rx:8,fill:"var(--card)",stroke:"var(--line)"},g);sv("rect",{x,y,width:5,height:H,rx:2,fill:c},g);const t1=sv("text",{x:x+14,y:y+24,"font-size":14,"font-weight":700,fill:"var(--ink)"},g);t1.textContent=p[0];const t2=sv("text",{x:x+14,y:y+44,"font-size":12,fill:"var(--muted)","letter-spacing":".03em"},g);t2.textContent=p[1]}));
+["researcher","parents","grandparents","great-grandparents"].forEach((s,i)=>{const t=sv("text",{x:X[i]+W/2,y:578,"text-anchor":"middle","font-size":11,fill:"var(--muted)","font-family":"PT Mono"},ped);t.textContent=s});
+
+// ---------- map
+const PTS={
+ ber:["Berdychiv",49.9,28.6,"Mordko, Leib, Itsko; Naum born 1899"],
+ zhi:["Zhytomyr",50.25,28.66,"Itsko a Zhytomyr meshchanin; 1897 census"],
+ kis:["Chișinău",47.01,28.86,"Khaim Goldman born ~1870"],
+ ode:["Odesa",46.48,30.73,"Goldman pharmacy 1914; Naum and Riva married 1931; Lev born 1932"],
+ pol:["Poltava",49.59,34.55,"Galina Tkachenko born 1937"],
+ tul:["Tula",54.19,37.62,"the Kovalevs; Zinaida born 1935"],
+ msk:["Moscow",55.76,37.62,"Naum died 1966; Andrei born 1960; Maria born 1991"],
+ yar:["Yaroslavl",57.63,39.87,"Savelyevs evacuated here, 1942"],
+ vol:["Vologda",59.22,39.89,"Ivan Savelyev born 1905; Pyotr born 1934"],
+ len:["Leningrad",59.94,30.31,"Savelyevs from 1936; the siege"]
+};
+const ROUTES=[
+ ["shapiro",["ber","zhi","ode","msk"],-.24],
+ ["goldman",["kis","ode"]],
+ ["kovalev",["tul","msk"]],
+ ["savelyev",["vol","len","yar","msk"]],
+ ["tkachenko",["pol","yar"]]
+];
+const map=$("#map");const k=38;const proj=(la,lo)=>[(lo-26)*Math.cos(52*Math.PI/180)*k+60,(60.8-la)*k+20];
+for(let lo=28;lo<=42;lo+=2){const [x]=proj(50,lo);sv("line",{x1:x,y1:0,x2:x,y2:640,stroke:"var(--line)","stroke-width":.6,"stroke-dasharray":"2 5"},map)}
+for(let la=46;la<=60;la+=2){const [,y]=proj(la,26);sv("line",{x1:0,y1:y,x2:600,y2:y,stroke:"var(--line)","stroke-width":.6,"stroke-dasharray":"2 5"},map);const t=sv("text",{x:4,y:y-3,"font-size":10,fill:"var(--muted)","font-family":"PT Mono"},map);t.textContent=la+"°"}
+const routeG=sv("g",{},map);const ptG=sv("g",{},map);
+const arrowDefs=sv("defs",{},map);
+Object.keys(LINES).forEach(l=>{const m=sv("marker",{id:"ar-"+l,viewBox:"0 0 10 10",refX:8,refY:5,markerWidth:6,markerHeight:6,orient:"auto-start-reverse"},arrowDefs);sv("path",{d:"M0 0 L10 5 L0 10 z",fill:LINES[l].c},m)});
+ROUTES.forEach(([l,ps,bend=.18])=>{let d="";ps.forEach((p,i)=>{const [x,y]=proj(PTS[p][1],PTS[p][2]);if(!i){d=`M${x} ${y}`;return}const [px,py]=proj(PTS[ps[i-1]][1],PTS[ps[i-1]][2]);const dx=x-px,dy=y-py;const cx=(px+x)/2-dy*bend,cy=(py+y)/2+dx*bend;d+=` Q${cx} ${cy} ${x} ${y}`});sv("path",{d,fill:"none",stroke:LINES[l].c,"stroke-width":2.5,"stroke-linejoin":"round","stroke-linecap":"round","marker-end":`url(#ar-${l})`,"data-line":l,opacity:.9},routeG)});
+const labelSide={ber:"l",zhi:"l",kis:"l",ode:"r",pol:"r",tul:"r",msk:"l",yar:"r",vol:"r",len:"l"};
+const labelDy={ber:10,zhi:-6};
+for(const key in PTS){const [n,la,lo,info]=PTS[key];const [x,y]=proj(la,lo);const g=sv("g",{style:"cursor:pointer"},ptG);sv("circle",{cx:x,cy:y,r:14,fill:"transparent"},g);sv("circle",{cx:x,cy:y,r:5,fill:"var(--card)",stroke:"var(--ink)","stroke-width":2},g);const s=labelSide[key];const t=sv("text",{x:s==="l"?x-9:x+9,y:y+4+(labelDy[key]||0),"text-anchor":s==="l"?"end":"start","font-size":13,fill:"var(--ink)"},g);t.textContent=n;g.addEventListener("pointermove",e=>showTip(e,`<b>${n}</b><br>${info}`));g.addEventListener("pointerleave",hideTip)}
+const tn=sv("text",{x:590,y:612,"text-anchor":"end","font-size":12,fill:"var(--muted)"},map);tn.textContent="↘ Tashkent (evacuation, 1941) — off the diagram";
+chips($("#mapF"),[["all","all lines"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{routeG.querySelectorAll("path").forEach(p=>p.setAttribute("opacity",v==="all"||p.dataset.line===v?.95:.08))});
+
+// ---------- dna (illustrative numbers)
+const DNA=[["Ashkenazi Jewish",24.3,"var(--l-shapiro)",25,3.3],["Eastern European",49.8,"var(--l-savelyev)"],["Russian",21.6,"var(--l-kovalev)"],["Finnish and Karelian",3.1,"var(--l-goldman)"],["Other",1.2,"var(--l-tkachenko)"]];
+const st=$("#dnaStack"),bars=$("#dnaBars");
+const fmt=v=>v.toFixed(1);
+DNA.forEach(([n,v,c,e,sd])=>{const d=el("div",{style:`width:${v}%;background:${c}`});d.addEventListener("pointermove",ev=>showTip(ev,`<b>${n}</b>: ${fmt(v)} %`));d.addEventListener("pointerleave",hideTip);st.append(d);
+ const scale=60;const b=el("div",{class:"bar"},`<span>${n}</span><div class="track">${e?`<div class="band" style="left:${(e-sd)/scale*100}%;width:${2*sd/scale*100}%"></div>`:""}<div class="fill" style="width:${v/scale*100}%;background:${c}"></div>${e?`<div class="exp" style="left:${e/scale*100}%" title="expected 25 %"></div>`:""}</div><span class="v">${fmt(v)}%</span>`);
+ b.addEventListener("pointermove",ev=>showTip(ev,e?`<b>${n}</b>: ${fmt(v)} %<br>expected from the tree ${e} % ± ${sd}`:`<b>${n}</b>: ${fmt(v)} %`));b.addEventListener("pointerleave",hideTip);bars.append(b)});
+bars.append(el("div",{class:"small muted"},"Scale up to 60 %. The mark and hatching are only on the Ashkenazi component — for the others the tree gives no precise expectation (reference panels of neighbouring peoples overlap)."));
+
+// ---------- emblem
+const em=$("#emblem");
+const shield="M30 20 H230 V150 Q230 250 130 300 Q30 250 30 150 Z";
+const clip=sv("clipPath",{id:"sh"},sv("defs",{},em));sv("path",{d:shield},clip);
+const q=sv("g",{"clip-path":"url(#sh)"},em);
+[[30,20,"var(--l-shapiro)"],[130,20,"var(--card-2)"],[30,150,"var(--card-2)"],[130,150,"var(--l-savelyev)"]].forEach(([x,y,f])=>sv("rect",{x,y,width:100,height:y===20?130:160,fill:f},q));
+sv("rect",{x:130,y:20,width:100,height:130,fill:"var(--l-goldman)",opacity:.16},q);
+sv("rect",{x:30,y:150,width:100,height:160,fill:"var(--l-kovalev)",opacity:.16},q);
+const Gt=sv("g",{fill:"#fff"},em);sv("rect",{x:52,y:62,width:16,height:58},Gt);sv("rect",{x:92,y:62,width:16,height:58},Gt);sv("path",{d:"M60 82 H100 V120 H90 V100 Q80 88 70 100 V120 H60 Z"},Gt);[[52,54],[62,54],[92,54],[102,54]].forEach(([x,y])=>sv("rect",{x,y,width:6,height:8},Gt));sv("rect",{x:70,y:74,width:20,height:8},Gt);
+const Sc=sv("g",{fill:"none",stroke:"var(--ink)","stroke-width":3,"stroke-linecap":"round"},em);sv("path",{d:"M180 48 V118 M164 118 H196 M150 62 H210"},Sc);sv("path",{d:"M150 62 L140 90 M150 62 L160 90 M210 62 L200 90 M210 62 L220 90"},Sc);sv("path",{d:"M138 90 Q150 102 162 90 Z M198 90 Q210 102 222 90 Z",fill:"var(--gold)"},Sc);sv("circle",{cx:180,cy:46,r:4,fill:"var(--ink)"},Sc);
+const Hm=sv("g",{},em);sv("path",{d:"M58 236 A22 22 0 1 1 102 236",fill:"none",stroke:"var(--ink)","stroke-width":9,"stroke-linecap":"butt"},Hm);[[60,226],[66,206],[94,206],[100,226]].forEach(([cx,cy])=>sv("circle",{cx,cy,r:1.8,fill:"var(--card)"},Hm));sv("rect",{x:76,y:172,width:8,height:34,rx:2,fill:"var(--gold)",transform:"rotate(-35 80 189)"},Hm);sv("rect",{x:66,y:166,width:28,height:12,rx:2,fill:"var(--ink)",transform:"rotate(-35 80 172)"},Hm);
+const Wv=sv("g",{fill:"none",stroke:"#fff","stroke-width":4,"stroke-linecap":"round"},em);[190,210,230].forEach(y=>sv("path",{d:`M146 ${y} q10 -10 20 0 t20 0 t20 0 t20 0`},Wv));
+sv("path",{d:shield,fill:"none",stroke:"var(--gold)","stroke-width":4},em);
+sv("path",{d:"M130 20 V300 M30 150 H230",stroke:"var(--gold)","stroke-width":2,opacity:.7},em);
+sv("path",{d:"M14 300 Q130 340 246 300 L240 322 Q130 360 20 322 Z",fill:"var(--card)",stroke:"var(--gold)","stroke-width":1.5},em);
+const mt=sv("text",{x:130,y:325,"text-anchor":"middle","font-size":13,fill:"var(--ink)","font-family":"Forum","letter-spacing":".12em"},em);mt.textContent="DOCUMENTS FIRST";
+</script>
+</body>
+</html>

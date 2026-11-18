@@ -100,3 +100,4 @@ Practice:
 - [A worked example for beginners](examples/worked-example-for-beginners.md): a teaching path from family memory to a first find in a scan (a fictional Orthodox peasant family, real sources)
 - [Examples of finds](examples/example-finds.md)
 - [Case study: from a newspaper to a family](examples/case-study-newspaper-to-family.md)
+- [Formats showcase](examples/formats-showcase.md): 13 ways to show and store a family research project (catalogues, tree, map, DNA, evidence matrix, stories, surname certificate, document library); invented family, interactive version en/examples/formats-showcase-shapiro.html
