@@ -1,44 +1,44 @@
 ---
 name: rendering-family-tree
-description: Draws a family tree from a research project's persons file — a pedigree chart in Ahnentafel order (colour = family line, unknown ancestors left as "?", each link carrying its level of evidence), a "ladder" of one direct line going back with the document behind each step, and the places and routes for a migration map with real coordinates and place names valid for the year. Bundled script renders a standalone SVG or HTML page; the same data feeds building-research-showcase. Use when the user asks to draw, show, print or "make a picture" of the tree, a pedigree, a fan or poster for relatives, a map of where the family moved, or to check which ancestors are still unknown, even if they never say "pedigree". Also triggers on Russian requests: «нарисуй дерево», «родословная таблица», «схема предков на одну страницу», «дерево для родных распечатать», «лестница одной линии», «карта перемещений семьи», «где у нас дыры в дереве». Not for building the tree on MyHeritage or Geni (see the guide's tree-platforms section) and not for deciding disputed parentage (use building-evidence-matrix).
+description: Draws a family tree from a research project's persons file — a pedigree chart in Ahnentafel order (colour = family line, unknown ancestors left as "?", each link carrying its level of evidence), a "ladder" of one direct line going back with the document behind each step, and the places and routes for a migration map with real coordinates and place names valid for the year. Bundled script renders a standalone SVG or HTML page; the same data feeds building-research-showcase. Use when the user asks to draw, show, print or "make a picture" of the tree, a pedigree, a poster for relatives, a map of where the family moved, or to check which ancestors are still unknown, even if they never say "pedigree". Also triggers on Russian requests: «нарисуй дерево», «родословная таблица», «схема предков на одну страницу», «дерево для родных распечатать», «лестница одной линии», «карта перемещений семьи», «где у нас дыры в дереве». Not for building the tree on MyHeritage or Geni (see the guide's tree-platforms section) and not for deciding disputed parentage (use building-evidence-matrix).
 ---
 
-# Дерево и карта перемещений
+# Tree and migration map
 
-Дерево в исследовании — **картинка доказанного**, а не место для догадок. Поэтому у каждой связи свой уровень, неизвестные остаются «?», а легенды идут пунктиром или не идут вовсе.
+In research a tree is a **picture of what is proven**, not a place for guesses. So every link has its own level, unknowns stay "?", and legends are dashed or left out.
 
-## 1. Родословная таблица (pedigree)
+## 1. Pedigree chart
 
-- Корень — исследователь (или человек, чьё дерево показываем). Дальше по Аненталю: в поколении g позиции 2i и 2i+1 — отец и мать человека i из предыдущего поколения. Отец всегда выше матери.
-- Подпись в две строки: имя (как в документах, с вариантом: «Наум (Нохем)») и «ФАМИЛИЯ · годы»; для женщин — девичья фамилия, если известна, иначе «дев. фамилия ?».
-- **Неизвестный предок — `null` («?»)**, а не имя из рассказа. Имя только из семейной памяти — со значком 💭 в имени.
-- Цвет — линия (фамилия по прямой мужской или по договорённости с исследователем). Линий не больше пяти; цвета фиксированы и проверены на различимость.
-- Живых людей в публичной версии — без дат или вовсе без имён («мать», «отец»), если нет согласия.
+- The root is the researcher (or the person whose tree is shown). Then Ahnentafel order: in generation g, positions 2i and 2i+1 are the father and mother of person i of the previous generation. The father is always above the mother.
+- A two-line label: the name (as in documents, with a variant: "Naum (Nokhem)") and "SURNAME · years"; for women the maiden name if known, otherwise "maiden name ?".
+- **An unknown ancestor is `null` ("?")**, not a name from a story. A name known only from family memory gets 💭 in the name.
+- Colour = line (the direct male surname line or as agreed with the researcher). At most five lines; the colours are fixed and checked for distinguishability.
+- Living people in a public version — without dates or without names at all ("mother", "father"), unless they agreed.
 
-Сколько поколений: 4 читаются на экране, 5 — уже постер. Глубже — лестница или веерная схема в программе (Gramps, MyHeritage).
+How many generations: 4 are readable on screen, 5 is already a poster. Deeper — a ladder or a fan chart in a program (Gramps, MyHeritage).
 
-## 2. Лестница одной линии
+## 2. Ladder of one line
 
-Для самой глубокой доказанной линии: шаг за шагом от самого раннего предка к исследователю. У каждой ступени — годы, место, **какой документ связывает её со следующей** и уровень. Это лучший способ показать, на чём держится родословная: читатель видит, где связь доказана метрикой, а где — только ревизией по возрасту.
+For the deepest proven line: step by step from the earliest ancestor to the researcher. Each step has years, place, **the document that links it to the next one** and a level. It is the best way to show what the pedigree rests on: the reader sees where a link is proven by a birth record and where only by a revision age.
 
-## 3. Места и маршруты
+## 3. Places and routes
 
-- Название — **как в том году** (Екатеринослав, а не Днепр, для 1900 г.), координаты — по справочнику (Википедия, GeoNames, JewishGen Communities). Одноимённые сёла проверяйте по уезду и волости — раздел «Места и карты» руководства.
-- В `info` — кто и когда там был, с годами.
-- Маршрут — по годам, по одному на линию. Эвакуации и эмиграции, уходящие за край схемы, — строкой `offmap`.
-- После сборки посмотрите: если дуга проходит через чужую точку, поменяйте знак или величину `bend`; если подписи налезают — `label: "l"` (слева) и `dy`.
+- The name **as it was in that year** (Ekaterinoslav, not Dnipro, for 1900), coordinates from a reference (Wikipedia, GeoNames, JewishGen Communities). Check same-name villages by uezd and volost — the guide's "Places and maps" section.
+- In `info` — who was there and when, with years.
+- A route follows the years, one per line. Evacuations and emigrations that go off the edge of the diagram go into the `offmap` line.
+- After building, look: if an arc passes through someone else's point, change the sign or size of `bend`; if labels overlap — `label: "l"` (left) and `dy`.
 
-## 4. Как нарисовать
+## 4. How to draw it
 
 ```bash
-python3 scripts/render_tree.py tree.json дерево.html   # страница, светлая и тёмная тема
-python3 scripts/render_tree.py tree.json дерево.svg    # чистый SVG для печати или документа
+python3 scripts/render_tree.py tree.json tree.html   # page, light and dark theme
+python3 scripts/render_tree.py tree.json tree.svg    # plain SVG for print or a document
 ```
-Формат `tree.json` — в начале скрипта (те же ключи, что у витрины: `lines`, `pedigree`, `ladder`). Для карты используйте витрину (`building-research-showcase`): там места и маршруты рисуются вместе с остальными разделами.
+The `tree.json` format is at the top of the script (the same keys as the showcase: `lines`, `pedigree`, `ladder`). For the map use the showcase (`building-research-showcase`): places and routes are drawn there together with the other sections.
 
-## 5. Проверка
+## 5. Check
 
-- Каждый человек на картинке есть в ПЕРСОНАХ, у каждой связи уровень не выше, чем там.
-- Нет ни одного «заполненного по рассказу» предка без 💭.
-- Женщины подписаны девичьими фамилиями или «?».
-- Если отправляете кому-то — уберите живых.
+- Every person in the picture is in the persons file, and no link has a higher level than there.
+- No ancestor is "filled in from a story" without 💭.
+- Women are labelled with maiden names or "?".
+- If you send it to someone — remove living people.

@@ -1,31 +1,31 @@
-# Задания агентам витрины
+# Briefs for the showcase agents
 
-Подставьте пути. Каждое задание самодостаточно: агент не видел разговора. Общая шапка — в начале каждого задания.
+Fill in the paths. Each brief is self-contained: the agent has not seen the conversation. Put the common header at the top of every brief.
 
-## Общая шапка
+## Common header
 
-> Ты собираешь данные для витрины семейного исследования. Прочитай `showcase/brief.md` (аудитория, язык, линии с `id`) и схему `references/data-schema.md` навыка `building-research-showcase`. Источник данных — только выдержка `showcase/excerpts/<твоя>.md` и файлы, на которые она ссылается. Новых документов не ищи, на сайты не ходи, в файлы проекта не пиши. Ничего не придумывай: нет данных — нет поля. Уровень бери из файлов проекта, не повышай. Результат — один файл `showcase/parts/<имя>.json` (валидный JSON, без комментариев) и отчёт 5–10 строк: что взял, что пропустил и почему, какие противоречия заметил. Если аудитория публичная — только обезличенные имена из выдержки, шифры с [усл.].
+> You are collecting data for a family research showcase. Read `showcase/brief.md` (audience, language, lines with `id`) and the schema `references/data-schema.md` of the skill `building-research-showcase`. Your only data source is the excerpt `showcase/excerpts/<yours>.md` and the files it points to. Do not search for new documents, do not open websites, do not write to the project files. Invent nothing: no data — no field. Take each level from the project files and do not raise it. Output: one file `showcase/parts/<name>.json` (valid JSON, no comments) and a 5–10 line report: what you took, what you left out and why, which contradictions you noticed (including levels in the project that look too high). If the audience is public — only anonymised names from the excerpt, references marked [invented] / [усл.], no indirect identifiers (addresses, studios, parishes, exact dates).
 
-## 1. Каталоги → `parts/catalogs.json`
+## 1. Catalogues → `parts/catalogs.json`
 
-> Навык `building-research-catalogs`. Собери `sources` (все источники из выдержки, включая нули с охватом — `"level": "zero"`), `people` (до 30 человек, у каждого уровень главной связи), `profile` (человек, указанный в brief; хронология — только строки с источником), `library` (схема папок проекта как есть, правило имени файлов, карточка одного документа).
+> Skill `building-research-catalogs`. Collect `sources` (every source in the excerpt, including zeros with coverage — `"level": "zero"`), `people` (up to 30, each with the level of the key link), `profile` (the person named in the brief; timeline — only rows with a source), `library` (the project's folder scheme as it is, the file-naming rule, a card for one document).
 
-## 2. Дерево и места → `parts/tree.json`
+## 2. Tree and places → `parts/tree.json`
 
-> Навык `rendering-family-tree`. Собери `pedigree` (4 поколения от исследователя по Аненталю, неизвестные — `null`), `ladder` (одна самая глубокая доказанная линия), `places` (координаты по справочнику, место — в названии того года), `routes` (по одному маршруту на линию, по годам), `offmap` (места за краем схемы). После сборки посмотри, не проходит ли дуга через чужую точку: поправь `bend`.
+> Skill `rendering-family-tree`. Collect `pedigree` (4 generations from the researcher in Ahnentafel order, unknowns as `null`), `ladder` (the deepest proven line), `places` (coordinates from a reference, the place name of that year), `routes` (one route per line, by years), `offmap` (places beyond the edge). After building, check whether an arc passes through someone else's point and fix `bend`.
 
-## 3. Доказательства → `parts/evidence.json`
+## 3. Evidence → `parts/evidence.json`
 
-> Навык `building-evidence-matrix`. Найди в выдержке 2–4 места, где документы спорят (имя, дата, отчество, место). Для каждого — матрица и вывод с уровнем. Плюс `cycle`: один настоящий проход «вопрос → … → запись» из проекта, и `methods`: 2–6 методов, применённых в проекте, с примером.
+> Skill `building-evidence-matrix`. Find 2–4 places in the excerpt where documents disagree (name, date, patronymic, place). For each — a matrix and a verdict with a level. Plus `cycle`: one real pass "question → … → record" from the project, and `methods`: 2–6 methods used in the project, each with an example.
 
-## 4. ДНК → `parts/dna.json`
+## 4. DNA → `parts/dna.json`
 
-> Навык `checking-dna-against-tree`. Возьми состав из выдержки (кто сдал, компания, дата). Посчитай ожидание по дереву (`scripts/expected_share.py`), сравни, проверь семейную легенду о происхождении, если она есть (`alt`). Вывод — с уровнем и оговорками.
+> Skill `checking-dna-against-tree`. Take the composition from the excerpt (who tested, company, date). Compute the expectation from the tree (`scripts/expected_share.py`), compare, check the family origin legend if there is one (`alt`). Verdict with a level and caveats.
 
-## 5. Истории и фамилия → `parts/story.json`
+## 5. Stories and surname → `parts/story.json`
 
-> Навык `writing-family-history`. Одна история человека, указанного в brief: 4–7 глав, у каждой дата и откуда известно (🟢 / 💭). Семейная фраза-легенда — в `quote` с планом проверки. Фото — только подписи (кто, когда, кто опознал). `surnames`: 1–2 фамилии по правилам раздела «Фамилия» навыка `building-research-showcase`.
+> Skill `writing-family-history`. One story of the person named in the brief: 4–7 chapters, each with a date and how it is known (🟢 / 💭). A family saying goes into `quote` with a plan to check it. Photos — captions only (who, when, who identified). `surnames`: 1–2 surnames following the "Surname" section of `building-research-showcase`.
 
-## 6. Фактчек (после сборки с `--check-only`)
+## 6. Fact-check (after the `--check-only` build)
 
-> Роль фактчекера, навык `verifying-genealogy-findings`. Файлы: `showcase/parts/*.json` и файлы проекта. Проверь: каждую строку с 🟢 в `profile` и `comparisons`, случайные 20 % `sources` и `people`. Для каждой: тот ли шифр и год, есть ли это в файлах проекта, не выше ли уровень, чем там. Для публичной версии — нет ли настоящих имён. Отчёт: таблица «поле — что в витрине — что в проекте — вердикт». Сам не исправляй.
+> Fact-checker role, skill `verifying-genealogy-findings`. Files: `showcase/parts/*.json` and the project files. Check every 🟢 row in `profile` and `comparisons`, and a random 20 % of `sources` and `people`. For each: the right reference and year, is it in the project files, is the level not higher than there. For a public version — no real names and no indirect identifiers from the substitution map. Report: a table "field — what the showcase says — what the project says — verdict". Do not fix anything yourself.

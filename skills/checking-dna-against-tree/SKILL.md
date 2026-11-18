@@ -3,45 +3,45 @@ name: checking-dna-against-tree
 description: Checks an autosomal ethnicity estimate (23andMe, MyHeritage, Ancestry, FamilyTreeDNA, Genotek) against what the documented family tree predicts — computes the expected share of each component from the ancestors' documented origins with the usual spread (grandparent ≈ 25 % ± 3–4), tests a family origin legend by computing a second "if the legend is true" expectation, and writes a cautious verdict with a level of evidence and the caveats (reference panels overlap, shares under 2–5 % are noise, component names are panels not peoples). Bundled script does the arithmetic. Use when the user shares ethnicity percentages and asks whether they fit the family, wants to check "great-grandmother was Polish / German / Jewish", asks why a test shows a component nobody expected, or needs the DNA section of a research showcase. Also triggers on Russian requests: «сходится ли этнический состав с деревом», «проверь легенду по ДНК», «бабушка была полькой — видно ли это в тесте», «откуда у меня 5 % финнов», «сколько должно быть еврейского, если дед еврей», «раздел ДНК для витрины». Not for analysing matches and centimorgans (use dna-matches-endogamy / dna-matches-across-platforms) and not for choosing a test.
 ---
 
-# Этнический состав против дерева
+# Ethnicity estimate against the tree
 
-Проценты теста — модель компании, а не измерение. Полезны они только рядом с **ожиданием**, посчитанным по документам. Без ожидания «26 % ашкеназов» ничего не говорит; с ожиданием «25 % ± 3, потому что один дед — еврей по метрике» — подтверждает дерево.
+Test percentages are a company's model, not a measurement. They are useful only next to an **expectation** worked out from documents. Without it, "26 % Ashkenazi" says nothing; with "25 % ± 3, because one grandfather was Jewish by his birth record" it confirms the tree.
 
-## 1. Что нужно
+## 1. What you need
 
-- Кто сдал тест (сам исследователь, мать, дядя), компания и дата модели (компании пересчитывают состав).
-- Состав целиком, все строки с процентами.
-- Предки одного поколения (обычно деды и бабушки сдавшего), у каждого — происхождение **по документам**: метрика, сословие, место. Если происхождение известно только по рассказу — это и есть легенда, её проверяем отдельно.
+- Who took the test (the researcher, a mother, an uncle), the company and the date of the model (companies recalculate).
+- The whole composition, every line with its percentage.
+- The ancestors of one generation (usually the tester's grandparents), each with an origin **by documents**: birth record, estate, place. If an origin is known only from a story, that is the legend — check it separately.
 
-## 2. Посчитать ожидание
+## 2. Compute the expectation
 
 ```bash
 python3 scripts/expected_share.py tree.json --test test.json
 ```
 
-Формат файлов — в начале скрипта. Арифметика: родитель даёт ровно 50 %, дед или бабушка ≈ 25 % ± 3–4, прадед ≈ 12,5 % ± 3, прапрадед ≈ 6 % ± 2; разброс независимых предков складывается как квадраты (два деда ≈ 50 % ± 4,7). Названия компонентов берите такие же, как у компании.
+File formats are at the top of the script. Arithmetic: a parent gives exactly 50 %, a grandparent ≈ 25 % ± 3–4, a great-grandparent ≈ 12.5 % ± 3, a 2× great-grandparent ≈ 6 % ± 2; the spreads of independent ancestors add as squares (two grandparents ≈ 50 % ± 4.7). Use the same component names as the company.
 
-## 3. Проверить легенду
+## 3. Test the legend
 
-Легенду формулируйте как другое происхождение одного предка («Анна Михайловна — полька»). Скрипт с ключом `legend` даст второе ожидание (`alt`). Сравнивайте наблюдаемое с обоими:
-- наблюдаемое у основного ожидания и далеко от `alt` (больше 2–3 разбросов) → легенда **в буквальном виде** скорее не подтверждается, 🟡;
-- у `alt` → легенда совместима, 🟡 (не 🟢: ДНК не называет человека);
-- между ними или разница меньше разброса → ДНК не решает, ⚪.
+State the legend as a different origin of one ancestor ("Anna Mikhailovna was Polish"). With the `legend` key the script gives a second expectation (`alt`). Compare the observed value with both:
+- observed near the main expectation and far from `alt` (more than 2–3 spreads) → the legend **taken literally** is probably not confirmed, 🟡;
+- near `alt` → the legend is compatible, 🟡 (not 🟢: DNA does not name a person);
+- in between, or the difference smaller than the spread → DNA does not decide, ⚪.
 
-Почти никогда ДНК-состав не даёт 🟢 и 🔴 сам по себе. Решает документ: место рождения, вероисповедание в метрике, сословие.
+An ethnicity estimate almost never gives 🟢 or 🔴 on its own. A document decides: birthplace, religion in the birth record, estate.
 
-## 4. Оговорки, которые всегда пишутся в вывод
+## 4. Caveats that always go into the verdict
 
-- Соседние народы (поляки, украинцы, белорусы, русские) у компаний сильно перекрываются; «польский» предок может дать «восточноевропейский» или даже «русский» компонент.
-- Доли меньше 2–5 % — на пределе шума: направление, не вывод.
-- Название компонента — это референсная выборка, а не народ предка: «эстонский» или «финский» у русских с Севера — обычное дело.
-- Легенда часто значит другое: «из поляков» — из Польши, католики, из западных губерний; «немцы» — иностранцы вообще.
-- Датировка компонента (Ancestry Timeline у 23andMe) — грубая подсказка поколения, ± одно поколение.
+- Neighbouring peoples (Poles, Ukrainians, Belarusians, Russians) overlap a lot in company panels; a "Polish" ancestor may show up as "Eastern European" or even "Russian".
+- Shares under 2–5 % are at the noise level: a direction, not a conclusion.
+- A component's name is a reference panel, not the ancestor's people: "Estonian" or "Finnish" in Russians from the North is common.
+- A legend often means something else: "Polish" — from Poland, Catholic, from the western provinces; "German" — foreigners in general.
+- Component dating (23andMe Ancestry Timeline) is a rough hint of the generation, ± one generation.
 
-Подробнее — руководство «Поиск предков», раздел «ДНК», 6а.
+More: the "Tracing Your Ancestors" guide, section "DNA", 6a.
 
-## 5. Результат
+## 5. Output
 
-Для витрины — ключ `dna` (схема `building-research-showcase/references/data-schema.md`): `caption` (кто сдал, компания, дата), `bars` с `value`, `expected`, `sd`, `alt`, и `verdict`: вопрос → ожидание → наблюдение → вывод с уровнем → оговорка → какой документ решит.
+For the showcase — the `dna` key (schema: `building-research-showcase/references/data-schema.md`): `caption` (who tested, company, date), `bars` with `value`, `expected`, `sd`, `alt`, and a `verdict`: question → expectation → observation → conclusion with a level → caveat → which document would decide.
 
-Для проекта — строка в реестре легенд: легенда, чем проверена, результат, новый статус. Легенду не удалять, а менять статус с пометкой.
+For the project — a line in the legends register: legend, how it was checked, result, new status. Do not delete a legend; change its status with a note.

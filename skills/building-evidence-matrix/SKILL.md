@@ -3,49 +3,49 @@ name: building-evidence-matrix
 description: Resolves conflicting genealogical evidence by putting every version side by side in an evidence matrix — claim, source, who supplied the information, how long after the event, original or derivative, independence — weighing them, and writing a verdict with a level of evidence (🟢 🟡 ⚪ 💭 🔴); also keeps the hypotheses register consistent (grounds, weak points, how to check, status) and shows one real pass of the research cycle. Use whenever two or more records disagree about a name, date, patronymic, place or parentage, when a family story contradicts a document, when someone else's online tree says something different, or when the user asks "which date is right", "is this the same woman", "what do we believe now". Also triggers on Russian requests: «документы противоречат», «какая дата верная», «одна ли это женщина», «в дереве у них другое отчество», «семья говорит иначе, чем документ», «матрица доказательств», «сведи версии», «обнови статусы гипотез». Not for searching new records (use search-logic-navigator) and not for a full proof argument for citizenship (use citizenship-by-descent-dossier).
 ---
 
-# Матрица доказательств и реестр гипотез
+# Evidence matrix and hypotheses register
 
-Когда документы спорят, решает **вес** каждого, а не количество «за». Три пересказа одной анкеты — одно свидетельство; одна запись, сделанная в день события, весит больше.
+When documents disagree, the **weight** of each decides, not the number "for". Three retellings of one questionnaire are one piece of evidence; one record made on the day of the event weighs more.
 
-## 1. Когда строить матрицу
+## 1. When to build a matrix
 
-- два документа называют по-разному имя, дату, отчество, место;
-- семейный рассказ спорит с документом;
-- чужое дерево или база говорит иное, чем наш скан;
-- нужно решить, один ли это человек (тёзки, двойные имена, русские формы еврейских имён).
+- two documents give a name, date, patronymic or place differently;
+- a family story disagrees with a document;
+- someone else's tree or a database says something other than our scan;
+- you need to decide whether two records are one person (namesakes, double names, Russian forms of Jewish names).
 
-## 2. Колонки
+## 2. Columns
 
-| Версия | Источник (шифр) | Кто сообщил сведения | Когда относительно события | Первичный или производный | Вес |
+| Version | Source (reference) | Who supplied the information | How long after the event | Original or derivative | Weight |
 |---|---|---|---|---|---|
 
-Для витрины хватает трёх колонок: «версия — источник — вес»; остальное — в формулировке веса («🟢 запись в день события», «🟡 со слов сына через 32 года», «🔴 по памяти, через 6 лет»).
+For the showcase three columns are enough: "version — source — weight"; the rest goes into the wording of the weight ("🟢 recorded on the day of the event", "🟡 told by her son 32 years later", "🔴 from memory, 6 years later").
 
-## 3. Как взвешивать
+## 3. How to weigh
 
-1. **Близость к событию.** Метрика о рождении сильнее анкеты, заполненной через 50 лет.
-2. **Кто знал.** Возраст, названный самим человеком, слабее даты из метрики; имя матери в свидетельстве о смерти записано со слов родных.
-3. **Первичный или производный.** Подлинник или его фото (в том числе дома у родных) → печатный справочник эпохи → поздние записи и рассказы → указатель, индекс, база → чужое дерево.
-4. **Независимость.** Индекс и скан одной записи, выписка и сама метрика, анкета и легенда, которая пересказывает анкету, — **одно** свидетельство.
-5. **Объяснимое расхождение.** Хая / Хана — близкие формы; Берко / Борис — русская форма имени; «Анна» в советской анкете вместо Ханы — обрусение. Пары имён — раздел «Имена, фамилии, написания» руководства. Объяснённое расхождение часто превращает «три версии» в одну.
+1. **Closeness to the event.** A birth record outweighs a questionnaire filled in 50 years later.
+2. **Who knew.** An age stated by the person is weaker than the date in a birth record; a mother's name on a death certificate was given by relatives.
+3. **Original or derivative.** Original or its photo (including one kept at home) → a printed directory of the time → late notes and stories → index, database → someone else's tree.
+4. **Independence.** An index and the scan of the same record, an extract and the register itself, a questionnaire and a legend that retells it — are **one** piece of evidence.
+5. **An explainable difference.** Khaya / Khana are close forms; Berko / Boris is the Russian form of a name; "Anna" in a Soviet questionnaire instead of Khana is Russification. Name pairs: the guide's "Names, surnames, spellings" section. An explained difference often turns "three versions" into one.
 
-## 4. Вывод
+## 4. Verdict
 
-Одна строка: что считаем верным, с уровнем, и что проверить дальше.
-- «Решено 🟢: 10 июня 1941 г. — запись книги призыва важнее анкеты 1947 г.»
-- «Вероятно 🟡: одна женщина — Хая; проверить возраст и отчество во всех трёх документах.»
-- «Не решено ⚪: …» — честно, с планом.
-Версию из чужого дерева без источника помечайте 🔴 и не переносите в своё дерево.
+One line: what we take as true, with a level, and what to check next.
+- "Resolved 🟢: 10 June 1941 — the conscription book outweighs the 1947 questionnaire."
+- "Likely 🟡: one woman — Khaya; check age and patronymic in all three documents."
+- "Unresolved ⚪: …" — honestly, with a plan.
+Mark a version from someone else's tree without a source 🔴 and do not copy it into your tree.
 
-## 5. Реестр гипотез
+## 5. Hypotheses register
 
-Для каждой гипотезы в `ГИПОТЕЗЫ.md`: формулировка · основания (с шифрами) · слабые места · как проверить · статус по единой шкале 🟢 подтверждена / 🟡 открыта, сильная версия / ⚪ не проверена / 🔴 снята — **с датой и причиной смены**. Снятую гипотезу не удаляйте: зачеркните формулировку и оставьте причину, иначе её «найдут» заново. Статус в матрице не может быть выше, чем в реестре; если матрица дала новый вывод — сначала обновите реестр.
+For each hypothesis in the hypotheses file: statement · grounds (with references) · weak points · how to check · status on one scale 🟢 confirmed / 🟡 open, strong version / ⚪ not checked / 🔴 dropped — **with the date and reason for each change**. Do not delete a dropped hypothesis: strike out the statement and keep the reason, otherwise it will be "found" again. A level in the matrix may not be higher than in the register; if the matrix gives a new conclusion, update the register first.
 
-## 6. Один проход цикла (для витрины и для новичков)
+## 6. One pass of the cycle (for the showcase and for beginners)
 
-Семь шагов на настоящем примере проекта: вопрос → версия → где обязан лежать документ → поиск → сверка по скану → уровень → запись (какой файл, какой §). Это лучшее объяснение того, как работает исследование: читатель видит, что вывод держится на конкретном деле.
+Seven steps on a real project example: question → version → where the document must be → search → check against the scan → level → record (which file, which §). This is the best explanation of how research works: the reader sees that the conclusion rests on a specific file.
 
-## Результат
+## Output
 
-- Для проекта: таблица в `ГИПОТЕЗЫ.md` или в журнале находок у нужной записи.
-- Для витрины: `comparisons`, `cycle`, `methods` по схеме `building-research-showcase/references/data-schema.md`.
+- For the project: a table in the hypotheses file or next to the relevant finding in the log.
+- For the showcase: `comparisons`, `cycle`, `methods` following `building-research-showcase/references/data-schema.md`.

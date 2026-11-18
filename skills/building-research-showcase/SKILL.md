@@ -1,95 +1,95 @@
 ---
 name: building-research-showcase
-description: Turns a family research project (findings log, persons, hypotheses, DNA results, family stories) into one interactive HTML "showcase" page — source catalogue with filters, person cards and a MyHeritage-style profile, pedigree chart and line ladder, migration map, DNA-against-the-tree check, evidence matrices, chapters of a life, surname certificate, document library — by running several agents in a fixed order, each producing one JSON part, then validating and assembling them with a bundled script. Use when the user wants to show, present, visualise or "make a page / dashboard / overview / card index" of their research, prepare something for relatives, turn a dossier into something readable, or make an anonymised teaching example, even if they never say "showcase". Also triggers on Russian requests: «сделай витрину», «покажи исследование наглядно», «собери страницу для родных», «карточки как в MyHeritage», «нарисуй дерево и карту по нашим данным», «оформи результаты», «обезличенный пример для методички». Not for writing a narrative text (use writing-family-history) and not for searching for new documents.
+description: Turns a family research project (findings log, persons, hypotheses, DNA results, family stories) into one interactive HTML "showcase" page — source catalogue with filters, person cards and a MyHeritage-style profile, pedigree chart and line ladder, migration map, DNA-against-the-tree check, evidence matrices, chapters of a life, surname certificate, document library — by running several agents in a fixed order, each producing one JSON part, then validating and assembling them with a bundled script (including a check that no real names are left in a public version). Use when the user wants to show, present, visualise or "make a page / dashboard / overview / card index" of their research, prepare something for relatives, turn a dossier into something readable, or make an anonymised teaching example, even if they never say "showcase". Also triggers on Russian requests: «сделай витрину», «покажи исследование наглядно», «собери страницу для родных», «карточки как в MyHeritage», «нарисуй дерево и карту по нашим данным», «оформи результаты», «обезличенный пример для методички». Not for writing a narrative text (use writing-family-history) and not for searching for new documents.
 ---
 
-# Витрина исследования: страница из данных проекта
+# Research showcase: one page from the project's data
 
-Результат — **один HTML-файл**, который открывается в браузере без интернета (кроме шрифтов): каталог источников, персоны, карточка, дерево, карта, ДНК, сопоставления, истории, фамилия, библиотека. Пример готовой витрины — `examples/витрина-форматов-шапиро.html` в руководстве «Поиск предков».
+The result is **one HTML file** that opens in a browser without internet (fonts aside): source catalogue, people, profile, tree, map, DNA, comparisons, stories, surname, library. A finished example is `examples/витрина-форматов-шапиро.html` in the "Tracing Your Ancestors" guide (English: `en/examples/formats-showcase-shapiro.html`).
 
-Страницу не пишут руками: агенты собирают **данные** по схеме (`references/data-schema.md`), а `scripts/build_showcase.py` проверяет их и вставляет в шаблон `assets/showcase-template.html`. Так страница одинаково устроена у любой семьи, а ошибки (ссылка на несуществующую линию, место без координат, проценты больше 100) ловит скрипт, а не читатель.
+Do not write the page by hand. Agents collect **data** following the schema (`references/data-schema.md`), and `scripts/build_showcase.py` checks it and injects it into `assets/showcase-template.html`. That way every family's page is built the same way, and mistakes (a link to a line that does not exist, a place without coordinates, percentages over 100) are caught by the script, not by the reader. The page interface can be Russian or English (`"lang": "ru" | "en"`); the data can be in any language.
 
-## Шаг 0. Договориться с исследователем (до запуска агентов)
+## Step 0. Agree with the researcher (before any agent starts)
 
-Спросите или решите по контексту:
-1. **Для кого.** Только для себя / для родных / публично (методичка, соцсети). Для публичной версии нужна **обезличка**: другие имена, места и шифры с пометкой [усл.], и файл запрещённых строк для проверки (шаг 3).
-2. **Язык**: `ru` или `en`.
-3. **Линии**: не больше пяти (цвета фиксированы и проверены на различимость, в том числе для дальтоников). Остальные — в одну «другие линии».
-4. **Разделы**: какие есть данные. Нет ДНК — нет раздела ДНК; нет фото — главы без фото. Пустой раздел не рисуется.
-5. **Чей профиль** показать в карточке (один человек с самой богатой хронологией) и **чья история** пойдёт в главы.
+Ask, or decide from context:
+1. **Audience.** Only for the researcher / for relatives / public (a guide, social media). A public version needs **anonymisation**: other names, places and references marked [invented] / [усл.], plus a list of forbidden strings for the check (step 1a, step 3).
+2. **Language** of the interface: `ru` or `en`.
+3. **Lines**: at most five (colours are fixed and checked for colour-blind readers). Fold the rest into "other lines".
+4. **Sections**: which data exists. No DNA test — no DNA section; no photos — chapters without photos. An empty section is not drawn.
+5. **Whose profile** goes into the card (one person with the richest timeline) and **whose story** goes into the chapters.
 
-Запишите это в `showcase/brief.md` в папке проекта: аудитория, язык, линии с `id`, список разделов, пути к файлам-источникам.
+Write this to `showcase/brief.md` in the project folder: audience, language, lines with `id`, list of sections, paths to source files.
 
-## Шаг 1. Выдержки для агентов
+## Step 1. Excerpts for the agents
 
-Агенту не дают весь журнал находок на тысячи строк. Координатор готовит **выдержки** в `showcase/excerpts/`: по персонам, по источникам, по спорным местам, по ДНК — только то, что нужно этому агенту. Правило проекта о выдержках — в навыке `orchestrating-genealogy-agents`.
+Do not give an agent the whole findings log of thousands of lines. The coordinator prepares **excerpts** in `showcase/excerpts/`: by people, by sources, by disputed points, by DNA — only what that agent needs. The project rule on excerpts is in `orchestrating-genealogy-agents`.
 
-**Маленький проект** (файлы проекта вместе — меньше ~300 строк): выдержки не нужны, части можно делать одним проходом, без субагентов. Схема данных и проверка скриптом остаются — в них и есть польза навыка.
+**Small project** (project files together under ~300 lines): no excerpts needed; the parts can be done in one pass without subagents. The data schema and the script check stay — that is where the skill's value is.
 
-## Шаг 1а. Публичная версия: карта замен и косвенные приметы
+## Step 1a. Public version: substitution map and indirect identifiers
 
-Настоящие фамилии — это только начало. Семью выдают и **косвенные приметы**, по которым её находят за пять минут поиска:
-- адреса (улица и дом из справочника, где по адресу читается настоящая фамилия);
-- названия ателье и штампы на фото, названия церквей и приходов, соседние сёла, номера школ и частей;
-- точные даты до дня у людей, координаты деревни, редкое сочетание «профессия + город + год»;
-- шифры дел и номера записей, имена свидетелей и крёстных;
-- живые люди: имена, годы, города — в публичной версии только ролью («исследовательница», «мать»).
+Real surnames are only the start. A family is also given away by **indirect identifiers** that let anyone find it in five minutes:
+- addresses (a street and house from a directory, where the real surname can be read by the address);
+- photo studio names and stamps, church and parish names, neighbouring villages, school or unit numbers;
+- exact day-level dates, village coordinates, a rare combination "occupation + town + year";
+- archival references and record numbers, names of witnesses and godparents; a patronymic that makes a directory entry searchable;
+- living people: names, years, towns — in a public version only as a role ("the researcher", "mother").
 
-Составьте **карту замен** `showcase/excerpts/00-anon-map.md` (настоящее → условное, по одной замене на всё вхождение, включая старую орфографию с «ъ» и латиницу) и пометьте её «не публиковать». В `forbid.txt` кладите не только фамилии, но и все косвенные приметы из карты: адрес, ателье, приход, соседнее село. Имена умерших, на которых держится урок (Стефан / Степан, Сура / Сарра), можно оставить.
+Make a **substitution map** `showcase/excerpts/00-anon-map.md` (real → invented, one replacement for every occurrence, including old spelling with "ъ" and Latin transliteration) and mark it "do not publish". Put into `forbid.txt` not only the surnames but every indirect identifier from the map: address, studio, parish, neighbouring village. First names of the deceased that a lesson depends on (Стефан / Степан, Сура / Сарра) may stay.
 
-## Шаг 2. Пять агентов параллельно
+## Step 2. Five agents in parallel
 
-Каждый агент получает: `brief.md`, свою выдержку, свой навык и путь для результата. Пишет **только свой файл** `showcase/parts/<имя>.json` и короткий отчёт: что взял, что пропустил и почему. Готовые задания — `references/agent-briefs.md`.
+Each agent gets `brief.md`, its excerpt, its skill and a path for the result. It writes **only its own file** `showcase/parts/<name>.json` and a short report: what it took, what it left out and why. Ready-made briefs are in `references/agent-briefs.md`.
 
-| Агент | Навык | Ключи в своём JSON |
+| Agent | Skill | Keys in its JSON |
 |---|---|---|
-| каталоги | `building-research-catalogs` | `sources`, `people`, `profile`, `library` |
-| дерево и места | `rendering-family-tree` | `pedigree`, `ladder`, `places`, `routes`, `offmap` |
-| доказательства | `building-evidence-matrix` | `comparisons`, `cycle`, `methods` |
-| ДНК | `checking-dna-against-tree` | `dna` (только если есть результаты теста) |
-| истории и фамилия | `writing-family-history` + раздел «Фамилия» ниже | `story`, `surnames` |
+| catalogues | `building-research-catalogs` | `sources`, `people`, `profile`, `library` |
+| tree and places | `rendering-family-tree` | `pedigree`, `ladder`, `places`, `routes`, `offmap` |
+| evidence | `building-evidence-matrix` | `comparisons`, `cycle`, `methods` |
+| DNA | `checking-dna-against-tree` | `dna` (only if test results exist) |
+| stories and surname | `writing-family-history` + "Surname" below | `story`, `surnames` |
 
-Общие ключи (`lang`, `title`, `kicker`, `lead`, `banner`, `footer`, `lines`, `sections`) пишет координатор в `showcase/parts/00-meta.json`.
+The shared keys (`lang`, `title`, `kicker`, `lead`, `banner`, `footer`, `lines`, `sections`) are written by the coordinator to `showcase/parts/00-meta.json`.
 
-Агенты не запускают других агентов, не ищут новые документы и не пишут в файлы проекта (ДОСЬЕ, ПЕРСОНЫ, ГИПОТЕЗЫ): витрина **показывает** то, что уже установлено. Если агент заметил противоречие или пробел, он пишет это в отчёт, а координатор решает, что с этим делать.
+Agents do not start other agents, do not search for new documents and do not write to the project files (findings log, persons, hypotheses): the showcase **shows** what is already established. If an agent notices a contradiction or a gap, it puts it in its report, and the coordinator decides what to do.
 
-Без субагентов (обычный чат) — те же пять шагов по очереди, каждый в свой файл.
+Without subagents (a plain chat) — the same five steps one after another, each into its own file.
 
-## Шаг 3. Сборка с проверкой
+## Step 3. Build with checks
 
 ```bash
 python3 scripts/build_showcase.py showcase/check.html showcase/parts/*.json --check-only
 ```
 
-Скрипт объединяет части (списки складываются, объекты сливаются, два разных значения одного поля — ошибка) и проверяет: линии существуют, уровни из шкалы 🟢 🟡 ⚪ 💭 🔴 или `zero`, у мест есть координаты, маршруты идут по существующим местам, проценты ДНК не больше 100, у строк хронологии есть источник, у сопоставлений есть вывод. Ошибки исправляет агент, чей это файл.
+The script merges the parts (lists are concatenated, objects merged, two different values for one field are an error) and checks: lines exist, levels are from the scale 🟢 🟡 ⚪ 💭 🔴 or `zero`, places have coordinates, routes go through existing places, DNA percentages do not exceed 100, timeline rows have a source, comparisons have a verdict. The agent who owns the file fixes the errors.
 
-Для публичной версии добавьте `--forbid showcase/forbid.txt`: по строке на настоящее имя, фамилию, село, шифр. Сборка упадёт, если что-то из списка осталось в данных.
+For a public version add `--forbid showcase/forbid.txt`: one line per real name, surname, village, reference, address. The build fails if anything from the list is left in the data.
 
-## Шаг 4. Фактчек
+## Step 4. Fact-check
 
-Отдельный агент (роль фактчекера, навык `verifying-genealogy-findings`) берёт **выборку**: каждую строку с 🟢 в профиле и в сопоставлениях и случайные 20 % каталога, и сверяет с файлами проекта: тот ли шифр, тот ли год, не поднят ли уровень. Уровень в витрине не может быть выше, чем в ДОСЬЕ / ГИПОТЕЗАХ. Расхождения — исправить в части и пересобрать.
+A separate agent (fact-checker role, skill `verifying-genealogy-findings`) takes a **sample**: every 🟢 line in the profile and in the comparisons, and a random 20 % of the catalogue, and checks them against the project files: the right reference, the right year, the level not raised. A level in the showcase may not be higher than in the project's findings log or hypotheses. Fix differences in the part and rebuild.
 
-**Спорное в самом проекте.** Сборка витрины — хороший момент увидеть слабые места исследования: гипотеза стоит 🟢, а в журнале у той же связи 🟡; у строки ПЕРСОН стоит 🟢 без названного документа; год жизни взят ниоткуда; тождество держится только на имени и годе. Витрина такие уровни **не меняет** (показывает как в проекте, а сомнение — в «Открытых вопросах»), но координатор выписывает их исследователю отдельным списком «что проверить в проекте». Это часто самая полезная часть отчёта.
+**Weak spots in the project itself.** Building a showcase is a good moment to see where the research is weak: a hypothesis is 🟢 while the log gives the same link 🟡; a person is 🟢 with no document named; a year of death comes from nowhere; an identity rests only on name and year. The showcase **does not change** such levels (it shows them as in the project, with the doubt under "Open questions"), but the coordinator lists them for the researcher as "what to check in the project". This is often the most useful part of the report.
 
-Для публичной версии фактчекер ещё раз проходит по карте замен: нет ли в странице косвенных примет из списка шага 1а (поиск по готовому HTML, без учёта регистра, с «ъ» и латиницей).
+For a public version the fact-checker also goes through the substitution map once more: are any indirect identifiers from step 1a left in the page (search the finished HTML, case-insensitive, with "ъ" and Latin).
 
-## Шаг 5. Финальная сборка и просмотр
+## Step 5. Final build and visual check
 
 ```bash
-python3 scripts/build_showcase.py showcase/витрина.html showcase/parts/*.json
+python3 scripts/build_showcase.py showcase/showcase.html showcase/parts/*.json
 ```
 
-Откройте страницу и посмотрите глазами: не налезают ли подписи на карте (поправить `label: "l"` и `dy` у места, `bend` у маршрута), не проходит ли дуга через чужую точку, читаются ли подписи в дереве. Тёмная тема переключается кнопкой «Тема».
+Open the page and look: do labels on the map overlap (fix with `label: "l"` and `dy` on the place, `bend` on the route), does an arc pass through someone else's point, are the tree labels readable. The "Theme" button switches dark mode.
 
-Отчёт исследователю: путь к файлу, какие разделы есть, чего нет и почему, что нашёл фактчек, список «что проверить в проекте» (шаг 4), что стоит проверить глазами. Для публичной версии — напомнить, что карту замен и `forbid.txt` публиковать нельзя.
+Report to the researcher: path to the file, which sections exist, which do not and why, what the fact-check found, the "what to check in the project" list (step 4), what is worth looking at by eye. For a public version — remind that the substitution map and `forbid.txt` must never be published.
 
-## Раздел «Фамилия»
+## Section "Surname"
 
-Честная версия «сертификата»: значение по словарю (Бейдер — еврейские фамилии; Унбегаун, Никонов, Федосюк — русские), **что из значения не следует** (родство с известными однофамильцами, профессия прадеда), написания для поиска, самая ранняя запись в роду с уровнем. Генераторы «значения фамилии» не использовать. Гербы были у дворянских родов; «герб фамилии» для мещан и крестьян — выдумка, предлагайте семейную эмблему из доказанного.
+An honest version of a "surname certificate": the dictionary meaning (Beider for Jewish surnames; Unbegaun, Nikonov, Fedosyuk for Russian ones), **what does not follow from the meaning** (kinship with famous namesakes, a great-grandfather's trade), spellings to search, the earliest record in the family with its level. Do not use "meaning of your surname" generator sites. Coats of arms belonged to noble families; a "family coat of arms" for townspeople and peasants is invented — offer a family emblem built from what is proven instead.
 
-## Чего не делать
+## What not to do
 
-- Не придумывать недостающее, чтобы раздел «выглядел полным». Пустое поле лучше выдуманного.
-- Не повышать уровень ради красоты: 💭 остаётся 💭.
-- Не класть в публичную версию живых людей с датами рождения без согласия.
-- Не писать страницу руками вместо шаблона: потеряется проверка.
+- Do not invent missing data to make a section "look complete". An empty field is better than an invented one.
+- Do not raise a level for appearance: 💭 stays 💭.
+- Do not put living people with birth dates into a public version without consent.
+- Do not write the page by hand instead of using the template: the check is lost.
