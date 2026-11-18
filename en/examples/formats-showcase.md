@@ -48,7 +48,7 @@ Where to make it: Google My Maps (a layer per line), kepler.gl, Felt. More: [Pla
 
 ## 7. Ethnicity estimate, checked against the tree
 
-Test percentages next to the expectation from the tree: one grandparent ≈ 25 % ± 3–4. Shares under 2–5 % are at the noise level; a component's name is the company's reference panel, not the ancestor's people.
+Test percentages next to the expectation from documents: one grandparent ≈ 25 % ± 3–4, two ≈ 50 % ± 5. The showcase uses this to check the legend "grandmother was Polish" against the mother's test: if the legend were true, the expectation would be different, and it is drawn on the scale too. Shares under 2–5 % are at the noise level; a component's name is the company's reference panel, not the ancestor's people.
 
 More: [DNA](../guide/2-reference/15-dna.md).
 

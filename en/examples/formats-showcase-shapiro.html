@@ -206,6 +206,7 @@ pre.tree .c{color:var(--muted)}
 footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:40px}
 .theme-btn{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:30;font:inherit;font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);box-shadow:var(--shadow);cursor:pointer}
 @media print{nav.toc,.theme-btn{display:none}}
+.bar .exp.alt{background:none;border-left:2px dashed var(--stamp);width:0}
 .note-banner{margin:16px 0 4px;padding:10px 14px;border-radius:8px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);font-size:15px;max-width:780px}
 </style>
 </head>
@@ -249,7 +250,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px soli
     <div class="box"><h3>One-name study</h3><p class="small muted">Collect everyone with the surname in one place and sort them into families.</p><div class="ex">There are hundreds of Shapiros in Berdychiv. Sort by patronymic, registration and children's names — or "found" will be someone else's family.</div></div>
     <div class="box"><h3>Zero with coverage</h3><p class="small muted">"Not found" means something only if you record what was read in full.</p><div class="ex">All 1905 births of the parish read — no Ivan Savelyev ⇒ the parish from family memory is probably wrong.</div></div>
     <div class="box"><h3>Comparing sources</h3><p class="small muted">Documents disagree — compare who was closer to the event.</p><div class="ex">Naum's mother: Khaya, Khana or Anna? → section 08.</div></div>
-    <div class="box"><h3>DNA against the tree</h3><p class="small muted">Work out the expected share from the tree and compare with the test.</p><div class="ex">One Jewish grandparent ⇒ expected 25 %, test 24.3 % — fits. → section 07.</div></div>
+    <div class="box"><h3>DNA against the tree</h3><p class="small muted">Work out the expected share from the tree and compare with the test.</p><div class="ex">The legend "grandmother was Polish": if true, mother would have ~75 % Eastern European; the test shows 46.3 % ⇒ probably not. → section 07.</div></div>
   </div>
   <div class="aside">
     <div class="box"><h4>Where to make it</h4>A cycle diagram in any diagram tool (Miro, Excalidraw) or right in your findings log.</div>
@@ -400,10 +401,10 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px soli
   <div class="fhead"><div class="fnum">07</div><h2>Ethnicity estimate, checked against the tree</h2>
   <p>Test percentages are a model, not a measurement. It helps most to put the expectation worked out from the tree next to them. The black mark is the expectation, the hatching is the usual spread. The numbers are invented.</p></div>
   <div class="box">
-    <div class="small muted" style="margin-bottom:6px">An invented company's test, full composition</div>
+    <div class="small muted" style="margin-bottom:6px">Tested: the researcher's mother, Elena Petrovna Savelyeva · an invented company, full composition</div>
     <div class="stack" id="dnaStack" aria-hidden="true"></div>
     <div class="bars" id="dnaBars"></div>
-    <div class="verdict"><b>Conclusion:</b> one Jewish grandparent (Lev Naumovich — both his parents were Jewish) ⇒ expected 25 % ± ~3.3; the test shows 24.3 % — fits. "Finnish and Karelian" 3.1 % is at the noise level; it is compatible with the northern (Vologda) Savelyev line 💭 but is not proof. Another company may call a larger share "Russian" on the same data — that is a different reference panel, not a contradiction.</div>
+    <div class="verdict"><b>Question:</b> was "grandmother Polish"? By documents, Elena's maternal grandparents were Ukrainians from Poltava ⇒ about 50 % ± 5 Eastern European expected. If grandmother Anna Mikhailovna was Polish, add ~25 % more — about 75 % (red dashed mark). The test shows 46.3 % ⇒ the legend taken literally is <b>probably not confirmed</b> 🟡. Russian 44.8 % plus Finnish and Karelian 6.9 % give ~52 % — the Savelyevs' Vologda side, where a Finno-Ugric trace is usual for the Russian North. Careful: Polish, Ukrainian and Russian reference panels overlap a lot, so a document decides — birthplace in the evacuation list, religion in the birth record. In family speech "Polish" may also mean "from Poland", "Catholic" or "from the western provinces".</div>
   </div>
   <div class="aside">
     <div class="box"><h4>More formats</h4><ul><li>Chromosome painting (23andMe, GEDmatch) — which segment came from which side</li><li>A match table: cM, side, ancestral places</li><li>Two companies side by side</li></ul></div>
@@ -726,13 +727,13 @@ const tn=sv("text",{x:590,y:612,"text-anchor":"end","font-size":12,fill:"var(--m
 chips($("#mapF"),[["all","all lines"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{routeG.querySelectorAll("path").forEach(p=>p.setAttribute("opacity",v==="all"||p.dataset.line===v?.95:.08))});
 
 // ---------- dna (illustrative numbers)
-const DNA=[["Ashkenazi Jewish",24.3,"var(--l-shapiro)",25,3.3],["Eastern European",49.8,"var(--l-savelyev)"],["Russian",21.6,"var(--l-kovalev)"],["Finnish and Karelian",3.1,"var(--l-goldman)"],["Other",1.2,"var(--l-tkachenko)"]];
+const DNA=[["Eastern European",46.3,"var(--l-tkachenko)",50,4.7,75],["Russian",44.8,"var(--l-savelyev)",50,4.7],["Finnish and Karelian",6.9,"var(--l-kovalev)"],["Other",2.0,"var(--l-goldman)"]];
 const st=$("#dnaStack"),bars=$("#dnaBars");
 const fmt=v=>v.toFixed(1);
-DNA.forEach(([n,v,c,e,sd])=>{const d=el("div",{style:`width:${v}%;background:${c}`});d.addEventListener("pointermove",ev=>showTip(ev,`<b>${n}</b>: ${fmt(v)} %`));d.addEventListener("pointerleave",hideTip);st.append(d);
- const scale=60;const b=el("div",{class:"bar"},`<span>${n}</span><div class="track">${e?`<div class="band" style="left:${(e-sd)/scale*100}%;width:${2*sd/scale*100}%"></div>`:""}<div class="fill" style="width:${v/scale*100}%;background:${c}"></div>${e?`<div class="exp" style="left:${e/scale*100}%" title="expected 25 %"></div>`:""}</div><span class="v">${fmt(v)}%</span>`);
- b.addEventListener("pointermove",ev=>showTip(ev,e?`<b>${n}</b>: ${fmt(v)} %<br>expected from the tree ${e} % ± ${sd}`:`<b>${n}</b>: ${fmt(v)} %`));b.addEventListener("pointerleave",hideTip);bars.append(b)});
-bars.append(el("div",{class:"small muted"},"Scale up to 60 %. The mark and hatching are only on the Ashkenazi component — for the others the tree gives no precise expectation (reference panels of neighbouring peoples overlap)."));
+DNA.forEach(([n,v,c,e,sd,alt])=>{const d=el("div",{style:`width:${v}%;background:${c}`});d.addEventListener("pointermove",ev=>showTip(ev,`<b>${n}</b>: ${fmt(v)} %`));d.addEventListener("pointerleave",hideTip);st.append(d);
+ const scale=80;const b=el("div",{class:"bar"},`<span>${n}</span><div class="track">${e?`<div class="band" style="left:${(e-sd)/scale*100}%;width:${2*sd/scale*100}%"></div>`:""}<div class="fill" style="width:${v/scale*100}%;background:${c}"></div>${e?`<div class="exp" style="left:${e/scale*100}%" title="expected ${e} %"></div>`:""}${alt?`<div class="exp alt" style="left:${alt/scale*100}%" title="if the legend is true: ${alt} %"></div>`:""}</div><span class="v">${fmt(v)}%</span>`);
+ b.addEventListener("pointermove",ev=>showTip(ev,e?`<b>${n}</b>: ${fmt(v)} %<br>expected from documents ${e} % ± ${sd}${alt?`<br>if the legend is true: ~${alt} %`:""}`:`<b>${n}</b>: ${fmt(v)} %`));b.addEventListener("pointerleave",hideTip);bars.append(b)});
+bars.append(el("div",{class:"small muted"},"Scale up to 80 %. Black mark — expectation from documents, hatching — the usual spread for two grandparents; red dashed mark — expectation if the legend is true. For \"Finnish and Karelian\" and \"Other\" the tree gives no precise expectation."));
 
 // ---------- emblem
 const em=$("#emblem");

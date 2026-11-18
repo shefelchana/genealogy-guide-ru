@@ -31,6 +31,8 @@ REPO = 'https://github.com/shefelchana/genealogy-guide-ru/blob/main/'
 INCLUDE = ['README.md', 'about.md', 'guide', 'catalog', 'reading', 'examples', 'templates',
            'en/README.md', 'en/about.md', 'en/GLOSSARY.md', 'en/guide', 'en/catalog', 'en/reading',
            'en/examples', 'en/templates', 'en/articles']
+# Hand-written interactive pages without a .md source: listed in sitemap.xml as they are.
+STANDALONE = ['examples/витрина-форматов-шапиро.html', 'en/examples/formats-showcase-shapiro.html']
 SITE = {'ru': 'Поиск предков', 'en': 'Tracing Your Ancestors'}
 UI = {
     'ru': {'home': 'Поиск предков', 'interactive': 'Открыть в интерактивной версии', 'other': 'English',
@@ -278,6 +280,9 @@ def main():
     urls = [f'<url><loc>{BASE}</loc><lastmod>{today}</lastmod></url>']
     for out, md in sorted(outs):
         urls.append(f'<url><loc>{url_of(out)}</loc><lastmod>{lastmod(md)}</lastmod></url>')
+    for rel in STANDALONE:
+        if os.path.isfile(os.path.join(ROOT, rel)):
+            urls.append(f'<url><loc>{url_of(rel)}</loc><lastmod>{lastmod(rel)}</lastmod></url>')
     with open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf-8') as fh:
         fh.write('<?xml version="1.0" encoding="UTF-8"?>\n'
                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

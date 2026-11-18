@@ -206,6 +206,7 @@ pre.tree .c{color:var(--muted)}
 footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:40px}
 .theme-btn{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:30;font:inherit;font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);box-shadow:var(--shadow);cursor:pointer}
 @media print{nav.toc,.theme-btn{display:none}}
+.bar .exp.alt{background:none;border-left:2px dashed var(--stamp);width:0}
 .note-banner{margin:16px 0 4px;padding:10px 14px;border-radius:8px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);font-size:15px;max-width:780px}
 </style>
 </head>
@@ -249,7 +250,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px soli
     <div class="box"><h3>Изучение одной фамилии</h3><p class="small muted">Собрать всех носителей фамилии в месте и разложить по семьям.</p><div class="ex">Шапиро в Бердичеве — сотни. Отбор по отчеству, приписке и именам детей, иначе «нашли» будет чужая семья.</div></div>
     <div class="box"><h3>Ноль с охватом</h3><p class="small muted">«Не нашла» что-то значит, только если записано, что прочитано целиком.</p><div class="ex">Метрики прихода 1905 года прочитаны все — Ивана Савельева нет ⇒ приход из семейной памяти, скорее всего, не тот.</div></div>
     <div class="box"><h3>Сопоставление источников</h3><p class="small muted">Разные документы спорят — сравнить, кто ближе к событию.</p><div class="ex">Мать Наума: Хая, Хана или Анна? → раздел 08.</div></div>
-    <div class="box"><h3>ДНК против дерева</h3><p class="small muted">Посчитать ожидание по дереву и сравнить с тестом.</p><div class="ex">Один еврейский дед ⇒ ожидание 25 %, тест 24,3 % — сходится. → раздел 07.</div></div>
+    <div class="box"><h3>ДНК против дерева</h3><p class="small muted">Посчитать ожидание по дереву и сравнить с тестом.</p><div class="ex">Легенда «бабушка из поляков»: если верна, у мамы было бы ~75 % восточноевропейского; тест — 46,3 % ⇒ скорее нет. → раздел 07.</div></div>
   </div>
   <div class="aside">
     <div class="box"><h4>Где сделать</h4>Схема цикла — любой редактор схем (Miro, Excalidraw) или прямо в журнале находок.</div>
@@ -400,10 +401,10 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px soli
   <div class="fhead"><div class="fnum">07</div><h2>Этнический состав и проверка по дереву</h2>
   <p>Проценты теста — модель, а не измерение. Полезнее всего ставить рядом ожидание, посчитанное по дереву. Чёрная черта — ожидание, штриховка — обычный разброс. Цифры условные.</p></div>
   <div class="box">
-    <div class="small muted" style="margin-bottom:6px">Тест условной компании, весь состав</div>
+    <div class="small muted" style="margin-bottom:6px">Тест сдала мать исследовательницы, Елена Петровна Савельева · условная компания, весь состав</div>
     <div class="stack" id="dnaStack" aria-hidden="true"></div>
     <div class="bars" id="dnaBars"></div>
-    <div class="verdict"><b>Вывод:</b> один еврейский дед (Лев Наумович — оба его родителя евреи) ⇒ ожидание 25 % ± ~3,3; тест показал 24,3 % — сходится. «Финны и карелы» 3,1 % — на границе шума; совместимо с северной (вологодской) линией Савельевых 💭, но доказательством не является. Другая компания на тех же данных может назвать большую долю «русскими» — это другая референсная база, а не противоречие.</div>
+    <div class="verdict"><b>Вопрос:</b> правда ли, что «бабушка была из поляков»? По документам дед и бабушка Елены по матери — украинцы из Полтавы ⇒ восточноевропейского ожидается около 50 % ± 5. Если бабушка Анна Михайловна полька, добавится ещё ~25 % — около 75 % (красный пунктир). Тест показал 46,3 % ⇒ легенда в буквальном виде <b>скорее не подтверждается</b> 🟡. Русские 44,8 % и финны с карелами 6,9 % вместе дают ~52 % — это вологодская сторона Савельевых, где финно-угорский след для Русского Севера обычен. Осторожно: польский, украинский и русский референсы сильно перекрываются, поэтому решает документ — место рождения в эвакосписке, вероисповедание в метрике. «Из поляков» в семейной речи может значить и «из Польши», «католики», «из западных губерний».</div>
   </div>
   <div class="aside">
     <div class="box"><h4>Ещё форматы</h4><ul><li>Хромосомная раскраска (23andMe, GEDmatch) — какой кусок от какой стороны</li><li>Таблица совпаденцев: сМ, сторона, место предков</li><li>Сравнение двух компаний рядом</li></ul></div>
@@ -726,13 +727,13 @@ const tn=sv("text",{x:590,y:612,"text-anchor":"end","font-size":12,fill:"var(--m
 chips($("#mapF"),[["all","все линии"],...Object.keys(LINES).map(k=>[k,LINES[k].n,LINES[k].c])],v=>{routeG.querySelectorAll("path").forEach(p=>p.setAttribute("opacity",v==="all"||p.dataset.line===v?.95:.08))});
 
 // ---------- dna (illustrative numbers)
-const DNA=[["Ашкеназы",24.3,"var(--l-shapiro)",25,3.3],["Восточноевропейцы",49.8,"var(--l-savelyev)"],["Русские",21.6,"var(--l-kovalev)"],["Финны и карелы",3.1,"var(--l-goldman)"],["Прочее",1.2,"var(--l-tkachenko)"]];
+const DNA=[["Восточноевропейцы",46.3,"var(--l-tkachenko)",50,4.7,75],["Русские",44.8,"var(--l-savelyev)",50,4.7],["Финны и карелы",6.9,"var(--l-kovalev)"],["Прочее",2.0,"var(--l-goldman)"]];
 const st=$("#dnaStack"),bars=$("#dnaBars");
 const fmt=v=>v.toFixed(1).replace(".",",");
-DNA.forEach(([n,v,c,e,sd])=>{const d=el("div",{style:`width:${v}%;background:${c}`});d.addEventListener("pointermove",ev=>showTip(ev,`<b>${n}</b>: ${fmt(v)} %`));d.addEventListener("pointerleave",hideTip);st.append(d);
- const scale=60;const b=el("div",{class:"bar"},`<span>${n}</span><div class="track">${e?`<div class="band" style="left:${(e-sd)/scale*100}%;width:${2*sd/scale*100}%"></div>`:""}<div class="fill" style="width:${v/scale*100}%;background:${c}"></div>${e?`<div class="exp" style="left:${e/scale*100}%" title="ожидание 25 %"></div>`:""}</div><span class="v">${fmt(v)}%</span>`);
- b.addEventListener("pointermove",ev=>showTip(ev,e?`<b>${n}</b>: ${fmt(v)} %<br>ожидание по дереву ${e} % ± ${String(sd).replace(".",",")}`:`<b>${n}</b>: ${fmt(v)} %`));b.addEventListener("pointerleave",hideTip);bars.append(b)});
-bars.append(el("div",{class:"small muted"},"Шкала до 60 %. Черта и штриховка только у ашкеназского компонента — для остальных дерево не даёт точного ожидания (референсы соседних народов перекрываются)."));
+DNA.forEach(([n,v,c,e,sd,alt])=>{const d=el("div",{style:`width:${v}%;background:${c}`});d.addEventListener("pointermove",ev=>showTip(ev,`<b>${n}</b>: ${fmt(v)} %`));d.addEventListener("pointerleave",hideTip);st.append(d);
+ const scale=80;const b=el("div",{class:"bar"},`<span>${n}</span><div class="track">${e?`<div class="band" style="left:${(e-sd)/scale*100}%;width:${2*sd/scale*100}%"></div>`:""}<div class="fill" style="width:${v/scale*100}%;background:${c}"></div>${e?`<div class="exp" style="left:${e/scale*100}%" title="ожидание ${e} %"></div>`:""}${alt?`<div class="exp alt" style="left:${alt/scale*100}%" title="если легенда верна: ${alt} %"></div>`:""}</div><span class="v">${fmt(v)}%</span>`);
+ b.addEventListener("pointermove",ev=>showTip(ev,e?`<b>${n}</b>: ${fmt(v)} %<br>ожидание по документам ${e} % ± ${String(sd).replace(".",",")}${alt?`<br>если легенда верна: ~${alt} %`:""}`:`<b>${n}</b>: ${fmt(v)} %`));b.addEventListener("pointerleave",hideTip);bars.append(b)});
+bars.append(el("div",{class:"small muted"},"Шкала до 80 %. Чёрная черта — ожидание по документам, штриховка — обычный разброс для двух дедов и бабушек; красный пунктир — ожидание, если легенда верна. У «финнов и карел» и «прочего» дерево точного ожидания не даёт."));
 
 // ---------- emblem
 const em=$("#emblem");
