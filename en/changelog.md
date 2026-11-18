@@ -5,6 +5,8 @@
 
 ## 18 November 2026
 
+- О составителе: текст сокращён и упрощён (RU/EN) ([8665c12](https://github.com/shefelchana/genealogy-guide-ru/commit/8665c12))
+- О составителе: убрана строка о двух линиях, «Делюсь опытом» — в личном тоне (RU/EN) ([3161088](https://github.com/shefelchana/genealogy-guide-ru/commit/3161088))
 - 0.5.5: archival.name, conscription books and address search, blockade house pages + probe script, Chkalov evacuee lists, Russky Invalid, prlib/Road of Memory updates; DNA laws (43-FZ, Israel), three English DNA skills, EN DNA 6b/6c; catalog lines in llms; skill-language wording (RU/EN) ([e492f53](https://github.com/shefelchana/genealogy-guide-ru/commit/e492f53))
 - Showcase skills: bodies and references in English (Russian triggers kept in descriptions) ([2e0f255](https://github.com/shefelchana/genealogy-guide-ru/commit/2e0f255))
 - 0.5.5: пять навыков витрины (building-research-showcase и др.), страница «Обновления» из истории коммитов, ссылки на витрину в разделах, навыки в AGENTS/llms (RU/EN) ([9c7282e](https://github.com/shefelchana/genealogy-guide-ru/commit/9c7282e))
