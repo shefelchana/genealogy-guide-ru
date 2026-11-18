@@ -43,6 +43,18 @@ What this section covers: search databases with abstracts of documents (indexes)
 - **Access:** Free. The new search shows full results only with an account. The **old form** `legacy.jri-poland.org` shows everything without login after you accept the conditions (personal research only; when citing, name JRI-Poland).
 - **Techniques:** the results summary has a breakdown by region; details open in a separate form.
 
+### archival.name
+- **What is there:** a free combined name index for Central and Eastern Europe. It has worked since 8 October 2026 and was built by one person. Collections: archive inventories (names in file titles), the 1897 census, the family cards of the 1926 census of the Ukrainian SSR, pogrom-relief files (1917–1938), merchants of the guberniyas (files on admission to guilds and town communities), directories, metrical books. Almost every card links to a scan on Wikimedia Commons: one link to the page, one to the whole file [checked].
+- **How the index is made:** the indexes were **compiled by AI** and, according to the author, checked on samples; errors remain, and "for now quantity comes before quality" [checked]. It is a hint where a sheet lies, not a reading of it.
+- **Access:** free. The site has a login; whether you need it to see full rows is [verify].
+- **How to search:** a search is set by the address: `archival.name/ru/search/?q=<surname>&m=bm&t=<town>&tr=g`. `m=bm` means "sounds like"; `t` is the town in Latin letters (for example, `Vinnytsya`); `tr=g` means "in its guberniya around 1900". First run a control query — a common surname in the same town: if that is empty too, the site is silent, not the archive. A card opens when you click a row.
+- **Pace:** the rows of each collection load in 10–20 seconds. On the message "the database is busy or being updated", repeat after about 20 seconds. **One query at a time, with pauses:** parallel queries return empty answers, and that is not a zero.
+- **Traps:**
+  - **AI distorts names**: the card shows one form, the scan another; surnames in the results are sometimes in Polish-style Latin spelling (sz, cz, w); file titles from inventories are machine-translated into English. Assert nothing from the index — only from the scan.
+  - a row from an **inventory** leads to the inventory page, not to the file itself; the file may not be digitised yet. Then you have a reference but no document.
+  - a zero in such an index is a zero of the index, not of the archive (see [The false zero](../guide/1-ai-search/09-false-zero.md), section 34).
+- **For advanced users:** the site has a JSON interface: `/api/archives-finding-aids/search?nm=<name>&nmm=bm&pl=<Town>&plr=g` (inventories) and `/api/everything?q=<query>&m=bm&sur=<surname>&msur=bm&t=<Town>&tr=g` (how many records in each collection). Same rules: one query at a time, with pauses.
+
 ### Yad Vashem, Central Database of Shoah Victims' Names (collections.yadvashem.org) (English interface)
 - **What is there:** about 5 million names: pages of testimony (about 2.8 million, all scanned [from search snippet]), lists of evacuees (evacuation cards), lists of victims. The most valuable thing is the **name and address of the person who submitted the page** — a relative through whom the whole branch can be found.
 - **Access:** Free, no registration, no CAPTCHA seen.
@@ -91,6 +103,7 @@ The full list of databases by region (Russia, Leningrad, Ukraine, Belarus, Moldo
 - **What is there:** awards, the 1985 jubilee card file (**only here**), loss reports, hospital registers, documents of prisoners of war. **Hospital registers** are more informative than loss reports: they have a column "relatives' address".
 - **Access:** Free, no registration. Automated requests get a "security check" (error 401); a human passes it, and then the session works.
 - **Techniques:** the main filter is **place of birth**, combined with given name and patronymic; in "grouping" mode exact matches come first, then fuzzy ones. The lists are drawn by a script — "save page" does not work. Scans open only from the card page.
+- **Call-up books of district military enlistment offices** (Книги призыва районных военкоматов; scans of whole books): how to read them and how they differ from the cards — [War, repression, siege](../guide/2-reference/12-war-repression-siege.md), subsection "Conscription books of district military offices in 'Pamyat naroda'"; finding a soldier by the family's address — the next subsection.
 - **Network:** may not open from abroad.
 
 ### OBD "Memorial" (obd-memorial.ru) (in Russian)
@@ -106,12 +119,19 @@ The full list of databases by region (Russia, Leningrad, Ukraine, Belarus, Moldo
 
 ### "Book of Memory of Besieged Leningrad" (Книга памяти блокадного Ленинграда) (blockade.spb.ru) and visz.nlr.ru/blockade (in Russian)
 - **What is there:** it brings together TsAMO, the siege books, evacuation, regional archives. No CAPTCHA.
-- **Limits:** only the Leningrad circle — it is **not** a replacement for "People's Memory". Search by address gives only a map.
+- **Limits:** only the Leningrad circle — it is **not** a replacement for "People's Memory". The Book of Memory lists those who died; look for survivors and evacuees in other databases.
+- **All residents of a house:** every house has a page `blockade.spb.ru/address/<id>/` — "List of residents of the house at…" (Список жителей дома по адресу): people from the Book of Memory, children included, with the flat number. The list pages with `?page=N`. The house page number (`id`) is found by trying numbers in turn; the numbers are grouped by street. The map search understands only modern street names.
+- **A person's card:** `/card/?id=N&source=external&docs=simple` — year of birth, address, date of death, volume of the Book of Memory, sometimes the cemetery. Some cards have memoirs attached.
+- **Name search** is built by the page's script: it works in an ordinary browser, but a program that reads the page without a browser (for example, curl) gets an empty result. Such a zero belongs to the tool, not to the database.
 - **Technique:** scans of the files lie as separate files with numbered images; the neighboring images of the same file open by changing the number — that is how a file is read in full.
 
 ### "Immortal Regiment" (moypolk.ru) and "Feat of the People" (podvignaroda.ru) (in Russian)
 - "Immortal Regiment" — an ordinary search form by surname, no CAPTCHA. "Feat of the People" works; it is now part of "People's Memory".
-- From abroad these did not open: gwar.mil.ru (the 1914–1918 card file of losses — the only source of the guberniya, uezd and volost of a soldier's birth), "Road of Memory" (Дорога памяти).
+- From abroad gwar.mil.ru did not open (the 1914–1918 card file of losses — the only source of the guberniya, uezd and volost of a soldier's birth).
+
+### "Road of Memory" (Дорога памяти) (1418museum.ru) (in Russian)
+- **Access:** it used to fail from abroad; on 18.11.2026 a hero's page opened from Israel. Check for yourself.
+- **What is there:** profiles of people who fought in the war. Relatives fill them in: dates of life, photos. So a profile shows who among the living family remembers this person — one more thread to a branch.
 
 ---
 

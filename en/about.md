@@ -4,6 +4,10 @@
 
 Hi! I'm Anna Shefel. I first got to know archives when I was gathering documents for repatriation to Israel. But it's not only about paperwork: it matters to me to know the story of my family, and I've been working on it, bit by bit, for many years. Right now I'm reconstructing two family lines: one from Podolia and one from Bessarabia.
 
+**How I got here.** For a long time it wasn't a system but "bursts": lectures on Jewish genealogy, requests to archives, civil registry offices and the Red Cross for documents, looking for people with my surname on social networks, then a talk with a relative or a phone call — and back to the archives again. That went on for about ten years. In September 2026 I sat down to research seriously, now with AI agents, and within a month I turned what I had collected into this guide: people in the vibe-coding community often asked me about it, and most of the knowledge was already openly available — it just had to be gathered in one place and checked.
+
+What it gives me: family habits and character become clearer (I found, for example, generations of traders), so does why people moved, changed surnames and kept quiet about the past, and I get addresses I can travel to. And it's simply interesting: instead of computer games, I get lost in archives.
+
 I'm not a professional genealogist, just an enthusiast. I rely on my own knowledge and on what is openly available.
 
 **What I use**
@@ -16,6 +20,18 @@ Examples from my own research are anonymized: names, surnames and archival refer
 This guide is the way of working that has taken shape for me, plus the experience of the genealogists and communities I refer to throughout the sections.
 
 **Where I'm looking from.** Everything here is put together with an emphasis on Jewish genealogy: the Russian Empire and the USSR, Europe, the USA. The guide is strongest where I have searched myself — Jewish families of Podolia, the Kyiv region and Bessarabia. Much of it will suit other searches too, but surely something has been missed. What is covered only a little — Orthodox and peasant lines, the exiled and the shot, emigration to South America and China, other communities — is listed in [What this guide does not cover](guide/0-start/07-not-covered.md).
+
+**Sharing what I learn.** Besides this guide, I talked about my research in a small live stream: how to work with archives and AI agents, where to start and how not to go wrong. I'd like there to be more knowledge of, and interest in, this topic.
+
+**Where I'd look first** (more in the [Catalog](catalog/README.md)):
+- **JewishGen** — indexed databases of Jewish records, finding researchers of the same surnames (JGFF), volunteer help with translation (ViewMate) — [Indexed databases](catalog/indexed-databases.md), [Forums and communities](catalog/forums-and-communities.md).
+- **The "Jewish Roots" forum (j-roots, in Russian)** — topics by shtetl and by archive fond, links to digitised files — [Forums and communities](catalog/forums-and-communities.md).
+- **Scans of Ukrainian archives on Wikimedia Commons and FamilySearch** — whole metrical books, revision lists, censuses — [Archive file scans](catalog/archive-file-scans.md).
+- **archival.name** — file titles from archive inventories and card indexes; handy for searching a surname across many archives at once — [Indexed databases](catalog/indexed-databases.md).
+- **Yandex Archive Search** — recognised Russian archives, newspapers and directories — [Press](catalog/press.md), [Directories and books](catalog/directories-and-books.md).
+- **Yad Vashem, Pamyat Naroda, OBD Memorial** — the Holocaust, the war, evacuation — [Indexed databases](catalog/indexed-databases.md).
+- **DNA tests** (23andMe, MyHeritage, FamilyTreeDNA, GEDmatch, Genotek) — [DNA services](catalog/dna-services.md). Tip: let the oldest living relatives test first — they get more matches.
+- **Familio Telegram chats** and regional groups — [Groups and communities](reading/groups-and-communities.md).
 
 **Let's search together.** If you have useful sources, techniques or experience on your own topic or region, let's build shared collections of materials from them and search together. One person can't cover everything, but together we can.
 

@@ -80,16 +80,27 @@ Practice:
 
 ## Skills
 
-- [List of skills](../skills/README.md): 32 skills for Claude with trigger conditions and installation (the skill files are in Russian; Claude reads them and works fine with English prompts)
+- [List of skills](../skills/README.md): 35 skills for Claude with trigger conditions and installation (most skill bodies are in Russian, newer ones in English; all descriptions are in English with Russian trigger phrases; Claude works fine with English prompts)
 - [genealogy-intake](../skills/genealogy-intake/SKILL.md): the first conversation, project files, the first question and plan
 - [search-logic-navigator](../skills/search-logic-navigator/SKILL.md): forks in the search route
 - [verifying-genealogy-findings](../skills/verifying-genealogy-findings/SKILL.md): verifying finds and negative conclusions
 - [orchestrating-genealogy-agents](../skills/orchestrating-genealogy-agents/SKILL.md): tasks for agents and accepting reports; a team of five roles, the round, the safety of the person's computer
-- The rest (path ../skills/<name>/SKILL.md): organizing-genealogy-research, research-session-handoff, identifying-places, ukrainian-archives-on-commons, soviet-era-records, tracing-emigrants-to-origin, searching-pogrom-records, researching-jewish-cemeteries, using-community-surname-indexes, searching-jewishgen, searching-familysearch-films, searching-yandex-archives, searching-nli-jewish-press, reading-archive-scans, tracing-revision-records, reading-hebrew-yiddish-sources, dating-old-photos, interpreting-jewish-family-photos, reconstructing-family-clusters, dna-matches-endogamy, citizenship-by-descent-dossier, writing-family-history, dna-matches-across-platforms, building-research-showcase, building-research-catalogs, building-evidence-matrix, rendering-family-tree, checking-dna-against-tree
+- The rest (path ../skills/<name>/SKILL.md): organizing-genealogy-research, research-session-handoff, identifying-places, ukrainian-archives-on-commons, soviet-era-records, tracing-emigrants-to-origin, searching-pogrom-records, researching-jewish-cemeteries, using-community-surname-indexes, searching-jewishgen, searching-familysearch-films, searching-yandex-archives, searching-nli-jewish-press, reading-archive-scans, tracing-revision-records, reading-hebrew-yiddish-sources, dating-old-photos, interpreting-jewish-family-photos, reconstructing-family-clusters, dna-matches-endogamy, citizenship-by-descent-dossier, writing-family-history, dna-matches-across-platforms, building-research-showcase, building-research-catalogs, building-evidence-matrix, rendering-family-tree, checking-dna-against-tree, choosing-dna-test-by-country-and-goal, dna-raw-data-backup-and-transfer, y-and-mtdna-lineage-testing
 
 ## Optional
 
 - [Catalog of sites](catalog/README.md): site cards with techniques and a "question → where to go" cheat sheet
+  - [Indexed databases](catalog/indexed-databases.md): JewishGen, JRI-Poland, Yad Vashem, Memory of the People, OBD, Open List, siege databases, archival.name: contents, search, pitfalls
+  - [Archive file scans](catalog/archive-file-scans.md): FamilySearch, Wikimedia Commons, archive websites, EAIS: where digitised files are
+  - [Directories and books](catalog/directories-and-books.md): address calendars, All Russia, All Leningrad, medical lists, archive.org, NEB, Presidential Library
+  - [Press](catalog/press.md): old newspapers: notices, obituaries, reports from shtetls
+  - [Cemeteries](catalog/cemeteries.md): burial databases and gravestone photos
+  - [DNA services](catalog/dna-services.md): genetic genealogy companies and tools
+  - [USA and emigration](catalog/usa-and-emigration.md): US databases, ports of arrival, naturalisation
+  - [Europe by country](catalog/europe-by-country.md): databases and archives of European countries
+  - [Foreign and university archives](catalog/foreign-and-university-archives.md): traces left "for another reason": study, service, courts abroad
+  - [Russian-language resources](catalog/russian-language-resources.md): Russian archives, libraries, databases and projects
+  - [Forums and communities](catalog/forums-and-communities.md): where to ask: VGD, groups, translation help
 - [Regional overview of sites](catalog/regional-overview.md): navigation by region — Russia and the USSR, repression and deportations (working replacements for the Memorial databases), Europe, the USA and Canada, South America, Israel, Harbin and Shanghai, South Africa, Australia, Turkey; hijacked domains (do not open); what is not covered
 - [Templates](templates/README.md): finding, persons, hypothesis, research log, source register, timeline, place guide, "Continue from here", letter to an archive
 - [What to read by level](reading/what-to-read.md): books, courses, journals, certification — beginner, experienced, specialist

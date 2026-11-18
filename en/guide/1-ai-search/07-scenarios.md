@@ -128,6 +128,9 @@ Databases of pogrom victims, recipients of aid from landsmanshaftn, orphanage li
 ### D2b. "Where is my great-grandfather buried?" / read a gravestone
 First whether the cemetery survives, then burial databases, then reading the stone and converting the date — [Cemeteries](../2-reference/10-cemeteries.md).
 
+### D2c. "All I know is the family's address (city, street, house)"
+Searching by address on the portals does not work: the forms ignore the address and return every namesake. Go through the documents where the address was written down: in "Pamyat naroda", search by surname, years of birth and district of call-up, then read the "address" column in the district military office's conscription book or the "family address" in the loss report; for Leningrad, use the house page on blockade.spb.ru, which lists all residents who died, with flat numbers. A negative conclusion only with coverage (how many images and rows were read). Details: [War, repression, the siege](../2-reference/12-war-repression-siege.md), the subsections "Conscription books of district military offices", "How to find a soldier by the family's address" and "All residents of a house" in § 4.
+
 ### D3. Find living relatives (distant)
 DNA tests, other users' trees (only as a hint, see [Other people's trees, communities, researchers](../2-reference/18-communities-researchers.md)), emigrant branches, letters to namesakes — politely and briefly (see [Requests and letters](../2-reference/20-requests-letters.md)). If DNA showed something unexpected — [Ethics and preservation](../3-results/03-ethics-preservation.md).
 

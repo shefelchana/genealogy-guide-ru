@@ -105,6 +105,7 @@ Every inhabitant of the empire was **registered** (*pripisan*) to an estate (*so
 | **Student files** | birth certificate, certificate of registration, father's name |
 | **Directories**: "Vsya Rossiya" (All Russia), address calendars, memorial books of the guberniyas, the "Rossiiskii meditsinskii spisok" (Russian Medical Directory) | profession, place of service, address, year by year |
 | **Press**: Jewish (Hebrew, Yiddish) and Russian | advertisements, correspondence from the shtetls, donation lists, obituaries, auctions, summonses to heirs ("Senatskie ob"yavleniya", Senate announcements) |
+| **Lists of the wounded in the Russo-Japanese War of 1904–1905** in the newspaper "Russkii invalid" (Русский инвалид) | regiment, rank, given name and surname of a soldier or officer [verify which other columns]; searchable by surname in Yandex "Archive Search" (the periodicals section; a Yandex login is needed) |
 
 Directories and press — [Directories and books](../../catalog/directories-and-books.md), [Press](../../catalog/press.md).
 

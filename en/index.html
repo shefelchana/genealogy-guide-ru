@@ -363,7 +363,7 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 </tr>
 <tr>
 <td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/README.md">skills/</a></td>
-<td>Skills for Claude — the same methods in the form of instructions for AI (in Russian)</td>
+<td>Skills for Claude — the same methods in the form of instructions for AI (mostly in Russian)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/agents/archive-mechanic.md">agents/</a></td>
@@ -377,8 +377,8 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 </table></div>
 <p>The five rules that save months are in the <a href="guide/0-start/01-quick-start.html">Quick start</a>; the rules for AI are in <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/en/AGENTS.md">AGENTS.md</a>.</p>
 <h2 id="skills-for-claude-how-to-install">Skills for Claude — how to install</h2>
-<p>The <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/README.md">skills/</a> folder contains 32 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — <a href="guide/1-ai-search/06-skills.html">Skills for Claude</a>.</p>
-<p>The skills are written in Russian, but Claude reads them and works fine with prompts in English.</p>
+<p>The <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/README.md">skills/</a> folder contains 35 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — <a href="guide/1-ai-search/06-skills.html">Skills for Claude</a>.</p>
+<p>Most skill bodies are in Russian (newer ones are in English, and every description is in English); Claude reads them and works fine with prompts in English.</p>
 <p><strong>Claude Code — as a plugin</strong> (skills and agents at once):</p>
 <pre><code>/plugin marketplace add shefelchana/genealogy-guide-ru
 /plugin install genealogy-guide-ru@genealogy-guide-ru
@@ -393,6 +393,8 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 <li><strong>Five new skills:</strong> <code>building-research-showcase</code> builds such a page from the project files with several agents in a fixed order and checks the data with a script (including real names left in a public version); <code>building-research-catalogs</code>, <code>building-evidence-matrix</code>, <code>rendering-family-tree</code>, <code>checking-dna-against-tree</code> — one format each.</li>
 <li><strong><a href="changelog.html">Change log</a>:</strong> every change by date from the commit history, rebuilt automatically.</li>
 <li>The <code>dna-matches-across-platforms</code> skill is now listed in the agent instructions and skill lists.</li>
+<li><strong>New sources and techniques:</strong> an <a href="catalog/indexed-databases.html">archival.name</a> card — a free AI-built index (inventories, the 1897 census, 1926 family cards, merchants, directories) — and the "AI-built index" trap (<a href="guide/1-ai-search/09-false-zero.html">False zero</a>, section 34); <strong>conscription books of district military offices</strong> in "Pamyat naroda" ("team No." is not a unit number), <strong>finding a soldier by the family's address</strong>, military-record pitfalls, <strong>house residents on blockade.spb.ru</strong> with a probe script, <strong>Chkalov evacuee lists 1942–1943</strong> — <a href="guide/2-reference/12-war-repression-siege.html">War, repression, siege</a>; "Russky Invalid" 1904–1905; prlib.ru and "Road of Memory" from abroad updated.</li>
+<li><strong>DNA:</strong> laws on genetic data — Russia's 43-FZ (from 1 Sep 2026) and Israel's 2000 law (<a href="guide/2-reference/15-dna.html">DNA</a>, 3a); three English skills: choosing a test by country and goal, raw data files, Y-DNA and mtDNA. The English DNA page now has sections 6b and 6c.</li>
 </ul>
 <h2 id="whats-new-in-054">What's new in 0.5.4</h2>
 <ul>

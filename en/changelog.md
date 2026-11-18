@@ -5,6 +5,8 @@
 
 ## 18 November 2026
 
+- Showcase skills: bodies and references in English (Russian triggers kept in descriptions) ([2e0f255](https://github.com/shefelchana/genealogy-guide-ru/commit/2e0f255))
+- 0.5.5: пять навыков витрины (building-research-showcase и др.), страница «Обновления» из истории коммитов, ссылки на витрину в разделах, навыки в AGENTS/llms (RU/EN) ([9c7282e](https://github.com/shefelchana/genealogy-guide-ru/commit/9c7282e))
 - Витрина форматов: новый пример ДНК (проверка легенды «бабушка из поляков» по тесту матери); интерактивные страницы в sitemap через STANDALONE в build\_static.py ([c000768](https://github.com/shefelchana/genealogy-guide-ru/commit/c000768))
 - EN: formats showcase — 13 ways to show and store a family research project (invented Shapiro family, interactive page); RU↔EN links ([4659873](https://github.com/shefelchana/genealogy-guide-ru/commit/4659873))
 - Примеры: витрина форматов — 13 способов показать и хранить исследование (условная семья Шапиро, интерактивная страница) ([e15f119](https://github.com/shefelchana/genealogy-guide-ru/commit/e15f119))

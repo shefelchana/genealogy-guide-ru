@@ -118,6 +118,8 @@ Two more consequences of the custom:
 
 You find entries like "Нудельманъ онъ же Капланъ" (Nudelman alias Kaplan) or "Хуна Михелевъ Розенбергъ /онъ же Гринштейнъ/" (Khuna Mikhelev Rozenberg /alias Grinshtein/). It is a strong sign: such a link is rare and helps tell a family apart from people with the same surname. It also explains why a person "vanishes" under one surname and "appears" under another.
 
+The Soviet form of the same link is **"Surname (Other)" ("Фамилия (Другая)") on military office cards** in "Pamyat naroda": the current surname comes first, and the maiden or former surname is in brackets (an invented example: "Иванова (Петрова) Анна" — born Petrova). Search under both; more in [War, repression, the siege](12-war-repression-siege.md), "Pitfalls of military registration records".
+
 ## 9. Emigrants and a change of surname
 
 - **The myth:** "the surname was changed on Ellis Island". The JewishGen FAQ and the US National Park Service say that the inspectors worked from manifests compiled by the steamship companies at the port of departure. Immigrants chose new names themselves, more often after arrival, usually at naturalisation (Moshe → Morris, Mendel → Milton).

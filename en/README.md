@@ -132,7 +132,7 @@ The route, checking results and scenarios are a general method for everyone; the
 | [reading/](reading/README.md) | Whom to read and where to learn: [what to read by level](reading/what-to-read.md), [institutes and projects](reading/institutes-and-projects.md), [genealogists and authors](reading/genealogists-and-authors.md), [groups and communities](reading/groups-and-communities.md), [dictionaries and encyclopedias](reading/dictionaries-and-encyclopedias.md), [AI in genealogy](reading/ai-in-genealogy.md) |
 | [examples/](examples/README.md) | [A worked example for beginners](examples/worked-example-for-beginners.md) · [Examples of finds](examples/example-finds.md) and a [case study of a search from a newspaper to a family](examples/case-study-newspaper-to-family.md) |
 | [templates/](templates/README.md) | Templates: [finding record](templates/finding.md), [persons](templates/persons.md), [hypothesis](templates/hypothesis.md), [research log](templates/research-log.md), [source register](templates/source-register.md), [timeline](templates/timeline.md), [place guide](templates/place-guide.md), ["Continue from here"](templates/continue-from-here.md), [letter to an archive](templates/letter-to-archive.md) |
-| [skills/](../skills/README.md) | Skills for Claude — the same methods in the form of instructions for AI (in Russian) |
+| [skills/](../skills/README.md) | Skills for Claude — the same methods in the form of instructions for AI (mostly in Russian) |
 | [agents/](agents/archive-mechanic.md) | Descriptions of helper agents for Claude Code: [archive-mechanic](agents/archive-mechanic.md), [archive-transcriber](agents/archive-transcriber.md) |
 | [AGENTS.md](AGENTS.md), [llms.txt](llms.txt) | instructions and a map of the guide for AI agents |
 
@@ -140,9 +140,9 @@ The five rules that save months are in the [Quick start](guide/0-start/01-quick-
 
 ## Skills for Claude — how to install
 
-The [skills/](../skills/README.md) folder contains 32 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
+The [skills/](../skills/README.md) folder contains 35 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
 
-The skills are written in Russian, but Claude reads them and works fine with prompts in English.
+Most skill bodies are in Russian (newer ones are in English, and every description is in English); Claude reads them and works fine with prompts in English.
 
 **Claude Code — as a plugin** (skills and agents at once):
 ```
@@ -164,6 +164,8 @@ More details and limitations — [skills/README.md](../skills/README.md).
 - **Five new skills:** `building-research-showcase` builds such a page from the project files with several agents in a fixed order and checks the data with a script (including real names left in a public version); `building-research-catalogs`, `building-evidence-matrix`, `rendering-family-tree`, `checking-dna-against-tree` — one format each.
 - **[Change log](changelog.md):** every change by date from the commit history, rebuilt automatically.
 - The `dna-matches-across-platforms` skill is now listed in the agent instructions and skill lists.
+- **New sources and techniques:** an [archival.name](catalog/indexed-databases.md) card — a free AI-built index (inventories, the 1897 census, 1926 family cards, merchants, directories) — and the "AI-built index" trap ([False zero](guide/1-ai-search/09-false-zero.md), section 34); **conscription books of district military offices** in "Pamyat naroda" ("team No." is not a unit number), **finding a soldier by the family's address**, military-record pitfalls, **house residents on blockade.spb.ru** with a probe script, **Chkalov evacuee lists 1942–1943** — [War, repression, siege](guide/2-reference/12-war-repression-siege.md); "Russky Invalid" 1904–1905; prlib.ru and "Road of Memory" from abroad updated.
+- **DNA:** laws on genetic data — Russia's 43-FZ (from 1 Sep 2026) and Israel's 2000 law ([DNA](guide/2-reference/15-dna.md), 3a); three English skills: choosing a test by country and goal, raw data files, Y-DNA and mtDNA. The English DNA page now has sections 6b and 6c.
 
 ## What's new in 0.5.4
 

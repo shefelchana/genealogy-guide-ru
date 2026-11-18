@@ -79,7 +79,8 @@ Don't read Russian? Most of the books below are in Russian and are searched in C
 - An electronic library on Russian history: monographs, atlases, document publications; free [checked].
 
 ### Presidential Library (prlib.ru) (in Russian)
-- More than 1 million items; open materials are read on the site, the rest in electronic reading rooms [from search snippet]. May not open from abroad.
+- More than 1 million items; open materials are read on the site, the rest in electronic reading rooms [from search snippet].
+- **From abroad:** on 17.11.2026, from Israel, the site gave a hard block: "Access denied — your browser did not pass the security check". It is not a CAPTCHA: no button or retry gets past it. Write "source unavailable (date)" in the log, not "not found"; look for the same volume on archive.org, in GPIB or NEB. Do not bypass the protection.
 
 ### KehilaLinks (kehilalinks.jewishgen.org) and memorial books
 - Sites of individual shtetls: histories, photos, lists of surnames, maps. The Krasilov page has an introduction and the tables of contents of all four volumes of the "Book of Sorrow of Ukraine" (Книга скорботи України) for Khmelnytskyi oblast (lists by name of civilian victims 1941–1944 by district).

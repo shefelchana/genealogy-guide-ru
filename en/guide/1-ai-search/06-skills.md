@@ -2,7 +2,7 @@
 
 What this section covers: which ready-made skills are in this guide, when each one triggers, and how to install them in Claude Code or in the Claude app.
 
-> **The skills are written in Russian.** You do not need to translate them or read Russian. Claude reads the skills regardless of your language and answers in the language you write in (English, for example). The installation instructions below are the same for everyone. The skill names and the links in the tables are the same as in the Russian guide; the descriptions in the tables are translated for you.
+> **Most skills are written in Russian; newer ones are in English.** You do not need to translate them or read Russian. Claude reads the skills regardless of your language and answers in the language you write in (English, for example). The installation instructions below are the same for everyone. The skill names and the links in the tables are the same as in the Russian guide; the descriptions in the tables are translated for you.
 
 A **skill** is a folder with an instruction file `SKILL.md` (and sometimes reference files, templates, scripts). Claude loads a skill by itself when a task fits its description: you write "read this scan of a metrical book", and the scan-reading skill is brought in, with all its techniques and traps. The skills repeat the method of this guide in a form convenient for AI.
 
@@ -59,6 +59,9 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 | [`reconstructing-family-clusters`](../../../skills/reconstructing-family-clusters/SKILL.md) | you found a father and children — assemble a package of documents on the family and sort out namesakes |
 | [`dna-matches-endogamy`](../../../skills/dna-matches-endogamy/SKILL.md) | analysing DNA matches under endogamy |
 | [`dna-matches-across-platforms`](../../../skills/dna-matches-across-platforms/SKILL.md) | matches on several sites when the origin is mixed |
+| [`choosing-dna-test-by-country-and-goal`](../../../skills/choosing-dna-test-by-country-and-goal/SKILL.md) | which DNA test to buy by country and goal |
+| [`dna-raw-data-backup-and-transfer`](../../../skills/dna-raw-data-backup-and-transfer/SKILL.md) | raw DNA files: keep and transfer |
+| [`y-and-mtdna-lineage-testing`](../../../skills/y-and-mtdna-lineage-testing/SKILL.md) | Y-DNA and mtDNA: the direct lines |
 | [`citizenship-by-descent-dossier`](../../../skills/citizenship-by-descent-dossier/SKILL.md) | assemble a chain of documents for citizenship by descent |
 | [`writing-family-history`](../../../skills/writing-family-history/SKILL.md) | turn finds into a readable text for relatives |
 | [`building-research-showcase`](../../../skills/building-research-showcase/SKILL.md) | one interactive page from the project data: catalogues, tree, map, DNA, comparisons |

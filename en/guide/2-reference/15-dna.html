@@ -88,6 +88,7 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 </ol>
 <p>A Y-haplogroup confirms <strong>membership in a line</strong>, not a specific ancestor (the principle of Adam Brown's Avotaynu DNA project) [checked].</p>
 <p><strong>mtDNA among Ashkenazim.</strong> About 40 % of Ashkenazi maternal lines go back to four "founding mothers": haplogroups K1a1b1a, K1a9, K2a2a, N1b (D. Behar et al., 2006) [from search snippet]. A match on such haplogroups says almost nothing about genealogical kinship. Check your haplogroup against K. Brook's catalogue "The Maternal Genetic Lineages of Ashkenazic Jews" (2022): a rare haplogroup is more informative [checked].</p>
+<p>Step by step on Y-DNA and mtDNA (which test level to choose, genetic distance, TiP, FamilyTreeDNA projects, mtFull and Mitotree, why "the same haplogroup" is not yet kinship): the skill <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/y-and-mtdna-lineage-testing/SKILL.md"><code>y-and-mtdna-lineage-testing</code></a> (written for AI, in English).</p>
 <h2 id="3-companies-and-transferring-data-october-2026">3. Companies and transferring data (October 2026)</h2>
 <p><strong>They do not accept files from others:</strong> AncestryDNA, 23andMe and, since May 2025, <strong>MyHeritage</strong>. MyHeritage help (July 2026): "DNA uploads are no longer supported". According to The DNA Geek's analysis ("The End of an Era: Uploads at MyHeritage"), the restrictions began at the end of May 2025. What happened to older uploads — sources differ. ⚠️ Many articles from before 2025, and even the GEDmatch blog, still list MyHeritage as a site for free upload — this is out of date.</p>
 <p><strong>They accept:</strong></p>
@@ -98,12 +99,13 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 </ul>
 <p><strong>Restrictions by country:</strong></p>
 <ul>
-<li>FamilyTreeDNA, according to its official help pages, <strong>does not ship kits to Russia, Belarus or Ukraine</strong>. A Y-test for a relative in these countries has to be planned in advance: fallback options are YSEQ (Berlin, whole genome about $399), YFull from a ready BAM file, or forwarding through a third country.</li>
+<li>FamilyTreeDNA, according to its official help pages, <strong>does not ship kits to Russia, Belarus or Ukraine</strong>. A Y-test for a relative in these countries has to be planned in advance: fallback options are YSEQ (Berlin, whole genome about $399) or YFull from a ready BAM file. For Russia, keep in mind law 43-FZ (§ 3a).</li>
 <li>MyHeritage DNA tests are not available at all in some countries (an official restriction). Check before ordering.</li>
 <li>AncestryDNA is not sold in every country (per the help page of September 2026 — in 119).</li>
 </ul>
 <p><strong>23andMe:</strong> the company filed for bankruptcy on 23.03.2025; on 14.07.2025 its assets were bought by the non-profit TTAM Research Institute ($305 million), which promised to keep the previous policy; the service is operating [checked: Wikipedia "23andMe", 2026-10-07; the company website did not open].</p>
 <p><strong>Police access</strong> (per the GEDmatch blog; some of the information is out of date — re-check): GEDmatch — only with the user's explicit consent (opt-in); FamilyTreeDNA — permitted, but you can opt out; 23andMe and Ancestry — only by court order.</p>
+<p>How to download the raw file, read its header (company, chip or whole genome, version, date), why not to upload an imputed file (for example Genotek's paid "23andMe V5" file), and which file each site accepts as of November 2026: the skill <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/dna-raw-data-backup-and-transfer/SKILL.md"><code>dna-raw-data-backup-and-transfer</code></a> (in English). It also covers backing up your match lists before deleting an account or an upgrade.</p>
 <h2 id="3a-how-to-order-a-test-if-you-live-in-checked-17102026">3a. How to order a test if you live in… (checked 17.10.2026)</h2>
 <p>From the companies' official shipping lists. "—" means the country is not on the official list, i.e. no shipping.</p>
 <div class="table-wrap"><table>
@@ -184,9 +186,15 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 <li>MyHeritage's restrictions for Russia and Israel apply to residents, not to the delivery address.</li>
 <li>Workarounds (changing the account country, a VPN) break the companies' rules — they are not in this guide.</li>
 </ul>
-<p><strong>How to take it:</strong> order a kit → <strong>activate it with the code on the site</strong> (otherwise the sample is not processed) → saliva (23andMe, Ancestry, Genotek) or a cheek swab (FamilyTreeDNA, MyHeritage, Living DNA; no food or drink for an hour before) → send it back. Return from abroad is often at your own cost; for taking a biological sample out of Russia, check the customs rules. Time after the lab receives it: MyHeritage 3–4 weeks, Ancestry about 6, FamilyTreeDNA 6–9, Living DNA 6–8, Genotek up to 12.</p>
+<p><strong>Laws on genetic data</strong> [verify against the text of the law]:</p>
+<ul>
+<li><strong>Russia.</strong> Federal Law No. 43-FZ of 20.02.2026, in force from 01.09.2026: genetic research data may be transferred abroad or to foreigners only by decision of an inter-agency commission (Government decree No. 750). The sources do not say clearly whether this covers a private person and their own sample; moderators of the VGD forum treat sending samples abroad as forbidden. No fines were found in the sources. Sources: Pharmvestnik (06.05.2026), T-invariant (30.07.2026), VGD forum moderator posts (September–October 2026); we did not open the text of the law itself. This guide gives no instructions for sending a sample out of Russia: test with a Russian lab, or where you are legally staying.</li>
+<li><strong>Israel.</strong> Genetic Information Law 5761-2000: genetic testing by a doctor's referral or a court order, in approved labs. Sources disagree on whether tests you buy yourself (direct-to-consumer) are banned or only strictly regulated (Calcalist, 2020, possibly out of date; family-laws.co.il, undated).</li>
+</ul>
+<p>Which test to choose for your country and goal, and whom in the family to test first: the skill <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/choosing-dna-test-by-country-and-goal/SKILL.md"><code>choosing-dna-test-by-country-and-goal</code></a> (in English; countries, laws and sources are in its <code>references/country-availability.md</code>).</p>
+<p><strong>How to take it:</strong> order a kit → <strong>activate it with the code on the site</strong> (otherwise the sample is not processed) → saliva (23andMe, Ancestry, Genotek) or a cheek swab (FamilyTreeDNA, MyHeritage, Living DNA; no food or drink for an hour before) → send it back. Return from abroad is often at your own cost. Sending a sample out of Russia is restricted by law 43-FZ from 01.09.2026 (see above). Time after the lab receives it: MyHeritage 3–4 weeks, Ancestry about 6, FamilyTreeDNA 6–9, Living DNA 6–8, Genotek up to 12.</p>
 <p><strong>Raw data</strong> is the file with your genotypes. Download it at once: it can be uploaded to FamilyTreeDNA (free, matches) and GEDmatch, and it survives even if the company closes. FamilyTreeDNA accepts 23andMe files (V3–V5), MyHeritage (March 2019 – October 2025) and AncestryDNA up to September 2025 (<a href="https://help.familytreedna.com/hc/en-us/articles/4415446123663-Autosomal-DNA-Transfers">help</a>).</p>
-<p><strong>Y-DNA and mtDNA:</strong> FamilyTreeDNA (Y-37 $119, Y-111 $249, Big Y-700 $449, full mtDNA $159; same country restrictions) and YSEQ in Berlin (Y-STR from €65, mtDNA from €25, "worldwide" shipping; for Russia and Belarus ask YSEQ): <a href="https://www.yseq.net/shipping.php">yseq.net</a>.</p>
+<p><strong>Y-DNA and mtDNA:</strong> FamilyTreeDNA (Y-37 $119, Y-111 $249, Big Y-700 $449, full mtDNA $159; same country restrictions) and YSEQ in Berlin (Y-STR from €65, mtDNA from €25, "worldwide" shipping; for Belarus ask YSEQ; for Russia see law 43-FZ above): <a href="https://www.yseq.net/shipping.php">yseq.net</a>.</p>
 <h2 id="4-endogamy-why-everything-is-harder-for-ashkenazim">4. Endogamy: why everything is harder for Ashkenazim</h2>
 <p><strong>Endogamy</strong> is marriage within one community over many centuries. Because of it, any two Ashkenazim share noticeably more DNA than random people at the same degree of relationship: matches are connected to you by several paths at once. The relationship looks closer than it is. Ashkenazim have thousands of apparent "fourth cousins".</p>
 <p>What to do:</p>
@@ -263,7 +271,7 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 <ul>
 <li>The ancestry estimate at 23andMe matched what was expected from the documents — but by itself proves nothing.</li>
 <li>The first close match turned out to be a relative on the same paternal line, which agreed with the documents. He did not accept the invitation — it had to be handled through mutual relatives.</li>
-<li>The 23andMe relatives-list export has a Y-haplogroup column; it is filled in even if the person has not accepted the invitation.</li>
+<li>~~The 23andMe relatives-list export has a Y-haplogroup column; it is filled in even if the person has not accepted the invitation.~~ <strong>Correction (November 2026):</strong> this was not confirmed. If a match has open data sharing turned off and has not accepted the invitation, 23andMe gives neither their haplogroups nor their location. You see only sex, shared percentage, number of segments and the longest segment.</li>
 <li>Not one of the family surnames appeared in the cluster of matches. This is normal: the common ancestor may be centuries back, before surnames were adopted (1804–1835).</li>
 <li>On GEDmatch, by the "long segment from 20 cM" rule, several people qualified, but without attached trees there was nothing to compare against. Hence the advice: attach a link to your tree to your profile.</li>
 <li>MyHeritage removed the built-in export of matches to a spreadsheet; you have to work with screenshots and filters.</li>
@@ -312,6 +320,81 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 <p><strong>The maternal haplogroup</strong> must be identical for all children of one mother and for the children of her daughters. If you and a maternal niece get different subclades (H1n and H1b2), it is a chip error; only the shared level (H1) is reliable.</p>
 <p><strong>Which side a match is on, when parents cannot test.</strong> Use the "shared matches" filter with relatives linked to only one side: a maternal half-niece shows only your mother's side; a half first cousin through one grandmother shows only that grandmother's line.</p>
 <p><strong>Matches' trees</strong> are read for places and years, not only surnames. A matching father's name and birth year in someone else's tree is a hypothesis; only a metrical record confirms it.</p>
+<h2 id="6b-the-match-list-step-by-step-what-genetic-genealogists-advise">6b. The match list step by step: what genetic genealogists advise</h2>
+<p>A summary of the rules from this section and from the guidance of the BCG, the Shared cM Project (B. Bettinger), D. Leeds, FamilyLocket and L. Diamond, in the order in which to apply them.</p>
+<ol>
+<li><strong>DNA tests a hypothesis; it does not name an ancestor.</strong> Under the Genealogical Proof Standard (BCG), a conclusion about kinship rests on documents and DNA together: first a version from the documents, then a check whether the DNA agrees with it. DNA can refute a version; it cannot "name" a person.</li>
+<li><strong>Calibrate the test</strong> on known relatives (§ 6a).</li>
+<li><strong>Convert everything to centimorgans.</strong> 23andMe shows a percentage: 1 % ≈ 74 cM (roughly; the exact figure is in the match's profile). For each match, record: total cM, number of segments, <strong>longest segment</strong>, <strong>average segment</strong> (total ÷ number).</li>
+<li><strong>Cut the noise:</strong> longest segment &lt; 7 cM — false; &lt; 15 cM under endogamy — discard; 15–20 — weak; 20–30 — look at the tree; ≥ 30 — write to the person (§ 4). Many segments with a small average (&lt; 10–12 cM) is a signature of endogamy.</li>
+<li><strong>Choose the table by the match's origin.</strong> For non-endogamous lines, the Shared cM Project (averages and ranges, v4):</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Average, cM</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2C (second cousins)</td>
+<td>229</td>
+<td>41–592</td>
+</tr>
+<tr>
+<td>2C1R</td>
+<td>122</td>
+<td>14–353</td>
+</tr>
+<tr>
+<td>2C2R</td>
+<td>71</td>
+<td>0–261</td>
+</tr>
+<tr>
+<td>3C (third cousins)</td>
+<td>73</td>
+<td>0–234</td>
+</tr>
+<tr>
+<td>3C1R</td>
+<td>48</td>
+<td>0–192</td>
+</tr>
+<tr>
+<td>4C (fourth cousins)</td>
+<td>35</td>
+<td>0–139</td>
+</tr>
+</tbody>
+</table></div>
+<p>For Ashkenazi matches use L. Diamond's table (§ 4): there the same degrees give 1.2–1.5 times more cM. The DNA Painter calculator (Shared cM Tool) shows every degree compatible with a cM figure; WATO gives the probabilities of competing versions when the tree is known.</p>
+<ol start="6">
+<li><strong>With mixed origin, split the list first.</strong> If only one line is endogamous (for example, one grandfather was Ashkenazi), first separate the "endogamous" cluster: matches with Ashkenazi surnames, ancestors from the Pale of Settlement and the USA, and matches shared with a known Jewish relative. Do not apply the Leeds method to it (§ 4, item 5). Apply it to the rest.</li>
+<li><strong>The Leeds method</strong> (D. Leeds, 2018). Take matches in the 90–400 cM range (if there are few, go down to longest segment ≥ 20 cM). Go down the list from the top; the first match without a colour gets a new colour, and all its shared matches get the same colour. Ideally you get up to four groups, one per grandparent. A match in two colours hints at a marriage between lines or an error. Automatic equivalents: "DNA Relatives Clustering" at 23andMe, AutoCluster (Genetic Affairs), MyHeritage clusters.</li>
+<li><strong>Tie a cluster to a side.</strong> A parent's test is best; without parents, use relatives connected to only one side (§ 6a). Then the trees: the ancestors' <strong>places and years</strong> matter more than surnames.</li>
+<li><strong>Triangulation.</strong> If three or more people share a segment on the same chromosome and all of them match each other on that segment, it supports one common ancestor. GEDmatch, MyHeritage and FamilyTreeDNA have a chromosome browser. The common ancestor is still proved with documents.</li>
+<li><strong>Test with a purpose.</strong> The oldest living generation carries more of the ancestors' DNA. For the direct male line, Y-DNA of a male descendant; for the direct female line, mtDNA (rarely decisive).</li>
+<li><strong>Widen the reach.</strong> Upload the raw data to the databases that still accept files (GEDmatch, FamilyTreeDNA, Living DNA — § 3; MyHeritage has accepted no uploads since 2025); attach a link to your tree to your profile.</li>
+<li><strong>Keep a match log:</strong> who, cM, segments, longest, average, threshold, possible degrees of relationship, endogamy yes/no, cluster, side, ancestors' places, surnames, hypothesis, whether you wrote, the reply. Separately: what the DNA refutes and what it allows.</li>
+</ol>
+<h2 id="6c-tests-on-several-sites-and-mixed-origin-a-worked-approach">6c. Tests on several sites and mixed origin: a worked approach</h2>
+<p>This is what the analysis looks like when a person has one endogamous grandparent (for example, Ashkenazi) and three Russian peasant lines, and the test sits in four databases. The step-by-step skill: <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/dna-matches-across-platforms/SKILL.md"><code>dna-matches-across-platforms</code></a>.</p>
+<ol>
+<li><strong>Inventory.</strong> One raw file transferred to GEDmatch and FamilyTreeDNA is the same person, but gives different match lists. Find out whose tests you already have access to: on Russian services relatives often share "view results" access.</li>
+<li><strong>Separate the endogamous network first</strong> (§ 4): it will fill the top of any list. Apply the Leeds method only to the remaining matches.</li>
+<li><strong>Phasing without parents</strong> (§ 6a): the child of a maternal half-sister shows only the mother's side; a cousin through one grandmother shows only that grandmother. "Not among shared matches" does not mean "on the other side": such a relative carries only about a quarter of the DNA in question.</li>
+<li><strong>Look for the home village, not only surnames.</strong> Export the whole list together with the "surname — place" fields (many FamilyTreeDNA matches have them) and the places from trees (Genotek). Search for the village and district names in every spelling. A real case: a match of only 38 cM (longest segment 16) turned out to be the key one, because the person's ancestor list had two of the researcher's surnames from the same village. Neither 23andMe nor Genotek showed this.</li>
+<li><strong>One family is one piece of evidence.</strong> A match's mother, sister and children with the same ancestor list are one confirmation, not five.</li>
+<li><strong>Cross-check between sites.</strong> The same family with a segment of the same length at two companies is almost certainly a real relationship. Look for matches from other sites in GEDmatch by name and source site: there you see the chromosomes and positions.</li>
+<li><strong>Triangulation and background.</strong> Segments overlap, and the people also match each other in the same place — this supports one common ancestor. They are related to each other but match you on different chromosomes — that is regional background.</li>
+<li><strong>"Are your parents related?"</strong> (GEDmatch): 0 cM means the parents are not related within roughly 5–6 generations. Earlier marriages will show only in metrical records.</li>
+<li><strong>Living relatives close at hand.</strong> A parent's social-network page (the "Family" section, maiden names in brackets, "village …, … district") often points to living relatives on the line you need. Read only; who is who is for the family to say, not for guesses.</li>
+<li><strong>Paid features.</strong> The FamilyTreeDNA chromosome browser for a transferred kit is now a paid upgrade (the $19 unlock was retired in August 2026). It is worth buying when you already have a lead to check by segments. The free alternative is to ask the match to upload their DNA to GEDmatch.</li>
+<li><strong>The letter.</strong> Short, in simple English (B1 level), human: where you found them, how many cM, one shared village, two surnames, "do you speak Russian?", a request to upload their DNA to GEDmatch. Write to the e-mail on the match card; social networks come second.</li>
+</ol>
 <h2 id="7-ethics-and-consent">7. Ethics and consent</h2>
 <ul>
 <li><strong>Only the person themselves takes the test</strong>, or their legal representative, with informed consent. The person tested must know who will see the data and what surprises are possible (BCG, code of ethics).</li>

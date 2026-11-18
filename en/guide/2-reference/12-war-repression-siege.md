@@ -24,7 +24,7 @@ All the guides I have read repeat these rules, and they have been confirmed in p
 
 A real example. On "Pamyat naroda" and in OBD "Memorial" one man turned up in five documents: called up at 16, regiment, captivity and liberation, a wound. The surname and patronymic are spelled differently in them; he was identified by his year and place of birth.
 
-Another example. In the memorial book "Blockade" (Книга памяти «Блокада») a grandmother's parents were found — both died in 1942, at one address. The mother's surname was distorted beyond recognition and stood in a different volume. Distorted surnames in the siege books are common.
+Another example. In the memorial book "Blockade" (Книга памяти «Блокада») a married couple was found — both died in 1942, at one address. The wife's surname was distorted beyond recognition and stood in a different volume. Distorted surnames in the siege books are common.
 
 ## 2. Nadia Lipes's advice
 
@@ -52,12 +52,48 @@ The main book on the topic of this section is **N. Lipes, "Soviet Documents. Wha
 | **Arolsen Archives** (collections.arolsen-archives.org) | concentration camps, forced labourers, displaced persons; more than 40 million documents in the digital archive [checked: arolsen-archives.org, 2026-10-07; an old press release says about 30 million documents and 17.5 million people] | a request can be submitted in Russian, free of charge [checked: press release] |
 | Medals "For the Defence of Moscow" (vov.mos.ru), "For the Defence of Leningrad" (medal.spbarchives.ru) | (LRF) | — |
 
+### Conscription books of district military offices in "Pamyat naroda"
+
+Besides the index cards, "Pamyat naroda" has **scans of the registers of district military enlistment offices (RVK, районный военкомат)**: alphabetical books of men liable for service and lists of those mobilised in 1941–1944. You reach a book from a person's card with a "Call-up and demobilisation" record ("Призыв и демобилизация") or a "Military office of registration" record ("Военкомат по месту учёта"): the card links to the image of the page.
+
+How a book is organised:
+- the rows are **in alphabetical order**; the full name is rarely written, usually the surname and **initials**;
+- there is the year of birth, the **home address** (street, house, sometimes flat), the date of call-up and notes ("certificate issued", "demobilised", "missing in action");
+- **"Команда № …" ("Team No. …")** stands in the column "Receipt for the mobilisation order" ("Расписка в получении мобилизационного предписания"). It is the number of a dispatch on a given day, **not the number of a military unit**: neighbours in the book called up on different days have different team numbers. The unit does not follow from the conscription book; look for it in the person's other documents (loss reports, hospital records, award papers);
+- **one person can be entered twice**: sections of a book are sometimes duplicated, and in one entry the receipt column is filled in while in the other it is empty. Do not stop at the first row you find.
+
+How to find men called up in the same team:
+- the site has no filter by date of call-up or team number. A search by district of call-up and year of birth without a surname gives a huge list in which the team number is not shown;
+- so there is only one way: **page through all the images of the book** and copy out the rows with the same date and the same team number. Then find each man by surname and initials (the full name is on his "Call-up" card), and look for the unit number in his own documents;
+- the images open **only inside an open session on the site** — in the tab where the "I am not a robot" check was passed. A direct link to the image does not open without the session. For an AI agent with a browser it is easier to work in that tab than to download the images separately.
+
+A negative conclusion only with coverage: "all images of the book read, 1–140 of 140, every row with such-and-such date copied out". "I looked at four images for the right letter and found nobody else" is not a zero, it is the start of the work (see [False zero](../1-ai-search/09-false-zero.md)).
+
+### How to find a soldier by the family's address
+
+A common case: you know the address where the family lived in 1941, but not the man's name (or only the surname).
+
+- **The portals do not search by address.** The "War heroes" ("Герои войны") form on blockade.spb.ru accepts a street and house, but returns every namesake in the city: for a common surname that is tens of thousands of rows. "Pamyat naroda" and OBD have no address field in their search.
+- **The route that works:**
+  1. "Pamyat naroda": surname + years of birth (for the head of a family, a wide range, about 20 years) + **district of call-up** (the military office of the district where the house stands);
+  2. for survivors, open the scans of the conscription books and read the **"address"** column (see above); for the killed and missing, open the **reports of irrecoverable losses** ("донесения о безвозвратных потерях") and read the **"family address"** column ("адрес семьи"; it often gives the wife's name and the address with the flat); in hospital records, the "relatives' address" column;
+  3. write down every row you open: who, which document, which image, what the address column says.
+- Not every loss report has a "family address" column. If it is missing, the man is not ruled out.
+- The next house or a different flat is not a match but a separate lead; only a second document confirms it.
+- A negative conclusion only with coverage: how many people the search returned, how many loss reports and book images were opened, how many rows were read, which district military offices were not checked (a man could have been registered in a different district from the one where the family lived [verify for your case]).
+
+### Pitfalls of military registration records
+
+- **"Surname (Other)"** ("Фамилия (Другая)") on a military office card ("Call-up and demobilisation", "Military office of registration") means **current surname (maiden or former surname)**. An invented example: "Иванова (Петрова) Анна Сергеевна" — Ivanova by marriage, born Petrova. Search for both surnames as separate queries (see [Names, surnames, spellings](03-names-spellings.md)).
+- **The year of birth can differ between records.** Girls born in 1926 added to their age to get into the army: in one study the military office card said 1926 and the unit list said 1924. So records with different birth years may describe the same person. Match them by first name and patronymic, place of birth, unit and date of call-up, not by year.
+
 ### Evacuation
 
 - **Yad Vashem**: the central database contains data on more than half of the roughly 1.5 million evacuated Jews [from search snippet]. In one study, evacuation cards proved the patronymics of two family members where there were no metrical records.
 - **An evacuation card is also a list of relatives.** Look for those who were evacuated together afterwards in the ZAGS books: the births of children of **all** the men of the family. The place of birth named by an evacuee may lead to a shtetl rather than a city (N. Lipes, nadialipes.info).
 - **Tashkent, JewishGen database** (jewishgen.org/databases/holocaust/0136_uzbek.html) [checked]: 151,966 cards of Jewish evacuees of 1941–1942 from the Central State Archive of Uzbekistan. Fields: surname, first name, **patronymic**, year of birth, sex, where evacuated from, district of evacuation. The **scan of the card** opens by its number. The cards themselves also have occupation, place of work, children under 16. Limitation: only those who arrived in Tashkent before February 1942.
 - **USHMM survivors and victims database** (ushmm.org/online/hsv): the same evacuation cards, free and without logging in. ⚠️ The pages announce that the site will stop working in autumn 2026 — save what you need in advance.
+- **Orenburg (called Chkalov in 1938–1957): lists of evacuees, 1942–1943**, in Yandex "Archive Search" ("Поиск по архивам") — a collection of the State Archive of Orenburg Oblast (fond R-2144). The lists were drawn up by city district: family number, surname, first name, patronymic, relation to the head of the family, sex, age, nationality, where the person came from, occupation. There is also a separate **name index to all the lists** (inventory A, file 0, about 1,600 scans): next to each surname it gives the file number and the sheet. Start with the index, then open the sheet. Judging by one check, these lists have not been entered into the Yad Vashem database [verify for your case], so a person's absence there means nothing. ⚠️ Since November 2026 Yandex search and scans open only after signing in to a Yandex account; the person signs in themselves — see [Access, captchas, pace](19-access-captchas-pace.md).
 - **Regional databases**: Chelyabinsk oblast (archive74.ru), Kirov (reCAPTCHA on the form), Tomsk, the Altai Republic, Komi (LRF).
 - **Regional archives**: in one case the evacuation of a child from Leningrad was found in the register "Movement of Children" ("Движение детей") of a regional archive (through the EAIS, the unified archive information system).
 
@@ -75,6 +111,13 @@ The main book on the topic of this section is **N. Lipes, "Soviet Documents. Wha
 
 - **"Blockade. 1941–1944. Leningrad. Book of Memory"** — 35 volumes, 631,063 records; the electronic version is on the site of the "Returned Names" centre of the Russian National Library (visz.nlr.ru/blockade), searchable by surname and by the text of the entry [from search snippet].
 - **The consolidated "Book of Memory of Besieged Leningrad"** (blockade.spb.ru) combines TsAMO, the siege books, evacuation and regional archives; no captcha. It covers only the Leningrad circle — it is **not** a universal replacement for "Pamyat naroda". Scans of files lie as separate numbered files: adjacent images of the same file can be opened by changing the number, so you can read the whole file.
+- **All residents of a house (blockade.spb.ru).** The page `blockade.spb.ru/address/<id>/` ("List of residents of the house at the address: …", «Список жителей дома по адресу: …») shows all residents of that house who died in the siege and are in the book, children included, with the **flat number**. About 10 people per page, then `?page=2`, `?page=3` and so on.
+  - The house id is not shown by the search; it is found by trying ids. Ids are grouped by street (not strictly alphabetically): once you have found one house on a street, try the neighbouring ids. An invented example: if id 12345 is "Uslovnaya St., house 3", look for the other houses of that street around 12300–12500.
+  - The map search understands only **present-day** street names; convert an old name to the current one first.
+  - A person's card: `blockade.spb.ru/card/?id=N&source=external&docs=simple` — year of birth, address, date of death, volume of the memorial book, sometimes the cemetery; some cards have memoirs attached.
+  - The site's name search loads its results by script: it works in a browser, but a plain request without a browser (curl) returns an empty list — that is not a zero.
+  - A house page has only the people who are in the book. Survivors and evacuees are mostly not there, so a flat missing from the list says nothing about the fate of its residents.
+  - To try ids, use the script [`blockade_address_probe.sh`](../../../skills/soviet-era-records/scripts/blockade_address_probe.sh) from the `soviet-era-records` skill: for an id or a range of ids it prints the district and the address of the house, and with `-r` it lists all residents of the house (flat, full name, year of birth, card link). It pauses between requests.
 - **"Leningrad Martyrology 1937–1938"** — volumes and a consolidated name index on visz.nlr.ru [from search snippet].
 - **Evacuation from Leningrad 1941–1943** (evacuation.spbarchives.ru, Central State Archive of St Petersburg) — about 620,800 cards; search by full name, year of birth, year of evacuation [from search snippet].
 - **Piskaryovskoe Cemetery** (pmemorial.ru) — ⚠️ as of September 2026 the site no longer has a search database.

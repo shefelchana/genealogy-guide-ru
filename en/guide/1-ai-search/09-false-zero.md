@@ -304,6 +304,12 @@ A year or place filter set in the address bar does not work on some sites and re
 
 If after dozens of fast requests the record pages suddenly come back empty or the browser is redirected to another address, a rate limit has kicked in. What you read before that is a result; the rest is "the instrument did not respond". Pause several seconds between requests and do not bypass the protection; finish later or by hand.
 
+## 34. An index compiled by AI
+
+More and more often an index is compiled not by a volunteer but by a neural network: it reads the scans and writes the names into the database itself (this is how [archival.name](../../catalog/indexed-databases.md), for example, works). Such an index distorts names: the card shows one form, the scan another; a surname may be turned into Latin letters, a file title into a machine translation. A search for the "right" spelling then gives zero, and a row that is found may describe the wrong person.
+
+→ Check every hit against the scan the card links to, and quote the scan, not the index. A zero in an AI index is a zero of that index, not of the archive: search in "sounds like" mode and with several spellings, run a control query (section 4), and write in the log "not in the index", not "not in the file". The site usually does not say what share of the files the AI has read — there is no denominator (section 10).
+
 ---
 
 **See also:** [Checking results](04-checking-results.md) · [Standard of proof](../3-results/01-standard-of-proof.md), section 7 · [Names, surnames, spellings](../2-reference/03-names-spellings.md) · [Access, CAPTCHAs, pace](../2-reference/19-access-captchas-pace.md) · [Working with agents](03-working-with-agents.md) · the [verifying-genealogy-findings](../../../skills/verifying-genealogy-findings/SKILL.md) skill

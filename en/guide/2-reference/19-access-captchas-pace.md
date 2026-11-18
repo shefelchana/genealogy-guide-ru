@@ -30,6 +30,8 @@ Access can also be half-open: an archive's catalogue is fully open without a log
 | **Yandex "Archive Search"** | dropped connections, "Failed to fetch" | after roughly **25 rapid requests** in a row |
 | **"Open List"** | Cloudflare, error 429 | after **three** rapid requests |
 | **"Pamyat naroda"** | a "security check", error 401 | on automated requests |
+| **archival.name** | "the database is busy or being updated"; parallel queries return **empty answers** | under load; repeat after ~20 seconds, one query at a time, with pauses (November 2026) |
+| **Presidential Library** (prlib.ru) | "Access denied — your browser did not pass the security check"; no button gets past it | from abroad, 17.11.2026 (Israel) |
 | **Geni** | hCaptcha on profile pages | always, for automated reading |
 | **HathiTrust**, **Google Books** (programmatic access) | 403 / quota exhausted (429) | on automated requests; by hand in an ordinary browser they work |
 
@@ -57,12 +59,12 @@ Access can also be half-open: an archive's catalogue is fully open without a log
 
 ## 4. Geographic restrictions
 
-- **From abroad, some Russian government sites do not open** (archives, NEB — the National Electronic Library, RGB — the Russian State Library, RNB — the National Library of Russia, "Pamyat naroda", "Doroga pamyati", Gosuslugi, a number of oblast archives and their EAIS — unified archive information systems). Errors: "connection refused", 401, 403.
+- **From abroad, some Russian government sites do not open** (archives, NEB — the National Electronic Library, RGB — the Russian State Library, RNB — the National Library of Russia, "Pamyat naroda", Gosuslugi, a number of oblast archives and their EAIS — unified archive information systems). Errors: "connection refused", 401, 403.
 - The reverse also happens: some sites (for example the Polish archive portal szukajwarchiwach.gov.pl) have blocked certain foreign addresses entirely.
 - **Ukrainian archives**, according to reports in 2026, do not work with researchers from Russia and Belarus, and some archives have introduced IP-address blocking that also affects users from other countries (generaggs.substack.com, April 2026) [checked].
 - **A VPN often breaks access.** If you work through a VPN, try turning it off while you work with such sites.
 - Do not bypass protection. If a site is unavailable from your country, look for the same material elsewhere (FamilySearch ↔ the archive's site ↔ Commons) or ask acquaintances.
-- In November 2026 these opened from Israel (no VPN): NEB (the National Electronic Library), the Russian State Library, the National Library of Russia, GPIB, the Presidential Library, OBD Memorial, "Open List". "Pamyat naroda" (robot check) and pravo.gov.ru did not open. The rules change: re-check old "did not open" results.
+- In November 2026 these opened from Israel (no VPN): NEB (the National Electronic Library), the Russian State Library, the National Library of Russia, GPIB, OBD Memorial, "Open List"; on 18.11.2026 a hero's page on "Doroga pamyati" ("Road of Memory", 1418museum.ru) opened too, though it used to fail. "Pamyat naroda" (robot check) and pravo.gov.ru did not open. The Presidential Library (prlib.ru) opened in one check, but on 17.11.2026 it gave a **hard block** "your browser did not pass the security check": it is not a CAPTCHA, no button gets past it, and it must not be bypassed. The rules change: re-check old "did not open" results.
 - These also worked from abroad (October 2026): Yandex, GPIB (the State Public Historical Library), archive.org, FamilySearch, JewishGen, Yad Vashem, PHAIDRA.
 
 ## 5. What has closed or changed (September–October 2026)
