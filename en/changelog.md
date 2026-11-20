@@ -5,6 +5,7 @@
 
 ## 18 November 2026
 
+- All skills in English (RU bodies translated, later edits merged); citizenship: territory timeline, citizenship changes, ethnic programmes; family-like examples genericized; guide texts updated ([a4f2e35](https://github.com/shefelchana/genealogy-guide-ru/commit/a4f2e35))
 - Обновления: записи о правках страницы «О составителе» ([340c401](https://github.com/shefelchana/genealogy-guide-ru/commit/340c401))
 - О составителе: текст сокращён и упрощён (RU/EN) ([8665c12](https://github.com/shefelchana/genealogy-guide-ru/commit/8665c12))
 - О составителе: убрана строка о двух линиях, «Делюсь опытом» — в личном тоне (RU/EN) ([3161088](https://github.com/shefelchana/genealogy-guide-ru/commit/3161088))
