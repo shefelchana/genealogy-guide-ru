@@ -3,6 +3,10 @@
 > Every change to the guide by date, newest first, taken from the repository's commit history. The page is rebuilt automatically with the site. A summary by version is in "What's new" on the [main page](README.md). Commit messages are in the language of the change (Russian or English).
 
 
+## 20 November 2026
+
+- Советы с конференций, проверенные на деле (RootsTech 2023–2026, IAJGS 2024–2025): пороги Ньюман и средний сегмент (ДНК); графы манифеста по годам и пометка о натурализации; участки обществ земляков через JGS NY; Yahad-In Unum, USHMM HSV, libraria.ua; межархивный портал по месту, каталог метрик, описи, AGAD XML, FamilySearch Images, индекс JewishGen → плёнка; Галиция, ANU; «выбывший ≠ умерший»; Transkribus; тёзки и информант; разделы путеводителя по месту; навыки dna-matches-endogamy и tracing-emigrants-to-origin ([552c923](https://github.com/shefelchana/genealogy-guide-ru/commit/552c923))
+
 ## 18 November 2026
 
 - All skills in English (RU bodies translated, later edits merged); citizenship: territory timeline, citizenship changes, ethnic programmes; family-like examples genericized; guide texts updated ([a4f2e35](https://github.com/shefelchana/genealogy-guide-ru/commit/a4f2e35))
