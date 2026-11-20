@@ -43,7 +43,7 @@ The name passed through a clerk, a foreign alphabet and the ear. Build variants 
 - **endings**: -ов / -off / -ow / -ew / -iv / -uv (Проскуров (Proskurov) = Proskurow = Proskuriv); -ец / -etz / -ets / -ec / -iec; -ка / -ka; -ичи / -icze / -ichi;
 - **German and Polish spelling**: sch / sz / ш (sh), tsch / cz / ч (ch), w / в (v), j / й (y), ż / ж (zh);
 - **Yiddish**: vowels shift (Каменец (Kamenets) → Kaminetz, Kamenitz), final -ов is often dropped;
-- **Ukrainian and Russian** spelling: и/і/ы (i/i/y), е/є (e/ye), г/х (g/h/kh) (Гусятин / Husiatyn), case endings and language forms in catalogues ("Білилівка / Белиловка" (Bilylivka / Belilovka), Ukrainian / Russian);
+- **Ukrainian and Russian** spelling: и/і/ы (i/i/y), е/є (e/ye), г/х (g/h/kh) (Галич / Halych), case endings and language forms in catalogues ("Білилівка / Белиловка" (Bilylivka / Belilovka), Ukrainian / Russian);
 - **prefixes**: Старый / Новый (Old / New), Великий / Малый (Great / Little), Польный / Русский (Polish / Russian) are often lost in stories;
 - **transliteration decides**: a query for "Kamenets-Podolsk" may give zero, while "Kamenets" gives eight matches. Start with a short stem.
 

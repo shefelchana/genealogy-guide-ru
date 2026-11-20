@@ -2,7 +2,7 @@
 
 What this section covers: which ready-made skills are in this guide, when each one triggers, and how to install them in Claude Code or in the Claude app.
 
-> **Most skills are written in Russian; newer ones are in English.** You do not need to translate them or read Russian. Claude reads the skills regardless of your language and answers in the language you write in (English, for example). The installation instructions below are the same for everyone. The skill names and the links in the tables are the same as in the Russian guide; the descriptions in the tables are translated for you.
+> **All skills are written in English** (each description also lists Russian trigger phrases). Claude reads the skills regardless of your language and answers in the language you write in (English, for example). The installation instructions below are the same for everyone. The skill names and the links in the tables are the same as in the Russian guide; the descriptions in the tables are translated for you.
 
 A **skill** is a folder with an instruction file `SKILL.md` (and sometimes reference files, templates, scripts). Claude loads a skill by itself when a task fits its description: you write "read this scan of a metrical book", and the scan-reading skill is brought in, with all its techniques and traps. The skills repeat the method of this guide in a form convenient for AI.
 
@@ -25,8 +25,11 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 | Skill | When it triggers |
 |---|---|
 | [`identifying-places`](../../../skills/identifying-places/SKILL.md) | find a shtetl or village, its uezd and guberniya for the year needed, changes of borders and names |
+| [`tracing-family-moves-and-registration`](../../../skills/tracing-family-moves-and-registration/SKILL.md) | when and why a family moved: registration ≠ residence, duma passports, transfer files, two date windows from the documents |
 | [`ukrainian-archives-on-commons`](../../../skills/ukrainian-archives-on-commons/SKILL.md) | files of Ukrainian archives on Wikimedia Commons and inventories on Wikisource (Вікіджерела) |
+| [`requesting-records-from-ukrainian-archives`](../../../skills/requesting-records-from-ukrainian-archives/SKILL.md) | a request to a Ukrainian archive after the online checks: exact references, "no search needed", the price list, paying from abroad, a template and a case-list table |
 | [`soviet-era-records`](../../../skills/soviet-era-records/SKILL.md) | war, evacuation, the siege, repression, Soviet ZAGS |
+| [`researching-holocaust-fates-ukraine`](../../../skills/researching-holocaust-fates-ukraine/SKILL.md) | family fates in occupied Ukraine 1941–1944: Yad Vashem (the page and its submitter), Yahad map, ChGK acts, post-war lists, yizkor books, landsmanshaft monuments, evacuation |
 | [`tracing-emigrants-to-origin`](../../../skills/tracing-emigrants-to-origin/SKILL.md) | from US and European documents to the shtetl |
 | [`searching-pogrom-records`](../../../skills/searching-pogrom-records/SKILL.md) | pogroms of 1918–1922 (from the end of 1917): victim databases, aid recipients, orphans, refugees |
 | [`researching-jewish-cemeteries`](../../../skills/researching-jewish-cemeteries/SKILL.md) | where someone is buried, burial databases, reading a gravestone, converting a Jewish date |
@@ -39,6 +42,7 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 | [`searching-jewishgen`](../../../skills/searching-jewishgen/SKILL.md) | JewishGen databases: search, row limit, reading fields, going to the scan |
 | [`searching-familysearch-films`](../../../skills/searching-familysearch-films/SKILL.md) | FamilySearch films: catalogue → film → frame, boundaries of books, pace and CAPTCHAs |
 | [`searching-yandex-archives`](../../../skills/searching-yandex-archives/SKILL.md) | Yandex "Archive Search" (Поиск по архивам): operators, spellings, how to read a result |
+| [`searching-archival-name`](../../../skills/searching-archival-name/SKILL.md) | archival.name: inventories, the 1897 census (including natives of a town living elsewhere), 1926 family cards, pogrom relief; coverage first, limits, the asterisk, the false zero of a 429 answer |
 | [`searching-nli-jewish-press`](../../../skills/searching-nli-jewish-press/SKILL.md) | Jewish newspapers in the National Library of Israel |
 
 **Scan and reading**
@@ -47,6 +51,7 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 |---|---|
 | [`reading-archive-scans`](../../../skills/reading-archive-scans/SKILL.md) | read digitised files, assess scan quality, enhance faded ink, map a volume |
 | [`tracing-revision-records`](../../../skills/tracing-revision-records/SKILL.md) | go back in time through the revision lists of 1795–1858 |
+| [`reading-galician-jewish-records`](../../../skills/reading-galician-jewish-records/SKILL.md) | Galician Jewish records 1784–1939: children under the mother's surname ("unehelich"), a father named "by the mother's statement", the post-1877 column with the mother's parents, where the books are (AGAD, Gesher Galicia, FamilySearch) |
 | [`reading-hebrew-yiddish-sources`](../../../skills/reading-hebrew-yiddish-sources/SKILL.md) | gravestones, the Hebrew part of metrical records, signatures, Yiddish newspapers |
 | [`dating-old-photos`](../../../skills/dating-old-photos/SKILL.md) | date an old photograph by its mount, clothing, studio |
 | [`interpreting-jewish-family-photos`](../../../skills/interpreting-jewish-family-photos/SKILL.md) | what a Jewish family photograph says about the way of life and the occasion |

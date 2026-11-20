@@ -1,7 +1,7 @@
 ---
 name: using-community-surname-indexes
 description: >-
-  Uses surname indexes compiled by the genealogy community as the first step before reading archival files page by page — the j-roots forum lists (surname → archive, fond, inventory, file → shtetl or section), its family-topic navigator, JewishGen databases and JGFF, genealogyindexer full text, the AI-built archival.name index. Gives a no-login recipe for reading forum posts including hidden spoilers, maps each surname to the right document header and PDF, moves on to the scan on Commons, and keeps a registry of unread sections so a file read for one surname is not forgotten for the next. Use whenever the user is about to read a revision list, census or metrical book by surname, asks "which file has my family", "is there an index", gets a new surname to check, or says a file was only partly read — even if no index is named. Also triggers on Russian requests: «в каком деле искать фамилию», «есть ли указатель», «посмотри на j-roots», «фамильный указатель», «Краковский», «Финкельштейн».
+  Uses surname indexes compiled by the genealogy community as the first step before reading archival files page by page — the j-roots forum lists (surname → archive, fond, inventory, file → shtetl or section), its family-topic navigator, JewishGen databases and JGFF, genealogyindexer full text, the AI-built archival.name index, the ANU museum databases (surnames, communities, family trees; search by URL). Gives a no-login recipe for reading forum posts including hidden spoilers, maps each surname to the right document header and PDF, moves on to the scan on Commons, and keeps a registry of unread sections so a file read for one surname is not forgotten for the next. Use whenever the user is about to read a revision list, census or metrical book by surname, asks "which file has my family", "is there an index", gets a new surname to check, or says a file was only partly read — even if no index is named. Also triggers on Russian requests: «в каком деле искать фамилию», «есть ли указатель», «посмотри на j-roots», «фамильный указатель», «Краковский», «Финкельштейн».
 ---
 
 # Community surname indexes: index first, page-by-page reading second
@@ -31,6 +31,7 @@ All forms of the surname: Cyrillic and Latin, with a different root vowel, with 
 3. **genealogyindexer.org**: full text of directories and lists. The script is in the `verifying-genealogy-findings` skill.
 4. Pogrom databases for 1917–1922: skill `searching-pogrom-records`.
 5. Yandex "Search in Archives" (*Poisk po arkhivam*): recognised handwritten text for some archives, skill `searching-yandex-archives`.
+6. **ANU — Museum of the Jewish People**: surname articles, community histories and other people's family trees, sometimes your own family's tree sent in by relatives. Search by URL: open `dbs.anumuseum.org.il/skn/he` (or `/skn/en`) first, then `…/skn/he/c6/BH/Search#query=<word>`; changing only the "#" part on an open page does not rerun the search. Details: `references/other-indexes.md`.
 
 What each index provides and its traps: `references/other-indexes.md`.
 

@@ -1,7 +1,7 @@
 ---
 name: tracing-revision-records
 description: >-
-  Traces a family of the Russian Empire back through the revision lists (revizskie skazki) of 1795–1858, chaining generations by the "по последней ревизии" ("per the last revision") age column, and handles the problems of the early revisions — family numbers that do not carry over, surnames that vanish before the 1804 law, double Jewish given names, and estate changes between merchant and meshchanin. Use when pushing a line deeper in time, reading revision lists or family lists (posemeinye spiski), working with the 1795/1816/1834/1850/1858 revisions or the 1874–75 Jewish military census, or when a search fails because a surname does not appear in an early record. Typical requests: "how do I trace my family before 1858", "find my ancestors in the 1850 revision", "why is there no surname in the 1811 list". Also triggers on Russian requests: «ревизские сказки», «посемейные списки», «по последней ревизии», «вглубь по времени».
+  Traces a family of the Russian Empire back through the revision lists (revizskie skazki) of 1795–1858, chaining generations by the "по последней ревизии" ("per the last revision") age column, and handles the problems of the early revisions — family numbers that do not carry over, surnames that vanish before the 1804 law, double Jewish given names, patronymics and nicknames that do not identify a man, "departed" notes that do not mean death (fugitives, recruits), lost blocks of households, and estate changes between merchant and meshchanin. Use when pushing a line deeper in time, reading revision lists or family lists (posemeinye spiski), working with the 1795/1816/1834/1850/1858 revisions or the 1874–75 Jewish military census, or when a search fails because a surname does not appear in an early record. Typical requests: "how do I trace my family before 1858", "find my ancestors in the 1850 revision", "why is there no surname in the 1811 list". Also triggers on Russian requests: «ревизские сказки», «посемейные списки», «по последней ревизии», «вглубь по времени», «выбыл», «в бегах», «отдан в рекруты».
 ---
 
 # Deeper in time: the revision ladder
@@ -10,7 +10,7 @@ description: >-
 |---|---|---|
 | I–IV | 1719–1782 | mainly the Orthodox and peasant population; I and II men only, from III (1761–1767) women too; few Jews, since most communities entered the empire with the partitions of Poland (1772–1795) |
 | V | **1795** | the first after the partitions of the Polish–Lithuanian Commonwealth; for the Jews of the Right-Bank Ukraine **the earliest**; surnames often ABSENT; may be bilingual, Russian-Polish; women were as a rule recorded, but the completeness of Jewish lists varies |
-| VI | 1811 | **men only**: the absence of a wife or daughter means nothing |
+| VI | 1811 | **men only**: there are no wives or daughters at all, so their absence means nothing; a task that says "in 1811 X, wife Y" is an error — wives come from metrical records or the next revision |
 | VII | **1816** | men and women again; for many Jewish communities the first where the family is recorded whole; almost everyone has surnames |
 | VIII | 1834 | complete |
 | IX | **1850** | complete |
@@ -26,6 +26,8 @@ The column "**по последней ревизии состояло и пос�
 
 The second mandatory column is "**из того числа выбыло — когда именно**" [of those, departed — exactly when]: «умеръ въ 18.. году» [died in 18..], «отданъ въ рекруты» [given up as a recruit], «перечисленъ въ …» [transferred to …]. **The year of death of the head of the household dates the generation** and often turns out to be the only date available.
 
+⚠️ **Departed is not dead.** Read the note itself: «въ бѣгахъ съ …» / «бѣжалъ» [a fugitive since …], «отданъ въ рекруты» [given up as a recruit], «въ отлучкѣ съ …» [absent since …], «неявившійся» [did not appear], transfer to another estate or community, baptism. The revisions of the 1830s–1850s were compiled above all for the recruit levy, and men ran from it far away, usually south and south-east (New Russia, Bessarabia). A fugitive sometimes lived under the surname of the family that sheltered him, and his son could return to the original surname. Look for a vanished man in the revisions of other guberniyas by the **set of family names** (father, sons, ages), not by surname alone. Source: D. R. Brill, IAJGS 2024, "Where Did They Run To? Tracing Ancestors Who Fled Conscription in the Russian Empire" [rule from the talk, not verified].
+
 **Every find report must contain a bridge line:** "age per the previous revision is NN, so look in the revision of <year> at age NN". Without it a find is half useless.
 
 ✅ **Independent check: the order of seniority of the children** (a technique of Chaim Freedman). The order derived from the ages in one revision must coincide with the order in another. If it coincides, that is one more argument that it is the same family; if not, look for a second wife or a second family under the same number. The chain is carried back past 1804 in the same way: Polish censuses of 1765/1784 → revision of 1795 → 1816, with the patronymic as the bridge.
@@ -35,6 +37,8 @@ The second mandatory column is "**из того числа выбыло — ко
 The instruction (*Nastavlenie*) orders that families be written "per the present division of families, and not as they were divided at the last revision" («по нынешнему разделению семей, а не по тому, как они при последней ревизии разделены были»). A household split between sons, families departed: the numbering is new each time. A verified example: family No. 237 in the revision of 1850 is No. 341 in the revision of 1858.
 
 The link is made only by **given name, patronymic, age and household composition**.
+
+🔑 **Pencil numbers on the margin.** In an 1850 list later pencil numbers on the left margin turned out, most likely, to be the household numbers of the **next** revision (1858): checked on one household, where an 1858 copy gives both numbers (237 | 341) and the pencil on the neighbouring household fits the same run. Treat such a number as a lead ("look for household No. N in 1858"), check it on one household with a known pair before relying on it, and record it as unverified.
 
 ⚠️ **Exception: Bessarabia.** The Bessarabian lists of 1848–1859 have a column for the **former family number**, sometimes two ("1835 — No. 100, 1848 — No. 120"): this is a direct bridge between revisions. The early lists of Tiraspol uezd (1796, Dubossary 1799) have no surnames but state **where the family came from**; the head's occupation sometimes later became a surname. There are **supplementary revisions** (Tiraspol, 1858): people omitted from the main one, retired soldiers who arrived later. Source: the introductions to the revision databases of the Bessarabia SIG (I. Weiner, E. Cohen).
 
@@ -88,6 +92,17 @@ The law of 1804 obliged Jews to adopt surnames, but it was carried out over deca
 → The fingerprint for searching the early layer is the **combination "father + sons' names + ages"**, not the surname. A surname search here gives **false negative results**.
 → And the reverse: the absence of a surname in an early file **proves nothing** about the family.
 
+⚠️ **The patronymic is not diagnostic either.** In one shtetl, the 1850 revision has at least 12 different men with the same patronymic and different nicknames, and the metrical books of 1842–1852 have at least 8 different "X son of Yos" pairs. "Same patronymic, same shtetl, so brothers" is a hypothesis, not a finding: it needs ages, household composition and a document that names the relationship.
+⚠️ **Nicknames drift.** One man can carry one nickname in the revision and another in a metrical record of the same years, and one nickname changes its spelling between revisions (with and without "н", for example). Two records with different nicknames may be one person; two records with one nickname may be two men. Decide by age, household and wife's name, and keep both forms in the notes.
+
+## ⚠️ A lost block of households
+
+A volume can lack a whole run of households: in one 1834 shtetl list the online copy has households 1–192 and 293–412, but **193–292 are missing** (lost pages or a separate file never digitised). Before writing "not in 1834":
+· write out the household numbers you actually read, as ranges;
+· if the person is in this community in both the previous and the next revision, the gap is the likely explanation (a hypothesis, not a finding; his number in the next revision does not place him, since numbering is new each time);
+· look for a second copy of the same revision in another fond or file (the revision was compiled in several copies).
+If the gap remains, the conclusion is "not found in households 1–192 and 293–412; households 193–292 are missing", not "absent".
+
 ## 🔑 A shtetl can have TWO estate lists, with independent numbering
 
 In one Podolian shtetl, in both 1811 and 1834, there are **guild artisans** (*tsekhovye*) listed separately and **meshchane** separately, and **the numbering of households in the second list starts again from No. 1**.
@@ -98,6 +113,7 @@ In one Podolian shtetl, in both 1811 and 1834, there are **guild artisans** (*ts
 
 The column "по последней ревизии состояло — лета" [per the last revision there were — age] **does not always** point to the expected year.
 **Example:** in a file of 1811 for one Podolian uezd it points to the **census of 1806**, not to the revision of 1795. Proven three times: the difference between the columns is **exactly +5** in all rows; a direct quotation «по переписи 1806 года мещанъ ошибкою записанъ» [by the census of 1806 wrongly recorded as meshchane]; all departures are dated 1806–1811.
+**Second example:** in an 1834 list of one Podolian shtetl the difference is **+16, not +18**, in every row where both numbers are clear (40→56, 14→30, 13→29), and notes say «причисленъ 1818» [registered 1818]: "per the last revision" means the state of about **1818**, when the 7th revision was finished, not 1816. Bridge down: age in 1834 − 16.
 → **Calculate the difference between the columns: it will name the previous rung.** Between the canonical revisions there are interim censuses and supplementary lists.
 
 ## ⚠️ A family number is valid only within its own revision

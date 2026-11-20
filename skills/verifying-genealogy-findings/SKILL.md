@@ -1,7 +1,7 @@
 ---
 name: verifying-genealogy-findings
 description: >-
-  Establishes whether a genealogical finding actually holds — ranks sources by evidential weight, states the four conditions a negative conclusion must meet, searches surnames across period spellings and alphabets, queries free full-text corpora, keeps a register of family legends broken into separate claims, and briefs a research agent so its report is verifiable rather than merely plausible. Use when the user asks "is this finding reliable?", "can I trust this record or family tree?", "does 'not found' mean anything?", "how do I search a surname spelled many ways?", or when confirming or rejecting a family-history claim, or coordinating agents on archival research. Also triggers on Russian requests: «проверь находку», «доказано или нет», «что значит „не найдено“».
+  Establishes whether a genealogical finding actually holds — ranks sources by evidential weight, states the four conditions a negative conclusion must meet, searches surnames across period spellings and alphabets, queries free full-text corpora, keeps a register of family legends broken into separate claims, sorts namesakes into a table before linking generations, asks who the informant was, and briefs a research agent so its report is verifiable rather than merely plausible. Use when the user asks "is this finding reliable?", "can I trust this record or family tree?", "does 'not found' mean anything?", "how do I search a surname spelled many ways?", or when confirming or rejecting a family-history claim, or coordinating agents on archival research. Also triggers on Russian requests: «проверь находку», «доказано или нет», «что значит „не найдено“», «тёзки», «один и тот же человек?».
 ---
 
 # Standard of proof in genealogy
@@ -32,9 +32,14 @@ Ages in documents shifted not only at random — there were reasons, and they ca
 · **NKVD questionnaires and other Soviet questionnaires:** the ages of children given by relatives are sometimes wrong.
 · **Census against legend.** A family date "eldest son born 1895" is refuted by the 1897 census, in which the mother is 18 and unmarried. Check the legend against the parents' ages in the nearest census.
 
+## Namesakes and the informant
+
+· **Namesake table before linking generations.** Before deciding that a record of "Yankel son of Hersh" in 1850 and one in 1875 are the same man, write out **everyone** with that name in that place and those years (revision, census, tax lists), each with his own timeline. Resolve gaps and overlaps first, then link generations. If something "does not look right" (a father younger than his son, a marriage far from home), it most likely is wrong. Source: S. Skilton, RootsTech 2025, "Same Name, Different Person: Effective Record Sorting".
+· **Who gave the information?** Even on a genuine scan the facts may be second-hand: on a death certificate the age and parents come from a relative, in a metrical death record from whoever reported the death. The informant is rarely named but can be inferred from the law and practice of the period. Ask for each key field: "who most likely supplied this, and could they know it?" A death age given by a grandchild weighs less than a birth record. Source: A. Childs, RootsTech 2025, "Extracting Evidence: Strategies for Analyzing Genealogical Sources".
+
 ## Negative conclusion
 
-⚠️ **An index is not proof.** A verified case: a person is on the list at frame 502 and is absent from the alphabetical index of his own section. By JRI-Poland's experience, the annual indexes to metrical records are correct about 90% of the time: some records did not make it into them, some surnames were misread.
+⚠️ **An index is not proof.** A verified case: a person is on the list at frame 502 and is absent from the alphabetical index of his own section. By JRI-Poland's experience, the annual indexes to metrical records are correct about 90% of the time: some records did not make it into them, some surnames were misread. Two more checked cases (a JewishGen revision-list index, November 2026): an index row gave one surname where the image reads a different one, and a "second copy" of a revision listed in the index turned out to be the same file with the same lost pages. Open the image for every key row; how to get from a JewishGen row to the film frame — `searching-jewishgen`.
 
 **"Not found" has force only if four things are stated:**
 1. the source and its exact limits — the file, the pages, what exactly was viewed;
@@ -83,6 +88,8 @@ Wikimedia Commons (whole archival files of DAKhmO — State Archive of Khmelnyts
 
 ## How to brief an agent
 
+**Before the brief: search your own files.** Before calling a file "unread" or a finding "new", search the project **by the archival reference and separately by year, title and document type**. A checked case: a file read a month earlier was planned again, because its folder was named by year and title and a search by the reference found nothing; the agent repeated the work and reached the same conclusion. The same check applies before writing a find into the dossier: it may already be there under another name.
+
 The report must be **verifiable, not plausible**:
 
 1. **"Write only what you see."** Do not fill in, **do not carry names from the task itself into the report** if the agent did not see them. This is the main cause of invented finds: the agent reproduces what is expected.
@@ -107,7 +114,7 @@ The report must be **verifiable, not plausible**:
 · the surname **is in** the index → the reading is plausible;
 · the surname **is absent from all five books** → 🔴 **the reading is almost certainly wrong**;
 · then run **closely spelled variants** through the index and return to the reader a list of those that really exist — let him check on the scan.
-Verified: «Штейнтманъ» and «Кравнецъ» [Steintman, Kravnets] gave zero matches and turned out to be misreadings; «Фейгель», «Гроссъ», «Кройзманъ» [Feigel, Gross, Kroizman] were found at once.
+Verified: «Штейнтманъ» and «Кравнецъ» [Steintman, Kravnets] gave zero matches and turned out to be misreadings; «Фейгель», «Гроссъ» [Feigel, Gross] and a third control surname were found at once.
 
 ⚠️ **Neighbouring surnames in one shtetl prove nothing.** «Фейгманъ» [Feigman] next to «Фейгелемъ» [Feigel] is not a variant of one surname but **a separate surname formed differently**, with its own headword in the dictionary. Check by the index, not by resemblance to the eye.
 ⭐ For exact etymology tied to uezds — the topic `forum.j-roots.info/viewtopic.php?t=92`, where **Beider answers personally** (a user account is needed).

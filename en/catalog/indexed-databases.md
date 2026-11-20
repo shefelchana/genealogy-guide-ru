@@ -30,6 +30,7 @@ What this section covers: search databases with abstracts of documents (indexes)
 ### FamilySearch — record search (familysearch.org) (English interface)
 - **What is there:** indexes of metrical books, censuses, passenger lists, certificates, other people's trees. Moldova/Bessarabia, Ukraine and the USA are important. The films are in [archive-file-scans.md](archive-file-scans.md).
 - **Access:** Free, registration: yes. **Some images open only in Family History Centers** — a frequent reason for "not found" although the record exists.
+- **Search details (checked, November 2026):** use an asterisk for case endings (a stem with `*` finds more than the full form); in the 1897 census the parameter `w=<place>*` searches by place of birth, registration or residence — this finds natives of your shtetl who lived in another town.
 - **Pace:** hCaptcha appears when loading pages and after many frames in a row (see [Access, CAPTCHAs, pace](../guide/2-reference/19-access-captchas-pace.md)).
 - **Techniques:**
   - try **all spellings** (there can be about 20 variants) and "fuzzy" mode;
@@ -46,14 +47,16 @@ What this section covers: search databases with abstracts of documents (indexes)
 ### archival.name
 - **What is there:** a free combined name index for Central and Eastern Europe. It has worked since 8 October 2026 and was built by one person. Collections: archive inventories (names in file titles), the 1897 census, the family cards of the 1926 census of the Ukrainian SSR, pogrom-relief files (1917–1938), merchants of the guberniyas (files on admission to guilds and town communities), directories, metrical books. Almost every card links to a scan on Wikimedia Commons: one link to the page, one to the whole file [checked].
 - **How the index is made:** the indexes were **compiled by AI** and, according to the author, checked on samples; errors remain, and "for now quantity comes before quality" [checked]. It is a hint where a sheet lies, not a reading of it.
-- **Access:** free. The site has a login; whether you need it to see full rows is [verify].
+- **Access:** free; after a free sign-in you see the full record and the link to the scan. Account limits (November 2026): 4,000 records a day (reset at midnight UTC), 8,000 rows an hour. There is no paid plan; you can ask the author for a higher limit (address on the About page). Checked in practice, November 2026.
+- **What is there for your place:** the page "Record books by place" (`archival.name/books/`) lists every book and file on the site by province, region, archive and record type, with a link to the scan. Look at it before searching for a surname: it shows whether your place is covered at all.
 - **How to search:** a search is set by the address: `archival.name/ru/search/?q=<surname>&m=bm&t=<town>&tr=g`. `m=bm` means "sounds like"; `t` is the town in Latin letters (for example, `Vinnytsya`); `tr=g` means "in its guberniya around 1900". First run a control query — a common surname in the same town: if that is empty too, the site is silent, not the archive. A card opens when you click a row.
-- **Pace:** the rows of each collection load in 10–20 seconds. On the message "the database is busy or being updated", repeat after about 20 seconds. **One query at a time, with pauses:** parallel queries return empty answers, and that is not a zero.
+- **Pace:** the rows of each collection load in 10–20 seconds. On the message "the database is busy or being updated", repeat after about 20 seconds. **One query at a time, with pauses:** parallel queries and an exceeded limit (response 429) return empty answers, and that is not a zero.
 - **Traps:**
   - **AI distorts names**: the card shows one form, the scan another; surnames in the results are sometimes in Polish-style Latin spelling (sz, cz, w); file titles from inventories are machine-translated into English. Assert nothing from the index — only from the scan.
   - a row from an **inventory** leads to the inventory page, not to the file itself; the file may not be digitised yet. Then you have a reference but no document.
   - a zero in such an index is a zero of the index, not of the archive (see [The false zero](../guide/1-ai-search/09-false-zero.md), section 34).
 - **For advanced users:** the site has a JSON interface: `/api/archives-finding-aids/search?nm=<name>&nmm=bm&pl=<Town>&plr=g` (inventories) and `/api/everything?q=<query>&m=bm&sur=<surname>&msur=bm&t=<Town>&tr=g` (how many records in each collection). Same rules: one query at a time, with pauses.
+- **Skill for AI:** [searching-archival-name](../../skills/searching-archival-name/SKILL.md) — coverage, limits, search tips, the JSON interface and traps.
 
 ### Yad Vashem, Central Database of Shoah Victims' Names (collections.yadvashem.org) (English interface)
 - **What is there:** about 5 million names: pages of testimony (about 2.8 million, all scanned [from search snippet]), lists of evacuees (evacuation cards), lists of victims. The most valuable thing is the **name and address of the person who submitted the page** — a relative through whom the whole branch can be found.

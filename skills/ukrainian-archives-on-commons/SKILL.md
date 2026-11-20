@@ -1,7 +1,7 @@
 ---
 name: ukrainian-archives-on-commons
 description: >-
-  Finds and downloads whole files of Ukrainian state archives published on Wikimedia Commons (metrical books, revision lists, censuses, court files, inventories, ZAGS registers of 1919–1944) and the fond listings on Ukrainian Wikisource (the «Архів:» namespace). Goes from an archival reference (archive, fond, inventory, file) or a place name to the exact Commons file name via the MediaWiki API (POST), handles naming variants and duplicates, measures scan quality, downloads the PDF whole and hands reading to reading-archive-scans. Wikisource listings cover a small share of each inventory: never use them for negative conclusions. Use when the user mentions DAKhmO, DAViO, DAZhO, DAKO, DAOO, TsDIAK or another Ukrainian archive, a reference like 227-1-137, or asks for a metrical book or 1920s–30s ZAGS records. Also triggers on Russian requests: «ДАХмО», «ДАВіО», «ДАЖО», «ДАКО», «ЦДІАК», «дело на Commons», «Архів на Вікіджерелах», «скачай метрическую книгу из украинского архива», «найди ЗАГС 1920-х или 1930-х».
+  Finds and downloads whole files of Ukrainian state archives published on Wikimedia Commons (metrical books, revision lists, censuses, court files, inventories, ZAGS registers of 1919–1944) and the fond listings on Ukrainian Wikisource (the «Архів:» namespace). Checks where a file is online (Duck Inspector, babynyar.org, FamilySearch Images), searches the inter-archive portal searcharchives.net.ua by place, and goes from an archival reference (archive, fond, inventory, file) or a place name to the exact Commons file name via the MediaWiki API (POST), handles naming variants and duplicates, measures scan quality, downloads the PDF whole and hands reading to reading-archive-scans. Wikisource listings cover a small share of each inventory: never use them for negative conclusions. Use when the user mentions DAKhmO, DAViO, DAZhO, DAKO, DAOO, TsDIAK or another Ukrainian archive, a reference like 227-1-137, or asks for a metrical book or 1920s–30s ZAGS records. Also triggers on Russian requests: «ДАХмО», «ДАВіО», «ДАЖО», «ДАКО», «ЦДІАК», «дело на Commons», «межархивный портал», «FamilySearch Images», «Архів на Вікіджерелах», «скачай метрическую книгу из украинского архива», «найди ЗАГС 1920-х или 1930-х».
 ---
 
 # Files of Ukrainian archives on Wikimedia Commons
@@ -17,9 +17,9 @@ Archive abbreviations, sample file names and the volume map of the consolidated 
 ## Workflow
 
 ```
-- [ ] 0. Have a reference? → check it in the "Duck Inspector" (Качиний Інспектор): is the file online and where
+- [ ] 0. Have a reference? → check it in the "Duck Inspector" (Качиний Інспектор): is the file online and where (Commons, FamilySearch, babynyar.org)
 - [ ] 1. Have a reference? → step 3. Only a place and years? → step 2
-- [ ] 2. Find the reference: consolidated catalogue of metrical books → the archive's register of inventories → paper inventory on Commons → Wikisource listing
+- [ ] 2. Find the reference: inter-archive portal by place → consolidated catalogue of metrical books → the archive's register of inventories → paper inventory on Commons → Wikisource listing; FamilySearch Catalog and Images
 - [ ] 3. Find the exact file name (Wikisource subpage or the Commons API, all name variants)
 - [ ] 4. Metadata: size, page count → MB/page; duplicates
 - [ ] 5. Open the cover and one page from the middle: is it the right file
@@ -34,19 +34,27 @@ curl -s -X POST https://inspector.duckarchive.com/api/search -H "Content-Type: a
   -d '{"archive":"ДАХмО","fond":"226","inventory":"80","file":"639"}'
 ```
 The response gives the file title, years and an `is_online` flag; the file card is at `inspector.duckarchive.com/archives/<ARCHIVE>/<fond>/<opys>/<sprava>`. Checked 07.10.2026.
-⚠️ The index is **incomplete**: an empty response or `is_online: false` is not a negative conclusion. It was verified that some files already uploaded to Commons are marked there as not online. Go on to step 3 on Commons.
+Other endpoints: `GET /api/catalog/<archive>/<fond>/<opys>/<sprava>` for one file; text search only in Cyrillic; about 5 requests per 10 seconds; instructions for agents at `inspector.duckarchive.com/llms.txt`. A search by place and years gives a summary of everything digitised for a shtetl (Catholic, Orthodox, confessional lists), so you see at once what is missing for Jews. Checked November 2026: in minutes it showed which of the needed files were online nowhere.
+⚠️ The index is **incomplete**: an empty response, a 404 or `is_online: false` means "not found", not "does not exist". It was verified that some files already uploaded to Commons are marked there as not online. Go on to step 3 on Commons.
+
+**babynyar.org/archive** (the portal of the Babyn Yar project; part of the Inspector's results lead there) holds whole files of some archives (for example DAZhO revisions) in colour. It is a **mirror of scans, not an index**: there is no name index to the revisions (its "Імена" section is the database of Babyn Yar victims). It opens in an ordinary browser; scripts get 403. Previews are small: take full size through the viewer. Checked November 2026.
 
 ## Step 2. From a place to a reference
 
-The order matters: each following source is **less complete** than the previous one.
+**Start with the inter-archive portal, by place.** searcharchives.net.ua (13 archives, DAKhmO among them) searches titles of fonds and files, annotations and name indexes: `https://searcharchives.net.ua/search/?Search=<word>&Digitized=1` (`Digitized=1` = only digitised, `0` = everything). **Search by the place name, not by surname**: one query shows the fonds of a shtetl by type (magistrate, notaries, pogrom reports, Soviet ZAGS), and digitised files have a "Переглянути" [View] link to the archive's viewer. By surname the search is fuzzy (similar-sounding and merely similar words, quotation marks do not help), and name indexes exist only for some fonds: **a zero by surname means nothing**. Works without login and from a script. Checked November 2026. Source: M. T. Chubenko, RootsTech 2026, "Click Into Ukraine".
+
+Then for metrical books, the order matters: each following source is **less complete** than the previous one.
 
 1. **The "Consolidated Catalogue of Metrical Books" (*Зведений каталог метричних книг*)**: 10 volumes in 15 books (2009–2021), covering the oblast state archives and the archive of the city of Kyiv; Lviv oblast is not in volumes 1–10. The volumes on Commons are **digital PDFs with a text layer** (a few MB for hundreds of pages): download the needed volume and search for the place name by text search. Search in several spellings (Ukrainian and Russian, "Білилівка / Белиловка" [Bilylivka]) and allow for case endings.
    ⚠️ The catalogue **does not cover TsDIAK** (Central State Historical Archive, Kyiv), second copies, or ZAGS records. The correct wording of a negative result: "not found by text search of all 15 books of the catalogue".
+   ⚠️ **The catalogue errs and is incomplete** (checked November 2026): one file was listed under a shtetl it does not contain, and a whole inventory of late Jewish metrical books read by us was absent. "Not in the catalogue" does not mean "no book"; check a catalogue reference against the file's cover. The hub metrics.tilda.ws/ukraine links all volumes.
 2. **The register of inventories on the archive's website** (for example DAKhmO's "Анотований реєстр описів" [Annotated register of inventories], with a text layer) describes **the whole fond**. It reveals whole classes of files that are in neither the listings nor the digitisation.
 3. **A paper inventory on Commons**: files of the form "<ARCHIVE> фонд N опис N.pdf" [fond N inventory N]. This is the full list of the fond's files with titles.
 4. **A listing on Wikisource** (`uk.wikisource.org`, pages "Архів:<ARCHIVE>/<fond>/<opys>", the Ukrainian Wikisource "Archive:" namespace): convenient because a file's subpage leads straight to the file on Commons, and the inventory page links in its notes to the file of the paper inventory.
 
 ⚠️ **A Wikisource listing is a sample, not an inventory.** A verified case: the listing of one inventory itemises 308 files out of 9,288 and in places names a file wrongly. Three false conclusions in a row were born from it ("the only file for the uezd", "no such revision exists", "there is no duplicate"). **Never use it for negative conclusions**: only the paper inventory or the register.
+
+**FamilySearch: Catalog and Images are different stores.** Films of the 1990s–2000s are in the Catalog; filming in Ukrainian archives **since 2022** is published in **Images** (familysearch.org/records/images), not in the Catalog. Search Images by place at three levels — town or village, uezd, guberniya — under old and modern names (place IDs differ, results differ); the `keyword` filter matches the file number (several numbers = OR). Control: search a file you know is there. A checked state (November 2026): for Podolia, Images held consistory, Orthodox church, court, bank, notary, magistrate and town-council fonds, but **no files of DAKhmO fonds 226, 227 and 277** (treasury chamber revisions, copies of Jewish metrical books). Repeat such a zero every few months. Viewing needs the person's FamilySearch login; reading frames: `searching-familysearch-films`. Source: E. Vance, RootsTech 2023, "Tracing Your Jewish Roots in Ukraine".
 
 For TsDIAK, instead of the catalogue: the "Архів:ЦДІАК" listing on Wikisource and a search of file titles at archium.cdiak.archives.gov.ua (the archive's main site answers automated requests with 403 but opens in an ordinary browser).
 

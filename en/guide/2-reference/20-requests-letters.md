@@ -60,6 +60,7 @@ Nadia Lipes advises working with pre-revolutionary documents through local genea
 - Example: at the State Archive of Ternopil Oblast a genealogical certificate is a paid service: a written application → a contract → payment on completion; the tariffs are approved by order of the director and are not published on the page [checked].
 - [from search snippet] The Chernivtsi and Zhytomyr archives: requests are accepted by post, by e-mail or in person; the cost depends on complexity; state the region, village or town, surname (for women — the maiden name), dates, religion, estate.
 - The language is Ukrainian (not verified against the page).
+- How to write a request to a Ukrainian archive by exact references (online checks, price-list logic, paying from abroad, a template in Ukrainian, a case-list table) — skill [requesting-records-from-ukrainian-archives](../../../skills/requesting-records-from-ukrainian-archives/SKILL.md).
 
 ### Russia
 - According to FamilySearch, Rosarkhiv (the Federal Archival Agency) and many Russian archives are not set up for "family history" requests; they recommend specialised paid services (for example BLITZ, St. Petersburg, preliminary search — $80 per FamilySearch).

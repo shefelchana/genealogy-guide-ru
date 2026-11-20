@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.5, November 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.7, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -140,7 +140,7 @@ The five rules that save months are in the [Quick start](guide/0-start/01-quick-
 
 ## Skills for Claude — how to install
 
-The [skills/](../skills/README.md) folder contains 35 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
+The [skills/](../skills/README.md) folder contains 40 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
 
 All skills are written in English; each description also lists Russian trigger phrases, so the skills work with requests in either language.
 
@@ -157,6 +157,14 @@ All skills are written in English; each description also lists Russian trigger p
 More details and limitations — [skills/README.md](../skills/README.md).
 
 **Via Agensi.** The skill pack is also on the Agensi marketplace (new skills reach it with a delay); an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+
+## What's new in 0.5.7
+
+(0.5.6 was the number of the Agensi skill pack of 18 November: all skills in English.)
+
+- **New skill `reading-galician-jewish-records`:** Jewish vital records of Galicia 1784–1939 — forms before and after 1877, children under the mother's surname ("unehelich"), a father named "by the mother's statement" and acknowledgement of paternity, the column with the mother's parents, house numbers, interlinear additions, where the books are (AGAD XML inventory, Gesher Galicia Town Locator, JRI-Poland, FamilySearch); a worked example with an invented family.
+- **Four more new skills:** `searching-archival-name` — the archival.name index: the coverage page by place first, free sign-in and limits (4,000 records a day), the asterisk for case endings, finding natives of a town anywhere in the 1897 census, the JSON interface, a 429 answer as a false zero; `tracing-family-moves-and-registration` — dating a family's move: registration ≠ residence, town-duma passports, transfer files, supplementary revision lists, the 1843 border-zone law as background, a child named after the deceased maternal grandfather as a clue; `researching-holocaust-fates-ukraine` — family fates in 1941–1944: the place first (zone, dates of actions from the Yahad map and ChGK acts), then the people (the Page of Testimony and its submitter, post-war lists, yizkor books, landsmanshaft monuments, evacuation cards), the false zeros of each source; `requesting-records-from-ukrainian-archives` — a request to a Ukrainian archive only after the online checks and only when the person asks: exact references, "no search needed", the price-list logic, paying from abroad, a template in Ukrainian and a case-list table. Each has a worked example with an invented family.
+- **Skills updated with techniques tested on real research** (conference advice from RootsTech 2023–2026 and IAJGS 2024–2025): `researching-jewish-cemeteries` — from the JGS NY database to the whole landsmanshaft plot, spelling traps; `tracing-revision-records` — "departed is not dead", the 1834 "per the last revision" = 1818 bridge, pencil numbers on margins, lost blocks of households, patronymics and nicknames that do not identify a man; `verifying-genealogy-findings` — a namesake table, the informant, index vs document, searching your own files by reference and by year; `ukrainian-archives-on-commons` — the inter-archive portal by place, FamilySearch Images, babynyar.org; `searching-jewishgen` — from an index row to the film frame, dating zeros; `using-community-surname-indexes` — searching the ANU museum databases by URL; `dna-matches-endogamy` — Newman thresholds and the average segment; `tracing-emigrants-to-origin` — manifest columns by year, the naturalization note in "Occupation", landsmanshaft plots. The same advice was added to the Russian guide pages.
 
 ## What's new in 0.5.5
 

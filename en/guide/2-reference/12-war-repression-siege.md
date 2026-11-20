@@ -162,6 +162,7 @@ A common case: you know the address where the family lived in 1941, but not the 
 - **Date and place of death by place of residence.** Find the article about the shtetl in the encyclopedias: "The Holocaust on the Territory of the USSR" (*Kholokost na territorii SSSR*, ed. I. Altman, 2009; places where at least 100 Jews were killed or there were ghettos) and the works of A. Kruglov ("Encyclopedia of the Holocaust", Kyiv, 2000) [from search snippet]. Dates of "actions", matched against the family's last known address, are not yet proof of death, but they make a precise question for Yad Vashem and the ChGK acts.
 - **The Romanian zone ("Transnistria")** — the south of Podolia and Bessarabia: a different kind of fate (camps and ghettos, rather than shootings in the first months); testimonies have been collected, for example, by B. Zabarko [from search snippet].
 - **Arolsen Archives**, **EHRI** (a portal of archival finding aids on the Holocaust across Europe).
+- The order of work by place and by person, the false zeros of each source, yizkor books and landsmanshaft monuments — skill [researching-holocaust-fates-ukraine](../../../skills/researching-holocaust-fates-ukraine/SKILL.md).
 - "(Un)Known Holocaust" ("(Не)Відомий Голокост") is a documentary film (2021), not a database.
 
 ## 9a. Pogroms 1918–1922

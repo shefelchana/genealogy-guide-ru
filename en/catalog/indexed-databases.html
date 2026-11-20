@@ -67,6 +67,7 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 <ul>
 <li><strong>What is there:</strong> indexes of metrical books, censuses, passenger lists, certificates, other people's trees. Moldova/Bessarabia, Ukraine and the USA are important. The films are in <a href="archive-file-scans.html">archive-file-scans.md</a>.</li>
 <li><strong>Access:</strong> Free, registration: yes. <strong>Some images open only in Family History Centers</strong> — a frequent reason for "not found" although the record exists.</li>
+<li><strong>Search details (checked, November 2026):</strong> use an asterisk for case endings (a stem with <code>*</code> finds more than the full form); in the 1897 census the parameter <code>w=&lt;place&gt;*</code> searches by place of birth, registration or residence — this finds natives of your shtetl who lived in another town.</li>
 <li><strong>Pace:</strong> hCaptcha appears when loading pages and after many frames in a row (see <a href="../guide/2-reference/19-access-captchas-pace.html">Access, CAPTCHAs, pace</a>).</li>
 <li><strong>Techniques:</strong><ul>
 <li>try <strong>all spellings</strong> (there can be about 20 variants) and "fuzzy" mode;</li>
@@ -87,9 +88,10 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 <ul>
 <li><strong>What is there:</strong> a free combined name index for Central and Eastern Europe. It has worked since 8 October 2026 and was built by one person. Collections: archive inventories (names in file titles), the 1897 census, the family cards of the 1926 census of the Ukrainian SSR, pogrom-relief files (1917–1938), merchants of the guberniyas (files on admission to guilds and town communities), directories, metrical books. Almost every card links to a scan on Wikimedia Commons: one link to the page, one to the whole file [checked].</li>
 <li><strong>How the index is made:</strong> the indexes were <strong>compiled by AI</strong> and, according to the author, checked on samples; errors remain, and "for now quantity comes before quality" [checked]. It is a hint where a sheet lies, not a reading of it.</li>
-<li><strong>Access:</strong> free. The site has a login; whether you need it to see full rows is [verify].</li>
+<li><strong>Access:</strong> free; after a free sign-in you see the full record and the link to the scan. Account limits (November 2026): 4,000 records a day (reset at midnight UTC), 8,000 rows an hour. There is no paid plan; you can ask the author for a higher limit (address on the About page). Checked in practice, November 2026.</li>
+<li><strong>What is there for your place:</strong> the page "Record books by place" (<code>archival.name/books/</code>) lists every book and file on the site by province, region, archive and record type, with a link to the scan. Look at it before searching for a surname: it shows whether your place is covered at all.</li>
 <li><strong>How to search:</strong> a search is set by the address: <code>archival.name/ru/search/?q=&lt;surname&gt;&amp;m=bm&amp;t=&lt;town&gt;&amp;tr=g</code>. <code>m=bm</code> means "sounds like"; <code>t</code> is the town in Latin letters (for example, <code>Vinnytsya</code>); <code>tr=g</code> means "in its guberniya around 1900". First run a control query — a common surname in the same town: if that is empty too, the site is silent, not the archive. A card opens when you click a row.</li>
-<li><strong>Pace:</strong> the rows of each collection load in 10–20 seconds. On the message "the database is busy or being updated", repeat after about 20 seconds. <strong>One query at a time, with pauses:</strong> parallel queries return empty answers, and that is not a zero.</li>
+<li><strong>Pace:</strong> the rows of each collection load in 10–20 seconds. On the message "the database is busy or being updated", repeat after about 20 seconds. <strong>One query at a time, with pauses:</strong> parallel queries and an exceeded limit (response 429) return empty answers, and that is not a zero.</li>
 <li><strong>Traps:</strong><ul>
 <li><strong>AI distorts names</strong>: the card shows one form, the scan another; surnames in the results are sometimes in Polish-style Latin spelling (sz, cz, w); file titles from inventories are machine-translated into English. Assert nothing from the index — only from the scan.</li>
 <li>a row from an <strong>inventory</strong> leads to the inventory page, not to the file itself; the file may not be digitised yet. Then you have a reference but no document.</li>
@@ -97,6 +99,7 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 </ul>
 </li>
 <li><strong>For advanced users:</strong> the site has a JSON interface: <code>/api/archives-finding-aids/search?nm=&lt;name&gt;&amp;nmm=bm&amp;pl=&lt;Town&gt;&amp;plr=g</code> (inventories) and <code>/api/everything?q=&lt;query&gt;&amp;m=bm&amp;sur=&lt;surname&gt;&amp;msur=bm&amp;t=&lt;Town&gt;&amp;tr=g</code> (how many records in each collection). Same rules: one query at a time, with pauses.</li>
+<li><strong>Skill for AI:</strong> <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/searching-archival-name/SKILL.md">searching-archival-name</a> — coverage, limits, search tips, the JSON interface and traps.</li>
 </ul>
 <h3 id="yad-vashem-central-database-of-shoah-victims-names-collectionsyadvashemorg-english-interface">Yad Vashem, Central Database of Shoah Victims' Names (collections.yadvashem.org) (English interface)</h3>
 <ul>

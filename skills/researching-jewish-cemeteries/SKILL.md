@@ -27,7 +27,7 @@ Order by region:
 - **Moscow**: the hevra kadisha register (Vostryakovo, Malakhovka, Saltykovka cemeteries), Toldot. **Petersburg**: the database of the Preobrazhenskoe Jewish Cemetery.
 - **Poland**: the Foundation for Documentation of Jewish Cemeteries database (Warsaw-Okopowa and others), JOWBR.
 - **Israel**: search each local hevra kadisha separately (Tel Aviv, Jerusalem, Haifa, Rehovot...) plus BillionGraves / MyHeritage (according to a MyHeritage announcement, almost all Israeli cemeteries had been photographed by March 2019; later burials may be missing). Search **in Hebrew**.
-- **USA**: Find a Grave, BillionGraves, JOWBR, the JGSNY database of landsmanshaft society plots.
+- **USA**: Find a Grave, BillionGraves, JOWBR, the JGSNY database of landsmanshaft society plots (workflow in Step 5).
 
 Search every spelling of the surname and given name, including Soviet forms (Khaim → Yefim) and Hebrew ones. Mitzvat Emet: type the beginning of the surname → **choose the suggestion** → «Поиск» ("Search", the button label on the site). After about 5 searches in a row the form silently stops submitting. Do not work around it; try again later, one search per visit. A human handles CAPTCHAs, logins and registration.
 
@@ -54,7 +54,14 @@ Year in letters + 5000 (if the thousands are omitted) − 3760 = Gregorian year;
 ## Step 5. Neighbours and plots
 
 - Neighbouring graves are often relatives: spouses side by side, children near their parents, family enclosures. Photograph and read the **neighbouring** stones too.
-- In the USA, landsmanshaft societies (*landsmanshaftn*, hometown societies) bought plots; the society's section names the **shtetl of origin**. Use the JGSNY database by society or shtetl name. This is an argument, not proof: people from neighbouring places also joined the society; confirm with naturalization papers and ship manifests.
+- In the USA, landsmanshaft societies (*landsmanshaftn*, hometown societies) bought plots; the society's section names the **shtetl of origin**. This is an argument, not proof: people from neighbouring places also joined the society; confirm with naturalization papers and ship manifests.
+- **From a shtetl to the whole plot** (tested November 2026):
+  1. In the JGSNY Burial Society database (jgsny.org → Searchable Databases → Burial Society), search the "Town" field by the **modern Latin-script name** of the place (Kamyanets Podilskyy, Berdychiv). Old spellings and name beginnings gave zero where the modern name found the society. Control query: a large town that is certainly there.
+  2. The database gives the society, the cemetery and the plot (gate, block, section). It holds no names of the buried.
+  3. On the cemetery's own website search by **society name** (for example the "Society" field of the Montefiore Cemetery search). The result is the **whole plot**: read it through and save it; relatives you did not know of turn up there.
+  4. **Spelling trap.** Societies used Yiddish town names, and one spelling may work where a close one gives nothing: for one Podolian shtetl the societies were filed only as "Dinewitz / Dinevitzer", while "Dinovitzer" and transliterations of the Russian name found nothing. Search the society field by a short stem ("Dinev", "Dinew") and try every vowel.
+  5. **Similar-name trap.** A society whose name resembles your shtetl may belong to another town with a similar name, often in Galicia (a "Dunajower" society belongs to Galician Dunajów, not to a Podolian shtetl with a similar name). Check country and district in the database, not the name alone.
+  6. A zero is also a result: small places and places from which few people went to New York may be missing.
 - In Israel and in Soviet cemeteries the plots were allocated by year of burial: the plot number narrows down the year.
 
 ## Step 6. Books and records of burials
