@@ -120,7 +120,7 @@
 | украинские архивы на Commons | [`ukrainian-archives-on-commons`](skills/ukrainian-archives-on-commons/SKILL.md) | [Архивы по странам](guide/2-справочник/07-архивы-по-странам.md) |
 | запрос в украинский архив (только по просьбе человека) | [`requesting-records-from-ukrainian-archives`](skills/requesting-records-from-ukrainian-archives/SKILL.md) | [Запросы и письма](guide/2-справочник/20-запросы-и-письма.md) |
 | FamilySearch, JewishGen, Яндекс-архивы, пресса NLI | [`searching-familysearch-films`](skills/searching-familysearch-films/SKILL.md), [`searching-jewishgen`](skills/searching-jewishgen/SKILL.md), [`searching-yandex-archives`](skills/searching-yandex-archives/SKILL.md), [`searching-nli-jewish-press`](skills/searching-nli-jewish-press/SKILL.md) | [каталог](catalog/README.md) |
-| archival.name: описи, перепись 1897, карточки 1926 | [`searching-archival-name`](skills/searching-archival-name/SKILL.md) | [Базы с индексами](catalog/базы-с-индексами.md) |
+| archival.name: описи, перепись 1897, карточки 1926 (ищет только человек, вручную — условия сайта) | [`searching-archival-name`](skills/searching-archival-name/SKILL.md) | [Базы с индексами](catalog/базы-с-индексами.md) |
 | погромы 1918–1922 (с конца 1917) | [`searching-pogrom-records`](skills/searching-pogrom-records/SKILL.md) | [Погромы 1918–1922](guide/2-справочник/11-погромы-1918-1922.md) |
 | кладбища, надгробия | [`researching-jewish-cemeteries`](skills/researching-jewish-cemeteries/SKILL.md) | [Кладбища](guide/2-справочник/10-кладбища.md) |
 | война, эвакуация, репрессии, Холокост | [`soviet-era-records`](skills/soviet-era-records/SKILL.md) | [Война, репрессии, блокада](guide/2-справочник/12-война-репрессии-блокада.md) |

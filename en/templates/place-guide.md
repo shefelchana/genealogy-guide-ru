@@ -11,7 +11,8 @@
 4. A short history
 5. Which documents exist
 6. Archives and references
-7. What has already been viewed
+7. Registration
+8. What has already been viewed
 
 ## 1. Where it is and what it was called
 - Coordinates, nearest town, river:
@@ -40,7 +41,14 @@
 - Archive, website address, fond(s):
 - Ready-made reference works and guides (by link, not retold):
 
-## 7. What has already been viewed
+## 7. Registration
+For Jewish families registration (the society a person belonged to) and residence were often different places and different fonds. A guide built only around the place of residence loses everything kept at the place of registration.
+- To which society (meshchane, merchants, farmers) the people of this place were registered:
+- Which rabbinate kept their metrical books:
+- Which meshchane board (duma, town hall) kept the tax and family lists, and where its fond is:
+- Who lived here but was registered elsewhere — and where to look for their records:
+
+## 8. What has already been viewed
 - A link to the research log for this place.
 
 — One place — one file. Put links to reference works rather than rewriting them. Put a link to the source beside every map at once.

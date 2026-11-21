@@ -48,6 +48,7 @@ Fond–inventory–file (for example, 226-80-1177 — DAKhmO, fond 226, inventor
 
 ## Inter-archival search portal (Міжархівний пошуковий портал; searcharchives.net.ua) (in Ukrainian)
 - 13 archives of Ukraine: 65,406 fonds, 1,276,033 files, more than 25 million digital images. Full-text search over the names of fonds and files, annotations and indexes, with morphology; free [checked].
+- **The way in for a place name is the tab «Географічний покажчик періоду до 1917 року фондів „давніх актів“»** (geographical index of pre-1917 fonds), not the general results: the general search works by stem, and a village name that looks like an ordinary word drowns in unrelated files ([The false zero](../guide/1-ai-search/09-false-zero.md), section 35). Next to it are the **«Іменний покажчик»** (name index) tabs: for one shtetl a reader found 54 entries there that he had seen nowhere else [reader's experience, November 2026].
 
 ## TsDIAK (Kyiv): cdiak.archives.gov.ua and archium.cdiak.archives.gov.ua (in Ukrainian)
 - **What is there:** the Central State Historical Archive of Ukraine: metrical books of the 18th–20th centuries, police materials. A **geographical index** and the section **"Rabynaty"** (Рабинати) — a list of surviving rabbinates of Kyiv guberniya with archival references and years (Berdychiv, Ruzhyn, Skvyra and about 70 others). Files that are not digitized can be ordered to the reading room through a personal account [checked].

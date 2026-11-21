@@ -30,7 +30,7 @@ Access can also be half-open: an archive's catalogue is fully open without a log
 | **Yandex "Archive Search"** | dropped connections, "Failed to fetch" | after roughly **25 rapid requests** in a row |
 | **"Open List"** | Cloudflare, error 429 | after **three** rapid requests |
 | **"Pamyat naroda"** | a "security check", error 401 | on automated requests |
-| **archival.name** | "the database is busy or being updated"; parallel queries return **empty answers** | under load; repeat after ~20 seconds, one query at a time, with pauses (November 2026) |
+| **archival.name** | "the database is busy or being updated"; parallel queries return **empty answers**; without sign-in — "today's search limit is used up", preceded by an endless "Searching…" (the quota, not a slow site). **The site terms forbid scripts, bots and collecting records through many queries — manual search only, no agents** | under load; repeat after ~20 seconds, one query at a time, with pauses (November 2026); without sign-in — after **~9 searches** a day [reader's experience, 18.11.2026] |
 | **Presidential Library** (prlib.ru) | "Access denied — your browser did not pass the security check"; no button gets past it | from abroad, 17.11.2026 (Israel) |
 | **Geni** | hCaptcha on profile pages | always, for automated reading |
 | **HathiTrust**, **Google Books** (programmatic access) | 403 / quota exhausted (429) | on automated requests; by hand in an ordinary browser they work |

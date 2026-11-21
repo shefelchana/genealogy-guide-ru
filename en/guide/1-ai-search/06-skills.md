@@ -42,7 +42,7 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 | [`searching-jewishgen`](../../../skills/searching-jewishgen/SKILL.md) | JewishGen databases: search, row limit, reading fields, going to the scan |
 | [`searching-familysearch-films`](../../../skills/searching-familysearch-films/SKILL.md) | FamilySearch films: catalogue → film → frame, boundaries of books, pace and CAPTCHAs |
 | [`searching-yandex-archives`](../../../skills/searching-yandex-archives/SKILL.md) | Yandex "Archive Search" (Поиск по архивам): operators, spellings, how to read a result |
-| [`searching-archival-name`](../../../skills/searching-archival-name/SKILL.md) | archival.name: inventories, the 1897 census (including natives of a town living elsewhere), 1926 family cards, pogrom relief; coverage first, limits, the asterisk, the false zero of a 429 answer |
+| [`searching-archival-name`](../../../skills/searching-archival-name/SKILL.md) | archival.name: inventories, the 1897 census (including natives of a town living elsewhere), 1926 family cards, pogrom relief; manual search only under the site terms; coverage first, quotas (about 9 searches a day without sign-in), the asterisk, `w=` in the 1897 census, census roles, the false zero of a 429 answer |
 | [`searching-nli-jewish-press`](../../../skills/searching-nli-jewish-press/SKILL.md) | Jewish newspapers in the National Library of Israel |
 
 **Scan and reading**

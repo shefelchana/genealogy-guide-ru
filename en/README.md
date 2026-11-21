@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.7, November 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.8, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -59,7 +59,7 @@ The route, checking results and scenarios are a general method for everyone; the
 | [Skills for Claude](guide/1-ai-search/06-skills.md) | which skills the guide provides, when they trigger, how to install |
 | [Scenarios: what to do if…](guide/1-ai-search/07-scenarios.md) | typical situations and dead ends, step by step |
 | [Routine work for agents](guide/1-ai-search/08-routine-for-agents.md) | trees and charts, GEDCOM, filling in profiles on sites, downloading and uploading, reconciling storage places |
-| [The false zero](guide/1-ai-search/09-false-zero.md) | when the tool was wrong, not the source: "site unavailable", the request address, a control record by route, synonym search, catalogue query, the number and the denominator (from a reader's material); errors of the index, OCR and the chain of reports, a negative conclusion with the list of forms |
+| [The false zero](guide/1-ai-search/09-false-zero.md) | when the tool was wrong, not the source: "site unavailable", the request address, a control record by route, synonym search, catalogue query, the number and the denominator (from a reader's material); errors of the index, OCR and the chain of reports, a negative conclusion with the list of forms; a homonym in a place name, the number in a card's address, the image host |
 
 ### Part 2. Reference — [guide/2-reference/](guide/2-reference/README.md)
 
@@ -157,6 +157,16 @@ All skills are written in English; each description also lists Russian trigger p
 More details and limitations — [skills/README.md](../skills/README.md).
 
 **Via Agensi.** The skill pack is also on the Agensi marketplace (new skills reach it with a delay); an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+
+## What's new in 0.5.8
+
+A third contribution from a reader of the guide (November 2026, CC BY 4.0), all labelled "[reader's experience]":
+
+- **🔴 Correction to the `searching-archival-name` skill:** the section on the site's internal JSON requests is removed — the archival.name terms explicitly forbid scripts, bots and collecting records through many queries. In its place is a section "Site terms — manual search only" with a verbatim quote: the person searches, the agent prepares the list of searches and works through the rows and scans; if manual search is not enough, write to the site's author about the limit. Without sign-in about 9 searches a day; an endless "Searching…" mid-series is a spent quota. The 1897 census search by registration (`w=`) has its own block, and there is a new trap: a role in a census row refers to an unnamed head of household. The [archival.name card](catalog/indexed-databases.md), [Access, captchas, pace](guide/2-reference/19-access-captchas-pace.md) and [Surname indexes](guide/2-reference/08-surname-indexes.md) are corrected the same way.
+- **[The false zero](guide/1-ai-search/09-false-zero.md), sections 35–38:** a place name that is the stem of a common word; the number in a card's address is not the fond number; the image folder is computed from the image number; images come from a separate host with its own limits. Additions to sections 5, 9, 12, 25 and 32.
+- **[Working with agents](guide/1-ai-search/03-working-with-agents.md):** an agent stops when a task breaks a resource's terms and returns a verbatim quote; a technique from someone else's guide is checked against the resource's terms; "assign a volume, not a question"; the first line of a report is `NEW PERSONS: N`. The same in the `orchestrating-genealogy-agents` skill.
+- **Place guide:** a "Registration" section in the [template](templates/place-guide.md); the 1897 census by registration in [Records of the Empire and the USSR](guide/2-reference/01-records-empire-ussr.md).
+- **Inter-archive portal** ([card](catalog/archive-file-scans.md), [Archives by country](guide/2-reference/07-archives-by-country.md), skill `ukrainian-archives-on-commons`): for a place name, the geographical-index and name-index tabs.
 
 ## What's new in 0.5.7
 

@@ -52,6 +52,7 @@ Take the template `assets/task-template.md` and fill in every section. If a sect
 - **Coverage log** after each batch: "frame → entries No. …". Without it "not found" means nothing, and interrupted work cannot be continued.
 - **Pace** as a number, for example "no more than one frame per 10 seconds, a break every 30 frames". Example figures (October 2026): on FamilySearch a captcha appeared after roughly 45–150 opened frames (most often around 130 in 40 minutes; earlier as time goes on).
 - **On a captcha or block — stop, click nothing, report.**
+- **First line of the report: `NEW PERSONS: N`**, zero written as a word. What is not asked for does not grow. When search tasks keep returning addresses but no new people, assign a volume to read through ("write out everyone"), not another question.
 - **"Do not launch other agents. If the volume is too large, return a plan and stop."** Without this line an agent may launch a dozen helpers on its own and multiply costs.
 - **Its own folder and its own browser tab** for each agent.
 
@@ -94,6 +95,7 @@ The agent works on the human's computer. What it may do is determined by its set
 - **Do not suggest that the human weaken the protection** of the browser or system for the agent's sake. The condition for the next step is "which agent with which tools".
 - **An agent with a browser** works in its own new tab and closes only that one; a captcha or re-login means stop. It **saves crops to files** in its own folder (a screenshot in the conversation cannot be checked later), and the file name describes what the crop shows.
 - **"The site would not open" — check your own address first** (for example ipinfo.io) and record the site's response. Do not explain the refusal by a VPN or a country block at random: there was a case where the human had no VPN and the cause was something else — a page assembled by a script, or a login requirement.
+- **A task that breaks a site's terms — stop with a quote.** If the task contradicts the site's terms (no scripts, bots, bulk collection, several accounts), the agent stops and returns a verbatim quote of the terms instead of a result; that refusal counts as a full result. The coordinator does not reword the task to get around it. A technique from any guide (this one included) is checked against the site's own terms, not against the guide.
 - **No personal data of the human in network requests** (User-Agent, headers, addresses, request bodies). Write "User-Agent neutral, no personal data", not "descriptive".
 
 Before launch, check that the agent type has the tools for the task. When accepting a report, check "did not bypass" and "did not touch" against the actual calls in the transcript. Report any violation that touches the human's computer, accounts or data to them at once; if a password or code could have been on the clipboard, advise changing it.

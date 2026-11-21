@@ -5,6 +5,7 @@
 
 ## 20 November 2026
 
+- Обновления: запись о версии 0.5.7 ([025e5bd](https://github.com/shefelchana/genealogy-guide-ru/commit/025e5bd))
 - 0.5.7: five new skills (reading-galician-jewish-records, searching-archival-name, tracing-family-moves-and-registration, researching-holocaust-fates-ukraine, requesting-records-from-ukrainian-archives); skills updated with tested conference techniques; archival.name card (access, limits, Record books by place, asterisk, w= in 1897 census, 429 false zero); examples without research names; skill lists and counts (40); static pages rebuilt ([07ecf74](https://github.com/shefelchana/genealogy-guide-ru/commit/07ecf74))
 - Обновления: запись о советах с конференций ([bba04a6](https://github.com/shefelchana/genealogy-guide-ru/commit/bba04a6))
 - Советы с конференций, проверенные на деле (RootsTech 2023–2026, IAJGS 2024–2025): пороги Ньюман и средний сегмент (ДНК); графы манифеста по годам и пометка о натурализации; участки обществ земляков через JGS NY; Yahad-In Unum, USHMM HSV, libraria.ua; межархивный портал по месту, каталог метрик, описи, AGAD XML, FamilySearch Images, индекс JewishGen → плёнка; Галиция, ANU; «выбывший ≠ умерший»; Transkribus; тёзки и информант; разделы путеводителя по месту; навыки dna-matches-endogamy и tracing-emigrants-to-origin ([552c923](https://github.com/shefelchana/genealogy-guide-ru/commit/552c923))

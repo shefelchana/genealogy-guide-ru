@@ -1,10 +1,10 @@
 # The false zero: when the tool was wrong, not the source
 
-What this section covers: what to check when a search returns zero, before you write "none". Why a site looks unavailable, how a zero comes from a wrongly assembled query, where the control record ends, how to count the gap between spellings, how to query an archive catalogue, and why a mark in a database may not be about your person. Sections 15–24 are about how the server itself goes wrong: an empty answer through a failure, invisible characters in titles, results pages, response codes. Sections 25–31 are about errors of reading and of the negative conclusion: the index, the list of forms, OCR, directories, the chain of reports, the extract.
+What this section covers: what to check when a search returns zero, before you write "none". Why a site looks unavailable, how a zero comes from a wrongly assembled query, where the control record ends, how to count the gap between spellings, how to query an archive catalogue, and why a mark in a database may not be about your person. Sections 15–24 are about how the server itself goes wrong: an empty answer through a failure, invisible characters in titles, results pages, response codes. Sections 25–31 are about errors of reading and of the negative conclusion: the index, the list of forms, OCR, directories, the chain of reports, the extract. Sections 35–38 are about a false zero hidden behind non-empty results and behind an address: a homonym in a place name, the number in a card's address, an image folder, a separate host for images.
 
-Sections 1–24 were written from two contributions sent by one reader of the guide (October 2026), under the CC BY 4.0 licence. Sections 25–31 and the additions at the end of sections 7 and 11 come from the compiler's own research with a team of agents (October 2026) and carry no label; "the author" in sections 1–24 is the reader who sent the material.
+Sections 1–24 were written from two contributions sent by one reader of the guide (October 2026), and sections 35–38 and the labelled additions in sections 5, 9, 12, 25 and 32 from his third contribution (November 2026); all under the CC BY 4.0 licence. Sections 25–31 and the additions at the end of sections 7 and 11 come from the compiler's own research with a team of agents (October 2026) and carry no label; "the author" in sections 1–24 is the reader who sent the material.
 
-The label **[reader's experience]** means: the author of the contribution did this and checked it on live queries (September–October 2026, their own project), and the compiler of the guide did not repeat those queries. The figures belong to one project, sites may have changed since — check yourself before an important conclusion. The other labels are explained in the [Glossary](../0-start/06-glossary.md).
+The label **[reader's experience]** means: the author of the contribution did this and checked it on live queries (September–November 2026, their own project), and the compiler of the guide did not repeat those queries. The figures belong to one project, sites may have changed since — check yourself before an important conclusion. The other labels are explained in the [Glossary](../0-start/06-glossary.md).
 
 The main point: **"the record does not exist" and "I did not find it" are different statements**, and the second is far more common. Before closing a direction, separately make sure that **the instrument is in working order**: the site, the query address, the search mode, the route. The general conditions of a negative conclusion (coverage, spellings, method, control record, date of search) are in [Standard of proof](../3-results/01-standard-of-proof.md), section 7. Here is what is added to them.
 
@@ -71,6 +71,8 @@ In [Names, surnames, spellings](../2-reference/03-names-spellings.md) (section 2
 
 And within Cyrillic: in a part-of-word search in one catalogue "Беленк" and "Беленьк" found partly different things — **the soft sign breaks the stem** [reader's experience]. Try the stem both with "ь" and without.
 
+**Ukrainian archive catalogues normalise the unstressed vowel** [reader's experience]. In one oblast archive's catalogue, in one index and within one minute (21.11.2026): `Рабічев` — 0, `Робічев` — 1. On the paper itself the surname is written in Russian, «Рабичевъ», but the catalogue's Ukrainian rendering went through "о". → In Ukrainian catalogues run both variants of the unstressed vowel in the root (о/а, е/и). This is cheaper than phonetic search and catches what phonetics misses: the forms sound the same but differ in letters.
+
 ## 6. Pairs of cursive letters that break a search by stem
 
 Don't read Russian? See [For English speakers](../0-start/08-for-english-speakers.md).
@@ -115,6 +117,8 @@ Before building an external check, see **whether the source gives its own total*
 
 The arithmetic of the document itself can also decipher conventional marks [reader's experience]. In a list of parishioners of a prayer house for 1896 there were marks explained nowhere: a blue "V" and a red "Н". There were exactly 66 blue ones and 32 red ones, one line was struck out with the note "excluded on account of death" (за смертію исключенъ) — 99 living. In the minutes of a failed meeting on the neighbouring frame it says that attendance "makes up less than 2/3" (составляетъ менѣе 2/3), that is, a lawful meeting needs two thirds. Two thirds of 99 is exactly 66. The author's conclusion: V — "appeared" (явился), Н — "did not appear" (не явился). This is a conclusion from a converging count inside the file, not from analogy.
 
+**The limit of the rule: "a complete book" ≠ "complete registration"** [reader's experience]. A signed total certifies the body of the book: five entries, no leaf torn out. It does not say that every birth of the month reached the rabbinate: with a late declaration, a birth while travelling, a circumcision at home without a declaration, no entry was made at all. What catches this is **the density of entries against neighbouring years of the same book**: if a shtetl has 49 births in 1884, 49 in 1893 and seven in 1888, the signature under 1888 is honest, but registration that year was incomplete, and a zero by surname for 1888 is weaker than for the years around it.
+
 ## 10. For every zero — a number and a denominator
 
 A zero without the number viewed does not count as a result (see "coverage" in the [Glossary](../0-start/06-glossary.md)). But a number without a denominator also says little [reader's experience]:
@@ -141,6 +145,8 @@ Three more observations alongside [reader's experience]:
 - **a fond may be by society, not by shtetl**: the metrical books of shtetl A lie in the fond of society B, to which it is registered. A family "of such-and-such society" lives now in one village, now in another, while its records are in one fond (on *pripiska* — [Records of the Russian Empire and the USSR](../2-reference/01-records-empire-ussr.md), section 4);
 - **one shtetl may have two fonds — one per confession**, with neighbouring numbers: it is easy to order the Catholic one instead of the Jewish;
 - **a whole kind of record may be absent because of the fond's composition, not because of loss**: for one shtetl after 1862 there are neither death books nor divorce books — only births and marriages. Before looking for a death, check in the inventory **whether death books were kept in this fond at all**. Otherwise a month goes on searching for what does not exist, and "not found" goes into the log. How to record such a gap — [Standard of proof](../3-results/01-standard-of-proof.md), section 7, "Gaps in the sources themselves".
+
+**The same goes for dates** [reader's experience]. The cover of a file says «кончено: 29 июня *(crossed out)* / апреля 1916 г.» ("finished: 29 June / April 1916"), while the catalogue card says 29.06.1916: the compiler copied the crossed-out date. The reading "crossed out" was made by the reader's executor and he did not check it on the image himself, so the case is probable, not proven. The rule does not depend on it: **a date in the card is a reading of the cover, not a fact about the file**, and "catalogue against cover" is decided for the cover.
 
 ## 13. A mark in a database is a property of the collection, not a fact read
 
@@ -252,6 +258,8 @@ An index goes wrong not only in letters but also in whom a field belongs to. In 
 
 → Check every index field on which a conclusion rests (age, patronymic, relationship) against the image. Other field-parsing errors — [Standard of proof](../3-results/01-standard-of-proof.md), section 6.
 
+**A relationship label refers to a head of household, and the index does not say which one** [reader's experience]. A census index gives the column "relation to the head": «сынъ», «невѣстка», «внучка» (son, daughter-in-law, granddaughter). The reader took seven rows with one surname from one village and assembled a household — coherent, with no contradictions. On the image the rows were in three households: three belonged to his man, three to the man's widowed mother (her son, her daughter-in-law, her granddaughter), and the seventh was the daughter of a third brother. The index gives rows in the order of the results, not of the households, and does not say to whom a role refers — so a family assembled this way cannot be refuted without the image. → **Mark a household assembled from an index as a conclusion, not a record**, and check it on the first image. The same goes for your own tables: a notes column filled in by the order of the result rows looks like data but is a guess.
+
 ## 26. A negative conclusion — with the full list of forms and with candidates who have no patronymic
 
 The conclusion "so-and-so is not in the list" holds exactly as far as the list of forms that was searched. In one round three forms of a patronymic were left out of the list: with "iо", with "е" and the short one in "-овъ" (Лiозоровичъ, Лейзеровичъ, Лейзеровъ), and the fact-checker downgraded the conclusion. In the same round five men whose names began with "Абр…" (Abr…) and who had no patronymic recorded at all could not be dismissed with "none of them has the right patronymic": a person without a patronymic is a candidate, not someone excluded.
@@ -300,6 +308,8 @@ A list read without some of its columns gives false zeros. In the sheets of the 
 
 A year or place filter set in the address bar does not work on some sites and returns an empty result (this happened in Yandex "Search in Archives" in November 2026). Check a filtered zero with the same query without the filter. A zero in a partly indexed collection (FamilySearch, AI-made indexes) means "not in the indexed part", not "never existed".
 
+**How to catch a filter that does not work without opening a single card** [reader's experience]: compare **the announced number of results with and without the filter**. On one oblast archive's catalogue the file search accepts a fond-number parameter that the site itself offers. A query filtered by fond 445 returned files of three other fonds (fond 445 did not appear at all) — and exactly the same 42 pages of results as the search without the filter. Equal numbers are the sign that the filter was not applied (section 19, but with a parameter the site itself gave). On the same engine the search parameter on the list-of-fonds page was ignored and returned all 7,160 fonds of the archive: a full listing easily passes for a search result.
+
 ## 33. The site starts returning empty pages in the middle of a run
 
 If after dozens of fast requests the record pages suddenly come back empty or the browser is redirected to another address, a rate limit has kicked in. What you read before that is a result; the rest is "the instrument did not respond". Pause several seconds between requests and do not bypass the protection; finish later or by hand.
@@ -309,6 +319,39 @@ If after dozens of fast requests the record pages suddenly come back empty or th
 More and more often an index is compiled not by a volunteer but by a neural network: it reads the scans and writes the names into the database itself (this is how [archival.name](../../catalog/indexed-databases.md), for example, works). Such an index distorts names: the card shows one form, the scan another; a surname may be turned into Latin letters, a file title into a machine translation. A search for the "right" spelling then gives zero, and a row that is found may describe the wrong person.
 
 → Check every hit against the scan the card links to, and quote the scan, not the index. A zero in an AI index is a zero of that index, not of the archive: search in "sounds like" mode and with several spellings, run a control query (section 4), and write in the log "not in the index", not "not in the file". The site usually does not say what share of the files the AI has read — there is no denominator (section 10).
+
+
+## 35. A place name is the stem of a common word, and a homonym fills the results
+
+A search for the village Старовичі on the inter-archive portal gave an impressive 12 fonds, 22 inventories, 459 files. The first page showed «Київське товариство **старовини** і мистецтв», «Товариство охорони пам'яток **старовини**» (societies of *antiquities*): the portal searches by stem, and the stem `старовин-` buried the village [reader's experience].
+
+🔑 This is more dangerous than a zero or than "too many results": the number is large, the results are not empty, and a quick reading declares the place "well represented in the archives" — the error goes into the report with a plus sign.
+
+→ **How to catch it:** open the first three rows and check whether **the place itself is named** in them — not "looks like", but is named.
+→ **How to fix it:** the geographical-index tab, if there is one (the reader found exactly one entry there for this village: the portal knows the place, the general results drown it); another spelling — Russian instead of Ukrainian, case forms, the adjective from the name; narrowing by archive or type of fond.
+→ A zero or a "lot" for such a place is **not measured** until the query is repeated through the right entry. It happens most with names in ‑ичи, ‑овка, ‑ное. Compare section 8: there the issue is the length of the query, here it is a place name that coincides with an ordinary word.
+
+## 36. The number in a card's address is an internal id, not the fond number
+
+On one oblast archive's site the address `/fonds/445/` opens **fond 1411**, a volost board of another uezd, while fond 445 lives at `/fonds/147/` [reader's experience]. The path looks like a reference and reads like one, but it is a record number in the database. The error is silent: a real card of a real fond opens, just not the right one — and "nothing of ours in fond 445" becomes a false zero that gives no sign of itself. The reader has met this on three different archive engines.
+
+→ Read the reference **in the card's heading**, where it is written out («Фонд 445 · Опис 1 · Справа 246»), never from the address bar.
+
+## 37. The image folder is computed from the image number; a wrong folder gives a 404 that looks like "not digitised"
+
+On the same site images live at `/static/files/<N>/<ID>.jpg`. An executor got a list of IDs from one file, used the folder of the first image — and 11 of 12 addresses gave 404. The conclusion suggested itself: "the file is partly digitised". In fact N = floor(ID / 10000): image `5178114` is in `/517/`, and `5182874` already in `/518/` [reader's experience].
+
+→ If a file path contains a numbered folder, **derive it from the id and test it on two ids from different blocks** before recording a 404 as absence. This is section 3, but on the path to an image rather than a search parameter — so the error disguises itself as the state of the archive.
+
+## 38. Images are served by a separate host with its own limits
+
+On Wikimedia Commons on 19.11.2026 `upload.wikimedia.org` answered **429 with `retry-after: 120`** to everything: the whole file, partial requests (206), `/thumb/`, over IPv4 and IPv6, after pauses. In the same minute **`thumb.wikimedia.org` answered 200 on the same `/thumb/` paths** [reader's experience]. That way the reader downloaded a 185-page file page by page (about 1 MB each) when the whole 175 MB PDF would not download at all; the PDF itself is not served through `thumb.` (it redirects to `upload.`).
+
+Two consequences:
+- **the advice "take a big file in parts" does not work at such a moment**: the limit is on the host, not on the volume, and a partial request is still a request. An executor following the advice will declare the file unavailable;
+- **thumbnail widths are not arbitrary**: on that host 1280 and 3840 worked, while 2000px gave an error page of 3,292 bytes — a small "file" that is easy to take for an empty page of the file. On another host in October the reader saw the same: 400 for 1024 and 2048 with 1920 alive.
+
+→ Before writing "the site returns 429", try **another image host**; **compare the size of the file you got with the expected one** — a three-kilobyte answer to a request for a book page is not a page. How to take files from Commons — skill [`ukrainian-archives-on-commons`](../../../skills/ukrainian-archives-on-commons/SKILL.md).
 
 ---
 
