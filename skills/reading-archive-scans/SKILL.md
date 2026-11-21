@@ -121,6 +121,8 @@ https://thumb.wikimedia.org/wikipedia/commons/thumb/<pr/prefix>/<NAME>/pageN-384
 ```
 · the width is **only 1280 or 3840**, otherwise HTTP 400;
 · from the URL that api.php returns, **cut off the tail `?utm_source=…`** — with it the server answers with an error.
+· **⚠️ Do not trust the width the API reports.** On 21 November 2026 api.php (`iiurlwidth=1920`) answered `thumbwidth: 1920`, while the `thumburl` itself pointed to `pageN-500px-…`: agents read 500-px pages and could report a false zero. → **Put the width into the path yourself** (`/pageN-1920px-<NAME>.jpg`, or 1280 / 3840 — use a width the server actually serves; 2000 gave an error page), drop `?utm…`, and **after downloading check the real width of the JPEG** (and its size: a 3 KB "page" is an error page). A page narrower than requested is not "no entry" — download it again at the right width.
+· **A 429 on `upload.` may not apply to `thumb.`**: the limit is on the host, not on the volume, so range requests to `upload.` get the same 429; try the same `/thumb/` path on `thumb.wikimedia.org` before writing "unavailable".
 
 ## 🔑 Film or copy stand — determined by frame width
 
@@ -215,7 +217,7 @@ Verified on one batch three times running: a fond code that is not in the archiv
 ## 🔑 Large files from upload.wikimedia.org can be downloaded whole with range requests
 
 A file of 774 MB can be taken **whole** (HTTP 206, range requests) — page-by-page previews are not needed, and you get the **native resolution**.
-If previews are nevertheless needed: `page<N>-1280px-<NAME>.jpg`; the width is **only 1280 or 3840**, intermediate values give HTTP 400.
+If previews are nevertheless needed: `page<N>-1280px-<NAME>.jpg`; the width is **only 1280 or 3840**, intermediate values give HTTP 400. When `upload.` answers 429 to everything, range requests are refused too: take the pages from `thumb.wikimedia.org`, with the width written into the path and checked after download (see the inventory recipe above).
 
 ## ⚠️ The enhancement coefficient depends on the scan's resolution
 

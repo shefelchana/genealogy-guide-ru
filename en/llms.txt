@@ -80,7 +80,7 @@ Practice:
 
 ## Skills
 
-- [List of skills](../skills/README.md): 40 skills for Claude with trigger conditions and installation (all skills are in English; descriptions also list Russian trigger phrases)
+- [List of skills](../skills/README.md): 41 skills for Claude with trigger conditions and installation (all skills are in English; descriptions also list Russian trigger phrases)
 - [genealogy-intake](../skills/genealogy-intake/SKILL.md): the first conversation, project files, the first question and plan
 - [search-logic-navigator](../skills/search-logic-navigator/SKILL.md): forks in the search route
 - [verifying-genealogy-findings](../skills/verifying-genealogy-findings/SKILL.md): verifying finds and negative conclusions

@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.8, November 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.9, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -140,7 +140,7 @@ The five rules that save months are in the [Quick start](guide/0-start/01-quick-
 
 ## Skills for Claude — how to install
 
-The [skills/](../skills/README.md) folder contains 40 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
+The [skills/](../skills/README.md) folder contains 41 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
 
 All skills are written in English; each description also lists Russian trigger phrases, so the skills work with requests in either language.
 
@@ -157,6 +157,15 @@ All skills are written in English; each description also lists Russian trigger p
 More details and limitations — [skills/README.md](../skills/README.md).
 
 **Via Agensi.** The skill pack is also on the Agensi marketplace (new skills reach it with a delay); an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+
+## What's new in 0.5.9
+
+- **New skill `surname-variants-cyrillic-cursive`:** how else a surname could have been written between Russian cursive, Ukrainian, Polish, German and Yiddish — ф/р/т, vowels (including о/а and е/и in Ukrainian catalogues), an inserted т, -ель/-еръ/-ъ endings, doubled letters, Hebrew letters with two values, Galician children under the mother's surname, false friends (a trade in the surname column). The core rule: no spelling is excluded in an agent's brief — every hit is marked ⚪ [variant?], and a variant is excluded only on other evidence (father, place, age, household) or by a same-hand comparison with crops. The script `scripts/variants.py` prints the variants and regexes (Cyrillic, Latin, Hebrew, OCR without the first letter), with tests. Examples use invented surnames.
+- **`reading-galician-jewish-records` extended:** the open Gesher Galicia AGD index and Map Room, the Josephine and Franciscan cadastres (owners only — a weak zero), the 1787 surname decree (before it — patronymics and trades), "A vel B" and civil marriages 10–40 years later, TsDIAL fonds 19/20/701, western Galicia, the Gregorian calendar at the border, index pitfalls.
+- **`tracing-emigrants-to-origin` extended:** free images of New York City certificates (Municipal Archives: deaths 1862–1949, marriages 1866–1949, births 1866–1909; the mother's maiden name, the informant), declaration and petition ("landed as", witnesses, wives before 1922), both halves of the manifest, the 1942 draft card, passport applications, NUMIDENT, the tombstone "ben/bat" line, the 1930–1950 censuses; pitfalls: "uncle" in a manifest, the informant, one woman with many names.
+- **`orchestrating-genealogy-agents`: a fleet of agents** — one pass through a source for all targets (a targets file), a read log, locks on shared resources, an interim report every 30 minutes, checking that agents are alive, keeping surname-column crops, never excluding variants, "a complete book ≠ complete registration", site terms before automation, "a volume, not a question", `NEW PERSONS: N`; the same in the task template.
+- **Images from Commons:** the API may name the requested width but link to a 500-pixel page — write the width into the path yourself and check it on the downloaded JPEG ([The false zero](guide/1-ai-search/09-false-zero.md), section 38; skills `reading-archive-scans`, `ukrainian-archives-on-commons`).
+- **Catalog:** Gesher Galicia AGD and familio.org cards ([Indexed databases](catalog/indexed-databases.md)); the Gesher Galicia line in [Europe by country](catalog/europe-by-country.md) corrected — the index opened without login in November 2026; NYC Municipal Archives in [USA and emigration](catalog/usa-and-emigration.md). 41 skills.
 
 ## What's new in 0.5.8
 

@@ -1,14 +1,14 @@
 ---
 name: reading-galician-jewish-records
 description: >-
-  Finds and reads Jewish vital records of Austrian Galicia and interwar Poland (1784–1939) — births, marriages, deaths kept by the Catholic parish until 1877 and by the Jewish registration district from 1877 — and draws the right conclusions from them: children of ritual-only marriages recorded under the MOTHER's surname as "unehelich", a father named only "nach Angabe der Mutter" or by acknowledgement of paternity, late civil marriages noted on the birth entry, the post-1877 column with the mother's parents, house numbers, German and Polish column headers, interlinear additions. Locates the books through the AGAD fond 300 XML inventory, the Gesher Galicia Town Locator, JRI-Poland and All Galicia indexes, and FamilySearch. Use when a line goes into Eastern Galicia (Lviv, Ternopil, Stanislawow/Ivano-Frankivsk, Kolomyia, Brody, Przemysl regions), when a surname "disappears" or changes between generations in Galicia, when an index gives a child with no father, or the user asks "why does the child have the mother's surname", "what does unehelich mean", "where are the Galician metrical books". Also triggers on Russian requests: «галицийские метрики», «Галиция», «фамилия матери», «незаконнорождённый», «unehelich», «AGAD», «Тернополь», «Львов», «Станислав», «австрийские метрики».
+  Finds and reads Jewish vital records of Austrian Galicia and interwar Poland (1784–1939) — births, marriages, deaths kept by the Catholic parish until 1877 and by the Jewish registration district from 1877 — and draws the right conclusions from them: children of ritual-only marriages recorded under the MOTHER's surname as "unehelich", a father named only "nach Angabe der Mutter" or by acknowledgement of paternity, late civil marriages noted on the birth entry, the post-1877 column with the mother's parents, house numbers, German and Polish column headers, interlinear additions. Locates the books through the AGAD fond 300 XML inventory, the Gesher Galicia Town Locator, JRI-Poland and All Galicia indexes, and FamilySearch; the open All Galicia Database and Map Room, Josephine (1785–88) and Franciscan (1819–20) cadastres that list owners only (a weak zero for tenants), the 1787 surname decree (before it — patronymics and trades), "A vel B" and civil marriages registered decades later, the Gregorian calendar across the border. Use when a line goes into Eastern Galicia (Lviv, Ternopil, Stanislawow/Ivano-Frankivsk, Kolomyia, Brody, Przemysl regions), when a surname "disappears" or changes between generations in Galicia, when an index gives a child with no father, or the user asks "why does the child have the mother's surname", "what does unehelich mean", "where are the Galician metrical books". Also triggers on Russian requests: «галицийские метрики», «Галиция», «фамилия матери», «незаконнорождённый», «unehelich», «AGAD», «Тернополь», «Львов», «Станислав», «австрийские метрики», «Gesher Galicia», «кадастр», «иосифинская метрика», «францисканская метрика», «ритуальный брак».
 ---
 
 # Galician Jewish vital records (1784–1939)
 
 Eastern Galicia was Austria until 1918 and Poland until 1939. Its Jewish records follow Austrian law, not the Russian Empire's: other forms, other legal categories and one rule that changes surnames between generations. Read this before treating a Galician record like a Russian metrical book.
 
-Related skills: `identifying-places` (which district, which Jewish registration district), `reading-archive-scans` (getting and enhancing the image), `searching-familysearch-films` (frames), `verifying-genealogy-findings` (index ≠ document, negative conclusions), `reading-hebrew-yiddish-sources` (names).
+Related skills: `surname-variants-cyrillic-cursive` (Kurrent and Polish spellings, never excluding a sibling by surname), `identifying-places` (which district, which Jewish registration district), `reading-archive-scans` (getting and enhancing the image), `searching-familysearch-films` (frames), `verifying-genealogy-findings` (index ≠ document, negative conclusions), `reading-hebrew-yiddish-sources` (names).
 
 ## 1. Who kept the books
 
@@ -18,17 +18,22 @@ Related skills: `identifying-places` (which district, which Jewish registration 
 | 1877–1918 | the **Jewish registration district** (*Matrikelbezirk*), with its own registrar | German, detailed printed forms |
 | 1918–1939 | the same districts under Poland | Polish (headers and annotations), forms often unchanged at first |
 
-A district covered several places: an event in a small shtetl or village is often in the book of the **district centre**. Find the district first (Gesher Galicia Town Locator, Step 4).
+A district covered several places: an event in a small shtetl or village is often in the book of the **district centre**. Find the district first (Gesher Galicia Town Locator, Step 4). **The district trap:** a birth registered in the district town may have happened in a village of the district — read the column of the place of birth (*miejsce urodzenia*), not the book's title.
+
+**Calendar and border.** Austria used the **Gregorian calendar**; the Russian Empire across the border the Julian (12 days behind in the 19th century). Border towns can face each other across a river and belong to different empires, archives and record systems: for a family that crossed, search both sides and convert dates before matching events.
 
 ## 2. The mother's-surname rule
 
 **The rule** (E. Vance, RootsTech 2023, "Genealogical Research in Galicia"): a civil Jewish marriage was expensive (marriage tax from the late 18th century) and for a long time not permitted to everyone (until about 1830 only one son of a family [from the talk]). Many couples married only by religious rite. For the state their children were **illegitimate** and were recorded **under the mother's surname**. The father was entered only if he **acknowledged paternity** before the registrar with witnesses. A later civil marriage was added as a note to the child's birth entry (legitimation).
 
 Consequences for research:
-1. Search the surname both as **the child's surname** and as **the mother's surname**. A family can "change" surname between generations with no event behind it.
+1. Search every child under **both** parents' surnames, as **the child's surname** and as **the mother's surname**. A family can "change" surname between generations with no event behind it.
 2. Siblings may carry different surnames (before and after the parents' civil marriage).
 3. "Unehelich" in a Jewish entry usually means **a ritual-only marriage**, not a scandal. Do not write it into a family text as "born out of wedlock" without explaining.
 4. A child under the mother's surname does not tell you whose surname it originally was: the mother's own, or the family's. See the worked example.
+5. A person may appear as **"A vel B"** (mother's surname *vel* father's) or switch surnames between documents; *recte* and *false* mark a corrected surname.
+6. **The civil marriage was often registered years or decades later** — before emigration, for a child's marriage or military papers, in old age. Search the parents' marriage **10–40 years after the first child**, and read the margins of the children's birth entries for the legitimation note (*legitimiert durch nachfolgende Ehe*, *legitymowany*).
+7. **Never exclude a sibling because the surname differs.** In emigrant documents one brother may use the father's surname, another the mother's; the "mother's maiden name" in a child's American papers may be the surname the child itself was born under.
 
 **Checked on real records (November 2026):** in four births of 1880–1887 a mother's children were "unehelich" under her surname; the father appeared once as "Vor- und Zuname" in the parents' column and once only in the remarks as "soll nach Angabe der unehelichen Mutter [Vater sein]" ("is, according to the unmarried mother, the father"), with no signature or acknowledgement.
 
@@ -45,11 +50,12 @@ Consequences for research:
 - Column 7 gives **the maternal grandparents**: one generation up from every birth. Read it for every child of the mother; clerks vary the spelling and occupation.
 - ⚠️ "Tochter des Abraham und Rachel X" names **both** parents with one surname — the family's surname. It is **not** the grandmother's maiden name. In the checked case four entries in a row did so, and none gave her maiden name.
 - Column 12 holds the important notes: acknowledgement of paternity (the father's declaration, signed by him and witnesses; wording varies), legitimation by a later marriage, a death decades later with an act number (a Polish note such as "zmarł … akt nr …"), name changes.
+- **Marriages** name both sets of parents with their towns, the birthplace (*rodem z*, "born in") and residence (*zamieszkały w*, "living in") of bride and groom, occupation, age and the rabbi. Formulas to know: *z domu* (née), *uznanie ojcostwa* / *Vaterschaftsanerkennung* (acknowledgement of paternity).
 - Useful words: *Fleischer / Fleischhauer* butcher, *Handelsmann* trader, *privat* living privately (no trade), *Musikant* musician, *als Zeuge* as witness, *vor der Namenbeilegung gestorben* died before naming; Polish *syn / córka* son / daughter, *ślubny / nieślubny* legitimate / illegitimate.
 
 **Deaths before 1877**: `Zeit des Sterbens | Haus-Nummer | Namen des Gestorbenen | Geschlecht | Lebensjahre | Krankheit und Todesart` — name, age and cause only; **no parents, spouse or birthplace**. Deaths after 1877 add the parents of the deceased: that is where a mother's maiden name may finally appear. **Marriages** name the parents of both bride and groom.
 
-**House numbers** (*Haus-Nummer*, conscription numbers): the same number across births and deaths links a household; a shared house number is a lead to kinship, not proof (tenants shared houses). Towns renumbered houses; compare numbers only within one period of one book.
+**House numbers** (*Haus-Nummer*, conscription numbers): the same number across births and deaths links a household; a shared house number is a lead to kinship, not proof (tenants shared houses). Towns renumbered houses; compare numbers only within one period of one book. Cadastres often give both the old and the new number, and a house number leads from a death entry to the house's **owner** in a cadastre or owner list (section 4a) and to the neighbours living there.
 
 **Interlinear additions.** Clerks added a second given name or a correction between lines. Do not assume the addition belongs to the line below or above by habit: **find the page's own pattern** from additions whose owner is certain (for example a father's name added over a father's name), then assign the doubtful one. On one checked page every addition stood **above** its own entry, so a name that looked like part of one child's name belonged to the next entry and a family hypothesis built on it was withdrawn.
 
@@ -62,8 +68,33 @@ Consequences for research:
 5. **FamilySearch**: TsDIAL (Lviv) fond 701 and some district books are filmed; new filming is in **Images**, searched by place at town and district level (`ukrainian-archives-on-commons`). In a checked case only one Jewish death book of a district town was there, while its births were at AGAD.
 6. **Ukrainian archives**: TsDIAL in Lviv, oblast archives of Ternopil and Ivano-Frankivsk; Gesher Galicia publishes their inventories.
 7. **Vienna**: many Galician Jews moved there; look for Galician branches in Vienna records too.
+8. **Gesher Galicia All Galicia Database (AGD)**, app.geshergalicia.org: an open index of about a million records without login — vital records, **Josephine and Franciscan cadastres**, landowner and house-owner lists, residents' lists, taxpayers, voters, schools, notaries (1780s–1940s). Scans of many sets are for members only: write "read by index" when you have not seen the image. The **Map Room** (maps.geshergalicia.org) has cadastral maps of the 1820s–1860s, open.
+9. **TsDIAL (Lviv)**: fond 701 (older Jewish metrical books), fond 19 (Josephine cadastre 1785–88), fond 20 (Franciscan cadastre 1819–20); inventories on Archium (archium.tsdial.archives.gov.ua), often without scans. If the site answers 403 from your network, record "the instrument did not answer", not a zero.
+10. **Western Galicia** (now Poland): Polish state archives (Przemyśl, Rzeszów, Kraków …) on szukajwarchiwach.gov.pl; records younger than 100 years are in civil-registry offices, not online.
+11. **JRI-Poland legacy search form** returns full result lists without login; accepting the site's terms is the person's decision. Some datasets are for active members only.
+
+**Coverage gaps:** surviving books often start only in the 1810s–1850s, years and towns are missing, and one town's books are split between TsDIAL (older) and AGAD (newer). Write the exact years searched.
 
 Write a zero as: which inventory, which book numbers and years, which images were read. "Not in the index" is not a negative conclusion (`verifying-genealogy-findings`).
+
+## 4a. Before the registers: the 1787 surnames and the cadastres
+
+**The 1787 surname decree.** Joseph II's patent of 1787 obliged Galician Jews to take fixed hereditary (German) surnames; commissions assigned them in 1787–88.
+- **Before 1787–88 Jews appear by given name plus patronymic or trade.** In the Josephine cadastre (1785–88, straddling the decree) the "surname" column may hold a trade: *Szewc* (shoemaker), *Krawiec* (tailor), *Piekarz* (baker), *Rzeźnik* (butcher), *Kuśnierz* (furrier), *Kantor*. A phonetic index will happily match such a word to a modern surname. Check the neighbouring entries: if they are trades, so is this one.
+- Surnames stayed unstable for a generation: the same man may appear under two surnames in the 1810s–1820s.
+- Do not repeat as fact the folklore that certain surnames were "bought" or "punitive".
+
+**Josephine and Franciscan cadastres** (1785–88 and 1819–20) and later land and house-owner lists (1820s–1850s):
+- they list **owners of houses and land only — not tenants, lodgers, children or servants.** A Jewish family renting rooms is invisible. A zero in a cadastre is a weak zero: write "not an owner in <year>", not "not living there";
+- they give the owner's name, the house number (old and new), the plot, sometimes "Jewish house" or the rooms; with the Map Room a house can be placed on the map.
+
+## 4b. Pitfalls of indexes and sites
+
+- **Index ≠ record.** AGD and JRI indexes misassign sex and role (a child's entry indexed under the father, a spouse indexed as the subject). Open the scan before building kinship; if the scan is members-only or blocked, write "by index".
+- **A control query for every zero**: a known name in the same set and years must be found by the same search mode. Phonetic modes behave differently between visits; a 429 or a block is "the instrument did not answer".
+- **Kurrent**: long s (ſ) looks like f; e/n and u/n are confused; endings -el/-l/-er drift (`surname-variants-cyrillic-cursive`).
+- **Bot walls** (Imperva, Akamai, Cloudflare) on some archive and index sites: do not bypass, do not fake the user agent; record the response and give the link to the person.
+- **Members-only data**: never write as if you saw a members-only scan; list such items for the person in one message.
 
 ## 5. Worked example (invented family)
 

@@ -52,6 +52,7 @@ A **skill** is a folder with an instruction file `SKILL.md` (and sometimes refer
 | [`reading-archive-scans`](../../../skills/reading-archive-scans/SKILL.md) | read digitised files, assess scan quality, enhance faded ink, map a volume |
 | [`tracing-revision-records`](../../../skills/tracing-revision-records/SKILL.md) | go back in time through the revision lists of 1795–1858 |
 | [`reading-galician-jewish-records`](../../../skills/reading-galician-jewish-records/SKILL.md) | Galician Jewish records 1784–1939: children under the mother's surname ("unehelich"), a father named "by the mother's statement", the post-1877 column with the mother's parents, where the books are (AGAD, Gesher Galicia, FamilySearch) |
+| [`surname-variants-cyrillic-cursive`](../../../skills/surname-variants-cyrillic-cursive/SKILL.md) | how else a surname could have been written: ф/р/т in cursive, о/а and е/и vowels, an inserted т, endings, doubled letters, Hebrew; the rule "never exclude by spelling" (⚪ [variant?]), same-hand comparison, the `variants.py` script with regexes |
 | [`reading-hebrew-yiddish-sources`](../../../skills/reading-hebrew-yiddish-sources/SKILL.md) | gravestones, the Hebrew part of metrical records, signatures, Yiddish newspapers |
 | [`dating-old-photos`](../../../skills/dating-old-photos/SKILL.md) | date an old photograph by its mount, clothing, studio |
 | [`interpreting-jewish-family-photos`](../../../skills/interpreting-jewish-family-photos/SKILL.md) | what a Jewish family photograph says about the way of life and the occasion |

@@ -15,6 +15,8 @@ How the book is arranged: [if known — sections, where the male/female entries 
 Control record (certainly exists, find it first): [frame/entry number/date/names]
 
 What to look for: [surname in all spellings, including distortions and without the first letter; given names; in which column]
+Targets file: [TARGETS.md, version] — write out hits for ALL targets in one pass; exclude no spelling, mark every hit ⚪ [variant?].
+Before downloading: check READ-LOG.md (what has been read) and BUSY.md (shared resources).
 What is NOT needed: [for example, conclusions about kinship, search in other sources]
 
 How to report:
@@ -23,7 +25,11 @@ How to report:
 - mark anything uncertain with "(?)" and say what prevents reading it;
 - a coverage log "frame → entries No. …" to the file [path] after each batch;
 - note technical failures: captcha, error codes 403/429, dropped connections, skipped frames;
-- "not found" is a normal result, but with coverage.
+- "not found" is a normal result, but with coverage;
+- the first line of the report: NEW PERSONS: N (zero written as a word);
+- every 30 minutes append an interim block "Interim result HH:MM" to the report file;
+- keep crops of the surname column in crops/[reference]/ and add a row to READ-LOG.md;
+- if the task contradicts the site's terms — stop and quote the terms verbatim.
 
 Pace and restrictions:
 - no more than [1 frame / 1 request] per [N] seconds; batches of [4]; a break every [30] frames;

@@ -3,6 +3,10 @@
 > Every change to the guide by date, newest first, taken from the repository's commit history. The page is rebuilt automatically with the site. A summary by version is in "What's new" on the [main page](README.md). Commit messages are in the language of the change (Russian or English).
 
 
+## 21 November 2026
+
+- 0.5.8: третья присылка читателя — archival.name только вручную по условиям сайта; Ложный ноль 35–38 и дополнения 5, 9, 12, 25, 32 ([2cf83ac](https://github.com/shefelchana/genealogy-guide-ru/commit/2cf83ac))
+
 ## 20 November 2026
 
 - Обновления: запись о версии 0.5.7 ([025e5bd](https://github.com/shefelchana/genealogy-guide-ru/commit/025e5bd))

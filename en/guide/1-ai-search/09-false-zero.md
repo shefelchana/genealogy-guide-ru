@@ -351,6 +351,8 @@ Two consequences:
 - **the advice "take a big file in parts" does not work at such a moment**: the limit is on the host, not on the volume, and a partial request is still a request. An executor following the advice will declare the file unavailable;
 - **thumbnail widths are not arbitrary**: on that host 1280 and 3840 worked, while 2000px gave an error page of 3,292 bytes — a small "file" that is easy to take for an empty page of the file. On another host in October the reader saw the same: 400 for 1024 and 2048 with 1920 alive.
 
+**The width the API names is not yet the width of the file.** On 21.11.2026, in the compiler's research, the Commons API answered a request for width 1920 with `thumbwidth: 1920`, while the `thumburl` link itself said `pageN-500px-…`: agents read 500-pixel pages and could have brought a false zero. Write the width you need into the path yourself (`/pageN-1920px-…`), drop the `?utm…` tail, and after downloading check **the real width of the JPEG**: a page narrower than requested is not "no entry" but a reason to download again.
+
 → Before writing "the site returns 429", try **another image host**; **compare the size of the file you got with the expected one** — a three-kilobyte answer to a request for a book page is not a page. How to take files from Commons — skill [`ukrainian-archives-on-commons`](../../../skills/ukrainian-archives-on-commons/SKILL.md).
 
 ---

@@ -167,4 +167,4 @@ Check initials, address, profession, age. A yearly cut of newspapers for one sur
 
 ---
 
-**See also:** [Standard of proof](../3-results/01-standard-of-proof.md) · [Jewish genealogy](02-jewish-genealogy.md) · [Dictionaries and encyclopedias](../../reading/dictionaries-and-encyclopedias.md) · [Directories and books](../../catalog/directories-and-books.md) · the skill [`verifying-genealogy-findings`](../../../skills/verifying-genealogy-findings/SKILL.md)
+**See also:** skill [surname-variants-cyrillic-cursive](../../../skills/surname-variants-cyrillic-cursive/SKILL.md) (a variant list and regexes, the rule "never exclude by spelling", same-hand comparison) · [Standard of proof](../3-results/01-standard-of-proof.md) · [Jewish genealogy](02-jewish-genealogy.md) · [Dictionaries and encyclopedias](../../reading/dictionaries-and-encyclopedias.md) · [Directories and books](../../catalog/directories-and-books.md) · the skill [`verifying-genealogy-findings`](../../../skills/verifying-genealogy-findings/SKILL.md)

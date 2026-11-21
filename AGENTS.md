@@ -114,6 +114,7 @@
 | переезд семьи, приписка и жительство | [`tracing-family-moves-and-registration`](skills/tracing-family-moves-and-registration/SKILL.md) | [Документы РИ и СССР](guide/2-справочник/01-документы-ри-и-ссср.md), раздел 4 |
 | прочитать скан | [`reading-archive-scans`](skills/reading-archive-scans/SKILL.md), [`reading-hebrew-yiddish-sources`](skills/reading-hebrew-yiddish-sources/SKILL.md) | [Почерки, транслитерация, даты](guide/2-справочник/05-почерки-транслитерация-даты.md) |
 | ревизии 1795–1858 | [`tracing-revision-records`](skills/tracing-revision-records/SKILL.md) | [Документы РИ и СССР](guide/2-справочник/01-документы-ри-и-ссср.md) |
+| варианты написания фамилии, отвод по написанию | [`surname-variants-cyrillic-cursive`](skills/surname-variants-cyrillic-cursive/SKILL.md) | [Имена, фамилии, написания](guide/2-справочник/03-имена-фамилии-написания.md) |
 | метрики Галиции 1784–1939, фамилия матери | [`reading-galician-jewish-records`](skills/reading-galician-jewish-records/SKILL.md) | [Еврейская генеалогия](guide/2-справочник/02-еврейская-генеалогия.md), раздел 5а |
 | указатели перед листанием | [`using-community-surname-indexes`](skills/using-community-surname-indexes/SKILL.md) | [Фамильные указатели](guide/2-справочник/08-фамильные-указатели.md) |
 | собрать семью, свести однофамильцев | [`reconstructing-family-clusters`](skills/reconstructing-family-clusters/SKILL.md) | [Собрать семью целиком](guide/2-справочник/09-собрать-семью-целиком.md) |

@@ -96,6 +96,8 @@ A `prop=imageinfo` query with the fields `url|size` returns the direct address, 
 
 ## Step 5. Is it the right file
 
+**Page images: check the width you got.** The API may report the width you asked for while its `thumburl` points to a 500-px page (seen 21 November 2026). Write the width into the path yourself (`/pageN-1920px-…`), drop `?utm…`, and check the real JPEG width after download; a page narrower than requested is re-downloaded, never read as "no entry" (`reading-archive-scans`).
+
 Captions on Commons are sometimes wrong: a wrong reference, different content, a different year. **Before working, open the cover and one page from the middle** (page thumbnail: `iiurlparam=page<N>-1280px`; the permitted widths are only 1280 and 3840, otherwise HTTP 400). For revisions, check the column "по последней ревизии" [per the last revision]: it names the year of the previous revision and so gives away the year of the file. Five minutes of checking against hours of work on the wrong document.
 
 ## Step 6. Download whole

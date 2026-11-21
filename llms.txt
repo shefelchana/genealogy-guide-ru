@@ -79,7 +79,7 @@ XX век и эмиграция:
 
 ## Навыки (skills)
 
-- [Список навыков](skills/README.md): 40 навыков для Claude с условиями срабатывания и установкой
+- [Список навыков](skills/README.md): 41 навык для Claude с условиями срабатывания и установкой
 - [genealogy-intake](skills/genealogy-intake/SKILL.md): первый разговор, файлы проекта, первый вопрос и план
 - [search-logic-navigator](skills/search-logic-navigator/SKILL.md): развилки маршрута поиска
 - [verifying-genealogy-findings](skills/verifying-genealogy-findings/SKILL.md): проверка находок и отрицательного вывода

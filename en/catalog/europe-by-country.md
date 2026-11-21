@@ -16,7 +16,7 @@ The markers in square brackets ([checked], [from search snippet], [unverified] a
 - **szukajwarchiwach.gov.pl** — more than 55 million scans of Polish state archives. Search by the **name of the locality**, ticking "Vital records and civil registers"; documents of the last 80–100 years are in the civil registry offices (ZAGS). Languages: Russian or German for the former partitions, Latin in church books [from search snippet]. ⚠️ The site blocked some foreign addresses entirely.
 - **PRADZIAD** — shows where the books of a parish or civil registry are kept [from search snippet].
 - **AGAD** (Warsaw) — books of the former Lwów, Tarnopol, Stanisławów and Volhynia voivodeships; the series of Jewish books from beyond the Bug 1789–1943 is freely accessible through szukajwarchiwach [from search snippet]; about 3,000 Jewish metrical books of Galicia 1877–1911 online [per FamilySearch].
-- **Gesher Galicia** — the All Galicia Database (over half a million records 1786–1945) has been behind a membership wall since September 2026 (from the research project's experience; no announcement was found on geshergalicia.org — **not verified on the page**, 2026-10-07).
+- **Gesher Galicia** — the All Galicia Database: in October 2026 it seemed to be behind a membership wall, but in November 2026 **the index search worked without login** (app.geshergalicia.org; about a million records, cadastres, owner lists, Map Room); scans of many sets are for members (checked in practice, November 2026). Details — [Indexed databases](indexed-databases.md).
 
 ## Lithuania
 - **LitvakSIG** (litvaksig.org) — the All Lithuania Database, over 2.8 million records, updated quarterly, free. Those who contribute money to the district research groups get the data earlier [checked].

@@ -44,6 +44,17 @@ What this section covers: search databases with abstracts of documents (indexes)
 - **Access:** Free. The new search shows full results only with an account. The **old form** `legacy.jri-poland.org` shows everything without login after you accept the conditions (personal research only; when citing, name JRI-Poland).
 - **Techniques:** the results summary has a breakdown by region; details open in a separate form.
 
+### Gesher Galicia — All Galicia Database (app.geshergalicia.org) (English interface)
+- **What is there:** an open Galician index of about a million records, 1780s–1940s: vital records, **the Josephine (1785–88) and Franciscan (1819–20) cadastres**, landowner and house-owner lists, residents, taxpayers, voters, schools, notaries. The **Map Room** (maps.geshergalicia.org) has cadastral maps of the 1820s–1860s, open.
+- **Access:** the index search works without login (checked in practice, November 2026); scans of many sets are for members only. Write "by index" when you have not seen the image.
+- **Traps:** cadastres list **owners only** — not tenants, children or servants: a family renting rooms is invisible, and a zero here is weak ("not an owner in <year>", not "did not live there"). The index mixes up sex and role (a child's entry under the father). Before 1787–88 there are no surnames — given name, patronymic or trade.
+- **Skill for AI:** [reading-galician-jewish-records](../../skills/reading-galician-jewish-records/SKILL.md).
+
+### familio.org (in Russian)
+- **What is there:** a Russian-language project with open excerpts from index catalogues: records of criminal-record certificates 1870–1927, WWI losses, medical lists, 1906 electors, 17th-century service people (RGADA, fond 210) and more; each excerpt gives the original text and **the archive reference**. There is a person search and user trees.
+- **Access:** excerpts open without login (checked in practice, November 2026). Read the site's terms before any automation.
+- **Traps:** coverage by province is uneven — for many places there are no metrical books or revisions; a zero is a zero of these catalogues. A user tree is someone else's version, not a source: check it by the reference.
+
 ### archival.name
 - **What is there:** a free combined name index for Central and Eastern Europe. It has worked since 8 October 2026 and was built by one person. Collections: archive inventories (names in file titles), the 1897 census, the family cards of the 1926 census of the Ukrainian SSR, pogrom-relief files (1917–1938), merchants of the guberniyas (files on admission to guilds and town communities), directories, metrical books. Almost every card links to a scan on Wikimedia Commons: one link to the page, one to the whole file [checked].
 - **How the index is made:** the indexes were **compiled by AI** and, according to the author, checked on samples; errors remain, and "for now quantity comes before quality" [checked]. It is a hint where a sheet lies, not a reading of it.
