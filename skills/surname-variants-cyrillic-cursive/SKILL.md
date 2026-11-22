@@ -58,7 +58,7 @@ Clerks wrote what they heard; Yiddish dialects differ in vowels (Polish/Ukrainia
 A clerk may "correct" an unfamiliar ending towards a familiar one (a familiar given name, or common -tel surnames), and an indexer may do the same. Treat **X-fel / X-ftel / X-fter** as variants of each other for search, even though etymologists separate them.
 
 ### 4. Endings
-- **-ель ↔ -ер / -еръ / -ерь**: л/р alternate in clerks' ears and in cursive; in one real case the same household was "-ель" in 1816 and "-еръ" in 1850.
+- **-ель ↔ -ер / -еръ / -ерь**: л/р alternate in clerks' ears and in cursive; a re-check showed that an earlier "-ель in 1816 / -еръ in 1850" example was itself a misreading (no second tail of р on the crop) — so verify such endings against р in a common word of the same frame. A proven case of copyist error is one entry in two copies: "р" in the register, "ф" in the alphabetical index made from it.
 - **-ель → -ль, -ел, -елъ** (no soft sign, pre-reform hard sign, syncope).
 - **truncated -ъ** in a cramped column or a later hand: "X-фъ" for "X-феръ / X-фель".
 - **-ман, -ов, -ский, -ович** derivatives: separate names, but write them out (⚪) — a son-in-law, an adopted relative or a clerk's patronymic can produce them.
