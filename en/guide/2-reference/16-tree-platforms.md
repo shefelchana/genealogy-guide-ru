@@ -46,6 +46,7 @@ This is a proposal by the authors of the guide, not advice from outside sources.
 
 - **MyHeritage:** "Smart Matches" from Geni, if the tree on Geni is your own, are your own data, not an independent source. In the profile biography editor, text pasted by a program may silently fail to save — you need to type at least one character from the keyboard; it is better to enter a long note in paragraphs (the limit of one note is about 2,300 characters).
 - **FamilySearch:** a profile's "deceased" status changes only when someone enters a death date manually.
+- **The free tree limit.** MyHeritage's free plan allows 250 people across all trees (table above). Before adding people in bulk, look at the people counter and estimate how many you are about to add. Space is freed by deleting duplicates — each deletion is the researcher's decision — or "islands" (branches not yet linked to the main tree) are kept outside the paid service: in your own file (Gramps, GEDCOM) or in free trees (the compiler's research, November 2026).
 - **Every event in the tree** needs a source citation. FamilySearch advises adding one every time you add an event.
 
 > **How to ask AI**

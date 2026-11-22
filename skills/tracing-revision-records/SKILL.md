@@ -164,3 +164,14 @@ Three things follow:
 The temptation "relatives lived next to each other, so the household numbers are close" works **only in a revision list**, where the order is geographical.
 ⚠️ In **recruit and draft lists the order is set by the conscription queue**, not by the street. Verified on a real file: on a single frame in a row come shtetl A No. 203, shtetl B No. 29, shtetl A No. 188, shtetl C No. 29: two different families under one number, from different shtetls.
 ✅ Before comparing numbers, **make sure both are taken from the same shtetl and the same document**. And remember that numbers do not carry over between revisions.
+
+
+## 🔑 Identity across rungs: four anchors and a consistent age
+
+- Hold the identity of a man across early revisions — and between an index and a revision — on **four anchors**: given name, patronymic, place, and an age that runs through, e.g. 25 in 1795 → 43 in 1811 → 48 in 1816. Each step should match the difference in years; ±1–2 years is normal drift, more needs an explanation (a misread column, a different man).
+- **An index without its image** (someone else's transcription table of a census or revision) is ⚪ on its own and **at most 🟡** even with a matching age chain; write "image not found" in the record. Accepting it as a working link is **the researcher's decision**, recorded with a date — not the agent's conclusion.
+- **Two men with the same given name and patronymic in one town:** do not pick the convenient one. Write out both with ages and households. The link often stands in the **household note**, not in the name column: "guardian", "nephew of so-and-so" under a different surname, "lives with …". Read the whole household and the notes column.
+
+## ⚠️ Pre-reform district borders: the early revisions may lie elsewhere
+
+Districts were redrawn in the provincial reform of 1775–1785 (many new districts appeared in 1777–1779). Before that a village of a later district could belong to another district or even another province, so its revisions I–III are kept with the records of the old unit — often in RGADA, fond 350 — not in the oblast archive of the new district. Check another researcher's claim ("there are no early revisions", "they are in archive X") against the headings of the files: which district each one names, year by year.

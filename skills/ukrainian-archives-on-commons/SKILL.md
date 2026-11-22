@@ -117,7 +117,7 @@ Captions on Commons are sometimes wrong: a wrong reference, different content, a
 
 ## Pace and limits
 
-- Commons and Wikisource work without login and without CAPTCHA; the limits are on frequency. One worker per site, a pause between requests.
+- Commons and Wikisource work without login and without CAPTCHA; the limits are on frequency. At most **two workers on Commons at once** (a third brings 429 on the image host), a pause between requests, and each worker writes in its log the frame where it stopped, so it can continue after a 429 pause instead of starting over.
 - The archives' own sites in the archives.gov.ua zone sometimes answer automated requests with 403 and open in an ordinary browser. If it is a geo-block (the browser sees the same), do not circumvent it: look for the same file on Commons or FamilySearch.
 - Ordering undigitised files, letters to archives and payment are only for a person.
 

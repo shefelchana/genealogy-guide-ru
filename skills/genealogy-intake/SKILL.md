@@ -46,6 +46,7 @@ The full list of questions by block is in `references/intake-questions.md`. Open
 Create the project folder (with the person's consent and where they say) and the files from `assets/project-files.md`: findings log, persons, hypotheses, search log, source registry, timeline, "Continue from here". Why this matters from day one: a new AI session does not remember the previous one, and a month later the person will not remember where they already searched. If you have no access to a folder (an ordinary chat), do not pretend the files exist: at the end of every answer give a "Write to the files" block for the person (AGENTS.md, section 3a). Divide everything that came up in the conversation like this:
 - names, dates and places **with a document** → into persons and timeline, noting which document;
 - stories and legends → into hypotheses (⚪) and into persons with the note "according to …";
+- an **AI summary of a call** (note-taking services) → "according to …, call of <date>"; it often distorts names and places (one district for a similar-sounding one), so put likely distortions in square brackets and check them with the participant;
 - what was sent (scans, photos) → into the source registry; name the files clearly: `year_type_who.jpg`.
 
 ## The first summary table

@@ -64,6 +64,8 @@ Give every find and hypothesis a status on the guide's single scale:
 
 In detail, with the rules for the tree, see [Standard of proof](../3-results/01-standard-of-proof.md), section 4a. Only 🟢 goes into an online tree. The decision about kinship and about the status is made by the human, not by AI.
 
+**An index without an image.** A line of someone else's index or census table without a scan is ⚪; together with independent signs it is no higher than 🟡, and the record says "image not found". Hold the identity of the person in the index and in the revision on four signs: given name, patronymic, place and a **consistent age** — for example 25 in 1795, 43 in 1811, 48 in 1816: each rung agrees with the difference in years within ±1–2 years. Record the decision "accept as a working version" as the researcher's decision, with a date, not as an AI conclusion (the compiler's research, November 2026).
+
 ## 6. What AI does not do and should not do
 
 - It does not pass CAPTCHAs and "I am not a robot" checks.

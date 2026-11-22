@@ -53,7 +53,9 @@ This is the same [search route](01-search-route.md), laid out by performer.
 
 - **One agent — one source** (a volume, a film, a newspaper for a year). A large volume can be split by frames between 2–3 agents, **only if they are on different sites**.
 - **One site — one performer at a time.** Three agents on FamilySearch at once — a CAPTCHA for all of them within half an hour.
-- Sites without protection (Wikimedia Commons, archive.org, local PDFs) — may run in parallel.
+- Sites without a CAPTCHA (Wikimedia Commons, archive.org) — in parallel, but in moderation: on Commons **no more than two agents at once**, or the image host starts answering 429 ([False zero](09-false-zero.md), section 38). Each agent writes in its own log at which frame it stopped, so that after a pause it continues instead of starting over. Local PDFs — no limit.
+- **FamilySearch: one agent per file (film, DGS).** The frame position in the viewer is shared by all tabs of one account: a second agent on the same film moves the first one's frame, and the first reads the wrong page (the compiler's research, November 2026).
+- **Split a large volume by the volume map, not by the file name**: first a map by section headings (shtetls, dates of the lists, supplementary lists, attachments), then frame ranges to agents ([False zero](09-false-zero.md), section 39).
 - First **cheap checks** (indexes, full-text search, community surname indexes), then **continuous reading**.
 - Broad tasks like "go through eight libraries" are beyond agents. Give 1–2 sources and a log entry after each.
 
@@ -172,6 +174,7 @@ More on checking — [Checking results](04-checking-results.md).
 - **At the end of every session, list your background tasks and close the ones you do not need** [reader's experience]. For the reader, stuck downloads survived a conversation compaction, a break and two days of work, and nobody was counting them.
 - **A correction made in one place has not been made** [reader's experience]. Having corrected a statement in your rulebook or project files, search all files, the rulebook included, for its **old wording** — the literal line, not the idea: you recognise the idea, but search finds the line. Three times in three days the reader's old version lived on in working files, in the task queue and in agent tasks; once the old and the new stood in the same file, and an agent faithfully worked by the old one.
 - Lessons (what worked, what slowed things down) — in a separate methodology file; once a week, a short review.
+- **Check "saved" against the file.** After "save", the coordinator may write the new block only into its own memory or into the chat reply, and it will not be in the "Continue from here" file (the compiler's research, November 2026). The check is a search of the file itself for the heading or time stamp of the new block: the line is found — saved; not found — write it again. The assistant's memory is not a project file.
 - A register of **partly read files**: a file read for one surname later passes itself off as "viewed" for another. Record which sections were read and for which surname.
 
 Skills: [`research-session-handoff`](../../../skills/research-session-handoff/SKILL.md), [`organizing-genealogy-research`](../../../skills/organizing-genealogy-research/SKILL.md).

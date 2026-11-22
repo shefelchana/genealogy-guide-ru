@@ -355,6 +355,19 @@ Two consequences:
 
 → Before writing "the site returns 429", try **another image host**; **compare the size of the file you got with the expected one** — a three-kilobyte answer to a request for a book page is not a page. How to take files from Commons — skill [`ukrainian-archives-on-commons`](../../../skills/ukrainian-archives-on-commons/SKILL.md).
 
+## 39. A volume is a compilation: first a map by headings, then the split
+
+A file name on Commons ("revision lists of the Jews of a district town, such-and-such year") and even the heading of the first list ("list … dated such-and-such") describe only the start of the volume. In the compiler's research (November 2026) such a volume turned out to be a compilation: the lists of several shtetls of the district one after another, then late supplementary lists (of those omitted or newly arrived) and papers attached to the file. A task "read the list of town N" in such a volume reads the wrong section or stops before the right one, and the zero is laid on the whole volume.
+
+→ Before splitting a volume between agents, build a **map of the volume by headings**: every section title — shtetl, date of the list, first and last frames; supplementary lists and attachments as separate rows. Split the ranges by the map and write in the task "frames 214–388: list of shtetl N dated … (per the map)", not "the list of shtetl N". Record a zero against a section of the map, not against the file name. How to build the map — skill [`reading-archive-scans`](../../../skills/reading-archive-scans/SKILL.md), "Volume map"; on false file captions — section 12.
+
+## 40. Military databases: a script's zero, an empty page shell, a clerk's typo
+
+Three traps from one day of checking military databases (the compiler's research, November 2026):
+- **The surname filter was not applied.** A query to the site assembled by a script gave "zero", while the site actually returned a general page without the filter: the surname parameter never reached the search. Check as in sections 3, 19 and 32: a control surname known to be in the database, by the same route; the number of results with and without the filter; your surname in the results header.
+- **OBD Memorial sometimes returns an empty page shell**: header and menu in place, but neither a list nor a "nothing found" line. That is "the instrument did not answer", not a zero: repeat after a pause (section 15).
+- **A typo in the surname can be the person you are looking for.** The clerk wrote a vowel differently (conventionally "Sholter" for "Shelter"), and a man with the right given name, patronymic, year and place of birth was found only under that form. Running through variants (skill [`surname-variants-cyrillic-cursive`](../../../skills/surname-variants-cyrillic-cursive/SKILL.md)) is mandatory in military databases too; identification goes by given name, patronymic, year and place of birth ([War, repression, siege](../2-reference/12-war-repression-siege.md), section 1).
+
 ---
 
 **See also:** [Checking results](04-checking-results.md) · [Standard of proof](../3-results/01-standard-of-proof.md), section 7 · [Names, surnames, spellings](../2-reference/03-names-spellings.md) · [Access, CAPTCHAs, pace](../2-reference/19-access-captchas-pace.md) · [Working with agents](03-working-with-agents.md) · the [verifying-genealogy-findings](../../../skills/verifying-genealogy-findings/SKILL.md) skill

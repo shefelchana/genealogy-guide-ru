@@ -65,6 +65,7 @@ Nadia Lipes advises working with pre-revolutionary documents through local genea
 ### Russia
 - According to FamilySearch, Rosarkhiv (the Federal Archival Agency) and many Russian archives are not set up for "family history" requests; they recommend specialised paid services (for example BLITZ, St. Petersburg, preliminary search — $80 per FamilySearch).
 - ZAGS documents are kept in the regions.
+- **ZAGS records in Russia** [from search results, November 2026]: from 01.01.2025 the state fee for a repeat certificate is 500 ₽, for a certificate-extract (*spravka*) from a record 350 ₽ (Tax Code of the Russian Federation, art. 333.26). A repeat certificate for a deceased person is issued to a relative or another interested person (Federal Law 143-FZ "On acts of civil status", art. 9). Register books are kept by ZAGS offices for 100 years and then transferred to the state archive: a record older than a hundred years is in the archive, not at ZAGS.
 - Some oblast archives offer **paid remote viewing** of digitised files (EAIS — unified archive information system) — sometimes this is cheaper and faster than a request. First check the open PDF inventories and name indexes.
 
 ### Belarus

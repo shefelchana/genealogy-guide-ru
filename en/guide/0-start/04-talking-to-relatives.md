@@ -71,6 +71,7 @@ Irina Shcherbakova (Memorial) recorded oral memoirs from the late 1970s and ran 
 - **Enter into a table** the full names, years, place and the number of the source — right after the conversation. The paternal and maternal lines go in different folders (VGD).
 - **Word for word**, with the note "so says …" — especially names and place names as the storyteller pronounces them.
 - Give the storyteller a copy of the recording or transcript (USC Shoah).
+- **Do not trust an AI call summary on names and places.** Note-taking services that write the summary of a conversation themselves confuse similar-sounding names and places: in the compiler's research a summary wrote one district instead of another that sounds alike (conventionally "Belev" for "Belebey"). In the project file write "according to so-and-so, call of such-and-such date", likely distortions in square brackets ("[summary says Belev — check]"), and check with the participant. What decides is the recording or the participant's answer, not the summary.
 - Keep the recording file by the rules in [Ethics and preservation](../3-results/03-ethics-preservation.md), section 6.
 
 ## 5. How to check what you were told

@@ -92,6 +92,7 @@ Into a publicly available tree — only 🟢; into your personal working one —
 - **Age "floats"** by 2–5 years between documents; brides' ages were "made older", conscripts' ages were corrected. Compare intervals and the order of the children, not the exact year.
 - **The family number does not carry over between revisions.** The link is given by the age bridge, the family composition or an explicit clerk's reference. Several separate families are sometimes recorded under one number, and an adult "foster child" with a young head of household is not necessarily adopted.
 - **Namesakes "uncle — nephew"** of similar age because of the custom of naming after the dead: it is easy to mix up generations.
+- **Two men with the same given name and patronymic in one town** — do not pick the "convenient" one. Write out both with ages and households. Kinship often stands not in the name column but in the **household note**: "guardian", "nephew of so-and-so" under another surname, "lives with …". Read the whole household and the notes column, and record the link by them (the compiler's research, November 2026).
 - **A name was changed during life** (illness, failures, a daughter's marriage to a man with the father's name): children of one father can have different patronymics in different documents (N. Lipes). Check by the family number and the surroundings.
 
 > **How to ask AI**

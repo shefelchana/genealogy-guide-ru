@@ -37,6 +37,7 @@ The document was photographed on microfilm and is on FamilySearch (metrical book
 ## Pace and protection (experience of October 2026)
 - hCaptcha ("Additional security check") appears after roughly **45–150 opened frames (more often around 130 in 40 minutes; earlier as time goes on)**, even with pauses of 10–12 s.
 - Pulling a whole film (a thousand frames in minutes) causes freezes and errors for **all** tabs of the same account.
+- **The frame position is shared by all tabs of one account** (November 2026): a second agent opening another frame of the same film moves the first agent's view, and the first reads the wrong page. One agent per film (DGS); the next one waits.
 - Rules: **one worker on FamilySearch at a time**; no more than 1 frame per 5–10 s; batches of 4 frames; breaks; on a captcha, stop — a human passes the captcha.
 - Some films are available only in FamilySearch centers or serve frames only up to a certain number — record this as a limitation of the source, not as "not found".
 

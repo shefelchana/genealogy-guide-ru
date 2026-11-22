@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.9, November 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.10, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -157,6 +157,16 @@ All skills are written in English; each description also lists Russian trigger p
 More details and limitations — [skills/README.md](../skills/README.md).
 
 **Via Agensi.** The skill pack is also on the Agensi marketplace (new skills reach it with a delay); an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+
+## What's new in 0.5.10
+
+Lessons from the compiler's research of 21–22 November 2026, examples anonymised:
+
+- **[False zero](guide/1-ai-search/09-false-zero.md), sections 39–40:** a volume on Commons can be a compilation — the lists of several shtetls of a district, late supplementary lists and attached papers — so the file name and even the heading of the first list mislead: first a map of the volume by headings, then split the ranges between agents and record a zero by map section. Military databases: a scripted query whose surname filter was not applied, an empty OBD page shell, and a clerk's typo that turns out to be the person.
+- **[Working with agents](guide/1-ai-search/03-working-with-agents.md):** on Commons no more than two agents at once, each logging where it stopped; on FamilySearch one agent per file (the frame position is shared by all tabs of an account); a large volume is split by its map; "saved" is checked by searching the file, not the assistant's memory.
+- **[Checking results](guide/1-ai-search/04-checking-results.md), section 5:** an index without an image is at most 🟡 with "image not found"; identity by given name, patronymic, place and a consistent age; "accept as a working version" is the researcher's decision.
+- **Reference:** two men with the same name and patronymic in one town, and the household note ([The whole family](guide/2-reference/09-whole-family.md)); AI call summaries distort names and places ([Talking to relatives](guide/0-start/04-talking-to-relatives.md)); district borders before the 1775–1785 reform and where the early revisions lie ([Orthodox and peasants](guide/2-reference/21-orthodox-and-peasants.md)); fees and retention of ZAGS records in Russia ([Requests and letters](guide/2-reference/20-requests-letters.md)); the free tree limit before bulk additions ([Tree platforms](guide/2-reference/16-tree-platforms.md)).
+- **Skills:** `reading-archive-scans` (compilation volumes), `tracing-revision-records` (consistent age, namesakes and the household note, pre-reform borders), `verifying-genealogy-findings` (index without image, military false zeros), `orchestrating-genealogy-agents`, `searching-familysearch-films`, `ukrainian-archives-on-commons` (parallelism), `research-session-handoff` (checking the save), `soviet-era-records` (military databases, ZAGS in Russia), `genealogy-intake` (AI call summaries).
 
 ## What's new in 0.5.9
 

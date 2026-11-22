@@ -35,7 +35,9 @@ Do the steps in order. Skipping any step costs more later than the step itself.
 
 - **One agent — one source**: a volume, a film, or a newspaper for one year. Agents cannot cope with broad tasks such as "go through 8 libraries". Give one or two sources and require a log entry after each.
 - **One site — one executor at a time.** Sites protect themselves against frequent requests. Three agents on one site will all get a captcha within half an hour, and work stops for everyone.
-- **Unprotected sites can be parallelised**: Wikimedia Commons, archive.org, local PDFs. A large volume may be split by frames between 2–3 agents only if the files are already downloaded or the sources are on different sites.
+- **Sites without a CAPTCHA can be parallelised in moderation.** On Wikimedia Commons no more than **two agents at once** (more brings 429 on the image host), and each writes in its log the frame where it stopped, so a relaunch continues instead of starting over. archive.org and local PDFs — freely. A large volume may be split by frames between 2–3 agents only if the files are already downloaded or the sources are on different sites.
+- **FamilySearch: one agent per file (film, DGS).** The viewer's frame position is shared by all tabs of one account: a second agent on the same film moves the first one's frame, and the first reads the wrong page.
+- **Split a volume by its map, not by its caption.** A file captioned as one list may be a compilation (several places, supplementary lists, attachments). Build the map by section headings first (`reading-archive-scans`, "Volume map"), then give each agent a frame range "per the map".
 - **Cheap checks first, continuous reading after.** An index or full-text search sometimes answers in a minute a question that reading would spend an hour on.
 - **Divide long work into parts of 15–45 minutes.** A short result is easy to verify and continue; "everything overnight" is not.
 - **Plan parallelism yourself before launch.** Do not count on the agent asking permission along the way.

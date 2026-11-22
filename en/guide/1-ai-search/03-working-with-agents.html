@@ -128,7 +128,9 @@ img{max-width:100%}footer{border-top:1px solid var(--line);padding-top:14px;padd
 <ul>
 <li><strong>One agent — one source</strong> (a volume, a film, a newspaper for a year). A large volume can be split by frames between 2–3 agents, <strong>only if they are on different sites</strong>.</li>
 <li><strong>One site — one performer at a time.</strong> Three agents on FamilySearch at once — a CAPTCHA for all of them within half an hour.</li>
-<li>Sites without protection (Wikimedia Commons, archive.org, local PDFs) — may run in parallel.</li>
+<li>Sites without a CAPTCHA (Wikimedia Commons, archive.org) — in parallel, but in moderation: on Commons <strong>no more than two agents at once</strong>, or the image host starts answering 429 (<a href="09-false-zero.html">False zero</a>, section 38). Each agent writes in its own log at which frame it stopped, so that after a pause it continues instead of starting over. Local PDFs — no limit.</li>
+<li><strong>FamilySearch: one agent per file (film, DGS).</strong> The frame position in the viewer is shared by all tabs of one account: a second agent on the same film moves the first one's frame, and the first reads the wrong page (the compiler's research, November 2026).</li>
+<li><strong>Split a large volume by the volume map, not by the file name</strong>: first a map by section headings (shtetls, dates of the lists, supplementary lists, attachments), then frame ranges to agents (<a href="09-false-zero.html">False zero</a>, section 39).</li>
 <li>First <strong>cheap checks</strong> (indexes, full-text search, community surname indexes), then <strong>continuous reading</strong>.</li>
 <li>Broad tasks like "go through eight libraries" are beyond agents. Give 1–2 sources and a log entry after each.</li>
 </ul>
@@ -327,6 +329,7 @@ Pace and limits:
 <li><strong>At the end of every session, list your background tasks and close the ones you do not need</strong> [reader's experience]. For the reader, stuck downloads survived a conversation compaction, a break and two days of work, and nobody was counting them.</li>
 <li><strong>A correction made in one place has not been made</strong> [reader's experience]. Having corrected a statement in your rulebook or project files, search all files, the rulebook included, for its <strong>old wording</strong> — the literal line, not the idea: you recognise the idea, but search finds the line. Three times in three days the reader's old version lived on in working files, in the task queue and in agent tasks; once the old and the new stood in the same file, and an agent faithfully worked by the old one.</li>
 <li>Lessons (what worked, what slowed things down) — in a separate methodology file; once a week, a short review.</li>
+<li><strong>Check "saved" against the file.</strong> After "save", the coordinator may write the new block only into its own memory or into the chat reply, and it will not be in the "Continue from here" file (the compiler's research, November 2026). The check is a search of the file itself for the heading or time stamp of the new block: the line is found — saved; not found — write it again. The assistant's memory is not a project file.</li>
 <li>A register of <strong>partly read files</strong>: a file read for one surname later passes itself off as "viewed" for another. Record which sections were read and for which surname.</li>
 </ul>
 <p>Skills: <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/research-session-handoff/SKILL.md"><code>research-session-handoff</code></a>, <a href="https://github.com/shefelchana/genealogy-guide-ru/blob/main/skills/organizing-genealogy-research/SKILL.md"><code>organizing-genealogy-research</code></a>.</p>

@@ -23,6 +23,7 @@ Primary document (scan of an archival file, or an original of the time held by r
 ⚠️ The hierarchy ranks carriers, but what decides is the specific document and the specific field. An original held by relatives (ZAGS certificate — Soviet civil registry —, passport, certificate) is not lower than a scan and is higher than a directory. Fields within a document are not equal: an age stated by the person himself is weaker than a date from a metrical record, though both stand in a primary document.
 ⚠️ **Encyclopedias, Wikipedia and published biographies rank below a metrical record and a census**, especially in the "place of birth" field: they often give the place of registration (*pripiska*) as the place of birth, and understate the number of children (the authors did not know of infants who died). An entry in a pre-revolutionary dictionary may have been paid for by the subject himself. Nadya Lipes, who compared such biographies with metrical records and censuses, considers errors in places of birth very common — this is a practitioner's opinion, not a statistic.
 ⚠️ **An AI chat's answer without a reference to a specific record is not a source**, even if it sounds like "recorded in the documents". First find the record, then believe it.
+⚠️ **An index line without its image** (someone else's census table, a transcription) is ⚪ alone and **at most 🟡** with independent support; write "image not found". Accepting it as a working version is the researcher's decision, recorded with a date.
 
 ## Age arithmetic
 
@@ -73,6 +74,12 @@ Three more checks before saying "there is no book" or "there is no record":
 · **The range of a surname** ("home of the surname") should be determined from the **earliest revisions (1805–1816)**, not from the geography of Beider's dictionary: it rests on sources of the early 20th century, when families had already dispersed.
 · The rule "one surname + one region = one family" (as the Am HaZikaron institute puts it) is stronger for Galicia and the Kingdom of Poland, where under the 1821 rules and the Galician rules different families of one locality were assigned different surnames; within the Pale of Settlement it is weaker, and for toponyms and occupations it does not work.
 🔑 When working with the trees of DNA matches, **a match by shtetl is worth more than a match by surname**: Jewish surnames are new (law of 1804), whereas the shtetl is held for generations. An example from one search: the emigrant Moische Feigel in Philadelphia became Max Fairman — his descendants cannot be found by surname.
+
+## Military databases: three false zeros
+
+- **A scripted query whose surname filter was not applied** returns a general page that reads as "zero". Run a control surname known to be in the database by the same route, and compare the result counts with and without the filter.
+- **OBD Memorial sometimes returns an empty page shell** — header and menu, but neither a list nor "nothing found". That is "the instrument did not answer": repeat after a pause.
+- **A clerk's typo can be the person**: a different vowel in the surname, with the right given name, patronymic, year and place of birth. Run every variant (`surname-variants-cyrillic-cursive`) and identify by name, patronymic, year and place of birth, not by the surname.
 
 ## Resources
 

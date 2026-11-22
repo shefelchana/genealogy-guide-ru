@@ -28,6 +28,7 @@ Do it in order. Each step closes a specific loss.
 8. **Lessons.** What worked, what slowed things down, which technique saved time. Write them in a separate methodology file in the form `assets/lessons-entry.md`, not in "Continue from here": lessons accumulate, while the state is overwritten.
 9. **Rewrite "Continue from here"** (CONTINUE-FROM-HERE.md) using the template `assets/continue-from-here.md`. The top of the file must fit on one screen: the current question, what waits for the human, the next step. Move outdated material to the "History of lines of inquiry" section at the bottom or to an archive file, but do not leave it at the top.
 10. **Check what was recorded.** Reread "Continue from here" through the eyes of a new session: is it enough to continue without reading the conversation? Do all the file paths exist?
+    Then **search the file itself** for the heading or time stamp of the block you just wrote. If the line is not there, it was not saved: a note in the assistant's memory or a promise in the chat is not the project file.
 11. **Tell the human** briefly: what has been saved, what awaits them, where the next session will begin.
 
 ### Rules for recording

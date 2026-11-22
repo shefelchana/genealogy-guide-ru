@@ -20,6 +20,7 @@ All the guides I have read repeat these rules, and they have been confirmed in p
 - **Use the patronymic** (among Jews often Russified) and **the year of birth ±2**.
 - **The main filter is the place of birth.** It helps to identify a person across different spellings of the surname.
 - **Cross-check a record in several databases.**
+- **Check a zero from a military database**: a scripted query whose filter was not applied, an empty OBD page shell and a clerk's typo all give false zeros ([False zero](../1-ai-search/09-false-zero.md), section 40).
 - **Printed memorial books reprint distortions**: a surname in a book may be distorted so badly that "there is no such surname". Check against the primary record in OBD (the Unified Database "Memorial", ОБД «Мемориал») or "Pamyat naroda" ("People's Memory", «Память народа»). The volunteer project "Imya voina" ("Warrior's Name", «Имя воина») drew attention to this in 2026.
 
 A real example. On "Pamyat naroda" and in OBD "Memorial" one man turned up in five documents: called up at 16, regiment, captivity and liberation, a wound. The surname and patronymic are spelled differently in them; he was identified by his year and place of birth.

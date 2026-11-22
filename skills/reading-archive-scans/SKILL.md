@@ -64,6 +64,8 @@ Printed title pages are much blacker than handwritten ones — `--mode printed` 
 
 ⭐ **First check whether there is a running header** with the name of the place on every spread: many revision lists have one, and then the map is built by sampling every 20th–40th page along the top strip, with no statistics at all.
 
+🔴 **The file caption, and even the heading of the first list, describe only the beginning of the volume.** A volume captioned as the revision list of one district town turned out to be a compilation: the lists of several shtetls of the district one after another, then late supplementary lists (omitted persons, new arrivals) and papers attached to the file. Build the map **by headings** before any split: one row per section — place, date of the list, first and last frame; supplementary lists and attachments as separate rows. Split agents' ranges by the map and brief them "frames 214–388: list of shtetl N dated … (per the map)", never "the list of shtetl N". Record a zero against a section of the map, not against the file caption.
+
 ### 4. The spread trap — the main cause of false "not found"
 
 It comes in two forms, and **you must check on the spot by opening two neighbouring pages**:
