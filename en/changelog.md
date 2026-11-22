@@ -3,6 +3,10 @@
 > Every change to the guide by date, newest first, taken from the repository's commit history. The page is rebuilt automatically with the site. A summary by version is in "What's new" on the [main page](README.md). Commit messages are in the language of the change (Russian or English).
 
 
+## 22 November 2026
+
+- 0.5.10: уроки 21–22.11 — сборный том и карта по заголовкам, ложные нули военных баз, параллельность на Commons и FamilySearch, индекс без образа, тёзки и примечание двора, границы уездов до реформы, ЗАГС в России, лимит бесплатного дерева ([ebaced2](https://github.com/shefelchana/genealogy-guide-ru/commit/ebaced2))
+
 ## 21 November 2026
 
 - skills: description в кавычках — YAML frontmatter 19 навыков теперь парсится (было: двоеточие в «requests: …») ([125b92b](https://github.com/shefelchana/genealogy-guide-ru/commit/125b92b))
