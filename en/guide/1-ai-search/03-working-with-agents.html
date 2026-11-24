@@ -478,6 +478,8 @@ Pace and limits:
 <li>Every task lists the files already downloaded: once a recheck spent 35 minutes downloading what was already on disk. The agent first checks the paths from the task: the temporary folder of a previous session may have been cleared.</li>
 <li>The agent appends to its file as it goes, roughly every 25 calls: two sessions were cut off at the limit without a single line, and 128 calls were lost.</li>
 </ul>
+<h3 id="your-own-tree-first">Your own tree first</h3>
+<p>Before a task "find the parents of X" the coordinator reads the researcher's tree on the platform (MyHeritage, Geni and the like) for all relatives of X and puts an extract into the task: names, dates, places and the note "entered from family accounts". Otherwise agents spend days looking for what is already written down, and a database candidate is not tested against the family patronymic (<a href="04-checking-results.html">Checking results</a>, section 2c).</p>
 <h3 id="candidates-already-found-come-first">Candidates already found come first</h3>
 <p>If earlier reports already name candidates (acts, records, family numbers), the agent opens them first and leaves the exhaustive pass — a "sieve" through the alphabet or the whole book — for later. In one round the sieve ate the whole budget: 175 calls yielded three acts, and the agent never got to the answer. A reference in a document to a family number in an earlier revision is also the first task.</p>
 <h3 id="one-run-per-folder">One run per folder</h3>
@@ -558,6 +560,15 @@ Pace and limits:
 </ul>
 <p><strong>How we tested that the fact-checker works.</strong> A blind test: the fact-checker got 9 old findings, 4 of them our past mistakes — without being told which. Over three runs it caught all 12 cases and did not reject a single correct finding. Keep such a set and rerun it after every change to the skills: it is a regression test.</p>
 <p><strong>What the fact-checker catches most often:</strong> the AI filled in what it expected (read "Fel" and added the first letter of the surname being searched for); the index read the wrong surname; the index merged two people into one; a false zero — the site did not answer the script, and this was recorded as "not found" (<a href="09-false-zero.html">False zero</a>).</p>
+<h2 id="13a-when-a-skill-changes-a-test-set-and-a-journal">13a. When a skill changes — a test set and a journal</h2>
+<ul>
+<li><strong>A set of examples, not one lucky case.</strong> Before changing a skill or a task brief, collect a set of real cases from your own project: many typical ones, some hard ones (namesakes, a poor scan, different spellings) and some where the agent <strong>must refuse</strong> (a login, a captcha, payment, site terms forbid scripts, a request for living people's names). Run every version on the same set; never adjust the reference answer to the model's output.</li>
+<li><strong>Critical errors block a version</strong> however good the rest is: an invented archival reference or link, "not found" without a coverage log, a surname variant ruled out by spelling alone, getting round a login or captcha, a relative's or a living person's name in public text.</li>
+<li><strong>Run the check in a separate session</strong>, not the one where the skill was written: the author remembers the intent and judges itself more gently. For disputed finds a second opinion from another model helps.</li>
+<li><strong>A pilot journal.</strong> Record every agent report together with the researcher's short verdict ("fine", "not right — why"). Refine the skill from the journal, not from memory: repeating errors become visible.</li>
+<li><strong>One task — one skill.</strong> Two versions of one rule (an old local copy and a new one) give the agent contradictory instructions. Install the new one and remove the old.
+Source of these techniques: an AI workshop (autumn 2026), meetings 3–4 [author's experience].</li>
+</ul>
 <h2 id="14-from-polina-krivosheevas-practice-order-and-economy">14. From Polina Krivosheeva's practice: order and economy</h2>
 <p>Tips from the live stream "Family history with Claude" (18.10.2026, Girls VibeCode). Polina researches her own family with Claude and has tuned the process on top of this guide.</p>
 <p><strong>Start in three steps.</strong> Open Claude and connect this guide as the base. Drop in everything you have: scans, photos, documents, even a hand-drawn sketch. Tell it in your own words what you remember and what you want to find: "Here is everything I have about my grandmother. I remember she was from Saratov… I want to find out where her parents came from."</p>
