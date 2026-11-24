@@ -3,7 +3,7 @@
 # Tracing Your Ancestors: A Practical Guide
 ### Russian Empire, USSR, Jewish families, emigration — a search route, sources, and working with AI
 
-> Version 0.5.10, November 2026. The guide keeps growing; websites change — check the links.
+> Version 0.5.11, November 2026. The guide keeps growing; websites change — check the links.
 
 A guide for people who look for their relatives and information about them in documents: metrical books, revision lists, censuses, newspapers, military and emigration databases, cemeteries and DNA. The territory is the former Russian Empire and the USSR (Ukraine, Moldova/Bessarabia, Belarus, Russia, Poland, Lithuania) and emigration to the USA and Europe.
 
@@ -133,14 +133,14 @@ The route, checking results and scenarios are a general method for everyone; the
 | [examples/](examples/README.md) | [A worked example for beginners](examples/worked-example-for-beginners.md) · [Examples of finds](examples/example-finds.md) and a [case study of a search from a newspaper to a family](examples/case-study-newspaper-to-family.md) |
 | [templates/](templates/README.md) | Templates: [finding record](templates/finding.md), [persons](templates/persons.md), [hypothesis](templates/hypothesis.md), [research log](templates/research-log.md), [source register](templates/source-register.md), [timeline](templates/timeline.md), [place guide](templates/place-guide.md), ["Continue from here"](templates/continue-from-here.md), [letter to an archive](templates/letter-to-archive.md) |
 | [skills/](../skills/README.md) | Skills for Claude — the same methods in the form of instructions for AI (in English) |
-| [agents/](agents/archive-mechanic.md) | Descriptions of helper agents for Claude Code: [archive-mechanic](agents/archive-mechanic.md), [archive-transcriber](agents/archive-transcriber.md) |
+| [agents/](agents/archive-mechanic.md) | Agent definitions for Claude Code: the five-role team — [genealogist-historian](agents/genealogist-historian.md), [archive-researcher](agents/archive-researcher.md), [open-sources-researcher](agents/open-sources-researcher.md), [genealogy-fact-checker](agents/genealogy-fact-checker.md), [genealogy-supervisor](agents/genealogy-supervisor.md); helpers — [archive-mechanic](agents/archive-mechanic.md), [archive-transcriber](agents/archive-transcriber.md) |
 | [AGENTS.md](AGENTS.md), [llms.txt](llms.txt) | instructions and a map of the guide for AI agents |
 
 The five rules that save months are in the [Quick start](guide/0-start/01-quick-start.md); the rules for AI are in [AGENTS.md](AGENTS.md).
 
 ## Skills for Claude — how to install
 
-The [skills/](../skills/README.md) folder contains 41 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
+The [skills/](../skills/README.md) folder contains 46 skills: from the first conversation ("I want to find my ancestors") to reading scans, revisions, pogrom databases, cemeteries, DNA, writing the family history and a research showcase. Claude loads the right skill itself when the task fits. Details — [Skills for Claude](guide/1-ai-search/06-skills.md).
 
 All skills are written in English; each description also lists Russian trigger phrases, so the skills work with requests in either language.
 
@@ -157,6 +157,16 @@ All skills are written in English; each description also lists Russian trigger p
 More details and limitations — [skills/README.md](../skills/README.md).
 
 **Via Agensi.** The skill pack is also on the Agensi marketplace (new skills reach it with a delay); an agent connected to Agensi loads the right skill by itself, with no files to install: [English edition](https://www.agensi.io/skills/jewish-genealogy-toolkit-english-russian-empire-ussr) (subscription with updates) or [one-time](https://www.agensi.io/skills/jewish-genealogy-toolkit-one-time-russian-empire-ussr); [Russian edition](https://www.agensi.io/skills/genealogy-toolkit-russian-edition-ussr-jewish-roots) (subscription) or [one-time](https://www.agensi.io/skills/genealogy-toolkit-russian-one-time-ussr-jewish-roots). Here on GitHub the skills stay free and open (CC BY 4.0).
+
+## What's new in 0.5.11
+
+Lessons from the author's research of 23–24 November 2026, a fresh-eyes review of every skill, and techniques from an AI workshop; examples anonymised.
+
+- **The five-role team is published** as skills and agent definitions: [`genealogist-historian`](../skills/genealogist-historian/SKILL.md) (round plan and summary), [`archive-researcher`](../skills/archive-researcher/SKILL.md) (files and scans), [`open-sources-researcher`](../skills/open-sources-researcher/SKILL.md) (databases, indexes, newspapers), [`genealogy-fact-checker`](../skills/genealogy-fact-checker/SKILL.md) (a verdict on each find), [`genealogy-supervisor`](../skills/genealogy-supervisor/SKILL.md) (admission, audit, overview; `agent_audit.py`); agent files in [agents/](agents/).
+- **[Checking results](guide/1-ai-search/04-checking-results.md), sections 2b–2c:** namesakes and the informant (now in English too); read your own online tree first; the patronymic tests a candidate; figures from OCR of printed books only from the page image, checked by the source's own arithmetic.
+- **[Working with agents](guide/1-ai-search/03-working-with-agents.md):** "your own tree first" in a brief; section 13a — when a skill changes: a test set (typical, hard, must-refuse), critical errors block a version, check in a separate session, a pilot journal, one task — one skill.
+- **Reference:** arrival/departure lists of military offices are not loss reports; search by district, not village ([War](guide/2-reference/12-war-repression-siege.md)); asking a local historian for a lineage list with a source for every entry ([Requests and letters](guide/2-reference/20-requests-letters.md)); odnodvortsy in detail ([Orthodox and peasants](guide/2-reference/21-orthodox-and-peasants.md)); a place appendix for a family book ([Family history](guide/3-results/02-family-history.md)); 💭 "guess" on the status scale ([Standard of proof](guide/3-results/01-standard-of-proof.md)).
+- **Skills review:** every description fits 1024 characters and names neighbouring skills ("Not for …"); the contradiction about surname variants removed; FamilySearch needs a login, no scripted frame downloads; one User-Agent rule — an honest tool name, no personal data, never a browser string (scripts fixed); Commons page widths; the revision chain before 1795; 0 cM in "Are your parents related?"; Galician and Romanian calendars; Polish civil-registry retention; private examples replaced.
 
 ## What's new in 0.5.10
 

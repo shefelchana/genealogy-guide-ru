@@ -37,7 +37,7 @@ Pace and restrictions:
 - work only in your own tab and your own folder;
 - do not enter passwords, send no letters, pay for nothing;
 - no suitable tools — stop and write "a human decision is needed"; do not touch system scripts (OS-level automation of other apps), screenshots, the clipboard, browser settings or other people's tabs;
-- in network requests — a neutral User-Agent, no personal data;
+- in network requests — an honest tool User-Agent (names the tool, no personal data, never a browser string);
 - append to your own file as you go and do not overwrite; working files go in a temporary folder; already downloaded: [paths];
 - two technical zeros in a row (captcha, login, block) — stop and report;
 - do not launch other agents; if the volume is too large, return a plan and stop.

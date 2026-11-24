@@ -1,7 +1,7 @@
 ---
 name: writing-family-history
 description: >-
-  Turns verified genealogical findings into readable prose for relatives — a family history, a chapter about one ancestor, a family book or a short story for a reunion — without inventing facts. Uses a two-layer record (cited fact plus a paragraph for family), adds historical context about the place and era kept separate from claims about the family, marks hypotheses and family legends in words, handles contradictions, footnotes, captions, living people and sensitive topics, and ends with a source table, open questions, a name index and a preservation plan (three copies, durable formats). Use whenever the user asks for a family history, a text for relatives, a chapter about an ancestor, a family book or chronicle, or hands over research notes and asks for something relatives can read. Also triggers on Russian requests: «напиши историю семьи», «сделай текст для родственников», «оформи главу про прадеда», «семейная книга», «рассказ о предках к юбилею», «перепиши досье понятным языком», «летопись семьи».
+  Turns verified genealogical findings into readable prose for relatives — a family history, a chapter about one ancestor, a family book or a short story for a reunion — without inventing facts. Uses a two-layer record (cited fact plus a paragraph for family), adds historical context kept apart from claims about the family, marks hypotheses and legends in words, handles contradictions, footnotes, captions, living people and sensitive topics, and ends with a source table, open questions and a preservation plan. Use whenever the user asks for a family history, a text for relatives, a chapter about an ancestor, a family book or chronicle, or hands over notes for relatives to read. Not for an interactive page of the research (use building-research-showcase). Also triggers on Russian requests: «напиши историю семьи», «сделай текст для родственников», «оформи главу про прадеда», «семейная книга», «перепиши досье понятным языком».
 ---
 
 # How to write a family history from verified findings
@@ -68,6 +68,7 @@ For a large family book follow the 10 steps (Maegan Kasteler, FamilySearch blog,
 - **open questions** — what has not been found and where it might be, so that someone else can continue the history;
 - a name index (for a book);
 - a kinship diagram for the chapter or the whole book.
+- for a book with several places — **a geographical and historical appendix**: one nine-point scheme per place: 1) where it is now; 2) whose rule by years (guberniya, uezd, oblast); 3) population in figures (for a shtetl the Jewish community, for a village households and estate); 4) what the place lived through; 5) our family here, with levels of evidence; 6) where the documents are and whether they are online; 7) sources of the note; 8) community or parish and church; 9) way of life and occupations. Keep Step 3's boundary: a fact about the place is not a fact about the family. Take figures from the page image, not from OCR, and mark unchecked ones "[check]".
 
 ## Step 5. Footnotes and illustrations
 

@@ -11,7 +11,7 @@ Checked with queries on 07.10.2026. Sites change: repeat the control query befor
 **A query without a browser** (the same one the page sends):
 
 ```
-curl -s -A "Mozilla/5.0 ... Chrome/129.0 Safari/537.36" \
+curl -s -A "GenealogyGuideTool/1.0 (personal family research)" \
   -X POST https://jewishpogroms.info/wp-admin/admin-ajax.php \
   --data-urlencode "action=pogroms_search" \
   --data-urlencode "family_name=Rabin*" \
@@ -53,10 +53,10 @@ A link to an individual record (`/pogroms_people/pogroms-post/?id=…`) shows no
 
 **What it is.** A memorial project: about 7,929 victims (the `X-WP-Total` header without filters), 136 shtetl categories (`categories`, checked 08.10.2026) and 118 pages about shtetls (`/wp-json/wp/v2/mestechki`). Sources in each record: E. D. Rosenthal's "Свиток резни" ("Svitok rezni", the Scroll of Slaughter; Russian translation), DAKO R-3050 (State Archive of Kyiv Oblast; with folios **and PDF pages**), TsDAVO fond 2497 (Central State Archive of Supreme Bodies of Power of Ukraine), YIVO RG 80 (the Tcherikower archive), TsDIAK fond 1164 inventory 1 file 171 (Central State Historical Archive of Ukraine, Kyiv; a metrical book of Kyiv — deaths of 1918), S. Weigman's "Кадиш сироты" ("Kadish sirot", Orphan's Kaddish; Kyiv), the Proskurov lists with addresses. About a third of the project's documents are in Yiddish.
 
-**Query** (open WordPress REST, browser User-Agent):
+**Query** (open WordPress REST, honest tool User-Agent):
 
 ```
-https://pogrom.amhazikaron.org/wp-json/wp/v2/victims?search=Проскуров&per_page=100&page=1
+https://pogrom.amhazikaron.org/wp-json/wp/v2/victims?search=Фастов&per_page=100&page=1
 ```
 
 - The number found is in the response headers `X-WP-Total`, `X-WP-TotalPages`.
@@ -64,7 +64,7 @@ https://pogrom.amhazikaron.org/wp-json/wp/v2/victims?search=Проскуров&p
 - Shtetl categories: `/wp-json/wp/v2/categories?per_page=100` (the `count` field), records of a category: `victims?categories=ID`.
 - The text of the record is `content.rendered`: circumstances, occupation, place of origin, sources.
 
-Script: `scripts/pogrom_search.py amh Проскуров [--all]`.
+Script: `scripts/pogrom_search.py amh Фастов [--all]`.
 
 ⚠️ One record is often a whole family in one title ("Yohanan …, his wife …, their daughter …, her husband …"): search by the surname of each family member, by given names and by shtetl. Age "by different lists" is given with "or" — this is an honest note of a discrepancy; carry it into the dossier as it is.
 

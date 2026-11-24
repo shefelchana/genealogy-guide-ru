@@ -88,6 +88,9 @@ A common case: you know the address where the family lived in 1941, but not the 
 - **"Surname (Other)"** ("Фамилия (Другая)") on a military office card ("Call-up and demobilisation", "Military office of registration") means **current surname (maiden or former surname)**. An invented example: "Иванова (Петрова) Анна Сергеевна" — Ivanova by marriage, born Petrova. Search for both surnames as separate queries (see [Names, surnames, spellings](03-names-spellings.md)).
 - **The year of birth can differ between records.** Girls born in 1926 added to their age to get into the army: in one study the military office card said 1926 and the unit list said 1924. So records with different birth years may describe the same person. Match them by first name and patronymic, place of birth, unit and date of call-up, not by year.
 
+- **What kind of document it is.** Under one surname OBD Memorial holds documents of different kinds: reports of irrecoverable losses, hospital registers, and also **arrival and departure lists of military offices and transit points** ("left for a factory", "left for a unit"). Such lists are not about death: on the date of the entry the person was alive. Before writing "killed" or "missing", open the image and read the document's heading [author's experience: an entry "left for a factory" of 1944 was counted as a loss in the project].
+- **Clerks distorted village names** beyond recognition — one village turned up in more than twenty spellings. A search by village gives a handful, by district — dozens. Search by surname and district and check the village by eye.
+
 ### Evacuation
 
 - **Yad Vashem**: the central database contains data on more than half of the roughly 1.5 million evacuated Jews [from search snippet]. In one study, evacuation cards proved the patronymics of two family members where there were no metrical records.

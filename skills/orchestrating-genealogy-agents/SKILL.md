@@ -1,6 +1,6 @@
 ---
 name: orchestrating-genealogy-agents
-description: "Coordinates several AI agents in a family-history search — assigns roles (coordinator, reader, mechanic, web researcher), runs one research iteration at a time, splits work by source and by site (one site, one executor), writes a verifiable task brief from a template, accepts results only after checking each find against the scan, the control record, the coverage log and the site's error codes, picks a model per task, and handles typical failures (captcha, 403/429, silent agent, agents spawning agents). Use whenever work is delegated to agents — a background agent gets a task or returns a report, or several agents work at once — even if the user only says \"run the agents\", \"parallelise the reading\", \"give the agent a task\", \"the agent returned a report\", \"check what the agent brought\". NOT for a session where the assistant searches on its own — use organizing-genealogy-research; NOT for recording which agents are still running before the session ends, or checking on them after a break — use research-session-handoff. Also triggers on Russian requests: «запусти агентов», «распараллель чтение», «поставь задачу агенту», «агент вернул отчёт», «проверь, что принёс агент»."
+description: "Coordinates several AI agents in a family-history search: assigns roles (coordinator, reader, mechanic, web researcher), runs one iteration at a time, splits work by source and site (one site, one executor), writes a verifiable brief from a template, accepts results only after checking each find against the scan, control record, coverage log and site error codes, and handles failures (captcha, 403/429, silent agents). Use whenever work is delegated to agents, e.g. \"run the agents\", \"the agent returned a report\", \"check what the agent brought\". Not for solo searching or project files (use organizing-genealogy-research), not for choosing the next route (use search-logic-navigator), not for logging running agents at session end or checking them after a break (use research-session-handoff). Also triggers on Russian requests: «запусти агентов», «распараллель чтение», «поставь задачу агенту», «агент вернул отчёт», «проверь, что принёс агент»."
 ---
 
 # Working with several AI agents in a genealogy search
@@ -36,7 +36,7 @@ Do the steps in order. Skipping any step costs more later than the step itself.
 - **One agent — one source**: a volume, a film, or a newspaper for one year. Agents cannot cope with broad tasks such as "go through 8 libraries". Give one or two sources and require a log entry after each.
 - **One site — one executor at a time.** Sites protect themselves against frequent requests. Three agents on one site will all get a captcha within half an hour, and work stops for everyone.
 - **Sites without a CAPTCHA can be parallelised in moderation.** On Wikimedia Commons no more than **two agents at once** (more brings 429 on the image host), and each writes in its log the frame where it stopped, so a relaunch continues instead of starting over. archive.org and local PDFs — freely. A large volume may be split by frames between 2–3 agents only if the files are already downloaded or the sources are on different sites.
-- **FamilySearch: one agent per file (film, DGS).** The viewer's frame position is shared by all tabs of one account: a second agent on the same film moves the first one's frame, and the first reads the wrong page.
+- **FamilySearch: the viewer needs the person's login** — a sign-in page means "a human is needed", not a zero. **One agent per file (film, DGS).** The viewer's frame position is shared by all tabs of one account: a second agent on the same film moves the first one's frame, and the first reads the wrong page.
 - **Split a volume by its map, not by its caption.** A file captioned as one list may be a compilation (several places, supplementary lists, attachments). Build the map by section headings first (`reading-archive-scans`, "Volume map"), then give each agent a frame range "per the map".
 - **Cheap checks first, continuous reading after.** An index or full-text search sometimes answers in a minute a question that reading would spend an hour on.
 - **Divide long work into parts of 15–45 minutes.** A short result is easy to verify and continue; "everything overnight" is not.
@@ -45,6 +45,8 @@ Do the steps in order. Skipping any step costs more later than the step itself.
 ## The task for the agent
 
 **Decision first, tasks after.** Begin your answer to the human with one line: what you are launching now, what you are postponing (and why — captcha, login, a human is needed), and what you need from them. If data is missing for a control record or a film number, ask briefly before writing tasks with gaps.
+
+**Your own tree first.** Before a task "find the parents of X", read the researcher's own online tree (MyHeritage, Geni, FamilySearch, Ancestry) for all relatives of X and put an extract into the task: names, dates, places, marked "entered from family accounts". Otherwise agents spend days on what is already written down, and a database candidate is never tested against the family patronymic (`verifying-genealogy-findings`, "Your own tree, the patronymic, printed text").
 
 Take the template `assets/task-template.md` and fill in every section. If a section is skipped, the report usually cannot be verified. Mandatory lines:
 
@@ -99,6 +101,13 @@ Go through all items before writing "found" or "not found".
 
 A detailed table of failures and what to do about them is in `references/failures.md`. Read it when an agent is silent, returned a strange zero, got a captcha, or when costs rose unexpectedly.
 
+## Changing a skill or a brief
+
+- Test every version on **one fixed set of real cases**: typical, hard (namesakes, poor scans, spellings) and **must-refuse** (login, captcha, payment, forbidden scripting, living people). Do not adjust the reference to the model.
+- **Critical errors block the version**: invented reference, "not found" without coverage log, a variant ruled out by spelling alone, bypassing a login or captcha, a relative's or living person's name in public text.
+- Check in a **separate session** from the one that wrote the change; use a second model for disputed finds.
+- Keep a **pilot journal** (agent report + researcher's verdict) and refine from it. One task — one skill: remove the old copy when the new one is installed.
+
 ## What only the human does
 
 Captchas, logging in to accounts and passwords, payment, sending letters and messages, decisions on kinship, and edits to a publicly visible tree. An agent that meets such a step stops and informs the coordinator. The coordinator tells the human exactly what to do and where: which tab, which site. Do not paste passwords, cookies or keys into tasks or files.
@@ -113,7 +122,7 @@ The agent works on the human's computer. What it may do is determined by its set
 - **An agent with a browser** works in its own new tab and closes only that one; a captcha or re-login means stop. It **saves crops to files** in its own folder (a screenshot in the conversation cannot be checked later), and the file name describes what the crop shows.
 - **"The site would not open" — check your own address first** (for example ipinfo.io) and record the site's response. Do not explain the refusal by a VPN or a country block at random: there was a case where the human had no VPN and the cause was something else — a page assembled by a script, or a login requirement.
 - **A task that breaks a site's terms — stop with a quote.** If the task contradicts the site's terms (no scripts, bots, bulk collection, several accounts), the agent stops and returns a verbatim quote of the terms instead of a result; that refusal counts as a full result. The coordinator does not reword the task to get around it. A technique from any guide (this one included) is checked against the site's own terms, not against the guide.
-- **No personal data of the human in network requests** (User-Agent, headers, addresses, request bodies). Write "User-Agent neutral, no personal data", not "descriptive".
+- **No personal data of the human in network requests** (User-Agent, headers, addresses, request bodies). One rule for every script: **an honest tool User-Agent** that names the tool and purpose (e.g. `GenealogyGuideTool/1.0 (personal family research)`), with no personal data, and **never a browser string**. If a site refuses tool User-Agents, record the refusal as the site's choice; do not switch to a browser string.
 
 Before launch, check that the agent type has the tools for the task. When accepting a report, check "did not bypass" and "did not touch" against the actual calls in the transcript. Report any violation that touches the human's computer, accounts or data to them at once; if a password or code could have been on the clipboard, advise changing it.
 

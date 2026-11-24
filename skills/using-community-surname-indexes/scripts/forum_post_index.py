@@ -14,7 +14,7 @@ What it does:
     document header, the section and the nearest full PDF link above it.
 
 Save the page yourself first, for example:
-  curl -sk -A "Mozilla/5.0 ..." "https://forum.j-roots.info/viewtopic.php?p=NNNN" -o post.html
+  curl -sk -A "GenealogyGuideTool/1.0 (personal family research)" "https://forum.j-roots.info/viewtopic.php?p=NNNN" -o post.html
 
 Usage:
   python3 forum_post_index.py post.html Surname [Surname2 ...] [--loose]

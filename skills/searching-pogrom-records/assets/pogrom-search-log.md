@@ -15,7 +15,7 @@ Fill in a line for **every** query, including empty ones. Without the control an
 | Database | Control query | Expected | Received | Date |
 |---|---|---|---|---|
 | jewishpogroms.info | Lipes | 23–24 | | |
-| pogrom.amhazikaron.org | Проскуров | ≈284 | | |
+| pogrom.amhazikaron.org | Фастов | | | |
 
 ## Queries
 

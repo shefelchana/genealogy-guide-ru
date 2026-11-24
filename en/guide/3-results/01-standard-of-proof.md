@@ -72,6 +72,8 @@ One scale for hypotheses, links between people and families, and agents' finds �
 | ⚪ **unverified / weak** | a hint | one feature: a match of surname and place, a line of an index or database without a scan, a family legend, someone else's tree |
 | 🔴 **rejected** | refuted or dropped | always with the reason and date: "rejected 12.10.2026 — by the scan the father is not Abram but Khaim" |
 
+Some skills and working files also use **💭 — a guess**: a version with no feature at all, only reasoning. It is below ⚪ and never goes into a tree; it can be written as ⚪ marked "guess".
+
 Rules:
 - **A line of an index, database or finding aid is ⚪** until the document itself is opened. An index and the scan of the same record are one piece of evidence, not two.
 - **A family legend is ⚪** with a note of who told it. Do not argue with it and do not discard it: check it.

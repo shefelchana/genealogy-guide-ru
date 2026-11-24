@@ -28,7 +28,7 @@ Surname lists are hidden in "► Показать" (Show) spoilers (`div.spoilco
 
 1. Save the page HTML:
    ```
-   curl -sk -A "Mozilla/5.0 ... Chrome/129.0 Safari/537.36" \
+   curl -sk -A "GenealogyGuideTool/1.0 (personal family research)" \
      "https://forum.j-roots.info/viewtopic.php?p=NNNNNN" -o post-NNNNNN.html
    ```
    In the browser, use `textContent` or `outerHTML` of the needed `div.post`, not innerText.

@@ -1,6 +1,6 @@
 ---
 name: reading-archive-scans
-description: "Reads digitised archival files — revision lists (revizskie skazki), censuses, metrical books, family lists (posemeinye spiski) — from Wikimedia Commons or a downloaded PDF. Extracts the original embedded image instead of a re-compressed preview, judges scan quality before work starts, enhances faded handwriting, detects out-of-focus pages, and maps a volume that has no index. Use when reading scanned historical documents, Ukrainian or Russian archive PDFs (DAKhmO, DAKO, DAViO, TsDIAK files), old handwriting, or when a scan seems unreadable, a name \"is not found\", or you need to work out which page holds which family. Also triggers on Russian requests: «посемейные списки», «ревизские сказки», «ДАХмО», «ДАКО», «ДАВіО», «ЦДІАК», «прочитай скан», «карта тома»."
+description: "Reads digitised archival files — revision lists, censuses, metrical books, family lists — from Wikimedia Commons or a downloaded PDF: extracts the original embedded image instead of a re-compressed preview, judges scan quality before work starts, enhances faded handwriting, detects out-of-focus pages, and maps a volume that has no index. Use when reading scanned historical documents, Ukrainian or Russian archive PDFs (DAKhmO, DAKO, DAViO, TsDIAK), old handwriting, or when a scan seems unreadable, a name \"is not found\", or you need to know which page holds which family. Not for finding which Commons file holds a reference (use ukrainian-archives-on-commons) or chaining generations across revisions (use tracing-revision-records). Also triggers on Russian requests: «прочитай скан», «карта тома», «посемейные списки», «ревизские сказки», «ДАХмО», «ДАКО», «ДАВіО», «ЦДІАК»."
 ---
 
 # Reading archive scans
@@ -37,7 +37,7 @@ python3 scripts/mapvolume.py FILE.pdf --mode both
 Wikimedia previews are over-compressed and on faded ink they destroy exactly what you need to read; a request for an arbitrary thumbnail width gets HTTP 400 from the server.
 
 ```bash
-curl -s -A "<browser User-Agent>" -X POST "https://commons.wikimedia.org/w/api.php" \
+curl -s -A "GenealogyGuideTool/1.0 (personal family research)" -X POST "https://commons.wikimedia.org/w/api.php" \
   --data-urlencode "action=query" --data-urlencode "format=json" \
   --data-urlencode "prop=imageinfo" --data-urlencode "iiprop=url|size" \
   --data-urlencode "titles=File:<exact name>.pdf"
@@ -117,7 +117,7 @@ The itemisations in the `Архів:` namespace on uk.wikisource are **a sample,
 (DAKhmO = State Archive of Khmelnytskyi Oblast; DAViO = State Archive of Vinnytsia Oblast; "фонд" = fond, "опис" = inventory.)
 To get the list: POST to `commons.wikimedia.org/w/api.php`, `list=allimages&aiprefix=ДАХмО фонд 227 опис`.
 
-**Reading recipe (not obvious).** An inventory file may weigh 275 MB and **cannot be downloaded whole** — upload.wikimedia.org returns **HTTP 429** for the whole endpoint. Page by page it can be read freely:
+**Reading recipe (not obvious).** An inventory file may weigh 275 MB; when upload.wikimedia.org answers **HTTP 429** for the whole endpoint, it cannot be downloaded whole at that moment (otherwise see "Large files … with range requests" below). Page by page it can be read freely:
 ```
 https://thumb.wikimedia.org/wikipedia/commons/thumb/<pr/prefix>/<NAME>/pageN-3840px-<NAME>.jpg
 ```
@@ -219,7 +219,7 @@ Verified on one batch three times running: a fond code that is not in the archiv
 ## 🔑 Large files from upload.wikimedia.org can be downloaded whole with range requests
 
 A file of 774 MB can be taken **whole** (HTTP 206, range requests) — page-by-page previews are not needed, and you get the **native resolution**.
-If previews are nevertheless needed: `page<N>-1280px-<NAME>.jpg`; the width is **only 1280 or 3840**, intermediate values give HTTP 400. When `upload.` answers 429 to everything, range requests are refused too: take the pages from `thumb.wikimedia.org`, with the width written into the path and checked after download (see the inventory recipe above).
+If previews are nevertheless needed: `page<N>-1280px-<NAME>.jpg`; use standard widths only — 1280, 1920 or 3840; a non-standard width gives HTTP 400. When `upload.` answers 429 to everything, range requests are refused too: take the pages from `thumb.wikimedia.org`, with the width written into the path and checked after download (see the inventory recipe above).
 
 ## ⚠️ The enhancement coefficient depends on the scan's resolution
 
@@ -247,14 +247,14 @@ Take 5 pages at wide intervals, cut from each the **top strip with the first lin
 
 ## ⚠️ When a site does not deliver: tell a bot wall from a geoblock
 
-- **Bot wall** (Imperva/Incapsula, Cloudflare): curl gets 403 with `_Incapsula_Resource` or a challenge page. Sometimes **a real browser gets through**.
+- **Bot wall** (Imperva/Incapsula, Cloudflare): curl gets 403 with `_Incapsula_Resource` or a challenge page. Do not try to get past it with scripts or a faked User-Agent: record the response and give the person the link — they open it in their own browser if the site lets them.
 - **Geoblock by IP**: the browser sees the same as curl — "Access denied", an error code and its own IP in the text. A browser **will not help**, nor will the user's Chrome: it has the same address.
-- Verified: `szukajwarchiwach.gov.pl` (the catalogue of Polish archives) **blocks Israeli IPs entirely** — Imperva "Error 16". `cdiak.archives.gov.ua` — Akamai 403, bypassed via `archium.cdiak.archives.gov.ua`.
+- Verified: `szukajwarchiwach.gov.pl` (the catalogue of Polish archives) blocks whole countries by IP — Imperva "Error 16". `cdiak.archives.gov.ua` answers Akamai 403 to scripts; the archive's own catalogue portal `archium.cdiak.archives.gov.ua` is a separate, open site.
 📌 Before asking the user to "open it on your side", work out which case this is. Asking a person to repeat what will certainly not work wastes their time.
 
 ## ⚠️ What cannot be read from a reduced preview
 
-Ages and personal names can be made out on a preview ~1280 px wide, **place names cannot**. A real case: "Проскуровъ" (Proskurov) and "**Проскуровкъ**" (Proskurovka) are indistinguishable on the preview, and yet one is a town and the other a village in **different districts** — and a conclusion was almost built on that, that the file was captioned wrongly.
+Ages and personal names can be made out on a preview ~1280 px wide, **place names cannot**. A real case (names changed): a town «…овъ» and a village «…овка» of the same stem were indistinguishable on the preview, and yet they lie in **different districts** — and a conclusion was almost built on that, that the file was captioned wrongly.
 
 **Rule: any place name that is going into a report or conclusion must be reread at maximum resolution.** Age and name — a preview will do; a place name — never.
 

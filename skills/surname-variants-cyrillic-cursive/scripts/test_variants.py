@@ -23,7 +23,7 @@ class ParseTest(unittest.TestCase):
 
     def test_doubled_consonant(self):
         self.assertIn(("G", True), v.parse("Feiggel"))
-        self.assertIn(("F", True), v.parse("Koffel"))
+        self.assertIn(("F", True), v.parse("Loffel"))
 
     def test_polish_and_german_digraphs(self):
         self.assertEqual(v.parse("Szmid")[0], ("SH", False))
@@ -40,13 +40,13 @@ class VariantTest(unittest.TestCase):
             self.assertIn(w, f, w)
 
     def test_inserted_t_and_ending(self):
-        _, f = forms("Kofel")
-        for w in ["кофтель", "кофер", "коферъ", "кафель", "коффель", "koftel", "koffel", "kofer"]:
+        _, f = forms("Lofel")
+        for w in ["лофтель", "лофер", "лоферъ", "лафель", "лоффель", "loftel", "loffel", "lofer"]:
             self.assertIn(w, f, w)
 
     def test_cursive_misreading_f_r(self):
-        _, f = forms("Kofel", depth=1)
-        self.assertIn("корель", f)          # ф read as р
+        _, f = forms("Lofel", depth=1)
+        self.assertIn("лорель", f)          # ф read as р
 
     def test_every_form_marked(self):
         out = subprocess.run([sys.executable, v.__file__, "Feigel", "--max", "5"],
@@ -59,22 +59,22 @@ class VariantTest(unittest.TestCase):
 
 class RegexTest(unittest.TestCase):
     def test_cyrillic_narrow_and_broad(self):
-        res, _ = forms("Kofel")
+        res, _ = forms("Lofel")
         narrow = re.compile(res["regex"]["cyrillic_narrow"])
         broad = re.compile(res["regex"]["cyrillic_broad"])
-        for w in ["Кофель", "Кофтель", "Коферъ", "Кафель", "Корель", "Коффель"]:
+        for w in ["Лофель", "Лофтель", "Лоферъ", "Лафель", "Лорель", "Лоффель"]:
             self.assertTrue(narrow.fullmatch(w), w)
-        for w in ["Кофль", "Кофъ"]:
+        for w in ["Лофль", "Лофъ"]:
             self.assertTrue(broad.fullmatch(w), w)
         self.assertFalse(narrow.fullmatch("Розенберг"))
 
     def test_latin_and_hebrew(self):
-        res, _ = forms("Kofel")
+        res, _ = forms("Lofel")
         lat = re.compile(res["regex"]["latin"])
-        for w in ["Kofel", "Koffel", "Koftel", "Kofer", "Kafel", "Cofel"]:
+        for w in ["Lofel", "Loffel", "Loftel", "Lofer", "Lafel", "Lufel"]:
             self.assertTrue(lat.fullmatch(w), w)
         heb = re.compile(res["regex"]["hebrew_yiddish"])
-        for w in ["קאפעל", "קפל", "קפטל"]:
+        for w in ["לאפעל", "לפל", "לפטל"]:
             self.assertTrue(heb.fullmatch(w), w)
 
     def test_ocr_first_letter_dropped(self):

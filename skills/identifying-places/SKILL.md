@@ -1,6 +1,6 @@
 ---
 name: identifying-places
-description: "Identifies a shtetl, town or village of the former Russian Empire, Poland, Galicia, Bukovina or Bessarabia from a distorted or partial name, determines which country, guberniya, uezd, volost, parish or rabbinate it belonged to in the year that matters, and names the archive that should hold its records. Uses JewishGen Communities and Gazetteer (Daitch-Mokotoff), Where Once We Walked, the Lists of Populated Places of the Russian Empire (Spiski naselyonnykh mest), Vasmer's Namenbuch, old maps (three-verst map, Mende, Strelbitsky, WIG, Mapster) and a timeline of border and name changes (Bessarabia 1812, 1856–1878, 1918–1940; Galicia; interwar Poland; Soviet renamings). Finds villages that no longer exist and separates same-named places by uezd and volost. Produces a place card from assets/place-card.md. Use whenever the user asks where a shtetl is, what it is called now, which uezd it belonged to, which archive to search, says a US document gives an unreadable town name, or gives a town name from a manifest, a family story or a tombstone. Also triggers on Russian requests: «где это местечко», «как сейчас называется», «к какому уезду относилось», «в каком архиве искать», «в американском документе написано непонятное название»."
+description: "Identifies a shtetl, town or village of the former Russian Empire, Poland, Galicia, Bukovina, Bessarabia from a distorted or partial name, finds its guberniya, uezd, volost, parish or rabbinate in the year that matters, and names the archive for its records. Uses JewishGen Gazetteer, Where Once We Walked, the Lists of Populated Places, Vasmer's Namenbuch, old maps and a timeline of border and name changes; finds vanished villages, separates same-named places. Use when the user asks where a shtetl is, what it is called now, which uezd it belonged to, which archive to search, or has an unreadable town name from a manifest, a US document or a tombstone. Not for tracing an emigrant's records back home (use tracing-emigrants-to-origin) or dating a move (use tracing-family-moves-and-registration). Also triggers on Russian requests: «где это местечко», «как сейчас называется», «к какому уезду относилось», «в американском документе непонятное название»."
 ---
 
 # Identify the place and find its archive
@@ -40,7 +40,7 @@ Write the name **exactly as in the source**, with the source and year. Then coll
 ### 2. Spelling variants
 
 The name passed through a clerk, a foreign alphabet and the ear. Build variants like this:
-- **endings**: -ов / -off / -ow / -ew / -iv / -uv (Проскуров (Proskurov) = Proskurow = Proskuriv); -ец / -etz / -ets / -ec / -iec; -ка / -ka; -ичи / -icze / -ichi;
+- **endings**: -ов / -off / -ow / -ew / -iv / -uv (Чернигов (Chernigov) = Czernihów = Chernihiv); -ец / -etz / -ets / -ec / -iec; -ка / -ka; -ичи / -icze / -ichi;
 - **German and Polish spelling**: sch / sz / ш (sh), tsch / cz / ч (ch), w / в (v), j / й (y), ż / ж (zh);
 - **Yiddish**: vowels shift (Каменец (Kamenets) → Kaminetz, Kamenitz), final -ов is often dropped;
 - **Ukrainian and Russian** spelling: и/і/ы (i/i/y), е/є (e/ye), г/х (g/h/kh) (Галич / Halych), case endings and language forms in catalogues ("Білилівка / Белиловка" (Bilylivka / Belilovka), Ukrainian / Russian);
@@ -103,6 +103,6 @@ Khutors (hamlets), folwarks (manorial farms), suburbs ("predm.") and works often
 ## Rules
 
 - Every conclusion about a place comes with a source and a year. "Now it is village X of district Y" without a link to a gazetteer is not a conclusion.
-- Read the place name that goes into a conclusion on the scan at full resolution: in a preview «Проскуровъ» (Proskurov) and «Проскуровкъ» (Proskurovk-) are indistinguishable, yet they are a town and a village in different uezds.
+- Read the place name that goes into a conclusion on the scan at full resolution: in a preview a town «…овъ» and a village «…овка» of the same stem are indistinguishable, yet they are a town and a village in different uezds.
 - Gazetteer sites may require a login (JewishGen) or be unreachable from abroad (the Presidential Library, some Russian sites): a human logs in and makes the decisions about the network; do not bypass geoblocks.
 - If the place could not be identified, the card is still filled in: variants, gazetteers checked, candidates and why they were rejected.

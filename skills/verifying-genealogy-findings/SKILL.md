@@ -62,7 +62,7 @@ Three more checks before saying "there is no book" or "there is no record":
 · **Yiddish → Russian**: the Latin `s` serves samekh, sin and sov (Ashkenazi pronunciation of tav) and is part of `sh` and `ts`. Фейгель / Фейгаль / Файгель / Фейгелль / Фейгейль [Feigel / Feigal / Faigel / Feigell / Feigeil] — a regular family of forms, not variants.
 · **Phonetics**: Beider-Morse for original European spellings; Daitch-Mokotoff for anglicized ones (it truncates after six consonants and treats all vowels as the same, so it produces junk).
 · **Pre-revolutionary OCR often swallows the first letter** — search without it too: «ейгель», «озенберг», «евин», «аплан» [i.e. (F)eigel, (R)ozenberg, (L)evin, (K)aplan].
-· Check the ending: «-ель» versus «-еръ», «-манъ», «-бергъ», «-штейнъ» — different surnames, confused on a poor scan. **Write out explicitly** the candidates you have ruled out, so the next attempt does not waste time on them.
+· Check the ending: «-ель», «-еръ», «-тель», «-ъ» may be one surname in different hands or different surnames. **Never rule out a form by spelling alone** (`surname-variants-cyrillic-cursive`): mark it ⚪ [variant?] and decide by father, place, age or household, or by a same-hand comparison of crops. Write out the forms already checked with the reason each was set aside, so the next attempt does not repeat them.
 · Search in all the languages of the place: Russian, Ukrainian, Polish, German, Hebrew, English.
 · **Run through the vowel of the root**: Плет → Плит → Плат → Плот [Plet → Plit → Plat → Plot]. If a family "disappeared" from a uezd, check the **electors' lists for the crown rabbi** (*kazyonny ravvin*) and the resolutions on his election: Lipes found there a dozen bearers of the surname in a different vocalization, who were not in the uezd's database.
 · **A one-letter difference within one town is sometimes deliberate**: relatives changed a letter to separate themselves from another family (of the type «-ский» / «-цкий» [-sky / -tsky]). And conversely: a family could merge with the local form of a surname and become a "namesake" of strangers.
@@ -74,6 +74,12 @@ Three more checks before saying "there is no book" or "there is no record":
 · **The range of a surname** ("home of the surname") should be determined from the **earliest revisions (1805–1816)**, not from the geography of Beider's dictionary: it rests on sources of the early 20th century, when families had already dispersed.
 · The rule "one surname + one region = one family" (as the Am HaZikaron institute puts it) is stronger for Galicia and the Kingdom of Poland, where under the 1821 rules and the Galician rules different families of one locality were assigned different surnames; within the Pale of Settlement it is weaker, and for toponyms and occupations it does not work.
 🔑 When working with the trees of DNA matches, **a match by shtetl is worth more than a match by surname**: Jewish surnames are new (law of 1804), whereas the shtetl is held for generations. An example from one search: the emigrant Moische Feigel in Philadelphia became Max Fairman — his descendants cannot be found by surname.
+
+## Your own tree, the patronymic, printed text
+
+- **Read the researcher's own online tree first.** Before a search for someone's parents, read the researcher's tree (MyHeritage, Geni, FamilySearch, Ancestry) for that person, parents, grandparents and siblings. Entries made from family accounts are "according to …", not documents, but they are the starting point and the test for candidates. In one project several days went into choosing a database candidate for a grandfather's father while the researcher's own tree already held both parents with dates, the father's father and two siblings.
+- **The patronymic tests a candidate.** The grandfather's given name fixes the father's patronymic; the mother's father's name fixes hers. A candidate with another patronymic drops to ⚪ even when name, village and generation match. A patronymic "inferred" from a group of namesakes in the village gives way to one from the family.
+- **OCR of printed books is checked against the page image.** Digits (3/8, 1/7) and numbers written as words are misread, and websites retell the misreadings. Test with the source's own arithmetic (parts must add up to the stated total) and take figures for a text or table only from the page image. Mark unchecked figures "[check]".
 
 ## Military databases: three false zeros
 
@@ -104,7 +110,7 @@ The report must be **verifiable, not plausible**:
 3. **Mark an uncertain reading "uncertain"** and explain what is in the way.
 4. **A log of pages viewed** with ranges of numbers.
 5. **Declare an honest "not found" a normal result** and explicitly forbid inventing.
-6. **Rule out known lookalikes in advance** — list the surnames already checked and rejected.
+6. **List lookalikes already checked, with the reason** each was set aside (other father, place, age, household) — never set a form aside in the brief by spelling alone; unchecked forms go in as ⚪ [variant?].
 7. **Separate the files**: each agent gets its own subdirectory. Otherwise they overwrite each other's scripts in the middle of the work.
 8. **Ask the agent to correct the brief.** A description of how the file is built, given in the brief, may be wrong; an agent who checked this and reported saves the work. A verified case: the brief claimed "odd pages are the male sex", but each page turned out to be a whole spread, and viewing "every other page" would have lost half the households.
 
@@ -119,7 +125,7 @@ The report must be **verifiable, not plausible**:
 
 **How to apply it to a disputed reading:**
 · the surname **is in** the index → the reading is plausible;
-· the surname **is absent from all five books** → 🔴 **the reading is almost certainly wrong**;
+· the surname **is absent from all five books** → ⚪ **suspect the reading**: re-read the scan at higher resolution; absence from the dictionaries alone does not exclude a form (rare and clerk-distorted surnames exist);
 · then run **closely spelled variants** through the index and return to the reader a list of those that really exist — let him check on the scan.
 Verified: «Штейнтманъ» and «Кравнецъ» [Steintman, Kravnets] gave zero matches and turned out to be misreadings; «Фейгель», «Гроссъ» [Feigel, Gross] and a third control surname were found at once.
 

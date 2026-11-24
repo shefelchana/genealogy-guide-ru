@@ -1,7 +1,7 @@
 ---
 name: tracing-emigrants-to-origin
 description: >-
-  Traces an emigrant from the Russian Empire (often Jewish) back to the home town using records of the destination country — US death certificates (free NYC Municipal Archives images with the mother's maiden name and the informant), censuses, naturalization papers, passenger manifests, draft cards, Social Security applications, passports, border crossings — and then matches the person to Old-World records. Use whenever the family has a branch that left for America, Canada, Argentina, Palestine or Western Europe, or the user says "my great-grandfather came from…", "where did he emigrate from", "find the shtetl of an emigrant", "naturalization", "Ellis Island", "ship manifest", even if they only know an American name. Also triggers on Russian requests: «откуда приехал», «найти местечко эмигранта», «натурализация», «Эллис-Айленд», «судовой список».
+  Traces an emigrant from the Russian Empire (often Jewish) back to the home town using records of the destination country — US death certificates (free NYC Municipal Archives images with the mother's maiden name and the informant), censuses, naturalization papers, passenger manifests, draft cards, Social Security applications, passports, border crossings — and then matches the person to Old-World records. Use whenever the family has a branch that left for America, Canada, Argentina, Palestine or Western Europe, or the user says "my great-grandfather came from…", "where did he emigrate from", "find the shtetl of an emigrant", "naturalization", "Ellis Island", "ship manifest", even if they only know an American name. Once the town name is known but cannot be placed, use identifying-places. Also triggers on Russian requests: «откуда приехал», «найти местечко эмигранта», «натурализация», «Эллис-Айленд», «судовой список».
 ---
 
 # From emigration documents to the home shtetl
@@ -30,7 +30,7 @@ description: >-
 - "The name was changed at Ellis Island" is a myth; immigrants changed names themselves later.
 - Age "floats" by 2–5 years from document to document (one immigrant's birth year was 1868, 1870, 1871, 1873 and 1875 in five documents): take the year from the most formal document he filled in himself (declaration, petition, draft card) and keep the range.
 - Names change: Moishe → Morris, Leizer → Louis/Leizer, Berko → Bernard/Boris.
-- The shtetl name in American documents is spelled by ear (Ismail, "Izmail, Bessarabia, Roumania", etc.); the guberniya and country are those at the time of the statement (Romania/Poland instead of the Russian Empire).
+- The shtetl name in American documents is spelled by ear (Akkerman, "Akerman, Bessarabia, Roumania", etc.); the guberniya and country are those at the time of the statement (Romania/Poland instead of the Russian Empire).
 - One person may enter several times (Mexico/Canada → US) — each card adds data.
 - Hamburg passenger lists **before 1920 do not state religion** (J. Sielemann, Hamburg State Archive) — you cannot filter by "Jewish", only by name, age and place.
 - A branch that went to Palestine may have officially Hebraized the name: notices of name changes in the "Palestine Gazette" 1921–1947 (dataset mandatenamechanges.org — old and new name, each record links to the scan page).

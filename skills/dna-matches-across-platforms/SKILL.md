@@ -1,14 +1,14 @@
 ---
 name: dna-matches-across-platforms
 description: >-
-  Analyses one person's autosomal DNA matches across several sites (23andMe, Genotek, GEDmatch, FTDNA, MyHeritage) when the family is of mixed origin (one endogamous line, e.g. Ashkenazi, next to rural lines with scattered matches). Covers kit inventory, calibration, splitting off the endogamous network, phasing without parents through one-side relatives (a half-sibling's child, a cousin via one grandparent), searching place lists for the home village, cross-site confirmation, triangulation and population background in GEDmatch, "Are your parents related?", one tested family as one piece of evidence, a B1 letter to the match and the journal. Use when the user asks which side a match is from, can see a relative's test, or brings match lists from more than one company, even without saying "phasing". Also triggers on Russian requests: «разбери мои совпадения на всех сайтах», «с какой стороны этот родственник», «у меня есть доступ к тесту родственника», «родители не родня ли», «как написать совпаденке».
+  Analyses one person's autosomal DNA matches across several sites (23andMe, Genotek, GEDmatch, FTDNA, MyHeritage) when the family is of mixed origin (one endogamous line, e.g. Ashkenazi, beside rural lines with scattered matches): kit inventory, calibration, splitting off the endogamous network, phasing without parents through one-side relatives, searching place lists for the home village, cross-site confirmation, triangulation and population background in GEDmatch, "Are your parents related?", one tested family as one piece of evidence. Use when the user asks which side a match is from, can see a relative's test, or brings match lists from more than one company. Not for uploading or transferring raw files (use dna-raw-data-backup-and-transfer). Also triggers on Russian requests: «разбери мои совпадения на всех сайтах», «с какой стороны этот родственник», «у меня есть доступ к тесту родственника», «родители не родня ли».
 ---
 
 # DNA matches on several sites: a full analysis for mixed origin
 
 Write files and reports in the user's language unless asked otherwise.
 
-**The main thing:** DNA suggests where to look and tests a hypothesis; only a document names the ancestor. Record every conclusion with its level: 🟢 proven by a document, 🟡 strong hypothesis, 💭 guess, ⚪ background or noise.
+**The main thing:** DNA suggests where to look and tests a hypothesis; only a document names the ancestor. Record every conclusion with its level: 🟢 proven by a document, 🟡 strong hypothesis, ⚪ candidate or lead, not checked, 💭 guess.
 
 Work on the sites (logging in, paying, letters) — **by the user's hands only**: you prepare, explain, and read what they have opened. Paid upgrades and sending letters are their decision.
 
@@ -67,7 +67,7 @@ If a match's shared list contains several people **with the same ancestor list**
 ## Step 8. "Are the parents related?"
 
 GEDmatch "Are your parents related?" looks for long identical stretches from both parents (ROH ≥ 7 cM).
-- **0 cM** → within roughly 5–6 generations the parents are not related.
+- **0 cM** → the parents are not closely related (no first- or second-cousin-level kinship); more distant kinship is neither seen nor ruled out.
 - Earlier marriages between the lines (18th century) DNA does not see and does not rule out. The check is only through the metrical books of both villages. If the parents' home villages lie close to each other (the same or a neighbouring uezd), that is a reason to look, but not proof.
 - Run all of one person's kits: the results should agree.
 

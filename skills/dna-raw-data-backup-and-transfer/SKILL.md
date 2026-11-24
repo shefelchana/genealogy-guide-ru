@@ -1,7 +1,7 @@
 ---
 name: dna-raw-data-backup-and-transfer
 description: >-
-  Step-by-step work with raw DNA files from consumer tests: where the download button is at AncestryDNA, 23andMe, MyHeritage, FamilyTreeDNA and Genotek; how to read the file header (company, chip or whole-genome sequencing, version, date, no-calls); which file each site still accepts in late 2026 (a dated "from → to" matrix — MyHeritage closed uploads in 2025, the new Ancestry file of January 2026, FamilyTreeDNA NGS of March 2026 and MyHeritage WGS files are often refused); why to upload the original file and not an imputed "improved" one; privacy and law-enforcement settings at upload; and a backup and audit routine before any bankruptcy, upgrade, recalculation or account deletion. Use when the user asks "how do I download my DNA file", "why won't my file upload", "where else can I upload my test", "GEDmatch says too many matches", "should I back up before 23andMe / before the FTDNA upgrade", "VCF or 23andMe V5", "my match list changed after the upgrade", or plans to delete a DNA account. Not for interpreting matches (use dna-matches-endogamy or dna-matches-across-platforms). Also triggers on Russian requests: «как скачать сырые данные», «файл не загружается», «куда ещё загрузить тест», «перенос на GEDmatch», «резервная копия ДНК», «VCF или V5», «после апгрейда пропали совпадения».
+  Works with raw DNA files from consumer tests: where to download them at each company; reading the file header (company, chip or WGS, version, date, no-calls); which file each site still accepts in late 2026 (a dated "from → to" matrix: MyHeritage closed uploads in 2025; new Ancestry, FTDNA NGS and WGS files are often refused); upload the original, not an imputed file; privacy settings; a backup routine before a bankruptcy, upgrade or account deletion. Use when the user asks "how do I download my DNA file", "why won't my file upload", "upload my DNA to GEDmatch", "transfer my data from MyHeritage", "my matches changed after the upgrade". Not for interpreting matches (use dna-matches-endogamy) or choosing a test (use choosing-dna-test-by-country-and-goal). Also triggers on Russian requests: «как скачать сырые данные», «файл не загружается», «куда ещё загрузить тест», «перенос на GEDmatch», «перенести данные с MyHeritage», «резервная копия ДНК».
 ---
 
 # Raw DNA files: download, check, back up, transfer
@@ -76,7 +76,7 @@ Rules that follow from it:
 Do this **before**: deleting an account, a company sale or bankruptcy (as with 23andMe in 2025), an upgrade (FamilyTreeDNA chip → NGS), a "recalculation", or switching a kit to a new manager.
 
 1. Raw file of every kit (Step 1), named `company_kit-owner-initials_test-type_YYYY-MM-DD.ext`.
-2. **Match list as CSV** where it exists (FamilyTreeDNA, 23andMe, GEDmatch, MyHeritage for chip kits). Where there is no export, save the top of the list (all matches with the longest segment ≥ 15 cM) by hand or by screenshots.
+2. **Match list as CSV** where it exists (FamilyTreeDNA, 23andMe, GEDmatch; MyHeritage no longer offers a CSV of matches — see `dna-matches-across-platforms`). Where there is no export, save the top of the list (all matches with the longest segment ≥ 15 cM) by hand or by screenshots.
 3. **Segment data** (chromosome, start, end, cM) where available.
 4. **Ethnicity screenshots** with the date and model version.
 5. Messages with matches that matter.

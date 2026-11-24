@@ -281,6 +281,10 @@ Why: for the compiler the median is about 100 calls per agent, but the tail is 4
 - Every task lists the files already downloaded: once a recheck spent 35 minutes downloading what was already on disk. The agent first checks the paths from the task: the temporary folder of a previous session may have been cleared.
 - The agent appends to its file as it goes, roughly every 25 calls: two sessions were cut off at the limit without a single line, and 128 calls were lost.
 
+### Your own tree first
+
+Before a task "find the parents of X" the coordinator reads the researcher's tree on the platform (MyHeritage, Geni and the like) for all relatives of X and puts an extract into the task: names, dates, places and the note "entered from family accounts". Otherwise agents spend days looking for what is already written down, and a database candidate is not tested against the family patronymic ([Checking results](04-checking-results.md), section 2c).
+
 ### Candidates already found come first
 
 If earlier reports already name candidates (acts, records, family numbers), the agent opens them first and leaves the exhaustive pass — a "sieve" through the alphabet or the whole book — for later. In one round the sieve ate the whole budget: 175 calls yielded three acts, and the agent never got to the answer. A reference in a document to a family number in an earlier revision is also the first task.
@@ -366,6 +370,15 @@ After several rounds the compiler gathered the rules by which the whole team sea
 **How we tested that the fact-checker works.** A blind test: the fact-checker got 9 old findings, 4 of them our past mistakes — without being told which. Over three runs it caught all 12 cases and did not reject a single correct finding. Keep such a set and rerun it after every change to the skills: it is a regression test.
 
 **What the fact-checker catches most often:** the AI filled in what it expected (read "Fel" and added the first letter of the surname being searched for); the index read the wrong surname; the index merged two people into one; a false zero — the site did not answer the script, and this was recorded as "not found" ([False zero](09-false-zero.md)).
+
+## 13a. When a skill changes — a test set and a journal
+
+- **A set of examples, not one lucky case.** Before changing a skill or a task brief, collect a set of real cases from your own project: many typical ones, some hard ones (namesakes, a poor scan, different spellings) and some where the agent **must refuse** (a login, a captcha, payment, site terms forbid scripts, a request for living people's names). Run every version on the same set; never adjust the reference answer to the model's output.
+- **Critical errors block a version** however good the rest is: an invented archival reference or link, "not found" without a coverage log, a surname variant ruled out by spelling alone, getting round a login or captcha, a relative's or a living person's name in public text.
+- **Run the check in a separate session**, not the one where the skill was written: the author remembers the intent and judges itself more gently. For disputed finds a second opinion from another model helps.
+- **A pilot journal.** Record every agent report together with the researcher's short verdict ("fine", "not right — why"). Refine the skill from the journal, not from memory: repeating errors become visible.
+- **One task — one skill.** Two versions of one rule (an old local copy and a new one) give the agent contradictory instructions. Install the new one and remove the old.
+Source of these techniques: an AI workshop (autumn 2026), meetings 3–4 [author's experience].
 
 ## 14. From Polina Krivosheeva's practice: order and economy
 

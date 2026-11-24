@@ -16,13 +16,13 @@ The document was photographed on microfilm and is on FamilySearch (metrical book
 - **Frame (image)** — a photograph; a spread of the book is often photographed **twice in a row** (a duplicate) — check.
 
 ## From the archival reference to the frame
-1. **Catalog**: find the collection (search by place, e.g. "Russia, Bessarabia, Izmail") or by film number. In the catalog entry each film has: film number, DGS, a list of items with file references and years.
+1. **Catalog**: find the collection (search by place, e.g. "Russia, Bessarabia, Akkerman") or by film number. In the catalog entry each film has: film number, DGS, a list of items with file references and years.
    ⚠️ The book you need may be **hidden in another collection**: a Jewish birth book of 1883 turned up inside a set of Orthodox metrical records of the uezd (district).
    ⚠️ **The "Jewish" label in the catalog is incomplete.** According to E. Kogan (Bessarabia SIG, 2018), of 292 Bessarabian revision-list films, Jewish records are certainly present on 30, and only the Bender ones are labelled Jewish in the catalog. Do not filter the catalog by "Jewish" — go through all films of the uezd.
    🔑 Search the place **in all spellings** and separately by uezd and guberniya (province): "Nezhin" finds sets that "Nizhin" does not (Lara Diamond). The Item number in the catalog entry shows where on the film the book you need lies.
    ⚠️ **New filming is not in the Catalog.** Since 2022, filming in Ukrainian archives goes to **Images** (familysearch.org/records/images), searched by place at town, uezd and guberniya level; details and a checked state — `ukrainian-archives-on-commons`.
    ⚠️ FamilySearch's indexed Ukrainian collections hold more than 100 million records, the largest being the confessional lists (*ispovednye vedomosti*) of Kyiv guberniya; **there are no Jewish records among them** [from the search results]. The search understands `*`; when searching in Latin letters, do not tick "exact" (lostrussianfamily.wordpress.com, 18.07.2026).
-2. **Viewing the film**: `familysearch.org/search/film/<DGS>?i=<frame-1>` (the parameter `i` counts from zero).
+2. **Viewing the film**: `familysearch.org/search/film/<DGS>?i=<frame-1>` (the parameter `i` counts from zero). ⚠️ **The viewer and Images need the person to be logged in to FamilySearch.** A sign-in page is "the instrument did not answer — a human is needed", never a zero. Use the DGS number (with leading zeros, e.g. `007576141`) in the address: the film number may return "not found".
 3. **The frame number**: take it from the index (JewishGen "Image"); otherwise find the item by step 4.
 4. **Item boundaries**: between books there are targets and "END OF ITEM N" cards, then the title of the next file (a stamp with fond/inventory/file). A fast way is a **thumbnail mosaic**: open the thumbnails of every 20th frame, find the black cards and titles, then refine in steps of 2–3.
 
@@ -40,9 +40,6 @@ The document was photographed on microfilm and is on FamilySearch (metrical book
 - **The frame position is shared by all tabs of one account** (November 2026): a second agent opening another frame of the same film moves the first agent's view, and the first reads the wrong page. One agent per film (DGS); the next one waits.
 - Rules: **one worker on FamilySearch at a time**; no more than 1 frame per 5–10 s; batches of 4 frames; breaks; on a captcha, stop — a human passes the captcha.
 - Some films are available only in FamilySearch centers or serve frames only up to a certain number — record this as a limitation of the source, not as "not found".
-
-## For advanced users
-After logging in, frame images and thumbnails can be fetched by a script in the same browser tab (with the session token, which is never printed and never sent anywhere). This is faster than navigating, but **the pace and limits are the same**.
 
 ## Regional indexed collections (experience of November 2026)
 - There are collections of metrical books by province (for example "Russia, Tver, Church Books, 1722–1918": parish books and consistory copies by district) with a **partial name index**.

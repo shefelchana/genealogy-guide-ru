@@ -64,6 +64,8 @@ Include **images**: crops from documents (with a caption and archival reference)
 
 As a separate appendix — a **table of sources** and **open questions**: what has not yet been found and where it may be. That way the history remains a working one and the next person can continue it.
 
+**A geographical and historical appendix by place** is another useful appendix to a book: one nine-point scheme for each place — 1) where it is now; 2) whose rule by years (guberniya, uezd, oblast); 3) population in figures (for a shtetl — the Jewish community, for a village — households and estate); 4) what the place lived through; 5) our family here — with levels of evidence; 6) where the documents are and whether they are online; 7) sources of the note; 8) community or parish and church; 9) way of life and occupations. Information about a place is not information about a person: "there were arrests in the village in 1937" does not mean your great-grandfather was arrested. Mark figures checked against the page image, and put "[check]" on unchecked ones.
+
 Write also about **how the search went**: what was searched for, what was found, what has not survived. For relatives this is often the liveliest part.
 
 **Publication as a way to find relatives.** A shtetl page on JewishGen (KehilaLinks) or a published tree works as a "magnet": in Phyllis Kramer's experience, researchers gathered around a shtetl page, jointly hired a researcher in the archive and obtained more than 1,500 documents (Avotaynu Online, 2009) [checked]. Data on living people — only with their consent ([Ethics and preservation](03-ethics-preservation.md)).

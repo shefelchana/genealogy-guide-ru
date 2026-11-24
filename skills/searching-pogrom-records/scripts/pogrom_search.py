@@ -9,7 +9,7 @@ without a browser. Prints a table (TSV) and the number of records found.
    python3 pogrom_search.py lipes "" --city Pavoloch  # all records for a city
 
 2) pogrom.amhazikaron.org (Am HaZikaron, ~7,900 victims; substring search, Cyrillic)
-   python3 pogrom_search.py amh Проскуров
+   python3 pogrom_search.py amh Фастов
    python3 pogrom_search.py amh Рабинович --all      # all pages, not just the first 100
 
 Courtesy: one database - one worker; a pause between requests (3 s by default).
@@ -25,8 +25,7 @@ import time
 import urllib.parse
 import urllib.request
 
-UA = ("Mozilla/5.0 AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/129.0 Safari/537.36")
+UA = "GenealogyGuideTool/1.0 (personal family research)"
 LIPES_URL = "https://jewishpogroms.info/wp-admin/admin-ajax.php"
 AMH_URL = "https://pogrom.amhazikaron.org/wp-json/wp/v2/victims"
 FIELDS = ["Region", "City", "Record type", "Family name", "Name", "Patronymic", "Age",

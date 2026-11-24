@@ -109,6 +109,13 @@ Whom you write to: DNA matches, people with the same surname, authors of other p
 
 **Privacy.** Do not forward other people's information and match lists without consent (the BCG code).
 
+### A local researcher or historian
+
+A village or a surname often has its own researcher: a local historian, the author of a book about the village, a forum member with a database for the parish. Such a person often has a lineage list (*rospis*) going back many generations.
+- Ask not for a retelling but for **a lineage list with a source for every entry** (archive, fond, opis, delo, folio, year), best as GEDCOM or a spreadsheet, plus photos of the folios with your people. Offer your own list of archival references and finds in return.
+- Prepare before the conversation: what is already known (with levels of evidence), three to five concrete questions and a short glossary (lineage list, archival reference, generation, revision, odnodvortsy) so you speak the same language.
+- Record everything said without a source as "according to <who>, <date>" and check it. Do not move information about living people from someone else's list into your tree without their consent.
+
 ### A sample first letter to a DNA match
 
 > Hello! We match on DNA at [service]. I am looking for relatives on the [surname] line from [shtetl, guberniya], late 19th century. The earliest known ancestor is [name], around [year]. If you have ancestors from those places or recognise the surname, I would be glad of a reply, even a short one. I can share a chart of my branch. [Name, how to contact]

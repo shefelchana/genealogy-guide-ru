@@ -1,6 +1,6 @@
 ---
 name: building-evidence-matrix
-description: "Resolves conflicting genealogical evidence by putting every version side by side in an evidence matrix — claim, source, who supplied the information, how long after the event, original or derivative, independence — weighing them, and writing a verdict with a level of evidence (🟢 🟡 ⚪ 💭 🔴); also keeps the hypotheses register consistent (grounds, weak points, how to check, status) and shows one real pass of the research cycle. Use whenever two or more records disagree about a name, date, patronymic, place or parentage, when a family story contradicts a document, when someone else's online tree says something different, or when the user asks \"which date is right\", \"is this the same woman\", \"what do we believe now\". Also triggers on Russian requests: «документы противоречат», «какая дата верная», «одна ли это женщина», «в дереве у них другое отчество», «семья говорит иначе, чем документ», «матрица доказательств», «сведи версии», «обнови статусы гипотез». Not for searching new records (use search-logic-navigator) and not for a full proof argument for citizenship (use citizenship-by-descent-dossier)."
+description: "Resolves conflicting genealogical evidence with an evidence matrix: every version side by side (claim, source, informant, time after the event, original or derivative, independence), weighed, with a verdict and a level of evidence (🟢 🟡 ⚪ 💭 🔴); also keeps the hypotheses register consistent (grounds, weak points, how to check, status). Use when records disagree about a name, date, patronymic, place or parentage, when a family story or another online tree contradicts a document, or the user asks \"which date is right\", \"is this the same woman\", \"what do we believe now\". Not for searching new records (use search-logic-navigator) and not for a citizenship proof chain (use citizenship-by-descent-dossier). Also triggers on Russian requests: «документы противоречат», «какая дата верная», «одна ли это женщина», «в дереве у них другое отчество», «семья говорит иначе, чем документ», «матрица доказательств», «сведи версии», «обнови статусы гипотез»."
 ---
 
 # Evidence matrix and hypotheses register
@@ -35,7 +35,7 @@ One line: what we take as true, with a level, and what to check next.
 - "Resolved 🟢: 10 June 1941 — the conscription book outweighs the 1947 questionnaire."
 - "Likely 🟡: one woman — Khaya; check age and patronymic in all three documents."
 - "Unresolved ⚪: …" — honestly, with a plan.
-Mark a version from someone else's tree without a source 🔴 and do not copy it into your tree.
+Mark a version from someone else's tree without a source ⚪ (a lead, not evidence) and do not copy it into your tree.
 
 ## 5. Hypotheses register
 
@@ -43,7 +43,7 @@ For each hypothesis in the hypotheses file: statement · grounds (with reference
 
 ## 6. One pass of the cycle (for the showcase and for beginners)
 
-Seven steps on a real project example: question → version → where the document must be → search → check against the scan → level → record (which file, which §). This is the best explanation of how research works: the reader sees that the conclusion rests on a specific file.
+Seven steps on a project example (for public pages — anonymised or invented): question → version → where the document must be → search → check against the scan → level → record (which file, which §). This is the best explanation of how research works: the reader sees that the conclusion rests on a specific file.
 
 ## Output
 

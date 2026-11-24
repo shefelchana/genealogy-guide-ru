@@ -41,7 +41,7 @@ And a separate question: must the person necessarily have appeared in this sourc
 |---|---|
 | FamilySearch | a frame every 5–10 s, with breaks; captcha after roughly 45–150 opened frames (most often around 130 in 40 minutes; earlier as time goes on); do not download a whole film |
 | Jewish newspapers of the NLI | pause ≥ 5 s; Cloudflare after roughly 100–160 requests |
-| Yandex "Search in archives" | one query every 8–9 s |
+| Yandex "Search in archives" | one query every 8–9 s; since November 2026 only with the person's login, in their browser |
 | "Open List" (*Otkrytyi spisok*) | pause ≥ 6 s |
 | "Mitzvat Emet" (*Mitsvat Emet*) | one search per visit |
 | Wikimedia Commons, archive.org, local PDFs | no hard limits; download large files whole, not previews |

@@ -1,7 +1,7 @@
 ---
 name: ukrainian-archives-on-commons
 description: >-
-  Finds and downloads whole files of Ukrainian state archives published on Wikimedia Commons (metrical books, revision lists, censuses, court files, inventories, ZAGS registers of 1919–1944) and the fond listings on Ukrainian Wikisource (the «Архів:» namespace). Checks where a file is online (Duck Inspector, babynyar.org, FamilySearch Images), searches the inter-archive portal searcharchives.net.ua by place, and goes from an archival reference (archive, fond, inventory, file) or a place name to the exact Commons file name via the MediaWiki API (POST), handles naming variants and duplicates, measures scan quality, downloads the PDF whole and hands reading to reading-archive-scans. Wikisource listings cover a small share of each inventory: never use them for negative conclusions. Use when the user mentions DAKhmO, DAViO, DAZhO, DAKO, DAOO, TsDIAK or another Ukrainian archive, a reference like 227-1-137, or asks for a metrical book or 1920s–30s ZAGS records. Also triggers on Russian requests: «ДАХмО», «ДАВіО», «ДАЖО», «ДАКО», «ЦДІАК», «дело на Commons», «межархивный портал», «FamilySearch Images», «Архів на Вікіджерелах», «скачай метрическую книгу из украинского архива», «найди ЗАГС 1920-х или 1930-х».
+  Finds and downloads whole files of Ukrainian state archives published on Wikimedia Commons (metrical books, revisions, censuses, court files, inventories, 1919–1944 ZAGS) and fond listings on Ukrainian Wikisource («Архів:»). Checks where a file is online (Duck Inspector, babynyar.org, FamilySearch Images), searches searcharchives.net.ua by place, goes from a reference or a place name to the exact Commons file via the MediaWiki API, downloads the PDF whole. Wikisource listings cover a small share of each inventory: never use them for negative conclusions. Use when the user names a Ukrainian archive (DAKhmO, DAViO, DAZhO, DAKO, DAOO, TsDIAK), gives a reference, or asks for a metrical book or 1920s–30s ZAGS records. Not for reading the pages (use reading-archive-scans) or ordering offline copies (use requesting-records-from-ukrainian-archives). Also triggers on Russian requests: «дело на Commons», «межархивный портал», «скачай метрическую книгу», «найди ЗАГС 1920-х», «ДАХмО», «ДАЖО».
 ---
 
 # Files of Ukrainian archives on Wikimedia Commons
@@ -77,7 +77,7 @@ So a name cannot be guessed. Three ways, from the reliable to the wide:
 2. **A file list by prefix**: `list=allimages` with `aiprefix=<ARCHIVE> <fond>-<opys>-<sprava>`. The prefix "…-1-12" will also return files 12, 120, 1203: select those where a full stop, space or bracket follows the number. Repeat with the form `<ARCHIVE> - <fond>-…`.
 3. **Search in file titles**: `list=search`, namespace 6 (files), a query like `intitle:"226-80-639"`: it catches all variants of the name, including those with a different separator.
 
-**Make all requests to the Commons and Wikisource APIs with the POST method** to `api.php`: GET runs into rate limits sooner. Set a meaningful User-Agent. Pause 2–3 seconds between requests: with frequent requests the API starts answering with an error page instead of JSON.
+**Make all requests to the Commons and Wikisource APIs with the POST method** to `api.php`: GET runs into rate limits sooner. Set an honest tool User-Agent that names the tool and purpose, with no personal data (Wikimedia asks for this); never a browser string. Pause 2–3 seconds between requests: with frequent requests the API starts answering with an error page instead of JSON.
 
 ⚠️ **One file may have been uploaded twice** under different names (with a full stop and with a hyphen). Compare the size and page count of both and take the better scan; if they differ in the set of pages, you need both.
 
@@ -98,7 +98,7 @@ A `prop=imageinfo` query with the fields `url|size` returns the direct address, 
 
 **Page images: check the width you got.** The API may report the width you asked for while its `thumburl` points to a 500-px page (seen 21 November 2026). Write the width into the path yourself (`/pageN-1920px-…`), drop `?utm…`, and check the real JPEG width after download; a page narrower than requested is re-downloaded, never read as "no entry" (`reading-archive-scans`).
 
-Captions on Commons are sometimes wrong: a wrong reference, different content, a different year. **Before working, open the cover and one page from the middle** (page thumbnail: `iiurlparam=page<N>-1280px`; the permitted widths are only 1280 and 3840, otherwise HTTP 400). For revisions, check the column "по последней ревизии" [per the last revision]: it names the year of the previous revision and so gives away the year of the file. Five minutes of checking against hours of work on the wrong document.
+Captions on Commons are sometimes wrong: a wrong reference, different content, a different year. **Before working, open the cover and one page from the middle** (page thumbnail: `iiurlparam=page<N>-1280px`; use standard widths only — 1280, 1920 or 3840; a non-standard width returns HTTP 400). For revisions, check the column "по последней ревизии" [per the last revision]: it names the year of the previous revision and so gives away the year of the file. Five minutes of checking against hours of work on the wrong document.
 
 ## Step 6. Download whole
 

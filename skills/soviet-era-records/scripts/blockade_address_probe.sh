@@ -39,7 +39,7 @@
 # Requires: curl, python3.
 
 BASE="https://blockade.spb.ru"
-UA="Mozilla/5.0"
+UA="GenealogyGuideTool/1.0 (personal family research)"
 DELAY="${DELAY:-2}"
 
 fetch() {

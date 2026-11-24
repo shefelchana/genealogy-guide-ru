@@ -15,7 +15,7 @@ import argparse, html, re, sys, urllib.parse, urllib.request
 # The form lives on the domain WITHOUT www: the www address returns a 301 and the POST is lost.
 ENDPOINT = "https://genealogyindexer.org/"
 # The server serves the form to bots only without a recognizable bot UA.
-UA = "Mozilla/5.0 AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
+UA = "GenealogyGuideTool/1.0 (personal family research)"
 
 SCOPES = {
     "podolia": "19800", "kiev": "19500", "volhynia": "19300",
